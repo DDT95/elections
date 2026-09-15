@@ -34,20 +34,23 @@ Ce document distingue précisément ce qui est **réel** (données officielles v
 - Source : **export officiel DGRC fourni par l'utilisateur**, fichier résultats définitifs par bureau de vote (828 features), format large avec 38 listes détectées dynamiquement (colonnes `Voix 1`…`Voix 38`).
 - Couverture : **183/184 communes** (Gouzangrez absente, cf. §4), **828/828 bureaux, 100 %**. Totaux départementaux cohérents avec les résultats connus du Val-d'Oise pour ce scrutin (liste RN en tête département avec ~25,5 %, LFI ~22,9 %, Renaissance ~12,6 %, RN-dissidents/Reconquête ~5-6 %).
 
-## 6. Municipales 2020 (1er et 2nd tour) — RÉEL (participation), DÉTAIL LISTE À COMPLÉTER
+## 6. Municipales 2020 (1er et 2nd tour) — RÉEL (participation et détail liste/candidat)
 
-- Fichiers : `public/data/elections/municipales-2020-t1.json`, `municipales-2020-t2.json`.
-- Source : Tabular API de « Données des élections agrégées » (`id_election = 2020_muni_t1` / `2020_muni_t2`), même méthode. Seuls les résultats généraux (inscrits, abstentions, votants, blancs, nuls, exprimés, participation) ont été agrégés dans cette session — le détail par liste/candidat n'a pas été traité, faute de temps disponible pour paginer le volume de bureaux × listes que cela représente (chaque bureau peut compter 2 à 10+ listes municipales).
-- Couverture réelle de la participation : **T1 : 184/184 communes (100 %)** ; **T2 : 35/184 communes** — résultat structurellement normal (seules les communes n'ayant pas obtenu de liste majoritaire dès le 1er tour organisent un 2nd tour ; le 2nd tour 2020 a en outre été reporté au 28 juin 2020 pour cause de COVID-19, ce report est appliqué à la date affichée).
-- L'interface affiche un badge « à compléter » spécifiquement sur la section « résultats par candidat » pour ce scrutin, tout en affichant les chiffres réels de participation.
+- Fichiers : `public/data/elections/municipales-2020-t1.json`, `municipales-2020-t1-bv.json`, `municipales-2020-t2.json`, `municipales-2020-t2-bv.json`.
+- Source : Tabular API de « Données des élections agrégées » (`id_election = 2020_muni_t1` / `2020_muni_t2`), même méthode que les autres scrutins tirés de cette API (filtre exact sur `id_election`, tri par `id_brut_miom`, dédoublonnage par `__id`).
+- **Résultats généraux** (inscrits, abstentions, votants, blancs, nuls, exprimés, participation) : **T1 : 184/184 communes (100 %)** ; **T2 : 35/184 communes** — résultat structurellement normal (seules les communes n'ayant pas obtenu de liste majoritaire dès le 1er tour organisent un 2nd tour ; le 2nd tour 2020 a en outre été reporté au 28 juin 2020 pour cause de COVID-19, ce report est appliqué à la date affichée).
+- **Détail par liste/candidat** (ressource `candidats_results` de la même API, même filtre `id_election`, agrégation dynamique par bureau puis par commune — le nombre de listes municipales varie de 1 à plus de 10 selon la commune, aucun nombre fixe n'est supposé) : **T1 : 177/184 communes avec détail liste (779 bureaux de vote)** ; **T2 : 35/35 communes (100 %, 376 bureaux de vote)**. Les 7 communes du T1 sans détail candidat correspondent à des lignes absentes de la ressource `candidats_results` pour ce scrutin (élection sans concurrence ou liste unique dans certaines petites communes) ; leur participation reste réelle et affichée. Les totaux de voix par tête de liste ont été recoupés avec les totaux de participation déjà validés (mêmes inscrits/exprimés communaux) : cohérents.
+- L'interface affiche, pour les rares communes/bureaux sans détail candidat, un badge « à compléter » limité à la section « résultats par candidat », tout en affichant les chiffres réels de participation.
 
-## 7. Canton — RÉEL
+## 7. Canton et circonscription — RÉEL pour tous les scrutins à données communales/BV réelles
 
-- Fichier de contours : `public/data/geo/cantons-95.geojson` (21 cantons — Val-d'Oise post-redécoupage 2015).
-- Fichiers de résultats : `public/data/elections/departementales-2021-t2-canton.json`.
-- **Source de la correspondance commune/bureau ↔ canton** : le fichier officiel DGRC des Départementales 2021 (2nd tour, §10 ci-dessous), qui porte le code et le libellé de canton réels pour chacun de ses 809 bureaux de vote du Val-d'Oise. C'est la première donnée de cette session à fournir un référentiel cantonal fiable et à jour.
-- **Méthode de construction des contours** : dissolution géométrique réelle, mais au niveau **bureau de vote** (et non commune) — nécessaire car deux communes denses, Argenteuil (95018) et Cergy (95127), sont chacune scindées entre plusieurs cantons (Argenteuil-1/2/3, Cergy-1/2). Chacun des 810 polygones de bureaux de vote (§2) a été affecté à son canton réel via la jointure sur `codeBureauVote`, puis les polygones ont été fusionnés par canton. 808/810 bureaux se sont joints directement (numérotation identique entre le millésime des contours de bureaux et celui des Départementales 2021) ; les 2 bureaux restants ont été rattachés au canton majoritaire de leur commune (méthode de repli, toujours basée sur un code de canton réel, jamais inventé). Résultat : **21/21 cantons produits**, y compris les 3 cantons partiels d'Argenteuil et les 2 de Cergy, correctement scindés.
-- Sanity check : nombre de cantons obtenu (21) conforme à l'attendu pour le Val-d'Oise depuis le redécoupage cantonal de 2015.
+- Fichier de contours cantons : `public/data/geo/cantons-95.geojson` (21 cantons — Val-d'Oise post-redécoupage 2015). Fichier de contours circonscriptions : `public/data/geo/circonscriptions-95.geojson` (10 circonscriptions, dissolution réelle des communes, cf. §3).
+- **Référentiel commune/bureau ↔ canton** : le fichier officiel DGRC des Départementales 2021 (2nd tour, §7bis), qui porte le code et le libellé de canton réels pour chacun de ses 809 bureaux de vote du Val-d'Oise.
+- **Référentiel commune ↔ circonscription** : les codes de circonscription réels portés par chaque commune dans les données Présidentielle 2022 (Ministère de l'Intérieur, §3).
+- **Méthode de construction des contours cantons** : dissolution géométrique réelle, mais au niveau **bureau de vote** (et non commune) — nécessaire car deux communes denses, Argenteuil (95018) et Cergy (95127), sont chacune scindées entre plusieurs cantons (Argenteuil-1/2/3, Cergy-1/2). Chacun des 810 polygones de bureaux de vote (§2) a été affecté à son canton réel via la jointure sur `codeBureauVote`, puis les polygones ont été fusionnés par canton. 808/810 bureaux se sont joints directement (numérotation identique entre le millésime des contours de bureaux et celui des Départementales 2021) ; les 2 bureaux restants ont été rattachés au canton majoritaire de leur commune (méthode de repli, toujours basée sur un code de canton réel, jamais inventé). Résultat : **21/21 cantons produits**, y compris les 3 cantons partiels d'Argenteuil et les 2 de Cergy, correctement scindés.
+- **Rollups de résultats par canton** (`public/data/elections/{scrutin}-canton.json`) : calculés par **simple somme des résultats réels de bureau de vote** de chaque scrutin (pas de commune, précisément pour restituer correctement le partage Argenteuil/Cergy entre cantons), joints via le référentiel bureau↔canton ci-dessus. Aucune valeur de vote n'est inventée. Disponibles et réels pour : Présidentielle 2022 T1 (21/21 cantons) et T2 (21/21), Législatives 2024 T1 (21/21) et T2 (18 cantons — reflète structurellement les 177/184 communes ayant un second tour), Européennes 2024 (21/21), Municipales 2020 T1 (21/21) et T2 (19 cantons — reflète structurellement les 35/184 communes du second tour), Départementales 2021 T1 et T2 (21/21, scrutin nativement cantonal).
+- **Rollups de résultats par circonscription** (`public/data/elections/{scrutin}-circo.json`) : calculés par **simple somme des résultats réels de commune** de chaque scrutin (l'agrégation communale suffit ici : contrairement aux cantons, aucune commune du Val-d'Oise n'est scindée entre deux circonscriptions), jointe via le référentiel commune↔circonscription ci-dessus. Disponibles et réels pour : Présidentielle 2022 T1/T2 (10/10), Législatives 2024 T1 (10/10) et T2 (9/9 — structurel, cf. §4), Européennes 2024 (10/10), Municipales 2020 T1 (10/10) et T2 (10/10 circonscriptions représentées, sur la base des 35 communes ayant un second tour). Départementales 2021 n'a pas de rollup circonscription : ce scrutin n'est pas organisé par circonscription législative, seul le canton est pertinent (§7bis).
+- Sanity check : nombre de cantons obtenu (21) conforme à l'attendu pour le Val-d'Oise depuis le redécoupage cantonal de 2015 ; nombre de circonscriptions (10) conforme au découpage législatif du Val-d'Oise.
 
 ## 7bis. Départementales 2021 (1er et 2nd tour) — RÉEL
 
@@ -59,13 +62,21 @@ Ce document distingue précisément ce qui est **réel** (données officielles v
 - Cohérence vérifiée : le nombre d'inscrits total (729 528 au 1er tour, 729 641 au 2nd) est stable entre les deux tours, comme attendu.
 - Ce scrutin est le seul dont l'échelle native est le canton (chaque binôme se présente dans un seul canton) et le seul couvert aux deux tours avec la présidentielle 2022 et les législatives 2024 : c'est la donnée la plus riche pour tester l'échelle cantonale de l'Atlas.
 
-## 8. Profil sociodémographique (âge, CSP) — À COMPLÉTER (contrainte d'accès réseau)
+## 8. Population municipale historique (1968-2023) — RÉEL
+
+- Fichier : `public/data/insee/population-historique-95.json` (clé = code INSEE commune, valeur = série `{annee, population}`).
+- Source : **INSEE, « Populations historiques »** (fichier France entière fourni par l'utilisateur : `insee-populations-historiques-data.csv`, 813 234 lignes, `;`-délimité, colonnes `FREQ;GEO;GEO_OBJECT;POPREF_MEASURE;TIME_PERIOD;OBS_VALUE`, accompagné d'un dictionnaire de labels `insee-populations-historiques-metadata.csv`). Filtré sur `GEO_OBJECT = "COM"`, `GEO` commençant par `95` (communes du Val-d'Oise) et `POPREF_MEASURE = "PMUN"` (population municipale, mesure standard de référence — la variante `PSDC` « population sans double compte », moins utilisée, n'a pas été retenue).
+- Couverture : **183/184 communes**, années **2006 à 2023** (18 points annuels par commune pour les communes présentes sur toute la période — le fichier source ne porte pas de valeur `PMUN` antérieure à 2006 pour le Val-d'Oise, bien que le jeu de données national couvre 1968-2023 pour d'autres géographies/mesures ; aucune valeur n'a été extrapolée ou comblée). La commune de **Gouzangrez (95282)** est absente de ce fichier également, comme elle l'est déjà pour les Législatives 2024 et les Européennes 2024 (§4, §5) — troisième confirmation indépendante que cette absence est une caractéristique réelle et récurrente des sources concernant cette petite commune, non une erreur de traitement.
+- Utilisation dans l'interface : un panneau « Évolution de la population » avec mini-graphique (sparkline SVG) est affiché dans la fiche de chaque commune (échelle commune uniquement), montrant l'évolution réelle et la variation en % depuis la première année disponible. Ce panneau est indépendant du scrutin sélectionné (mêmes données quel que soit l'électionId/tourId actifs).
+- Ce jeu de données est un contexte démographique réel, distinct des données électorales : il ne remplace ni ne débloque le croisement âge/CSP par bureau de vote (§9), qui reste à compléter pour les raisons documentées ci-dessous.
+
+## 9. Profil sociodémographique (âge, CSP) — À COMPLÉTER (contrainte d'accès réseau)
 
 - Un jeu de données réel a été identifié : [« Profil sociodémographique des bureaux de vote — France métropolitaine (INSEE RP 2022 & Filosofi 2021) »](https://www.data.gouv.fr/datasets/profil-sociodemographique-des-bureaux-de-vote-france-metropolitaine-insee-rp-2022-filosofi-2021) (structure par âge, CSP, diplômes, revenus, par bureau de vote).
-- Ce jeu de données est distribué uniquement en **Parquet** (non interrogeable via l'API tabulaire disponible dans cette session) et hébergé sur `static.data.gouv.fr`, domaine bloqué par la politique réseau de cette session (voir §9).
+- Ce jeu de données est distribué uniquement en **Parquet** (non interrogeable via l'API tabulaire disponible dans cette session) et hébergé sur `static.data.gouv.fr`, domaine bloqué par la politique réseau de cette session (voir §10). Il est distinct de la population historique (§8, réelle et intégrée) : la population municipale par commune et le croisement âge/CSP par bureau de vote sont deux jeux de données INSEE différents, l'un a pu être intégré, l'autre reste bloqué par l'accès réseau.
 - `public/data/insee/insee-95-communes.json` documente le schéma attendu (`age`, `csp`) pour une intégration ultérieure ; l'interface affiche un badge « à compléter » partout où ce croisement serait utilisé.
 
-## 9. Contrainte d'accès réseau de cette session
+## 10. Contrainte d'accès réseau de cette session
 
 L'environnement d'exécution restreint les accès réseau sortants à une liste d'hôtes autorisés (GitHub, npm, PyPI, etc.) via un proxy de sortie ; les domaines `data.gouv.fr`, `www.data.gouv.fr`, `static.data.gouv.fr` et `object.files.data.gouv.fr` sont explicitement bloqués (`connect_rejected` confirmés à plusieurs reprises, y compris via l'outil de récupération web dédié). La **Tabular API** de data.gouv.fr reste néanmoins accessible via l'outil MCP `data_gouv` dédié (celui-ci s'exécute côté serveur, hors du proxy de sortie de cette session), ce qui a permis d'en tirer l'essentiel des données réelles ci-dessus ; les fichiers volumineux hors Tabular API (Parquet, GeoJSON France entière) sont restés inatteignables directement et ont, pour les bureaux de vote, été obtenus via un export local fourni par l'utilisateur.
 
@@ -79,14 +90,23 @@ L'environnement d'exécution restreint les accès réseau sortants à une liste 
 | Présidentielle 2022 T1 — bureau (participation) | Réel | 811/811 | idem |
 | Présidentielle 2022 T1 — bureau (détail candidat) | Réel | 795/811 (98 %) | idem |
 | Présidentielle 2022 T2 — commune et bureau | Réel | 184/184, 811/811 (100 %) | export officiel DGRC (utilisateur) |
+| Présidentielle 2022 T1 — canton | Réel | 21/21 | agrégation BV + référentiel Départementales 2021 |
+| Présidentielle 2022 T2 — canton | Réel | 21/21 | idem |
 | Présidentielle 2022 T1/T2 — circonscription | Réel | 10/10 | agrégation + dissolution géométrique réelle |
 | Législatives 2024 T1 — commune et bureau | Réel | 183/184 (Gouzangrez absente, confirmé), 828/828 (100 %) | export officiel DGRC (utilisateur) |
+| Législatives 2024 T1 — canton, circonscription | Réel | 21/21, 10/10 | agrégation BV/commune réelle |
 | Législatives 2024 T2 — commune et bureau | Réel | 177/184 (structurel), 703/703 | export officiel DGRC (utilisateur) |
+| Législatives 2024 T2 — canton, circonscription | Réel | 18 (structurel), 9/9 (structurel) | agrégation BV/commune réelle |
 | Européennes 2024 — commune et bureau | Réel | 183/184, 828/828 | export officiel DGRC (utilisateur) |
+| Européennes 2024 — canton, circonscription | Réel | 21/21, 10/10 | agrégation BV/commune réelle |
 | Municipales 2020 T1 — participation | Réel | 184/184 | data.gouv.fr, Tabular API |
+| Municipales 2020 T1 — détail liste/candidat | Réel | 177/184 communes, 779 bureaux | data.gouv.fr, Tabular API (candidats_results) |
+| Municipales 2020 T1 — canton, circonscription | Réel | 21/21, 10/10 | agrégation BV/commune réelle |
 | Municipales 2020 T2 — participation | Réel | 35/184 (structurel) | idem |
-| Municipales 2020 T1/T2 — détail liste/candidat | À compléter | — | non traité (volume de pagination) |
+| Municipales 2020 T2 — détail liste/candidat | Réel | 35/35 communes (100 %), 376 bureaux | data.gouv.fr, Tabular API (candidats_results) |
+| Municipales 2020 T2 — canton, circonscription | Réel | 19 (structurel), 10/10 | agrégation BV/commune réelle |
 | Contours cantons (95) | Réel | 21/21 | dissolution BV réelle, référentiel Départementales 2021 (utilisateur) |
 | Départementales 2021 T1 — commune, canton, bureau | Réel | 184/184, 21/21, 809/809 (100 %) | export officiel DGRC (utilisateur) |
 | Départementales 2021 T2 — commune, canton, bureau | Réel | 184/184, 21/21, 809/809 (100 %) | export officiel DGRC (utilisateur) |
+| Population municipale historique (95) | Réel | 183/184 communes, 2006-2023 | INSEE, Populations historiques (utilisateur) |
 | Profil sociodémographique (âge, CSP) | À compléter | — | INSEE RP 2022/Filosofi 2021 (Parquet, accès réseau bloqué) |

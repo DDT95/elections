@@ -1,0 +1,2487 @@
+{
+ "election": "Présidentielle 2022",
+ "tour": 1,
+ "date": "2022-04-10",
+ "status": "reel",
+ "note": "Agrégation réelle par canton, calculée à partir des résultats réels par bureau de vote et du référentiel bureau↔canton réel (Départementales 2021, export officiel DGRC). Simple somme, aucune donnée inventée.",
+ "cantons": {
+  "16": {
+   "bureaux_de_vote": 56,
+   "inscrits": 32814,
+   "abstentions": 7430,
+   "votants": 25384,
+   "blancs": 422,
+   "nuls": 125,
+   "exprimes": 24837,
+   "nom": "Pontoise",
+   "candidats": [
+    {
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "nuance": null,
+     "voix": 6844,
+     "pct_exprimes": 27.56,
+     "pct_inscrits": 20.86
+    },
+    {
+     "nom": "MÉLENCHON",
+     "prenom": "Jean-Luc",
+     "nuance": null,
+     "voix": 6345,
+     "pct_exprimes": 25.55,
+     "pct_inscrits": 19.34
+    },
+    {
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "nuance": null,
+     "voix": 4815,
+     "pct_exprimes": 19.39,
+     "pct_inscrits": 14.67
+    },
+    {
+     "nom": "ZEMMOUR",
+     "prenom": "Éric",
+     "nuance": null,
+     "voix": 1805,
+     "pct_exprimes": 7.27,
+     "pct_inscrits": 5.5
+    },
+    {
+     "nom": "PÉCRESSE",
+     "prenom": "Valérie",
+     "nuance": null,
+     "voix": 1456,
+     "pct_exprimes": 5.86,
+     "pct_inscrits": 4.44
+    },
+    {
+     "nom": "JADOT",
+     "prenom": "Yannick",
+     "nuance": null,
+     "voix": 1245,
+     "pct_exprimes": 5.01,
+     "pct_inscrits": 3.79
+    },
+    {
+     "nom": "DUPONT-AIGNAN",
+     "prenom": "Nicolas",
+     "nuance": null,
+     "voix": 525,
+     "pct_exprimes": 2.11,
+     "pct_inscrits": 1.6
+    },
+    {
+     "nom": "LASSALLE",
+     "prenom": "Jean",
+     "nuance": null,
+     "voix": 503,
+     "pct_exprimes": 2.03,
+     "pct_inscrits": 1.53
+    },
+    {
+     "nom": "ROUSSEL",
+     "prenom": "Fabien",
+     "nuance": null,
+     "voix": 472,
+     "pct_exprimes": 1.9,
+     "pct_inscrits": 1.44
+    },
+    {
+     "nom": "HIDALGO",
+     "prenom": "Anne",
+     "nuance": null,
+     "voix": 350,
+     "pct_exprimes": 1.41,
+     "pct_inscrits": 1.07
+    },
+    {
+     "nom": "POUTOU",
+     "prenom": "Philippe",
+     "nuance": null,
+     "voix": 189,
+     "pct_exprimes": 0.76,
+     "pct_inscrits": 0.58
+    },
+    {
+     "nom": "ARTHAUD",
+     "prenom": "Nathalie",
+     "nuance": null,
+     "voix": 114,
+     "pct_exprimes": 0.46,
+     "pct_inscrits": 0.35
+    }
+   ],
+   "pct_abstention": 22.64,
+   "pct_participation": 77.36,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 27.56
+   },
+   "nb_communes": 32,
+   "code_canton": "16"
+  },
+  "20": {
+   "bureaux_de_vote": 61,
+   "inscrits": 36848,
+   "abstentions": 8116,
+   "votants": 28732,
+   "blancs": 529,
+   "nuls": 110,
+   "exprimes": 28093,
+   "nom": "Vauréal",
+   "candidats": [
+    {
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "nuance": null,
+     "voix": 7562,
+     "pct_exprimes": 26.92,
+     "pct_inscrits": 20.52
+    },
+    {
+     "nom": "MÉLENCHON",
+     "prenom": "Jean-Luc",
+     "nuance": null,
+     "voix": 7128,
+     "pct_exprimes": 25.37,
+     "pct_inscrits": 19.34
+    },
+    {
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "nuance": null,
+     "voix": 5612,
+     "pct_exprimes": 19.98,
+     "pct_inscrits": 15.23
+    },
+    {
+     "nom": "ZEMMOUR",
+     "prenom": "Éric",
+     "nuance": null,
+     "voix": 1796,
+     "pct_exprimes": 6.39,
+     "pct_inscrits": 4.87
+    },
+    {
+     "nom": "PÉCRESSE",
+     "prenom": "Valérie",
+     "nuance": null,
+     "voix": 1486,
+     "pct_exprimes": 5.29,
+     "pct_inscrits": 4.03
+    },
+    {
+     "nom": "JADOT",
+     "prenom": "Yannick",
+     "nuance": null,
+     "voix": 1295,
+     "pct_exprimes": 4.61,
+     "pct_inscrits": 3.51
+    },
+    {
+     "nom": "LASSALLE",
+     "prenom": "Jean",
+     "nuance": null,
+     "voix": 559,
+     "pct_exprimes": 1.99,
+     "pct_inscrits": 1.52
+    },
+    {
+     "nom": "ROUSSEL",
+     "prenom": "Fabien",
+     "nuance": null,
+     "voix": 523,
+     "pct_exprimes": 1.86,
+     "pct_inscrits": 1.42
+    },
+    {
+     "nom": "DUPONT-AIGNAN",
+     "prenom": "Nicolas",
+     "nuance": null,
+     "voix": 514,
+     "pct_exprimes": 1.83,
+     "pct_inscrits": 1.39
+    },
+    {
+     "nom": "HIDALGO",
+     "prenom": "Anne",
+     "nuance": null,
+     "voix": 367,
+     "pct_exprimes": 1.31,
+     "pct_inscrits": 1.0
+    },
+    {
+     "nom": "POUTOU",
+     "prenom": "Philippe",
+     "nuance": null,
+     "voix": 202,
+     "pct_exprimes": 0.72,
+     "pct_inscrits": 0.55
+    },
+    {
+     "nom": "ARTHAUD",
+     "prenom": "Nathalie",
+     "nuance": null,
+     "voix": 119,
+     "pct_exprimes": 0.42,
+     "pct_inscrits": 0.32
+    }
+   ],
+   "pct_abstention": 22.03,
+   "pct_participation": 77.97,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 26.92
+   },
+   "nb_communes": 39,
+   "code_canton": "20"
+  },
+  "15": {
+   "bureaux_de_vote": 36,
+   "inscrits": 38917,
+   "abstentions": 9135,
+   "votants": 29782,
+   "blancs": 345,
+   "nuls": 138,
+   "exprimes": 29299,
+   "nom": "Montmorency",
+   "candidats": [
+    {
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "nuance": null,
+     "voix": 10006,
+     "pct_exprimes": 34.15,
+     "pct_inscrits": 25.71
+    },
+    {
+     "nom": "MÉLENCHON",
+     "prenom": "Jean-Luc",
+     "nuance": null,
+     "voix": 6625,
+     "pct_exprimes": 22.61,
+     "pct_inscrits": 17.02
+    },
+    {
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "nuance": null,
+     "voix": 3782,
+     "pct_exprimes": 12.91,
+     "pct_inscrits": 9.72
+    },
+    {
+     "nom": "ZEMMOUR",
+     "prenom": "Éric",
+     "nuance": null,
+     "voix": 3022,
+     "pct_exprimes": 10.31,
+     "pct_inscrits": 7.77
+    },
+    {
+     "nom": "PÉCRESSE",
+     "prenom": "Valérie",
+     "nuance": null,
+     "voix": 2141,
+     "pct_exprimes": 7.31,
+     "pct_inscrits": 5.5
+    },
+    {
+     "nom": "JADOT",
+     "prenom": "Yannick",
+     "nuance": null,
+     "voix": 1464,
+     "pct_exprimes": 5.0,
+     "pct_inscrits": 3.76
+    },
+    {
+     "nom": "LASSALLE",
+     "prenom": "Jean",
+     "nuance": null,
+     "voix": 542,
+     "pct_exprimes": 1.85,
+     "pct_inscrits": 1.39
+    },
+    {
+     "nom": "ROUSSEL",
+     "prenom": "Fabien",
+     "nuance": null,
+     "voix": 446,
+     "pct_exprimes": 1.52,
+     "pct_inscrits": 1.15
+    },
+    {
+     "nom": "DUPONT-AIGNAN",
+     "prenom": "Nicolas",
+     "nuance": null,
+     "voix": 428,
+     "pct_exprimes": 1.46,
+     "pct_inscrits": 1.1
+    },
+    {
+     "nom": "HIDALGO",
+     "prenom": "Anne",
+     "nuance": null,
+     "voix": 371,
+     "pct_exprimes": 1.27,
+     "pct_inscrits": 0.95
+    },
+    {
+     "nom": "POUTOU",
+     "prenom": "Philippe",
+     "nuance": null,
+     "voix": 158,
+     "pct_exprimes": 0.54,
+     "pct_inscrits": 0.41
+    },
+    {
+     "nom": "ARTHAUD",
+     "prenom": "Nathalie",
+     "nuance": null,
+     "voix": 91,
+     "pct_exprimes": 0.31,
+     "pct_inscrits": 0.23
+    }
+   ],
+   "pct_abstention": 23.47,
+   "pct_participation": 76.53,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 34.15
+   },
+   "nb_communes": 6,
+   "code_canton": "15"
+  },
+  "02": {
+   "bureaux_de_vote": 29,
+   "inscrits": 29536,
+   "abstentions": 8776,
+   "votants": 20760,
+   "blancs": 258,
+   "nuls": 108,
+   "exprimes": 20394,
+   "nom": "Argenteuil-2",
+   "candidats": [
+    {
+     "nom": "MÉLENCHON",
+     "prenom": "Jean-Luc",
+     "nuance": null,
+     "voix": 10568,
+     "pct_exprimes": 51.82,
+     "pct_inscrits": 35.78
+    },
+    {
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "nuance": null,
+     "voix": 4143,
+     "pct_exprimes": 20.31,
+     "pct_inscrits": 14.03
+    },
+    {
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "nuance": null,
+     "voix": 2470,
+     "pct_exprimes": 12.11,
+     "pct_inscrits": 8.36
+    },
+    {
+     "nom": "ZEMMOUR",
+     "prenom": "Éric",
+     "nuance": null,
+     "voix": 874,
+     "pct_exprimes": 4.29,
+     "pct_inscrits": 2.96
+    },
+    {
+     "nom": "PÉCRESSE",
+     "prenom": "Valérie",
+     "nuance": null,
+     "voix": 612,
+     "pct_exprimes": 3.0,
+     "pct_inscrits": 2.07
+    },
+    {
+     "nom": "JADOT",
+     "prenom": "Yannick",
+     "nuance": null,
+     "voix": 497,
+     "pct_exprimes": 2.44,
+     "pct_inscrits": 1.68
+    },
+    {
+     "nom": "ROUSSEL",
+     "prenom": "Fabien",
+     "nuance": null,
+     "voix": 357,
+     "pct_exprimes": 1.75,
+     "pct_inscrits": 1.21
+    },
+    {
+     "nom": "LASSALLE",
+     "prenom": "Jean",
+     "nuance": null,
+     "voix": 242,
+     "pct_exprimes": 1.19,
+     "pct_inscrits": 0.82
+    },
+    {
+     "nom": "DUPONT-AIGNAN",
+     "prenom": "Nicolas",
+     "nuance": null,
+     "voix": 220,
+     "pct_exprimes": 1.08,
+     "pct_inscrits": 0.74
+    },
+    {
+     "nom": "HIDALGO",
+     "prenom": "Anne",
+     "nuance": null,
+     "voix": 200,
+     "pct_exprimes": 0.98,
+     "pct_inscrits": 0.68
+    },
+    {
+     "nom": "POUTOU",
+     "prenom": "Philippe",
+     "nuance": null,
+     "voix": 111,
+     "pct_exprimes": 0.54,
+     "pct_inscrits": 0.38
+    },
+    {
+     "nom": "ARTHAUD",
+     "prenom": "Nathalie",
+     "nuance": null,
+     "voix": 85,
+     "pct_exprimes": 0.42,
+     "pct_inscrits": 0.29
+    }
+   ],
+   "pct_abstention": 29.71,
+   "pct_participation": 70.29,
+   "tete": {
+    "nom": "MÉLENCHON",
+    "prenom": "Jean-Luc",
+    "nuance": null,
+    "pct_exprimes": 51.82
+   },
+   "nb_communes": 1,
+   "code_canton": "02"
+  },
+  "03": {
+   "bureaux_de_vote": 31,
+   "inscrits": 31447,
+   "abstentions": 9413,
+   "votants": 22034,
+   "blancs": 254,
+   "nuls": 117,
+   "exprimes": 21663,
+   "nom": "Argenteuil-3",
+   "candidats": [
+    {
+     "nom": "MÉLENCHON",
+     "prenom": "Jean-Luc",
+     "nuance": null,
+     "voix": 10618,
+     "pct_exprimes": 49.01,
+     "pct_inscrits": 33.76
+    },
+    {
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "nuance": null,
+     "voix": 4463,
+     "pct_exprimes": 20.6,
+     "pct_inscrits": 14.19
+    },
+    {
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "nuance": null,
+     "voix": 2912,
+     "pct_exprimes": 13.44,
+     "pct_inscrits": 9.26
+    },
+    {
+     "nom": "ZEMMOUR",
+     "prenom": "Éric",
+     "nuance": null,
+     "voix": 902,
+     "pct_exprimes": 4.16,
+     "pct_inscrits": 2.87
+    },
+    {
+     "nom": "PÉCRESSE",
+     "prenom": "Valérie",
+     "nuance": null,
+     "voix": 611,
+     "pct_exprimes": 2.82,
+     "pct_inscrits": 1.94
+    },
+    {
+     "nom": "JADOT",
+     "prenom": "Yannick",
+     "nuance": null,
+     "voix": 594,
+     "pct_exprimes": 2.74,
+     "pct_inscrits": 1.89
+    },
+    {
+     "nom": "ROUSSEL",
+     "prenom": "Fabien",
+     "nuance": null,
+     "voix": 436,
+     "pct_exprimes": 2.01,
+     "pct_inscrits": 1.39
+    },
+    {
+     "nom": "LASSALLE",
+     "prenom": "Jean",
+     "nuance": null,
+     "voix": 265,
+     "pct_exprimes": 1.22,
+     "pct_inscrits": 0.84
+    },
+    {
+     "nom": "DUPONT-AIGNAN",
+     "prenom": "Nicolas",
+     "nuance": null,
+     "voix": 224,
+     "pct_exprimes": 1.03,
+     "pct_inscrits": 0.71
+    },
+    {
+     "nom": "HIDALGO",
+     "prenom": "Anne",
+     "nuance": null,
+     "voix": 218,
+     "pct_exprimes": 1.01,
+     "pct_inscrits": 0.69
+    },
+    {
+     "nom": "POUTOU",
+     "prenom": "Philippe",
+     "nuance": null,
+     "voix": 123,
+     "pct_exprimes": 0.57,
+     "pct_inscrits": 0.39
+    },
+    {
+     "nom": "ARTHAUD",
+     "prenom": "Nathalie",
+     "nuance": null,
+     "voix": 109,
+     "pct_exprimes": 0.5,
+     "pct_inscrits": 0.35
+    }
+   ],
+   "pct_abstention": 29.93,
+   "pct_participation": 70.07,
+   "tete": {
+    "nom": "MÉLENCHON",
+    "prenom": "Jean-Luc",
+    "nuance": null,
+    "pct_exprimes": 49.01
+   },
+   "nb_communes": 2,
+   "code_canton": "03"
+  },
+  "01": {
+   "bureaux_de_vote": 35,
+   "inscrits": 37506,
+   "abstentions": 10023,
+   "votants": 27483,
+   "blancs": 373,
+   "nuls": 127,
+   "exprimes": 26983,
+   "nom": "Argenteuil-1",
+   "candidats": [
+    {
+     "nom": "MÉLENCHON",
+     "prenom": "Jean-Luc",
+     "nuance": null,
+     "voix": 9220,
+     "pct_exprimes": 34.17,
+     "pct_inscrits": 24.58
+    },
+    {
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "nuance": null,
+     "voix": 7530,
+     "pct_exprimes": 27.91,
+     "pct_inscrits": 20.08
+    },
+    {
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "nuance": null,
+     "voix": 4012,
+     "pct_exprimes": 14.87,
+     "pct_inscrits": 10.7
+    },
+    {
+     "nom": "ZEMMOUR",
+     "prenom": "Éric",
+     "nuance": null,
+     "voix": 1788,
+     "pct_exprimes": 6.63,
+     "pct_inscrits": 4.77
+    },
+    {
+     "nom": "PÉCRESSE",
+     "prenom": "Valérie",
+     "nuance": null,
+     "voix": 1474,
+     "pct_exprimes": 5.46,
+     "pct_inscrits": 3.93
+    },
+    {
+     "nom": "JADOT",
+     "prenom": "Yannick",
+     "nuance": null,
+     "voix": 1031,
+     "pct_exprimes": 3.82,
+     "pct_inscrits": 2.75
+    },
+    {
+     "nom": "ROUSSEL",
+     "prenom": "Fabien",
+     "nuance": null,
+     "voix": 543,
+     "pct_exprimes": 2.01,
+     "pct_inscrits": 1.45
+    },
+    {
+     "nom": "LASSALLE",
+     "prenom": "Jean",
+     "nuance": null,
+     "voix": 421,
+     "pct_exprimes": 1.56,
+     "pct_inscrits": 1.12
+    },
+    {
+     "nom": "DUPONT-AIGNAN",
+     "prenom": "Nicolas",
+     "nuance": null,
+     "voix": 395,
+     "pct_exprimes": 1.46,
+     "pct_inscrits": 1.05
+    },
+    {
+     "nom": "HIDALGO",
+     "prenom": "Anne",
+     "nuance": null,
+     "voix": 294,
+     "pct_exprimes": 1.09,
+     "pct_inscrits": 0.78
+    },
+    {
+     "nom": "POUTOU",
+     "prenom": "Philippe",
+     "nuance": null,
+     "voix": 137,
+     "pct_exprimes": 0.51,
+     "pct_inscrits": 0.37
+    },
+    {
+     "nom": "ARTHAUD",
+     "prenom": "Nathalie",
+     "nuance": null,
+     "voix": 128,
+     "pct_exprimes": 0.47,
+     "pct_inscrits": 0.34
+    }
+   ],
+   "pct_abstention": 26.72,
+   "pct_participation": 73.28,
+   "tete": {
+    "nom": "MÉLENCHON",
+    "prenom": "Jean-Luc",
+    "nuance": null,
+    "pct_exprimes": 34.17
+   },
+   "nb_communes": 3,
+   "code_canton": "01"
+  },
+  "11": {
+   "bureaux_de_vote": 24,
+   "inscrits": 26010,
+   "abstentions": 8927,
+   "votants": 17083,
+   "blancs": 255,
+   "nuls": 129,
+   "exprimes": 16699,
+   "nom": "Garges-lès-Gonesse",
+   "candidats": [
+    {
+     "nom": "MÉLENCHON",
+     "prenom": "Jean-Luc",
+     "nuance": null,
+     "voix": 8870,
+     "pct_exprimes": 53.12,
+     "pct_inscrits": 34.1
+    },
+    {
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "nuance": null,
+     "voix": 3058,
+     "pct_exprimes": 18.31,
+     "pct_inscrits": 11.76
+    },
+    {
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "nuance": null,
+     "voix": 2269,
+     "pct_exprimes": 13.59,
+     "pct_inscrits": 8.72
+    },
+    {
+     "nom": "ZEMMOUR",
+     "prenom": "Éric",
+     "nuance": null,
+     "voix": 951,
+     "pct_exprimes": 5.69,
+     "pct_inscrits": 3.66
+    },
+    {
+     "nom": "PÉCRESSE",
+     "prenom": "Valérie",
+     "nuance": null,
+     "voix": 500,
+     "pct_exprimes": 2.99,
+     "pct_inscrits": 1.92
+    },
+    {
+     "nom": "JADOT",
+     "prenom": "Yannick",
+     "nuance": null,
+     "voix": 202,
+     "pct_exprimes": 1.21,
+     "pct_inscrits": 0.78
+    },
+    {
+     "nom": "ROUSSEL",
+     "prenom": "Fabien",
+     "nuance": null,
+     "voix": 193,
+     "pct_exprimes": 1.16,
+     "pct_inscrits": 0.74
+    },
+    {
+     "nom": "DUPONT-AIGNAN",
+     "prenom": "Nicolas",
+     "nuance": null,
+     "voix": 184,
+     "pct_exprimes": 1.1,
+     "pct_inscrits": 0.71
+    },
+    {
+     "nom": "LASSALLE",
+     "prenom": "Jean",
+     "nuance": null,
+     "voix": 181,
+     "pct_exprimes": 1.08,
+     "pct_inscrits": 0.7
+    },
+    {
+     "nom": "HIDALGO",
+     "prenom": "Anne",
+     "nuance": null,
+     "voix": 114,
+     "pct_exprimes": 0.68,
+     "pct_inscrits": 0.44
+    },
+    {
+     "nom": "POUTOU",
+     "prenom": "Philippe",
+     "nuance": null,
+     "voix": 103,
+     "pct_exprimes": 0.62,
+     "pct_inscrits": 0.4
+    },
+    {
+     "nom": "ARTHAUD",
+     "prenom": "Nathalie",
+     "nuance": null,
+     "voix": 74,
+     "pct_exprimes": 0.44,
+     "pct_inscrits": 0.28
+    }
+   ],
+   "pct_abstention": 34.32,
+   "pct_participation": 65.68,
+   "tete": {
+    "nom": "MÉLENCHON",
+    "prenom": "Jean-Luc",
+    "nuance": null,
+    "pct_exprimes": 53.12
+   },
+   "nb_communes": 2,
+   "code_canton": "11"
+  },
+  "14": {
+   "bureaux_de_vote": 46,
+   "inscrits": 41612,
+   "abstentions": 9874,
+   "votants": 31738,
+   "blancs": 506,
+   "nuls": 161,
+   "exprimes": 31071,
+   "nom": "L'Isle-Adam",
+   "candidats": [
+    {
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "nuance": null,
+     "voix": 7709,
+     "pct_exprimes": 24.81,
+     "pct_inscrits": 18.53
+    },
+    {
+     "nom": "MÉLENCHON",
+     "prenom": "Jean-Luc",
+     "nuance": null,
+     "voix": 7483,
+     "pct_exprimes": 24.08,
+     "pct_inscrits": 17.98
+    },
+    {
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "nuance": null,
+     "voix": 6616,
+     "pct_exprimes": 21.29,
+     "pct_inscrits": 15.9
+    },
+    {
+     "nom": "ZEMMOUR",
+     "prenom": "Éric",
+     "nuance": null,
+     "voix": 2347,
+     "pct_exprimes": 7.55,
+     "pct_inscrits": 5.64
+    },
+    {
+     "nom": "PÉCRESSE",
+     "prenom": "Valérie",
+     "nuance": null,
+     "voix": 1649,
+     "pct_exprimes": 5.31,
+     "pct_inscrits": 3.96
+    },
+    {
+     "nom": "JADOT",
+     "prenom": "Yannick",
+     "nuance": null,
+     "voix": 1173,
+     "pct_exprimes": 3.78,
+     "pct_inscrits": 2.82
+    },
+    {
+     "nom": "ROUSSEL",
+     "prenom": "Fabien",
+     "nuance": null,
+     "voix": 644,
+     "pct_exprimes": 2.07,
+     "pct_inscrits": 1.55
+    },
+    {
+     "nom": "DUPONT-AIGNAN",
+     "prenom": "Nicolas",
+     "nuance": null,
+     "voix": 600,
+     "pct_exprimes": 1.93,
+     "pct_inscrits": 1.44
+    },
+    {
+     "nom": "LASSALLE",
+     "prenom": "Jean",
+     "nuance": null,
+     "voix": 590,
+     "pct_exprimes": 1.9,
+     "pct_inscrits": 1.42
+    },
+    {
+     "nom": "HIDALGO",
+     "prenom": "Anne",
+     "nuance": null,
+     "voix": 288,
+     "pct_exprimes": 0.93,
+     "pct_inscrits": 0.69
+    },
+    {
+     "nom": "POUTOU",
+     "prenom": "Philippe",
+     "nuance": null,
+     "voix": 186,
+     "pct_exprimes": 0.6,
+     "pct_inscrits": 0.45
+    },
+    {
+     "nom": "ARTHAUD",
+     "prenom": "Nathalie",
+     "nuance": null,
+     "voix": 161,
+     "pct_exprimes": 0.52,
+     "pct_inscrits": 0.39
+    }
+   ],
+   "pct_abstention": 23.73,
+   "pct_participation": 76.27,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 24.81
+   },
+   "nb_communes": 15,
+   "code_canton": "14"
+  },
+  "09": {
+   "bureaux_de_vote": 46,
+   "inscrits": 39946,
+   "abstentions": 9471,
+   "votants": 30475,
+   "blancs": 497,
+   "nuls": 185,
+   "exprimes": 29793,
+   "nom": "Fosses",
+   "candidats": [
+    {
+     "nom": "MÉLENCHON",
+     "prenom": "Jean-Luc",
+     "nuance": null,
+     "voix": 7181,
+     "pct_exprimes": 24.1,
+     "pct_inscrits": 17.98
+    },
+    {
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "nuance": null,
+     "voix": 6835,
+     "pct_exprimes": 22.94,
+     "pct_inscrits": 17.11
+    },
+    {
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "nuance": null,
+     "voix": 6427,
+     "pct_exprimes": 21.57,
+     "pct_inscrits": 16.09
+    },
+    {
+     "nom": "ZEMMOUR",
+     "prenom": "Éric",
+     "nuance": null,
+     "voix": 2310,
+     "pct_exprimes": 7.75,
+     "pct_inscrits": 5.78
+    },
+    {
+     "nom": "PÉCRESSE",
+     "prenom": "Valérie",
+     "nuance": null,
+     "voix": 1352,
+     "pct_exprimes": 4.54,
+     "pct_inscrits": 3.38
+    },
+    {
+     "nom": "JADOT",
+     "prenom": "Yannick",
+     "nuance": null,
+     "voix": 1138,
+     "pct_exprimes": 3.82,
+     "pct_inscrits": 2.85
+    },
+    {
+     "nom": "ROUSSEL",
+     "prenom": "Fabien",
+     "nuance": null,
+     "voix": 650,
+     "pct_exprimes": 2.18,
+     "pct_inscrits": 1.63
+    },
+    {
+     "nom": "DUPONT-AIGNAN",
+     "prenom": "Nicolas",
+     "nuance": null,
+     "voix": 608,
+     "pct_exprimes": 2.04,
+     "pct_inscrits": 1.52
+    },
+    {
+     "nom": "LASSALLE",
+     "prenom": "Jean",
+     "nuance": null,
+     "voix": 543,
+     "pct_exprimes": 1.82,
+     "pct_inscrits": 1.36
+    },
+    {
+     "nom": "HIDALGO",
+     "prenom": "Anne",
+     "nuance": null,
+     "voix": 315,
+     "pct_exprimes": 1.06,
+     "pct_inscrits": 0.79
+    },
+    {
+     "nom": "POUTOU",
+     "prenom": "Philippe",
+     "nuance": null,
+     "voix": 196,
+     "pct_exprimes": 0.66,
+     "pct_inscrits": 0.49
+    },
+    {
+     "nom": "ARTHAUD",
+     "prenom": "Nathalie",
+     "nuance": null,
+     "voix": 129,
+     "pct_exprimes": 0.43,
+     "pct_inscrits": 0.32
+    }
+   ],
+   "pct_abstention": 23.71,
+   "pct_participation": 76.29,
+   "tete": {
+    "nom": "MÉLENCHON",
+    "prenom": "Jean-Luc",
+    "nuance": null,
+    "pct_exprimes": 24.1
+   },
+   "nb_communes": 24,
+   "code_canton": "09"
+  },
+  "17": {
+   "bureaux_de_vote": 39,
+   "inscrits": 36028,
+   "abstentions": 8463,
+   "votants": 27565,
+   "blancs": 420,
+   "nuls": 169,
+   "exprimes": 26976,
+   "nom": "Saint-Ouen-l'Aumône",
+   "candidats": [
+    {
+     "nom": "MÉLENCHON",
+     "prenom": "Jean-Luc",
+     "nuance": null,
+     "voix": 7394,
+     "pct_exprimes": 27.41,
+     "pct_inscrits": 20.52
+    },
+    {
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "nuance": null,
+     "voix": 7370,
+     "pct_exprimes": 27.32,
+     "pct_inscrits": 20.46
+    },
+    {
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "nuance": null,
+     "voix": 5454,
+     "pct_exprimes": 20.22,
+     "pct_inscrits": 15.14
+    },
+    {
+     "nom": "ZEMMOUR",
+     "prenom": "Éric",
+     "nuance": null,
+     "voix": 1868,
+     "pct_exprimes": 6.92,
+     "pct_inscrits": 5.18
+    },
+    {
+     "nom": "PÉCRESSE",
+     "prenom": "Valérie",
+     "nuance": null,
+     "voix": 1326,
+     "pct_exprimes": 4.92,
+     "pct_inscrits": 3.68
+    },
+    {
+     "nom": "JADOT",
+     "prenom": "Yannick",
+     "nuance": null,
+     "voix": 1246,
+     "pct_exprimes": 4.62,
+     "pct_inscrits": 3.46
+    },
+    {
+     "nom": "DUPONT-AIGNAN",
+     "prenom": "Nicolas",
+     "nuance": null,
+     "voix": 583,
+     "pct_exprimes": 2.16,
+     "pct_inscrits": 1.62
+    },
+    {
+     "nom": "ROUSSEL",
+     "prenom": "Fabien",
+     "nuance": null,
+     "voix": 562,
+     "pct_exprimes": 2.08,
+     "pct_inscrits": 1.56
+    },
+    {
+     "nom": "LASSALLE",
+     "prenom": "Jean",
+     "nuance": null,
+     "voix": 542,
+     "pct_exprimes": 2.01,
+     "pct_inscrits": 1.5
+    },
+    {
+     "nom": "HIDALGO",
+     "prenom": "Anne",
+     "nuance": null,
+     "voix": 325,
+     "pct_exprimes": 1.2,
+     "pct_inscrits": 0.9
+    },
+    {
+     "nom": "POUTOU",
+     "prenom": "Philippe",
+     "nuance": null,
+     "voix": 189,
+     "pct_exprimes": 0.7,
+     "pct_inscrits": 0.52
+    },
+    {
+     "nom": "ARTHAUD",
+     "prenom": "Nathalie",
+     "nuance": null,
+     "voix": 117,
+     "pct_exprimes": 0.43,
+     "pct_inscrits": 0.32
+    }
+   ],
+   "pct_abstention": 23.49,
+   "pct_participation": 76.51,
+   "tete": {
+    "nom": "MÉLENCHON",
+    "prenom": "Jean-Luc",
+    "nuance": null,
+    "pct_exprimes": 27.41
+   },
+   "nb_communes": 12,
+   "code_canton": "17"
+  },
+  "07": {
+   "bureaux_de_vote": 46,
+   "inscrits": 42751,
+   "abstentions": 9687,
+   "votants": 33064,
+   "blancs": 493,
+   "nuls": 211,
+   "exprimes": 32360,
+   "nom": "Domont",
+   "candidats": [
+    {
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "nuance": null,
+     "voix": 9762,
+     "pct_exprimes": 30.17,
+     "pct_inscrits": 22.83
+    },
+    {
+     "nom": "MÉLENCHON",
+     "prenom": "Jean-Luc",
+     "nuance": null,
+     "voix": 7746,
+     "pct_exprimes": 23.94,
+     "pct_inscrits": 18.12
+    },
+    {
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "nuance": null,
+     "voix": 5882,
+     "pct_exprimes": 18.18,
+     "pct_inscrits": 13.76
+    },
+    {
+     "nom": "ZEMMOUR",
+     "prenom": "Éric",
+     "nuance": null,
+     "voix": 2568,
+     "pct_exprimes": 7.94,
+     "pct_inscrits": 6.01
+    },
+    {
+     "nom": "PÉCRESSE",
+     "prenom": "Valérie",
+     "nuance": null,
+     "voix": 1874,
+     "pct_exprimes": 5.79,
+     "pct_inscrits": 4.38
+    },
+    {
+     "nom": "JADOT",
+     "prenom": "Yannick",
+     "nuance": null,
+     "voix": 1667,
+     "pct_exprimes": 5.15,
+     "pct_inscrits": 3.9
+    },
+    {
+     "nom": "ROUSSEL",
+     "prenom": "Fabien",
+     "nuance": null,
+     "voix": 673,
+     "pct_exprimes": 2.08,
+     "pct_inscrits": 1.57
+    },
+    {
+     "nom": "DUPONT-AIGNAN",
+     "prenom": "Nicolas",
+     "nuance": null,
+     "voix": 642,
+     "pct_exprimes": 1.98,
+     "pct_inscrits": 1.5
+    },
+    {
+     "nom": "LASSALLE",
+     "prenom": "Jean",
+     "nuance": null,
+     "voix": 627,
+     "pct_exprimes": 1.94,
+     "pct_inscrits": 1.47
+    },
+    {
+     "nom": "HIDALGO",
+     "prenom": "Anne",
+     "nuance": null,
+     "voix": 361,
+     "pct_exprimes": 1.12,
+     "pct_inscrits": 0.84
+    },
+    {
+     "nom": "POUTOU",
+     "prenom": "Philippe",
+     "nuance": null,
+     "voix": 209,
+     "pct_exprimes": 0.65,
+     "pct_inscrits": 0.49
+    },
+    {
+     "nom": "ARTHAUD",
+     "prenom": "Nathalie",
+     "nuance": null,
+     "voix": 134,
+     "pct_exprimes": 0.41,
+     "pct_inscrits": 0.31
+    }
+   ],
+   "pct_abstention": 22.66,
+   "pct_participation": 77.34,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 30.17
+   },
+   "nb_communes": 11,
+   "code_canton": "07"
+  },
+  "19": {
+   "bureaux_de_vote": 39,
+   "inscrits": 34000,
+   "abstentions": 8089,
+   "votants": 25911,
+   "blancs": 396,
+   "nuls": 141,
+   "exprimes": 25374,
+   "nom": "Taverny",
+   "candidats": [
+    {
+     "nom": "MÉLENCHON",
+     "prenom": "Jean-Luc",
+     "nuance": null,
+     "voix": 7014,
+     "pct_exprimes": 27.64,
+     "pct_inscrits": 20.63
+    },
+    {
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "nuance": null,
+     "voix": 6885,
+     "pct_exprimes": 27.13,
+     "pct_inscrits": 20.25
+    },
+    {
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "nuance": null,
+     "voix": 4872,
+     "pct_exprimes": 19.2,
+     "pct_inscrits": 14.33
+    },
+    {
+     "nom": "ZEMMOUR",
+     "prenom": "Éric",
+     "nuance": null,
+     "voix": 1750,
+     "pct_exprimes": 6.9,
+     "pct_inscrits": 5.15
+    },
+    {
+     "nom": "PÉCRESSE",
+     "prenom": "Valérie",
+     "nuance": null,
+     "voix": 1601,
+     "pct_exprimes": 6.31,
+     "pct_inscrits": 4.71
+    },
+    {
+     "nom": "JADOT",
+     "prenom": "Yannick",
+     "nuance": null,
+     "voix": 1115,
+     "pct_exprimes": 4.39,
+     "pct_inscrits": 3.28
+    },
+    {
+     "nom": "ROUSSEL",
+     "prenom": "Fabien",
+     "nuance": null,
+     "voix": 544,
+     "pct_exprimes": 2.14,
+     "pct_inscrits": 1.6
+    },
+    {
+     "nom": "DUPONT-AIGNAN",
+     "prenom": "Nicolas",
+     "nuance": null,
+     "voix": 485,
+     "pct_exprimes": 1.91,
+     "pct_inscrits": 1.43
+    },
+    {
+     "nom": "LASSALLE",
+     "prenom": "Jean",
+     "nuance": null,
+     "voix": 476,
+     "pct_exprimes": 1.88,
+     "pct_inscrits": 1.4
+    },
+    {
+     "nom": "HIDALGO",
+     "prenom": "Anne",
+     "nuance": null,
+     "voix": 309,
+     "pct_exprimes": 1.22,
+     "pct_inscrits": 0.91
+    },
+    {
+     "nom": "POUTOU",
+     "prenom": "Philippe",
+     "nuance": null,
+     "voix": 180,
+     "pct_exprimes": 0.71,
+     "pct_inscrits": 0.53
+    },
+    {
+     "nom": "ARTHAUD",
+     "prenom": "Nathalie",
+     "nuance": null,
+     "voix": 110,
+     "pct_exprimes": 0.43,
+     "pct_inscrits": 0.32
+    }
+   ],
+   "pct_abstention": 23.79,
+   "pct_participation": 76.21,
+   "tete": {
+    "nom": "MÉLENCHON",
+    "prenom": "Jean-Luc",
+    "nuance": null,
+    "pct_exprimes": 27.64
+   },
+   "nb_communes": 4,
+   "code_canton": "19"
+  },
+  "05": {
+   "bureaux_de_vote": 31,
+   "inscrits": 33067,
+   "abstentions": 8424,
+   "votants": 24643,
+   "blancs": 384,
+   "nuls": 136,
+   "exprimes": 24123,
+   "nom": "Cergy-2",
+   "candidats": [
+    {
+     "nom": "MÉLENCHON",
+     "prenom": "Jean-Luc",
+     "nuance": null,
+     "voix": 8287,
+     "pct_exprimes": 34.35,
+     "pct_inscrits": 25.06
+    },
+    {
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "nuance": null,
+     "voix": 6486,
+     "pct_exprimes": 26.89,
+     "pct_inscrits": 19.61
+    },
+    {
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "nuance": null,
+     "voix": 3680,
+     "pct_exprimes": 15.26,
+     "pct_inscrits": 11.13
+    },
+    {
+     "nom": "ZEMMOUR",
+     "prenom": "Éric",
+     "nuance": null,
+     "voix": 1336,
+     "pct_exprimes": 5.54,
+     "pct_inscrits": 4.04
+    },
+    {
+     "nom": "PÉCRESSE",
+     "prenom": "Valérie",
+     "nuance": null,
+     "voix": 1249,
+     "pct_exprimes": 5.18,
+     "pct_inscrits": 3.78
+    },
+    {
+     "nom": "JADOT",
+     "prenom": "Yannick",
+     "nuance": null,
+     "voix": 1129,
+     "pct_exprimes": 4.68,
+     "pct_inscrits": 3.41
+    },
+    {
+     "nom": "ROUSSEL",
+     "prenom": "Fabien",
+     "nuance": null,
+     "voix": 470,
+     "pct_exprimes": 1.95,
+     "pct_inscrits": 1.42
+    },
+    {
+     "nom": "DUPONT-AIGNAN",
+     "prenom": "Nicolas",
+     "nuance": null,
+     "voix": 446,
+     "pct_exprimes": 1.85,
+     "pct_inscrits": 1.35
+    },
+    {
+     "nom": "LASSALLE",
+     "prenom": "Jean",
+     "nuance": null,
+     "voix": 383,
+     "pct_exprimes": 1.59,
+     "pct_inscrits": 1.16
+    },
+    {
+     "nom": "HIDALGO",
+     "prenom": "Anne",
+     "nuance": null,
+     "voix": 372,
+     "pct_exprimes": 1.54,
+     "pct_inscrits": 1.12
+    },
+    {
+     "nom": "POUTOU",
+     "prenom": "Philippe",
+     "nuance": null,
+     "voix": 167,
+     "pct_exprimes": 0.69,
+     "pct_inscrits": 0.51
+    },
+    {
+     "nom": "ARTHAUD",
+     "prenom": "Nathalie",
+     "nuance": null,
+     "voix": 118,
+     "pct_exprimes": 0.49,
+     "pct_inscrits": 0.36
+    }
+   ],
+   "pct_abstention": 25.48,
+   "pct_participation": 74.52,
+   "tete": {
+    "nom": "MÉLENCHON",
+    "prenom": "Jean-Luc",
+    "nuance": null,
+    "pct_exprimes": 34.35
+   },
+   "nb_communes": 5,
+   "code_canton": "05"
+  },
+  "21": {
+   "bureaux_de_vote": 36,
+   "inscrits": 31792,
+   "abstentions": 10076,
+   "votants": 21716,
+   "blancs": 289,
+   "nuls": 221,
+   "exprimes": 21206,
+   "nom": "Villiers-le-Bel",
+   "candidats": [
+    {
+     "nom": "MÉLENCHON",
+     "prenom": "Jean-Luc",
+     "nuance": null,
+     "voix": 9482,
+     "pct_exprimes": 44.71,
+     "pct_inscrits": 29.83
+    },
+    {
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "nuance": null,
+     "voix": 3759,
+     "pct_exprimes": 17.73,
+     "pct_inscrits": 11.82
+    },
+    {
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "nuance": null,
+     "voix": 3495,
+     "pct_exprimes": 16.48,
+     "pct_inscrits": 10.99
+    },
+    {
+     "nom": "ZEMMOUR",
+     "prenom": "Éric",
+     "nuance": null,
+     "voix": 1276,
+     "pct_exprimes": 6.02,
+     "pct_inscrits": 4.01
+    },
+    {
+     "nom": "PÉCRESSE",
+     "prenom": "Valérie",
+     "nuance": null,
+     "voix": 613,
+     "pct_exprimes": 2.89,
+     "pct_inscrits": 1.93
+    },
+    {
+     "nom": "JADOT",
+     "prenom": "Yannick",
+     "nuance": null,
+     "voix": 276,
+     "pct_exprimes": 1.3,
+     "pct_inscrits": 0.87
+    },
+    {
+     "nom": "ROUSSEL",
+     "prenom": "Fabien",
+     "nuance": null,
+     "voix": 253,
+     "pct_exprimes": 1.19,
+     "pct_inscrits": 0.8
+    },
+    {
+     "nom": "LASSALLE",
+     "prenom": "Jean",
+     "nuance": null,
+     "voix": 238,
+     "pct_exprimes": 1.12,
+     "pct_inscrits": 0.75
+    },
+    {
+     "nom": "DUPONT-AIGNAN",
+     "prenom": "Nicolas",
+     "nuance": null,
+     "voix": 235,
+     "pct_exprimes": 1.11,
+     "pct_inscrits": 0.74
+    },
+    {
+     "nom": "HIDALGO",
+     "prenom": "Anne",
+     "nuance": null,
+     "voix": 179,
+     "pct_exprimes": 0.84,
+     "pct_inscrits": 0.56
+    },
+    {
+     "nom": "ARTHAUD",
+     "prenom": "Nathalie",
+     "nuance": null,
+     "voix": 104,
+     "pct_exprimes": 0.49,
+     "pct_inscrits": 0.33
+    },
+    {
+     "nom": "POUTOU",
+     "prenom": "Philippe",
+     "nuance": null,
+     "voix": 100,
+     "pct_exprimes": 0.47,
+     "pct_inscrits": 0.31
+    }
+   ],
+   "pct_abstention": 31.69,
+   "pct_participation": 68.31,
+   "tete": {
+    "nom": "MÉLENCHON",
+    "prenom": "Jean-Luc",
+    "nuance": null,
+    "pct_exprimes": 44.71
+   },
+   "nb_communes": 7,
+   "code_canton": "21"
+  },
+  "04": {
+   "bureaux_de_vote": 37,
+   "inscrits": 34647,
+   "abstentions": 10210,
+   "votants": 24437,
+   "blancs": 329,
+   "nuls": 140,
+   "exprimes": 23968,
+   "nom": "Cergy-1",
+   "candidats": [
+    {
+     "nom": "MÉLENCHON",
+     "prenom": "Jean-Luc",
+     "nuance": null,
+     "voix": 10277,
+     "pct_exprimes": 42.88,
+     "pct_inscrits": 29.66
+    },
+    {
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "nuance": null,
+     "voix": 5884,
+     "pct_exprimes": 24.55,
+     "pct_inscrits": 16.98
+    },
+    {
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "nuance": null,
+     "voix": 3122,
+     "pct_exprimes": 13.03,
+     "pct_inscrits": 9.01
+    },
+    {
+     "nom": "ZEMMOUR",
+     "prenom": "Éric",
+     "nuance": null,
+     "voix": 1069,
+     "pct_exprimes": 4.46,
+     "pct_inscrits": 3.09
+    },
+    {
+     "nom": "PÉCRESSE",
+     "prenom": "Valérie",
+     "nuance": null,
+     "voix": 961,
+     "pct_exprimes": 4.01,
+     "pct_inscrits": 2.77
+    },
+    {
+     "nom": "JADOT",
+     "prenom": "Yannick",
+     "nuance": null,
+     "voix": 753,
+     "pct_exprimes": 3.14,
+     "pct_inscrits": 2.17
+    },
+    {
+     "nom": "ROUSSEL",
+     "prenom": "Fabien",
+     "nuance": null,
+     "voix": 366,
+     "pct_exprimes": 1.53,
+     "pct_inscrits": 1.06
+    },
+    {
+     "nom": "DUPONT-AIGNAN",
+     "prenom": "Nicolas",
+     "nuance": null,
+     "voix": 343,
+     "pct_exprimes": 1.43,
+     "pct_inscrits": 0.99
+    },
+    {
+     "nom": "LASSALLE",
+     "prenom": "Jean",
+     "nuance": null,
+     "voix": 323,
+     "pct_exprimes": 1.35,
+     "pct_inscrits": 0.93
+    },
+    {
+     "nom": "HIDALGO",
+     "prenom": "Anne",
+     "nuance": null,
+     "voix": 298,
+     "pct_exprimes": 1.24,
+     "pct_inscrits": 0.86
+    },
+    {
+     "nom": "POUTOU",
+     "prenom": "Philippe",
+     "nuance": null,
+     "voix": 148,
+     "pct_exprimes": 0.62,
+     "pct_inscrits": 0.43
+    },
+    {
+     "nom": "ARTHAUD",
+     "prenom": "Nathalie",
+     "nuance": null,
+     "voix": 123,
+     "pct_exprimes": 0.51,
+     "pct_inscrits": 0.36
+    }
+   ],
+   "pct_abstention": 29.47,
+   "pct_participation": 70.53,
+   "tete": {
+    "nom": "MÉLENCHON",
+    "prenom": "Jean-Luc",
+    "nuance": null,
+    "pct_exprimes": 42.88
+   },
+   "nb_communes": 3,
+   "code_canton": "04"
+  },
+  "12": {
+   "bureaux_de_vote": 40,
+   "inscrits": 33866,
+   "abstentions": 9993,
+   "votants": 23873,
+   "blancs": 397,
+   "nuls": 206,
+   "exprimes": 23270,
+   "nom": "Goussainville",
+   "candidats": [
+    {
+     "nom": "MÉLENCHON",
+     "prenom": "Jean-Luc",
+     "nuance": null,
+     "voix": 9112,
+     "pct_exprimes": 39.16,
+     "pct_inscrits": 26.91
+    },
+    {
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "nuance": null,
+     "voix": 4925,
+     "pct_exprimes": 21.16,
+     "pct_inscrits": 14.54
+    },
+    {
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "nuance": null,
+     "voix": 4896,
+     "pct_exprimes": 21.04,
+     "pct_inscrits": 14.46
+    },
+    {
+     "nom": "ZEMMOUR",
+     "prenom": "Éric",
+     "nuance": null,
+     "voix": 1295,
+     "pct_exprimes": 5.57,
+     "pct_inscrits": 3.82
+    },
+    {
+     "nom": "PÉCRESSE",
+     "prenom": "Valérie",
+     "nuance": null,
+     "voix": 771,
+     "pct_exprimes": 3.31,
+     "pct_inscrits": 2.28
+    },
+    {
+     "nom": "JADOT",
+     "prenom": "Yannick",
+     "nuance": null,
+     "voix": 454,
+     "pct_exprimes": 1.95,
+     "pct_inscrits": 1.34
+    },
+    {
+     "nom": "ROUSSEL",
+     "prenom": "Fabien",
+     "nuance": null,
+     "voix": 408,
+     "pct_exprimes": 1.75,
+     "pct_inscrits": 1.2
+    },
+    {
+     "nom": "DUPONT-AIGNAN",
+     "prenom": "Nicolas",
+     "nuance": null,
+     "voix": 376,
+     "pct_exprimes": 1.62,
+     "pct_inscrits": 1.11
+    },
+    {
+     "nom": "LASSALLE",
+     "prenom": "Jean",
+     "nuance": null,
+     "voix": 354,
+     "pct_exprimes": 1.52,
+     "pct_inscrits": 1.05
+    },
+    {
+     "nom": "HIDALGO",
+     "prenom": "Anne",
+     "nuance": null,
+     "voix": 177,
+     "pct_exprimes": 0.76,
+     "pct_inscrits": 0.52
+    },
+    {
+     "nom": "POUTOU",
+     "prenom": "Philippe",
+     "nuance": null,
+     "voix": 139,
+     "pct_exprimes": 0.6,
+     "pct_inscrits": 0.41
+    },
+    {
+     "nom": "ARTHAUD",
+     "prenom": "Nathalie",
+     "nuance": null,
+     "voix": 114,
+     "pct_exprimes": 0.49,
+     "pct_inscrits": 0.34
+    }
+   ],
+   "pct_abstention": 29.51,
+   "pct_participation": 70.49,
+   "tete": {
+    "nom": "MÉLENCHON",
+    "prenom": "Jean-Luc",
+    "nuance": null,
+    "pct_exprimes": 39.16
+   },
+   "nb_communes": 9,
+   "code_canton": "12"
+  },
+  "10": {
+   "bureaux_de_vote": 39,
+   "inscrits": 38631,
+   "abstentions": 9788,
+   "votants": 28843,
+   "blancs": 442,
+   "nuls": 121,
+   "exprimes": 28280,
+   "nom": "Franconville",
+   "candidats": [
+    {
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "nuance": null,
+     "voix": 8204,
+     "pct_exprimes": 29.01,
+     "pct_inscrits": 21.24
+    },
+    {
+     "nom": "MÉLENCHON",
+     "prenom": "Jean-Luc",
+     "nuance": null,
+     "voix": 8108,
+     "pct_exprimes": 28.67,
+     "pct_inscrits": 20.99
+    },
+    {
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "nuance": null,
+     "voix": 4754,
+     "pct_exprimes": 16.81,
+     "pct_inscrits": 12.31
+    },
+    {
+     "nom": "ZEMMOUR",
+     "prenom": "Éric",
+     "nuance": null,
+     "voix": 1803,
+     "pct_exprimes": 6.38,
+     "pct_inscrits": 4.67
+    },
+    {
+     "nom": "PÉCRESSE",
+     "prenom": "Valérie",
+     "nuance": null,
+     "voix": 1740,
+     "pct_exprimes": 6.15,
+     "pct_inscrits": 4.5
+    },
+    {
+     "nom": "JADOT",
+     "prenom": "Yannick",
+     "nuance": null,
+     "voix": 1318,
+     "pct_exprimes": 4.66,
+     "pct_inscrits": 3.41
+    },
+    {
+     "nom": "ROUSSEL",
+     "prenom": "Fabien",
+     "nuance": null,
+     "voix": 607,
+     "pct_exprimes": 2.15,
+     "pct_inscrits": 1.57
+    },
+    {
+     "nom": "LASSALLE",
+     "prenom": "Jean",
+     "nuance": null,
+     "voix": 569,
+     "pct_exprimes": 2.01,
+     "pct_inscrits": 1.47
+    },
+    {
+     "nom": "DUPONT-AIGNAN",
+     "prenom": "Nicolas",
+     "nuance": null,
+     "voix": 509,
+     "pct_exprimes": 1.8,
+     "pct_inscrits": 1.32
+    },
+    {
+     "nom": "HIDALGO",
+     "prenom": "Anne",
+     "nuance": null,
+     "voix": 340,
+     "pct_exprimes": 1.2,
+     "pct_inscrits": 0.88
+    },
+    {
+     "nom": "POUTOU",
+     "prenom": "Philippe",
+     "nuance": null,
+     "voix": 168,
+     "pct_exprimes": 0.59,
+     "pct_inscrits": 0.43
+    },
+    {
+     "nom": "ARTHAUD",
+     "prenom": "Nathalie",
+     "nuance": null,
+     "voix": 119,
+     "pct_exprimes": 0.42,
+     "pct_inscrits": 0.31
+    }
+   ],
+   "pct_abstention": 25.34,
+   "pct_participation": 74.66,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 29.01
+   },
+   "nb_communes": 2,
+   "code_canton": "10"
+  },
+  "06": {
+   "bureaux_de_vote": 38,
+   "inscrits": 36063,
+   "abstentions": 9605,
+   "votants": 26458,
+   "blancs": 372,
+   "nuls": 129,
+   "exprimes": 25957,
+   "nom": "Deuil-la-Barre",
+   "candidats": [
+    {
+     "nom": "MÉLENCHON",
+     "prenom": "Jean-Luc",
+     "nuance": null,
+     "voix": 7538,
+     "pct_exprimes": 29.04,
+     "pct_inscrits": 20.9
+    },
+    {
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "nuance": null,
+     "voix": 5792,
+     "pct_exprimes": 22.31,
+     "pct_inscrits": 16.06
+    },
+    {
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "nuance": null,
+     "voix": 2870,
+     "pct_exprimes": 11.06,
+     "pct_inscrits": 7.96
+    },
+    {
+     "nom": "ZEMMOUR",
+     "prenom": "Éric",
+     "nuance": null,
+     "voix": 1679,
+     "pct_exprimes": 6.47,
+     "pct_inscrits": 4.66
+    },
+    {
+     "nom": "PÉCRESSE",
+     "prenom": "Valérie",
+     "nuance": null,
+     "voix": 1015,
+     "pct_exprimes": 3.91,
+     "pct_inscrits": 2.81
+    },
+    {
+     "nom": "JADOT",
+     "prenom": "Yannick",
+     "nuance": null,
+     "voix": 931,
+     "pct_exprimes": 3.59,
+     "pct_inscrits": 2.58
+    },
+    {
+     "nom": "ROUSSEL",
+     "prenom": "Fabien",
+     "nuance": null,
+     "voix": 375,
+     "pct_exprimes": 1.44,
+     "pct_inscrits": 1.04
+    },
+    {
+     "nom": "LASSALLE",
+     "prenom": "Jean",
+     "nuance": null,
+     "voix": 352,
+     "pct_exprimes": 1.36,
+     "pct_inscrits": 0.98
+    },
+    {
+     "nom": "DUPONT-AIGNAN",
+     "prenom": "Nicolas",
+     "nuance": null,
+     "voix": 335,
+     "pct_exprimes": 1.29,
+     "pct_inscrits": 0.93
+    },
+    {
+     "nom": "HIDALGO",
+     "prenom": "Anne",
+     "nuance": null,
+     "voix": 245,
+     "pct_exprimes": 0.94,
+     "pct_inscrits": 0.68
+    },
+    {
+     "nom": "POUTOU",
+     "prenom": "Philippe",
+     "nuance": null,
+     "voix": 119,
+     "pct_exprimes": 0.46,
+     "pct_inscrits": 0.33
+    },
+    {
+     "nom": "ARTHAUD",
+     "prenom": "Nathalie",
+     "nuance": null,
+     "voix": 86,
+     "pct_exprimes": 0.33,
+     "pct_inscrits": 0.24
+    }
+   ],
+   "pct_abstention": 26.63,
+   "pct_participation": 73.37,
+   "tete": {
+    "nom": "MÉLENCHON",
+    "prenom": "Jean-Luc",
+    "nuance": null,
+    "pct_exprimes": 29.04
+   },
+   "nb_communes": 4,
+   "code_canton": "06"
+  },
+  "08": {
+   "bureaux_de_vote": 34,
+   "inscrits": 34304,
+   "abstentions": 8268,
+   "votants": 26036,
+   "blancs": 398,
+   "nuls": 129,
+   "exprimes": 25509,
+   "nom": "Ermont",
+   "candidats": [
+    {
+     "nom": "MÉLENCHON",
+     "prenom": "Jean-Luc",
+     "nuance": null,
+     "voix": 7659,
+     "pct_exprimes": 30.02,
+     "pct_inscrits": 22.33
+    },
+    {
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "nuance": null,
+     "voix": 7463,
+     "pct_exprimes": 29.26,
+     "pct_inscrits": 21.76
+    },
+    {
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "nuance": null,
+     "voix": 3383,
+     "pct_exprimes": 13.26,
+     "pct_inscrits": 9.86
+    },
+    {
+     "nom": "ZEMMOUR",
+     "prenom": "Éric",
+     "nuance": null,
+     "voix": 1738,
+     "pct_exprimes": 6.81,
+     "pct_inscrits": 5.07
+    },
+    {
+     "nom": "PÉCRESSE",
+     "prenom": "Valérie",
+     "nuance": null,
+     "voix": 1391,
+     "pct_exprimes": 5.45,
+     "pct_inscrits": 4.05
+    },
+    {
+     "nom": "JADOT",
+     "prenom": "Yannick",
+     "nuance": null,
+     "voix": 1354,
+     "pct_exprimes": 5.31,
+     "pct_inscrits": 3.95
+    },
+    {
+     "nom": "ROUSSEL",
+     "prenom": "Fabien",
+     "nuance": null,
+     "voix": 515,
+     "pct_exprimes": 2.02,
+     "pct_inscrits": 1.5
+    },
+    {
+     "nom": "LASSALLE",
+     "prenom": "Jean",
+     "nuance": null,
+     "voix": 439,
+     "pct_exprimes": 1.72,
+     "pct_inscrits": 1.28
+    },
+    {
+     "nom": "DUPONT-AIGNAN",
+     "prenom": "Nicolas",
+     "nuance": null,
+     "voix": 420,
+     "pct_exprimes": 1.65,
+     "pct_inscrits": 1.22
+    },
+    {
+     "nom": "HIDALGO",
+     "prenom": "Anne",
+     "nuance": null,
+     "voix": 357,
+     "pct_exprimes": 1.4,
+     "pct_inscrits": 1.04
+    },
+    {
+     "nom": "POUTOU",
+     "prenom": "Philippe",
+     "nuance": null,
+     "voix": 148,
+     "pct_exprimes": 0.58,
+     "pct_inscrits": 0.43
+    },
+    {
+     "nom": "ARTHAUD",
+     "prenom": "Nathalie",
+     "nuance": null,
+     "voix": 130,
+     "pct_exprimes": 0.51,
+     "pct_inscrits": 0.38
+    }
+   ],
+   "pct_abstention": 24.1,
+   "pct_participation": 75.9,
+   "tete": {
+    "nom": "MÉLENCHON",
+    "prenom": "Jean-Luc",
+    "nuance": null,
+    "pct_exprimes": 30.02
+   },
+   "nb_communes": 2,
+   "code_canton": "08"
+  },
+  "13": {
+   "bureaux_de_vote": 36,
+   "inscrits": 33811,
+   "abstentions": 8538,
+   "votants": 25273,
+   "blancs": 377,
+   "nuls": 125,
+   "exprimes": 24771,
+   "nom": "Herblay-sur-Seine",
+   "candidats": [
+    {
+     "nom": "MÉLENCHON",
+     "prenom": "Jean-Luc",
+     "nuance": null,
+     "voix": 7706,
+     "pct_exprimes": 31.11,
+     "pct_inscrits": 22.79
+    },
+    {
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "nuance": null,
+     "voix": 6734,
+     "pct_exprimes": 27.19,
+     "pct_inscrits": 19.92
+    },
+    {
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "nuance": null,
+     "voix": 4318,
+     "pct_exprimes": 17.43,
+     "pct_inscrits": 12.77
+    },
+    {
+     "nom": "ZEMMOUR",
+     "prenom": "Éric",
+     "nuance": null,
+     "voix": 1535,
+     "pct_exprimes": 6.2,
+     "pct_inscrits": 4.54
+    },
+    {
+     "nom": "PÉCRESSE",
+     "prenom": "Valérie",
+     "nuance": null,
+     "voix": 1421,
+     "pct_exprimes": 5.74,
+     "pct_inscrits": 4.2
+    },
+    {
+     "nom": "JADOT",
+     "prenom": "Yannick",
+     "nuance": null,
+     "voix": 1101,
+     "pct_exprimes": 4.44,
+     "pct_inscrits": 3.26
+    },
+    {
+     "nom": "ROUSSEL",
+     "prenom": "Fabien",
+     "nuance": null,
+     "voix": 509,
+     "pct_exprimes": 2.05,
+     "pct_inscrits": 1.51
+    },
+    {
+     "nom": "DUPONT-AIGNAN",
+     "prenom": "Nicolas",
+     "nuance": null,
+     "voix": 461,
+     "pct_exprimes": 1.86,
+     "pct_inscrits": 1.36
+    },
+    {
+     "nom": "LASSALLE",
+     "prenom": "Jean",
+     "nuance": null,
+     "voix": 441,
+     "pct_exprimes": 1.78,
+     "pct_inscrits": 1.3
+    },
+    {
+     "nom": "HIDALGO",
+     "prenom": "Anne",
+     "nuance": null,
+     "voix": 270,
+     "pct_exprimes": 1.09,
+     "pct_inscrits": 0.8
+    },
+    {
+     "nom": "POUTOU",
+     "prenom": "Philippe",
+     "nuance": null,
+     "voix": 171,
+     "pct_exprimes": 0.69,
+     "pct_inscrits": 0.51
+    },
+    {
+     "nom": "ARTHAUD",
+     "prenom": "Nathalie",
+     "nuance": null,
+     "voix": 104,
+     "pct_exprimes": 0.42,
+     "pct_inscrits": 0.31
+    }
+   ],
+   "pct_abstention": 25.25,
+   "pct_participation": 74.75,
+   "tete": {
+    "nom": "MÉLENCHON",
+    "prenom": "Jean-Luc",
+    "nuance": null,
+    "pct_exprimes": 31.11
+   },
+   "nb_communes": 3,
+   "code_canton": "13"
+  },
+  "18": {
+   "bureaux_de_vote": 30,
+   "inscrits": 28284,
+   "abstentions": 10076,
+   "votants": 18208,
+   "blancs": 274,
+   "nuls": 128,
+   "exprimes": 17806,
+   "nom": "Sarcelles",
+   "candidats": [
+    {
+     "nom": "MÉLENCHON",
+     "prenom": "Jean-Luc",
+     "nuance": null,
+     "voix": 8538,
+     "pct_exprimes": 47.95,
+     "pct_inscrits": 30.19
+    },
+    {
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "nuance": null,
+     "voix": 3335,
+     "pct_exprimes": 18.73,
+     "pct_inscrits": 11.79
+    },
+    {
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "nuance": null,
+     "voix": 2247,
+     "pct_exprimes": 12.62,
+     "pct_inscrits": 7.94
+    },
+    {
+     "nom": "ZEMMOUR",
+     "prenom": "Éric",
+     "nuance": null,
+     "voix": 2057,
+     "pct_exprimes": 11.55,
+     "pct_inscrits": 7.27
+    },
+    {
+     "nom": "PÉCRESSE",
+     "prenom": "Valérie",
+     "nuance": null,
+     "voix": 451,
+     "pct_exprimes": 2.53,
+     "pct_inscrits": 1.59
+    },
+    {
+     "nom": "JADOT",
+     "prenom": "Yannick",
+     "nuance": null,
+     "voix": 237,
+     "pct_exprimes": 1.33,
+     "pct_inscrits": 0.84
+    },
+    {
+     "nom": "DUPONT-AIGNAN",
+     "prenom": "Nicolas",
+     "nuance": null,
+     "voix": 205,
+     "pct_exprimes": 1.15,
+     "pct_inscrits": 0.72
+    },
+    {
+     "nom": "ROUSSEL",
+     "prenom": "Fabien",
+     "nuance": null,
+     "voix": 204,
+     "pct_exprimes": 1.15,
+     "pct_inscrits": 0.72
+    },
+    {
+     "nom": "HIDALGO",
+     "prenom": "Anne",
+     "nuance": null,
+     "voix": 194,
+     "pct_exprimes": 1.09,
+     "pct_inscrits": 0.69
+    },
+    {
+     "nom": "LASSALLE",
+     "prenom": "Jean",
+     "nuance": null,
+     "voix": 173,
+     "pct_exprimes": 0.97,
+     "pct_inscrits": 0.61
+    },
+    {
+     "nom": "POUTOU",
+     "prenom": "Philippe",
+     "nuance": null,
+     "voix": 90,
+     "pct_exprimes": 0.51,
+     "pct_inscrits": 0.32
+    },
+    {
+     "nom": "ARTHAUD",
+     "prenom": "Nathalie",
+     "nuance": null,
+     "voix": 75,
+     "pct_exprimes": 0.42,
+     "pct_inscrits": 0.27
+    }
+   ],
+   "pct_abstention": 35.62,
+   "pct_participation": 64.38,
+   "tete": {
+    "nom": "MÉLENCHON",
+    "prenom": "Jean-Luc",
+    "nuance": null,
+    "pct_exprimes": 47.95
+   },
+   "nb_communes": 1,
+   "code_canton": "18"
+  }
+ }
+}

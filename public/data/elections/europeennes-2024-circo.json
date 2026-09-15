@@ -1,0 +1,3269 @@
+{
+ "election": "Européennes 2024",
+ "tour": 1,
+ "date": "2024-06-09",
+ "status": "reel",
+ "note": "Agrégation réelle par circonscription, calculée à partir des résultats communaux réels de ce scrutin et du référentiel commune↔circonscription réel (Présidentielle 2022, codes officiels du Ministère de l'Intérieur). Aucune nouvelle donnée de vote n'est inventée : il s'agit d'une simple somme.",
+ "circonscriptions": {
+  "01": {
+   "nb_communes": 82,
+   "bureaux_de_vote": 134,
+   "inscrits": 84454,
+   "abstentions": 39371,
+   "votants": 45083,
+   "blancs": 588,
+   "nuls": 448,
+   "exprimes": 44047,
+   "candidats": [
+    {
+     "nom": "La FRANCE REVIENT",
+     "prenom": null,
+     "nuance": "LRN",
+     "voix": 13900,
+     "pct_exprimes": 31.56,
+     "pct_inscrits": 16.46
+    },
+    {
+     "nom": "LFI - UP",
+     "prenom": null,
+     "nuance": "LFI",
+     "voix": 6047,
+     "pct_exprimes": 13.73,
+     "pct_inscrits": 7.16
+    },
+    {
+     "nom": "BESOIN D'EUROPE",
+     "prenom": null,
+     "nuance": "LENS",
+     "voix": 5836,
+     "pct_exprimes": 13.25,
+     "pct_inscrits": 6.91
+    },
+    {
+     "nom": "REVEIL EUR",
+     "prenom": null,
+     "nuance": "LUG",
+     "voix": 5418,
+     "pct_exprimes": 12.3,
+     "pct_inscrits": 6.42
+    },
+    {
+     "nom": "LA DROITE POUR FAIRE ENTENDRE LA VOIX DE LA FRANCE EN EUROPE",
+     "prenom": null,
+     "nuance": "LLR",
+     "voix": 3014,
+     "pct_exprimes": 6.84,
+     "pct_inscrits": 3.57
+    },
+    {
+     "nom": "LA FRANCE FIERE, MENEE PAR MARION MARECHAL ET SOUTENUE PAR ÉRIC ZEMMOUR",
+     "prenom": null,
+     "nuance": "LREC",
+     "voix": 2396,
+     "pct_exprimes": 5.44,
+     "pct_inscrits": 2.84
+    },
+    {
+     "nom": "EUROPE ÉCOLOGIE",
+     "prenom": null,
+     "nuance": "LVEC",
+     "voix": 2185,
+     "pct_exprimes": 4.96,
+     "pct_inscrits": 2.59
+    },
+    {
+     "nom": "PARTI ANIMALISTE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 1152,
+     "pct_exprimes": 2.62,
+     "pct_inscrits": 1.36
+    },
+    {
+     "nom": "GAUCHE UNIE",
+     "prenom": null,
+     "nuance": "LCOM",
+     "voix": 834,
+     "pct_exprimes": 1.89,
+     "pct_inscrits": 0.99
+    },
+    {
+     "nom": "EAC",
+     "prenom": null,
+     "nuance": "LECO",
+     "voix": 689,
+     "pct_exprimes": 1.56,
+     "pct_inscrits": 0.82
+    },
+    {
+     "nom": "AR",
+     "prenom": null,
+     "nuance": "LDVD",
+     "voix": 641,
+     "pct_exprimes": 1.46,
+     "pct_inscrits": 0.76
+    },
+    {
+     "nom": "LISTE ASSELINEAU-FREXIT",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 546,
+     "pct_exprimes": 1.24,
+     "pct_inscrits": 0.65
+    },
+    {
+     "nom": "L'EUROPE CA SUFFIT !",
+     "prenom": null,
+     "nuance": "LEXD",
+     "voix": 383,
+     "pct_exprimes": 0.87,
+     "pct_inscrits": 0.45
+    },
+    {
+     "nom": "ECOLOGIE POSITIVE",
+     "prenom": null,
+     "nuance": "LECO",
+     "voix": 228,
+     "pct_exprimes": 0.52,
+     "pct_inscrits": 0.27
+    },
+    {
+     "nom": "LUTTE OUVRIERE",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 221,
+     "pct_exprimes": 0.5,
+     "pct_inscrits": 0.26
+    },
+    {
+     "nom": "ÉQUINOXE",
+     "prenom": null,
+     "nuance": "LECO",
+     "voix": 137,
+     "pct_exprimes": 0.31,
+     "pct_inscrits": 0.16
+    },
+    {
+     "nom": "EUROPE TERRITOIRES ÉCOLOGIE",
+     "prenom": null,
+     "nuance": "LDVG",
+     "voix": 101,
+     "pct_exprimes": 0.23,
+     "pct_inscrits": 0.12
+    },
+    {
+     "nom": "URGENCE REVOLUTION !",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 80,
+     "pct_exprimes": 0.18,
+     "pct_inscrits": 0.09
+    },
+    {
+     "nom": "NLP",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 37,
+     "pct_exprimes": 0.08,
+     "pct_inscrits": 0.04
+    },
+    {
+     "nom": "NON À L'UE ET À L'OTAN, COMMUNISTES POUR LA PAIX ET LE PROGRÈS SOCIAL",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 28,
+     "pct_exprimes": 0.06,
+     "pct_inscrits": 0.03
+    },
+    {
+     "nom": "PARTI PIRATE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 26,
+     "pct_exprimes": 0.06,
+     "pct_inscrits": 0.03
+    },
+    {
+     "nom": "DEFENDRE LES ENFANTS",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 24,
+     "pct_exprimes": 0.05,
+     "pct_inscrits": 0.03
+    },
+    {
+     "nom": "PARTI REVOLUTIONNAIRE COMMUNISTES",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 18,
+     "pct_exprimes": 0.04,
+     "pct_inscrits": 0.02
+    },
+    {
+     "nom": "FRANCE LIBRE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 17,
+     "pct_exprimes": 0.04,
+     "pct_inscrits": 0.02
+    },
+    {
+     "nom": "PACE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 14,
+     "pct_exprimes": 0.03,
+     "pct_inscrits": 0.02
+    },
+    {
+     "nom": "PPL",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 14,
+     "pct_exprimes": 0.03,
+     "pct_inscrits": 0.02
+    },
+    {
+     "nom": "PRENONS-NOUS EN MAIN",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 10,
+     "pct_exprimes": 0.02,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "POUR UNE DEMOCRATIE REELLE : DECIDONS NOUS-MEMES !",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 9,
+     "pct_exprimes": 0.02,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "POUR UNE AUTRE EUROPE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 9,
+     "pct_exprimes": 0.02,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "FREE PALESTINE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 7,
+     "pct_exprimes": 0.02,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "DEMOCRATIE REPRESENTATIVE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 7,
+     "pct_exprimes": 0.02,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "ESPERANTO",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 7,
+     "pct_exprimes": 0.02,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "PAIX ET DECROISSANCE",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 4,
+     "pct_exprimes": 0.01,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "CHANGER L'EUROPE",
+     "prenom": null,
+     "nuance": "LDVG",
+     "voix": 4,
+     "pct_exprimes": 0.01,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "HUMANITE SOUVERAINE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 3,
+     "pct_exprimes": 0.01,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "LA RUCHE CITOYENNE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 1,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "FORTERESSE EUROPE",
+     "prenom": null,
+     "nuance": "LEXD",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "LIBERTÉ DÉMOCRATIQUE FRANÇAISE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    }
+   ],
+   "pct_abstention": 46.62,
+   "pct_participation": 53.38,
+   "tete": {
+    "nom": "La FRANCE REVIENT",
+    "prenom": null,
+    "nuance": "LRN",
+    "pct_exprimes": 31.56
+   },
+   "nom": "1e circonscription du Val-d'Oise",
+   "code_circonscription": "01"
+  },
+  "06": {
+   "nb_communes": 8,
+   "bureaux_de_vote": 75,
+   "inscrits": 76344,
+   "abstentions": 37703,
+   "votants": 38641,
+   "blancs": 326,
+   "nuls": 373,
+   "exprimes": 37942,
+   "candidats": [
+    {
+     "nom": "LFI - UP",
+     "prenom": null,
+     "nuance": "LFI",
+     "voix": 8696,
+     "pct_exprimes": 22.92,
+     "pct_inscrits": 11.39
+    },
+    {
+     "nom": "La FRANCE REVIENT",
+     "prenom": null,
+     "nuance": "LRN",
+     "voix": 7850,
+     "pct_exprimes": 20.69,
+     "pct_inscrits": 10.28
+    },
+    {
+     "nom": "BESOIN D'EUROPE",
+     "prenom": null,
+     "nuance": "LENS",
+     "voix": 5493,
+     "pct_exprimes": 14.48,
+     "pct_inscrits": 7.2
+    },
+    {
+     "nom": "REVEIL EUR",
+     "prenom": null,
+     "nuance": "LUG",
+     "voix": 4886,
+     "pct_exprimes": 12.88,
+     "pct_inscrits": 6.4
+    },
+    {
+     "nom": "LA DROITE POUR FAIRE ENTENDRE LA VOIX DE LA FRANCE EN EUROPE",
+     "prenom": null,
+     "nuance": "LLR",
+     "voix": 3146,
+     "pct_exprimes": 8.29,
+     "pct_inscrits": 4.12
+    },
+    {
+     "nom": "LA FRANCE FIERE, MENEE PAR MARION MARECHAL ET SOUTENUE PAR ÉRIC ZEMMOUR",
+     "prenom": null,
+     "nuance": "LREC",
+     "voix": 2258,
+     "pct_exprimes": 5.95,
+     "pct_inscrits": 2.96
+    },
+    {
+     "nom": "EUROPE ÉCOLOGIE",
+     "prenom": null,
+     "nuance": "LVEC",
+     "voix": 1866,
+     "pct_exprimes": 4.92,
+     "pct_inscrits": 2.44
+    },
+    {
+     "nom": "PARTI ANIMALISTE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 849,
+     "pct_exprimes": 2.24,
+     "pct_inscrits": 1.11
+    },
+    {
+     "nom": "GAUCHE UNIE",
+     "prenom": null,
+     "nuance": "LCOM",
+     "voix": 632,
+     "pct_exprimes": 1.67,
+     "pct_inscrits": 0.83
+    },
+    {
+     "nom": "LISTE ASSELINEAU-FREXIT",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 433,
+     "pct_exprimes": 1.14,
+     "pct_inscrits": 0.57
+    },
+    {
+     "nom": "EAC",
+     "prenom": null,
+     "nuance": "LECO",
+     "voix": 405,
+     "pct_exprimes": 1.07,
+     "pct_inscrits": 0.53
+    },
+    {
+     "nom": "L'EUROPE CA SUFFIT !",
+     "prenom": null,
+     "nuance": "LEXD",
+     "voix": 319,
+     "pct_exprimes": 0.84,
+     "pct_inscrits": 0.42
+    },
+    {
+     "nom": "AR",
+     "prenom": null,
+     "nuance": "LDVD",
+     "voix": 294,
+     "pct_exprimes": 0.77,
+     "pct_inscrits": 0.39
+    },
+    {
+     "nom": "ECOLOGIE POSITIVE",
+     "prenom": null,
+     "nuance": "LECO",
+     "voix": 194,
+     "pct_exprimes": 0.51,
+     "pct_inscrits": 0.25
+    },
+    {
+     "nom": "LUTTE OUVRIERE",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 137,
+     "pct_exprimes": 0.36,
+     "pct_inscrits": 0.18
+    },
+    {
+     "nom": "ÉQUINOXE",
+     "prenom": null,
+     "nuance": "LECO",
+     "voix": 110,
+     "pct_exprimes": 0.29,
+     "pct_inscrits": 0.14
+    },
+    {
+     "nom": "EUROPE TERRITOIRES ÉCOLOGIE",
+     "prenom": null,
+     "nuance": "LDVG",
+     "voix": 88,
+     "pct_exprimes": 0.23,
+     "pct_inscrits": 0.12
+    },
+    {
+     "nom": "FREE PALESTINE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 86,
+     "pct_exprimes": 0.23,
+     "pct_inscrits": 0.11
+    },
+    {
+     "nom": "URGENCE REVOLUTION !",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 65,
+     "pct_exprimes": 0.17,
+     "pct_inscrits": 0.09
+    },
+    {
+     "nom": "NLP",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 32,
+     "pct_exprimes": 0.08,
+     "pct_inscrits": 0.04
+    },
+    {
+     "nom": "PARTI PIRATE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 31,
+     "pct_exprimes": 0.08,
+     "pct_inscrits": 0.04
+    },
+    {
+     "nom": "PACE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 25,
+     "pct_exprimes": 0.07,
+     "pct_inscrits": 0.03
+    },
+    {
+     "nom": "ESPERANTO",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 11,
+     "pct_exprimes": 0.03,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "DEFENDRE LES ENFANTS",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 10,
+     "pct_exprimes": 0.03,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "PPL",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 5,
+     "pct_exprimes": 0.01,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "POUR UNE AUTRE EUROPE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 4,
+     "pct_exprimes": 0.01,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "CHANGER L'EUROPE",
+     "prenom": null,
+     "nuance": "LDVG",
+     "voix": 3,
+     "pct_exprimes": 0.01,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "PRENONS-NOUS EN MAIN",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 3,
+     "pct_exprimes": 0.01,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "LIBERTÉ DÉMOCRATIQUE FRANÇAISE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 3,
+     "pct_exprimes": 0.01,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "POUR UNE DEMOCRATIE REELLE : DECIDONS NOUS-MEMES !",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 2,
+     "pct_exprimes": 0.01,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "PAIX ET DECROISSANCE",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 2,
+     "pct_exprimes": 0.01,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "FORTERESSE EUROPE",
+     "prenom": null,
+     "nuance": "LEXD",
+     "voix": 1,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "NON À L'UE ET À L'OTAN, COMMUNISTES POUR LA PAIX ET LE PROGRÈS SOCIAL",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 1,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "FRANCE LIBRE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 1,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "LA RUCHE CITOYENNE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 1,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "HUMANITE SOUVERAINE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "PARTI REVOLUTIONNAIRE COMMUNISTES",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "DEMOCRATIE REPRESENTATIVE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    }
+   ],
+   "pct_abstention": 49.39,
+   "pct_participation": 50.61,
+   "tete": {
+    "nom": "LFI - UP",
+    "prenom": null,
+    "nuance": "LFI",
+    "pct_exprimes": 22.92
+   },
+   "nom": "6e circonscription du Val-d'Oise",
+   "code_circonscription": "06"
+  },
+  "05": {
+   "nb_communes": 2,
+   "bureaux_de_vote": 67,
+   "inscrits": 71888,
+   "abstentions": 41436,
+   "votants": 30452,
+   "blancs": 320,
+   "nuls": 291,
+   "exprimes": 29841,
+   "candidats": [
+    {
+     "nom": "LFI - UP",
+     "prenom": null,
+     "nuance": "LFI",
+     "voix": 12748,
+     "pct_exprimes": 42.72,
+     "pct_inscrits": 17.73
+    },
+    {
+     "nom": "La FRANCE REVIENT",
+     "prenom": null,
+     "nuance": "LRN",
+     "voix": 5474,
+     "pct_exprimes": 18.34,
+     "pct_inscrits": 7.61
+    },
+    {
+     "nom": "REVEIL EUR",
+     "prenom": null,
+     "nuance": "LUG",
+     "voix": 2659,
+     "pct_exprimes": 8.91,
+     "pct_inscrits": 3.7
+    },
+    {
+     "nom": "BESOIN D'EUROPE",
+     "prenom": null,
+     "nuance": "LENS",
+     "voix": 2582,
+     "pct_exprimes": 8.65,
+     "pct_inscrits": 3.59
+    },
+    {
+     "nom": "EUROPE ÉCOLOGIE",
+     "prenom": null,
+     "nuance": "LVEC",
+     "voix": 1167,
+     "pct_exprimes": 3.91,
+     "pct_inscrits": 1.62
+    },
+    {
+     "nom": "LA DROITE POUR FAIRE ENTENDRE LA VOIX DE LA FRANCE EN EUROPE",
+     "prenom": null,
+     "nuance": "LLR",
+     "voix": 1114,
+     "pct_exprimes": 3.73,
+     "pct_inscrits": 1.55
+    },
+    {
+     "nom": "LA FRANCE FIERE, MENEE PAR MARION MARECHAL ET SOUTENUE PAR ÉRIC ZEMMOUR",
+     "prenom": null,
+     "nuance": "LREC",
+     "voix": 989,
+     "pct_exprimes": 3.31,
+     "pct_inscrits": 1.38
+    },
+    {
+     "nom": "GAUCHE UNIE",
+     "prenom": null,
+     "nuance": "LCOM",
+     "voix": 731,
+     "pct_exprimes": 2.45,
+     "pct_inscrits": 1.02
+    },
+    {
+     "nom": "PARTI ANIMALISTE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 453,
+     "pct_exprimes": 1.52,
+     "pct_inscrits": 0.63
+    },
+    {
+     "nom": "LISTE ASSELINEAU-FREXIT",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 332,
+     "pct_exprimes": 1.11,
+     "pct_inscrits": 0.46
+    },
+    {
+     "nom": "FREE PALESTINE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 308,
+     "pct_exprimes": 1.03,
+     "pct_inscrits": 0.43
+    },
+    {
+     "nom": "EAC",
+     "prenom": null,
+     "nuance": "LECO",
+     "voix": 267,
+     "pct_exprimes": 0.89,
+     "pct_inscrits": 0.37
+    },
+    {
+     "nom": "AR",
+     "prenom": null,
+     "nuance": "LDVD",
+     "voix": 224,
+     "pct_exprimes": 0.75,
+     "pct_inscrits": 0.31
+    },
+    {
+     "nom": "L'EUROPE CA SUFFIT !",
+     "prenom": null,
+     "nuance": "LEXD",
+     "voix": 218,
+     "pct_exprimes": 0.73,
+     "pct_inscrits": 0.3
+    },
+    {
+     "nom": "LUTTE OUVRIERE",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 175,
+     "pct_exprimes": 0.59,
+     "pct_inscrits": 0.24
+    },
+    {
+     "nom": "ECOLOGIE POSITIVE",
+     "prenom": null,
+     "nuance": "LECO",
+     "voix": 135,
+     "pct_exprimes": 0.45,
+     "pct_inscrits": 0.19
+    },
+    {
+     "nom": "EUROPE TERRITOIRES ÉCOLOGIE",
+     "prenom": null,
+     "nuance": "LDVG",
+     "voix": 59,
+     "pct_exprimes": 0.2,
+     "pct_inscrits": 0.08
+    },
+    {
+     "nom": "ÉQUINOXE",
+     "prenom": null,
+     "nuance": "LECO",
+     "voix": 51,
+     "pct_exprimes": 0.17,
+     "pct_inscrits": 0.07
+    },
+    {
+     "nom": "URGENCE REVOLUTION !",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 35,
+     "pct_exprimes": 0.12,
+     "pct_inscrits": 0.05
+    },
+    {
+     "nom": "NLP",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 24,
+     "pct_exprimes": 0.08,
+     "pct_inscrits": 0.03
+    },
+    {
+     "nom": "LA RUCHE CITOYENNE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 16,
+     "pct_exprimes": 0.05,
+     "pct_inscrits": 0.02
+    },
+    {
+     "nom": "PARTI PIRATE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 13,
+     "pct_exprimes": 0.04,
+     "pct_inscrits": 0.02
+    },
+    {
+     "nom": "PACE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 10,
+     "pct_exprimes": 0.03,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "PARTI REVOLUTIONNAIRE COMMUNISTES",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 9,
+     "pct_exprimes": 0.03,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "ESPERANTO",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 9,
+     "pct_exprimes": 0.03,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "PPL",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 7,
+     "pct_exprimes": 0.02,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "FRANCE LIBRE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 6,
+     "pct_exprimes": 0.02,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "HUMANITE SOUVERAINE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 4,
+     "pct_exprimes": 0.01,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "POUR UNE AUTRE EUROPE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 4,
+     "pct_exprimes": 0.01,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "CHANGER L'EUROPE",
+     "prenom": null,
+     "nuance": "LDVG",
+     "voix": 4,
+     "pct_exprimes": 0.01,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "NON À L'UE ET À L'OTAN, COMMUNISTES POUR LA PAIX ET LE PROGRÈS SOCIAL",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 4,
+     "pct_exprimes": 0.01,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "DEFENDRE LES ENFANTS",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 4,
+     "pct_exprimes": 0.01,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "PAIX ET DECROISSANCE",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 2,
+     "pct_exprimes": 0.01,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "PRENONS-NOUS EN MAIN",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 1,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "DEMOCRATIE REPRESENTATIVE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 1,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "LIBERTÉ DÉMOCRATIQUE FRANÇAISE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 1,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "FORTERESSE EUROPE",
+     "prenom": null,
+     "nuance": "LEXD",
+     "voix": 1,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "POUR UNE DEMOCRATIE REELLE : DECIDONS NOUS-MEMES !",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    }
+   ],
+   "pct_abstention": 57.64,
+   "pct_participation": 42.36,
+   "tete": {
+    "nom": "LFI - UP",
+    "prenom": null,
+    "nuance": "LFI",
+    "pct_exprimes": 42.72
+   },
+   "nom": "5e circonscription du Val-d'Oise",
+   "code_circonscription": "05"
+  },
+  "08": {
+   "nb_communes": 5,
+   "bureaux_de_vote": 73,
+   "inscrits": 68418,
+   "abstentions": 42577,
+   "votants": 25841,
+   "blancs": 375,
+   "nuls": 326,
+   "exprimes": 25140,
+   "candidats": [
+    {
+     "nom": "LFI - UP",
+     "prenom": null,
+     "nuance": "LFI",
+     "voix": 10898,
+     "pct_exprimes": 43.35,
+     "pct_inscrits": 15.93
+    },
+    {
+     "nom": "La FRANCE REVIENT",
+     "prenom": null,
+     "nuance": "LRN",
+     "voix": 5252,
+     "pct_exprimes": 20.89,
+     "pct_inscrits": 7.68
+    },
+    {
+     "nom": "LA FRANCE FIERE, MENEE PAR MARION MARECHAL ET SOUTENUE PAR ÉRIC ZEMMOUR",
+     "prenom": null,
+     "nuance": "LREC",
+     "voix": 1773,
+     "pct_exprimes": 7.05,
+     "pct_inscrits": 2.59
+    },
+    {
+     "nom": "BESOIN D'EUROPE",
+     "prenom": null,
+     "nuance": "LENS",
+     "voix": 1673,
+     "pct_exprimes": 6.65,
+     "pct_inscrits": 2.45
+    },
+    {
+     "nom": "REVEIL EUR",
+     "prenom": null,
+     "nuance": "LUG",
+     "voix": 1544,
+     "pct_exprimes": 6.14,
+     "pct_inscrits": 2.26
+    },
+    {
+     "nom": "LA DROITE POUR FAIRE ENTENDRE LA VOIX DE LA FRANCE EN EUROPE",
+     "prenom": null,
+     "nuance": "LLR",
+     "voix": 1097,
+     "pct_exprimes": 4.36,
+     "pct_inscrits": 1.6
+    },
+    {
+     "nom": "EUROPE ÉCOLOGIE",
+     "prenom": null,
+     "nuance": "LVEC",
+     "voix": 450,
+     "pct_exprimes": 1.79,
+     "pct_inscrits": 0.66
+    },
+    {
+     "nom": "GAUCHE UNIE",
+     "prenom": null,
+     "nuance": "LCOM",
+     "voix": 426,
+     "pct_exprimes": 1.69,
+     "pct_inscrits": 0.62
+    },
+    {
+     "nom": "FREE PALESTINE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 392,
+     "pct_exprimes": 1.56,
+     "pct_inscrits": 0.57
+    },
+    {
+     "nom": "LISTE ASSELINEAU-FREXIT",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 327,
+     "pct_exprimes": 1.3,
+     "pct_inscrits": 0.48
+    },
+    {
+     "nom": "PARTI ANIMALISTE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 311,
+     "pct_exprimes": 1.24,
+     "pct_inscrits": 0.45
+    },
+    {
+     "nom": "L'EUROPE CA SUFFIT !",
+     "prenom": null,
+     "nuance": "LEXD",
+     "voix": 201,
+     "pct_exprimes": 0.8,
+     "pct_inscrits": 0.29
+    },
+    {
+     "nom": "LUTTE OUVRIERE",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 161,
+     "pct_exprimes": 0.64,
+     "pct_inscrits": 0.24
+    },
+    {
+     "nom": "AR",
+     "prenom": null,
+     "nuance": "LDVD",
+     "voix": 145,
+     "pct_exprimes": 0.58,
+     "pct_inscrits": 0.21
+    },
+    {
+     "nom": "EAC",
+     "prenom": null,
+     "nuance": "LECO",
+     "voix": 132,
+     "pct_exprimes": 0.53,
+     "pct_inscrits": 0.19
+    },
+    {
+     "nom": "ECOLOGIE POSITIVE",
+     "prenom": null,
+     "nuance": "LECO",
+     "voix": 94,
+     "pct_exprimes": 0.37,
+     "pct_inscrits": 0.14
+    },
+    {
+     "nom": "URGENCE REVOLUTION !",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 60,
+     "pct_exprimes": 0.24,
+     "pct_inscrits": 0.09
+    },
+    {
+     "nom": "FORTERESSE EUROPE",
+     "prenom": null,
+     "nuance": "LEXD",
+     "voix": 47,
+     "pct_exprimes": 0.19,
+     "pct_inscrits": 0.07
+    },
+    {
+     "nom": "EUROPE TERRITOIRES ÉCOLOGIE",
+     "prenom": null,
+     "nuance": "LDVG",
+     "voix": 29,
+     "pct_exprimes": 0.12,
+     "pct_inscrits": 0.04
+    },
+    {
+     "nom": "NLP",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 25,
+     "pct_exprimes": 0.1,
+     "pct_inscrits": 0.04
+    },
+    {
+     "nom": "ÉQUINOXE",
+     "prenom": null,
+     "nuance": "LECO",
+     "voix": 24,
+     "pct_exprimes": 0.1,
+     "pct_inscrits": 0.04
+    },
+    {
+     "nom": "LA RUCHE CITOYENNE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 18,
+     "pct_exprimes": 0.07,
+     "pct_inscrits": 0.03
+    },
+    {
+     "nom": "PPL",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 13,
+     "pct_exprimes": 0.05,
+     "pct_inscrits": 0.02
+    },
+    {
+     "nom": "NON À L'UE ET À L'OTAN, COMMUNISTES POUR LA PAIX ET LE PROGRÈS SOCIAL",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 10,
+     "pct_exprimes": 0.04,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "DEFENDRE LES ENFANTS",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 7,
+     "pct_exprimes": 0.03,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "PACE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 6,
+     "pct_exprimes": 0.02,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "DEMOCRATIE REPRESENTATIVE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 6,
+     "pct_exprimes": 0.02,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "LIBERTÉ DÉMOCRATIQUE FRANÇAISE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 6,
+     "pct_exprimes": 0.02,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "ESPERANTO",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 5,
+     "pct_exprimes": 0.02,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "PAIX ET DECROISSANCE",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 3,
+     "pct_exprimes": 0.01,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "PRENONS-NOUS EN MAIN",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 3,
+     "pct_exprimes": 0.01,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "PARTI PIRATE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 2,
+     "pct_exprimes": 0.01,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "HUMANITE SOUVERAINE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "POUR UNE DEMOCRATIE REELLE : DECIDONS NOUS-MEMES !",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "PARTI REVOLUTIONNAIRE COMMUNISTES",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "POUR UNE AUTRE EUROPE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "CHANGER L'EUROPE",
+     "prenom": null,
+     "nuance": "LDVG",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "FRANCE LIBRE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    }
+   ],
+   "pct_abstention": 62.23,
+   "pct_participation": 37.77,
+   "tete": {
+    "nom": "LFI - UP",
+    "prenom": null,
+    "nuance": "LFI",
+    "pct_exprimes": 43.35
+   },
+   "nom": "8e circonscription du Val-d'Oise",
+   "code_circonscription": "08"
+  },
+  "02": {
+   "nb_communes": 20,
+   "bureaux_de_vote": 70,
+   "inscrits": 70465,
+   "abstentions": 34474,
+   "votants": 35991,
+   "blancs": 384,
+   "nuls": 333,
+   "exprimes": 35274,
+   "candidats": [
+    {
+     "nom": "La FRANCE REVIENT",
+     "prenom": null,
+     "nuance": "LRN",
+     "voix": 10792,
+     "pct_exprimes": 30.59,
+     "pct_inscrits": 15.32
+    },
+    {
+     "nom": "BESOIN D'EUROPE",
+     "prenom": null,
+     "nuance": "LENS",
+     "voix": 4918,
+     "pct_exprimes": 13.94,
+     "pct_inscrits": 6.98
+    },
+    {
+     "nom": "LFI - UP",
+     "prenom": null,
+     "nuance": "LFI",
+     "voix": 4903,
+     "pct_exprimes": 13.9,
+     "pct_inscrits": 6.96
+    },
+    {
+     "nom": "REVEIL EUR",
+     "prenom": null,
+     "nuance": "LUG",
+     "voix": 4382,
+     "pct_exprimes": 12.42,
+     "pct_inscrits": 6.22
+    },
+    {
+     "nom": "LA DROITE POUR FAIRE ENTENDRE LA VOIX DE LA FRANCE EN EUROPE",
+     "prenom": null,
+     "nuance": "LLR",
+     "voix": 2539,
+     "pct_exprimes": 7.2,
+     "pct_inscrits": 3.6
+    },
+    {
+     "nom": "LA FRANCE FIERE, MENEE PAR MARION MARECHAL ET SOUTENUE PAR ÉRIC ZEMMOUR",
+     "prenom": null,
+     "nuance": "LREC",
+     "voix": 1974,
+     "pct_exprimes": 5.6,
+     "pct_inscrits": 2.8
+    },
+    {
+     "nom": "EUROPE ÉCOLOGIE",
+     "prenom": null,
+     "nuance": "LVEC",
+     "voix": 1756,
+     "pct_exprimes": 4.98,
+     "pct_inscrits": 2.49
+    },
+    {
+     "nom": "PARTI ANIMALISTE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 887,
+     "pct_exprimes": 2.51,
+     "pct_inscrits": 1.26
+    },
+    {
+     "nom": "GAUCHE UNIE",
+     "prenom": null,
+     "nuance": "LCOM",
+     "voix": 723,
+     "pct_exprimes": 2.05,
+     "pct_inscrits": 1.03
+    },
+    {
+     "nom": "EAC",
+     "prenom": null,
+     "nuance": "LECO",
+     "voix": 518,
+     "pct_exprimes": 1.47,
+     "pct_inscrits": 0.74
+    },
+    {
+     "nom": "LISTE ASSELINEAU-FREXIT",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 411,
+     "pct_exprimes": 1.17,
+     "pct_inscrits": 0.58
+    },
+    {
+     "nom": "AR",
+     "prenom": null,
+     "nuance": "LDVD",
+     "voix": 385,
+     "pct_exprimes": 1.09,
+     "pct_inscrits": 0.55
+    },
+    {
+     "nom": "L'EUROPE CA SUFFIT !",
+     "prenom": null,
+     "nuance": "LEXD",
+     "voix": 334,
+     "pct_exprimes": 0.95,
+     "pct_inscrits": 0.47
+    },
+    {
+     "nom": "ECOLOGIE POSITIVE",
+     "prenom": null,
+     "nuance": "LECO",
+     "voix": 214,
+     "pct_exprimes": 0.61,
+     "pct_inscrits": 0.3
+    },
+    {
+     "nom": "LUTTE OUVRIERE",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 177,
+     "pct_exprimes": 0.5,
+     "pct_inscrits": 0.25
+    },
+    {
+     "nom": "ÉQUINOXE",
+     "prenom": null,
+     "nuance": "LECO",
+     "voix": 86,
+     "pct_exprimes": 0.24,
+     "pct_inscrits": 0.12
+    },
+    {
+     "nom": "EUROPE TERRITOIRES ÉCOLOGIE",
+     "prenom": null,
+     "nuance": "LDVG",
+     "voix": 82,
+     "pct_exprimes": 0.23,
+     "pct_inscrits": 0.12
+    },
+    {
+     "nom": "URGENCE REVOLUTION !",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 61,
+     "pct_exprimes": 0.17,
+     "pct_inscrits": 0.09
+    },
+    {
+     "nom": "NLP",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 33,
+     "pct_exprimes": 0.09,
+     "pct_inscrits": 0.05
+    },
+    {
+     "nom": "PARTI PIRATE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 26,
+     "pct_exprimes": 0.07,
+     "pct_inscrits": 0.04
+    },
+    {
+     "nom": "PACE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 11,
+     "pct_exprimes": 0.03,
+     "pct_inscrits": 0.02
+    },
+    {
+     "nom": "FORTERESSE EUROPE",
+     "prenom": null,
+     "nuance": "LEXD",
+     "voix": 10,
+     "pct_exprimes": 0.03,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "FRANCE LIBRE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 9,
+     "pct_exprimes": 0.03,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "ESPERANTO",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 9,
+     "pct_exprimes": 0.03,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "DEFENDRE LES ENFANTS",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 8,
+     "pct_exprimes": 0.02,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "FREE PALESTINE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 7,
+     "pct_exprimes": 0.02,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "PPL",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 7,
+     "pct_exprimes": 0.02,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "LIBERTÉ DÉMOCRATIQUE FRANÇAISE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 4,
+     "pct_exprimes": 0.01,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "POUR UNE DEMOCRATIE REELLE : DECIDONS NOUS-MEMES !",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 2,
+     "pct_exprimes": 0.01,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "POUR UNE AUTRE EUROPE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 2,
+     "pct_exprimes": 0.01,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "HUMANITE SOUVERAINE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 1,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "PAIX ET DECROISSANCE",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 1,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "CHANGER L'EUROPE",
+     "prenom": null,
+     "nuance": "LDVG",
+     "voix": 1,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "NON À L'UE ET À L'OTAN, COMMUNISTES POUR LA PAIX ET LE PROGRÈS SOCIAL",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 1,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "PARTI REVOLUTIONNAIRE COMMUNISTES",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "PRENONS-NOUS EN MAIN",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "LA RUCHE CITOYENNE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "DEMOCRATIE REPRESENTATIVE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    }
+   ],
+   "pct_abstention": 48.92,
+   "pct_participation": 51.08,
+   "tete": {
+    "nom": "La FRANCE REVIENT",
+    "prenom": null,
+    "nuance": "LRN",
+    "pct_exprimes": 30.59
+   },
+   "nom": "2e circonscription du Val-d'Oise",
+   "code_circonscription": "02"
+  },
+  "07": {
+   "nb_communes": 12,
+   "bureaux_de_vote": 55,
+   "inscrits": 56635,
+   "abstentions": 27052,
+   "votants": 29583,
+   "blancs": 280,
+   "nuls": 229,
+   "exprimes": 29074,
+   "candidats": [
+    {
+     "nom": "La FRANCE REVIENT",
+     "prenom": null,
+     "nuance": "LRN",
+     "voix": 7950,
+     "pct_exprimes": 27.34,
+     "pct_inscrits": 14.04
+    },
+    {
+     "nom": "LFI - UP",
+     "prenom": null,
+     "nuance": "LFI",
+     "voix": 4755,
+     "pct_exprimes": 16.35,
+     "pct_inscrits": 8.4
+    },
+    {
+     "nom": "BESOIN D'EUROPE",
+     "prenom": null,
+     "nuance": "LENS",
+     "voix": 3941,
+     "pct_exprimes": 13.56,
+     "pct_inscrits": 6.96
+    },
+    {
+     "nom": "REVEIL EUR",
+     "prenom": null,
+     "nuance": "LUG",
+     "voix": 3749,
+     "pct_exprimes": 12.89,
+     "pct_inscrits": 6.62
+    },
+    {
+     "nom": "LA FRANCE FIERE, MENEE PAR MARION MARECHAL ET SOUTENUE PAR ÉRIC ZEMMOUR",
+     "prenom": null,
+     "nuance": "LREC",
+     "voix": 2222,
+     "pct_exprimes": 7.64,
+     "pct_inscrits": 3.92
+    },
+    {
+     "nom": "LA DROITE POUR FAIRE ENTENDRE LA VOIX DE LA FRANCE EN EUROPE",
+     "prenom": null,
+     "nuance": "LLR",
+     "voix": 2202,
+     "pct_exprimes": 7.57,
+     "pct_inscrits": 3.89
+    },
+    {
+     "nom": "EUROPE ÉCOLOGIE",
+     "prenom": null,
+     "nuance": "LVEC",
+     "voix": 1373,
+     "pct_exprimes": 4.72,
+     "pct_inscrits": 2.42
+    },
+    {
+     "nom": "PARTI ANIMALISTE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 643,
+     "pct_exprimes": 2.21,
+     "pct_inscrits": 1.14
+    },
+    {
+     "nom": "GAUCHE UNIE",
+     "prenom": null,
+     "nuance": "LCOM",
+     "voix": 522,
+     "pct_exprimes": 1.8,
+     "pct_inscrits": 0.92
+    },
+    {
+     "nom": "EAC",
+     "prenom": null,
+     "nuance": "LECO",
+     "voix": 349,
+     "pct_exprimes": 1.2,
+     "pct_inscrits": 0.62
+    },
+    {
+     "nom": "LISTE ASSELINEAU-FREXIT",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 335,
+     "pct_exprimes": 1.15,
+     "pct_inscrits": 0.59
+    },
+    {
+     "nom": "AR",
+     "prenom": null,
+     "nuance": "LDVD",
+     "voix": 265,
+     "pct_exprimes": 0.91,
+     "pct_inscrits": 0.47
+    },
+    {
+     "nom": "L'EUROPE CA SUFFIT !",
+     "prenom": null,
+     "nuance": "LEXD",
+     "voix": 246,
+     "pct_exprimes": 0.85,
+     "pct_inscrits": 0.43
+    },
+    {
+     "nom": "ECOLOGIE POSITIVE",
+     "prenom": null,
+     "nuance": "LECO",
+     "voix": 166,
+     "pct_exprimes": 0.57,
+     "pct_inscrits": 0.29
+    },
+    {
+     "nom": "LUTTE OUVRIERE",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 125,
+     "pct_exprimes": 0.43,
+     "pct_inscrits": 0.22
+    },
+    {
+     "nom": "EUROPE TERRITOIRES ÉCOLOGIE",
+     "prenom": null,
+     "nuance": "LDVG",
+     "voix": 67,
+     "pct_exprimes": 0.23,
+     "pct_inscrits": 0.12
+    },
+    {
+     "nom": "ÉQUINOXE",
+     "prenom": null,
+     "nuance": "LECO",
+     "voix": 61,
+     "pct_exprimes": 0.21,
+     "pct_inscrits": 0.11
+    },
+    {
+     "nom": "URGENCE REVOLUTION !",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 38,
+     "pct_exprimes": 0.13,
+     "pct_inscrits": 0.07
+    },
+    {
+     "nom": "NLP",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 12,
+     "pct_exprimes": 0.04,
+     "pct_inscrits": 0.02
+    },
+    {
+     "nom": "PPL",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 8,
+     "pct_exprimes": 0.03,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "PACE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 6,
+     "pct_exprimes": 0.02,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "FRANCE LIBRE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 6,
+     "pct_exprimes": 0.02,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "ESPERANTO",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 6,
+     "pct_exprimes": 0.02,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "PARTI PIRATE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 4,
+     "pct_exprimes": 0.01,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "FORTERESSE EUROPE",
+     "prenom": null,
+     "nuance": "LEXD",
+     "voix": 4,
+     "pct_exprimes": 0.01,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "DEMOCRATIE REPRESENTATIVE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 4,
+     "pct_exprimes": 0.01,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "CHANGER L'EUROPE",
+     "prenom": null,
+     "nuance": "LDVG",
+     "voix": 3,
+     "pct_exprimes": 0.01,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "FREE PALESTINE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 2,
+     "pct_exprimes": 0.01,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "NON À L'UE ET À L'OTAN, COMMUNISTES POUR LA PAIX ET LE PROGRÈS SOCIAL",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 2,
+     "pct_exprimes": 0.01,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "LA RUCHE CITOYENNE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 2,
+     "pct_exprimes": 0.01,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "DEFENDRE LES ENFANTS",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 2,
+     "pct_exprimes": 0.01,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "POUR UNE DEMOCRATIE REELLE : DECIDONS NOUS-MEMES !",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 1,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "PARTI REVOLUTIONNAIRE COMMUNISTES",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 1,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "PAIX ET DECROISSANCE",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 1,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "LIBERTÉ DÉMOCRATIQUE FRANÇAISE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 1,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "HUMANITE SOUVERAINE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "POUR UNE AUTRE EUROPE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "PRENONS-NOUS EN MAIN",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    }
+   ],
+   "pct_abstention": 47.77,
+   "pct_participation": 52.23,
+   "tete": {
+    "nom": "La FRANCE REVIENT",
+    "prenom": null,
+    "nuance": "LRN",
+    "pct_exprimes": 27.34
+   },
+   "nom": "7e circonscription du Val-d'Oise",
+   "code_circonscription": "07"
+  },
+  "03": {
+   "nb_communes": 12,
+   "bureaux_de_vote": 107,
+   "inscrits": 96980,
+   "abstentions": 46814,
+   "votants": 50166,
+   "blancs": 564,
+   "nuls": 464,
+   "exprimes": 49138,
+   "candidats": [
+    {
+     "nom": "La FRANCE REVIENT",
+     "prenom": null,
+     "nuance": "LRN",
+     "voix": 13126,
+     "pct_exprimes": 26.71,
+     "pct_inscrits": 13.53
+    },
+    {
+     "nom": "LFI - UP",
+     "prenom": null,
+     "nuance": "LFI",
+     "voix": 9166,
+     "pct_exprimes": 18.65,
+     "pct_inscrits": 9.45
+    },
+    {
+     "nom": "BESOIN D'EUROPE",
+     "prenom": null,
+     "nuance": "LENS",
+     "voix": 6663,
+     "pct_exprimes": 13.56,
+     "pct_inscrits": 6.87
+    },
+    {
+     "nom": "REVEIL EUR",
+     "prenom": null,
+     "nuance": "LUG",
+     "voix": 6250,
+     "pct_exprimes": 12.72,
+     "pct_inscrits": 6.44
+    },
+    {
+     "nom": "LA DROITE POUR FAIRE ENTENDRE LA VOIX DE LA FRANCE EN EUROPE",
+     "prenom": null,
+     "nuance": "LLR",
+     "voix": 3491,
+     "pct_exprimes": 7.1,
+     "pct_inscrits": 3.6
+    },
+    {
+     "nom": "EUROPE ÉCOLOGIE",
+     "prenom": null,
+     "nuance": "LVEC",
+     "voix": 2561,
+     "pct_exprimes": 5.21,
+     "pct_inscrits": 2.64
+    },
+    {
+     "nom": "LA FRANCE FIERE, MENEE PAR MARION MARECHAL ET SOUTENUE PAR ÉRIC ZEMMOUR",
+     "prenom": null,
+     "nuance": "LREC",
+     "voix": 2290,
+     "pct_exprimes": 4.66,
+     "pct_inscrits": 2.36
+    },
+    {
+     "nom": "PARTI ANIMALISTE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 1225,
+     "pct_exprimes": 2.49,
+     "pct_inscrits": 1.26
+    },
+    {
+     "nom": "GAUCHE UNIE",
+     "prenom": null,
+     "nuance": "LCOM",
+     "voix": 1126,
+     "pct_exprimes": 2.29,
+     "pct_inscrits": 1.16
+    },
+    {
+     "nom": "EAC",
+     "prenom": null,
+     "nuance": "LECO",
+     "voix": 745,
+     "pct_exprimes": 1.52,
+     "pct_inscrits": 0.77
+    },
+    {
+     "nom": "LISTE ASSELINEAU-FREXIT",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 595,
+     "pct_exprimes": 1.21,
+     "pct_inscrits": 0.61
+    },
+    {
+     "nom": "L'EUROPE CA SUFFIT !",
+     "prenom": null,
+     "nuance": "LEXD",
+     "voix": 461,
+     "pct_exprimes": 0.94,
+     "pct_inscrits": 0.48
+    },
+    {
+     "nom": "AR",
+     "prenom": null,
+     "nuance": "LDVD",
+     "voix": 444,
+     "pct_exprimes": 0.9,
+     "pct_inscrits": 0.46
+    },
+    {
+     "nom": "ECOLOGIE POSITIVE",
+     "prenom": null,
+     "nuance": "LECO",
+     "voix": 269,
+     "pct_exprimes": 0.55,
+     "pct_inscrits": 0.28
+    },
+    {
+     "nom": "LUTTE OUVRIERE",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 184,
+     "pct_exprimes": 0.37,
+     "pct_inscrits": 0.19
+    },
+    {
+     "nom": "ÉQUINOXE",
+     "prenom": null,
+     "nuance": "LECO",
+     "voix": 141,
+     "pct_exprimes": 0.29,
+     "pct_inscrits": 0.15
+    },
+    {
+     "nom": "EUROPE TERRITOIRES ÉCOLOGIE",
+     "prenom": null,
+     "nuance": "LDVG",
+     "voix": 122,
+     "pct_exprimes": 0.25,
+     "pct_inscrits": 0.13
+    },
+    {
+     "nom": "FREE PALESTINE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 60,
+     "pct_exprimes": 0.12,
+     "pct_inscrits": 0.06
+    },
+    {
+     "nom": "URGENCE REVOLUTION !",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 59,
+     "pct_exprimes": 0.12,
+     "pct_inscrits": 0.06
+    },
+    {
+     "nom": "NLP",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 35,
+     "pct_exprimes": 0.07,
+     "pct_inscrits": 0.04
+    },
+    {
+     "nom": "PARTI PIRATE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 18,
+     "pct_exprimes": 0.04,
+     "pct_inscrits": 0.02
+    },
+    {
+     "nom": "DEFENDRE LES ENFANTS",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 17,
+     "pct_exprimes": 0.03,
+     "pct_inscrits": 0.02
+    },
+    {
+     "nom": "PACE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 13,
+     "pct_exprimes": 0.03,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "CHANGER L'EUROPE",
+     "prenom": null,
+     "nuance": "LDVG",
+     "voix": 13,
+     "pct_exprimes": 0.03,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "FORTERESSE EUROPE",
+     "prenom": null,
+     "nuance": "LEXD",
+     "voix": 12,
+     "pct_exprimes": 0.02,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "ESPERANTO",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 12,
+     "pct_exprimes": 0.02,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "PPL",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 9,
+     "pct_exprimes": 0.02,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "PAIX ET DECROISSANCE",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 6,
+     "pct_exprimes": 0.01,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "FRANCE LIBRE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 5,
+     "pct_exprimes": 0.01,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "NON À L'UE ET À L'OTAN, COMMUNISTES POUR LA PAIX ET LE PROGRÈS SOCIAL",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 5,
+     "pct_exprimes": 0.01,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "PRENONS-NOUS EN MAIN",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 4,
+     "pct_exprimes": 0.01,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "LA RUCHE CITOYENNE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 4,
+     "pct_exprimes": 0.01,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "PARTI REVOLUTIONNAIRE COMMUNISTES",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 2,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "POUR UNE DEMOCRATIE REELLE : DECIDONS NOUS-MEMES !",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 1,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "HUMANITE SOUVERAINE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 1,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "POUR UNE AUTRE EUROPE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 1,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "DEMOCRATIE REPRESENTATIVE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 1,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "LIBERTÉ DÉMOCRATIQUE FRANÇAISE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 1,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    }
+   ],
+   "pct_abstention": 48.27,
+   "pct_participation": 51.73,
+   "tete": {
+    "nom": "La FRANCE REVIENT",
+    "prenom": null,
+    "nuance": "LRN",
+    "pct_exprimes": 26.71
+   },
+   "nom": "3e circonscription du Val-d'Oise",
+   "code_circonscription": "03"
+  },
+  "09": {
+   "nb_communes": 27,
+   "bureaux_de_vote": 89,
+   "inscrits": 72109,
+   "abstentions": 41350,
+   "votants": 30759,
+   "blancs": 403,
+   "nuls": 364,
+   "exprimes": 29992,
+   "candidats": [
+    {
+     "nom": "La FRANCE REVIENT",
+     "prenom": null,
+     "nuance": "LRN",
+     "voix": 9457,
+     "pct_exprimes": 31.53,
+     "pct_inscrits": 13.11
+    },
+    {
+     "nom": "LFI - UP",
+     "prenom": null,
+     "nuance": "LFI",
+     "voix": 8154,
+     "pct_exprimes": 27.19,
+     "pct_inscrits": 11.31
+    },
+    {
+     "nom": "BESOIN D'EUROPE",
+     "prenom": null,
+     "nuance": "LENS",
+     "voix": 2909,
+     "pct_exprimes": 9.7,
+     "pct_inscrits": 4.03
+    },
+    {
+     "nom": "REVEIL EUR",
+     "prenom": null,
+     "nuance": "LUG",
+     "voix": 2399,
+     "pct_exprimes": 8.0,
+     "pct_inscrits": 3.33
+    },
+    {
+     "nom": "LA FRANCE FIERE, MENEE PAR MARION MARECHAL ET SOUTENUE PAR ÉRIC ZEMMOUR",
+     "prenom": null,
+     "nuance": "LREC",
+     "voix": 1545,
+     "pct_exprimes": 5.15,
+     "pct_inscrits": 2.14
+    },
+    {
+     "nom": "LA DROITE POUR FAIRE ENTENDRE LA VOIX DE LA FRANCE EN EUROPE",
+     "prenom": null,
+     "nuance": "LLR",
+     "voix": 1469,
+     "pct_exprimes": 4.9,
+     "pct_inscrits": 2.04
+    },
+    {
+     "nom": "EUROPE ÉCOLOGIE",
+     "prenom": null,
+     "nuance": "LVEC",
+     "voix": 917,
+     "pct_exprimes": 3.06,
+     "pct_inscrits": 1.27
+    },
+    {
+     "nom": "GAUCHE UNIE",
+     "prenom": null,
+     "nuance": "LCOM",
+     "voix": 686,
+     "pct_exprimes": 2.29,
+     "pct_inscrits": 0.95
+    },
+    {
+     "nom": "PARTI ANIMALISTE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 599,
+     "pct_exprimes": 2.0,
+     "pct_inscrits": 0.83
+    },
+    {
+     "nom": "LISTE ASSELINEAU-FREXIT",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 393,
+     "pct_exprimes": 1.31,
+     "pct_inscrits": 0.55
+    },
+    {
+     "nom": "EAC",
+     "prenom": null,
+     "nuance": "LECO",
+     "voix": 299,
+     "pct_exprimes": 1.0,
+     "pct_inscrits": 0.41
+    },
+    {
+     "nom": "AR",
+     "prenom": null,
+     "nuance": "LDVD",
+     "voix": 285,
+     "pct_exprimes": 0.95,
+     "pct_inscrits": 0.4
+    },
+    {
+     "nom": "L'EUROPE CA SUFFIT !",
+     "prenom": null,
+     "nuance": "LEXD",
+     "voix": 255,
+     "pct_exprimes": 0.85,
+     "pct_inscrits": 0.35
+    },
+    {
+     "nom": "LUTTE OUVRIERE",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 155,
+     "pct_exprimes": 0.52,
+     "pct_inscrits": 0.21
+    },
+    {
+     "nom": "ECOLOGIE POSITIVE",
+     "prenom": null,
+     "nuance": "LECO",
+     "voix": 129,
+     "pct_exprimes": 0.43,
+     "pct_inscrits": 0.18
+    },
+    {
+     "nom": "FREE PALESTINE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 91,
+     "pct_exprimes": 0.3,
+     "pct_inscrits": 0.13
+    },
+    {
+     "nom": "EUROPE TERRITOIRES ÉCOLOGIE",
+     "prenom": null,
+     "nuance": "LDVG",
+     "voix": 65,
+     "pct_exprimes": 0.22,
+     "pct_inscrits": 0.09
+    },
+    {
+     "nom": "URGENCE REVOLUTION !",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 57,
+     "pct_exprimes": 0.19,
+     "pct_inscrits": 0.08
+    },
+    {
+     "nom": "ÉQUINOXE",
+     "prenom": null,
+     "nuance": "LECO",
+     "voix": 48,
+     "pct_exprimes": 0.16,
+     "pct_inscrits": 0.07
+    },
+    {
+     "nom": "NLP",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 20,
+     "pct_exprimes": 0.07,
+     "pct_inscrits": 0.03
+    },
+    {
+     "nom": "LA RUCHE CITOYENNE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 15,
+     "pct_exprimes": 0.05,
+     "pct_inscrits": 0.02
+    },
+    {
+     "nom": "PARTI PIRATE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 10,
+     "pct_exprimes": 0.03,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "ESPERANTO",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 8,
+     "pct_exprimes": 0.03,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "LIBERTÉ DÉMOCRATIQUE FRANÇAISE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 7,
+     "pct_exprimes": 0.02,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "FRANCE LIBRE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 5,
+     "pct_exprimes": 0.02,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "DEFENDRE LES ENFANTS",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 5,
+     "pct_exprimes": 0.02,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "PACE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 4,
+     "pct_exprimes": 0.01,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "POUR UNE AUTRE EUROPE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 4,
+     "pct_exprimes": 0.01,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "CHANGER L'EUROPE",
+     "prenom": null,
+     "nuance": "LDVG",
+     "voix": 1,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "FORTERESSE EUROPE",
+     "prenom": null,
+     "nuance": "LEXD",
+     "voix": 1,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "HUMANITE SOUVERAINE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "POUR UNE DEMOCRATIE REELLE : DECIDONS NOUS-MEMES !",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "PARTI REVOLUTIONNAIRE COMMUNISTES",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "PAIX ET DECROISSANCE",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "PPL",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "PRENONS-NOUS EN MAIN",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "NON À L'UE ET À L'OTAN, COMMUNISTES POUR LA PAIX ET LE PROGRÈS SOCIAL",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "DEMOCRATIE REPRESENTATIVE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    }
+   ],
+   "pct_abstention": 57.34,
+   "pct_participation": 42.66,
+   "tete": {
+    "nom": "La FRANCE REVIENT",
+    "prenom": null,
+    "nuance": "LRN",
+    "pct_exprimes": 31.53
+   },
+   "nom": "9e circonscription du Val-d'Oise",
+   "code_circonscription": "09"
+  },
+  "10": {
+   "nb_communes": 9,
+   "bureaux_de_vote": 83,
+   "inscrits": 75666,
+   "abstentions": 39652,
+   "votants": 36014,
+   "blancs": 534,
+   "nuls": 235,
+   "exprimes": 35245,
+   "candidats": [
+    {
+     "nom": "LFI - UP",
+     "prenom": null,
+     "nuance": "LFI",
+     "voix": 9013,
+     "pct_exprimes": 25.57,
+     "pct_inscrits": 11.91
+    },
+    {
+     "nom": "La FRANCE REVIENT",
+     "prenom": null,
+     "nuance": "LRN",
+     "voix": 7552,
+     "pct_exprimes": 21.43,
+     "pct_inscrits": 9.98
+    },
+    {
+     "nom": "REVEIL EUR",
+     "prenom": null,
+     "nuance": "LUG",
+     "voix": 4934,
+     "pct_exprimes": 14.0,
+     "pct_inscrits": 6.52
+    },
+    {
+     "nom": "BESOIN D'EUROPE",
+     "prenom": null,
+     "nuance": "LENS",
+     "voix": 4691,
+     "pct_exprimes": 13.31,
+     "pct_inscrits": 6.2
+    },
+    {
+     "nom": "EUROPE ÉCOLOGIE",
+     "prenom": null,
+     "nuance": "LVEC",
+     "voix": 1904,
+     "pct_exprimes": 5.4,
+     "pct_inscrits": 2.52
+    },
+    {
+     "nom": "LA DROITE POUR FAIRE ENTENDRE LA VOIX DE LA FRANCE EN EUROPE",
+     "prenom": null,
+     "nuance": "LLR",
+     "voix": 1845,
+     "pct_exprimes": 5.23,
+     "pct_inscrits": 2.44
+    },
+    {
+     "nom": "LA FRANCE FIERE, MENEE PAR MARION MARECHAL ET SOUTENUE PAR ÉRIC ZEMMOUR",
+     "prenom": null,
+     "nuance": "LREC",
+     "voix": 1371,
+     "pct_exprimes": 3.89,
+     "pct_inscrits": 1.81
+    },
+    {
+     "nom": "PARTI ANIMALISTE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 817,
+     "pct_exprimes": 2.32,
+     "pct_inscrits": 1.08
+    },
+    {
+     "nom": "GAUCHE UNIE",
+     "prenom": null,
+     "nuance": "LCOM",
+     "voix": 702,
+     "pct_exprimes": 1.99,
+     "pct_inscrits": 0.93
+    },
+    {
+     "nom": "EAC",
+     "prenom": null,
+     "nuance": "LECO",
+     "voix": 472,
+     "pct_exprimes": 1.34,
+     "pct_inscrits": 0.62
+    },
+    {
+     "nom": "LISTE ASSELINEAU-FREXIT",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 438,
+     "pct_exprimes": 1.24,
+     "pct_inscrits": 0.58
+    },
+    {
+     "nom": "L'EUROPE CA SUFFIT !",
+     "prenom": null,
+     "nuance": "LEXD",
+     "voix": 308,
+     "pct_exprimes": 0.87,
+     "pct_inscrits": 0.41
+    },
+    {
+     "nom": "AR",
+     "prenom": null,
+     "nuance": "LDVD",
+     "voix": 282,
+     "pct_exprimes": 0.8,
+     "pct_inscrits": 0.37
+    },
+    {
+     "nom": "ECOLOGIE POSITIVE",
+     "prenom": null,
+     "nuance": "LECO",
+     "voix": 207,
+     "pct_exprimes": 0.59,
+     "pct_inscrits": 0.27
+    },
+    {
+     "nom": "LUTTE OUVRIERE",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 180,
+     "pct_exprimes": 0.51,
+     "pct_inscrits": 0.24
+    },
+    {
+     "nom": "ÉQUINOXE",
+     "prenom": null,
+     "nuance": "LECO",
+     "voix": 116,
+     "pct_exprimes": 0.33,
+     "pct_inscrits": 0.15
+    },
+    {
+     "nom": "EUROPE TERRITOIRES ÉCOLOGIE",
+     "prenom": null,
+     "nuance": "LDVG",
+     "voix": 114,
+     "pct_exprimes": 0.32,
+     "pct_inscrits": 0.15
+    },
+    {
+     "nom": "URGENCE REVOLUTION !",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 73,
+     "pct_exprimes": 0.21,
+     "pct_inscrits": 0.1
+    },
+    {
+     "nom": "PARTI PIRATE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 71,
+     "pct_exprimes": 0.2,
+     "pct_inscrits": 0.09
+    },
+    {
+     "nom": "NLP",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 36,
+     "pct_exprimes": 0.1,
+     "pct_inscrits": 0.05
+    },
+    {
+     "nom": "FREE PALESTINE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 25,
+     "pct_exprimes": 0.07,
+     "pct_inscrits": 0.03
+    },
+    {
+     "nom": "PPL",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 19,
+     "pct_exprimes": 0.05,
+     "pct_inscrits": 0.03
+    },
+    {
+     "nom": "FRANCE LIBRE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 15,
+     "pct_exprimes": 0.04,
+     "pct_inscrits": 0.02
+    },
+    {
+     "nom": "PACE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 9,
+     "pct_exprimes": 0.03,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "CHANGER L'EUROPE",
+     "prenom": null,
+     "nuance": "LDVG",
+     "voix": 9,
+     "pct_exprimes": 0.03,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "DEFENDRE LES ENFANTS",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 9,
+     "pct_exprimes": 0.03,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "ESPERANTO",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 8,
+     "pct_exprimes": 0.02,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "LIBERTÉ DÉMOCRATIQUE FRANÇAISE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 6,
+     "pct_exprimes": 0.02,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "PARTI REVOLUTIONNAIRE COMMUNISTES",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 4,
+     "pct_exprimes": 0.01,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "PRENONS-NOUS EN MAIN",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 4,
+     "pct_exprimes": 0.01,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "HUMANITE SOUVERAINE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 3,
+     "pct_exprimes": 0.01,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "PAIX ET DECROISSANCE",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 3,
+     "pct_exprimes": 0.01,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "POUR UNE DEMOCRATIE REELLE : DECIDONS NOUS-MEMES !",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 1,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "POUR UNE AUTRE EUROPE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 1,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "FORTERESSE EUROPE",
+     "prenom": null,
+     "nuance": "LEXD",
+     "voix": 1,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "LA RUCHE CITOYENNE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 1,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "DEMOCRATIE REPRESENTATIVE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 1,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "NON À L'UE ET À L'OTAN, COMMUNISTES POUR LA PAIX ET LE PROGRÈS SOCIAL",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    }
+   ],
+   "pct_abstention": 52.4,
+   "pct_participation": 47.6,
+   "tete": {
+    "nom": "LFI - UP",
+    "prenom": null,
+    "nuance": "LFI",
+    "pct_exprimes": 25.57
+   },
+   "nom": "10e circonscription du Val-d'Oise",
+   "code_circonscription": "10"
+  },
+  "04": {
+   "nb_communes": 6,
+   "bureaux_de_vote": 75,
+   "inscrits": 76737,
+   "abstentions": 37280,
+   "votants": 39457,
+   "blancs": 431,
+   "nuls": 353,
+   "exprimes": 38673,
+   "candidats": [
+    {
+     "nom": "La FRANCE REVIENT",
+     "prenom": null,
+     "nuance": "LRN",
+     "voix": 9042,
+     "pct_exprimes": 23.38,
+     "pct_inscrits": 11.78
+    },
+    {
+     "nom": "LFI - UP",
+     "prenom": null,
+     "nuance": "LFI",
+     "voix": 6923,
+     "pct_exprimes": 17.9,
+     "pct_inscrits": 9.02
+    },
+    {
+     "nom": "BESOIN D'EUROPE",
+     "prenom": null,
+     "nuance": "LENS",
+     "voix": 5922,
+     "pct_exprimes": 15.31,
+     "pct_inscrits": 7.72
+    },
+    {
+     "nom": "REVEIL EUR",
+     "prenom": null,
+     "nuance": "LUG",
+     "voix": 5502,
+     "pct_exprimes": 14.23,
+     "pct_inscrits": 7.17
+    },
+    {
+     "nom": "LA DROITE POUR FAIRE ENTENDRE LA VOIX DE LA FRANCE EN EUROPE",
+     "prenom": null,
+     "nuance": "LLR",
+     "voix": 2988,
+     "pct_exprimes": 7.73,
+     "pct_inscrits": 3.89
+    },
+    {
+     "nom": "EUROPE ÉCOLOGIE",
+     "prenom": null,
+     "nuance": "LVEC",
+     "voix": 2215,
+     "pct_exprimes": 5.73,
+     "pct_inscrits": 2.89
+    },
+    {
+     "nom": "LA FRANCE FIERE, MENEE PAR MARION MARECHAL ET SOUTENUE PAR ÉRIC ZEMMOUR",
+     "prenom": null,
+     "nuance": "LREC",
+     "voix": 1951,
+     "pct_exprimes": 5.04,
+     "pct_inscrits": 2.54
+    },
+    {
+     "nom": "PARTI ANIMALISTE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 910,
+     "pct_exprimes": 2.35,
+     "pct_inscrits": 1.19
+    },
+    {
+     "nom": "GAUCHE UNIE",
+     "prenom": null,
+     "nuance": "LCOM",
+     "voix": 731,
+     "pct_exprimes": 1.89,
+     "pct_inscrits": 0.95
+    },
+    {
+     "nom": "EAC",
+     "prenom": null,
+     "nuance": "LECO",
+     "voix": 536,
+     "pct_exprimes": 1.39,
+     "pct_inscrits": 0.7
+    },
+    {
+     "nom": "LISTE ASSELINEAU-FREXIT",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 455,
+     "pct_exprimes": 1.18,
+     "pct_inscrits": 0.59
+    },
+    {
+     "nom": "L'EUROPE CA SUFFIT !",
+     "prenom": null,
+     "nuance": "LEXD",
+     "voix": 343,
+     "pct_exprimes": 0.89,
+     "pct_inscrits": 0.45
+    },
+    {
+     "nom": "AR",
+     "prenom": null,
+     "nuance": "LDVD",
+     "voix": 296,
+     "pct_exprimes": 0.77,
+     "pct_inscrits": 0.39
+    },
+    {
+     "nom": "ECOLOGIE POSITIVE",
+     "prenom": null,
+     "nuance": "LECO",
+     "voix": 195,
+     "pct_exprimes": 0.5,
+     "pct_inscrits": 0.25
+    },
+    {
+     "nom": "LUTTE OUVRIERE",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 153,
+     "pct_exprimes": 0.4,
+     "pct_inscrits": 0.2
+    },
+    {
+     "nom": "ÉQUINOXE",
+     "prenom": null,
+     "nuance": "LECO",
+     "voix": 127,
+     "pct_exprimes": 0.33,
+     "pct_inscrits": 0.17
+    },
+    {
+     "nom": "EUROPE TERRITOIRES ÉCOLOGIE",
+     "prenom": null,
+     "nuance": "LDVG",
+     "voix": 103,
+     "pct_exprimes": 0.27,
+     "pct_inscrits": 0.13
+    },
+    {
+     "nom": "FREE PALESTINE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 86,
+     "pct_exprimes": 0.22,
+     "pct_inscrits": 0.11
+    },
+    {
+     "nom": "URGENCE REVOLUTION !",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 49,
+     "pct_exprimes": 0.13,
+     "pct_inscrits": 0.06
+    },
+    {
+     "nom": "NLP",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 40,
+     "pct_exprimes": 0.1,
+     "pct_inscrits": 0.05
+    },
+    {
+     "nom": "PARTI PIRATE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 23,
+     "pct_exprimes": 0.06,
+     "pct_inscrits": 0.03
+    },
+    {
+     "nom": "DEFENDRE LES ENFANTS",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 19,
+     "pct_exprimes": 0.05,
+     "pct_inscrits": 0.02
+    },
+    {
+     "nom": "PACE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 14,
+     "pct_exprimes": 0.04,
+     "pct_inscrits": 0.02
+    },
+    {
+     "nom": "ESPERANTO",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 13,
+     "pct_exprimes": 0.03,
+     "pct_inscrits": 0.02
+    },
+    {
+     "nom": "PPL",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 9,
+     "pct_exprimes": 0.02,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "PAIX ET DECROISSANCE",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 8,
+     "pct_exprimes": 0.02,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "LA RUCHE CITOYENNE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 5,
+     "pct_exprimes": 0.01,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "LIBERTÉ DÉMOCRATIQUE FRANÇAISE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 4,
+     "pct_exprimes": 0.01,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "CHANGER L'EUROPE",
+     "prenom": null,
+     "nuance": "LDVG",
+     "voix": 4,
+     "pct_exprimes": 0.01,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "FRANCE LIBRE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 4,
+     "pct_exprimes": 0.01,
+     "pct_inscrits": 0.01
+    },
+    {
+     "nom": "PARTI REVOLUTIONNAIRE COMMUNISTES",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 1,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "PRENONS-NOUS EN MAIN",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 1,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "DEMOCRATIE REPRESENTATIVE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 1,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "HUMANITE SOUVERAINE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "POUR UNE DEMOCRATIE REELLE : DECIDONS NOUS-MEMES !",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "POUR UNE AUTRE EUROPE",
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "FORTERESSE EUROPE",
+     "prenom": null,
+     "nuance": "LEXD",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "NON À L'UE ET À L'OTAN, COMMUNISTES POUR LA PAIX ET LE PROGRÈS SOCIAL",
+     "prenom": null,
+     "nuance": "LEXG",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    }
+   ],
+   "pct_abstention": 48.58,
+   "pct_participation": 51.42,
+   "tete": {
+    "nom": "La FRANCE REVIENT",
+    "prenom": null,
+    "nuance": "LRN",
+    "pct_exprimes": 23.38
+   },
+   "nom": "4e circonscription du Val-d'Oise",
+   "code_circonscription": "04"
+  }
+ }
+}

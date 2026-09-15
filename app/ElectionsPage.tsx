@@ -67,6 +67,7 @@ export default function ElectionsPage() {
   const [cantonData, setCantonData] = useState<Record<string, any>>({});
   const [bvData, setBvData] = useState<Record<string, any>>({});
   const [inseeStatus, setInseeStatus] = useState<"a_completer" | "reel">("a_completer");
+  const [populationData, setPopulationData] = useState<Record<string, { annee: number; population: number }[]>>({});
 
   const [selectedCode, setSelectedCode] = useState<string | null>(null);
   const [sources, setSources] = useState<SourceEntry[]>([]);
@@ -89,13 +90,15 @@ export default function ElectionsPage() {
       fetchJson<any>("/data/geo/bureaux-vote-95.geojson").catch(() => null),
       fetchJson<any>("/data/geo/cantons-95.geojson").catch(() => null),
       fetchJson<any>("/data/insee/insee-95-communes.json").catch(() => ({ status: "a_completer" })),
+      fetchJson<any>("/data/insee/population-historique-95.json").catch(() => null),
     ])
-      .then(([communes, circo, bv, canton, insee]) => {
+      .then(([communes, circo, bv, canton, insee, population]) => {
         setCommunesGeo(communes);
         setCircoGeo(circo);
         setBvGeo(bv);
         setCantonGeo(canton);
         setInseeStatus(insee.status || "a_completer");
+        setPopulationData(population?.communes || {});
       })
       .finally(() => setLoading(false));
   }, []);
@@ -475,7 +478,8 @@ export default function ElectionsPage() {
           {scale === "canton" && (
             <p className="elec-scale-note">
               Échelle canton : 21 cantons réels (redécoupage 2015, contours dissous à partir des bureaux de vote — Argenteuil et Cergy
-              correctement scindés sur plusieurs cantons). Résultats réels disponibles pour les Départementales 2021 (2nd tour).
+              correctement scindés sur plusieurs cantons). Résultats réels disponibles pour tous les scrutins chargés (agrégation
+              directe des résultats communaux ou par bureau, sans donnée inventée).
             </p>
           )}
 
@@ -687,6 +691,20 @@ export default function ElectionsPage() {
                     <p className="elec-empty">Détail par liste/candidat non chargé pour ce scrutin (participation réelle disponible ci-dessus). Voir DATA.md.</p>
                   )}
                 </Section>
+                {scale === "commune" && (
+                  <Section
+                    title="Évolution de la population"
+                    state={selectedCode && populationData[selectedCode]?.length ? "Données réelles (INSEE)" : "À compléter"}
+                  >
+                    {selectedCode && populationData[selectedCode]?.length ? (
+                      <PopulationSparkline data={populationData[selectedCode]} />
+                    ) : (
+                      <p className="elec-empty">
+                        Population historique non disponible pour cette commune dans le jeu de données INSEE (voir DATA.md).
+                      </p>
+                    )}
+                  </Section>
+                )}
                 <Section title="Croisement sociodémographique" state={inseeStatus === "a_completer" ? "À compléter" : "Disponible"}>
                   {inseeStatus === "a_completer" ? (
                     <p className="elec-empty">
@@ -800,6 +818,46 @@ function Kpi({ label, value }: { label: string; value: string }) {
     <div>
       <span>{label}</span>
       <strong>{value}</strong>
+    </div>
+  );
+}
+
+function PopulationSparkline({ data }: { data: { annee: number; population: number }[] }) {
+  if (!data.length) return null;
+  const w = 260;
+  const h = 56;
+  const pad = 4;
+  const min = Math.min(...data.map((d) => d.population));
+  const max = Math.max(...data.map((d) => d.population));
+  const range = max - min || 1;
+  const x = (i: number) => pad + (i / (data.length - 1 || 1)) * (w - pad * 2);
+  const y = (v: number) => h - pad - ((v - min) / range) * (h - pad * 2);
+  const points = data.map((d, i) => `${x(i)},${y(d.population)}`).join(" ");
+  const first = data[0];
+  const last = data[data.length - 1];
+  const delta = last.population - first.population;
+  const pct = first.population ? (delta / first.population) * 100 : 0;
+  return (
+    <div className="elec-population">
+      <svg width={w} height={h} viewBox={`0 0 ${w} ${h}`} role="img" aria-label="Évolution de la population">
+        <polyline points={points} fill="none" stroke="var(--blue, #000091)" strokeWidth={2} />
+        {data.map((d, i) => (
+          <circle key={d.annee} cx={x(i)} cy={y(d.population)} r={i === data.length - 1 ? 3 : 1.5} fill="var(--blue, #000091)" />
+        ))}
+      </svg>
+      <div className="elec-population-legend">
+        <span>
+          {first.annee} : <strong>{first.population.toLocaleString("fr-FR")}</strong> hab.
+        </span>
+        <span>
+          {last.annee} : <strong>{last.population.toLocaleString("fr-FR")}</strong> hab.
+        </span>
+        <span className={delta >= 0 ? "up" : "down"}>
+          {delta >= 0 ? "+" : ""}
+          {delta.toLocaleString("fr-FR")} ({pct >= 0 ? "+" : ""}
+          {pct.toFixed(1)} %) depuis {first.annee}
+        </span>
+      </div>
     </div>
   );
 }

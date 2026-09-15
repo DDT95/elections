@@ -1,0 +1,989 @@
+{
+ "election": "Législatives 2024",
+ "tour": 2,
+ "date": "2024-07-07",
+ "status": "reel",
+ "note": "Agrégation réelle par canton, calculée à partir des résultats réels par bureau de vote de ce scrutin et du référentiel bureau↔canton réel (Départementales 2021, export officiel DGRC). Aucune donnée de vote n'est inventée : simple somme au niveau bureau de vote, ce qui permet de restituer correctement les cantons partagés entre plusieurs communes (Argenteuil, Cergy).",
+ "cantons": {
+  "16": {
+   "bureaux_de_vote": 55,
+   "inscrits": 33758,
+   "abstentions": 10621,
+   "votants": 23137,
+   "blancs": 592,
+   "nuls": 153,
+   "exprimes": 22392,
+   "nom": "Pontoise",
+   "candidats": [
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 8399,
+     "pct_exprimes": 37.51,
+     "pct_inscrits": 24.88
+    },
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 7315,
+     "pct_exprimes": 32.67,
+     "pct_inscrits": 21.67
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 5840,
+     "pct_exprimes": 26.08,
+     "pct_inscrits": 17.3
+    },
+    {
+     "nom": "TACHÉ",
+     "prenom": "Aurélien",
+     "nuance": "UG",
+     "voix": 448,
+     "pct_exprimes": 2.0,
+     "pct_inscrits": 1.33
+    },
+    {
+     "nom": "MACÉ",
+     "prenom": "Lisbeth",
+     "nuance": "RN",
+     "voix": 390,
+     "pct_exprimes": 1.74,
+     "pct_inscrits": 1.16
+    }
+   ],
+   "pct_abstention": 31.46,
+   "pct_participation": 68.54,
+   "tete": {
+    "nom": "JULES-ARTHUR",
+    "prenom": "Maximillien",
+    "nuance": "UG",
+    "pct_exprimes": 37.51
+   },
+   "nb_communes": 31,
+   "code_canton": "16"
+  },
+  "20": {
+   "bureaux_de_vote": 61,
+   "inscrits": 37529,
+   "abstentions": 11713,
+   "votants": 25816,
+   "blancs": 1699,
+   "nuls": 173,
+   "exprimes": 23944,
+   "nom": "Vauréal",
+   "candidats": [
+    {
+     "nom": "TACHÉ",
+     "prenom": "Aurélien",
+     "nuance": "UG",
+     "voix": 7999,
+     "pct_exprimes": 33.41,
+     "pct_inscrits": 21.31
+    },
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 5362,
+     "pct_exprimes": 22.39,
+     "pct_inscrits": 14.29
+    },
+    {
+     "nom": "MACÉ",
+     "prenom": "Lisbeth",
+     "nuance": "RN",
+     "voix": 3922,
+     "pct_exprimes": 16.38,
+     "pct_inscrits": 10.45
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 3473,
+     "pct_exprimes": 14.5,
+     "pct_inscrits": 9.25
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 3188,
+     "pct_exprimes": 13.31,
+     "pct_inscrits": 8.49
+    }
+   ],
+   "pct_abstention": 31.21,
+   "pct_participation": 68.79,
+   "tete": {
+    "nom": "TACHÉ",
+    "prenom": "Aurélien",
+    "nuance": "UG",
+    "pct_exprimes": 33.41
+   },
+   "nb_communes": 39,
+   "code_canton": "20"
+  },
+  "15": {
+   "bureaux_de_vote": 36,
+   "inscrits": 38987,
+   "abstentions": 12121,
+   "votants": 26866,
+   "blancs": 1075,
+   "nuls": 254,
+   "exprimes": 25537,
+   "nom": "Montmorency",
+   "candidats": [
+    {
+     "nom": "FOLEST",
+     "prenom": "Estelle",
+     "nuance": "ENS",
+     "voix": 6462,
+     "pct_exprimes": 25.3,
+     "pct_inscrits": 16.57
+    },
+    {
+     "nom": "ESKENAZI",
+     "prenom": "Romain",
+     "nuance": "UG",
+     "voix": 5479,
+     "pct_exprimes": 21.46,
+     "pct_inscrits": 14.05
+    },
+    {
+     "nom": "CATHALA",
+     "prenom": "Gabrielle",
+     "nuance": "UG",
+     "voix": 5278,
+     "pct_exprimes": 20.67,
+     "pct_inscrits": 13.54
+    },
+    {
+     "nom": "BRUNA",
+     "prenom": "Annika",
+     "nuance": "RN",
+     "voix": 3828,
+     "pct_exprimes": 14.99,
+     "pct_inscrits": 9.82
+    },
+    {
+     "nom": "QUENTIN",
+     "prenom": "David",
+     "nuance": "RN",
+     "voix": 3021,
+     "pct_exprimes": 11.83,
+     "pct_inscrits": 7.75
+    },
+    {
+     "nom": "MOUTCHOU",
+     "prenom": "Naïma",
+     "nuance": "ENS",
+     "voix": 1054,
+     "pct_exprimes": 4.13,
+     "pct_inscrits": 2.7
+    },
+    {
+     "nom": "LACOUTURE",
+     "prenom": "Karine",
+     "nuance": "UG",
+     "voix": 415,
+     "pct_exprimes": 1.63,
+     "pct_inscrits": 1.06
+    }
+   ],
+   "pct_abstention": 31.09,
+   "pct_participation": 68.91,
+   "tete": {
+    "nom": "FOLEST",
+    "prenom": "Estelle",
+    "nuance": "ENS",
+    "pct_exprimes": 25.3
+   },
+   "nb_communes": 6,
+   "code_canton": "15"
+  },
+  "14": {
+   "bureaux_de_vote": 46,
+   "inscrits": 40917,
+   "abstentions": 13307,
+   "votants": 27610,
+   "blancs": 1499,
+   "nuls": 331,
+   "exprimes": 25780,
+   "nom": "L'Isle-Adam",
+   "candidats": [
+    {
+     "nom": "HADIZADEH",
+     "prenom": "Ayda",
+     "nuance": "UG",
+     "voix": 6239,
+     "pct_exprimes": 24.2,
+     "pct_inscrits": 15.25
+    },
+    {
+     "nom": "REMY",
+     "prenom": "Nadejda",
+     "nuance": "RN",
+     "voix": 5990,
+     "pct_exprimes": 23.24,
+     "pct_inscrits": 14.64
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 5872,
+     "pct_exprimes": 22.78,
+     "pct_inscrits": 14.35
+    },
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 4977,
+     "pct_exprimes": 19.31,
+     "pct_inscrits": 12.16
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 2702,
+     "pct_exprimes": 10.48,
+     "pct_inscrits": 6.6
+    }
+   ],
+   "pct_abstention": 32.52,
+   "pct_participation": 67.48,
+   "tete": {
+    "nom": "HADIZADEH",
+    "prenom": "Ayda",
+    "nuance": "UG",
+    "pct_exprimes": 24.2
+   },
+   "nb_communes": 15,
+   "code_canton": "14"
+  },
+  "09": {
+   "bureaux_de_vote": 46,
+   "inscrits": 40218,
+   "abstentions": 13788,
+   "votants": 26430,
+   "blancs": 1951,
+   "nuls": 423,
+   "exprimes": 24056,
+   "nom": "Fosses",
+   "candidats": [
+    {
+     "nom": "LE GALL",
+     "prenom": "Arnaud",
+     "nuance": "UG",
+     "voix": 5469,
+     "pct_exprimes": 22.73,
+     "pct_inscrits": 13.6
+    },
+    {
+     "nom": "MARION",
+     "prenom": "Agnès",
+     "nuance": "RN",
+     "voix": 4875,
+     "pct_exprimes": 20.27,
+     "pct_inscrits": 12.12
+    },
+    {
+     "nom": "ESKENAZI",
+     "prenom": "Romain",
+     "nuance": "UG",
+     "voix": 4607,
+     "pct_exprimes": 19.15,
+     "pct_inscrits": 11.46
+    },
+    {
+     "nom": "REMY",
+     "prenom": "Nadejda",
+     "nuance": "RN",
+     "voix": 3239,
+     "pct_exprimes": 13.46,
+     "pct_inscrits": 8.05
+    },
+    {
+     "nom": "QUENTIN",
+     "prenom": "David",
+     "nuance": "RN",
+     "voix": 3167,
+     "pct_exprimes": 13.17,
+     "pct_inscrits": 7.87
+    },
+    {
+     "nom": "HADIZADEH",
+     "prenom": "Ayda",
+     "nuance": "UG",
+     "voix": 2699,
+     "pct_exprimes": 11.22,
+     "pct_inscrits": 6.71
+    }
+   ],
+   "pct_abstention": 34.28,
+   "pct_participation": 65.72,
+   "tete": {
+    "nom": "LE GALL",
+    "prenom": "Arnaud",
+    "nuance": "UG",
+    "pct_exprimes": 22.73
+   },
+   "nb_communes": 24,
+   "code_canton": "09"
+  },
+  "17": {
+   "bureaux_de_vote": 39,
+   "inscrits": 36629,
+   "abstentions": 12201,
+   "votants": 24428,
+   "blancs": 1138,
+   "nuls": 305,
+   "exprimes": 22985,
+   "nom": "Saint-Ouen-l'Aumône",
+   "candidats": [
+    {
+     "nom": "HADIZADEH",
+     "prenom": "Ayda",
+     "nuance": "UG",
+     "voix": 8845,
+     "pct_exprimes": 38.48,
+     "pct_inscrits": 24.15
+    },
+    {
+     "nom": "REMY",
+     "prenom": "Nadejda",
+     "nuance": "RN",
+     "voix": 5001,
+     "pct_exprimes": 21.76,
+     "pct_inscrits": 13.65
+    },
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 2914,
+     "pct_exprimes": 12.68,
+     "pct_inscrits": 7.96
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 2508,
+     "pct_exprimes": 10.91,
+     "pct_inscrits": 6.85
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 2275,
+     "pct_exprimes": 9.9,
+     "pct_inscrits": 6.21
+    },
+    {
+     "nom": "MAUREL",
+     "prenom": "Emmanuel",
+     "nuance": "UG",
+     "voix": 738,
+     "pct_exprimes": 3.21,
+     "pct_inscrits": 2.01
+    },
+    {
+     "nom": "LELAIDIER",
+     "prenom": "Kimberley",
+     "nuance": "RN",
+     "voix": 704,
+     "pct_exprimes": 3.06,
+     "pct_inscrits": 1.92
+    }
+   ],
+   "pct_abstention": 33.31,
+   "pct_participation": 66.69,
+   "tete": {
+    "nom": "HADIZADEH",
+    "prenom": "Ayda",
+    "nuance": "UG",
+    "pct_exprimes": 38.48
+   },
+   "nb_communes": 12,
+   "code_canton": "17"
+  },
+  "07": {
+   "bureaux_de_vote": 46,
+   "inscrits": 42510,
+   "abstentions": 13760,
+   "votants": 28750,
+   "blancs": 1990,
+   "nuls": 500,
+   "exprimes": 26260,
+   "nom": "Domont",
+   "candidats": [
+    {
+     "nom": "MOUTCHOU",
+     "prenom": "Naïma",
+     "nuance": "ENS",
+     "voix": 6555,
+     "pct_exprimes": 24.96,
+     "pct_inscrits": 15.42
+    },
+    {
+     "nom": "ESKENAZI",
+     "prenom": "Romain",
+     "nuance": "UG",
+     "voix": 5831,
+     "pct_exprimes": 22.2,
+     "pct_inscrits": 13.72
+    },
+    {
+     "nom": "LACOUTURE",
+     "prenom": "Karine",
+     "nuance": "UG",
+     "voix": 3958,
+     "pct_exprimes": 15.07,
+     "pct_inscrits": 9.31
+    },
+    {
+     "nom": "QUENTIN",
+     "prenom": "David",
+     "nuance": "RN",
+     "voix": 3877,
+     "pct_exprimes": 14.76,
+     "pct_inscrits": 9.12
+    },
+    {
+     "nom": "MAUREL",
+     "prenom": "Emmanuel",
+     "nuance": "UG",
+     "voix": 1954,
+     "pct_exprimes": 7.44,
+     "pct_inscrits": 4.6
+    },
+    {
+     "nom": "LELAIDIER",
+     "prenom": "Kimberley",
+     "nuance": "RN",
+     "voix": 1486,
+     "pct_exprimes": 5.66,
+     "pct_inscrits": 3.5
+    },
+    {
+     "nom": "HADIZADEH",
+     "prenom": "Ayda",
+     "nuance": "UG",
+     "voix": 1357,
+     "pct_exprimes": 5.17,
+     "pct_inscrits": 3.19
+    },
+    {
+     "nom": "REMY",
+     "prenom": "Nadejda",
+     "nuance": "RN",
+     "voix": 1242,
+     "pct_exprimes": 4.73,
+     "pct_inscrits": 2.92
+    }
+   ],
+   "pct_abstention": 32.37,
+   "pct_participation": 67.63,
+   "tete": {
+    "nom": "MOUTCHOU",
+    "prenom": "Naïma",
+    "nuance": "ENS",
+    "pct_exprimes": 24.96
+   },
+   "nb_communes": 11,
+   "code_canton": "07"
+  },
+  "19": {
+   "bureaux_de_vote": 39,
+   "inscrits": 34830,
+   "abstentions": 11742,
+   "votants": 23088,
+   "blancs": 1634,
+   "nuls": 321,
+   "exprimes": 21133,
+   "nom": "Taverny",
+   "candidats": [
+    {
+     "nom": "MAUREL",
+     "prenom": "Emmanuel",
+     "nuance": "UG",
+     "voix": 13028,
+     "pct_exprimes": 61.65,
+     "pct_inscrits": 37.4
+    },
+    {
+     "nom": "LELAIDIER",
+     "prenom": "Kimberley",
+     "nuance": "RN",
+     "voix": 8105,
+     "pct_exprimes": 38.35,
+     "pct_inscrits": 23.27
+    }
+   ],
+   "pct_abstention": 33.71,
+   "pct_participation": 66.29,
+   "tete": {
+    "nom": "MAUREL",
+    "prenom": "Emmanuel",
+    "nuance": "UG",
+    "pct_exprimes": 61.65
+   },
+   "nb_communes": 4,
+   "code_canton": "19"
+  },
+  "05": {
+   "bureaux_de_vote": 31,
+   "inscrits": 30633,
+   "abstentions": 10828,
+   "votants": 19805,
+   "blancs": 1352,
+   "nuls": 286,
+   "exprimes": 18167,
+   "nom": "Cergy-2",
+   "candidats": [
+    {
+     "nom": "HADIZADEH",
+     "prenom": "Ayda",
+     "nuance": "UG",
+     "voix": 9057,
+     "pct_exprimes": 49.85,
+     "pct_inscrits": 29.57
+    },
+    {
+     "nom": "REMY",
+     "prenom": "Nadejda",
+     "nuance": "RN",
+     "voix": 3704,
+     "pct_exprimes": 20.39,
+     "pct_inscrits": 12.09
+    },
+    {
+     "nom": "TACHÉ",
+     "prenom": "Aurélien",
+     "nuance": "UG",
+     "voix": 3580,
+     "pct_exprimes": 19.71,
+     "pct_inscrits": 11.69
+    },
+    {
+     "nom": "MACÉ",
+     "prenom": "Lisbeth",
+     "nuance": "RN",
+     "voix": 1826,
+     "pct_exprimes": 10.05,
+     "pct_inscrits": 5.96
+    }
+   ],
+   "pct_abstention": 35.35,
+   "pct_participation": 64.65,
+   "tete": {
+    "nom": "HADIZADEH",
+    "prenom": "Ayda",
+    "nuance": "UG",
+    "pct_exprimes": 49.85
+   },
+   "nb_communes": 5,
+   "code_canton": "05"
+  },
+  "21": {
+   "bureaux_de_vote": 22,
+   "inscrits": 19172,
+   "abstentions": 8350,
+   "votants": 10822,
+   "blancs": 505,
+   "nuls": 194,
+   "exprimes": 10123,
+   "nom": "Villiers-le-Bel",
+   "candidats": [
+    {
+     "nom": "LE GALL",
+     "prenom": "Arnaud",
+     "nuance": "UG",
+     "voix": 6364,
+     "pct_exprimes": 62.87,
+     "pct_inscrits": 33.19
+    },
+    {
+     "nom": "MARION",
+     "prenom": "Agnès",
+     "nuance": "RN",
+     "voix": 3759,
+     "pct_exprimes": 37.13,
+     "pct_inscrits": 19.61
+    }
+   ],
+   "pct_abstention": 43.55,
+   "pct_participation": 56.45,
+   "tete": {
+    "nom": "LE GALL",
+    "prenom": "Arnaud",
+    "nuance": "UG",
+    "pct_exprimes": 62.87
+   },
+   "nb_communes": 5,
+   "code_canton": "21"
+  },
+  "04": {
+   "bureaux_de_vote": 37,
+   "inscrits": 31884,
+   "abstentions": 12123,
+   "votants": 19761,
+   "blancs": 1360,
+   "nuls": 310,
+   "exprimes": 18091,
+   "nom": "Cergy-1",
+   "candidats": [
+    {
+     "nom": "TACHÉ",
+     "prenom": "Aurélien",
+     "nuance": "UG",
+     "voix": 13197,
+     "pct_exprimes": 72.95,
+     "pct_inscrits": 41.39
+    },
+    {
+     "nom": "MACÉ",
+     "prenom": "Lisbeth",
+     "nuance": "RN",
+     "voix": 4894,
+     "pct_exprimes": 27.05,
+     "pct_inscrits": 15.35
+    }
+   ],
+   "pct_abstention": 38.02,
+   "pct_participation": 61.98,
+   "tete": {
+    "nom": "TACHÉ",
+    "prenom": "Aurélien",
+    "nuance": "UG",
+    "pct_exprimes": 72.95
+   },
+   "nb_communes": 3,
+   "code_canton": "04"
+  },
+  "12": {
+   "bureaux_de_vote": 40,
+   "inscrits": 32524,
+   "abstentions": 13306,
+   "votants": 19218,
+   "blancs": 1013,
+   "nuls": 311,
+   "exprimes": 17894,
+   "nom": "Goussainville",
+   "candidats": [
+    {
+     "nom": "LE GALL",
+     "prenom": "Arnaud",
+     "nuance": "UG",
+     "voix": 11251,
+     "pct_exprimes": 62.88,
+     "pct_inscrits": 34.59
+    },
+    {
+     "nom": "MARION",
+     "prenom": "Agnès",
+     "nuance": "RN",
+     "voix": 6643,
+     "pct_exprimes": 37.12,
+     "pct_inscrits": 20.42
+    }
+   ],
+   "pct_abstention": 40.91,
+   "pct_participation": 59.09,
+   "tete": {
+    "nom": "LE GALL",
+    "prenom": "Arnaud",
+    "nuance": "UG",
+    "pct_exprimes": 62.88
+   },
+   "nb_communes": 9,
+   "code_canton": "12"
+  },
+  "10": {
+   "bureaux_de_vote": 39,
+   "inscrits": 38300,
+   "abstentions": 14275,
+   "votants": 24025,
+   "blancs": 1766,
+   "nuls": 439,
+   "exprimes": 21820,
+   "nom": "Franconville",
+   "candidats": [
+    {
+     "nom": "MAUREL",
+     "prenom": "Emmanuel",
+     "nuance": "UG",
+     "voix": 6183,
+     "pct_exprimes": 28.34,
+     "pct_inscrits": 16.14
+    },
+    {
+     "nom": "MOUTCHOU",
+     "prenom": "Naïma",
+     "nuance": "ENS",
+     "voix": 5987,
+     "pct_exprimes": 27.44,
+     "pct_inscrits": 15.63
+    },
+    {
+     "nom": "LACOUTURE",
+     "prenom": "Karine",
+     "nuance": "UG",
+     "voix": 5938,
+     "pct_exprimes": 27.21,
+     "pct_inscrits": 15.5
+    },
+    {
+     "nom": "LELAIDIER",
+     "prenom": "Kimberley",
+     "nuance": "RN",
+     "voix": 3712,
+     "pct_exprimes": 17.01,
+     "pct_inscrits": 9.69
+    }
+   ],
+   "pct_abstention": 37.27,
+   "pct_participation": 62.73,
+   "tete": {
+    "nom": "MAUREL",
+    "prenom": "Emmanuel",
+    "nuance": "UG",
+    "pct_exprimes": 28.34
+   },
+   "nb_communes": 2,
+   "code_canton": "10"
+  },
+  "06": {
+   "bureaux_de_vote": 38,
+   "inscrits": 36764,
+   "abstentions": 13103,
+   "votants": 23661,
+   "blancs": 742,
+   "nuls": 165,
+   "exprimes": 22754,
+   "nom": "Deuil-la-Barre",
+   "candidats": [
+    {
+     "nom": "CATHALA",
+     "prenom": "Gabrielle",
+     "nuance": "UG",
+     "voix": 7316,
+     "pct_exprimes": 32.15,
+     "pct_inscrits": 19.9
+    },
+    {
+     "nom": "ESKENAZI",
+     "prenom": "Romain",
+     "nuance": "UG",
+     "voix": 4525,
+     "pct_exprimes": 19.89,
+     "pct_inscrits": 12.31
+    },
+    {
+     "nom": "QUENTIN",
+     "prenom": "David",
+     "nuance": "RN",
+     "voix": 4001,
+     "pct_exprimes": 17.58,
+     "pct_inscrits": 10.88
+    },
+    {
+     "nom": "FOLEST",
+     "prenom": "Estelle",
+     "nuance": "ENS",
+     "voix": 3940,
+     "pct_exprimes": 17.32,
+     "pct_inscrits": 10.72
+    },
+    {
+     "nom": "BRUNA",
+     "prenom": "Annika",
+     "nuance": "RN",
+     "voix": 2972,
+     "pct_exprimes": 13.06,
+     "pct_inscrits": 8.08
+    }
+   ],
+   "pct_abstention": 35.64,
+   "pct_participation": 64.36,
+   "tete": {
+    "nom": "CATHALA",
+    "prenom": "Gabrielle",
+    "nuance": "UG",
+    "pct_exprimes": 32.15
+   },
+   "nb_communes": 4,
+   "code_canton": "06"
+  },
+  "08": {
+   "bureaux_de_vote": 34,
+   "inscrits": 34799,
+   "abstentions": 12356,
+   "votants": 22443,
+   "blancs": 1113,
+   "nuls": 389,
+   "exprimes": 20941,
+   "nom": "Ermont",
+   "candidats": [
+    {
+     "nom": "MOUTCHOU",
+     "prenom": "Naïma",
+     "nuance": "ENS",
+     "voix": 11244,
+     "pct_exprimes": 53.69,
+     "pct_inscrits": 32.31
+    },
+    {
+     "nom": "LACOUTURE",
+     "prenom": "Karine",
+     "nuance": "UG",
+     "voix": 9697,
+     "pct_exprimes": 46.31,
+     "pct_inscrits": 27.87
+    }
+   ],
+   "pct_abstention": 35.51,
+   "pct_participation": 64.49,
+   "tete": {
+    "nom": "MOUTCHOU",
+    "prenom": "Naïma",
+    "nuance": "ENS",
+    "pct_exprimes": 53.69
+   },
+   "nb_communes": 2,
+   "code_canton": "08"
+  },
+  "13": {
+   "bureaux_de_vote": 36,
+   "inscrits": 34742,
+   "abstentions": 12313,
+   "votants": 22429,
+   "blancs": 1425,
+   "nuls": 354,
+   "exprimes": 20650,
+   "nom": "Herblay-sur-Seine",
+   "candidats": [
+    {
+     "nom": "MAUREL",
+     "prenom": "Emmanuel",
+     "nuance": "UG",
+     "voix": 13423,
+     "pct_exprimes": 65.0,
+     "pct_inscrits": 38.64
+    },
+    {
+     "nom": "LELAIDIER",
+     "prenom": "Kimberley",
+     "nuance": "RN",
+     "voix": 7227,
+     "pct_exprimes": 35.0,
+     "pct_inscrits": 20.8
+    }
+   ],
+   "pct_abstention": 35.44,
+   "pct_participation": 64.56,
+   "tete": {
+    "nom": "MAUREL",
+    "prenom": "Emmanuel",
+    "nuance": "UG",
+    "pct_exprimes": 65.0
+   },
+   "nb_communes": 3,
+   "code_canton": "13"
+  },
+  "01": {
+   "bureaux_de_vote": 28,
+   "inscrits": 30157,
+   "abstentions": 10699,
+   "votants": 19458,
+   "blancs": 302,
+   "nuls": 88,
+   "exprimes": 19068,
+   "nom": "Argenteuil-1",
+   "candidats": [
+    {
+     "nom": "CATHALA",
+     "prenom": "Gabrielle",
+     "nuance": "UG",
+     "voix": 8732,
+     "pct_exprimes": 45.79,
+     "pct_inscrits": 28.96
+    },
+    {
+     "nom": "FOLEST",
+     "prenom": "Estelle",
+     "nuance": "ENS",
+     "voix": 5747,
+     "pct_exprimes": 30.14,
+     "pct_inscrits": 19.06
+    },
+    {
+     "nom": "BRUNA",
+     "prenom": "Annika",
+     "nuance": "RN",
+     "voix": 4589,
+     "pct_exprimes": 24.07,
+     "pct_inscrits": 15.22
+    }
+   ],
+   "pct_abstention": 35.48,
+   "pct_participation": 64.52,
+   "tete": {
+    "nom": "CATHALA",
+    "prenom": "Gabrielle",
+    "nuance": "UG",
+    "pct_exprimes": 45.79
+   },
+   "nb_communes": 2,
+   "code_canton": "01"
+  },
+  "18": {
+   "bureaux_de_vote": 15,
+   "inscrits": 12284,
+   "abstentions": 5737,
+   "votants": 6547,
+   "blancs": 183,
+   "nuls": 71,
+   "exprimes": 6293,
+   "nom": "Sarcelles",
+   "candidats": [
+    {
+     "nom": "ESKENAZI",
+     "prenom": "Romain",
+     "nuance": "UG",
+     "voix": 4271,
+     "pct_exprimes": 67.87,
+     "pct_inscrits": 34.77
+    },
+    {
+     "nom": "QUENTIN",
+     "prenom": "David",
+     "nuance": "RN",
+     "voix": 2022,
+     "pct_exprimes": 32.13,
+     "pct_inscrits": 16.46
+    }
+   ],
+   "pct_abstention": 46.7,
+   "pct_participation": 53.3,
+   "tete": {
+    "nom": "ESKENAZI",
+    "prenom": "Romain",
+    "nuance": "UG",
+    "pct_exprimes": 67.87
+   },
+   "nb_communes": 1,
+   "code_canton": "18"
+  }
+ }
+}
