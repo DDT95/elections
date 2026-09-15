@@ -487,6 +487,7 @@ export default function ElectionsPage() {
   }, [allElectionData, scale, selectedCode]);
   const departmentSnapshots = useMemo<ElectionSnapshot[]>(() => ELECTIONS.flatMap(item => item.tours.flatMap(itemTour => { const file=allElectionData[itemTour.file]; return file?[{key:itemTour.file,election:item.shortLabel,tour:itemTour.label,date:file.date,result:aggregateDepartment(file)}]:[]; })).sort((a,b)=>a.date.localeCompare(b.date)), [allElectionData]);
   const departmentSocio = useMemo<SocioProfile | null>(() => { const values=Object.values(socioData); const population=values.reduce((s,v)=>s+v.population,0); if(!population)return null; return {population,jeunes:values.reduce((s,v)=>s+v.jeunes*v.population,0)/population,seniors:values.reduce((s,v)=>s+v.seniors*v.population,0)/population,diplomesSup:values.reduce((s,v)=>s+v.diplomesSup*v.population,0)/population}; }, [socioData]);
+  const averageCommuneParticipation = communeSnapshots.length ? communeSnapshots.reduce((sum,snapshot)=>sum+snapshot.result.pct_participation,0)/communeSnapshots.length : 0;
   function resetSelection() {
     setSelectedCode(null);
   }
@@ -685,7 +686,6 @@ export default function ElectionsPage() {
             </div>
           )}
           {metric === "none" && <div className="elec-map-onboarding"><strong>Explorez le Val-d’Oise par {scale === "commune" ? "commune" : scale === "canton" ? "canton" : "circonscription"}</strong><span><b>1</b> Survolez un territoire pour l’identifier</span><span><b>2</b> Cliquez pour ouvrir sa fiche</span></div>}
-          <div className="elec-hint"><span><strong>Survolez pour lire · cliquez pour ouvrir la synthèse</strong></span></div>
         </section>
 
         <aside className={`elec-drawer ${drawerOpen ? "open" : ""}`} aria-label="Fiche du scrutin">
@@ -718,13 +718,11 @@ export default function ElectionsPage() {
                 )}
                 <Section title="Participation" state={election.shortLabel}>
                   <div className="participation-gauge"><span style={{width:`${selectedUnit.pct_participation}%`}}/><b>{selectedUnit.pct_participation.toFixed(1)} %</b></div>
-                  <div className="elec-kpis">
-                    <Kpi label="Inscrits" value={selectedUnit.inscrits.toLocaleString("fr-FR")} />
-                    <Kpi label="Votants" value={selectedUnit.votants.toLocaleString("fr-FR")} />
-                    <Kpi label="Abstention" value={`${selectedUnit.pct_abstention.toFixed(1)} %`} />
-                    <Kpi label="Participation" value={`${selectedUnit.pct_participation.toFixed(1)} %`} />
-                    <Kpi label="Blancs" value={selectedUnit.blancs.toLocaleString("fr-FR")} />
-                    <Kpi label="Nuls" value={selectedUnit.nuls.toLocaleString("fr-FR")} />
+                  <div className="participation-analysis">
+                    <div><span>Participation du scrutin</span><strong>{selectedUnit.pct_participation.toFixed(1)} %</strong><small className={selectedUnit.pct_participation>=averageCommuneParticipation?"up":"down"}>{selectedUnit.pct_participation>=averageCommuneParticipation?"+":""}{(selectedUnit.pct_participation-averageCommuneParticipation).toFixed(1)} pts par rapport à la moyenne</small></div>
+                    <div><span>Participation moyenne</span><strong>{averageCommuneParticipation.toFixed(1)} %</strong><small>sur {communeSnapshots.length} tours disponibles</small></div>
+                    <div><span>Abstention du scrutin</span><strong>{selectedUnit.pct_abstention.toFixed(1)} %</strong><small>{selectedUnit.abstentions.toLocaleString("fr-FR")} abstentionnistes</small></div>
+                    <div><span>Abstention moyenne</span><strong>{(100-averageCommuneParticipation).toFixed(1)} %</strong><small>sur la même période</small></div>
                   </div>
                 </Section>
                 {scale === "commune" ? (
@@ -967,6 +965,7 @@ function DepartmentAnalysis({ snapshots, socio, communeData, datasets, socioByCo
 }
 
 function CommuneSynthesis({ snapshots, currentKey, mode }: { snapshots: ElectionSnapshot[]; currentKey: string; mode: "results" | "families" | "sensitivities" }) {
+  void currentKey;
   const meaningful = snapshots.filter((snapshot) => {
     if (snapshot.key.startsWith("pres-")) return snapshot.key.endsWith("-t1");
     if (!snapshot.key.match(/-t\d$/)) return true;
@@ -980,26 +979,22 @@ function CommuneSynthesis({ snapshots, currentKey, mode }: { snapshots: Election
     { id: "right", label: "Droite", color: "#2878c8" },
     { id: "far_right", label: "Extrême droite", color: "#14213d" },
   ];
-  const families = [
-    { id: "lfi", label: "LFI", color: "#ce0500" }, { id: "social_left", label: "Gauche sociale", color: "#e4287c" },
-    { id: "ecologist", label: "Écologistes", color: "#18753c" }, { id: "presidential", label: "Majorité présidentielle", color: "#e8b62f" },
-    { id: "lr", label: "LR", color: "#0066cc" }, { id: "rn", label: "RN", color: "#14213d" }, { id: "reconquest", label: "Reconquête", color: "#4b2e83" },
-  ];
-  const currentSnapshot = snapshots.find(snapshot => snapshot.key === currentKey) ?? snapshots.at(-1);
-  if (mode === "sensitivities" && currentSnapshot) {
-    const scores = politicalScores(currentSnapshot.result, "sensitivity");
-    return <Section title="Sensibilités" state={`${currentSnapshot.election} · ${currentSnapshot.tour}`}>
-      <div className="sensitivity-legend">{sensitivities.map((item) => <span key={item.id}><i style={{background:item.color}}/>{item.label}</span>)}</div>
-      <div className="sensitivity-focus"><div>{sensitivities.map((item) => { const value=scores[item.id]??0; return value>0?<i key={item.id} style={{width:`${value}%`,background:item.color}}><b>{value.toFixed(1)} %</b><small>{item.label}</small></i>:null;})}</div></div>
-      <p className="elec-synthesis-intro">Somme des nuances officielles par grande sensibilité pour le seul tour sélectionné. La partie grise correspond aux candidatures non classées.</p>
+  const nationalSeries = ["pres-2017-t1", "pres-2022-t1", "europeennes-2024", "legislatives-2024-t1"]
+    .map(key => snapshots.find(snapshot => snapshot.key === key)).filter((snapshot): snapshot is ElectionSnapshot => Boolean(snapshot));
+  const shortLabels: Record<string,string> = {"pres-2017-t1":"Prés. 2017","pres-2022-t1":"Prés. 2022","europeennes-2024":"Euro. 2024","legislatives-2024-t1":"Lég. 2024"};
+  const seriesScores = nationalSeries.map(snapshot => ({snapshot, scores:politicalScores(snapshot.result,"sensitivity")}));
+  if (mode === "sensitivities" && seriesScores.length) {
+    const averages = sensitivities.map(item => ({...item,value:seriesScores.reduce((sum,point)=>sum+(point.scores[item.id]??0),0)/seriesScores.length})).sort((a,b)=>b.value-a.value);
+    return <Section title="Sensibilité moyenne du territoire" state={`${seriesScores.length} scrutins nationaux`}>
+      <div className="average-sensitivity">{averages.map(item=><article key={item.id}><span><strong>{item.label}</strong><b>{item.value.toFixed(1)} %</b></span><i><em style={{width:`${Math.min(100,item.value/60*100)}%`,background:item.color}}/></i></article>)}</div>
+      <div className="average-scale"><span>0 %</span><span>30 %</span><span>60 %</span></div>
+      <p className="elec-synthesis-intro">Moyenne des présidentielles 2017 et 2022, des européennes 2024 et des législatives 2024. Repère synthétique, pas une prévision.</p>
     </Section>;
   }
   if (mode === "families") {
-    const presidential = snapshots.filter(snapshot => snapshot.key.startsWith("pres-") && snapshot.key.endsWith("-t1"));
-    return <Section title="Évolution des votes" state="Présidentielle · 1ers tours">
-      <p className="elec-synthesis-intro">Comparaison à scrutin et tour identiques entre 2017 et 2022. Les coalitions ponctuelles, dont le NFP, ne sont pas ventilées entre partis.</p>
-      <div className="family-comparison">{families.map((family) => { const points=presidential.map(snapshot=>({snapshot,value:politicalScores(snapshot.result,"family")[family.id]})).filter(point=>point.value!==undefined); if (!points.length) return null; const start=points[0]?.value??0,end=points.at(-1)?.value??0,delta=end-start; return <article key={family.id} style={{"--family-color":family.color} as CSSProperties}><header><strong>{family.label}</strong><b className={delta>=0?"up":"down"}>{delta>=0?"+":""}{delta.toFixed(1)} pt{Math.abs(delta)!==1?"s":""}</b></header><div><span><small>2017</small><b>{start.toFixed(1)} %</b></span><i><em style={{width:`${Math.min(100,end)}%`}}/></i><span><small>2022</small><b>{end.toFixed(1)} %</b></span></div></article>;})}</div>
-      <p className="elec-synthesis-intro">La barre montre le niveau de 2022 sur une échelle de 0 à 100 %. Le chiffre à droite indique l’écart depuis 2017.</p>
+    return <Section title="Évolution politique" state="4 scrutins nationaux">
+      <p className="elec-synthesis-intro">Évolution des grandes sensibilités sur les derniers scrutins nationaux. Aux législatives 2024, le NFP est compté dans la gauche.</p>
+      <div className="political-evolution"><header><span></span>{nationalSeries.map(snapshot=><b key={snapshot.key}>{shortLabels[snapshot.key]}</b>)}</header>{sensitivities.map(item=>{const values=seriesScores.map(point=>point.scores[item.id]??0);const delta=(values.at(-1)??0)-(values[0]??0);return <article key={item.id} style={{"--trend-color":item.color} as CSSProperties}><strong>{item.label}</strong>{values.map((value,index)=><span key={nationalSeries[index].key}><i style={{height:`${Math.max(3,Math.min(48,value/60*48))}px`}}/><b>{value.toFixed(0)} %</b></span>)}<em className={delta>=0?"up":"down"}>{delta>=0?"+":""}{delta.toFixed(1)} pt</em></article>})}</div>
     </Section>;
   }
   const shown = snapshots.filter(snapshot => snapshot.key.startsWith("pres-") || meaningful.some(item => item.key === snapshot.key));
