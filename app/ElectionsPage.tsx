@@ -40,12 +40,21 @@ const METRICS: { id: MetricId; label: string }[] = [
   { id: "participation", label: "Participation" },
 ];
 
-const SCALES: { id: Scale; label: string }[] = [
-  { id: "commune", label: "Commune" },
-  { id: "bv", label: "Bureau de vote" },
-  { id: "canton", label: "Canton" },
-  { id: "circonscription", label: "Circonscription" },
-];
+// Échelles réellement proposées dans l'outil (limites administratives officielles :
+// commune et bureau de vote). Canton et circonscription sont des découpages électoraux,
+// pas des limites administratives : retirés de la sélection pour le moment (cf. PASSATION.md
+// §5.2) le temps de définir une lecture d'analyse lisible pour ces échelles — le code de
+// rendu de ces deux couches reste en place ci-dessous et peut être réactivé sans refonte.
+// Bureau de vote retiré de la sélection à la demande de la préfecture (pour le moment,
+// comme canton/circonscription ci-dessus) — le code de rendu de cette échelle reste en place.
+const SCALES: { id: Scale; label: string; count: string }[] = [{ id: "commune", label: "Commune", count: "184 communes" }];
+
+// Intercommunalité (EPCI) : échelle administrative que la préfecture souhaite ajouter, mais
+// le périmètre commune → EPCI n'a pas pu être obtenu dans cet environnement (geo.api.gouv.fr
+// et les jeux de correspondance INSEE/data.gouv.fr correspondants sont bloqués par le proxy
+// réseau sortant — même contrainte que pour le croisement sociodémographique, voir DATA.md
+// §10). Affichée mais désactivée, plutôt qu'omise en silence, pour que la limite reste visible.
+const EPCI_PLACEHOLDER = { label: "EPCI", count: "12 territoires intercommunaux — à compléter" };
 
 export default function ElectionsPage() {
   const mapNode = useRef<HTMLDivElement>(null);
@@ -189,12 +198,29 @@ export default function ElectionsPage() {
   }, [candidateList]);
 
   // ---- Initialisation Leaflet ----
+  // Chargée en priorité depuis une copie auto-hébergée (public/vendor/leaflet, servie avec le
+  // reste du site, donc jamais bloquée par un pare-feu réseau) plutôt que depuis unpkg comme le
+  // reste de l'Atlas : sur un réseau de préfecture qui bloque les CDN publics (constaté dans
+  // l'environnement de développement lui-même, voir DATA.md), un chargement dépendant d'unpkg ne
+  // se termine jamais et la carte reste vierge en permanence, même avec le correctif mapReady
+  // (§4 de PASSATION.md) — ce correctif rejoue l'effet une fois la carte prête, mais ne peut rien
+  // si le script Leaflet lui-même n'arrive jamais. unpkg reste tenté en repli si la copie locale
+  // est introuvable (déploiement incomplet), jamais l'inverse.
   useEffect(() => {
+    const LOCAL_JS = `${basePath}/vendor/leaflet/leaflet.js`;
+    const LOCAL_CSS = `${basePath}/vendor/leaflet/leaflet.css`;
+    const CDN_JS = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js";
+    const CDN_CSS = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";
+
     if (!document.getElementById("elec-leaflet-css")) {
       const css = document.createElement("link");
       css.id = "elec-leaflet-css";
       css.rel = "stylesheet";
-      css.href = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";
+      css.href = LOCAL_CSS;
+      css.onerror = () => {
+        css.onerror = null;
+        css.href = CDN_CSS;
+      };
       document.head.appendChild(css);
     }
     const start = () => {
@@ -229,9 +255,16 @@ export default function ElectionsPage() {
     else if (existing) existing.addEventListener("load", start, { once: true });
     else {
       const script = document.createElement("script");
-      script.src = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js";
+      script.src = LOCAL_JS;
       script.dataset.elecLeaflet = "true";
       script.onload = start;
+      script.onerror = () => {
+        const fallback = document.createElement("script");
+        fallback.src = CDN_JS;
+        fallback.dataset.elecLeaflet = "true";
+        fallback.onload = start;
+        document.body.appendChild(fallback);
+      };
       document.body.appendChild(script);
     }
   }, []);
@@ -293,6 +326,15 @@ export default function ElectionsPage() {
       return { ...base, color: "#000091", weight: base.weight + 2.2, dashArray: "5,3", opacity: 1 };
     }
 
+    // Corps de l'infobulle de survol : nom de l'unité + tendance colorée (métrique active),
+    // avec un rappel qu'un clic ouvre la synthèse complète — c'est le survol qui doit porter
+    // l'essentiel de la lecture d'analyse, la fiche ne sert qu'au détail.
+    function tooltipBody(name: string, u: UnitResult | null): string {
+      if (!u) return `<b>${name}</b><br/><span class="elec-tooltip-hint">Pas de résultat pour ce scrutin</span>`;
+      const info = metricInfo(u);
+      return `<b>${name}</b><div class="elec-tooltip-trend"><i style="background:${info.color}"></i><span>${info.label}</span></div><span class="elec-tooltip-hint">Clic → synthèse complète</span>`;
+    }
+
     function wireFeature(code: string, lyr: any, tooltipHtml: string) {
       layersByCodeRef.current[code] = lyr;
       lyr.bindTooltip(tooltipHtml, { sticky: true, className: "elec-tooltip" });
@@ -347,7 +389,7 @@ export default function ElectionsPage() {
           const code = feature.properties.codeBureauVote;
           const b = bvBureaux[code];
           const name = `${feature.properties.nomCommune} — bureau ${feature.properties.numeroBureauVote}`;
-          wireFeature(code, lyr, b ? `<b>${name}</b><br/>${metricInfo(normalizeBureau(b)).label}` : `${name}<br/>Pas de résultat`);
+          wireFeature(code, lyr, tooltipBody(name, b ? normalizeBureau(b) : null));
         },
       }).addTo(map);
       layerRef.current = layer;
@@ -373,7 +415,7 @@ export default function ElectionsPage() {
         const code = scale === "circonscription" ? feature.properties.code_circonscription : feature.properties.code;
         const u = dataset[code];
         const name = feature.properties.nom;
-        wireFeature(code, lyr, u ? `<b>${name}</b><br/>${metricInfo(u).label}` : name);
+        wireFeature(code, lyr, tooltipBody(name, u ?? null));
       },
     }).addTo(map);
     layerRef.current = layer;
@@ -484,9 +526,9 @@ export default function ElectionsPage() {
           <img src={`${basePath}/prefet-val-doise-logo.png`} alt="Préfet du Val-d'Oise" />
         </a>
         <div className="elec-header-copy">
-          <span>ATLAS ÉLECTORAL</span>
+          <span>ATLAS ÉLECTORAL — OUTIL D'ANALYSE</span>
           <h1>Atlas électoral du Val-d'Oise</h1>
-          <p>Résultats, participation et profil sociodémographique — commune, bureau de vote, canton, circonscription</p>
+          <p>Analyse territoriale des scrutins — tendance, participation et profil sociodémographique par commune</p>
         </div>
         <div className="elec-header-actions">
           <a className="elec-backlink" href={ATLAS_URL} target="_blank" rel="noreferrer">
@@ -496,7 +538,7 @@ export default function ElectionsPage() {
             <i />
             <span>
               <strong>Données contrôlées</strong>
-              <small>4 scrutins réels · bureaux de vote géolocalisés</small>
+              <small>6 scrutins · 184 communes du Val-d'Oise</small>
             </span>
           </div>
         </div>
@@ -507,84 +549,99 @@ export default function ElectionsPage() {
       <div className="elec-workspace">
         <aside className="elec-sidebar">
           <div className="elec-sidebar-intro">
-            <span>LECTURE CARTOGRAPHIQUE</span>
+            <span>OUTIL D'ANALYSE — PAS UNE PAGE DE RÉSULTATS</span>
             <h2>
               Analyser
               <br />
               un scrutin
             </h2>
+            <p className="elec-sidebar-intro-copy">
+              Lisez la tendance par limite administrative (couleur = tête de liste/candidat), puis ouvrez la synthèse d'une unité pour
+              le détail.
+            </p>
           </div>
 
-          <div className="elec-sidebar-block-title">Échelle</div>
-          <div className="elec-pillgroup">
+          <div className="elec-actionbar">
+            <button type="button" className="elec-actionbar-btn" onClick={recenter}>
+              Recentrer sur le Val-d'Oise
+            </button>
+          </div>
+
+          <div className="elec-group">
+          <div className="elec-layer-group">
+            <h3>Limites administratives</h3>
             {SCALES.map((s) => (
-              <button
-                key={s.id}
-                type="button"
-                className={`elec-pill ${scale === s.id ? "active" : ""}`}
-                onClick={() => {
-                  setScale(s.id);
-                  resetSelection();
-                }}
-              >
-                {s.label}
-              </button>
+              <label key={s.id} className="elec-switch">
+                <input
+                  type="radio"
+                  name="elec-scale"
+                  checked={scale === s.id}
+                  onChange={() => {
+                    setScale(s.id);
+                    resetSelection();
+                  }}
+                />
+                <span>
+                  <strong>{s.label}</strong>
+                  <small>{s.count}</small>
+                </span>
+              </label>
             ))}
+            <label className="elec-switch disabled" title="Périmètre commune → EPCI non obtenu dans cet environnement (réseau bloqué, voir DATA.md) : à compléter">
+              <input type="radio" name="elec-scale" disabled />
+              <span>
+                <strong>
+                  {EPCI_PLACEHOLDER.label}
+                  <span className="elec-badge-todo">à compléter</span>
+                </strong>
+                <small>{EPCI_PLACEHOLDER.count}</small>
+              </span>
+            </label>
           </div>
-          {scale === "bv" && (
-            <p className="elec-scale-note">
-              Échelle bureau de vote : contours réels (810 bureaux, IGN/INSEE). Cliquez un bureau sur la carte pour sa fiche.
-            </p>
-          )}
-          {scale === "canton" && (
-            <p className="elec-scale-note">
-              Échelle canton : 21 cantons réels (redécoupage 2015, contours dissous à partir des bureaux de vote — Argenteuil et Cergy
-              correctement scindés sur plusieurs cantons). Résultats réels disponibles pour tous les scrutins chargés (agrégation
-              directe des résultats communaux ou par bureau, sans donnée inventée).
-            </p>
-          )}
 
-          <div className="elec-sidebar-block-title">Élection</div>
-          <select
-            className="elec-select"
-            value={electionId}
-            onChange={(e) => {
-              setElectionId(e.target.value);
-              const el = findElection(e.target.value);
-              setTourId(el.tours[el.tours.length - 1].id);
-              resetSelection();
-            }}
-          >
-            {ELECTIONS.map((e) => (
-              <option key={e.id} value={e.id}>
-                {e.label}
-                {e.status === "a_completer" ? " (à compléter)" : ""}
-              </option>
-            ))}
-          </select>
-          <select
-            className="elec-select"
-            value={tourId}
-            onChange={(e) => {
-              setTourId(e.target.value);
-              resetSelection();
-            }}
-          >
-            {election.tours.map((t) => (
-              <option key={t.id} value={t.id}>
-                {t.label}
-              </option>
-            ))}
-          </select>
-          {tourStatus === "a_completer" && (
-            <p className="elec-scale-note warn">
-              Données à compléter pour ce tour : la structure est prête mais aucun résultat réel n'est chargé (voir DATA.md).
-            </p>
-          )}
+          <div className="elec-layer-group">
+            <h3>Scrutin</h3>
+            <select
+              className="elec-select"
+              value={electionId}
+              onChange={(e) => {
+                setElectionId(e.target.value);
+                const el = findElection(e.target.value);
+                setTourId(el.tours[el.tours.length - 1].id);
+                resetSelection();
+              }}
+            >
+              {ELECTIONS.map((e) => (
+                <option key={e.id} value={e.id}>
+                  {e.label}
+                  {e.status === "a_completer" ? " (à compléter)" : ""}
+                </option>
+              ))}
+            </select>
+            <select
+              className="elec-select"
+              value={tourId}
+              onChange={(e) => {
+                setTourId(e.target.value);
+                resetSelection();
+              }}
+            >
+              {election.tours.map((t) => (
+                <option key={t.id} value={t.id}>
+                  {t.label}
+                </option>
+              ))}
+            </select>
+            {tourStatus === "a_completer" && (
+              <p className="elec-scale-note warn">
+                Données à compléter pour ce tour : la structure est prête mais aucun résultat réel n'est chargé (voir DATA.md).
+              </p>
+            )}
+          </div>
 
           {tourStatus === "reel" && (
-            <>
-              <div className="elec-sidebar-block-title">Indicateur cartographié</div>
+            <div className="elec-layer-group">
+              <h3>Indicateur d'analyse cartographié</h3>
               <div className="elec-pillgroup cols-1">
                 {METRICS.map((m) => (
                   <button
@@ -607,24 +664,23 @@ export default function ElectionsPage() {
                 </select>
               )}
               <Legend metric={metric} scoreCandidat={scoreCandidat} current={current} />
-            </>
+            </div>
           )}
 
-          <div className="elec-sidebar-block-title">Croisement sociodémographique</div>
-          {inseeStatus === "a_completer" ? (
-            <p className="elec-scale-note warn">
-              Données INSEE (âge, CSP) à compléter — voir DATA.md pour le détail. La structure de croisement est prête et s'activera
-              automatiquement dès l'intégration des fichiers INSEE RP.
-            </p>
-          ) : (
-            <p className="elec-scale-note">Croisement disponible.</p>
-          )}
+          <div className="elec-layer-group">
+            <h3>Croisement sociodémographique</h3>
+            {inseeStatus === "a_completer" ? (
+              <p className="elec-scale-note warn">
+                Données INSEE (âge, CSP) à compléter — voir DATA.md pour le détail. La structure de croisement est prête et s'activera
+                automatiquement dès l'intégration des fichiers INSEE RP.
+              </p>
+            ) : (
+              <p className="elec-scale-note">Croisement disponible.</p>
+            )}
+          </div>
 
-          <div className="elec-sidebar-block-title">Couches et export</div>
-          <div className="elec-pillgroup cols-1">
-            <button type="button" className="elec-pill" onClick={recenter}>
-              Recentrer sur le Val-d'Oise
-            </button>
+          <div className="elec-layer-group">
+            <h3>Couches et export</h3>
             <div className="elec-export-menu">
               <button type="button" className="elec-pill" onClick={() => setExportOpen((o) => !o)}>
                 Exporter la couche affichée (GeoJSON)
@@ -654,6 +710,7 @@ export default function ElectionsPage() {
                 </div>
               )}
             </div>
+          </div>
           </div>
 
           <button type="button" className="elec-sources-button" onClick={() => sourceDialog.current?.showModal()}>
@@ -707,13 +764,13 @@ export default function ElectionsPage() {
           <div className="elec-hint">
             <i />
             <span>
-              <strong>{drawerOpen ? "Fiche disponible" : "Sélectionnez une unité"}</strong>
-              <small>{drawerOpen ? selectedUnit?.nom : "Cliquez sur la carte ou choisissez un bureau"}</small>
+              <strong>{drawerOpen ? "Synthèse disponible" : "Survolez pour la tendance, cliquez pour la synthèse"}</strong>
+              <small>{drawerOpen ? selectedUnit?.nom : "La couleur au survol indique la tête de liste/candidat en tête"}</small>
             </span>
           </div>
         </section>
 
-        <aside className={`elec-drawer ${drawerOpen ? "open" : ""}`} aria-label="Fiche du scrutin">
+        <aside className={`elec-drawer ${drawerOpen ? "open" : ""}`} aria-label="Synthèse du scrutin">
           <div className="elec-drawer-head">
             <small>
               {SCALES.find((s) => s.id === scale)?.label?.toUpperCase()} · {election.shortLabel.toUpperCase()} · {tour.label}
@@ -729,7 +786,7 @@ export default function ElectionsPage() {
           {selectedUnit && (
             <>
               <div className="elec-actions">
-                <button onClick={printUnit}>Imprimer la fiche</button>
+                <button onClick={printUnit}>Imprimer la synthèse</button>
                 <a href="#" onClick={(e) => { e.preventDefault(); exportFeatureGeoJSON(); }}>
                   Exporter GeoJSON
                 </a>

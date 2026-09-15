@@ -87,3 +87,17 @@ body{font-family:"Marianne",Arial,sans-serif}
 .elec-drawer-tendance .elec-row{flex:1;min-width:130px}
 @media(max-width:700px){.elec-pillgroup,.elec-select,.elec-legend,.elec-bar-panel,.elec-scale-note{margin-left:12px;margin-right:12px}}
 
+/* --- Cadrage "outil d'analyse" (sidebar) --- */
+.elec-sidebar-intro-copy{margin:8px 0 0;color:#647381;font-size:11px;line-height:1.5}
+.elec-actionbar{display:flex;gap:8px;margin:14px 20px 4px}
+.elec-actionbar-btn{flex:1;padding:10px 12px;border:1px solid #000091;border-radius:10px;background:#fff;color:#000091;font:700 11px/1.2 "Marianne",Arial,sans-serif;cursor:pointer;transition:.15s}
+.elec-actionbar-btn:hover{background:#eef1ff}
+.elec-actionbar-btn:disabled{opacity:.45;cursor:not-allowed}
+.elec-actionbar-btn:disabled:hover{background:#fff}
+.elec-tooltip.leaflet-tooltip{padding:8px 11px;border:1px solid #dce4e8;border-radius:10px;background:#fffffff5;box-shadow:0 6px 20px #001f3f26;font:12px/1.4 "Marianne",Arial,sans-serif;color:#17202a}
+.elec-tooltip.leaflet-tooltip:before{display:none}
+.elec-tooltip b{display:block;color:#070047;font-size:12px}
+.elec-tooltip .elec-tooltip-trend{display:flex;align-items:center;gap:6px;margin-top:3px;color:#334;font-size:11px}
+.elec-tooltip .elec-tooltip-trend i{width:10px;height:10px;border-radius:3px;flex:none;border:1px solid #0002}
+.elec-tooltip .elec-tooltip-hint{display:block;margin-top:4px;color:#8a93a3;font-size:9.5px;font-style:normal}
+
