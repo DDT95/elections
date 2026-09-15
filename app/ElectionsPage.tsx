@@ -1013,25 +1013,32 @@ function electionAccent(key: string) {
 function buildDepartmentScenarios(communeData: Record<string, UnitResult>, datasets: Record<string,ElectionCommuneFile>, socioByCommune: Record<string, SocioProfile>) {
   const sensitivities=[{id:"extreme_left",label:"Extrême gauche",color:"#7a0c0c"},{id:"left",label:"Gauche",color:"#e4287c"},{id:"center",label:"Centre",color:"#e8b62f"},{id:"right",label:"Droite",color:"#2878c8"},{id:"far_right",label:"Extrême droite",color:"#14213d"}];
   const euro=datasets["europeennes-2024"]?aggregateDepartment(datasets["europeennes-2024"]):null;if(!euro)return [];
-  const baseline=politicalScores(euro,"sensitivity"),avg=euro.pct_participation;
-  const simulate=(factorFor:(code:string,u:UnitResult)=>number)=>{const votes:Record<string,number>={};let total=0;Object.entries(communeData).forEach(([code,u])=>{const factor=factorFor(code,u);total+=u.exprimes*factor;u.candidats.forEach(c=>{const group=politicalGroup(c.nuance,`${c.prenom??""} ${c.nom??""}`).sensitivity;votes[group]=(votes[group]??0)+c.voix*factor})});return Object.fromEntries(sensitivities.map(x=>[x.id,total?(votes[x.id]??0)*100/total:0]))};
+  const baseline=politicalScores(euro,"sensitivity"),baselineFamily=politicalScores(euro,"family"),avg=euro.pct_participation;
+  const simulate=(factorFor:(code:string,u:UnitResult)=>number)=>{const votes:Record<string,number>={},famVotes:Record<string,number>={};let total=0;Object.entries(communeData).forEach(([code,u])=>{const factor=factorFor(code,u);total+=u.exprimes*factor;u.candidats.forEach(c=>{const group=politicalGroup(c.nuance,`${c.prenom??""} ${c.nom??""}`);votes[group.sensitivity]=(votes[group.sensitivity]??0)+c.voix*factor;famVotes[group.family]=(famVotes[group.family]??0)+c.voix*factor})});const pct=(v:number)=>total?v*100/total:0;return{sensitivity:Object.fromEntries(sensitivities.map(x=>[x.id,pct(votes[x.id]??0)])),family:Object.fromEntries(Object.entries(famVotes).map(([k,v])=>[k,pct(v)]))}};
   const refs=["pres-2017-t1","pres-2022-t1","europeennes-2024"];
   const lowRefs=["pres-2017-t1","pres-2022-t1","europeennes-2024","municipales-2020-t1"];
   const percentile75=(values:number[])=>{const sorted=values.slice().sort((a,b)=>a-b);return sorted[Math.floor(sorted.length*.75)]??100};
   const youthThreshold=percentile75(Object.values(socioByCommune).map(x=>x.jeunes));
   const seniorsThreshold=percentile75(Object.values(socioByCommune).map(x=>x.seniors));
-  const diplomaThreshold=percentile75(Object.values(socioByCommune).map(x=>x.diplomesSup));
   const raw=[
     {label:"Participation habituelle",explanation:"Chaque commune retrouve sa participation moyenne observée aux présidentielles 2017 et 2022 et aux européennes 2024.",data:simulate((code,u)=>{const values=refs.map(k=>datasets[k]?.communes[code]?.pct_participation).filter((v):v is number=>Number.isFinite(v)),target=values.length?values.reduce((a,b)=>a+b,0)/values.length:avg;return u.pct_participation?target/u.pct_participation:1})},
     {label:"Participation haute",explanation:"Chaque commune retrouve son niveau de participation de la présidentielle 2017, le plus élevé de la série.",data:simulate((code,u)=>{const target=datasets["pres-2017-t1"]?.communes[code]?.pct_participation??u.pct_participation;return u.pct_participation?target/u.pct_participation:1})},
     {label:"Participation basse (abstention record)",explanation:"Chaque commune retombe à son niveau de participation le plus bas observé dans la série (présidentielles 2017/2022, européennes 2024, municipales 2020 — abstention record de la période Covid).",data:simulate((code,u)=>{const values=lowRefs.map(k=>datasets[k]?.communes[code]?.pct_participation).filter((v):v is number=>Number.isFinite(v)),target=values.length?Math.min(...values):u.pct_participation;return u.pct_participation?target/u.pct_participation:1})},
     {label:"Territoires jeunes davantage mobilisés",explanation:`Le poids des communes comptant au moins ${youthThreshold.toFixed(1)} % de 15–24 ans augmente de 10 %.`,data:simulate(code=>socioByCommune[code]?.jeunes>=youthThreshold?1.1:1)},
     {label:"Seniors davantage mobilisés",explanation:`Le poids des communes comptant au moins ${seniorsThreshold.toFixed(1)} % de 65 ans et plus augmente de 10 % — les seniors votent historiquement bien plus que la moyenne.`,data:simulate(code=>socioByCommune[code]?.seniors>=seniorsThreshold?1.1:1)},
-    {label:"Territoires diplômés davantage mobilisés",explanation:`Le poids des communes comptant au moins ${diplomaThreshold.toFixed(1)} % de diplômés du supérieur augmente de 10 % — le diplôme est, avec l'âge, l'un des prédicteurs les plus robustes de la participation.`,data:simulate(code=>socioByCommune[code]?.diplomesSup>=diplomaThreshold?1.1:1)},
     {label:"Rattrapage de l’abstention",explanation:`Les communes sous la moyenne départementale remontent à ${avg.toFixed(1)} % de participation.`,data:simulate((_code,u)=>u.pct_participation&&u.pct_participation<avg?avg/u.pct_participation:1)}
   ];
+  const leftDetailFor=(fam:Record<string,number>)=>[
+    {id:"lfi",label:"La France insoumise",value:fam.lfi??0,delta:(fam.lfi??0)-(baselineFamily.lfi??0),color:"#ce0500"},
+    {id:"socdem",label:"Social-démocratie (PS, radicaux de gauche, écologistes)",value:(fam.social_left??0)+(fam.ecologist??0),delta:((fam.social_left??0)+(fam.ecologist??0))-((baselineFamily.social_left??0)+(baselineFamily.ecologist??0)),color:"#e4287c"},
+    {id:"pcf",label:"Parti communiste",value:fam.pcf??0,delta:(fam.pcf??0)-(baselineFamily.pcf??0),color:"#d2001f"},
+  ].sort((a,b)=>b.value-a.value);
+  const farRightDetailFor=(fam:Record<string,number>)=>[
+    {id:"rn",label:"Rassemblement national",value:fam.rn??0,delta:(fam.rn??0)-(baselineFamily.rn??0),color:"#14213d"},
+    {id:"reconquest",label:"Reconquête",value:fam.reconquest??0,delta:(fam.reconquest??0)-(baselineFamily.reconquest??0),color:"#4b2e83"},
+  ].sort((a,b)=>b.value-a.value);
   return raw.map(sc=>{
-    const effects=sensitivities.map(x=>({...x,value:sc.data[x.id]??0,delta:(sc.data[x.id]??0)-(baseline[x.id]??0)}));
+    const effects=sensitivities.map(x=>({...x,value:sc.data.sensitivity[x.id]??0,delta:(sc.data.sensitivity[x.id]??0)-(baseline[x.id]??0),detail:x.id==="left"?leftDetailFor(sc.data.family):x.id==="far_right"?farRightDetailFor(sc.data.family):undefined}));
     const ordered=effects.slice().sort((a,b)=>Math.abs(b.delta)-Math.abs(a.delta));
     const main=ordered[0];
     const gain=effects.slice().sort((a,b)=>b.delta-a.delta)[0];
@@ -1109,7 +1116,7 @@ function DepartmentAnalysis({ snapshots, currentKey, socio, communeData, dataset
         moyennes/tendances par sensibilité politique (ci-dessous), jamais un faux classement
         de candidats agrégés. */}
     <CommuneSynthesis snapshots={snapshots} currentKey={currentKey} mode="families"/><CommuneSynthesis snapshots={snapshots} currentKey={currentKey} mode="sensitivities"/>
-    <Section title="Scénarios de participation" state="Européennes 2024"><p className="elec-synthesis-intro">Chaque scénario modifie la mobilisation territoriale puis mesure l’effet sur les grandes sensibilités : les barres montrent, comme pour la sensibilité moyenne du territoire ci-dessus, le score simulé de chaque sensibilité ; l’écart entre parenthèses indique la variation par rapport à la moyenne européennes 2024 (vert = progression, rouge = recul).</p><div className="scenario-cards">{scenarios.map(sc=><article key={sc.label}><header><strong>{sc.label}</strong><p>{sc.explanation}</p></header><div className="average-sensitivity">{sc.effects.slice().sort((a,b)=>b.value-a.value).map(effect=><article key={effect.id}><span><strong>{effect.label}</strong><b>{effect.value.toFixed(1)} % <em className={effect.delta>=0?"up":"down"}>({effect.delta>=0?"+":""}{effect.delta.toFixed(1)} pt)</em></b></span><i><em style={{width:`${Math.min(100,effect.value/60*100)}%`,background:effect.color}}/></i></article>)}</div><div className="average-scale"><span>0 %</span><span>30 %</span><span>60 %</span></div><footer>{sc.conclusion}</footer></article>)}</div></Section>
+    <Section title="Scénarios de participation" state="Européennes 2024"><p className="elec-synthesis-intro">Chaque scénario modifie la mobilisation territoriale puis mesure l’effet sur les grandes sensibilités : les barres montrent, comme pour la sensibilité moyenne du territoire ci-dessus, le score simulé de chaque sensibilité ; l’écart entre parenthèses indique la variation par rapport à la moyenne européennes 2024 (vert = progression, rouge = recul). Le détail par parti de la gauche et de l’extrême droite figure sous chaque carte.</p><div className="scenario-cards">{scenarios.map(sc=><article key={sc.label}><header><strong>{sc.label}</strong><p>{sc.explanation}</p></header><div className="average-sensitivity">{sc.effects.slice().sort((a,b)=>b.value-a.value).map(effect=><article key={effect.id}><span><strong>{effect.label}</strong><b>{effect.value.toFixed(1)} % <em className={effect.delta>=0?"up":"down"}>({effect.delta>=0?"+":""}{effect.delta.toFixed(1)} pt)</em></b></span><i><em style={{width:`${Math.min(100,effect.value/60*100)}%`,background:effect.color}}/></i></article>)}</div><div className="average-scale"><span>0 %</span><span>30 %</span><span>60 %</span></div>{sc.effects.filter(effect=>effect.detail?.length).map(effect=><div key={effect.id} className="scenario-detail"><span className="scenario-detail-title">Détail « {effect.label} »</span><div className="average-sensitivity compact">{effect.detail!.map(d=><article key={d.id}><span><strong>{d.label}</strong><b>{d.value.toFixed(1)} % <em className={d.delta>=0?"up":"down"}>({d.delta>=0?"+":""}{d.delta.toFixed(1)} pt)</em></b></span><i><em style={{width:`${Math.min(100,d.value/60*100)}%`,background:d.color}}/></i></article>)}</div></div>)}<footer>{sc.conclusion}</footer></article>)}</div></Section>
   </>;
 }
 
@@ -1134,6 +1141,10 @@ function CommuneSynthesis({ snapshots, currentKey, mode }: { snapshots: Election
       { id: "socdem", label: "Social-démocratie (PS, radicaux de gauche, écologistes)", value: avgFamily(["social_left","ecologist"]), color: "#e4287c" },
       { id: "pcf", label: "Parti communiste", value: avgFamily(["pcf"]), color: "#d2001f" },
     ].sort((a,b)=>b.value-a.value);
+    const farRightDetail = [
+      { id: "rn", label: "Rassemblement national", value: avgFamily(["rn"]), color: "#14213d" },
+      { id: "reconquest", label: "Reconquête", value: avgFamily(["reconquest"]), color: "#4b2e83" },
+    ].sort((a,b)=>b.value-a.value);
     return <>
       <Section title="Sensibilité moyenne du territoire" state={`${seriesScores.length} scrutins nationaux`}>
         <div className="average-sensitivity">{averages.map(item=><article key={item.id}><span><strong>{item.label}</strong><b>{item.value.toFixed(1)} %</b></span><i><em style={{width:`${Math.min(100,item.value/60*100)}%`,background:item.color}}/></i></article>)}</div>
@@ -1143,6 +1154,11 @@ function CommuneSynthesis({ snapshots, currentKey, mode }: { snapshots: Election
       <Section title="Détail de la gauche" state={`${familySeries.length} scrutins nationaux`}>
         <p className="elec-synthesis-intro">La « Gauche » regroupée ci-dessus recouvre trois familles distinctes : La France insoumise, la social-démocratie (parti socialiste, radicaux de gauche et écologistes) et le parti communiste. Même moyenne des scrutins que ci-dessus.</p>
         <div className="average-sensitivity">{leftDetail.map(item=><article key={item.id}><span><strong>{item.label}</strong><b>{item.value.toFixed(1)} %</b></span><i><em style={{width:`${Math.min(100,item.value/60*100)}%`,background:item.color}}/></i></article>)}</div>
+        <div className="average-scale"><span>0 %</span><span>30 %</span><span>60 %</span></div>
+      </Section>
+      <Section title="Détail de l’extrême droite" state={`${familySeries.length} scrutins nationaux`}>
+        <p className="elec-synthesis-intro">L’« Extrême droite » regroupée ci-dessus recouvre le Rassemblement national et Reconquête. Même moyenne des scrutins que ci-dessus.</p>
+        <div className="average-sensitivity">{farRightDetail.map(item=><article key={item.id}><span><strong>{item.label}</strong><b>{item.value.toFixed(1)} %</b></span><i><em style={{width:`${Math.min(100,item.value/60*100)}%`,background:item.color}}/></i></article>)}</div>
         <div className="average-scale"><span>0 %</span><span>30 %</span><span>60 %</span></div>
       </Section>
     </>;
