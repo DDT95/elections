@@ -599,13 +599,6 @@ export default function ElectionsPage() {
               Échelle bureau de vote : contours réels (810 bureaux, IGN/INSEE). Cliquez un bureau sur la carte pour sa fiche.
             </p>
           )}
-          {scale === "canton" && (
-            <p className="elec-scale-note">
-              Échelle canton : 21 cantons réels (redécoupage 2015, contours dissous à partir des bureaux de vote — Argenteuil et Cergy
-              correctement scindés sur plusieurs cantons). Résultats réels disponibles pour tous les scrutins chargés (agrégation
-              directe des résultats communaux ou par bureau, sans donnée inventée).
-            </p>
-          )}
 
           <div className="elec-sidebar-block-title">Élection</div>
           <select
