@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useMemo, useRef, useState } from "react";
+import type { CSSProperties } from "react";
 import { ELECTIONS, findElection } from "./lib/elections";
 import { colorForCandidate, sequentialColor, SEQUENTIAL_STEPS } from "./lib/color";
 import { nuanceInfo } from "./lib/nuances";
@@ -424,6 +425,13 @@ export default function ElectionsPage() {
   }, [selectedCode, scale, current, circoData, bvData, cantonData, dataKey]);
 
   const drawerOpen = !!selectedUnit;
+  const portraitUnit = hoveredUnit?.result ?? selectedUnit ?? (scale === "commune" ? current?.communes["95127"] : null);
+  const portraitName = hoveredUnit?.name ?? selectedUnit?.nom ?? (scale === "commune" ? current?.communes["95127"]?.nom : null);
+  const portraitCode = hoveredUnit ? "Survol" : selectedCode ?? (scale === "commune" ? "95127" : "");
+  const portraitRunnerUp = portraitUnit?.candidats?.[1];
+  const portraitGap = portraitUnit?.tete && portraitRunnerUp
+    ? portraitUnit.tete.pct_exprimes - portraitRunnerUp.pct_exprimes
+    : null;
 
   function resetSelection() {
     setSelectedCode(null);
@@ -523,28 +531,21 @@ export default function ElectionsPage() {
       <div className="elec-workspace">
         <aside className="elec-sidebar">
           <div className="elec-sidebar-intro">
-            <span>LECTURE CARTOGRAPHIQUE</span>
-            <h2>
-              Analyser
-              <br />
-              un scrutin
-            </h2>
+            <span>LECTURE DE LA CARTE</span>
+            <h2>Informations affichées</h2>
           </div>
 
-          <div className="elec-sidebar-block-title">Échelle</div>
-          <div className="elec-pillgroup">
+          <div className="elec-sidebar-block-title">Échelle d’analyse</div>
+          <div className="elec-switch-list">
             {SCALES.map((s) => (
-              <button
+              <label
                 key={s.id}
-                type="button"
-                className={`elec-pill ${scale === s.id ? "active" : ""}`}
-                onClick={() => {
-                  setScale(s.id);
-                  resetSelection();
-                }}
+                className="elec-switch"
+                style={{ "--switch-color": s.id === "commune" ? "#000091" : s.id === "bv" ? "#e1000f" : s.id === "canton" ? "#a558a0" : "#00a95f" } as CSSProperties}
               >
-                {s.label}
-              </button>
+                <input type="radio" name="scale" checked={scale === s.id} onChange={() => { setScale(s.id); resetSelection(); }} />
+                <span><strong>{s.label}</strong><small>{s.id === "commune" ? "Lecture territoriale" : s.id === "bv" ? "Résultats les plus fins" : s.id === "canton" ? "21 cantons" : "10 circonscriptions"}</small></span>
+              </label>
             ))}
           </div>
           {scale === "bv" && (
@@ -600,17 +601,17 @@ export default function ElectionsPage() {
 
           {tourStatus === "reel" && (
             <>
-              <div className="elec-sidebar-block-title">Indicateur cartographié</div>
-              <div className="elec-pillgroup cols-1">
+              <div className="elec-sidebar-block-title">Informations affichées</div>
+              <div className="elec-switch-list">
                 {METRICS.map((m) => (
-                  <button
+                  <label
                     key={m.id}
-                    type="button"
-                    className={`elec-pill ${metric === m.id ? "active" : ""}`}
-                    onClick={() => setMetric(m.id)}
+                    className="elec-switch"
+                    style={{ "--switch-color": m.id === "tete" ? "#000091" : m.id === "score_candidat" ? "#e8a33e" : m.id === "abstention" ? "#a558a0" : "#00a95f" } as CSSProperties}
                   >
-                    {m.label}
-                  </button>
+                    <input type="radio" name="metric" checked={metric === m.id} onChange={() => setMetric(m.id)} />
+                    <span><strong>{m.label}</strong><small>{m.id === "tete" ? "Rapport de forces" : m.id === "score_candidat" ? "% des exprimés" : m.id === "abstention" ? "% des inscrits" : "Votants · inscrits"}</small></span>
+                  </label>
                 ))}
               </div>
               {metric === "score_candidat" && (
@@ -686,24 +687,28 @@ export default function ElectionsPage() {
 
         <section className="elec-map-shell">
           <div ref={mapNode} className="elec-map" aria-label="Carte électorale du Val-d'Oise" />
-          {hoveredUnit && (
-            <div className="elec-hover-card" aria-live="polite">
-              <strong>{hoveredUnit.name}</strong>
-              {hoveredUnit.result ? (
-                <>
-                  <span>{metricInfo(hoveredUnit.result).label}</span>
-                  <small>
-                    Participation {hoveredUnit.result.pct_participation.toFixed(1)} % · Abstention {hoveredUnit.result.pct_abstention.toFixed(1)} %
-                  </small>
-                  {hoveredUnit.result.tete && (
-                    <small>
-                      En tête : {hoveredUnit.result.tete.prenom ?? ""} {hoveredUnit.result.tete.nom} · {hoveredUnit.result.tete.pct_exprimes.toFixed(1)} %
-                    </small>
-                  )}
-                </>
-              ) : (
-                <span>Résultat indisponible</span>
-              )}
+          {portraitUnit && (
+            <div className="elec-orbit" aria-live="polite">
+              <article className="elec-orbit-card result">
+                <h3>Résultat</h3>
+                <span>En tête</span>
+                <strong className="candidate-name">{portraitUnit.tete ? `${portraitUnit.tete.prenom ?? ""} ${portraitUnit.tete.nom ?? ""}` : "Non disponible"}</strong>
+                <b>{portraitUnit.tete ? `${portraitUnit.tete.pct_exprimes.toFixed(1)} %` : "—"}</b>
+                <small>{portraitUnit.tete?.nuance ?? "Nuance non renseignée"}</small>
+              </article>
+              <article className="elec-orbit-card participation">
+                <h3>Participation</h3>
+                <span>Part des inscrits ayant voté</span>
+                <strong>{portraitUnit.pct_participation.toFixed(1)} %</strong>
+                <i className="participation-track"><em style={{ width: `${portraitUnit.pct_participation}%` }} /></i>
+                <small>{portraitUnit.votants.toLocaleString("fr-FR")} votants sur {portraitUnit.inscrits.toLocaleString("fr-FR")} inscrits</small>
+              </article>
+              <div className="elec-focus-label"><strong>{portraitName}</strong><span>Sous la loupe · {portraitCode}</span></div>
+              <article className="elec-orbit-card electorate">
+                <h3>Corps électoral</h3>
+                <div><span>Inscrits<strong>{portraitUnit.inscrits.toLocaleString("fr-FR")}</strong><small>{portraitUnit.exprimes.toLocaleString("fr-FR")} exprimés</small></span><span>Abstention<strong>{portraitUnit.pct_abstention.toFixed(1)} %</strong><small>{portraitUnit.abstentions.toLocaleString("fr-FR")} personnes</small></span><span>Écart entre les deux premiers<strong>{portraitGap === null ? "—" : `${portraitGap.toFixed(1)} pts`}</strong><small>Lecture du rapport de forces</small></span></div>
+                <button type="button" onClick={() => portraitCode !== "Survol" && setSelectedCode(portraitCode)}>Voir toutes les données</button>
+              </article>
             </div>
           )}
           {scale === "canton" && election.status === "reel" && !cantonData[`${dataKey}-canton`] && (
@@ -740,13 +745,7 @@ export default function ElectionsPage() {
               </div>
             </div>
           )}
-          <div className="elec-hint">
-            <i />
-            <span>
-              <strong>{drawerOpen ? "Fiche disponible" : "Sélectionnez une unité"}</strong>
-              <small>{drawerOpen ? selectedUnit?.nom : "Cliquez sur la carte ou choisissez un bureau"}</small>
-            </span>
-          </div>
+          <div className="elec-hint"><span><strong>Survolez un territoire : tout le portrait se déplace.</strong><small>Cliquez pour ouvrir la fiche complète.</small></span></div>
         </section>
 
         <aside className={`elec-drawer ${drawerOpen ? "open" : ""}`} aria-label="Fiche du scrutin">
@@ -764,12 +763,6 @@ export default function ElectionsPage() {
           </div>
           {selectedUnit && (
             <>
-              <div className="elec-actions">
-                <button onClick={printUnit}>Imprimer la fiche</button>
-                <a href="#" onClick={(e) => { e.preventDefault(); exportFeatureGeoJSON(); }}>
-                  Exporter GeoJSON
-                </a>
-              </div>
               <div className="elec-body">
                 <Section title="Participation" state="Données réelles">
                   <div className="elec-kpis">
@@ -812,6 +805,12 @@ export default function ElectionsPage() {
                     <p className="elec-empty">Aucune donnée.</p>
                   )}
                 </Section>
+                <div className="elec-actions elec-actions-bottom">
+                  <button onClick={printUnit}>Imprimer la fiche</button>
+                  <a href="#" onClick={(e) => { e.preventDefault(); exportFeatureGeoJSON(); }}>
+                    Exporter GeoJSON
+                  </a>
+                </div>
               </div>
             </>
           )}
