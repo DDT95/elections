@@ -154,7 +154,7 @@ export default function ElectionsPage() {
   useEffect(() => {
     const tours = ELECTIONS.flatMap((item) => item.tours.map((itemTour) => ({ election: item, tour: itemTour })));
     Promise.all(tours.map(async ({ tour: itemTour }) => [itemTour.file, await fetchJson<ElectionCommuneFile>(`/data/elections/${itemTour.file}.json`), await fetchJson<any>(`/data/elections/${itemTour.file}-canton.json`).catch(()=>null), await fetchJson<ElectionCircoFile>(`/data/elections/${itemTour.file}-circo.json`).catch(()=>null)] as const))
-      .then((entries) => { setAllElectionData(Object.fromEntries(entries.map(([key,file])=>[key,file]))); setCantonData(prev=>({...prev,...Object.fromEntries(entries.map(([key,,file])=>[`${key}-canton`,file]))})); setCircoData(prev=>({...prev,...Object.fromEntries(entries.filter(([, , ,file])=>file).map(([key,,,file])=>[`${key}-circo`,file]))})); })
+      .then((entries) => { setAllElectionData(Object.fromEntries(entries.map(([key,file])=>[key,file]))); setCantonData(prev=>({...prev,...Object.fromEntries(entries.map(([key,,file])=>[`${key}-canton`,file]))})); setCircoData(prev=>({...prev,...Object.fromEntries(entries.flatMap(([key,,,file])=>file?[[`${key}-circo`,file]]:[])) as Record<string,ElectionCircoFile>})); })
       .catch(() => {});
   }, []);
 
