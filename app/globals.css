@@ -95,3 +95,4 @@ body{font-family:"Marianne",Arial,sans-serif}
 .elec-drawer-tendance .elec-row{flex:1;min-width:130px}
 @media(max-width:700px){.elec-pillgroup,.elec-select,.elec-legend,.elec-bar-panel,.elec-scale-note{margin-left:12px;margin-right:12px}}
 .elec-orbit-card.electorate{bottom:1%}.elec-focus-label{top:45%}
+.elec-sidebar{overflow-y:auto;overscroll-behavior:contain}.elec-sidebar-status{flex:none}
