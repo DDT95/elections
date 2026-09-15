@@ -39,8 +39,7 @@ async function fetchJson<T>(path: string): Promise<T> {
 function round2(n: number): number {
   return Math.round(n * 100) / 100;
 }
-const TERRITORY_COLORS=["#c9e7f2","#f6d6a8","#d8c8ed","#bfe3d0","#f3c3d3","#d6e5a8","#f0c5ad","#c8d5f2"];
-function territoryColor(code:string){return TERRITORY_COLORS[[...code].reduce((sum,char)=>sum+char.charCodeAt(0),0)%TERRITORY_COLORS.length];}
+const EMPTY_MAP_COLOR = "#dbe3e8";
 
 function aggregateDepartment(file: ElectionCommuneFile): UnitResult {
   const units = Object.values(file.communes);
@@ -390,7 +389,7 @@ export default function ElectionsPage() {
       const base = (code: string) => {
         const u = cantons[code];
         const info = u ? metricInfo(u) : null;
-        return { color: "#fff", weight: 1.6, fillColor: metric === "none" ? territoryColor(code) : info?.color ?? "#e9edf3", fillOpacity: 0.82 };
+        return { color: "#fff", weight: 1.6, fillColor: metric === "none" ? EMPTY_MAP_COLOR : info?.color ?? "#e9edf3", fillOpacity: 0.82 };
       };
       styleFnsRef.current = { base, hover: (c) => withHover(base(c)), selected: (c) => withSelected(base(c)) };
       const layer = L.geoJSON(cantonGeo, {
@@ -411,7 +410,7 @@ export default function ElectionsPage() {
     if (scale === "epci") {
       if (!epciGeo || !current) return;
       const results=Object.fromEntries(epciGeo.features.map((feature:any)=>{const code=feature.properties.code,communes=Object.fromEntries(Object.entries(current.communes).filter(([commune])=>communeEpci[commune]===code));return [code,Object.keys(communes).length?aggregateDepartment({...current,communes}):null]}));
-      const base=(code:string)=>{const u=results[code],info=u?metricInfo(u):null;return {color:"#fff",weight:1.8,fillColor:metric==="none"?territoryColor(code):info?.color??"#e9edf3",fillOpacity:.84}};
+      const base=(code:string)=>{const u=results[code],info=u?metricInfo(u):null;return {color:"#fff",weight:1.8,fillColor:metric==="none"?EMPTY_MAP_COLOR:info?.color??"#e9edf3",fillOpacity:.84}};
       styleFnsRef.current={base,hover:c=>withHover(base(c)),selected:c=>withSelected(base(c))};
       layerRef.current=L.geoJSON(epciGeo,{style:(feature:any)=>{const code=feature.properties.code;return code===selectedCodeRef.current?withSelected(base(code)):base(code)},onEachFeature:(feature:any,lyr:any)=>{const code=feature.properties.code;wireFeature(code,lyr,feature.properties.name,results[code])}}).addTo(map);return;
     }
@@ -447,7 +446,7 @@ export default function ElectionsPage() {
     const base = (code: string) => {
       const u = dataset[code];
       const info = u ? metricInfo(u) : { color: "#e9edf3" };
-      return { color: "#fff", weight: baseWeight, fillColor: metric === "none" ? territoryColor(code) : info.color, fillOpacity: 0.82 };
+      return { color: "#fff", weight: baseWeight, fillColor: metric === "none" ? EMPTY_MAP_COLOR : info.color, fillOpacity: 0.82 };
     };
     styleFnsRef.current = { base, hover: (c) => withHover(base(c)), selected: (c) => withSelected(base(c)) };
     const layer = L.geoJSON(geo, {
