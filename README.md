@@ -7,7 +7,7 @@ Même identité visuelle, même toolchain (Vite + React + TypeScript) et mêmes 
 ## Fonctionnalités
 
 - **Échelles** : commune (par défaut), bureau de vote, canton, circonscription législative.
-- **Élections** : Présidentielle 2022 (1er et 2nd tour, données réelles), Législatives 2024, Européennes 2024, Municipales 2020 (structure prête, à compléter — voir [DATA.md](./DATA.md)). Le panorama est conçu pour accueillir facilement de nouveaux scrutins.
+- **Élections** : Présidentielle 2022, Législatives 2024, Européennes 2024, Municipales 2020 — 1er et 2nd tour, données réelles (voir [DATA.md](./DATA.md) pour le détail exact de couverture, y compris les quelques cas structurellement partiels comme le 2nd tour des municipales). Le panorama est conçu pour accueillir facilement de nouveaux scrutins.
 - **Indicateurs cartographiés** : parti/candidat arrivé en tête, score d'un candidat choisi, abstention, participation.
 - **Croisement sociodémographique** : structure prête (âge, CSP), à compléter dès l'intégration des fichiers INSEE RP.
 - **Fiche par unité** : KPI de participation, tableau des résultats par candidat, impression PDF (A4 paysage) et export GeoJSON (couche entière ou unité sélectionnée).

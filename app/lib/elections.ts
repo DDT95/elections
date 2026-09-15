@@ -19,7 +19,7 @@ export const ELECTIONS: ElectionDef[] = [
     id: "legislatives-2024",
     label: "Législatives 2024",
     shortLabel: "Législatives 2024",
-    status: "a_completer",
+    status: "reel",
     tours: [
       { id: "t1", label: "1er tour (30 juin 2024)", file: "legislatives-2024-t1" },
       { id: "t2", label: "2nd tour (7 juillet 2024)", file: "legislatives-2024-t2" },
@@ -29,15 +29,18 @@ export const ELECTIONS: ElectionDef[] = [
     id: "europeennes-2024",
     label: "Européennes 2024",
     shortLabel: "Européennes 2024",
-    status: "a_completer",
+    status: "reel",
     tours: [{ id: "t1", label: "9 juin 2024", file: "europeennes-2024" }],
   },
   {
     id: "municipales-2020",
     label: "Municipales 2020",
     shortLabel: "Municipales 2020",
-    status: "a_completer",
-    tours: [{ id: "t1", label: "1er tour (15 mars 2020)", file: "municipales-2020-t1" }],
+    status: "reel",
+    tours: [
+      { id: "t1", label: "1er tour (15 mars 2020)", file: "municipales-2020-t1" },
+      { id: "t2", label: "2nd tour (28 juin 2020)", file: "municipales-2020-t2" },
+    ],
   },
 ];
 

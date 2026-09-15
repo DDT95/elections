@@ -2,13 +2,13 @@
  "election": "Présidentielle 2022",
  "tour": 2,
  "date": "2022-04-24",
- "label": "2nd tour",
  "status": "reel",
  "source": {
-  "producer": "data.gouv.fr / Ministère de l'Intérieur (agrégation Etalab)",
-  "dataset": "Données des élections agrégées",
+  "producer": "Ministère de l'Intérieur (DGRC) — export officiel bureau de vote",
+  "dataset": "Résultats définitifs par bureau de vote (fourni par l'utilisateur)",
   "url": "https://www.data.gouv.fr/datasets/donnees-des-elections-agregees"
  },
+ "note": "Recalculé à partir de l'export officiel DGRC par bureau de vote (811/811 bureaux), remplaçant l'agrégation Tabular API précédente.",
  "communes": {
   "95002": {
    "code_insee": "95002",
@@ -23,17 +23,17 @@
    "exprimes": 519,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 294,
      "pct_exprimes": 56.65,
      "pct_inscrits": 41.64
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 225,
      "pct_exprimes": 43.35,
      "pct_inscrits": 31.87
@@ -61,17 +61,17 @@
    "exprimes": 406,
    "candidats": [
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 211,
      "pct_exprimes": 51.97,
      "pct_inscrits": 37.75
     },
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 195,
      "pct_exprimes": 48.03,
      "pct_inscrits": 34.88
@@ -99,17 +99,17 @@
    "exprimes": 221,
    "candidats": [
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 113,
      "pct_exprimes": 51.13,
      "pct_inscrits": 37.05
     },
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 108,
      "pct_exprimes": 48.87,
      "pct_inscrits": 35.41
@@ -137,17 +137,17 @@
    "exprimes": 110,
    "candidats": [
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 70,
      "pct_exprimes": 63.64,
      "pct_inscrits": 45.45
     },
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 40,
      "pct_exprimes": 36.36,
      "pct_inscrits": 25.97
@@ -175,17 +175,17 @@
    "exprimes": 1071,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 754,
      "pct_exprimes": 70.4,
      "pct_inscrits": 50.13
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 317,
      "pct_exprimes": 29.6,
      "pct_inscrits": 21.08
@@ -213,17 +213,17 @@
    "exprimes": 29810,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 21874,
      "pct_exprimes": 73.38,
      "pct_inscrits": 41.54
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 7936,
      "pct_exprimes": 26.62,
      "pct_inscrits": 15.07
@@ -251,17 +251,17 @@
    "exprimes": 4557,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 2604,
      "pct_exprimes": 57.14,
      "pct_inscrits": 33.95
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 1953,
      "pct_exprimes": 42.86,
      "pct_inscrits": 25.46
@@ -289,17 +289,17 @@
    "exprimes": 334,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 171,
      "pct_exprimes": 51.2,
      "pct_inscrits": 36.93
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 163,
      "pct_exprimes": 48.8,
      "pct_inscrits": 35.21
@@ -327,17 +327,17 @@
    "exprimes": 136,
    "candidats": [
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 71,
      "pct_exprimes": 52.21,
      "pct_inscrits": 36.98
     },
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 65,
      "pct_exprimes": 47.79,
      "pct_inscrits": 33.85
@@ -354,7 +354,7 @@
   },
   "95026": {
    "code_insee": "95026",
-   "nom": "Asnières-Sur-Oise",
+   "nom": "Asnières-sur-Oise",
    "code_circonscription": "02",
    "bureaux_de_vote": 3,
    "inscrits": 2175,
@@ -365,17 +365,17 @@
    "exprimes": 1492,
    "candidats": [
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 749,
      "pct_exprimes": 50.2,
      "pct_inscrits": 34.44
     },
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 743,
      "pct_exprimes": 49.8,
      "pct_inscrits": 34.16
@@ -403,17 +403,17 @@
    "exprimes": 799,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 430,
      "pct_exprimes": 53.82,
      "pct_inscrits": 35.86
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 369,
      "pct_exprimes": 46.18,
      "pct_inscrits": 30.78
@@ -430,7 +430,7 @@
   },
   "95039": {
    "code_insee": "95039",
-   "nom": "Auvers-Sur-Oise",
+   "nom": "Auvers-sur-Oise",
    "code_circonscription": "01",
    "bureaux_de_vote": 6,
    "inscrits": 5210,
@@ -441,17 +441,17 @@
    "exprimes": 3681,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 2348,
      "pct_exprimes": 63.79,
      "pct_inscrits": 45.07
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 1333,
      "pct_exprimes": 36.21,
      "pct_inscrits": 25.59
@@ -479,17 +479,17 @@
    "exprimes": 482,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 276,
      "pct_exprimes": 57.26,
      "pct_inscrits": 41.69
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 206,
      "pct_exprimes": 42.74,
      "pct_inscrits": 31.12
@@ -506,7 +506,7 @@
   },
   "95042": {
    "code_insee": "95042",
-   "nom": "Baillet-En-France",
+   "nom": "Baillet-en-France",
    "code_circonscription": "02",
    "bureaux_de_vote": 1,
    "inscrits": 1531,
@@ -517,17 +517,17 @@
    "exprimes": 1029,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 584,
      "pct_exprimes": 56.75,
      "pct_inscrits": 38.15
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 445,
      "pct_exprimes": 43.25,
      "pct_inscrits": 29.07
@@ -555,17 +555,17 @@
    "exprimes": 82,
    "candidats": [
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 47,
      "pct_exprimes": 57.32,
      "pct_inscrits": 45.19
     },
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 35,
      "pct_exprimes": 42.68,
      "pct_inscrits": 33.65
@@ -593,17 +593,17 @@
    "exprimes": 4199,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 2798,
      "pct_exprimes": 66.63,
      "pct_inscrits": 45.56
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 1401,
      "pct_exprimes": 33.37,
      "pct_inscrits": 22.81
@@ -620,7 +620,7 @@
   },
   "95052": {
    "code_insee": "95052",
-   "nom": "Beaumont-Sur-Oise",
+   "nom": "Beaumont-sur-Oise",
    "code_circonscription": "01",
    "bureaux_de_vote": 5,
    "inscrits": 5596,
@@ -631,17 +631,17 @@
    "exprimes": 3387,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 1887,
      "pct_exprimes": 55.71,
      "pct_inscrits": 33.72
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 1500,
      "pct_exprimes": 44.29,
      "pct_inscrits": 26.8
@@ -658,7 +658,7 @@
   },
   "95054": {
    "code_insee": "95054",
-   "nom": "Le Bellay-En-Vexin",
+   "nom": "Le Bellay-en-Vexin",
    "code_circonscription": "01",
    "bureaux_de_vote": 1,
    "inscrits": 163,
@@ -669,17 +669,17 @@
    "exprimes": 129,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 65,
      "pct_exprimes": 50.39,
      "pct_inscrits": 39.88
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 64,
      "pct_exprimes": 49.61,
      "pct_inscrits": 39.26
@@ -707,17 +707,17 @@
    "exprimes": 193,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 99,
      "pct_exprimes": 51.3,
      "pct_inscrits": 34.38
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 94,
      "pct_exprimes": 48.7,
      "pct_inscrits": 32.64
@@ -734,7 +734,7 @@
   },
   "95056": {
    "code_insee": "95056",
-   "nom": "Belloy-En-France",
+   "nom": "Belloy-en-France",
    "code_circonscription": "02",
    "bureaux_de_vote": 1,
    "inscrits": 1372,
@@ -745,17 +745,17 @@
    "exprimes": 936,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 470,
      "pct_exprimes": 50.21,
      "pct_inscrits": 34.26
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 466,
      "pct_exprimes": 49.79,
      "pct_inscrits": 33.97
@@ -772,7 +772,7 @@
   },
   "95058": {
    "code_insee": "95058",
-   "nom": "Bernes-Sur-Oise",
+   "nom": "Bernes-sur-Oise",
    "code_circonscription": "01",
    "bureaux_de_vote": 2,
    "inscrits": 1655,
@@ -783,17 +783,17 @@
    "exprimes": 1103,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 592,
      "pct_exprimes": 53.67,
      "pct_inscrits": 35.77
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 511,
      "pct_exprimes": 46.33,
      "pct_inscrits": 30.88
@@ -821,17 +821,17 @@
    "exprimes": 186,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 115,
      "pct_exprimes": 61.83,
      "pct_inscrits": 41.67
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 71,
      "pct_exprimes": 38.17,
      "pct_inscrits": 25.72
@@ -859,17 +859,17 @@
    "exprimes": 3329,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 2012,
      "pct_exprimes": 60.44,
      "pct_inscrits": 38.93
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 1317,
      "pct_exprimes": 39.56,
      "pct_inscrits": 25.48
@@ -886,7 +886,7 @@
   },
   "95061": {
    "code_insee": "95061",
-   "nom": "Béthemont-La-Forêt",
+   "nom": "Béthemont-la-Forêt",
    "code_circonscription": "03",
    "bureaux_de_vote": 1,
    "inscrits": 336,
@@ -897,17 +897,17 @@
    "exprimes": 233,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 143,
      "pct_exprimes": 61.37,
      "pct_inscrits": 42.56
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 90,
      "pct_exprimes": 38.63,
      "pct_inscrits": 26.79
@@ -935,17 +935,17 @@
    "exprimes": 9242,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 6536,
      "pct_exprimes": 70.72,
      "pct_inscrits": 40.76
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 2706,
      "pct_exprimes": 29.28,
      "pct_inscrits": 16.87
@@ -973,17 +973,17 @@
    "exprimes": 456,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 289,
      "pct_exprimes": 63.38,
      "pct_inscrits": 46.84
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 167,
      "pct_exprimes": 36.62,
      "pct_inscrits": 27.07
@@ -1000,7 +1000,7 @@
   },
   "95078": {
    "code_insee": "95078",
-   "nom": "Boissy-L'Aillerie",
+   "nom": "Boissy-l'Aillerie",
    "code_circonscription": "10",
    "bureaux_de_vote": 1,
    "inscrits": 1375,
@@ -1011,17 +1011,17 @@
    "exprimes": 929,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 569,
      "pct_exprimes": 61.25,
      "pct_inscrits": 41.38
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 360,
      "pct_exprimes": 38.75,
      "pct_inscrits": 26.18
@@ -1038,7 +1038,7 @@
   },
   "95088": {
    "code_insee": "95088",
-   "nom": "Bonneuil-En-France",
+   "nom": "Bonneuil-en-France",
    "code_circonscription": "08",
    "bureaux_de_vote": 1,
    "inscrits": 551,
@@ -1049,17 +1049,17 @@
    "exprimes": 338,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 183,
      "pct_exprimes": 54.14,
      "pct_inscrits": 33.21
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 155,
      "pct_exprimes": 45.86,
      "pct_inscrits": 28.13
@@ -1087,17 +1087,17 @@
    "exprimes": 2630,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 1801,
      "pct_exprimes": 68.48,
      "pct_inscrits": 43.54
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 829,
      "pct_exprimes": 31.52,
      "pct_inscrits": 20.04
@@ -1125,17 +1125,17 @@
    "exprimes": 130,
    "candidats": [
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 86,
      "pct_exprimes": 66.15,
      "pct_inscrits": 44.1
     },
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 44,
      "pct_exprimes": 33.85,
      "pct_inscrits": 22.56
@@ -1152,7 +1152,7 @@
   },
   "95101": {
    "code_insee": "95101",
-   "nom": "Bray-Et-Lû",
+   "nom": "Bray-et-Lû",
    "code_circonscription": "01",
    "bureaux_de_vote": 1,
    "inscrits": 603,
@@ -1163,17 +1163,17 @@
    "exprimes": 426,
    "candidats": [
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 261,
      "pct_exprimes": 61.27,
      "pct_inscrits": 43.28
     },
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 165,
      "pct_exprimes": 38.73,
      "pct_inscrits": 27.36
@@ -1201,17 +1201,17 @@
    "exprimes": 242,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 152,
      "pct_exprimes": 62.81,
      "pct_inscrits": 46.2
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 90,
      "pct_exprimes": 37.19,
      "pct_inscrits": 27.36
@@ -1239,17 +1239,17 @@
    "exprimes": 142,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 80,
      "pct_exprimes": 56.34,
      "pct_inscrits": 41.24
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 62,
      "pct_exprimes": 43.66,
      "pct_inscrits": 31.96
@@ -1266,7 +1266,7 @@
   },
   "95116": {
    "code_insee": "95116",
-   "nom": "Bruyères-Sur-Oise",
+   "nom": "Bruyères-sur-Oise",
    "code_circonscription": "01",
    "bureaux_de_vote": 3,
    "inscrits": 2791,
@@ -1277,17 +1277,17 @@
    "exprimes": 1713,
    "candidats": [
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 863,
      "pct_exprimes": 50.38,
      "pct_inscrits": 30.92
     },
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 850,
      "pct_exprimes": 49.62,
      "pct_inscrits": 30.46
@@ -1315,17 +1315,17 @@
    "exprimes": 164,
    "candidats": [
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 87,
      "pct_exprimes": 53.05,
      "pct_inscrits": 38.33
     },
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 77,
      "pct_exprimes": 46.95,
      "pct_inscrits": 33.92
@@ -1342,7 +1342,7 @@
   },
   "95120": {
    "code_insee": "95120",
-   "nom": "Butry-Sur-Oise",
+   "nom": "Butry-sur-Oise",
    "code_circonscription": "01",
    "bureaux_de_vote": 2,
    "inscrits": 1656,
@@ -1353,17 +1353,17 @@
    "exprimes": 1165,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 682,
      "pct_exprimes": 58.54,
      "pct_inscrits": 41.18
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 483,
      "pct_exprimes": 41.46,
      "pct_inscrits": 29.17
@@ -1381,7 +1381,7 @@
   "95127": {
    "code_insee": "95127",
    "nom": "Cergy",
-   "code_circonscription": "10",
+   "code_circonscription": "02",
    "bureaux_de_vote": 35,
    "inscrits": 32359,
    "abstentions": 12180,
@@ -1391,17 +1391,17 @@
    "exprimes": 18409,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 14029,
      "pct_exprimes": 76.21,
      "pct_inscrits": 43.35
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 4380,
      "pct_exprimes": 23.79,
      "pct_inscrits": 13.54
@@ -1418,7 +1418,7 @@
   },
   "95134": {
    "code_insee": "95134",
-   "nom": "Champagne-Sur-Oise",
+   "nom": "Champagne-sur-Oise",
    "code_circonscription": "01",
    "bureaux_de_vote": 4,
    "inscrits": 3650,
@@ -1429,17 +1429,17 @@
    "exprimes": 2340,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 1288,
      "pct_exprimes": 55.04,
      "pct_inscrits": 35.29
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 1052,
      "pct_exprimes": 44.96,
      "pct_inscrits": 28.82
@@ -1456,7 +1456,7 @@
   },
   "95139": {
    "code_insee": "95139",
-   "nom": "La Chapelle-En-Vexin",
+   "nom": "La Chapelle-en-Vexin",
    "code_circonscription": "01",
    "bureaux_de_vote": 1,
    "inscrits": 221,
@@ -1467,17 +1467,17 @@
    "exprimes": 154,
    "candidats": [
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 88,
      "pct_exprimes": 57.14,
      "pct_inscrits": 39.82
     },
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 66,
      "pct_exprimes": 42.86,
      "pct_inscrits": 29.86
@@ -1505,17 +1505,17 @@
    "exprimes": 19,
    "candidats": [
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 10,
      "pct_exprimes": 52.63,
      "pct_inscrits": 41.67
     },
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 9,
      "pct_exprimes": 47.37,
      "pct_inscrits": 37.5
@@ -1543,17 +1543,17 @@
    "exprimes": 834,
    "candidats": [
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 424,
      "pct_exprimes": 50.84,
      "pct_inscrits": 35.16
     },
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 410,
      "pct_exprimes": 49.16,
      "pct_inscrits": 34.0
@@ -1570,7 +1570,7 @@
   },
   "95144": {
    "code_insee": "95144",
-   "nom": "Châtenay-En-France",
+   "nom": "Châtenay-en-France",
    "code_circonscription": "09",
    "bureaux_de_vote": 1,
    "inscrits": 53,
@@ -1581,17 +1581,17 @@
    "exprimes": 37,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 28,
      "pct_exprimes": 75.68,
      "pct_inscrits": 52.83
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 9,
      "pct_exprimes": 24.32,
      "pct_inscrits": 16.98
@@ -1619,17 +1619,17 @@
    "exprimes": 1765,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 895,
      "pct_exprimes": 50.71,
      "pct_inscrits": 34.54
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 870,
      "pct_exprimes": 49.29,
      "pct_inscrits": 33.58
@@ -1657,17 +1657,17 @@
    "exprimes": 348,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 189,
      "pct_exprimes": 54.31,
      "pct_inscrits": 39.29
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 159,
      "pct_exprimes": 45.69,
      "pct_inscrits": 33.06
@@ -1695,17 +1695,17 @@
    "exprimes": 155,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 89,
      "pct_exprimes": 57.42,
      "pct_inscrits": 40.64
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 66,
      "pct_exprimes": 42.58,
      "pct_inscrits": 30.14
@@ -1722,7 +1722,7 @@
   },
   "95154": {
    "code_insee": "95154",
-   "nom": "Chennevières-Lès-Louvres",
+   "nom": "Chennevières-lès-Louvres",
    "code_circonscription": "09",
    "bureaux_de_vote": 1,
    "inscrits": 195,
@@ -1733,17 +1733,17 @@
    "exprimes": 155,
    "candidats": [
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 85,
      "pct_exprimes": 54.84,
      "pct_inscrits": 43.59
     },
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 70,
      "pct_exprimes": 45.16,
      "pct_inscrits": 35.9
@@ -1771,17 +1771,17 @@
    "exprimes": 128,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 83,
      "pct_exprimes": 64.84,
      "pct_inscrits": 54.25
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 45,
      "pct_exprimes": 35.16,
      "pct_inscrits": 29.41
@@ -1798,7 +1798,7 @@
   },
   "95166": {
    "code_insee": "95166",
-   "nom": "Cléry-En-Vexin",
+   "nom": "Cléry-en-Vexin",
    "code_circonscription": "01",
    "bureaux_de_vote": 1,
    "inscrits": 330,
@@ -1809,17 +1809,17 @@
    "exprimes": 232,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 128,
      "pct_exprimes": 55.17,
      "pct_inscrits": 38.79
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 104,
      "pct_exprimes": 44.83,
      "pct_inscrits": 31.52
@@ -1847,17 +1847,17 @@
    "exprimes": 240,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 149,
      "pct_exprimes": 62.08,
      "pct_inscrits": 42.33
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 91,
      "pct_exprimes": 37.92,
      "pct_inscrits": 25.85
@@ -1885,17 +1885,17 @@
    "exprimes": 300,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 167,
      "pct_exprimes": 55.67,
      "pct_inscrits": 43.6
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 133,
      "pct_exprimes": 44.33,
      "pct_inscrits": 34.73
@@ -1912,7 +1912,7 @@
   },
   "95176": {
    "code_insee": "95176",
-   "nom": "Cormeilles-En-Parisis",
+   "nom": "Cormeilles-en-Parisis",
    "code_circonscription": "03",
    "bureaux_de_vote": 17,
    "inscrits": 16829,
@@ -1923,17 +1923,17 @@
    "exprimes": 11166,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 7738,
      "pct_exprimes": 69.3,
      "pct_inscrits": 45.98
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 3428,
      "pct_exprimes": 30.7,
      "pct_inscrits": 20.37
@@ -1950,7 +1950,7 @@
   },
   "95177": {
    "code_insee": "95177",
-   "nom": "Cormeilles-En-Vexin",
+   "nom": "Cormeilles-en-Vexin",
    "code_circonscription": "01",
    "bureaux_de_vote": 1,
    "inscrits": 874,
@@ -1961,17 +1961,17 @@
    "exprimes": 613,
    "candidats": [
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 325,
      "pct_exprimes": 53.02,
      "pct_inscrits": 37.19
     },
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 288,
      "pct_exprimes": 46.98,
      "pct_inscrits": 32.95
@@ -1988,7 +1988,7 @@
   },
   "95181": {
    "code_insee": "95181",
-   "nom": "Courcelles-Sur-Viosne",
+   "nom": "Courcelles-sur-Viosne",
    "code_circonscription": "01",
    "bureaux_de_vote": 1,
    "inscrits": 229,
@@ -1999,17 +1999,17 @@
    "exprimes": 159,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 110,
      "pct_exprimes": 69.18,
      "pct_inscrits": 48.03
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 49,
      "pct_exprimes": 30.82,
      "pct_inscrits": 21.4
@@ -2037,17 +2037,17 @@
    "exprimes": 2935,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 2108,
      "pct_exprimes": 71.82,
      "pct_inscrits": 47.33
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 827,
      "pct_exprimes": 28.18,
      "pct_inscrits": 18.57
@@ -2064,7 +2064,7 @@
   },
   "95197": {
    "code_insee": "95197",
-   "nom": "Deuil-La-Barre",
+   "nom": "Deuil-la-Barre",
    "code_circonscription": "06",
    "bureaux_de_vote": 16,
    "inscrits": 14440,
@@ -2075,17 +2075,17 @@
    "exprimes": 8935,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 6581,
      "pct_exprimes": 73.65,
      "pct_inscrits": 45.57
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 2354,
      "pct_exprimes": 26.35,
      "pct_inscrits": 16.3
@@ -2113,17 +2113,17 @@
    "exprimes": 6418,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 4018,
      "pct_exprimes": 62.61,
      "pct_inscrits": 40.08
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 2400,
      "pct_exprimes": 37.39,
      "pct_inscrits": 23.94
@@ -2151,17 +2151,17 @@
    "exprimes": 10470,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 7621,
      "pct_exprimes": 72.79,
      "pct_inscrits": 48.09
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 2849,
      "pct_exprimes": 27.21,
      "pct_inscrits": 17.98
@@ -2189,17 +2189,17 @@
    "exprimes": 2892,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 1716,
      "pct_exprimes": 59.34,
      "pct_inscrits": 35.96
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 1176,
      "pct_exprimes": 40.66,
      "pct_inscrits": 24.64
@@ -2216,7 +2216,7 @@
   },
   "95210": {
    "code_insee": "95210",
-   "nom": "Enghien-Les-Bains",
+   "nom": "Enghien-les-Bains",
    "code_circonscription": "06",
    "bureaux_de_vote": 9,
    "inscrits": 7939,
@@ -2227,17 +2227,17 @@
    "exprimes": 5399,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 4080,
      "pct_exprimes": 75.57,
      "pct_inscrits": 51.39
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 1319,
      "pct_exprimes": 24.43,
      "pct_inscrits": 16.61
@@ -2265,17 +2265,17 @@
    "exprimes": 1128,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 715,
      "pct_exprimes": 63.39,
      "pct_inscrits": 45.98
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 413,
      "pct_exprimes": 36.61,
      "pct_inscrits": 26.56
@@ -2292,7 +2292,7 @@
   },
   "95212": {
    "code_insee": "95212",
-   "nom": "Epiais-Lès-Louvres",
+   "nom": "Epiais-lès-Louvres",
    "code_circonscription": "09",
    "bureaux_de_vote": 1,
    "inscrits": 89,
@@ -2303,17 +2303,17 @@
    "exprimes": 62,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 34,
      "pct_exprimes": 54.84,
      "pct_inscrits": 38.2
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 28,
      "pct_exprimes": 45.16,
      "pct_inscrits": 31.46
@@ -2341,17 +2341,17 @@
    "exprimes": 426,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 223,
      "pct_exprimes": 52.35,
      "pct_inscrits": 40.99
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 203,
      "pct_exprimes": 47.65,
      "pct_inscrits": 37.32
@@ -2379,17 +2379,17 @@
    "exprimes": 29,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 17,
      "pct_exprimes": 58.62,
      "pct_inscrits": 45.95
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 12,
      "pct_exprimes": 41.38,
      "pct_inscrits": 32.43
@@ -2417,17 +2417,17 @@
    "exprimes": 6858,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 4579,
      "pct_exprimes": 66.77,
      "pct_inscrits": 40.76
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 2279,
      "pct_exprimes": 33.23,
      "pct_inscrits": 20.29
@@ -2455,17 +2455,17 @@
    "exprimes": 11634,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 8350,
      "pct_exprimes": 71.77,
      "pct_inscrits": 45.21
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 3284,
      "pct_exprimes": 28.23,
      "pct_inscrits": 17.78
@@ -2493,17 +2493,17 @@
    "exprimes": 3866,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 2446,
      "pct_exprimes": 63.27,
      "pct_inscrits": 40.04
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 1420,
      "pct_exprimes": 36.73,
      "pct_inscrits": 23.24
@@ -2520,7 +2520,7 @@
   },
   "95241": {
    "code_insee": "95241",
-   "nom": "Fontenay-En-Parisis",
+   "nom": "Fontenay-en-Parisis",
    "code_circonscription": "09",
    "bureaux_de_vote": 1,
    "inscrits": 1220,
@@ -2531,17 +2531,17 @@
    "exprimes": 836,
    "candidats": [
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 437,
      "pct_exprimes": 52.27,
      "pct_inscrits": 35.82
     },
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 399,
      "pct_exprimes": 47.73,
      "pct_inscrits": 32.7
@@ -2569,17 +2569,17 @@
    "exprimes": 3768,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 2232,
      "pct_exprimes": 59.24,
      "pct_inscrits": 35.41
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 1536,
      "pct_exprimes": 40.76,
      "pct_inscrits": 24.37
@@ -2607,17 +2607,17 @@
    "exprimes": 13272,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 8842,
      "pct_exprimes": 66.62,
      "pct_inscrits": 40.53
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 4430,
      "pct_exprimes": 33.38,
      "pct_inscrits": 20.31
@@ -2645,17 +2645,17 @@
    "exprimes": 258,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 149,
      "pct_exprimes": 57.75,
      "pct_inscrits": 39.84
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 109,
      "pct_exprimes": 42.25,
      "pct_inscrits": 29.14
@@ -2683,17 +2683,17 @@
    "exprimes": 291,
    "candidats": [
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 148,
      "pct_exprimes": 50.86,
      "pct_inscrits": 34.99
     },
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 143,
      "pct_exprimes": 49.14,
      "pct_inscrits": 33.81
@@ -2721,17 +2721,17 @@
    "exprimes": 1484,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 857,
      "pct_exprimes": 57.75,
      "pct_inscrits": 39.77
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 627,
      "pct_exprimes": 42.25,
      "pct_inscrits": 29.1
@@ -2748,7 +2748,7 @@
   },
   "95257": {
    "code_insee": "95257",
-   "nom": "La Frette-Sur-Seine",
+   "nom": "La Frette-sur-Seine",
    "code_circonscription": "03",
    "bureaux_de_vote": 3,
    "inscrits": 3099,
@@ -2759,17 +2759,17 @@
    "exprimes": 2155,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 1443,
      "pct_exprimes": 66.96,
      "pct_inscrits": 46.56
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 712,
      "pct_exprimes": 33.04,
      "pct_inscrits": 22.98
@@ -2797,17 +2797,17 @@
    "exprimes": 232,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 165,
      "pct_exprimes": 71.12,
      "pct_inscrits": 51.89
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 67,
      "pct_exprimes": 28.88,
      "pct_inscrits": 21.07
@@ -2824,7 +2824,7 @@
   },
   "95268": {
    "code_insee": "95268",
-   "nom": "Garges-Lès-Gonesse",
+   "nom": "Garges-lès-Gonesse",
    "code_circonscription": "08",
    "bureaux_de_vote": 17,
    "inscrits": 18269,
@@ -2835,17 +2835,17 @@
    "exprimes": 9165,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 6789,
      "pct_exprimes": 74.08,
      "pct_inscrits": 37.16
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 2376,
      "pct_exprimes": 25.92,
      "pct_inscrits": 13.01
@@ -2873,17 +2873,17 @@
    "exprimes": 309,
    "candidats": [
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 160,
      "pct_exprimes": 51.78,
      "pct_inscrits": 37.91
     },
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 149,
      "pct_exprimes": 48.22,
      "pct_inscrits": 35.31
@@ -2911,17 +2911,17 @@
    "exprimes": 299,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 175,
      "pct_exprimes": 58.53,
      "pct_inscrits": 46.54
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 124,
      "pct_exprimes": 41.47,
      "pct_inscrits": 32.98
@@ -2949,17 +2949,17 @@
    "exprimes": 7977,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 4845,
      "pct_exprimes": 60.74,
      "pct_inscrits": 33.13
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 3132,
      "pct_exprimes": 39.26,
      "pct_inscrits": 21.41
@@ -2987,17 +2987,17 @@
    "exprimes": 8412,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 5307,
      "pct_exprimes": 63.09,
      "pct_inscrits": 32.79
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 3105,
      "pct_exprimes": 36.91,
      "pct_inscrits": 19.18
@@ -3025,17 +3025,17 @@
    "exprimes": 96,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 57,
      "pct_exprimes": 59.38,
      "pct_inscrits": 45.6
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 39,
      "pct_exprimes": 40.62,
      "pct_inscrits": 31.2
@@ -3052,7 +3052,7 @@
   },
   "95287": {
    "code_insee": "95287",
-   "nom": "Grisy-Les-Plâtres",
+   "nom": "Grisy-les-Plâtres",
    "code_circonscription": "01",
    "bureaux_de_vote": 1,
    "inscrits": 543,
@@ -3063,17 +3063,17 @@
    "exprimes": 410,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 246,
      "pct_exprimes": 60.0,
      "pct_inscrits": 45.3
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 164,
      "pct_exprimes": 40.0,
      "pct_inscrits": 30.2
@@ -3101,17 +3101,17 @@
    "exprimes": 3342,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 2113,
      "pct_exprimes": 63.23,
      "pct_inscrits": 40.36
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 1229,
      "pct_exprimes": 36.77,
      "pct_inscrits": 23.47
@@ -3128,7 +3128,7 @@
   },
   "95295": {
    "code_insee": "95295",
-   "nom": "Guiry-En-Vexin",
+   "nom": "Guiry-en-Vexin",
    "code_circonscription": "01",
    "bureaux_de_vote": 1,
    "inscrits": 142,
@@ -3139,17 +3139,17 @@
    "exprimes": 101,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 61,
      "pct_exprimes": 60.4,
      "pct_inscrits": 42.96
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 40,
      "pct_exprimes": 39.6,
      "pct_inscrits": 28.17
@@ -3177,17 +3177,17 @@
    "exprimes": 344,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 197,
      "pct_exprimes": 57.27,
      "pct_inscrits": 43.58
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 147,
      "pct_exprimes": 42.73,
      "pct_inscrits": 32.52
@@ -3215,17 +3215,17 @@
    "exprimes": 156,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 86,
      "pct_exprimes": 55.13,
      "pct_inscrits": 41.75
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 70,
      "pct_exprimes": 44.87,
      "pct_inscrits": 33.98
@@ -3253,17 +3253,17 @@
    "exprimes": 129,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 69,
      "pct_exprimes": 53.49,
      "pct_inscrits": 42.86
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 60,
      "pct_exprimes": 46.51,
      "pct_inscrits": 37.27
@@ -3291,17 +3291,17 @@
    "exprimes": 172,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 113,
      "pct_exprimes": 65.7,
      "pct_inscrits": 51.6
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 59,
      "pct_exprimes": 34.3,
      "pct_inscrits": 26.94
@@ -3318,7 +3318,7 @@
   },
   "95306": {
    "code_insee": "95306",
-   "nom": "Herblay-Sur-Seine",
+   "nom": "Herblay-sur-Seine",
    "code_circonscription": "03",
    "bureaux_de_vote": 21,
    "inscrits": 19684,
@@ -3329,17 +3329,17 @@
    "exprimes": 12941,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 8525,
      "pct_exprimes": 65.88,
      "pct_inscrits": 43.31
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 4416,
      "pct_exprimes": 34.12,
      "pct_inscrits": 22.43
@@ -3367,17 +3367,17 @@
    "exprimes": 346,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 186,
      "pct_exprimes": 53.76,
      "pct_inscrits": 40.79
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 160,
      "pct_exprimes": 46.24,
      "pct_inscrits": 35.09
@@ -3405,17 +3405,17 @@
    "exprimes": 122,
    "candidats": [
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 64,
      "pct_exprimes": 52.46,
      "pct_inscrits": 41.03
     },
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 58,
      "pct_exprimes": 47.54,
      "pct_inscrits": 37.18
@@ -3443,17 +3443,17 @@
    "exprimes": 6209,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 4046,
      "pct_exprimes": 65.16,
      "pct_inscrits": 46.22
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 2163,
      "pct_exprimes": 34.84,
      "pct_inscrits": 24.71
@@ -3470,7 +3470,7 @@
   },
   "95316": {
    "code_insee": "95316",
-   "nom": "Jagny-Sous-Bois",
+   "nom": "Jagny-sous-Bois",
    "code_circonscription": "09",
    "bureaux_de_vote": 1,
    "inscrits": 220,
@@ -3481,17 +3481,17 @@
    "exprimes": 155,
    "candidats": [
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 94,
      "pct_exprimes": 60.65,
      "pct_inscrits": 42.73
     },
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 61,
      "pct_exprimes": 39.35,
      "pct_inscrits": 27.73
@@ -3508,7 +3508,7 @@
   },
   "95323": {
    "code_insee": "95323",
-   "nom": "Jouy-Le-Moutier",
+   "nom": "Jouy-le-Moutier",
    "code_circonscription": "10",
    "bureaux_de_vote": 8,
    "inscrits": 11057,
@@ -3519,17 +3519,17 @@
    "exprimes": 6943,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 4675,
      "pct_exprimes": 67.33,
      "pct_inscrits": 42.28
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 2268,
      "pct_exprimes": 32.67,
      "pct_inscrits": 20.51
@@ -3557,17 +3557,17 @@
    "exprimes": 318,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 185,
      "pct_exprimes": 58.18,
      "pct_inscrits": 43.84
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 133,
      "pct_exprimes": 41.82,
      "pct_inscrits": 31.52
@@ -3595,17 +3595,17 @@
    "exprimes": 89,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 48,
      "pct_exprimes": 53.93,
      "pct_inscrits": 40.0
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 41,
      "pct_exprimes": 46.07,
      "pct_inscrits": 34.17
@@ -3633,17 +3633,17 @@
    "exprimes": 222,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 126,
      "pct_exprimes": 56.76,
      "pct_inscrits": 45.16
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 96,
      "pct_exprimes": 43.24,
      "pct_inscrits": 34.41
@@ -3671,17 +3671,17 @@
    "exprimes": 287,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 181,
      "pct_exprimes": 63.07,
      "pct_inscrits": 42.79
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 106,
      "pct_exprimes": 36.93,
      "pct_inscrits": 25.06
@@ -3709,17 +3709,17 @@
    "exprimes": 3770,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 2240,
      "pct_exprimes": 59.42,
      "pct_inscrits": 34.54
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 1530,
      "pct_exprimes": 40.58,
      "pct_inscrits": 23.59
@@ -3747,17 +3747,17 @@
    "exprimes": 2300,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 1330,
      "pct_exprimes": 57.83,
      "pct_inscrits": 39.0
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 970,
      "pct_exprimes": 42.17,
      "pct_inscrits": 28.45
@@ -3785,17 +3785,17 @@
    "exprimes": 824,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 424,
      "pct_exprimes": 51.46,
      "pct_inscrits": 34.73
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 400,
      "pct_exprimes": 48.54,
      "pct_inscrits": 32.76
@@ -3812,7 +3812,7 @@
   },
   "95355": {
    "code_insee": "95355",
-   "nom": "Magny-En-Vexin",
+   "nom": "Magny-en-Vexin",
    "code_circonscription": "01",
    "bureaux_de_vote": 5,
    "inscrits": 3667,
@@ -3823,17 +3823,17 @@
    "exprimes": 2463,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 1281,
      "pct_exprimes": 52.01,
      "pct_inscrits": 34.93
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 1182,
      "pct_exprimes": 47.99,
      "pct_inscrits": 32.23
@@ -3850,7 +3850,7 @@
   },
   "95365": {
    "code_insee": "95365",
-   "nom": "Mareil-En-France",
+   "nom": "Mareil-en-France",
    "code_circonscription": "09",
    "bureaux_de_vote": 1,
    "inscrits": 459,
@@ -3861,17 +3861,17 @@
    "exprimes": 294,
    "candidats": [
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 151,
      "pct_exprimes": 51.36,
      "pct_inscrits": 32.9
     },
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 143,
      "pct_exprimes": 48.64,
      "pct_inscrits": 31.15
@@ -3899,17 +3899,17 @@
    "exprimes": 1425,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 998,
      "pct_exprimes": 70.04,
      "pct_inscrits": 49.83
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 427,
      "pct_exprimes": 29.96,
      "pct_inscrits": 21.32
@@ -3937,17 +3937,17 @@
    "exprimes": 1614,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 875,
      "pct_exprimes": 54.21,
      "pct_inscrits": 36.02
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 739,
      "pct_exprimes": 45.79,
      "pct_inscrits": 30.42
@@ -3964,7 +3964,7 @@
   },
   "95371": {
    "code_insee": "95371",
-   "nom": "Marly-La-Ville",
+   "nom": "Marly-la-Ville",
    "code_circonscription": "09",
    "bureaux_de_vote": 4,
    "inscrits": 4032,
@@ -3975,17 +3975,17 @@
    "exprimes": 2551,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 1371,
      "pct_exprimes": 53.74,
      "pct_inscrits": 34.0
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 1180,
      "pct_exprimes": 46.26,
      "pct_inscrits": 29.27
@@ -4002,7 +4002,7 @@
   },
   "95379": {
    "code_insee": "95379",
-   "nom": "Maudétour-En-Vexin",
+   "nom": "Maudétour-en-Vexin",
    "code_circonscription": "01",
    "bureaux_de_vote": 1,
    "inscrits": 171,
@@ -4013,17 +4013,17 @@
    "exprimes": 132,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 77,
      "pct_exprimes": 58.33,
      "pct_inscrits": 45.03
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 55,
      "pct_exprimes": 41.67,
      "pct_inscrits": 32.16
@@ -4051,17 +4051,17 @@
    "exprimes": 31,
    "candidats": [
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 18,
      "pct_exprimes": 58.06,
      "pct_inscrits": 40.0
     },
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 13,
      "pct_exprimes": 41.94,
      "pct_inscrits": 28.89
@@ -4089,17 +4089,17 @@
    "exprimes": 2641,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 1588,
      "pct_exprimes": 60.13,
      "pct_inscrits": 40.82
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 1053,
      "pct_exprimes": 39.87,
      "pct_inscrits": 27.07
@@ -4127,17 +4127,17 @@
    "exprimes": 2474,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 1446,
      "pct_exprimes": 58.45,
      "pct_inscrits": 39.64
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 1028,
      "pct_exprimes": 41.55,
      "pct_inscrits": 28.18
@@ -4154,7 +4154,7 @@
   },
   "95394": {
    "code_insee": "95394",
-   "nom": "Méry-Sur-Oise",
+   "nom": "Méry-sur-Oise",
    "code_circonscription": "02",
    "bureaux_de_vote": 7,
    "inscrits": 6453,
@@ -4165,17 +4165,17 @@
    "exprimes": 4145,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 2539,
      "pct_exprimes": 61.25,
      "pct_inscrits": 39.35
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 1606,
      "pct_exprimes": 38.75,
      "pct_inscrits": 24.89
@@ -4203,17 +4203,17 @@
    "exprimes": 467,
    "candidats": [
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 260,
      "pct_exprimes": 55.67,
      "pct_inscrits": 41.01
     },
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 207,
      "pct_exprimes": 44.33,
      "pct_inscrits": 32.65
@@ -4241,17 +4241,17 @@
    "exprimes": 604,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 330,
      "pct_exprimes": 54.64,
      "pct_inscrits": 38.73
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 274,
      "pct_exprimes": 45.36,
      "pct_inscrits": 32.16
@@ -4279,17 +4279,17 @@
    "exprimes": 206,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 139,
      "pct_exprimes": 67.48,
      "pct_inscrits": 46.64
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 67,
      "pct_exprimes": 32.52,
      "pct_inscrits": 22.48
@@ -4306,7 +4306,7 @@
   },
   "95424": {
    "code_insee": "95424",
-   "nom": "Montigny-Lès-Cormeilles",
+   "nom": "Montigny-lès-Cormeilles",
    "code_circonscription": "03",
    "bureaux_de_vote": 13,
    "inscrits": 11953,
@@ -4317,17 +4317,17 @@
    "exprimes": 6871,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 4712,
      "pct_exprimes": 68.58,
      "pct_inscrits": 39.42
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 2159,
      "pct_exprimes": 31.42,
      "pct_inscrits": 18.06
@@ -4355,17 +4355,17 @@
    "exprimes": 1545,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 1022,
      "pct_exprimes": 66.15,
      "pct_inscrits": 46.18
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 523,
      "pct_exprimes": 33.85,
      "pct_inscrits": 23.63
@@ -4393,17 +4393,17 @@
    "exprimes": 4411,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 3218,
      "pct_exprimes": 72.95,
      "pct_inscrits": 42.7
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 1193,
      "pct_exprimes": 27.05,
      "pct_inscrits": 15.83
@@ -4431,17 +4431,17 @@
    "exprimes": 9122,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 6619,
      "pct_exprimes": 72.56,
      "pct_inscrits": 48.89
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 2503,
      "pct_exprimes": 27.44,
      "pct_inscrits": 18.49
@@ -4458,7 +4458,7 @@
   },
   "95429": {
    "code_insee": "95429",
-   "nom": "Montreuil-Sur-Epte",
+   "nom": "Montreuil-sur-Epte",
    "code_circonscription": "01",
    "bureaux_de_vote": 1,
    "inscrits": 329,
@@ -4469,17 +4469,17 @@
    "exprimes": 232,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 124,
      "pct_exprimes": 53.45,
      "pct_inscrits": 37.69
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 108,
      "pct_exprimes": 46.55,
      "pct_inscrits": 32.83
@@ -4507,17 +4507,17 @@
    "exprimes": 1747,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 990,
      "pct_exprimes": 56.67,
      "pct_inscrits": 37.51
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 757,
      "pct_exprimes": 43.33,
      "pct_inscrits": 28.69
@@ -4545,17 +4545,17 @@
    "exprimes": 744,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 423,
      "pct_exprimes": 56.85,
      "pct_inscrits": 37.63
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 321,
      "pct_exprimes": 43.15,
      "pct_inscrits": 28.56
@@ -4583,17 +4583,17 @@
    "exprimes": 67,
    "candidats": [
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 35,
      "pct_exprimes": 52.24,
      "pct_inscrits": 36.08
     },
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 32,
      "pct_exprimes": 47.76,
      "pct_inscrits": 32.99
@@ -4610,7 +4610,7 @@
   },
   "95445": {
    "code_insee": "95445",
-   "nom": "Nerville-La-Forêt",
+   "nom": "Nerville-la-Forêt",
    "code_circonscription": "02",
    "bureaux_de_vote": 1,
    "inscrits": 459,
@@ -4621,17 +4621,17 @@
    "exprimes": 338,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 212,
      "pct_exprimes": 62.72,
      "pct_inscrits": 46.19
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 126,
      "pct_exprimes": 37.28,
      "pct_inscrits": 27.45
@@ -4648,7 +4648,7 @@
   },
   "95446": {
    "code_insee": "95446",
-   "nom": "Nesles-La-Vallée",
+   "nom": "Nesles-la-Vallée",
    "code_circonscription": "01",
    "bureaux_de_vote": 1,
    "inscrits": 1514,
@@ -4659,17 +4659,17 @@
    "exprimes": 1067,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 683,
      "pct_exprimes": 64.01,
      "pct_inscrits": 45.11
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 384,
      "pct_exprimes": 35.99,
      "pct_inscrits": 25.36
@@ -4686,7 +4686,7 @@
   },
   "95447": {
    "code_insee": "95447",
-   "nom": "Neuilly-En-Vexin",
+   "nom": "Neuilly-en-Vexin",
    "code_circonscription": "01",
    "bureaux_de_vote": 1,
    "inscrits": 147,
@@ -4697,17 +4697,17 @@
    "exprimes": 119,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 69,
      "pct_exprimes": 57.98,
      "pct_inscrits": 46.94
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 50,
      "pct_exprimes": 42.02,
      "pct_inscrits": 34.01
@@ -4724,7 +4724,7 @@
   },
   "95450": {
    "code_insee": "95450",
-   "nom": "Neuville-Sur-Oise",
+   "nom": "Neuville-sur-Oise",
    "code_circonscription": "02",
    "bureaux_de_vote": 1,
    "inscrits": 1188,
@@ -4735,17 +4735,17 @@
    "exprimes": 885,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 624,
      "pct_exprimes": 70.51,
      "pct_inscrits": 52.53
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 261,
      "pct_exprimes": 29.49,
      "pct_inscrits": 21.97
@@ -4773,17 +4773,17 @@
    "exprimes": 423,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 246,
      "pct_exprimes": 58.16,
      "pct_inscrits": 40.66
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 177,
      "pct_exprimes": 41.84,
      "pct_inscrits": 29.26
@@ -4800,7 +4800,7 @@
   },
   "95456": {
    "code_insee": "95456",
-   "nom": "Noisy-Sur-Oise",
+   "nom": "Noisy-sur-Oise",
    "code_circonscription": "02",
    "bureaux_de_vote": 1,
    "inscrits": 439,
@@ -4811,17 +4811,17 @@
    "exprimes": 319,
    "candidats": [
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 162,
      "pct_exprimes": 50.78,
      "pct_inscrits": 36.9
     },
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 157,
      "pct_exprimes": 49.22,
      "pct_inscrits": 35.76
@@ -4849,17 +4849,17 @@
    "exprimes": 429,
    "candidats": [
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 228,
      "pct_exprimes": 53.15,
      "pct_inscrits": 39.65
     },
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 201,
      "pct_exprimes": 46.85,
      "pct_inscrits": 34.96
@@ -4887,17 +4887,17 @@
    "exprimes": 193,
    "candidats": [
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 97,
      "pct_exprimes": 50.26,
      "pct_inscrits": 35.79
     },
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 96,
      "pct_exprimes": 49.74,
      "pct_inscrits": 35.42
@@ -4925,17 +4925,17 @@
    "exprimes": 6924,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 4480,
      "pct_exprimes": 64.7,
      "pct_inscrits": 41.09
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 2444,
      "pct_exprimes": 35.3,
      "pct_inscrits": 22.41
@@ -4963,17 +4963,17 @@
    "exprimes": 2820,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 1739,
      "pct_exprimes": 61.67,
      "pct_inscrits": 40.47
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 1081,
      "pct_exprimes": 38.33,
      "pct_inscrits": 25.16
@@ -5001,17 +5001,17 @@
    "exprimes": 282,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 185,
      "pct_exprimes": 65.6,
      "pct_inscrits": 44.58
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 97,
      "pct_exprimes": 34.4,
      "pct_inscrits": 23.37
@@ -5039,17 +5039,17 @@
    "exprimes": 3446,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 1914,
      "pct_exprimes": 55.54,
      "pct_inscrits": 31.26
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 1532,
      "pct_exprimes": 44.46,
      "pct_inscrits": 25.02
@@ -5077,17 +5077,17 @@
    "exprimes": 3193,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 1847,
      "pct_exprimes": 57.85,
      "pct_inscrits": 34.25
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 1346,
      "pct_exprimes": 42.15,
      "pct_inscrits": 24.96
@@ -5115,17 +5115,17 @@
    "exprimes": 343,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 179,
      "pct_exprimes": 52.19,
      "pct_inscrits": 38.41
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 164,
      "pct_exprimes": 47.81,
      "pct_inscrits": 35.19
@@ -5153,17 +5153,17 @@
    "exprimes": 4000,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 2659,
      "pct_exprimes": 66.47,
      "pct_inscrits": 46.55
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 1341,
      "pct_exprimes": 33.52,
      "pct_inscrits": 23.48
@@ -5191,17 +5191,17 @@
    "exprimes": 46,
    "candidats": [
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 31,
      "pct_exprimes": 67.39,
      "pct_inscrits": 50.82
     },
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 15,
      "pct_exprimes": 32.61,
      "pct_inscrits": 24.59
@@ -5229,17 +5229,17 @@
    "exprimes": 71,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 39,
      "pct_exprimes": 54.93,
      "pct_inscrits": 39.0
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 32,
      "pct_exprimes": 45.07,
      "pct_inscrits": 32.0
@@ -5267,17 +5267,17 @@
    "exprimes": 10346,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 7135,
      "pct_exprimes": 68.96,
      "pct_inscrits": 41.96
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 3211,
      "pct_exprimes": 31.04,
      "pct_inscrits": 18.88
@@ -5305,17 +5305,17 @@
    "exprimes": 1861,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 1090,
      "pct_exprimes": 58.57,
      "pct_inscrits": 40.33
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 771,
      "pct_exprimes": 41.43,
      "pct_inscrits": 28.52
@@ -5332,7 +5332,7 @@
   },
   "95509": {
    "code_insee": "95509",
-   "nom": "Puiseux-En-France",
+   "nom": "Puiseux-en-France",
    "code_circonscription": "09",
    "bureaux_de_vote": 3,
    "inscrits": 2527,
@@ -5343,17 +5343,17 @@
    "exprimes": 1549,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 864,
      "pct_exprimes": 55.78,
      "pct_inscrits": 34.19
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 685,
      "pct_exprimes": 44.22,
      "pct_inscrits": 27.11
@@ -5381,17 +5381,17 @@
    "exprimes": 275,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 196,
      "pct_exprimes": 71.27,
      "pct_inscrits": 51.44
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 79,
      "pct_exprimes": 28.73,
      "pct_inscrits": 20.73
@@ -5419,17 +5419,17 @@
    "exprimes": 203,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 131,
      "pct_exprimes": 64.53,
      "pct_inscrits": 42.67
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 72,
      "pct_exprimes": 35.47,
      "pct_inscrits": 23.45
@@ -5446,7 +5446,7 @@
   },
   "95527": {
    "code_insee": "95527",
-   "nom": "Roissy-En-France",
+   "nom": "Roissy-en-France",
    "code_circonscription": "09",
    "bureaux_de_vote": 1,
    "inscrits": 1538,
@@ -5457,17 +5457,17 @@
    "exprimes": 984,
    "candidats": [
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 514,
      "pct_exprimes": 52.24,
      "pct_inscrits": 33.42
     },
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 470,
      "pct_exprimes": 47.76,
      "pct_inscrits": 30.56
@@ -5495,17 +5495,17 @@
    "exprimes": 442,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 237,
      "pct_exprimes": 53.62,
      "pct_inscrits": 36.57
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 205,
      "pct_exprimes": 46.38,
      "pct_inscrits": 31.64
@@ -5533,17 +5533,17 @@
    "exprimes": 611,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 337,
      "pct_exprimes": 55.16,
      "pct_inscrits": 36.47
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 274,
      "pct_exprimes": 44.84,
      "pct_inscrits": 29.65
@@ -5560,7 +5560,7 @@
   },
   "95539": {
    "code_insee": "95539",
-   "nom": "Saint-Brice-Sous-Forêt",
+   "nom": "Saint-Brice-sous-Forêt",
    "code_circonscription": "07",
    "bureaux_de_vote": 9,
    "inscrits": 8865,
@@ -5571,17 +5571,17 @@
    "exprimes": 5335,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 3414,
      "pct_exprimes": 63.99,
      "pct_inscrits": 38.51
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 1921,
      "pct_exprimes": 36.01,
      "pct_inscrits": 21.67
@@ -5598,7 +5598,7 @@
   },
   "95541": {
    "code_insee": "95541",
-   "nom": "Saint-Clair-Sur-Epte",
+   "nom": "Saint-Clair-sur-Epte",
    "code_circonscription": "01",
    "bureaux_de_vote": 1,
    "inscrits": 618,
@@ -5609,17 +5609,17 @@
    "exprimes": 399,
    "candidats": [
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 243,
      "pct_exprimes": 60.9,
      "pct_inscrits": 39.32
     },
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 156,
      "pct_exprimes": 39.1,
      "pct_inscrits": 25.24
@@ -5636,7 +5636,7 @@
   },
   "95543": {
    "code_insee": "95543",
-   "nom": "Saint-Cyr-En-Arthies",
+   "nom": "Saint-Cyr-en-Arthies",
    "code_circonscription": "01",
    "bureaux_de_vote": 1,
    "inscrits": 174,
@@ -5647,17 +5647,17 @@
    "exprimes": 129,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 77,
      "pct_exprimes": 59.69,
      "pct_inscrits": 44.25
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 52,
      "pct_exprimes": 40.31,
      "pct_inscrits": 29.89
@@ -5685,17 +5685,17 @@
    "exprimes": 505,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 310,
      "pct_exprimes": 61.39,
      "pct_inscrits": 44.29
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 195,
      "pct_exprimes": 38.61,
      "pct_inscrits": 27.86
@@ -5723,17 +5723,17 @@
    "exprimes": 8049,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 5840,
      "pct_exprimes": 72.56,
      "pct_inscrits": 43.8
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 2209,
      "pct_exprimes": 27.44,
      "pct_inscrits": 16.57
@@ -5750,7 +5750,7 @@
   },
   "95563": {
    "code_insee": "95563",
-   "nom": "Saint-Leu-La-Forêt",
+   "nom": "Saint-Leu-la-Forêt",
    "code_circonscription": "04",
    "bureaux_de_vote": 10,
    "inscrits": 11338,
@@ -5761,17 +5761,17 @@
    "exprimes": 7561,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 5336,
      "pct_exprimes": 70.57,
      "pct_inscrits": 47.06
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 2225,
      "pct_exprimes": 29.43,
      "pct_inscrits": 19.62
@@ -5788,7 +5788,7 @@
   },
   "95566": {
    "code_insee": "95566",
-   "nom": "Saint-Martin-Du-Tertre",
+   "nom": "Saint-Martin-du-Tertre",
    "code_circonscription": "02",
    "bureaux_de_vote": 2,
    "inscrits": 1823,
@@ -5799,17 +5799,17 @@
    "exprimes": 1091,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 575,
      "pct_exprimes": 52.7,
      "pct_inscrits": 31.54
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 516,
      "pct_exprimes": 47.3,
      "pct_inscrits": 28.3
@@ -5826,7 +5826,7 @@
   },
   "95572": {
    "code_insee": "95572",
-   "nom": "Saint-Ouen-L'Aumône",
+   "nom": "Saint-Ouen-l'Aumône",
    "code_circonscription": "02",
    "bureaux_de_vote": 12,
    "inscrits": 13031,
@@ -5837,17 +5837,17 @@
    "exprimes": 7668,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 5152,
      "pct_exprimes": 67.19,
      "pct_inscrits": 39.54
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 2516,
      "pct_exprimes": 32.81,
      "pct_inscrits": 19.31
@@ -5875,17 +5875,17 @@
    "exprimes": 3694,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 2505,
      "pct_exprimes": 67.81,
      "pct_inscrits": 45.01
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 1189,
      "pct_exprimes": 32.19,
      "pct_inscrits": 21.37
@@ -5913,17 +5913,17 @@
    "exprimes": 1382,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 931,
      "pct_exprimes": 67.37,
      "pct_inscrits": 47.99
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 451,
      "pct_exprimes": 32.63,
      "pct_inscrits": 23.25
@@ -5951,17 +5951,17 @@
    "exprimes": 10435,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 7304,
      "pct_exprimes": 70.0,
      "pct_inscrits": 44.15
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 3131,
      "pct_exprimes": 30.0,
      "pct_inscrits": 18.93
@@ -5989,17 +5989,17 @@
    "exprimes": 371,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 225,
      "pct_exprimes": 60.65,
      "pct_inscrits": 45.27
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 146,
      "pct_exprimes": 39.35,
      "pct_inscrits": 29.38
@@ -6017,7 +6017,7 @@
   "95585": {
    "code_insee": "95585",
    "nom": "Sarcelles",
-   "code_circonscription": "08",
+   "code_circonscription": "07",
    "bureaux_de_vote": 30,
    "inscrits": 28301,
    "abstentions": 12720,
@@ -6027,17 +6027,17 @@
    "exprimes": 14324,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 9722,
      "pct_exprimes": 67.87,
      "pct_inscrits": 34.35
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 4602,
      "pct_exprimes": 32.13,
      "pct_inscrits": 16.26
@@ -6065,17 +6065,17 @@
    "exprimes": 701,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 405,
      "pct_exprimes": 57.77,
      "pct_inscrits": 40.99
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 296,
      "pct_exprimes": 42.23,
      "pct_inscrits": 29.96
@@ -6103,17 +6103,17 @@
    "exprimes": 552,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 306,
      "pct_exprimes": 55.43,
      "pct_inscrits": 39.79
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 246,
      "pct_exprimes": 44.57,
      "pct_inscrits": 31.99
@@ -6130,7 +6130,7 @@
   },
   "95598": {
    "code_insee": "95598",
-   "nom": "Soisy-Sous-Montmorency",
+   "nom": "Soisy-sous-Montmorency",
    "code_circonscription": "06",
    "bureaux_de_vote": 10,
    "inscrits": 11734,
@@ -6141,17 +6141,17 @@
    "exprimes": 7255,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 5168,
      "pct_exprimes": 71.23,
      "pct_inscrits": 44.04
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 2087,
      "pct_exprimes": 28.77,
      "pct_inscrits": 17.79
@@ -6179,17 +6179,17 @@
    "exprimes": 1530,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 775,
      "pct_exprimes": 50.65,
      "pct_inscrits": 32.43
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 755,
      "pct_exprimes": 49.35,
      "pct_inscrits": 31.59
@@ -6217,17 +6217,17 @@
    "exprimes": 11223,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 7438,
      "pct_exprimes": 66.27,
      "pct_inscrits": 42.95
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 3785,
      "pct_exprimes": 33.73,
      "pct_inscrits": 21.86
@@ -6255,17 +6255,17 @@
    "exprimes": 162,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 112,
      "pct_exprimes": 69.14,
      "pct_inscrits": 48.07
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 50,
      "pct_exprimes": 30.86,
      "pct_inscrits": 21.46
@@ -6293,17 +6293,17 @@
    "exprimes": 25,
    "candidats": [
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 18,
      "pct_exprimes": 72.0,
      "pct_inscrits": 66.67
     },
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 7,
      "pct_exprimes": 28.0,
      "pct_inscrits": 25.93
@@ -6331,17 +6331,17 @@
    "exprimes": 1443,
    "candidats": [
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 732,
      "pct_exprimes": 50.73,
      "pct_inscrits": 30.12
     },
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 711,
      "pct_exprimes": 49.27,
      "pct_inscrits": 29.26
@@ -6369,17 +6369,17 @@
    "exprimes": 680,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 388,
      "pct_exprimes": 57.06,
      "pct_inscrits": 40.42
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 292,
      "pct_exprimes": 42.94,
      "pct_inscrits": 30.42
@@ -6407,17 +6407,17 @@
    "exprimes": 342,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 203,
      "pct_exprimes": 59.36,
      "pct_inscrits": 45.41
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 139,
      "pct_exprimes": 40.64,
      "pct_inscrits": 31.1
@@ -6445,17 +6445,17 @@
    "exprimes": 663,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 389,
      "pct_exprimes": 58.67,
      "pct_inscrits": 40.19
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 274,
      "pct_exprimes": 41.33,
      "pct_inscrits": 28.31
@@ -6483,17 +6483,17 @@
    "exprimes": 39,
    "candidats": [
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 32,
      "pct_exprimes": 82.05,
      "pct_inscrits": 54.24
     },
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 7,
      "pct_exprimes": 17.95,
      "pct_inscrits": 11.86
@@ -6521,17 +6521,17 @@
    "exprimes": 7174,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 5214,
      "pct_exprimes": 72.68,
      "pct_inscrits": 45.23
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 1960,
      "pct_exprimes": 27.32,
      "pct_inscrits": 17.0
@@ -6559,17 +6559,17 @@
    "exprimes": 1083,
    "candidats": [
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 556,
      "pct_exprimes": 51.34,
      "pct_inscrits": 31.15
     },
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 527,
      "pct_exprimes": 48.66,
      "pct_inscrits": 29.52
@@ -6597,17 +6597,17 @@
    "exprimes": 432,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 288,
      "pct_exprimes": 66.67,
      "pct_inscrits": 47.37
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 144,
      "pct_exprimes": 33.33,
      "pct_inscrits": 23.68
@@ -6635,17 +6635,17 @@
    "exprimes": 2698,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 1422,
      "pct_exprimes": 52.71,
      "pct_inscrits": 35.32
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 1276,
      "pct_exprimes": 47.29,
      "pct_inscrits": 31.69
@@ -6662,7 +6662,7 @@
   },
   "95656": {
    "code_insee": "95656",
-   "nom": "Vienne-En-Arthies",
+   "nom": "Vienne-en-Arthies",
    "code_circonscription": "01",
    "bureaux_de_vote": 1,
    "inscrits": 332,
@@ -6673,17 +6673,17 @@
    "exprimes": 247,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 142,
      "pct_exprimes": 57.49,
      "pct_inscrits": 42.77
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 105,
      "pct_exprimes": 42.51,
      "pct_inscrits": 31.63
@@ -6711,17 +6711,17 @@
    "exprimes": 626,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 391,
      "pct_exprimes": 62.46,
      "pct_inscrits": 44.03
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 235,
      "pct_exprimes": 37.54,
      "pct_inscrits": 26.46
@@ -6738,7 +6738,7 @@
   },
   "95660": {
    "code_insee": "95660",
-   "nom": "Villaines-Sous-Bois",
+   "nom": "Villaines-sous-Bois",
    "code_circonscription": "02",
    "bureaux_de_vote": 1,
    "inscrits": 536,
@@ -6749,17 +6749,17 @@
    "exprimes": 386,
    "candidats": [
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 194,
      "pct_exprimes": 50.26,
      "pct_inscrits": 36.19
     },
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 192,
      "pct_exprimes": 49.74,
      "pct_inscrits": 35.82
@@ -6787,17 +6787,17 @@
    "exprimes": 546,
    "candidats": [
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 294,
      "pct_exprimes": 53.85,
      "pct_inscrits": 36.93
     },
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 252,
      "pct_exprimes": 46.15,
      "pct_inscrits": 31.66
@@ -6814,7 +6814,7 @@
   },
   "95676": {
    "code_insee": "95676",
-   "nom": "Villers-En-Arthies",
+   "nom": "Villers-en-Arthies",
    "code_circonscription": "01",
    "bureaux_de_vote": 1,
    "inscrits": 389,
@@ -6825,17 +6825,17 @@
    "exprimes": 288,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 149,
      "pct_exprimes": 51.74,
      "pct_inscrits": 38.3
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 139,
      "pct_exprimes": 48.26,
      "pct_inscrits": 35.73
@@ -6863,17 +6863,17 @@
    "exprimes": 444,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 248,
      "pct_exprimes": 55.86,
      "pct_inscrits": 40.99
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 196,
      "pct_exprimes": 44.14,
      "pct_inscrits": 32.4
@@ -6890,7 +6890,7 @@
   },
   "95680": {
    "code_insee": "95680",
-   "nom": "Villiers-Le-Bel",
+   "nom": "Villiers-le-Bel",
    "code_circonscription": "08",
    "bureaux_de_vote": 13,
    "inscrits": 12414,
@@ -6901,17 +6901,17 @@
    "exprimes": 6702,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 4541,
      "pct_exprimes": 67.76,
      "pct_inscrits": 36.58
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 2161,
      "pct_exprimes": 32.24,
      "pct_inscrits": 17.41
@@ -6928,7 +6928,7 @@
   },
   "95682": {
    "code_insee": "95682",
-   "nom": "Villiers-Le-Sec",
+   "nom": "Villiers-le-Sec",
    "code_circonscription": "09",
    "bureaux_de_vote": 1,
    "inscrits": 110,
@@ -6939,17 +6939,17 @@
    "exprimes": 80,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 50,
      "pct_exprimes": 62.5,
      "pct_inscrits": 45.45
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 30,
      "pct_exprimes": 37.5,
      "pct_inscrits": 27.27
@@ -6966,7 +6966,7 @@
   },
   "95690": {
    "code_insee": "95690",
-   "nom": "Wy-Dit-Joli-Village",
+   "nom": "Wy-dit-Joli-Village",
    "code_circonscription": "01",
    "bureaux_de_vote": 1,
    "inscrits": 285,
@@ -6977,17 +6977,17 @@
    "exprimes": 215,
    "candidats": [
     {
-     "nuance": null,
      "nom": "MACRON",
      "prenom": "Emmanuel",
+     "nuance": null,
      "voix": 129,
      "pct_exprimes": 60.0,
      "pct_inscrits": 45.26
     },
     {
-     "nuance": null,
      "nom": "LE PEN",
      "prenom": "Marine",
+     "nuance": null,
      "voix": 86,
      "pct_exprimes": 40.0,
      "pct_inscrits": 30.18

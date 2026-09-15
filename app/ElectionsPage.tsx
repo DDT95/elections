@@ -16,6 +16,10 @@ async function fetchJson<T>(path: string): Promise<T> {
   return res.json();
 }
 
+function round2(n: number): number {
+  return Math.round(n * 100) / 100;
+}
+
 function downloadBlob(filename: string, content: string, type: string) {
   const blob = new Blob([content], { type });
   const url = URL.createObjectURL(blob);
@@ -56,14 +60,13 @@ export default function ElectionsPage() {
 
   const [communesGeo, setCommunesGeo] = useState<any>(null);
   const [circoGeo, setCircoGeo] = useState<any>(null);
+  const [bvGeo, setBvGeo] = useState<any>(null);
   const [electionData, setElectionData] = useState<Record<string, ElectionCommuneFile>>({});
   const [circoData, setCircoData] = useState<Record<string, ElectionCircoFile>>({});
   const [bvData, setBvData] = useState<Record<string, any>>({});
   const [inseeStatus, setInseeStatus] = useState<"a_completer" | "reel">("a_completer");
 
   const [selectedCode, setSelectedCode] = useState<string | null>(null);
-  const [selectedBv, setSelectedBv] = useState<{ commune: string; bureau: any } | null>(null);
-  const [bvCommuneFilter, setBvCommuneFilter] = useState<string>("");
   const [sources, setSources] = useState<SourceEntry[]>([]);
   const [loading, setLoading] = useState(true);
   const [exportOpen, setExportOpen] = useState(false);
@@ -80,11 +83,13 @@ export default function ElectionsPage() {
     Promise.all([
       fetchJson<any>("/data/geo/communes-95.geojson"),
       fetchJson<any>("/data/geo/circonscriptions-95.geojson"),
+      fetchJson<any>("/data/geo/bureaux-vote-95.geojson").catch(() => null),
       fetchJson<any>("/data/insee/insee-95-communes.json").catch(() => ({ status: "a_completer" })),
     ])
-      .then(([communes, circo, insee]) => {
+      .then(([communes, circo, bv, insee]) => {
         setCommunesGeo(communes);
         setCircoGeo(circo);
+        setBvGeo(bv);
         setInseeStatus(insee.status || "a_completer");
       })
       .finally(() => setLoading(false));
@@ -106,13 +111,40 @@ export default function ElectionsPage() {
   }, [dataKey, election.status]);
 
   useEffect(() => {
-    if (scale !== "bv" || election.status !== "reel") return;
+    if (election.status !== "reel") return;
     const bvKey = `${dataKey}-bv`;
-    if (bvData[bvKey]) return;
+    if (bvData[bvKey] || bvData[bvKey] === null) return;
     fetchJson<any>(`/data/elections/${dataKey}-bv.json`)
       .then((d) => setBvData((prev) => ({ ...prev, [bvKey]: d })))
-      .catch(() => {});
-  }, [scale, dataKey, election.status]);
+      .catch(() => setBvData((prev) => ({ ...prev, [bvKey]: null })));
+  }, [dataKey, election.status]);
+
+  // Normalise un enregistrement "bureau" (schéma brut) vers un UnitResult exploitable par
+  // les mêmes fonctions (metricInfo, CandidateTable, fiche…) que commune/circonscription.
+  function normalizeBureau(b: any): UnitResult {
+    const inscrits = b.inscrits || 1;
+    const exprimes = b.exprimes || 1;
+    const cands = (b.candidats || []).map((c: any) => ({
+      ...c,
+      pct_exprimes: c.pct_exprimes ?? round2((c.voix * 100) / exprimes),
+      pct_inscrits: c.pct_inscrits ?? round2((c.voix * 100) / inscrits),
+    }));
+    return {
+      code_insee: b.code_insee,
+      nom: `${b.nom_commune ?? ""} — bureau ${b.code_bv ?? ""}`,
+      code_circonscription: b.code_circonscription ?? null,
+      inscrits: b.inscrits,
+      abstentions: b.abstentions,
+      votants: b.votants,
+      blancs: b.blancs,
+      nuls: b.nuls,
+      exprimes: b.exprimes,
+      pct_abstention: b.pct_abstention ?? round2((b.abstentions * 100) / inscrits),
+      pct_participation: b.pct_participation ?? round2((b.votants * 100) / inscrits),
+      candidats: cands,
+      tete: cands[0] ? { nom: cands[0].nom, prenom: cands[0].prenom, nuance: cands[0].nuance, pct_exprimes: cands[0].pct_exprimes } : undefined,
+    };
+  }
 
   // Liste des candidats disponibles pour l'élection courante (pour le sélecteur "score d'un candidat")
   const candidateList = useMemo(() => {
@@ -211,7 +243,33 @@ export default function ElectionsPage() {
       map.removeLayer(layerRef.current);
       layerRef.current = null;
     }
-    if (scale === "bv" || scale === "canton") return; // pas de polygones pour ces échelles
+    if (scale === "canton") return; // pas de contours pour cette échelle dans cette version
+    if (scale === "bv") {
+      const bvBureaux = bvData[`${dataKey}-bv`]?.bureaux;
+      if (!bvGeo || !bvBureaux) return;
+      const layer = L.geoJSON(bvGeo, {
+        style: (feature: any) => {
+          const code = feature.properties.codeBureauVote;
+          const b = bvBureaux[code];
+          const info = b ? metricInfo(normalizeBureau(b)) : null;
+          return { color: "#fff", weight: 0.5, fillColor: info?.color ?? "#e9edf3", fillOpacity: info ? 0.82 : 0.35 };
+        },
+        onEachFeature: (feature: any, lyr: any) => {
+          const code = feature.properties.codeBureauVote;
+          const b = bvBureaux[code];
+          const name = `${feature.properties.nomCommune} — bureau ${feature.properties.numeroBureauVote}`;
+          lyr.bindTooltip(b ? `<b>${name}</b><br/>${metricInfo(normalizeBureau(b)).label}` : `${name}<br/>Pas de résultat`, {
+            sticky: true,
+            className: "elec-tooltip",
+          });
+          lyr.on("click", () => setSelectedCode(code));
+          lyr.on("mouseover", () => lyr.setStyle({ weight: 1.8, color: "#000091" }));
+          lyr.on("mouseout", () => lyr.setStyle({ weight: 0.5, color: "#fff" }));
+        },
+      }).addTo(map);
+      layerRef.current = layer;
+      return;
+    }
     const geo = scale === "circonscription" ? circoGeo : communesGeo;
     const dataset = scale === "circonscription" ? circoData[`${dataKey}-circo`]?.circonscriptions : current?.communes;
     if (!geo || !dataset) return;
@@ -234,19 +292,22 @@ export default function ElectionsPage() {
       },
     }).addTo(map);
     layerRef.current = layer;
-  }, [scale, communesGeo, circoGeo, current, circoData, dataKey, metric, scoreCandidat]);
+  }, [scale, communesGeo, circoGeo, bvGeo, bvData, current, circoData, dataKey, metric, scoreCandidat]);
 
   const selectedUnit: UnitResult | null = useMemo(() => {
     if (!selectedCode) return null;
     if (scale === "circonscription") return circoData[`${dataKey}-circo`]?.circonscriptions[selectedCode] ?? null;
+    if (scale === "bv") {
+      const b = bvData[`${dataKey}-bv`]?.bureaux?.[selectedCode];
+      return b ? normalizeBureau(b) : null;
+    }
     return current?.communes[selectedCode] ?? null;
-  }, [selectedCode, scale, current, circoData, dataKey]);
+  }, [selectedCode, scale, current, circoData, bvData, dataKey]);
 
-  const drawerOpen = !!selectedUnit || !!selectedBv;
+  const drawerOpen = !!selectedUnit;
 
   function resetSelection() {
     setSelectedCode(null);
-    setSelectedBv(null);
   }
 
   function recenter() {
@@ -256,14 +317,25 @@ export default function ElectionsPage() {
   }
 
   // ---- Export GeoJSON ----
+  function layerGeoAndCodeOf(f: any): string {
+    if (scale === "circonscription") return f.properties.code_circonscription;
+    if (scale === "bv") return f.properties.codeBureauVote;
+    return f.properties.code;
+  }
+
   function exportLayerGeoJSON() {
-    const geo = scale === "circonscription" ? circoGeo : communesGeo;
+    const geo = scale === "circonscription" ? circoGeo : scale === "bv" ? bvGeo : communesGeo;
     if (!geo) return;
-    const dataset = scale === "circonscription" ? circoData[`${dataKey}-circo`]?.circonscriptions : current?.communes;
+    const dataset =
+      scale === "circonscription"
+        ? circoData[`${dataKey}-circo`]?.circonscriptions
+        : scale === "bv"
+          ? bvData[`${dataKey}-bv`]?.bureaux
+          : current?.communes;
     const enriched = {
       ...geo,
       features: geo.features.map((f: any) => {
-        const code = scale === "circonscription" ? f.properties.code_circonscription : f.properties.code;
+        const code = layerGeoAndCodeOf(f);
         const u = dataset?.[code];
         return { ...f, properties: { ...f.properties, resultats: u ?? null } };
       }),
@@ -273,10 +345,8 @@ export default function ElectionsPage() {
 
   function exportFeatureGeoJSON() {
     if (!selectedUnit) return;
-    const geo = scale === "circonscription" ? circoGeo : communesGeo;
-    const feature = geo?.features.find((f: any) =>
-      scale === "circonscription" ? f.properties.code_circonscription === selectedCode : f.properties.code === selectedCode,
-    );
+    const geo = scale === "circonscription" ? circoGeo : scale === "bv" ? bvGeo : communesGeo;
+    const feature = geo?.features.find((f: any) => layerGeoAndCodeOf(f) === selectedCode);
     if (!feature) return;
     downloadBlob(`${selectedUnit.nom}-${dataKey}.geojson`, JSON.stringify({ type: "Feature", ...feature, properties: { ...feature.properties, resultats: selectedUnit } }), "application/geo+json");
   }
@@ -295,21 +365,6 @@ export default function ElectionsPage() {
     };
     window.open(`${basePath}/print.html`, "_blank", "noopener");
   }
-
-  // ---- Bar chart croisement sociodémographique (placeholder tant que l'INSEE n'est pas chargé) ----
-  const bureauxDisponibles = useMemo(() => {
-    if (!current) return [];
-    return Object.values(current.communes)
-      .filter((c) => !bvCommuneFilter || c.nom.toLowerCase().includes(bvCommuneFilter.toLowerCase()))
-      .sort((a, b) => a.nom.localeCompare(b.nom, "fr"));
-  }, [current, bvCommuneFilter]);
-
-  const selectedCommuneBv = useMemo(() => {
-    if (scale !== "bv" || !selectedCode) return null;
-    const d = bvData[`${dataKey}-bv`];
-    if (!d) return null;
-    return Object.entries(d.bureaux as Record<string, any>).filter(([, b]) => b.code_insee === selectedCode);
-  }, [scale, selectedCode, bvData, dataKey]);
 
   return (
     <main className="elec-page">
@@ -330,7 +385,7 @@ export default function ElectionsPage() {
             <i />
             <span>
               <strong>Données contrôlées</strong>
-              <small>Présidentielle 2022 · sources réelles</small>
+              <small>4 scrutins réels · bureaux de vote géolocalisés</small>
             </span>
           </div>
         </div>
@@ -366,9 +421,8 @@ export default function ElectionsPage() {
             ))}
           </div>
           {scale === "bv" && (
-            <p className="elec-scale-note warn">
-              Échelle bureau de vote : couche cartographique à venir (nécessite géocodage IGN/BAN). Les résultats réels par bureau sont
-              toutefois disponibles ci-dessous, en liste, pour la Présidentielle 2022.
+            <p className="elec-scale-note">
+              Échelle bureau de vote : contours réels (810 bureaux, IGN/INSEE). Cliquez un bureau sur la carte pour sa fiche.
             </p>
           )}
           {scale === "canton" && (
@@ -415,7 +469,7 @@ export default function ElectionsPage() {
             </p>
           )}
 
-          {election.status === "reel" && scale !== "bv" && scale !== "canton" && (
+          {election.status === "reel" && scale !== "canton" && (
             <>
               <div className="elec-sidebar-block-title">Indicateur cartographié</div>
               <div className="elec-pillgroup cols-1">
@@ -440,40 +494,6 @@ export default function ElectionsPage() {
                 </select>
               )}
               <Legend metric={metric} scoreCandidat={scoreCandidat} current={current} />
-            </>
-          )}
-
-          {scale === "bv" && election.status === "reel" && (
-            <>
-              <div className="elec-sidebar-block-title">Rechercher une commune</div>
-              <input
-                className="elec-select"
-                placeholder="Nom de commune…"
-                value={bvCommuneFilter}
-                onChange={(e) => setBvCommuneFilter(e.target.value)}
-              />
-              <div style={{ maxHeight: 220, overflow: "auto", margin: "0 20px 12px", border: "1px solid #e1e6ed", borderRadius: 10 }}>
-                {bureauxDisponibles.slice(0, 40).map((c) => (
-                  <button
-                    key={c.code_insee}
-                    type="button"
-                    onClick={() => setSelectedCode(c.code_insee!)}
-                    style={{
-                      display: "block",
-                      width: "100%",
-                      textAlign: "left",
-                      padding: "8px 10px",
-                      border: 0,
-                      borderBottom: "1px solid #eef1f5",
-                      background: selectedCode === c.code_insee ? "#eef1ff" : "#fff",
-                      fontSize: 10.5,
-                      cursor: "pointer",
-                    }}
-                  >
-                    {c.nom} <span style={{ color: "#8892a0" }}>· {c.bureaux_de_vote} BV</span>
-                  </button>
-                ))}
-              </div>
             </>
           )}
 
@@ -537,7 +557,7 @@ export default function ElectionsPage() {
 
         <section className="elec-map-shell">
           <div ref={mapNode} className="elec-map" aria-label="Carte électorale du Val-d'Oise" />
-          {(scale === "bv" || scale === "canton") && (
+          {scale === "canton" && (
             <div
               style={{
                 position: "absolute",
@@ -550,9 +570,24 @@ export default function ElectionsPage() {
               }}
             >
               <div style={{ maxWidth: 360, padding: 18, background: "#070047f0", color: "#fff", borderRadius: 14, fontSize: 12, textAlign: "center" }}>
-                {scale === "bv"
-                  ? "Échelle bureau de vote : couche à venir (nécessite géocodage IGN/BAN). Utilisez la liste dans le panneau de gauche pour consulter les résultats réels par bureau."
-                  : "Échelle canton : contours et résultats à compléter."}
+                Échelle canton : contours et résultats à compléter.
+              </div>
+            </div>
+          )}
+          {scale === "bv" && election.status === "reel" && !bvData[`${dataKey}-bv`] && (
+            <div
+              style={{
+                position: "absolute",
+                inset: 0,
+                zIndex: 400,
+                display: "grid",
+                placeItems: "center",
+                background: "#eef1f7cc",
+                pointerEvents: "none",
+              }}
+            >
+              <div style={{ maxWidth: 360, padding: 18, background: "#070047f0", color: "#fff", borderRadius: 14, fontSize: 12, textAlign: "center" }}>
+                Résultats par bureau de vote non disponibles pour ce scrutin (voir DATA.md).
               </div>
             </div>
           )}
@@ -560,7 +595,7 @@ export default function ElectionsPage() {
             <i />
             <span>
               <strong>{drawerOpen ? "Fiche disponible" : "Sélectionnez une unité"}</strong>
-              <small>{drawerOpen ? selectedUnit?.nom || selectedBv?.commune : "Cliquez sur la carte ou choisissez un bureau"}</small>
+              <small>{drawerOpen ? selectedUnit?.nom : "Cliquez sur la carte ou choisissez un bureau"}</small>
             </span>
           </div>
         </section>
@@ -570,7 +605,7 @@ export default function ElectionsPage() {
             <small>
               {SCALES.find((s) => s.id === scale)?.label?.toUpperCase()} · {election.shortLabel.toUpperCase()} · {tour.label}
             </small>
-            <h2>{selectedUnit?.nom || (selectedCommuneBv && selectedCommuneBv[0]?.[1]?.nom_commune) || "—"}</h2>
+            <h2>{selectedUnit?.nom || "—"}</h2>
             <p>
               {selectedUnit?.code_insee ? `Code INSEE ${selectedUnit.code_insee}` : selectedUnit?.code_circonscription ? `Code ${selectedUnit.code_circonscription}` : ""}
             </p>
@@ -597,8 +632,12 @@ export default function ElectionsPage() {
                     <Kpi label="Nuls" value={selectedUnit.nuls.toLocaleString("fr-FR")} />
                   </div>
                 </Section>
-                <Section title="Résultats par candidat" state={`${selectedUnit.candidats.length} candidats`}>
-                  <CandidateTable candidats={selectedUnit.candidats} />
+                <Section title="Résultats par candidat" state={selectedUnit.candidats.length ? `${selectedUnit.candidats.length} candidats` : "À compléter"}>
+                  {selectedUnit.candidats.length ? (
+                    <CandidateTable candidats={selectedUnit.candidats} />
+                  ) : (
+                    <p className="elec-empty">Détail par liste/candidat non chargé pour ce scrutin (participation réelle disponible ci-dessus). Voir DATA.md.</p>
+                  )}
                 </Section>
                 <Section title="Croisement sociodémographique" state={inseeStatus === "a_completer" ? "À compléter" : "Disponible"}>
                   {inseeStatus === "a_completer" ? (
@@ -613,26 +652,11 @@ export default function ElectionsPage() {
               </div>
             </>
           )}
-          {!selectedUnit && selectedCommuneBv && selectedCommuneBv.length > 0 && (
-            <div className="elec-body">
-              <Section title={`Bureaux de vote — ${selectedCommuneBv[0][1].nom_commune}`} state={`${selectedCommuneBv.length} bureaux`}>
-                {selectedCommuneBv.map(([key, b]: any) => (
-                  <div key={key} className="elec-row" style={{ marginBottom: 8 }}>
-                    <b>Bureau {b.code_bv}</b>
-                    <span>
-                      Inscrits {b.inscrits} · Abst. {b.inscrits ? Math.round((b.abstentions * 100) / b.inscrits) : 0} % · Tête :{" "}
-                      {(b.candidats?.[0]?.nom ?? "—")} ({b.candidats?.[0]?.pct_exprimes?.toFixed(1) ?? "—"} %)
-                    </span>
-                  </div>
-                ))}
-              </Section>
-            </div>
-          )}
         </aside>
       </div>
       <footer className="elec-footer">
         <span>Atlas électoral du Val-d'Oise — DDT 95 · module de l'Atlas territorial</span>
-        <span>Présidentielle 2022 réelle · autres scrutins à compléter</span>
+        <span>Présidentielle 2022, Législatives 2024, Européennes 2024, Municipales 2020 · données réelles</span>
       </footer>
 
       <dialog ref={sourceDialog} className="elec-source-dialog">
