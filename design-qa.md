@@ -1,5 +1,16 @@
 # Design QA
 
+## 15 septembre 2026 — volet de synthèse communal
+
+- [x] Ordre de lecture : profil, participation, résultats, évolution, sensibilités.
+- [x] Premiers tours retirés hors présidentielles ; dernier tour disponible utilisé.
+- [x] Résultats limités aux quatre premiers et regroupés par élection.
+- [x] Couleur distincte par scrutin et échelle des barres de score fixée à 0–100 %.
+- [x] Libellé du scrutin visible sous chaque valeur d’évolution.
+- [x] Fiche PDF A4 reprenant les cinq blocs, les sources et les précautions de lecture.
+- [x] Actions d’impression et d’export maintenues en bas du volet.
+- [x] Construction GitHub et dix tests de cohérence des données validés.
+
 - Source visual truth: `/var/folders/3h/px_6bwl96w50x8y34bkz_k_80000gn/T/TemporaryItems/NSIRD_screencaptureui_xYSZXd/Capture d’écran 2026-09-15 à 12.28.51.png`
 - Source pixels: 2730 × 1966, browser chrome excluded from the visual comparison.
 - Implementation: `http://127.0.0.1:5173/?review=switches`

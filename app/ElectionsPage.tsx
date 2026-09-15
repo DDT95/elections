@@ -538,6 +538,9 @@ export default function ElectionsPage() {
         scale: SCALES.find((item) => item.id === scale)?.label ?? scale,
         coverage: 1,
         source: electionSources,
+        snapshots: communeSnapshots,
+        socio: selectedSocio,
+        populationHistory: selectedCode ? populationData[selectedCode] ?? [] : [],
         date: new Date().toISOString(),
       }),
     );
@@ -771,7 +774,20 @@ export default function ElectionsPage() {
           {selectedUnit && (
             <>
               <div className="elec-body">
+                {scale === "commune" && selectedSocio && (
+                  <Section title="Profil sociodémographique" state="INSEE RP 2022">
+                    <div className="socio-profile">
+                      <div className="socio-pop"><span>Population</span><strong>{Math.round(selectedSocio.population).toLocaleString("fr-FR")}</strong><small>habitants estimés</small></div>
+                      <div className="socio-bars">
+                        {[{label:"15 à 24 ans",value:selectedSocio.jeunes,color:"#00a7b5"},{label:"65 ans ou plus",value:selectedSocio.seniors,color:"#a558a0"},{label:"Diplôme supérieur",value:selectedSocio.diplomesSup,color:"#18753c"}].map(item => <div key={item.label}><span><b>{item.label}</b><strong>{item.value.toFixed(1)} %</strong></span><i><em style={{width:`${Math.min(100,item.value)}%`,background:item.color}}/></i></div>)}
+                      </div>
+                    </div>
+                    {selectedCode && populationData[selectedCode]?.length ? <PopulationSparkline data={populationData[selectedCode]} /> : null}
+                    <p className="elec-context-note">Recensement INSEE 2022. Ces données décrivent les habitants de la commune.</p>
+                  </Section>
+                )}
                 <Section title="Participation" state="Données réelles">
+                  <div className="participation-gauge"><span style={{width:`${selectedUnit.pct_participation}%`}}/><b>{selectedUnit.pct_participation.toFixed(1)} %</b></div>
                   <div className="elec-kpis">
                     <Kpi label="Inscrits" value={selectedUnit.inscrits.toLocaleString("fr-FR")} />
                     <Kpi label="Votants" value={selectedUnit.votants.toLocaleString("fr-FR")} />
@@ -782,35 +798,14 @@ export default function ElectionsPage() {
                   </div>
                 </Section>
                 {scale === "commune" ? (
-                  <CommuneSynthesis snapshots={communeSnapshots} />
+                  <>
+                    <CommuneSynthesis snapshots={communeSnapshots} mode="results" />
+                    <CommuneSynthesis snapshots={communeSnapshots} mode="families" />
+                    <CommuneSynthesis snapshots={communeSnapshots} mode="sensitivities" />
+                  </>
                 ) : (
                   <Section title="Résultats par candidat" state={selectedUnit.candidats.length ? `${selectedUnit.candidats.length} candidats` : "Indisponible"}>
                     {selectedUnit.candidats.length ? <CandidateTable candidats={selectedUnit.candidats} /> : <p className="elec-empty">Le détail par liste ou candidat n’est pas disponible pour ce scrutin.</p>}
-                  </Section>
-                )}
-                {scale === "commune" && (
-                  <Section
-                    title="Évolution de la population"
-                    state={selectedCode && populationData[selectedCode]?.length ? "Données réelles (INSEE)" : "À compléter"}
-                  >
-                    {selectedCode && populationData[selectedCode]?.length ? (
-                      <PopulationSparkline data={populationData[selectedCode]} />
-                    ) : (
-                      <p className="elec-empty">
-                        Population historique non disponible pour cette commune.
-                      </p>
-                    )}
-                  </Section>
-                )}
-                {scale === "commune" && selectedSocio && (
-                  <Section title="Profil sociodémographique" state="INSEE RP 2022">
-                    <div className="elec-kpis socio-kpis">
-                      <Kpi label="Population estimée" value={Math.round(selectedSocio.population).toLocaleString("fr-FR")} />
-                      <Kpi label="15 à 24 ans" value={`${selectedSocio.jeunes.toFixed(1)} %`} />
-                      <Kpi label="65 ans ou plus" value={`${selectedSocio.seniors.toFixed(1)} %`} />
-                      <Kpi label="Diplôme supérieur" value={`${selectedSocio.diplomesSup.toFixed(1)} %`} />
-                    </div>
-                    <p className="elec-context-note">Estimation territoriale issue du recensement INSEE 2022. Les habitants ne sont pas assimilés aux électeurs et aucun lien causal avec le vote n’est déduit.</p>
                   </Section>
                 )}
                 <div className="elec-actions elec-actions-bottom">
@@ -998,8 +993,23 @@ function politicalScores(result: UnitResult, dimension: "sensitivity" | "family"
   return scores;
 }
 
-function CommuneSynthesis({ snapshots }: { snapshots: ElectionSnapshot[] }) {
-  const firstRounds = snapshots.filter((snapshot) => snapshot.key.endsWith("-t1") || !snapshot.key.match(/-t\d$/));
+function electionAccent(key: string) {
+  if (key.startsWith("pres-2017")) return "#6a5acd";
+  if (key.startsWith("municipales-2020")) return "#00a7b5";
+  if (key.startsWith("departementales-2021")) return "#a558a0";
+  if (key.startsWith("pres-2022")) return "#000091";
+  if (key.startsWith("europeennes-2024")) return "#18753c";
+  if (key.startsWith("legislatives-2024")) return "#e4794a";
+  return "#ce614a";
+}
+
+function CommuneSynthesis({ snapshots, mode }: { snapshots: ElectionSnapshot[]; mode: "results" | "families" | "sensitivities" }) {
+  const meaningful = snapshots.filter((snapshot) => {
+    if (snapshot.key.startsWith("pres-")) return snapshot.key.endsWith("-t1");
+    if (!snapshot.key.match(/-t\d$/)) return true;
+    const sameElection = snapshots.filter(item => item.election === snapshot.election);
+    return snapshot.key === sameElection.at(-1)?.key;
+  });
   const sensitivities = [
     { id: "extreme_left", label: "Extrême gauche", color: "#7a0c0c" },
     { id: "left", label: "Gauche", color: "#e4287c" },
@@ -1012,27 +1022,27 @@ function CommuneSynthesis({ snapshots }: { snapshots: ElectionSnapshot[] }) {
     { id: "ecologist", label: "Écologistes", color: "#18753c" }, { id: "presidential", label: "Majorité présidentielle", color: "#e8b62f" },
     { id: "lr", label: "LR", color: "#0066cc" }, { id: "rn", label: "RN", color: "#14213d" }, { id: "reconquest", label: "Reconquête", color: "#4b2e83" },
   ];
-  return <>
-    <Section title="Évolution par sensibilité" state={`${firstRounds.length} premiers tours`}>
+  if (mode === "sensitivities") return <Section title="Sensibilités" state={`${meaningful.length} scrutins`}>
       <div className="sensitivity-legend">{sensitivities.map((item) => <span key={item.id}><i style={{background:item.color}}/>{item.label}</span>)}</div>
-      <div className="sensitivity-history">{firstRounds.map((snapshot) => { const scores = politicalScores(snapshot.result, "sensitivity"); return <article key={snapshot.key}><header><strong>{snapshot.election}</strong><span>{snapshot.date.slice(0,4)}</span></header><div>{sensitivities.map((item) => { const value=scores[item.id]??0; return value>0 ? <i key={item.id} style={{width:`${value}%`,background:item.color}} title={`${item.label} : ${value.toFixed(1)} %`}>{value>=9?`${value.toFixed(0)} %`:""}</i>:null;})}</div></article>;})}</div>
-      <p className="elec-synthesis-intro">Chaque ligne totalise les voix par grande sensibilité au premier tour. Le reliquat correspond aux candidatures diverses ou non classées.</p>
-    </Section>
-    <Section title="Évolution par famille politique" state="Scores comparables">
-      <div className="family-trends">{families.map((family) => { const points=firstRounds.map(snapshot=>({snapshot,value:politicalScores(snapshot.result,"family")[family.id]})); const comparable=points.filter(point=>point.value!==undefined); const delta=(comparable.at(-1)?.value??0)-(comparable[0]?.value??0); return <article key={family.id} style={{"--family-color":family.color} as CSSProperties}><header><strong>{family.label}</strong><b className={delta>=0?"up":"down"}>{delta>=0?"+":""}{delta.toFixed(1)} pts</b></header><div>{points.map(({snapshot,value})=><span key={snapshot.key} title={`${snapshot.election} ${snapshot.date.slice(0,4)}`}><i>{value!==undefined&&<em style={{height:`${Math.max(3,value)}%`}}/>}</i><small>{value===undefined?"—":value.toFixed(0)}</small></span>)}</div></article>;})}</div>
-      <p className="elec-synthesis-intro">Un tiret signifie que la famille ne présentait pas de candidature identifiable. La variation compare ses deux présences disponibles.</p>
-    </Section>
-    <Section title="Tous les résultats électoraux" state={`${snapshots.length} tours disponibles`}>
-      <p className="elec-synthesis-intro">Les quatre candidatures ou listes arrivées en tête à chaque tour.</p>
-      <div className="elec-all-elections">{snapshots.slice().reverse().map((snapshot) => <article key={snapshot.key}>
-        <header><div><strong>{snapshot.election}</strong><small>{snapshot.tour}</small></div><span>Participation <b>{snapshot.result.pct_participation.toFixed(1)} %</b></span></header>
-        <div>{snapshot.result.candidats.slice().sort((a,b) => b.pct_exprimes - a.pct_exprimes).slice(0,4).map((candidate, index) => {
+      <div className="sensitivity-history">{meaningful.map((snapshot) => { const scores = politicalScores(snapshot.result, "sensitivity"); return <article key={snapshot.key}><header><strong>{snapshot.election}</strong><span>{snapshot.date.slice(0,4)}</span></header><div>{sensitivities.map((item) => { const value=scores[item.id]??0; return value>0 ? <i key={item.id} style={{width:`${value}%`,background:item.color}} title={`${item.label} : ${value.toFixed(1)} %`}>{value>=9?`${value.toFixed(0)} %`:""}</i>:null;})}</div></article>;})}</div>
+      <p className="elec-synthesis-intro">Répartition des suffrages entre les grandes sensibilités. Présidentielles : premier tour ; autres scrutins : dernier tour disponible.</p>
+    </Section>;
+  if (mode === "families") return <Section title="Évolution des votes" state="Familles politiques">
+      <div className="family-lines">{families.map((family) => { const points=meaningful.map(snapshot=>({snapshot,value:politicalScores(snapshot.result,"family")[family.id]})); const comparable=points.filter(point=>point.value!==undefined); const delta=(comparable.at(-1)?.value??0)-(comparable[0]?.value??0); return <article key={family.id} style={{"--family-color":family.color} as CSSProperties}><header><strong>{family.label}</strong><b className={delta>=0?"up":"down"}>{delta>=0?"+":""}{delta.toFixed(1)} pts</b></header><div>{points.map(({snapshot,value})=><span key={snapshot.key}><i style={{height:`${value === undefined ? 0 : Math.max(4,value)}%`}}/><b>{value===undefined?"—":`${value.toFixed(0)} %`}</b><small>{snapshot.election.replace("Présidentielle ","Prés. ").replace("Européennes ","Euro. ").replace("Législatives ","Lég. ").replace("Départementales ","Dép. ").replace("Municipales ","Mun. ")}</small></span>)}</div></article>;})}</div>
+      <p className="elec-synthesis-intro">Chaque colonne porte le nom du scrutin. La variation compare les deux présences identifiables de la famille.</p>
+    </Section>;
+  const shown = snapshots.filter(snapshot => snapshot.key.startsWith("pres-") || meaningful.some(item => item.key === snapshot.key));
+  const grouped = shown.slice().reverse().reduce<Record<string, ElectionSnapshot[]>>((acc, snapshot) => { (acc[snapshot.election] ??= []).push(snapshot); return acc; }, {});
+  return <Section title="Résultats des élections" state={`${shown.length} tours`}>
+      <p className="elec-synthesis-intro">Les quatre premiers. Les deux tours sont conservés uniquement pour les présidentielles.</p>
+      <div className="elec-all-elections">{Object.entries(grouped).map(([label, rounds]) => <article key={label} style={{"--election-color":electionAccent(rounds[0].key)} as CSSProperties}>
+        <header><strong>{label}</strong><span>{rounds.length} tour{rounds.length > 1 ? "s" : ""}</span></header>
+        {rounds.map(snapshot => <div className="election-round" key={snapshot.key}><div className="round-heading"><strong>{snapshot.tour}</strong><span>Participation <b>{snapshot.result.pct_participation.toFixed(1)} %</b></span></div><div>{snapshot.result.candidats.slice().sort((a,b) => b.pct_exprimes - a.pct_exprimes).slice(0,4).map((candidate, index) => {
           const color = colorForCandidate(candidate.nom, candidate.nuance);
           return <div className="elec-top-result" key={`${candidate.nom}-${candidate.prenom}-${index}`}><span className="rank">{index + 1}</span><div><strong>{candidate.prenom} {candidate.nom ?? nuanceInfo(candidate.nuance).label}</strong><i><em style={{ width: `${Math.max(0, Math.min(100, candidate.pct_exprimes))}%`, background: color }} /></i></div><b>{candidate.pct_exprimes.toFixed(1)} %</b></div>;
-        })}</div>
+        })}</div></div>)}
       </article>)}</div>
-    </Section>
-  </>;
+    </Section>;
 }
 
 // Liste de résultats sous forme de cartes colorées par nuance (plutôt qu'un tableau plat) :
