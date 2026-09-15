@@ -7,6 +7,7 @@
    hors contexte d'impression réelle. */
 .election,table,.sensitivity,.round,.candidate,.metric,.big,.numbers span,.participation-summary article,.elected-row,.print-evolution>article,.sensitivity-average>div,.print-scenarios article,.print-scenarios article>div>span{break-inside:avoid}
 .print-evolution{break-inside:avoid}
+.print-scenarios{break-before:page}
 .print-evolution>header{break-after:avoid;break-inside:avoid}
 h2{break-after:avoid}
 .section-compact{break-inside:avoid}
