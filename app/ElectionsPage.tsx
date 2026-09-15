@@ -93,7 +93,7 @@ export default function ElectionsPage() {
   const [scale, setScale] = useState<Scale>("commune");
   const [electionId, setElectionId] = useState("pres-2022");
   const [tourId, setTourId] = useState("t2");
-  const [metric, setMetric] = useState<DisplayMetric>("none");
+  const [metric, setMetric] = useState<DisplayMetric>("tete");
   const [scoreCandidat, setScoreCandidat] = useState<string>("");
 
   const [communesGeo, setCommunesGeo] = useState<any>(null);
@@ -325,9 +325,11 @@ export default function ElectionsPage() {
     if (metric === "tete") {
       const t = u.tete;
       if (!t) return { value: null, color: "#c7cfda", label: "—" };
+      const tendency=politicalGroup(t.nuance,`${t.prenom??""} ${t.nom??""}`).sensitivity;
+      const tendencyColor:Record<string,string>={extreme_left:"#7a0c0c",left:"#e4287c",center:"#e8b62f",right:"#2878c8",far_right:"#14213d",other:"#8b95a3"};
       return {
         value: t.pct_exprimes,
-        color: colorForCandidate(t.nom, t.nuance),
+        color: tendencyColor[tendency]??"#8b95a3",
         label: `${t.prenom ?? ""} ${t.nom ?? ""} · ${t.pct_exprimes.toFixed(1)} %`,
       };
     }
@@ -635,7 +637,7 @@ export default function ElectionsPage() {
               setElectionId(e.target.value);
               const el = findElection(e.target.value);
               setTourId(el.tours[el.tours.length - 1].id);
-              setMetric("none");
+              setMetric("tete");
               resetSelection();
             }}
           >
@@ -651,7 +653,7 @@ export default function ElectionsPage() {
             value={tourId}
             onChange={(e) => {
               setTourId(e.target.value);
-              setMetric("none");
+              setMetric("tete");
               resetSelection();
             }}
           >
@@ -717,7 +719,7 @@ export default function ElectionsPage() {
               </div>
             </div>
           )}
-          {metric === "none" && <div className="elec-map-onboarding"><strong>Explorez le Val-d’Oise par {scale === "commune" ? "commune" : scale === "epci" ? "EPCI" : scale === "canton" ? "canton" : "circonscription"}</strong><span><b>1</b> Survolez un territoire pour l’identifier</span><span><b>2</b> Cliquez pour ouvrir sa fiche</span></div>}
+          {metric === "tete" && <div className="map-trend-legend"><strong>Tendance du scrutin</strong>{[["Gauche","#e4287c"],["Centre","#e8b62f"],["Droite","#2878c8"],["Extrême droite","#14213d"],["Autres","#8b95a3"]].map(([label,color])=><span key={label}><i style={{background:color}}/>{label}</span>)}</div>}
         </section>
 
         <aside className={`elec-drawer ${drawerOpen ? "open" : ""}`} aria-label="Fiche du scrutin">
@@ -757,11 +759,11 @@ export default function ElectionsPage() {
                     <div><span>Abstention moyenne</span><strong>{(100-averageCommuneParticipation).toFixed(1)} %</strong><small>sur la même période</small></div>
                   </div>
                 </Section>
-                {scale === "commune" ? (
+                {scale !== "bv" ? (
                   <>
-                    <CommuneSynthesis snapshots={communeSnapshots} currentKey={dataKey} mode="results" />
-                    <CommuneSynthesis snapshots={communeSnapshots} currentKey={dataKey} mode="families" />
-                    <CommuneSynthesis snapshots={communeSnapshots} currentKey={dataKey} mode="sensitivities" />
+                    <CommuneSynthesis snapshots={scaleSnapshots} currentKey={dataKey} mode="results" />
+                    <CommuneSynthesis snapshots={scaleSnapshots} currentKey={dataKey} mode="families" />
+                    <CommuneSynthesis snapshots={scaleSnapshots} currentKey={dataKey} mode="sensitivities" />
                   </>
                 ) : (
                   <Section title="Résultats par candidat" state={selectedUnit.candidats.length ? `${selectedUnit.candidats.length} candidats` : "Indisponible"}>
