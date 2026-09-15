@@ -31,6 +31,14 @@ jobs:
       - run: npx tsc --noEmit
       - run: npm run build:github
       - run: cp dist-github/index.html dist-github/404.html
+      # print.html référence print.js/print.css par une URL fixe (fichiers publics non
+      # fingerprintés par Vite, contrairement au reste du site) : sans cache-busting, un
+      # navigateur ou le CDN de GitHub Pages peut continuer à servir une version périmée
+      # après un déploiement, y compris pour de vrais correctifs déjà en ligne. Le SHA du
+      # commit change à chaque déploiement, donc l'ajouter en query string force un
+      # rechargement.
+      - run: |
+          sed -i "s/print.css\"/print.css?v=${GITHUB_SHA}\"/; s/print.js\"/print.js?v=${GITHUB_SHA}\"/" dist-github/print.html
       - uses: actions/configure-pages@v5
         with:
           enablement: true
