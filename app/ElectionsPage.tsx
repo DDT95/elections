@@ -599,12 +599,7 @@ export default function ElectionsPage() {
         <div className="elec-header-copy">
           <span>ATLAS ÉLECTORAL</span>
           <h1>Atlas électoral du Val-d'Oise</h1>
-          <p>Résultats, participation et profil sociodémographique — communes, cantons, circonscriptions et département</p>
-        </div>
-        <div className="elec-header-actions">
-          <a className="elec-backlink" href={ATLAS_URL} target="_blank" rel="noreferrer">
-            ← Retour à l'Atlas
-          </a>
+          <p>Résultats, participation et profil sociodémographique — communes, EPCI et département</p>
         </div>
       </header>
       <div className="elec-progress">
@@ -623,43 +618,45 @@ export default function ElectionsPage() {
           </div>
 
           <div className="elec-scale-menu" aria-label="Échelle cartographique">
-            {[{id:"commune",label:"Communes",note:"184 territoires"},{id:"epci",label:"EPCI",note:"12 territoires intercommunaux"},{id:"canton",label:"Cantons",note:"21 cantons"},{id:"circonscription",label:"Circonscriptions",note:"10 circonscriptions législatives"}].map(item=><label key={item.id} className="elec-scale-switch"><input type="radio" name="scale" checked={scale===item.id} onChange={()=>{setScale(item.id as Scale);resetSelection();}}/><span><strong>{item.label}</strong><small>{item.note}</small></span></label>)}
+            {[{id:"commune",label:"Communes",note:"184 territoires"},{id:"epci",label:"EPCI",note:"12 territoires intercommunaux"}].map(item=><label key={item.id} className="elec-scale-switch"><input type="radio" name="scale" checked={scale===item.id} onChange={()=>{setScale(item.id as Scale);resetSelection();}}/><span><strong>{item.label}</strong><small>{item.note}</small></span></label>)}
           </div>
 
-          <div className="elec-sidebar-block-title">Élection et tour</div>
-          <select
-            className="elec-select"
-            value={electionId}
-            onChange={(e) => {
-              setElectionId(e.target.value);
-              const el = findElection(e.target.value);
-              setTourId(el.tours[el.tours.length - 1].id);
-              setMetric("tete");
-              resetSelection();
-            }}
-          >
-            {ELECTIONS.map((e) => (
-              <option key={e.id} value={e.id}>
-                {e.label}
-                {e.status === "a_completer" ? " (à compléter)" : ""}
-              </option>
-            ))}
-          </select>
-          <select
-            className="elec-select"
-            value={tourId}
-            onChange={(e) => {
-              setTourId(e.target.value);
-              setMetric("tete");
-              resetSelection();
-            }}
-          >
-            {election.tours.map((t) => (
-              <option key={t.id} value={t.id}>
-                {t.label}
-              </option>
-            ))}
-          </select>
+          <div className="elec-select-group">
+            <div className="elec-sidebar-block-title">Élection et tour</div>
+            <select
+              className="elec-select"
+              value={electionId}
+              onChange={(e) => {
+                setElectionId(e.target.value);
+                const el = findElection(e.target.value);
+                setTourId(el.tours[el.tours.length - 1].id);
+                setMetric("tete");
+                resetSelection();
+              }}
+            >
+              {ELECTIONS.map((e) => (
+                <option key={e.id} value={e.id}>
+                  {e.label}
+                  {e.status === "a_completer" ? " (à compléter)" : ""}
+                </option>
+              ))}
+            </select>
+            <select
+              className="elec-select"
+              value={tourId}
+              onChange={(e) => {
+                setTourId(e.target.value);
+                setMetric("tete");
+                resetSelection();
+              }}
+            >
+              {election.tours.map((t) => (
+                <option key={t.id} value={t.id}>
+                  {t.label}
+                </option>
+              ))}
+            </select>
+          </div>
           {tourStatus === "a_completer" && (
             <p className="elec-scale-note warn">
               Les résultats officiels ne sont pas disponibles pour ce tour.
