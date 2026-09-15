@@ -608,7 +608,20 @@ export default function ElectionsPage() {
     );
     window.open(`${basePath}/print.html#${token}`, "_blank", "noopener");
   }
-  function printDepartment(){const latest=departmentSnapshots.at(-1);const unit=latest?.result;if(!unit)return;const token=crypto.randomUUID();const scenarios=buildDepartmentScenarios(allElectionData["europeennes-2024"]?.communes??{},allElectionData,socioData);localStorage.setItem(`elections-print-${token}`,JSON.stringify({unit,election:`${latest.election} · ${latest.tour}`,scale:"Département",snapshots:departmentSnapshots,currentKey:latest.key,socio:departmentSocio,populationHistory:[],scenarios,date:new Date().toISOString()}));window.open(`${basePath}/print.html#${token}`,"_blank","noopener");}
+  function printDepartment(){
+    const latest=departmentSnapshots.at(-1);const unit=latest?.result;if(!unit)return;
+    const token=crypto.randomUUID();
+    const scenarios=buildDepartmentScenarios(allElectionData["europeennes-2024"]?.communes??{},allElectionData,socioData);
+    // Mêmes élus que la fiche web (Section "Députés élus"/"Sénateurs"/"Conseil départemental" de
+    // DepartmentAnalysis) : sérialisés ici en tableaux simples pour print.js, qui n'a pas accès
+    // aux composants React ni aux fichiers de résultats bruts.
+    const deputiesList=deputies?Object.values(deputies).filter(c=>c.tete).map(c=>({nom:c.tete!.nom??"—",prenom:c.tete!.prenom,nuance:c.tete!.nuance,subtitle:c.nom})):[];
+    const councillorsData=cantonData["departementales-2021-t2-canton"]?.cantons as Record<string,UnitResult>|undefined;
+    const councillorsList=councillorsData?Object.values(councillorsData).filter(c=>c.tete).map(c=>({nom:c.tete!.nom??"—",prenom:null,nuance:c.tete!.nuance,subtitle:c.nom})):[];
+    const senatorsList=SENATORS.map(s=>({nom:s.nom,prenom:s.prenom,nuance:s.nuance}));
+    localStorage.setItem(`elections-print-${token}`,JSON.stringify({unit,election:`${latest.election} · ${latest.tour}`,scale:"Département",snapshots:departmentSnapshots,currentKey:latest.key,socio:departmentSocio,populationHistory:[],scenarios,deputies:deputiesList,senators:senatorsList,councillors:councillorsList,date:new Date().toISOString()}));
+    window.open(`${basePath}/print.html#${token}`,"_blank","noopener");
+  }
 
   return (
     <main className="elec-page">
@@ -698,6 +711,14 @@ export default function ElectionsPage() {
 
         <section className="elec-map-shell">
           <div ref={mapNode} className="elec-map" aria-label="Carte électorale du Val-d'Oise" />
+          {!hasChosenScrutin && (
+            <div className="elec-map-onboarding">
+              <strong>Comment lire la carte</strong>
+              <span><b>1</b>Choisissez une élection et un tour dans le menu à gauche.</span>
+              <span><b>2</b>La carte se colore alors par tendance politique.</span>
+              <span><b>3</b>Cliquez sur une commune pour ouvrir sa synthèse complète.</span>
+            </div>
+          )}
           {hoveredUnit && <div className="elec-hover-card compact" aria-live="polite"><strong>{hoveredUnit.name}</strong>{hoveredUnit.result ? <>{metric !== "none" && <span>{metricInfo(hoveredUnit.result).label}</span>}<small>Participation {hoveredUnit.result.pct_participation.toFixed(1)} % · cliquez pour la synthèse complète</small></> : <span>Résultat indisponible</span>}</div>}
           {scale === "canton" && election.status === "publie" && !cantonData[`${dataKey}-canton`] && (
             <div
