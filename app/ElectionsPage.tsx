@@ -721,7 +721,7 @@ export default function ElectionsPage() {
                       </div>
                     </div>
                     {selectedCode && populationData[selectedCode]?.length ? <PopulationSparkline data={populationData[selectedCode]} /> : null}
-                    <p className="elec-context-note">Recensement INSEE 2022. Ces données décrivent les habitants de la commune.</p>
+                    <p className="elec-context-note"><strong>Source :</strong> INSEE, recensement de la population 2022.</p>
                   </Section>
                 )}
                 <Section title="Participation" state="Données réelles">
@@ -883,27 +883,23 @@ function PopulationSparkline({ data }: { data: { annee: number; population: numb
   const last = data[data.length - 1];
   const delta = last.population - first.population;
   const pct = first.population ? (delta / first.population) * 100 : 0;
+  const middle = data[Math.floor((data.length - 1) / 2)];
   return (
     <div className="elec-population">
-      <svg width={w} height={h} viewBox={`0 0 ${w} ${h}`} role="img" aria-label="Évolution de la population">
-        <polyline points={points} fill="none" stroke="var(--blue, #000091)" strokeWidth={2} />
-        {data.map((d, i) => (
-          <circle key={d.annee} cx={x(i)} cy={y(d.population)} r={i === data.length - 1 ? 3 : 1.5} fill="var(--blue, #000091)" />
-        ))}
-      </svg>
-      <div className="elec-population-legend">
-        <span>
-          {first.annee} : <strong>{first.population.toLocaleString("fr-FR")}</strong> hab.
-        </span>
-        <span>
-          {last.annee} : <strong>{last.population.toLocaleString("fr-FR")}</strong> hab.
-        </span>
-        <span className={delta >= 0 ? "up" : "down"}>
-          {delta >= 0 ? "+" : ""}
-          {delta.toLocaleString("fr-FR")} ({pct >= 0 ? "+" : ""}
-          {pct.toFixed(1)} %) depuis {first.annee}
-        </span>
+      <div className="elec-population-title"><strong>Population de la commune</strong><span>{first.annee}–{last.annee}</span></div>
+      <div className="elec-population-chart">
+        <svg width={w} height={h} viewBox={`0 0 ${w} ${h}`} role="img" aria-label={`Population de ${first.annee} à ${last.annee}`}>
+          <line x1={pad} y1={h-pad} x2={w-pad} y2={h-pad} stroke="#d8e0e8" strokeWidth="1" />
+          <polyline points={points} fill="none" stroke="var(--blue, #000091)" strokeWidth={2.5} />
+          {data.map((d, i) => <circle key={d.annee} cx={x(i)} cy={y(d.population)} r={i === 0 || i === data.length - 1 ? 3 : 1.5} fill="var(--blue, #000091)" />)}
+        </svg>
+        <div className="elec-population-axis"><span>{first.annee}</span><span>{middle.annee}</span><span>{last.annee}</span></div>
       </div>
+      <div className="elec-population-values">
+        <span><small>Au départ</small><strong>{first.population.toLocaleString("fr-FR")}</strong><em>habitants en {first.annee}</em></span>
+        <span><small>Dernière valeur</small><strong>{last.population.toLocaleString("fr-FR")}</strong><em>habitants en {last.annee}</em></span>
+      </div>
+      <p className={`elec-population-change ${delta >= 0 ? "up" : "down"}`}><strong>{Math.abs(delta).toLocaleString("fr-FR")} habitant{Math.abs(delta)!==1?"s":""} {delta >= 0 ? "gagnés" : "perdus"}</strong> depuis {first.annee} ({pct >= 0 ? "+" : ""}{pct.toFixed(1)} %).</p>
     </div>
   );
 }
