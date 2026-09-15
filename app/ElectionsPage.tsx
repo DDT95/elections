@@ -95,7 +95,7 @@ export default function ElectionsPage() {
   const [scale, setScale] = useState<Scale>("commune");
   const [electionId, setElectionId] = useState("pres-2022");
   const [tourId, setTourId] = useState("t2");
-  const [metric, setMetric] = useState<DisplayMetric>("none");
+  const [metric, setMetric] = useState<DisplayMetric>("tete");
   const [scoreCandidat, setScoreCandidat] = useState<string>("");
 
   const [communesGeo, setCommunesGeo] = useState<any>(null);
@@ -1026,11 +1026,13 @@ function CommuneSynthesis({ snapshots, currentKey, mode }: { snapshots: Election
       <div className="political-evolution"><header><span></span>{nationalSeries.map(snapshot=><b key={snapshot.key}>{shortLabels[snapshot.key]}</b>)}</header>{sensitivities.map(item=>{const values=seriesScores.map(point=>point.scores[item.id]??0);const delta=(values.at(-1)??0)-(values[0]??0);return <article key={item.id} style={{"--trend-color":item.color} as CSSProperties}><strong>{item.label}</strong>{values.map((value,index)=><span key={nationalSeries[index].key}><i style={{height:`${Math.max(3,Math.min(48,value/60*48))}px`}}/><b>{value.toFixed(0)} %</b></span>)}<em className={delta>=0?"up":"down"}>{delta>=0?"+":""}{delta.toFixed(1)} pt</em></article>})}</div>
     </Section>;
   }
-  const selectedSnapshot = snapshots.find(snapshot => snapshot.key === currentKey) ?? snapshots.at(-1);
-  const shown = selectedSnapshot ? [selectedSnapshot] : [];
-  const grouped = shown.reduce<Record<string, ElectionSnapshot[]>>((acc, snapshot) => { (acc[snapshot.election] ??= []).push(snapshot); return acc; }, {});
-  return <Section title="Résultats du scrutin sélectionné" state={selectedSnapshot?.tour ?? "Indisponible"}>
-      <p className="elec-synthesis-intro">Les quatre premiers, avec leur parti ou leur sensibilité politique.</p>
+  // Le menu Élection/Tour ne pilote que la couleur de la carte principale (voir metric/scale
+  // plus haut) : cette section reste indépendante de ce choix et montre TOUS les scrutins
+  // disponibles à cette échelle, dans l'ordre chronologique (snapshots est déjà trié par date),
+  // pour permettre une vraie comparaison dans le temps plutôt qu'un résultat isolé.
+  const grouped = snapshots.reduce<Record<string, ElectionSnapshot[]>>((acc, snapshot) => { (acc[snapshot.election] ??= []).push(snapshot); return acc; }, {});
+  return <Section title="Derniers résultats par scrutin" state={snapshots.length ? `${snapshots.length} tours` : "Indisponible"}>
+      <p className="elec-synthesis-intro">Les quatre premiers candidats de chaque scrutin, dans l'ordre chronologique, avec leur parti ou leur sensibilité politique.</p>
       <div className="elec-all-elections">{Object.entries(grouped).map(([label, rounds]) => <article key={label} style={{"--election-color":electionAccent(rounds[0].key)} as CSSProperties}>
         <header><strong>{label}</strong><span>{rounds.length} tour{rounds.length > 1 ? "s" : ""}</span></header>
         {rounds.map(snapshot => <div className="election-round" key={snapshot.key}><div className="round-heading"><strong>{snapshot.tour}</strong><span>Participation <b>{snapshot.result.pct_participation.toFixed(1)} %</b></span></div><div>{snapshot.result.candidats.slice().sort((a,b) => b.pct_exprimes - a.pct_exprimes).slice(0,4).map((candidate, index) => {
