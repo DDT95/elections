@@ -1012,13 +1012,6 @@ function DepartmentAnalysis({ snapshots, socio, communeData, datasets, socioByCo
 }
 
 function CommuneSynthesis({ snapshots, currentKey, mode }: { snapshots: ElectionSnapshot[]; currentKey: string; mode: "results" | "families" | "sensitivities" }) {
-  void currentKey;
-  const meaningful = snapshots.filter((snapshot) => {
-    if (snapshot.key.startsWith("pres-")) return snapshot.key.endsWith("-t1");
-    if (!snapshot.key.match(/-t\d$/)) return true;
-    const sameElection = snapshots.filter(item => item.election === snapshot.election);
-    return snapshot.key === sameElection.at(-1)?.key;
-  });
   const sensitivities = [
     { id: "extreme_left", label: "Extrême gauche", color: "#7a0c0c" },
     { id: "left", label: "Gauche", color: "#e4287c" },
@@ -1044,10 +1037,11 @@ function CommuneSynthesis({ snapshots, currentKey, mode }: { snapshots: Election
       <div className="political-evolution"><header><span></span>{nationalSeries.map(snapshot=><b key={snapshot.key}>{shortLabels[snapshot.key]}</b>)}</header>{sensitivities.map(item=>{const values=seriesScores.map(point=>point.scores[item.id]??0);const delta=(values.at(-1)??0)-(values[0]??0);return <article key={item.id} style={{"--trend-color":item.color} as CSSProperties}><strong>{item.label}</strong>{values.map((value,index)=><span key={nationalSeries[index].key}><i style={{height:`${Math.max(3,Math.min(48,value/60*48))}px`}}/><b>{value.toFixed(0)} %</b></span>)}<em className={delta>=0?"up":"down"}>{delta>=0?"+":""}{delta.toFixed(1)} pt</em></article>})}</div>
     </Section>;
   }
-  const shown = snapshots.filter(snapshot => snapshot.key.startsWith("pres-") || meaningful.some(item => item.key === snapshot.key));
-  const grouped = shown.slice().reverse().reduce<Record<string, ElectionSnapshot[]>>((acc, snapshot) => { (acc[snapshot.election] ??= []).push(snapshot); return acc; }, {});
-  return <Section title="Résultats des élections" state={`${shown.length} tours`}>
-      <p className="elec-synthesis-intro">Les quatre premiers. Les deux tours sont conservés uniquement pour les présidentielles.</p>
+  const selectedSnapshot = snapshots.find(snapshot => snapshot.key === currentKey) ?? snapshots.at(-1);
+  const shown = selectedSnapshot ? [selectedSnapshot] : [];
+  const grouped = shown.reduce<Record<string, ElectionSnapshot[]>>((acc, snapshot) => { (acc[snapshot.election] ??= []).push(snapshot); return acc; }, {});
+  return <Section title="Résultats du scrutin sélectionné" state={selectedSnapshot?.tour ?? "Indisponible"}>
+      <p className="elec-synthesis-intro">Les quatre premiers, avec leur parti ou leur sensibilité politique.</p>
       <div className="elec-all-elections">{Object.entries(grouped).map(([label, rounds]) => <article key={label} style={{"--election-color":electionAccent(rounds[0].key)} as CSSProperties}>
         <header><strong>{label}</strong><span>{rounds.length} tour{rounds.length > 1 ? "s" : ""}</span></header>
         {rounds.map(snapshot => <div className="election-round" key={snapshot.key}><div className="round-heading"><strong>{snapshot.tour}</strong><span>Participation <b>{snapshot.result.pct_participation.toFixed(1)} %</b></span></div><div>{snapshot.result.candidats.slice().sort((a,b) => b.pct_exprimes - a.pct_exprimes).slice(0,4).map((candidate, index) => {
