@@ -964,8 +964,8 @@ function PopulationSparkline({ data }: { data: { annee: number; population: numb
       </div>
       <p className="population-scale-note">Échelle resserrée entre {min.toLocaleString("fr-FR")} et {max.toLocaleString("fr-FR")} habitants : la courbe ne part pas de zéro.</p>
       <div className="elec-population-values">
-        <span><small>Au départ</small><strong>{first.population.toLocaleString("fr-FR")}</strong><em>habitants en {first.annee}</em></span>
-        <span><small>Dernière valeur</small><strong>{last.population.toLocaleString("fr-FR")}</strong><em>habitants en {last.annee}</em></span>
+        <span><small>Population {first.annee}</small><strong>{first.population.toLocaleString("fr-FR")}</strong><em>habitants</em></span>
+        <span><small>Population {last.annee}</small><strong>{last.population.toLocaleString("fr-FR")}</strong><em>habitants</em></span>
       </div>
       <p className={`elec-population-change ${delta >= 0 ? "up" : "down"}`}><strong>{Math.abs(delta).toLocaleString("fr-FR")} habitant{Math.abs(delta)!==1?"s":""} {delta >= 0 ? "gagnés" : "perdus"}</strong> depuis {first.annee} ({pct >= 0 ? "+" : ""}{pct.toFixed(1)} %).</p>
     </div>
