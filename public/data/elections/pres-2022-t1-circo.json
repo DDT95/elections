@@ -1,0 +1,1179 @@
+{
+ "election": "Présidentielle 2022",
+ "tour": 1,
+ "date": "2022-04-10",
+ "status": "reel",
+ "note": "Agrégation réelle par circonscription à partir des résultats communaux (source data.gouv.fr).",
+ "circonscriptions": {
+  "01": {
+   "code_circonscription": "01",
+   "nom": "1e circonscription du Val-d'Oise",
+   "nb_communes": 83,
+   "inscrits": 82122,
+   "abstentions": 18744,
+   "votants": 63378,
+   "blancs": 997,
+   "nuls": 325,
+   "exprimes": 62056,
+   "candidats": [
+    {
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "nuance": null,
+     "voix": 15823,
+     "pct_exprimes": 25.5,
+     "pct_inscrits": 19.27
+    },
+    {
+     "nom": "MÉLENCHON",
+     "prenom": "Jean-Luc",
+     "nuance": null,
+     "voix": 15191,
+     "pct_exprimes": 24.48,
+     "pct_inscrits": 18.5
+    },
+    {
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "nuance": null,
+     "voix": 13439,
+     "pct_exprimes": 21.66,
+     "pct_inscrits": 16.36
+    },
+    {
+     "nom": "ZEMMOUR",
+     "prenom": "Éric",
+     "nuance": null,
+     "voix": 4512,
+     "pct_exprimes": 7.27,
+     "pct_inscrits": 5.49
+    },
+    {
+     "nom": "PÉCRESSE",
+     "prenom": "Valérie",
+     "nuance": null,
+     "voix": 3415,
+     "pct_exprimes": 5.5,
+     "pct_inscrits": 4.16
+    },
+    {
+     "nom": "JADOT",
+     "prenom": "Yannick",
+     "nuance": null,
+     "voix": 2755,
+     "pct_exprimes": 4.44,
+     "pct_inscrits": 3.35
+    },
+    {
+     "nom": "LASSALLE",
+     "prenom": "Jean",
+     "nuance": null,
+     "voix": 1285,
+     "pct_exprimes": 2.07,
+     "pct_inscrits": 1.56
+    },
+    {
+     "nom": "DUPONT-AIGNAN",
+     "prenom": "Nicolas",
+     "nuance": null,
+     "voix": 1273,
+     "pct_exprimes": 2.05,
+     "pct_inscrits": 1.55
+    },
+    {
+     "nom": "ROUSSEL",
+     "prenom": "Fabien",
+     "nuance": null,
+     "voix": 1250,
+     "pct_exprimes": 2.01,
+     "pct_inscrits": 1.52
+    },
+    {
+     "nom": "HIDALGO",
+     "prenom": "Anne",
+     "nuance": null,
+     "voix": 741,
+     "pct_exprimes": 1.19,
+     "pct_inscrits": 0.9
+    },
+    {
+     "nom": "POUTOU",
+     "prenom": "Philippe",
+     "nuance": null,
+     "voix": 445,
+     "pct_exprimes": 0.72,
+     "pct_inscrits": 0.54
+    },
+    {
+     "nom": "ARTHAUD",
+     "prenom": "Nathalie",
+     "nuance": null,
+     "voix": 307,
+     "pct_exprimes": 0.49,
+     "pct_inscrits": 0.37
+    }
+   ],
+   "pct_abstention": 22.82,
+   "pct_participation": 77.18,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 25.5
+   }
+  },
+  "06": {
+   "code_circonscription": "06",
+   "nom": "6e circonscription du Val-d'Oise",
+   "nb_communes": 8,
+   "inscrits": 75004,
+   "abstentions": 19594,
+   "votants": 55410,
+   "blancs": 749,
+   "nuls": 267,
+   "exprimes": 54394,
+   "candidats": [
+    {
+     "nom": "MÉLENCHON",
+     "prenom": "Jean-Luc",
+     "nuance": null,
+     "voix": 16904,
+     "pct_exprimes": 31.08,
+     "pct_inscrits": 22.54
+    },
+    {
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "nuance": null,
+     "voix": 16310,
+     "pct_exprimes": 29.98,
+     "pct_inscrits": 21.75
+    },
+    {
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "nuance": null,
+     "voix": 7333,
+     "pct_exprimes": 13.48,
+     "pct_inscrits": 9.78
+    },
+    {
+     "nom": "ZEMMOUR",
+     "prenom": "Éric",
+     "nuance": null,
+     "voix": 4289,
+     "pct_exprimes": 7.89,
+     "pct_inscrits": 5.72
+    },
+    {
+     "nom": "PÉCRESSE",
+     "prenom": "Valérie",
+     "nuance": null,
+     "voix": 3250,
+     "pct_exprimes": 5.97,
+     "pct_inscrits": 4.33
+    },
+    {
+     "nom": "JADOT",
+     "prenom": "Yannick",
+     "nuance": null,
+     "voix": 2420,
+     "pct_exprimes": 4.45,
+     "pct_inscrits": 3.23
+    },
+    {
+     "nom": "ROUSSEL",
+     "prenom": "Fabien",
+     "nuance": null,
+     "voix": 954,
+     "pct_exprimes": 1.75,
+     "pct_inscrits": 1.27
+    },
+    {
+     "nom": "LASSALLE",
+     "prenom": "Jean",
+     "nuance": null,
+     "voix": 910,
+     "pct_exprimes": 1.67,
+     "pct_inscrits": 1.21
+    },
+    {
+     "nom": "DUPONT-AIGNAN",
+     "prenom": "Nicolas",
+     "nuance": null,
+     "voix": 833,
+     "pct_exprimes": 1.53,
+     "pct_inscrits": 1.11
+    },
+    {
+     "nom": "HIDALGO",
+     "prenom": "Anne",
+     "nuance": null,
+     "voix": 657,
+     "pct_exprimes": 1.21,
+     "pct_inscrits": 0.88
+    },
+    {
+     "nom": "POUTOU",
+     "prenom": "Philippe",
+     "nuance": null,
+     "voix": 296,
+     "pct_exprimes": 0.54,
+     "pct_inscrits": 0.39
+    },
+    {
+     "nom": "ARTHAUD",
+     "prenom": "Nathalie",
+     "nuance": null,
+     "voix": 228,
+     "pct_exprimes": 0.42,
+     "pct_inscrits": 0.3
+    }
+   ],
+   "pct_abstention": 26.12,
+   "pct_participation": 73.88,
+   "tete": {
+    "nom": "MÉLENCHON",
+    "prenom": "Jean-Luc",
+    "nuance": null,
+    "pct_exprimes": 31.08
+   }
+  },
+  "05": {
+   "code_circonscription": "05",
+   "nom": "5e circonscription du Val-d'Oise",
+   "nb_communes": 2,
+   "inscrits": 68637,
+   "abstentions": 20266,
+   "votants": 48371,
+   "blancs": 572,
+   "nuls": 249,
+   "exprimes": 47550,
+   "candidats": [
+    {
+     "nom": "MÉLENCHON",
+     "prenom": "Jean-Luc",
+     "nuance": null,
+     "voix": 23241,
+     "pct_exprimes": 48.88,
+     "pct_inscrits": 33.86
+    },
+    {
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "nuance": null,
+     "voix": 10021,
+     "pct_exprimes": 21.07,
+     "pct_inscrits": 14.6
+    },
+    {
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "nuance": null,
+     "voix": 6255,
+     "pct_exprimes": 13.15,
+     "pct_inscrits": 9.11
+    },
+    {
+     "nom": "ZEMMOUR",
+     "prenom": "Éric",
+     "nuance": null,
+     "voix": 2109,
+     "pct_exprimes": 4.44,
+     "pct_inscrits": 3.07
+    },
+    {
+     "nom": "PÉCRESSE",
+     "prenom": "Valérie",
+     "nuance": null,
+     "voix": 1497,
+     "pct_exprimes": 3.15,
+     "pct_inscrits": 2.18
+    },
+    {
+     "nom": "JADOT",
+     "prenom": "Yannick",
+     "nuance": null,
+     "voix": 1247,
+     "pct_exprimes": 2.62,
+     "pct_inscrits": 1.82
+    },
+    {
+     "nom": "ROUSSEL",
+     "prenom": "Fabien",
+     "nuance": null,
+     "voix": 926,
+     "pct_exprimes": 1.95,
+     "pct_inscrits": 1.35
+    },
+    {
+     "nom": "LASSALLE",
+     "prenom": "Jean",
+     "nuance": null,
+     "voix": 599,
+     "pct_exprimes": 1.26,
+     "pct_inscrits": 0.87
+    },
+    {
+     "nom": "DUPONT-AIGNAN",
+     "prenom": "Nicolas",
+     "nuance": null,
+     "voix": 513,
+     "pct_exprimes": 1.08,
+     "pct_inscrits": 0.75
+    },
+    {
+     "nom": "HIDALGO",
+     "prenom": "Anne",
+     "nuance": null,
+     "voix": 466,
+     "pct_exprimes": 0.98,
+     "pct_inscrits": 0.68
+    },
+    {
+     "nom": "POUTOU",
+     "prenom": "Philippe",
+     "nuance": null,
+     "voix": 255,
+     "pct_exprimes": 0.54,
+     "pct_inscrits": 0.37
+    },
+    {
+     "nom": "ARTHAUD",
+     "prenom": "Nathalie",
+     "nuance": null,
+     "voix": 218,
+     "pct_exprimes": 0.46,
+     "pct_inscrits": 0.32
+    }
+   ],
+   "pct_abstention": 29.53,
+   "pct_participation": 70.47,
+   "tete": {
+    "nom": "MÉLENCHON",
+    "prenom": "Jean-Luc",
+    "nuance": null,
+    "pct_exprimes": 48.88
+   }
+  },
+  "08": {
+   "code_circonscription": "08",
+   "nom": "8e circonscription du Val-d'Oise",
+   "nb_communes": 5,
+   "inscrits": 67246,
+   "abstentions": 23147,
+   "votants": 44099,
+   "blancs": 636,
+   "nuls": 344,
+   "exprimes": 43119,
+   "candidats": [
+    {
+     "nom": "MÉLENCHON",
+     "prenom": "Jean-Luc",
+     "nuance": null,
+     "voix": 22075,
+     "pct_exprimes": 51.2,
+     "pct_inscrits": 32.83
+    },
+    {
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "nuance": null,
+     "voix": 7970,
+     "pct_exprimes": 18.48,
+     "pct_inscrits": 11.85
+    },
+    {
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "nuance": null,
+     "voix": 5681,
+     "pct_exprimes": 13.18,
+     "pct_inscrits": 8.45
+    },
+    {
+     "nom": "ZEMMOUR",
+     "prenom": "Éric",
+     "nuance": null,
+     "voix": 3386,
+     "pct_exprimes": 7.85,
+     "pct_inscrits": 5.04
+    },
+    {
+     "nom": "PÉCRESSE",
+     "prenom": "Valérie",
+     "nuance": null,
+     "voix": 1150,
+     "pct_exprimes": 2.67,
+     "pct_inscrits": 1.71
+    },
+    {
+     "nom": "JADOT",
+     "prenom": "Yannick",
+     "nuance": null,
+     "voix": 537,
+     "pct_exprimes": 1.25,
+     "pct_inscrits": 0.8
+    },
+    {
+     "nom": "ROUSSEL",
+     "prenom": "Fabien",
+     "nuance": null,
+     "voix": 497,
+     "pct_exprimes": 1.15,
+     "pct_inscrits": 0.74
+    },
+    {
+     "nom": "DUPONT-AIGNAN",
+     "prenom": "Nicolas",
+     "nuance": null,
+     "voix": 471,
+     "pct_exprimes": 1.09,
+     "pct_inscrits": 0.7
+    },
+    {
+     "nom": "LASSALLE",
+     "prenom": "Jean",
+     "nuance": null,
+     "voix": 436,
+     "pct_exprimes": 1.01,
+     "pct_inscrits": 0.65
+    },
+    {
+     "nom": "HIDALGO",
+     "prenom": "Anne",
+     "nuance": null,
+     "voix": 381,
+     "pct_exprimes": 0.88,
+     "pct_inscrits": 0.57
+    },
+    {
+     "nom": "POUTOU",
+     "prenom": "Philippe",
+     "nuance": null,
+     "voix": 231,
+     "pct_exprimes": 0.54,
+     "pct_inscrits": 0.34
+    },
+    {
+     "nom": "ARTHAUD",
+     "prenom": "Nathalie",
+     "nuance": null,
+     "voix": 205,
+     "pct_exprimes": 0.48,
+     "pct_inscrits": 0.3
+    }
+   ],
+   "pct_abstention": 34.42,
+   "pct_participation": 65.58,
+   "tete": {
+    "nom": "MÉLENCHON",
+    "prenom": "Jean-Luc",
+    "nuance": null,
+    "pct_exprimes": 51.2
+   }
+  },
+  "02": {
+   "code_circonscription": "02",
+   "nom": "2e circonscription du Val-d'Oise",
+   "nb_communes": 20,
+   "inscrits": 68869,
+   "abstentions": 16244,
+   "votants": 52625,
+   "blancs": 812,
+   "nuls": 330,
+   "exprimes": 51483,
+   "candidats": [
+    {
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "nuance": null,
+     "voix": 14048,
+     "pct_exprimes": 27.29,
+     "pct_inscrits": 20.4
+    },
+    {
+     "nom": "MÉLENCHON",
+     "prenom": "Jean-Luc",
+     "nuance": null,
+     "voix": 12505,
+     "pct_exprimes": 24.29,
+     "pct_inscrits": 18.16
+    },
+    {
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "nuance": null,
+     "voix": 10512,
+     "pct_exprimes": 20.42,
+     "pct_inscrits": 15.26
+    },
+    {
+     "nom": "ZEMMOUR",
+     "prenom": "Éric",
+     "nuance": null,
+     "voix": 3891,
+     "pct_exprimes": 7.56,
+     "pct_inscrits": 5.65
+    },
+    {
+     "nom": "PÉCRESSE",
+     "prenom": "Valérie",
+     "nuance": null,
+     "voix": 2804,
+     "pct_exprimes": 5.45,
+     "pct_inscrits": 4.07
+    },
+    {
+     "nom": "JADOT",
+     "prenom": "Yannick",
+     "nuance": null,
+     "voix": 2290,
+     "pct_exprimes": 4.45,
+     "pct_inscrits": 3.33
+    },
+    {
+     "nom": "DUPONT-AIGNAN",
+     "prenom": "Nicolas",
+     "nuance": null,
+     "voix": 1078,
+     "pct_exprimes": 2.09,
+     "pct_inscrits": 1.57
+    },
+    {
+     "nom": "ROUSSEL",
+     "prenom": "Fabien",
+     "nuance": null,
+     "voix": 1072,
+     "pct_exprimes": 2.08,
+     "pct_inscrits": 1.56
+    },
+    {
+     "nom": "LASSALLE",
+     "prenom": "Jean",
+     "nuance": null,
+     "voix": 998,
+     "pct_exprimes": 1.94,
+     "pct_inscrits": 1.45
+    },
+    {
+     "nom": "HIDALGO",
+     "prenom": "Anne",
+     "nuance": null,
+     "voix": 575,
+     "pct_exprimes": 1.12,
+     "pct_inscrits": 0.83
+    },
+    {
+     "nom": "POUTOU",
+     "prenom": "Philippe",
+     "nuance": null,
+     "voix": 361,
+     "pct_exprimes": 0.7,
+     "pct_inscrits": 0.52
+    },
+    {
+     "nom": "ARTHAUD",
+     "prenom": "Nathalie",
+     "nuance": null,
+     "voix": 240,
+     "pct_exprimes": 0.47,
+     "pct_inscrits": 0.35
+    }
+   ],
+   "pct_abstention": 23.59,
+   "pct_participation": 76.41,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 27.29
+   }
+  },
+  "07": {
+   "code_circonscription": "07",
+   "nom": "7e circonscription du Val-d'Oise",
+   "nb_communes": 12,
+   "inscrits": 55813,
+   "abstentions": 13514,
+   "votants": 42299,
+   "blancs": 593,
+   "nuls": 230,
+   "exprimes": 41476,
+   "candidats": [
+    {
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "nuance": null,
+     "voix": 10420,
+     "pct_exprimes": 25.12,
+     "pct_inscrits": 18.67
+    },
+    {
+     "nom": "MÉLENCHON",
+     "prenom": "Jean-Luc",
+     "nuance": null,
+     "voix": 9913,
+     "pct_exprimes": 23.9,
+     "pct_inscrits": 17.76
+    },
+    {
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "nuance": null,
+     "voix": 6415,
+     "pct_exprimes": 15.47,
+     "pct_inscrits": 11.49
+    },
+    {
+     "nom": "ZEMMOUR",
+     "prenom": "Éric",
+     "nuance": null,
+     "voix": 3210,
+     "pct_exprimes": 7.74,
+     "pct_inscrits": 5.75
+    },
+    {
+     "nom": "PÉCRESSE",
+     "prenom": "Valérie",
+     "nuance": null,
+     "voix": 2011,
+     "pct_exprimes": 4.85,
+     "pct_inscrits": 3.6
+    },
+    {
+     "nom": "JADOT",
+     "prenom": "Yannick",
+     "nuance": null,
+     "voix": 1659,
+     "pct_exprimes": 4.0,
+     "pct_inscrits": 2.97
+    },
+    {
+     "nom": "ROUSSEL",
+     "prenom": "Fabien",
+     "nuance": null,
+     "voix": 716,
+     "pct_exprimes": 1.73,
+     "pct_inscrits": 1.28
+    },
+    {
+     "nom": "LASSALLE",
+     "prenom": "Jean",
+     "nuance": null,
+     "voix": 672,
+     "pct_exprimes": 1.62,
+     "pct_inscrits": 1.2
+    },
+    {
+     "nom": "DUPONT-AIGNAN",
+     "prenom": "Nicolas",
+     "nuance": null,
+     "voix": 660,
+     "pct_exprimes": 1.59,
+     "pct_inscrits": 1.18
+    },
+    {
+     "nom": "HIDALGO",
+     "prenom": "Anne",
+     "nuance": null,
+     "voix": 446,
+     "pct_exprimes": 1.08,
+     "pct_inscrits": 0.8
+    },
+    {
+     "nom": "POUTOU",
+     "prenom": "Philippe",
+     "nuance": null,
+     "voix": 248,
+     "pct_exprimes": 0.6,
+     "pct_inscrits": 0.44
+    },
+    {
+     "nom": "ARTHAUD",
+     "prenom": "Nathalie",
+     "nuance": null,
+     "voix": 143,
+     "pct_exprimes": 0.34,
+     "pct_inscrits": 0.26
+    }
+   ],
+   "pct_abstention": 24.21,
+   "pct_participation": 75.79,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 25.12
+   }
+  },
+  "03": {
+   "code_circonscription": "03",
+   "nom": "3e circonscription du Val-d'Oise",
+   "nb_communes": 12,
+   "inscrits": 93965,
+   "abstentions": 22499,
+   "votants": 71466,
+   "blancs": 1089,
+   "nuls": 368,
+   "exprimes": 70009,
+   "candidats": [
+    {
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "nuance": null,
+     "voix": 19880,
+     "pct_exprimes": 28.4,
+     "pct_inscrits": 21.16
+    },
+    {
+     "nom": "MÉLENCHON",
+     "prenom": "Jean-Luc",
+     "nuance": null,
+     "voix": 19481,
+     "pct_exprimes": 27.83,
+     "pct_inscrits": 20.73
+    },
+    {
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "nuance": null,
+     "voix": 12634,
+     "pct_exprimes": 18.05,
+     "pct_inscrits": 13.45
+    },
+    {
+     "nom": "ZEMMOUR",
+     "prenom": "Éric",
+     "nuance": null,
+     "voix": 4775,
+     "pct_exprimes": 6.82,
+     "pct_inscrits": 5.08
+    },
+    {
+     "nom": "PÉCRESSE",
+     "prenom": "Valérie",
+     "nuance": null,
+     "voix": 4257,
+     "pct_exprimes": 6.08,
+     "pct_inscrits": 4.53
+    },
+    {
+     "nom": "JADOT",
+     "prenom": "Yannick",
+     "nuance": null,
+     "voix": 3254,
+     "pct_exprimes": 4.65,
+     "pct_inscrits": 3.46
+    },
+    {
+     "nom": "ROUSSEL",
+     "prenom": "Fabien",
+     "nuance": null,
+     "voix": 1477,
+     "pct_exprimes": 2.11,
+     "pct_inscrits": 1.57
+    },
+    {
+     "nom": "LASSALLE",
+     "prenom": "Jean",
+     "nuance": null,
+     "voix": 1336,
+     "pct_exprimes": 1.91,
+     "pct_inscrits": 1.42
+    },
+    {
+     "nom": "DUPONT-AIGNAN",
+     "prenom": "Nicolas",
+     "nuance": null,
+     "voix": 1326,
+     "pct_exprimes": 1.89,
+     "pct_inscrits": 1.41
+    },
+    {
+     "nom": "HIDALGO",
+     "prenom": "Anne",
+     "nuance": null,
+     "voix": 821,
+     "pct_exprimes": 1.17,
+     "pct_inscrits": 0.87
+    },
+    {
+     "nom": "POUTOU",
+     "prenom": "Philippe",
+     "nuance": null,
+     "voix": 458,
+     "pct_exprimes": 0.65,
+     "pct_inscrits": 0.49
+    },
+    {
+     "nom": "ARTHAUD",
+     "prenom": "Nathalie",
+     "nuance": null,
+     "voix": 277,
+     "pct_exprimes": 0.4,
+     "pct_inscrits": 0.29
+    }
+   ],
+   "pct_abstention": 23.94,
+   "pct_participation": 76.06,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 28.4
+   }
+  },
+  "09": {
+   "code_circonscription": "09",
+   "nom": "9e circonscription du Val-d'Oise",
+   "nb_communes": 27,
+   "inscrits": 70142,
+   "abstentions": 20049,
+   "votants": 50093,
+   "blancs": 810,
+   "nuls": 426,
+   "exprimes": 48857,
+   "candidats": [
+    {
+     "nom": "MÉLENCHON",
+     "prenom": "Jean-Luc",
+     "nuance": null,
+     "voix": 17025,
+     "pct_exprimes": 34.85,
+     "pct_inscrits": 24.27
+    },
+    {
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "nuance": null,
+     "voix": 9757,
+     "pct_exprimes": 19.97,
+     "pct_inscrits": 13.91
+    },
+    {
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "nuance": null,
+     "voix": 9647,
+     "pct_exprimes": 19.75,
+     "pct_inscrits": 13.75
+    },
+    {
+     "nom": "ZEMMOUR",
+     "prenom": "Éric",
+     "nuance": null,
+     "voix": 3055,
+     "pct_exprimes": 6.25,
+     "pct_inscrits": 4.36
+    },
+    {
+     "nom": "PÉCRESSE",
+     "prenom": "Valérie",
+     "nuance": null,
+     "voix": 1718,
+     "pct_exprimes": 3.52,
+     "pct_inscrits": 2.45
+    },
+    {
+     "nom": "JADOT",
+     "prenom": "Yannick",
+     "nuance": null,
+     "voix": 1048,
+     "pct_exprimes": 2.15,
+     "pct_inscrits": 1.49
+    },
+    {
+     "nom": "ROUSSEL",
+     "prenom": "Fabien",
+     "nuance": null,
+     "voix": 830,
+     "pct_exprimes": 1.7,
+     "pct_inscrits": 1.18
+    },
+    {
+     "nom": "DUPONT-AIGNAN",
+     "prenom": "Nicolas",
+     "nuance": null,
+     "voix": 754,
+     "pct_exprimes": 1.54,
+     "pct_inscrits": 1.07
+    },
+    {
+     "nom": "LASSALLE",
+     "prenom": "Jean",
+     "nuance": null,
+     "voix": 685,
+     "pct_exprimes": 1.4,
+     "pct_inscrits": 0.98
+    },
+    {
+     "nom": "HIDALGO",
+     "prenom": "Anne",
+     "nuance": null,
+     "voix": 401,
+     "pct_exprimes": 0.82,
+     "pct_inscrits": 0.57
+    },
+    {
+     "nom": "POUTOU",
+     "prenom": "Philippe",
+     "nuance": null,
+     "voix": 276,
+     "pct_exprimes": 0.56,
+     "pct_inscrits": 0.39
+    },
+    {
+     "nom": "ARTHAUD",
+     "prenom": "Nathalie",
+     "nuance": null,
+     "voix": 206,
+     "pct_exprimes": 0.42,
+     "pct_inscrits": 0.29
+    }
+   ],
+   "pct_abstention": 28.58,
+   "pct_participation": 71.42,
+   "tete": {
+    "nom": "MÉLENCHON",
+    "prenom": "Jean-Luc",
+    "nuance": null,
+    "pct_exprimes": 34.85
+   }
+  },
+  "10": {
+   "code_circonscription": "10",
+   "nom": "10e circonscription du Val-d'Oise",
+   "nb_communes": 9,
+   "inscrits": 76520,
+   "abstentions": 20381,
+   "votants": 56139,
+   "blancs": 924,
+   "nuls": 251,
+   "exprimes": 54964,
+   "candidats": [
+    {
+     "nom": "MÉLENCHON",
+     "prenom": "Jean-Luc",
+     "nuance": null,
+     "voix": 21059,
+     "pct_exprimes": 38.31,
+     "pct_inscrits": 27.52
+    },
+    {
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "nuance": null,
+     "voix": 14375,
+     "pct_exprimes": 26.15,
+     "pct_inscrits": 18.79
+    },
+    {
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "nuance": null,
+     "voix": 7884,
+     "pct_exprimes": 14.34,
+     "pct_inscrits": 10.3
+    },
+    {
+     "nom": "ZEMMOUR",
+     "prenom": "Éric",
+     "nuance": null,
+     "voix": 2722,
+     "pct_exprimes": 4.95,
+     "pct_inscrits": 3.56
+    },
+    {
+     "nom": "PÉCRESSE",
+     "prenom": "Valérie",
+     "nuance": null,
+     "voix": 2360,
+     "pct_exprimes": 4.29,
+     "pct_inscrits": 3.08
+    },
+    {
+     "nom": "JADOT",
+     "prenom": "Yannick",
+     "nuance": null,
+     "voix": 2230,
+     "pct_exprimes": 4.06,
+     "pct_inscrits": 2.91
+    },
+    {
+     "nom": "ROUSSEL",
+     "prenom": "Fabien",
+     "nuance": null,
+     "voix": 946,
+     "pct_exprimes": 1.72,
+     "pct_inscrits": 1.24
+    },
+    {
+     "nom": "DUPONT-AIGNAN",
+     "prenom": "Nicolas",
+     "nuance": null,
+     "voix": 876,
+     "pct_exprimes": 1.59,
+     "pct_inscrits": 1.14
+    },
+    {
+     "nom": "LASSALLE",
+     "prenom": "Jean",
+     "nuance": null,
+     "voix": 827,
+     "pct_exprimes": 1.5,
+     "pct_inscrits": 1.08
+    },
+    {
+     "nom": "HIDALGO",
+     "prenom": "Anne",
+     "nuance": null,
+     "voix": 786,
+     "pct_exprimes": 1.43,
+     "pct_inscrits": 1.03
+    },
+    {
+     "nom": "POUTOU",
+     "prenom": "Philippe",
+     "nuance": null,
+     "voix": 336,
+     "pct_exprimes": 0.61,
+     "pct_inscrits": 0.44
+    },
+    {
+     "nom": "ARTHAUD",
+     "prenom": "Nathalie",
+     "nuance": null,
+     "voix": 262,
+     "pct_exprimes": 0.48,
+     "pct_inscrits": 0.34
+    }
+   ],
+   "pct_abstention": 26.63,
+   "pct_participation": 73.37,
+   "tete": {
+    "nom": "MÉLENCHON",
+    "prenom": "Jean-Luc",
+    "nuance": null,
+    "pct_exprimes": 38.31
+   }
+  },
+  "04": {
+   "code_circonscription": "04",
+   "nom": "4e circonscription du Val-d'Oise",
+   "nb_communes": 6,
+   "inscrits": 75211,
+   "abstentions": 18415,
+   "votants": 56796,
+   "blancs": 845,
+   "nuls": 274,
+   "exprimes": 55677,
+   "candidats": [
+    {
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "nuance": null,
+     "voix": 16373,
+     "pct_exprimes": 29.41,
+     "pct_inscrits": 21.77
+    },
+    {
+     "nom": "MÉLENCHON",
+     "prenom": "Jean-Luc",
+     "nuance": null,
+     "voix": 15924,
+     "pct_exprimes": 28.6,
+     "pct_inscrits": 21.17
+    },
+    {
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "nuance": null,
+     "voix": 8328,
+     "pct_exprimes": 14.96,
+     "pct_inscrits": 11.07
+    },
+    {
+     "nom": "ZEMMOUR",
+     "prenom": "Éric",
+     "nuance": null,
+     "voix": 3898,
+     "pct_exprimes": 7.0,
+     "pct_inscrits": 5.18
+    },
+    {
+     "nom": "PÉCRESSE",
+     "prenom": "Valérie",
+     "nuance": null,
+     "voix": 3273,
+     "pct_exprimes": 5.88,
+     "pct_inscrits": 4.35
+    },
+    {
+     "nom": "JADOT",
+     "prenom": "Yannick",
+     "nuance": null,
+     "voix": 2827,
+     "pct_exprimes": 5.08,
+     "pct_inscrits": 3.76
+    },
+    {
+     "nom": "ROUSSEL",
+     "prenom": "Fabien",
+     "nuance": null,
+     "voix": 1109,
+     "pct_exprimes": 1.99,
+     "pct_inscrits": 1.47
+    },
+    {
+     "nom": "LASSALLE",
+     "prenom": "Jean",
+     "nuance": null,
+     "voix": 1036,
+     "pct_exprimes": 1.86,
+     "pct_inscrits": 1.38
+    },
+    {
+     "nom": "DUPONT-AIGNAN",
+     "prenom": "Nicolas",
+     "nuance": null,
+     "voix": 979,
+     "pct_exprimes": 1.76,
+     "pct_inscrits": 1.3
+    },
+    {
+     "nom": "HIDALGO",
+     "prenom": "Anne",
+     "nuance": null,
+     "voix": 685,
+     "pct_exprimes": 1.23,
+     "pct_inscrits": 0.91
+    },
+    {
+     "nom": "POUTOU",
+     "prenom": "Philippe",
+     "nuance": null,
+     "voix": 335,
+     "pct_exprimes": 0.6,
+     "pct_inscrits": 0.45
+    },
+    {
+     "nom": "ARTHAUD",
+     "prenom": "Nathalie",
+     "nuance": null,
+     "voix": 262,
+     "pct_exprimes": 0.47,
+     "pct_inscrits": 0.35
+    }
+   ],
+   "pct_abstention": 24.48,
+   "pct_participation": 75.52,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 29.41
+   }
+  }
+ }
+}

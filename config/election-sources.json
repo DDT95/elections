@@ -1,0 +1,11 @@
+[
+  {"id":"communes","label":"Contours des communes (95)","producer":"IGN / Etalab (france-geojson)","url":"https://github.com/gregoiredavid/france-geojson","frequency":"ponctuelle"},
+  {"id":"pres2022","label":"Résultats Présidentielle 2022 (T1/T2)","producer":"Ministère de l'Intérieur / data.gouv.fr (agrégation Etalab)","url":"https://www.data.gouv.fr/datasets/donnees-des-elections-agregees","frequency":"définitive"},
+  {"id":"legi2024","label":"Résultats Législatives 2024 (à intégrer)","producer":"Ministère de l'Intérieur / data.gouv.fr","url":"https://www.data.gouv.fr/datasets/elections-legislatives-des-30-juin-et-7-juillet-2024-resultats-definitifs-du-2nd-tour","frequency":"définitive"},
+  {"id":"euro2024","label":"Résultats Européennes 2024 (à intégrer)","producer":"Ministère de l'Intérieur / data.gouv.fr","url":"https://www.data.gouv.fr/","frequency":"définitive"},
+  {"id":"muni2020","label":"Résultats Municipales 2020 (à intégrer)","producer":"Ministère de l'Intérieur / data.gouv.fr","url":"https://www.data.gouv.fr/","frequency":"définitive"},
+  {"id":"circonscriptions","label":"Circonscriptions législatives (dissolution des communes)","producer":"Reconstitué à partir des codes circonscription réels du Ministère de l'Intérieur","url":"https://www.data.gouv.fr/datasets/donnees-des-elections-agregees","frequency":"ponctuelle"},
+  {"id":"bv","label":"Bureaux de vote — résultats (sans contour géographique)","producer":"Ministère de l'Intérieur / data.gouv.fr (agrégation Etalab)","url":"https://www.data.gouv.fr/datasets/donnees-des-elections-agregees","frequency":"définitive"},
+  {"id":"insee","label":"Profil sociodémographique (âge, CSP) — à compléter","producer":"INSEE (recensement de la population)","url":"https://www.insee.fr/fr/statistiques","frequency":"annuelle"},
+  {"id":"ddt95-open-data","label":"Données DDT 95","producer":"DDT du Val-d'Oise","url":"https://www.data.gouv.fr/api/1/organizations/direction-departementale-des-territoires-du-val-doise/","frequency":"hebdomadaire"}
+]

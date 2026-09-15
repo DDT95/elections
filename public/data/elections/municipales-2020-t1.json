@@ -1,0 +1,8 @@
+{
+  "election": "Municipales 2020",
+  "tour": 1,
+  "date": "2020-03-15",
+  "status": "a_completer",
+  "note": "Structure prête pour l'intégration des résultats réels. Non chargé dans cette version.",
+  "communes": {}
+}

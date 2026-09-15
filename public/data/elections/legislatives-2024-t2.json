@@ -1,0 +1,8 @@
+{
+  "election": "Législatives 2024",
+  "tour": 2,
+  "date": "2024-07-07",
+  "status": "a_completer",
+  "note": "Structure prête pour l'intégration des résultats réels (data.gouv.fr / Ministère de l'Intérieur). Non chargé dans cette version pour préserver l'intégrité des données déjà vérifiées.",
+  "communes": {}
+}

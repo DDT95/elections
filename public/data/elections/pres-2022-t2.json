@@ -1,0 +1,7006 @@
+{
+ "election": "Présidentielle 2022",
+ "tour": 2,
+ "date": "2022-04-24",
+ "label": "2nd tour",
+ "status": "reel",
+ "source": {
+  "producer": "data.gouv.fr / Ministère de l'Intérieur (agrégation Etalab)",
+  "dataset": "Données des élections agrégées",
+  "url": "https://www.data.gouv.fr/datasets/donnees-des-elections-agregees"
+ },
+ "communes": {
+  "95002": {
+   "code_insee": "95002",
+   "nom": "Ableiges",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 2,
+   "inscrits": 706,
+   "abstentions": 143,
+   "votants": 563,
+   "blancs": 32,
+   "nuls": 12,
+   "exprimes": 519,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 294,
+     "pct_exprimes": 56.65,
+     "pct_inscrits": 41.64
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 225,
+     "pct_exprimes": 43.35,
+     "pct_inscrits": 31.87
+    }
+   ],
+   "pct_abstention": 20.25,
+   "pct_participation": 79.75,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 56.65
+   }
+  },
+  "95008": {
+   "code_insee": "95008",
+   "nom": "Aincourt",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 559,
+   "abstentions": 113,
+   "votants": 446,
+   "blancs": 28,
+   "nuls": 12,
+   "exprimes": 406,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 211,
+     "pct_exprimes": 51.97,
+     "pct_inscrits": 37.75
+    },
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 195,
+     "pct_exprimes": 48.03,
+     "pct_inscrits": 34.88
+    }
+   ],
+   "pct_abstention": 20.21,
+   "pct_participation": 79.79,
+   "tete": {
+    "nom": "LE PEN",
+    "prenom": "Marine",
+    "nuance": null,
+    "pct_exprimes": 51.97
+   }
+  },
+  "95011": {
+   "code_insee": "95011",
+   "nom": "Ambleville",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 305,
+   "abstentions": 64,
+   "votants": 241,
+   "blancs": 14,
+   "nuls": 6,
+   "exprimes": 221,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 113,
+     "pct_exprimes": 51.13,
+     "pct_inscrits": 37.05
+    },
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 108,
+     "pct_exprimes": 48.87,
+     "pct_inscrits": 35.41
+    }
+   ],
+   "pct_abstention": 20.98,
+   "pct_participation": 79.02,
+   "tete": {
+    "nom": "LE PEN",
+    "prenom": "Marine",
+    "nuance": null,
+    "pct_exprimes": 51.13
+   }
+  },
+  "95012": {
+   "code_insee": "95012",
+   "nom": "Amenucourt",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 154,
+   "abstentions": 34,
+   "votants": 120,
+   "blancs": 9,
+   "nuls": 1,
+   "exprimes": 110,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 70,
+     "pct_exprimes": 63.64,
+     "pct_inscrits": 45.45
+    },
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 40,
+     "pct_exprimes": 36.36,
+     "pct_inscrits": 25.97
+    }
+   ],
+   "pct_abstention": 22.08,
+   "pct_participation": 77.92,
+   "tete": {
+    "nom": "LE PEN",
+    "prenom": "Marine",
+    "nuance": null,
+    "pct_exprimes": 63.64
+   }
+  },
+  "95014": {
+   "code_insee": "95014",
+   "nom": "Andilly",
+   "code_circonscription": "06",
+   "bureaux_de_vote": 2,
+   "inscrits": 1504,
+   "abstentions": 356,
+   "votants": 1148,
+   "blancs": 61,
+   "nuls": 16,
+   "exprimes": 1071,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 754,
+     "pct_exprimes": 70.4,
+     "pct_inscrits": 50.13
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 317,
+     "pct_exprimes": 29.6,
+     "pct_inscrits": 21.08
+    }
+   ],
+   "pct_abstention": 23.67,
+   "pct_participation": 76.33,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 70.4
+   }
+  },
+  "95018": {
+   "code_insee": "95018",
+   "nom": "Argenteuil",
+   "code_circonscription": "05",
+   "bureaux_de_vote": 50,
+   "inscrits": 52660,
+   "abstentions": 20136,
+   "votants": 32524,
+   "blancs": 2070,
+   "nuls": 644,
+   "exprimes": 29810,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 21874,
+     "pct_exprimes": 73.38,
+     "pct_inscrits": 41.54
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 7936,
+     "pct_exprimes": 26.62,
+     "pct_inscrits": 15.07
+    }
+   ],
+   "pct_abstention": 38.24,
+   "pct_participation": 61.76,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 73.38
+   }
+  },
+  "95019": {
+   "code_insee": "95019",
+   "nom": "Arnouville",
+   "code_circonscription": "08",
+   "bureaux_de_vote": 7,
+   "inscrits": 7670,
+   "abstentions": 2761,
+   "votants": 4909,
+   "blancs": 281,
+   "nuls": 71,
+   "exprimes": 4557,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 2604,
+     "pct_exprimes": 57.14,
+     "pct_inscrits": 33.95
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 1953,
+     "pct_exprimes": 42.86,
+     "pct_inscrits": 25.46
+    }
+   ],
+   "pct_abstention": 36.0,
+   "pct_participation": 64.0,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 57.14
+   }
+  },
+  "95023": {
+   "code_insee": "95023",
+   "nom": "Arronville",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 463,
+   "abstentions": 91,
+   "votants": 372,
+   "blancs": 36,
+   "nuls": 2,
+   "exprimes": 334,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 171,
+     "pct_exprimes": 51.2,
+     "pct_inscrits": 36.93
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 163,
+     "pct_exprimes": 48.8,
+     "pct_inscrits": 35.21
+    }
+   ],
+   "pct_abstention": 19.65,
+   "pct_participation": 80.35,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 51.2
+   }
+  },
+  "95024": {
+   "code_insee": "95024",
+   "nom": "Arthies",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 192,
+   "abstentions": 44,
+   "votants": 148,
+   "blancs": 9,
+   "nuls": 3,
+   "exprimes": 136,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 71,
+     "pct_exprimes": 52.21,
+     "pct_inscrits": 36.98
+    },
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 65,
+     "pct_exprimes": 47.79,
+     "pct_inscrits": 33.85
+    }
+   ],
+   "pct_abstention": 22.92,
+   "pct_participation": 77.08,
+   "tete": {
+    "nom": "LE PEN",
+    "prenom": "Marine",
+    "nuance": null,
+    "pct_exprimes": 52.21
+   }
+  },
+  "95026": {
+   "code_insee": "95026",
+   "nom": "Asnières-Sur-Oise",
+   "code_circonscription": "02",
+   "bureaux_de_vote": 3,
+   "inscrits": 2175,
+   "abstentions": 538,
+   "votants": 1637,
+   "blancs": 113,
+   "nuls": 32,
+   "exprimes": 1492,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 749,
+     "pct_exprimes": 50.2,
+     "pct_inscrits": 34.44
+    },
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 743,
+     "pct_exprimes": 49.8,
+     "pct_inscrits": 34.16
+    }
+   ],
+   "pct_abstention": 24.74,
+   "pct_participation": 75.26,
+   "tete": {
+    "nom": "LE PEN",
+    "prenom": "Marine",
+    "nuance": null,
+    "pct_exprimes": 50.2
+   }
+  },
+  "95028": {
+   "code_insee": "95028",
+   "nom": "Attainville",
+   "code_circonscription": "07",
+   "bureaux_de_vote": 1,
+   "inscrits": 1199,
+   "abstentions": 319,
+   "votants": 880,
+   "blancs": 61,
+   "nuls": 20,
+   "exprimes": 799,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 430,
+     "pct_exprimes": 53.82,
+     "pct_inscrits": 35.86
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 369,
+     "pct_exprimes": 46.18,
+     "pct_inscrits": 30.78
+    }
+   ],
+   "pct_abstention": 26.61,
+   "pct_participation": 73.39,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 53.82
+   }
+  },
+  "95039": {
+   "code_insee": "95039",
+   "nom": "Auvers-Sur-Oise",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 6,
+   "inscrits": 5210,
+   "abstentions": 1174,
+   "votants": 4036,
+   "blancs": 284,
+   "nuls": 71,
+   "exprimes": 3681,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 2348,
+     "pct_exprimes": 63.79,
+     "pct_inscrits": 45.07
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 1333,
+     "pct_exprimes": 36.21,
+     "pct_inscrits": 25.59
+    }
+   ],
+   "pct_abstention": 22.53,
+   "pct_participation": 77.47,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 63.79
+   }
+  },
+  "95040": {
+   "code_insee": "95040",
+   "nom": "Avernes",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 662,
+   "abstentions": 148,
+   "votants": 514,
+   "blancs": 27,
+   "nuls": 5,
+   "exprimes": 482,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 276,
+     "pct_exprimes": 57.26,
+     "pct_inscrits": 41.69
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 206,
+     "pct_exprimes": 42.74,
+     "pct_inscrits": 31.12
+    }
+   ],
+   "pct_abstention": 22.36,
+   "pct_participation": 77.64,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 57.26
+   }
+  },
+  "95042": {
+   "code_insee": "95042",
+   "nom": "Baillet-En-France",
+   "code_circonscription": "02",
+   "bureaux_de_vote": 1,
+   "inscrits": 1531,
+   "abstentions": 397,
+   "votants": 1134,
+   "blancs": 84,
+   "nuls": 21,
+   "exprimes": 1029,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 584,
+     "pct_exprimes": 56.75,
+     "pct_inscrits": 38.15
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 445,
+     "pct_exprimes": 43.25,
+     "pct_inscrits": 29.07
+    }
+   ],
+   "pct_abstention": 25.93,
+   "pct_participation": 74.07,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 56.75
+   }
+  },
+  "95046": {
+   "code_insee": "95046",
+   "nom": "Banthelu",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 104,
+   "abstentions": 18,
+   "votants": 86,
+   "blancs": 4,
+   "nuls": 0,
+   "exprimes": 82,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 47,
+     "pct_exprimes": 57.32,
+     "pct_inscrits": 45.19
+    },
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 35,
+     "pct_exprimes": 42.68,
+     "pct_inscrits": 33.65
+    }
+   ],
+   "pct_abstention": 17.31,
+   "pct_participation": 82.69,
+   "tete": {
+    "nom": "LE PEN",
+    "prenom": "Marine",
+    "nuance": null,
+    "pct_exprimes": 57.32
+   }
+  },
+  "95051": {
+   "code_insee": "95051",
+   "nom": "Beauchamp",
+   "code_circonscription": "03",
+   "bureaux_de_vote": 8,
+   "inscrits": 6141,
+   "abstentions": 1575,
+   "votants": 4566,
+   "blancs": 312,
+   "nuls": 55,
+   "exprimes": 4199,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 2798,
+     "pct_exprimes": 66.63,
+     "pct_inscrits": 45.56
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 1401,
+     "pct_exprimes": 33.37,
+     "pct_inscrits": 22.81
+    }
+   ],
+   "pct_abstention": 25.65,
+   "pct_participation": 74.35,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 66.63
+   }
+  },
+  "95052": {
+   "code_insee": "95052",
+   "nom": "Beaumont-Sur-Oise",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 5,
+   "inscrits": 5596,
+   "abstentions": 1835,
+   "votants": 3761,
+   "blancs": 268,
+   "nuls": 106,
+   "exprimes": 3387,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 1887,
+     "pct_exprimes": 55.71,
+     "pct_inscrits": 33.72
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 1500,
+     "pct_exprimes": 44.29,
+     "pct_inscrits": 26.8
+    }
+   ],
+   "pct_abstention": 32.79,
+   "pct_participation": 67.21,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 55.71
+   }
+  },
+  "95054": {
+   "code_insee": "95054",
+   "nom": "Le Bellay-En-Vexin",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 163,
+   "abstentions": 22,
+   "votants": 141,
+   "blancs": 11,
+   "nuls": 1,
+   "exprimes": 129,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 65,
+     "pct_exprimes": 50.39,
+     "pct_inscrits": 39.88
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 64,
+     "pct_exprimes": 49.61,
+     "pct_inscrits": 39.26
+    }
+   ],
+   "pct_abstention": 13.5,
+   "pct_participation": 86.5,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 50.39
+   }
+  },
+  "95055": {
+   "code_insee": "95055",
+   "nom": "Bellefontaine",
+   "code_circonscription": "09",
+   "bureaux_de_vote": 1,
+   "inscrits": 288,
+   "abstentions": 81,
+   "votants": 207,
+   "blancs": 9,
+   "nuls": 5,
+   "exprimes": 193,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 99,
+     "pct_exprimes": 51.3,
+     "pct_inscrits": 34.38
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 94,
+     "pct_exprimes": 48.7,
+     "pct_inscrits": 32.64
+    }
+   ],
+   "pct_abstention": 28.12,
+   "pct_participation": 71.88,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 51.3
+   }
+  },
+  "95056": {
+   "code_insee": "95056",
+   "nom": "Belloy-En-France",
+   "code_circonscription": "02",
+   "bureaux_de_vote": 1,
+   "inscrits": 1372,
+   "abstentions": 365,
+   "votants": 1007,
+   "blancs": 61,
+   "nuls": 10,
+   "exprimes": 936,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 470,
+     "pct_exprimes": 50.21,
+     "pct_inscrits": 34.26
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 466,
+     "pct_exprimes": 49.79,
+     "pct_inscrits": 33.97
+    }
+   ],
+   "pct_abstention": 26.6,
+   "pct_participation": 73.4,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 50.21
+   }
+  },
+  "95058": {
+   "code_insee": "95058",
+   "nom": "Bernes-Sur-Oise",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 2,
+   "inscrits": 1655,
+   "abstentions": 443,
+   "votants": 1212,
+   "blancs": 81,
+   "nuls": 28,
+   "exprimes": 1103,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 592,
+     "pct_exprimes": 53.67,
+     "pct_inscrits": 35.77
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 511,
+     "pct_exprimes": 46.33,
+     "pct_inscrits": 30.88
+    }
+   ],
+   "pct_abstention": 26.77,
+   "pct_participation": 73.23,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 53.67
+   }
+  },
+  "95059": {
+   "code_insee": "95059",
+   "nom": "Berville",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 276,
+   "abstentions": 69,
+   "votants": 207,
+   "blancs": 18,
+   "nuls": 3,
+   "exprimes": 186,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 115,
+     "pct_exprimes": 61.83,
+     "pct_inscrits": 41.67
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 71,
+     "pct_exprimes": 38.17,
+     "pct_inscrits": 25.72
+    }
+   ],
+   "pct_abstention": 25.0,
+   "pct_participation": 75.0,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 61.83
+   }
+  },
+  "95060": {
+   "code_insee": "95060",
+   "nom": "Bessancourt",
+   "code_circonscription": "03",
+   "bureaux_de_vote": 6,
+   "inscrits": 5168,
+   "abstentions": 1554,
+   "votants": 3614,
+   "blancs": 241,
+   "nuls": 44,
+   "exprimes": 3329,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 2012,
+     "pct_exprimes": 60.44,
+     "pct_inscrits": 38.93
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 1317,
+     "pct_exprimes": 39.56,
+     "pct_inscrits": 25.48
+    }
+   ],
+   "pct_abstention": 30.07,
+   "pct_participation": 69.93,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 60.44
+   }
+  },
+  "95061": {
+   "code_insee": "95061",
+   "nom": "Béthemont-La-Forêt",
+   "code_circonscription": "03",
+   "bureaux_de_vote": 1,
+   "inscrits": 336,
+   "abstentions": 78,
+   "votants": 258,
+   "blancs": 18,
+   "nuls": 7,
+   "exprimes": 233,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 143,
+     "pct_exprimes": 61.37,
+     "pct_inscrits": 42.56
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 90,
+     "pct_exprimes": 38.63,
+     "pct_inscrits": 26.79
+    }
+   ],
+   "pct_abstention": 23.21,
+   "pct_participation": 76.79,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 61.37
+   }
+  },
+  "95063": {
+   "code_insee": "95063",
+   "nom": "Bezons",
+   "code_circonscription": "05",
+   "bureaux_de_vote": 17,
+   "inscrits": 16036,
+   "abstentions": 5942,
+   "votants": 10094,
+   "blancs": 665,
+   "nuls": 187,
+   "exprimes": 9242,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 6536,
+     "pct_exprimes": 70.72,
+     "pct_inscrits": 40.76
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 2706,
+     "pct_exprimes": 29.28,
+     "pct_inscrits": 16.87
+    }
+   ],
+   "pct_abstention": 37.05,
+   "pct_participation": 62.95,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 70.72
+   }
+  },
+  "95074": {
+   "code_insee": "95074",
+   "nom": "Boisemont",
+   "code_circonscription": "10",
+   "bureaux_de_vote": 1,
+   "inscrits": 617,
+   "abstentions": 121,
+   "votants": 496,
+   "blancs": 38,
+   "nuls": 2,
+   "exprimes": 456,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 289,
+     "pct_exprimes": 63.38,
+     "pct_inscrits": 46.84
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 167,
+     "pct_exprimes": 36.62,
+     "pct_inscrits": 27.07
+    }
+   ],
+   "pct_abstention": 19.61,
+   "pct_participation": 80.39,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 63.38
+   }
+  },
+  "95078": {
+   "code_insee": "95078",
+   "nom": "Boissy-L'Aillerie",
+   "code_circonscription": "10",
+   "bureaux_de_vote": 1,
+   "inscrits": 1375,
+   "abstentions": 338,
+   "votants": 1037,
+   "blancs": 81,
+   "nuls": 27,
+   "exprimes": 929,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 569,
+     "pct_exprimes": 61.25,
+     "pct_inscrits": 41.38
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 360,
+     "pct_exprimes": 38.75,
+     "pct_inscrits": 26.18
+    }
+   ],
+   "pct_abstention": 24.58,
+   "pct_participation": 75.42,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 61.25
+   }
+  },
+  "95088": {
+   "code_insee": "95088",
+   "nom": "Bonneuil-En-France",
+   "code_circonscription": "08",
+   "bureaux_de_vote": 1,
+   "inscrits": 551,
+   "abstentions": 165,
+   "votants": 386,
+   "blancs": 3,
+   "nuls": 45,
+   "exprimes": 338,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 183,
+     "pct_exprimes": 54.14,
+     "pct_inscrits": 33.21
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 155,
+     "pct_exprimes": 45.86,
+     "pct_inscrits": 28.13
+    }
+   ],
+   "pct_abstention": 29.95,
+   "pct_participation": 70.05,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 54.14
+   }
+  },
+  "95091": {
+   "code_insee": "95091",
+   "nom": "Bouffémont",
+   "code_circonscription": "07",
+   "bureaux_de_vote": 5,
+   "inscrits": 4136,
+   "abstentions": 1229,
+   "votants": 2907,
+   "blancs": 211,
+   "nuls": 66,
+   "exprimes": 2630,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 1801,
+     "pct_exprimes": 68.48,
+     "pct_inscrits": 43.54
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 829,
+     "pct_exprimes": 31.52,
+     "pct_inscrits": 20.04
+    }
+   ],
+   "pct_abstention": 29.71,
+   "pct_participation": 70.29,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 68.48
+   }
+  },
+  "95094": {
+   "code_insee": "95094",
+   "nom": "Bouqueval",
+   "code_circonscription": "09",
+   "bureaux_de_vote": 1,
+   "inscrits": 195,
+   "abstentions": 47,
+   "votants": 148,
+   "blancs": 12,
+   "nuls": 6,
+   "exprimes": 130,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 86,
+     "pct_exprimes": 66.15,
+     "pct_inscrits": 44.1
+    },
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 44,
+     "pct_exprimes": 33.85,
+     "pct_inscrits": 22.56
+    }
+   ],
+   "pct_abstention": 24.1,
+   "pct_participation": 75.9,
+   "tete": {
+    "nom": "LE PEN",
+    "prenom": "Marine",
+    "nuance": null,
+    "pct_exprimes": 66.15
+   }
+  },
+  "95101": {
+   "code_insee": "95101",
+   "nom": "Bray-Et-Lû",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 603,
+   "abstentions": 147,
+   "votants": 456,
+   "blancs": 20,
+   "nuls": 10,
+   "exprimes": 426,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 261,
+     "pct_exprimes": 61.27,
+     "pct_inscrits": 43.28
+    },
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 165,
+     "pct_exprimes": 38.73,
+     "pct_inscrits": 27.36
+    }
+   ],
+   "pct_abstention": 24.38,
+   "pct_participation": 75.62,
+   "tete": {
+    "nom": "LE PEN",
+    "prenom": "Marine",
+    "nuance": null,
+    "pct_exprimes": 61.27
+   }
+  },
+  "95102": {
+   "code_insee": "95102",
+   "nom": "Bréançon",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 329,
+   "abstentions": 76,
+   "votants": 253,
+   "blancs": 9,
+   "nuls": 2,
+   "exprimes": 242,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 152,
+     "pct_exprimes": 62.81,
+     "pct_inscrits": 46.2
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 90,
+     "pct_exprimes": 37.19,
+     "pct_inscrits": 27.36
+    }
+   ],
+   "pct_abstention": 23.1,
+   "pct_participation": 76.9,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 62.81
+   }
+  },
+  "95110": {
+   "code_insee": "95110",
+   "nom": "Brignancourt",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 194,
+   "abstentions": 39,
+   "votants": 155,
+   "blancs": 11,
+   "nuls": 2,
+   "exprimes": 142,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 80,
+     "pct_exprimes": 56.34,
+     "pct_inscrits": 41.24
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 62,
+     "pct_exprimes": 43.66,
+     "pct_inscrits": 31.96
+    }
+   ],
+   "pct_abstention": 20.1,
+   "pct_participation": 79.9,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 56.34
+   }
+  },
+  "95116": {
+   "code_insee": "95116",
+   "nom": "Bruyères-Sur-Oise",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 3,
+   "inscrits": 2791,
+   "abstentions": 898,
+   "votants": 1893,
+   "blancs": 137,
+   "nuls": 43,
+   "exprimes": 1713,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 863,
+     "pct_exprimes": 50.38,
+     "pct_inscrits": 30.92
+    },
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 850,
+     "pct_exprimes": 49.62,
+     "pct_inscrits": 30.46
+    }
+   ],
+   "pct_abstention": 32.17,
+   "pct_participation": 67.83,
+   "tete": {
+    "nom": "LE PEN",
+    "prenom": "Marine",
+    "nuance": null,
+    "pct_exprimes": 50.38
+   }
+  },
+  "95119": {
+   "code_insee": "95119",
+   "nom": "Buhy",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 227,
+   "abstentions": 53,
+   "votants": 174,
+   "blancs": 7,
+   "nuls": 3,
+   "exprimes": 164,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 87,
+     "pct_exprimes": 53.05,
+     "pct_inscrits": 38.33
+    },
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 77,
+     "pct_exprimes": 46.95,
+     "pct_inscrits": 33.92
+    }
+   ],
+   "pct_abstention": 23.35,
+   "pct_participation": 76.65,
+   "tete": {
+    "nom": "LE PEN",
+    "prenom": "Marine",
+    "nuance": null,
+    "pct_exprimes": 53.05
+   }
+  },
+  "95120": {
+   "code_insee": "95120",
+   "nom": "Butry-Sur-Oise",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 2,
+   "inscrits": 1656,
+   "abstentions": 404,
+   "votants": 1252,
+   "blancs": 60,
+   "nuls": 27,
+   "exprimes": 1165,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 682,
+     "pct_exprimes": 58.54,
+     "pct_inscrits": 41.18
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 483,
+     "pct_exprimes": 41.46,
+     "pct_inscrits": 29.17
+    }
+   ],
+   "pct_abstention": 24.4,
+   "pct_participation": 75.6,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 58.54
+   }
+  },
+  "95127": {
+   "code_insee": "95127",
+   "nom": "Cergy",
+   "code_circonscription": "10",
+   "bureaux_de_vote": 35,
+   "inscrits": 32359,
+   "abstentions": 12180,
+   "votants": 20179,
+   "blancs": 1420,
+   "nuls": 350,
+   "exprimes": 18409,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 14029,
+     "pct_exprimes": 76.21,
+     "pct_inscrits": 43.35
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 4380,
+     "pct_exprimes": 23.79,
+     "pct_inscrits": 13.54
+    }
+   ],
+   "pct_abstention": 37.64,
+   "pct_participation": 62.36,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 76.21
+   }
+  },
+  "95134": {
+   "code_insee": "95134",
+   "nom": "Champagne-Sur-Oise",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 4,
+   "inscrits": 3650,
+   "abstentions": 1084,
+   "votants": 2566,
+   "blancs": 161,
+   "nuls": 65,
+   "exprimes": 2340,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 1288,
+     "pct_exprimes": 55.04,
+     "pct_inscrits": 35.29
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 1052,
+     "pct_exprimes": 44.96,
+     "pct_inscrits": 28.82
+    }
+   ],
+   "pct_abstention": 29.7,
+   "pct_participation": 70.3,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 55.04
+   }
+  },
+  "95139": {
+   "code_insee": "95139",
+   "nom": "La Chapelle-En-Vexin",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 221,
+   "abstentions": 48,
+   "votants": 173,
+   "blancs": 17,
+   "nuls": 2,
+   "exprimes": 154,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 88,
+     "pct_exprimes": 57.14,
+     "pct_inscrits": 39.82
+    },
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 66,
+     "pct_exprimes": 42.86,
+     "pct_inscrits": 29.86
+    }
+   ],
+   "pct_abstention": 21.72,
+   "pct_participation": 78.28,
+   "tete": {
+    "nom": "LE PEN",
+    "prenom": "Marine",
+    "nuance": null,
+    "pct_exprimes": 57.14
+   }
+  },
+  "95141": {
+   "code_insee": "95141",
+   "nom": "Charmont",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 24,
+   "abstentions": 3,
+   "votants": 21,
+   "blancs": 2,
+   "nuls": 0,
+   "exprimes": 19,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 10,
+     "pct_exprimes": 52.63,
+     "pct_inscrits": 41.67
+    },
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 9,
+     "pct_exprimes": 47.37,
+     "pct_inscrits": 37.5
+    }
+   ],
+   "pct_abstention": 12.5,
+   "pct_participation": 87.5,
+   "tete": {
+    "nom": "LE PEN",
+    "prenom": "Marine",
+    "nuance": null,
+    "pct_exprimes": 52.63
+   }
+  },
+  "95142": {
+   "code_insee": "95142",
+   "nom": "Chars",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 1206,
+   "abstentions": 279,
+   "votants": 927,
+   "blancs": 67,
+   "nuls": 26,
+   "exprimes": 834,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 424,
+     "pct_exprimes": 50.84,
+     "pct_inscrits": 35.16
+    },
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 410,
+     "pct_exprimes": 49.16,
+     "pct_inscrits": 34.0
+    }
+   ],
+   "pct_abstention": 23.13,
+   "pct_participation": 76.87,
+   "tete": {
+    "nom": "LE PEN",
+    "prenom": "Marine",
+    "nuance": null,
+    "pct_exprimes": 50.84
+   }
+  },
+  "95144": {
+   "code_insee": "95144",
+   "nom": "Châtenay-En-France",
+   "code_circonscription": "09",
+   "bureaux_de_vote": 1,
+   "inscrits": 53,
+   "abstentions": 13,
+   "votants": 40,
+   "blancs": 2,
+   "nuls": 1,
+   "exprimes": 37,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 28,
+     "pct_exprimes": 75.68,
+     "pct_inscrits": 52.83
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 9,
+     "pct_exprimes": 24.32,
+     "pct_inscrits": 16.98
+    }
+   ],
+   "pct_abstention": 24.53,
+   "pct_participation": 75.47,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 75.68
+   }
+  },
+  "95149": {
+   "code_insee": "95149",
+   "nom": "Chaumontel",
+   "code_circonscription": "09",
+   "bureaux_de_vote": 2,
+   "inscrits": 2591,
+   "abstentions": 659,
+   "votants": 1932,
+   "blancs": 137,
+   "nuls": 30,
+   "exprimes": 1765,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 895,
+     "pct_exprimes": 50.71,
+     "pct_inscrits": 34.54
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 870,
+     "pct_exprimes": 49.29,
+     "pct_inscrits": 33.58
+    }
+   ],
+   "pct_abstention": 25.43,
+   "pct_participation": 74.57,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 50.71
+   }
+  },
+  "95150": {
+   "code_insee": "95150",
+   "nom": "Chaussy",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 481,
+   "abstentions": 90,
+   "votants": 391,
+   "blancs": 36,
+   "nuls": 7,
+   "exprimes": 348,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 189,
+     "pct_exprimes": 54.31,
+     "pct_inscrits": 39.29
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 159,
+     "pct_exprimes": 45.69,
+     "pct_inscrits": 33.06
+    }
+   ],
+   "pct_abstention": 18.71,
+   "pct_participation": 81.29,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 54.31
+   }
+  },
+  "95151": {
+   "code_insee": "95151",
+   "nom": "Chauvry",
+   "code_circonscription": "03",
+   "bureaux_de_vote": 1,
+   "inscrits": 219,
+   "abstentions": 48,
+   "votants": 171,
+   "blancs": 10,
+   "nuls": 6,
+   "exprimes": 155,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 89,
+     "pct_exprimes": 57.42,
+     "pct_inscrits": 40.64
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 66,
+     "pct_exprimes": 42.58,
+     "pct_inscrits": 30.14
+    }
+   ],
+   "pct_abstention": 21.92,
+   "pct_participation": 78.08,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 57.42
+   }
+  },
+  "95154": {
+   "code_insee": "95154",
+   "nom": "Chennevières-Lès-Louvres",
+   "code_circonscription": "09",
+   "bureaux_de_vote": 1,
+   "inscrits": 195,
+   "abstentions": 29,
+   "votants": 166,
+   "blancs": 7,
+   "nuls": 4,
+   "exprimes": 155,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 85,
+     "pct_exprimes": 54.84,
+     "pct_inscrits": 43.59
+    },
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 70,
+     "pct_exprimes": 45.16,
+     "pct_inscrits": 35.9
+    }
+   ],
+   "pct_abstention": 14.87,
+   "pct_participation": 85.13,
+   "tete": {
+    "nom": "LE PEN",
+    "prenom": "Marine",
+    "nuance": null,
+    "pct_exprimes": 54.84
+   }
+  },
+  "95157": {
+   "code_insee": "95157",
+   "nom": "Chérence",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 153,
+   "abstentions": 17,
+   "votants": 136,
+   "blancs": 4,
+   "nuls": 4,
+   "exprimes": 128,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 83,
+     "pct_exprimes": 64.84,
+     "pct_inscrits": 54.25
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 45,
+     "pct_exprimes": 35.16,
+     "pct_inscrits": 29.41
+    }
+   ],
+   "pct_abstention": 11.11,
+   "pct_participation": 88.89,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 64.84
+   }
+  },
+  "95166": {
+   "code_insee": "95166",
+   "nom": "Cléry-En-Vexin",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 330,
+   "abstentions": 78,
+   "votants": 252,
+   "blancs": 16,
+   "nuls": 4,
+   "exprimes": 232,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 128,
+     "pct_exprimes": 55.17,
+     "pct_inscrits": 38.79
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 104,
+     "pct_exprimes": 44.83,
+     "pct_inscrits": 31.52
+    }
+   ],
+   "pct_abstention": 23.64,
+   "pct_participation": 76.36,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 55.17
+   }
+  },
+  "95169": {
+   "code_insee": "95169",
+   "nom": "Commeny",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 352,
+   "abstentions": 83,
+   "votants": 269,
+   "blancs": 24,
+   "nuls": 5,
+   "exprimes": 240,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 149,
+     "pct_exprimes": 62.08,
+     "pct_inscrits": 42.33
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 91,
+     "pct_exprimes": 37.92,
+     "pct_inscrits": 25.85
+    }
+   ],
+   "pct_abstention": 23.58,
+   "pct_participation": 76.42,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 62.08
+   }
+  },
+  "95170": {
+   "code_insee": "95170",
+   "nom": "Condécourt",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 383,
+   "abstentions": 65,
+   "votants": 318,
+   "blancs": 18,
+   "nuls": 0,
+   "exprimes": 300,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 167,
+     "pct_exprimes": 55.67,
+     "pct_inscrits": 43.6
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 133,
+     "pct_exprimes": 44.33,
+     "pct_inscrits": 34.73
+    }
+   ],
+   "pct_abstention": 16.97,
+   "pct_participation": 83.03,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 55.67
+   }
+  },
+  "95176": {
+   "code_insee": "95176",
+   "nom": "Cormeilles-En-Parisis",
+   "code_circonscription": "03",
+   "bureaux_de_vote": 17,
+   "inscrits": 16829,
+   "abstentions": 4733,
+   "votants": 12096,
+   "blancs": 711,
+   "nuls": 219,
+   "exprimes": 11166,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 7738,
+     "pct_exprimes": 69.3,
+     "pct_inscrits": 45.98
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 3428,
+     "pct_exprimes": 30.7,
+     "pct_inscrits": 20.37
+    }
+   ],
+   "pct_abstention": 28.12,
+   "pct_participation": 71.88,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 69.3
+   }
+  },
+  "95177": {
+   "code_insee": "95177",
+   "nom": "Cormeilles-En-Vexin",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 874,
+   "abstentions": 202,
+   "votants": 672,
+   "blancs": 53,
+   "nuls": 6,
+   "exprimes": 613,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 325,
+     "pct_exprimes": 53.02,
+     "pct_inscrits": 37.19
+    },
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 288,
+     "pct_exprimes": 46.98,
+     "pct_inscrits": 32.95
+    }
+   ],
+   "pct_abstention": 23.11,
+   "pct_participation": 76.89,
+   "tete": {
+    "nom": "LE PEN",
+    "prenom": "Marine",
+    "nuance": null,
+    "pct_exprimes": 53.02
+   }
+  },
+  "95181": {
+   "code_insee": "95181",
+   "nom": "Courcelles-Sur-Viosne",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 229,
+   "abstentions": 51,
+   "votants": 178,
+   "blancs": 15,
+   "nuls": 4,
+   "exprimes": 159,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 110,
+     "pct_exprimes": 69.18,
+     "pct_inscrits": 48.03
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 49,
+     "pct_exprimes": 30.82,
+     "pct_inscrits": 21.4
+    }
+   ],
+   "pct_abstention": 22.27,
+   "pct_participation": 77.73,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 69.18
+   }
+  },
+  "95183": {
+   "code_insee": "95183",
+   "nom": "Courdimanche",
+   "code_circonscription": "10",
+   "bureaux_de_vote": 5,
+   "inscrits": 4454,
+   "abstentions": 1254,
+   "votants": 3200,
+   "blancs": 214,
+   "nuls": 51,
+   "exprimes": 2935,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 2108,
+     "pct_exprimes": 71.82,
+     "pct_inscrits": 47.33
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 827,
+     "pct_exprimes": 28.18,
+     "pct_inscrits": 18.57
+    }
+   ],
+   "pct_abstention": 28.15,
+   "pct_participation": 71.85,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 71.82
+   }
+  },
+  "95197": {
+   "code_insee": "95197",
+   "nom": "Deuil-La-Barre",
+   "code_circonscription": "06",
+   "bureaux_de_vote": 16,
+   "inscrits": 14440,
+   "abstentions": 4701,
+   "votants": 9739,
+   "blancs": 662,
+   "nuls": 142,
+   "exprimes": 8935,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 6581,
+     "pct_exprimes": 73.65,
+     "pct_inscrits": 45.57
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 2354,
+     "pct_exprimes": 26.35,
+     "pct_inscrits": 16.3
+    }
+   ],
+   "pct_abstention": 32.56,
+   "pct_participation": 67.44,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 73.65
+   }
+  },
+  "95199": {
+   "code_insee": "95199",
+   "nom": "Domont",
+   "code_circonscription": "07",
+   "bureaux_de_vote": 10,
+   "inscrits": 10026,
+   "abstentions": 3003,
+   "votants": 7023,
+   "blancs": 474,
+   "nuls": 131,
+   "exprimes": 6418,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 4018,
+     "pct_exprimes": 62.61,
+     "pct_inscrits": 40.08
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 2400,
+     "pct_exprimes": 37.39,
+     "pct_inscrits": 23.94
+    }
+   ],
+   "pct_abstention": 29.95,
+   "pct_participation": 70.05,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 62.61
+   }
+  },
+  "95203": {
+   "code_insee": "95203",
+   "nom": "Eaubonne",
+   "code_circonscription": "04",
+   "bureaux_de_vote": 14,
+   "inscrits": 15846,
+   "abstentions": 4414,
+   "votants": 11432,
+   "blancs": 797,
+   "nuls": 165,
+   "exprimes": 10470,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 7621,
+     "pct_exprimes": 72.79,
+     "pct_inscrits": 48.09
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 2849,
+     "pct_exprimes": 27.21,
+     "pct_inscrits": 17.98
+    }
+   ],
+   "pct_abstention": 27.86,
+   "pct_participation": 72.14,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 72.79
+   }
+  },
+  "95205": {
+   "code_insee": "95205",
+   "nom": "Ecouen",
+   "code_circonscription": "07",
+   "bureaux_de_vote": 4,
+   "inscrits": 4772,
+   "abstentions": 1562,
+   "votants": 3210,
+   "blancs": 253,
+   "nuls": 65,
+   "exprimes": 2892,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 1716,
+     "pct_exprimes": 59.34,
+     "pct_inscrits": 35.96
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 1176,
+     "pct_exprimes": 40.66,
+     "pct_inscrits": 24.64
+    }
+   ],
+   "pct_abstention": 32.73,
+   "pct_participation": 67.27,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 59.34
+   }
+  },
+  "95210": {
+   "code_insee": "95210",
+   "nom": "Enghien-Les-Bains",
+   "code_circonscription": "06",
+   "bureaux_de_vote": 9,
+   "inscrits": 7939,
+   "abstentions": 2125,
+   "votants": 5814,
+   "blancs": 344,
+   "nuls": 71,
+   "exprimes": 5399,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 4080,
+     "pct_exprimes": 75.57,
+     "pct_inscrits": 51.39
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 1319,
+     "pct_exprimes": 24.43,
+     "pct_inscrits": 16.61
+    }
+   ],
+   "pct_abstention": 26.77,
+   "pct_participation": 73.23,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 75.57
+   }
+  },
+  "95211": {
+   "code_insee": "95211",
+   "nom": "Ennery",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 2,
+   "inscrits": 1555,
+   "abstentions": 308,
+   "votants": 1247,
+   "blancs": 94,
+   "nuls": 25,
+   "exprimes": 1128,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 715,
+     "pct_exprimes": 63.39,
+     "pct_inscrits": 45.98
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 413,
+     "pct_exprimes": 36.61,
+     "pct_inscrits": 26.56
+    }
+   ],
+   "pct_abstention": 19.81,
+   "pct_participation": 80.19,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 63.39
+   }
+  },
+  "95212": {
+   "code_insee": "95212",
+   "nom": "Epiais-Lès-Louvres",
+   "code_circonscription": "09",
+   "bureaux_de_vote": 1,
+   "inscrits": 89,
+   "abstentions": 23,
+   "votants": 66,
+   "blancs": 3,
+   "nuls": 1,
+   "exprimes": 62,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 34,
+     "pct_exprimes": 54.84,
+     "pct_inscrits": 38.2
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 28,
+     "pct_exprimes": 45.16,
+     "pct_inscrits": 31.46
+    }
+   ],
+   "pct_abstention": 25.84,
+   "pct_participation": 74.16,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 54.84
+   }
+  },
+  "95213": {
+   "code_insee": "95213",
+   "nom": "Epiais-Rhus",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 544,
+   "abstentions": 87,
+   "votants": 457,
+   "blancs": 25,
+   "nuls": 6,
+   "exprimes": 426,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 223,
+     "pct_exprimes": 52.35,
+     "pct_inscrits": 40.99
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 203,
+     "pct_exprimes": 47.65,
+     "pct_inscrits": 37.32
+    }
+   ],
+   "pct_abstention": 15.99,
+   "pct_participation": 84.01,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 52.35
+   }
+  },
+  "95214": {
+   "code_insee": "95214",
+   "nom": "Epinay-Champlâtreux",
+   "code_circonscription": "09",
+   "bureaux_de_vote": 1,
+   "inscrits": 37,
+   "abstentions": 7,
+   "votants": 30,
+   "blancs": 1,
+   "nuls": 0,
+   "exprimes": 29,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 17,
+     "pct_exprimes": 58.62,
+     "pct_inscrits": 45.95
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 12,
+     "pct_exprimes": 41.38,
+     "pct_inscrits": 32.43
+    }
+   ],
+   "pct_abstention": 18.92,
+   "pct_participation": 81.08,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 58.62
+   }
+  },
+  "95218": {
+   "code_insee": "95218",
+   "nom": "Eragny",
+   "code_circonscription": "02",
+   "bureaux_de_vote": 10,
+   "inscrits": 11233,
+   "abstentions": 3772,
+   "votants": 7461,
+   "blancs": 476,
+   "nuls": 127,
+   "exprimes": 6858,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 4579,
+     "pct_exprimes": 66.77,
+     "pct_inscrits": 40.76
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 2279,
+     "pct_exprimes": 33.23,
+     "pct_inscrits": 20.29
+    }
+   ],
+   "pct_abstention": 33.58,
+   "pct_participation": 66.42,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 66.77
+   }
+  },
+  "95219": {
+   "code_insee": "95219",
+   "nom": "Ermont",
+   "code_circonscription": "04",
+   "bureaux_de_vote": 20,
+   "inscrits": 18468,
+   "abstentions": 5774,
+   "votants": 12694,
+   "blancs": 836,
+   "nuls": 224,
+   "exprimes": 11634,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 8350,
+     "pct_exprimes": 71.77,
+     "pct_inscrits": 45.21
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 3284,
+     "pct_exprimes": 28.23,
+     "pct_inscrits": 17.78
+    }
+   ],
+   "pct_abstention": 31.26,
+   "pct_participation": 68.74,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 71.77
+   }
+  },
+  "95229": {
+   "code_insee": "95229",
+   "nom": "Ezanville",
+   "code_circonscription": "07",
+   "bureaux_de_vote": 6,
+   "inscrits": 6109,
+   "abstentions": 1876,
+   "votants": 4233,
+   "blancs": 292,
+   "nuls": 75,
+   "exprimes": 3866,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 2446,
+     "pct_exprimes": 63.27,
+     "pct_inscrits": 40.04
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 1420,
+     "pct_exprimes": 36.73,
+     "pct_inscrits": 23.24
+    }
+   ],
+   "pct_abstention": 30.71,
+   "pct_participation": 69.29,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 63.27
+   }
+  },
+  "95241": {
+   "code_insee": "95241",
+   "nom": "Fontenay-En-Parisis",
+   "code_circonscription": "09",
+   "bureaux_de_vote": 1,
+   "inscrits": 1220,
+   "abstentions": 297,
+   "votants": 923,
+   "blancs": 68,
+   "nuls": 19,
+   "exprimes": 836,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 437,
+     "pct_exprimes": 52.27,
+     "pct_inscrits": 35.82
+    },
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 399,
+     "pct_exprimes": 47.73,
+     "pct_inscrits": 32.7
+    }
+   ],
+   "pct_abstention": 24.34,
+   "pct_participation": 75.66,
+   "tete": {
+    "nom": "LE PEN",
+    "prenom": "Marine",
+    "nuance": null,
+    "pct_exprimes": 52.27
+   }
+  },
+  "95250": {
+   "code_insee": "95250",
+   "nom": "Fosses",
+   "code_circonscription": "09",
+   "bureaux_de_vote": 7,
+   "inscrits": 6303,
+   "abstentions": 2123,
+   "votants": 4180,
+   "blancs": 297,
+   "nuls": 115,
+   "exprimes": 3768,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 2232,
+     "pct_exprimes": 59.24,
+     "pct_inscrits": 35.41
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 1536,
+     "pct_exprimes": 40.76,
+     "pct_inscrits": 24.37
+    }
+   ],
+   "pct_abstention": 33.68,
+   "pct_participation": 66.32,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 59.24
+   }
+  },
+  "95252": {
+   "code_insee": "95252",
+   "nom": "Franconville",
+   "code_circonscription": "04",
+   "bureaux_de_vote": 22,
+   "inscrits": 21814,
+   "abstentions": 7215,
+   "votants": 14599,
+   "blancs": 1060,
+   "nuls": 267,
+   "exprimes": 13272,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 8842,
+     "pct_exprimes": 66.62,
+     "pct_inscrits": 40.53
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 4430,
+     "pct_exprimes": 33.38,
+     "pct_inscrits": 20.31
+    }
+   ],
+   "pct_abstention": 33.08,
+   "pct_participation": 66.92,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 66.62
+   }
+  },
+  "95253": {
+   "code_insee": "95253",
+   "nom": "Frémainville",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 374,
+   "abstentions": 92,
+   "votants": 282,
+   "blancs": 15,
+   "nuls": 9,
+   "exprimes": 258,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 149,
+     "pct_exprimes": 57.75,
+     "pct_inscrits": 39.84
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 109,
+     "pct_exprimes": 42.25,
+     "pct_inscrits": 29.14
+    }
+   ],
+   "pct_abstention": 24.6,
+   "pct_participation": 75.4,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 57.75
+   }
+  },
+  "95254": {
+   "code_insee": "95254",
+   "nom": "Frémécourt",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 423,
+   "abstentions": 93,
+   "votants": 330,
+   "blancs": 24,
+   "nuls": 15,
+   "exprimes": 291,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 148,
+     "pct_exprimes": 50.86,
+     "pct_inscrits": 34.99
+    },
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 143,
+     "pct_exprimes": 49.14,
+     "pct_inscrits": 33.81
+    }
+   ],
+   "pct_abstention": 21.99,
+   "pct_participation": 78.01,
+   "tete": {
+    "nom": "LE PEN",
+    "prenom": "Marine",
+    "nuance": null,
+    "pct_exprimes": 50.86
+   }
+  },
+  "95256": {
+   "code_insee": "95256",
+   "nom": "Frépillon",
+   "code_circonscription": "03",
+   "bureaux_de_vote": 2,
+   "inscrits": 2155,
+   "abstentions": 524,
+   "votants": 1631,
+   "blancs": 117,
+   "nuls": 30,
+   "exprimes": 1484,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 857,
+     "pct_exprimes": 57.75,
+     "pct_inscrits": 39.77
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 627,
+     "pct_exprimes": 42.25,
+     "pct_inscrits": 29.1
+    }
+   ],
+   "pct_abstention": 24.32,
+   "pct_participation": 75.68,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 57.75
+   }
+  },
+  "95257": {
+   "code_insee": "95257",
+   "nom": "La Frette-Sur-Seine",
+   "code_circonscription": "03",
+   "bureaux_de_vote": 3,
+   "inscrits": 3099,
+   "abstentions": 741,
+   "votants": 2358,
+   "blancs": 159,
+   "nuls": 44,
+   "exprimes": 2155,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 1443,
+     "pct_exprimes": 66.96,
+     "pct_inscrits": 46.56
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 712,
+     "pct_exprimes": 33.04,
+     "pct_inscrits": 22.98
+    }
+   ],
+   "pct_abstention": 23.91,
+   "pct_participation": 76.09,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 66.96
+   }
+  },
+  "95258": {
+   "code_insee": "95258",
+   "nom": "Frouville",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 318,
+   "abstentions": 70,
+   "votants": 248,
+   "blancs": 14,
+   "nuls": 2,
+   "exprimes": 232,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 165,
+     "pct_exprimes": 71.12,
+     "pct_inscrits": 51.89
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 67,
+     "pct_exprimes": 28.88,
+     "pct_inscrits": 21.07
+    }
+   ],
+   "pct_abstention": 22.01,
+   "pct_participation": 77.99,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 71.12
+   }
+  },
+  "95268": {
+   "code_insee": "95268",
+   "nom": "Garges-Lès-Gonesse",
+   "code_circonscription": "08",
+   "bureaux_de_vote": 17,
+   "inscrits": 18269,
+   "abstentions": 8254,
+   "votants": 10015,
+   "blancs": 663,
+   "nuls": 187,
+   "exprimes": 9165,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 6789,
+     "pct_exprimes": 74.08,
+     "pct_inscrits": 37.16
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 2376,
+     "pct_exprimes": 25.92,
+     "pct_inscrits": 13.01
+    }
+   ],
+   "pct_abstention": 45.18,
+   "pct_participation": 54.82,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 74.08
+   }
+  },
+  "95270": {
+   "code_insee": "95270",
+   "nom": "Genainville",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 422,
+   "abstentions": 89,
+   "votants": 333,
+   "blancs": 19,
+   "nuls": 5,
+   "exprimes": 309,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 160,
+     "pct_exprimes": 51.78,
+     "pct_inscrits": 37.91
+    },
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 149,
+     "pct_exprimes": 48.22,
+     "pct_inscrits": 35.31
+    }
+   ],
+   "pct_abstention": 21.09,
+   "pct_participation": 78.91,
+   "tete": {
+    "nom": "LE PEN",
+    "prenom": "Marine",
+    "nuance": null,
+    "pct_exprimes": 51.78
+   }
+  },
+  "95271": {
+   "code_insee": "95271",
+   "nom": "Génicourt",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 376,
+   "abstentions": 64,
+   "votants": 312,
+   "blancs": 9,
+   "nuls": 4,
+   "exprimes": 299,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 175,
+     "pct_exprimes": 58.53,
+     "pct_inscrits": 46.54
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 124,
+     "pct_exprimes": 41.47,
+     "pct_inscrits": 32.98
+    }
+   ],
+   "pct_abstention": 17.02,
+   "pct_participation": 82.98,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 58.53
+   }
+  },
+  "95277": {
+   "code_insee": "95277",
+   "nom": "Gonesse",
+   "code_circonscription": "09",
+   "bureaux_de_vote": 16,
+   "inscrits": 14626,
+   "abstentions": 5856,
+   "votants": 8770,
+   "blancs": 575,
+   "nuls": 218,
+   "exprimes": 7977,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 4845,
+     "pct_exprimes": 60.74,
+     "pct_inscrits": 33.13
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 3132,
+     "pct_exprimes": 39.26,
+     "pct_inscrits": 21.41
+    }
+   ],
+   "pct_abstention": 40.04,
+   "pct_participation": 59.96,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 60.74
+   }
+  },
+  "95280": {
+   "code_insee": "95280",
+   "nom": "Goussainville",
+   "code_circonscription": "09",
+   "bureaux_de_vote": 21,
+   "inscrits": 16185,
+   "abstentions": 7067,
+   "votants": 9118,
+   "blancs": 532,
+   "nuls": 174,
+   "exprimes": 8412,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 5307,
+     "pct_exprimes": 63.09,
+     "pct_inscrits": 32.79
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 3105,
+     "pct_exprimes": 36.91,
+     "pct_inscrits": 19.18
+    }
+   ],
+   "pct_abstention": 43.66,
+   "pct_participation": 56.34,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 63.09
+   }
+  },
+  "95282": {
+   "code_insee": "95282",
+   "nom": "Gouzangrez",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 125,
+   "abstentions": 13,
+   "votants": 112,
+   "blancs": 13,
+   "nuls": 3,
+   "exprimes": 96,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 57,
+     "pct_exprimes": 59.38,
+     "pct_inscrits": 45.6
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 39,
+     "pct_exprimes": 40.62,
+     "pct_inscrits": 31.2
+    }
+   ],
+   "pct_abstention": 10.4,
+   "pct_participation": 89.6,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 59.38
+   }
+  },
+  "95287": {
+   "code_insee": "95287",
+   "nom": "Grisy-Les-Plâtres",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 543,
+   "abstentions": 102,
+   "votants": 441,
+   "blancs": 24,
+   "nuls": 7,
+   "exprimes": 410,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 246,
+     "pct_exprimes": 60.0,
+     "pct_inscrits": 45.3
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 164,
+     "pct_exprimes": 40.0,
+     "pct_inscrits": 30.2
+    }
+   ],
+   "pct_abstention": 18.78,
+   "pct_participation": 81.22,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 60.0
+   }
+  },
+  "95288": {
+   "code_insee": "95288",
+   "nom": "Groslay",
+   "code_circonscription": "07",
+   "bureaux_de_vote": 5,
+   "inscrits": 5236,
+   "abstentions": 1608,
+   "votants": 3628,
+   "blancs": 228,
+   "nuls": 58,
+   "exprimes": 3342,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 2113,
+     "pct_exprimes": 63.23,
+     "pct_inscrits": 40.36
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 1229,
+     "pct_exprimes": 36.77,
+     "pct_inscrits": 23.47
+    }
+   ],
+   "pct_abstention": 30.71,
+   "pct_participation": 69.29,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 63.23
+   }
+  },
+  "95295": {
+   "code_insee": "95295",
+   "nom": "Guiry-En-Vexin",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 142,
+   "abstentions": 28,
+   "votants": 114,
+   "blancs": 8,
+   "nuls": 5,
+   "exprimes": 101,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 61,
+     "pct_exprimes": 60.4,
+     "pct_inscrits": 42.96
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 40,
+     "pct_exprimes": 39.6,
+     "pct_inscrits": 28.17
+    }
+   ],
+   "pct_abstention": 19.72,
+   "pct_participation": 80.28,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 60.4
+   }
+  },
+  "95298": {
+   "code_insee": "95298",
+   "nom": "Haravilliers",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 452,
+   "abstentions": 75,
+   "votants": 377,
+   "blancs": 29,
+   "nuls": 4,
+   "exprimes": 344,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 197,
+     "pct_exprimes": 57.27,
+     "pct_inscrits": 43.58
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 147,
+     "pct_exprimes": 42.73,
+     "pct_inscrits": 32.52
+    }
+   ],
+   "pct_abstention": 16.59,
+   "pct_participation": 83.41,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 57.27
+   }
+  },
+  "95301": {
+   "code_insee": "95301",
+   "nom": "Haute-Isle",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 206,
+   "abstentions": 42,
+   "votants": 164,
+   "blancs": 6,
+   "nuls": 2,
+   "exprimes": 156,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 86,
+     "pct_exprimes": 55.13,
+     "pct_inscrits": 41.75
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 70,
+     "pct_exprimes": 44.87,
+     "pct_inscrits": 33.98
+    }
+   ],
+   "pct_abstention": 20.39,
+   "pct_participation": 79.61,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 55.13
+   }
+  },
+  "95303": {
+   "code_insee": "95303",
+   "nom": "Le Heaulme",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 161,
+   "abstentions": 23,
+   "votants": 138,
+   "blancs": 6,
+   "nuls": 3,
+   "exprimes": 129,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 69,
+     "pct_exprimes": 53.49,
+     "pct_inscrits": 42.86
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 60,
+     "pct_exprimes": 46.51,
+     "pct_inscrits": 37.27
+    }
+   ],
+   "pct_abstention": 14.29,
+   "pct_participation": 85.71,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 53.49
+   }
+  },
+  "95304": {
+   "code_insee": "95304",
+   "nom": "Hédouville",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 219,
+   "abstentions": 27,
+   "votants": 192,
+   "blancs": 15,
+   "nuls": 5,
+   "exprimes": 172,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 113,
+     "pct_exprimes": 65.7,
+     "pct_inscrits": 51.6
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 59,
+     "pct_exprimes": 34.3,
+     "pct_inscrits": 26.94
+    }
+   ],
+   "pct_abstention": 12.33,
+   "pct_participation": 87.67,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 65.7
+   }
+  },
+  "95306": {
+   "code_insee": "95306",
+   "nom": "Herblay-Sur-Seine",
+   "code_circonscription": "03",
+   "bureaux_de_vote": 21,
+   "inscrits": 19684,
+   "abstentions": 5650,
+   "votants": 14034,
+   "blancs": 818,
+   "nuls": 275,
+   "exprimes": 12941,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 8525,
+     "pct_exprimes": 65.88,
+     "pct_inscrits": 43.31
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 4416,
+     "pct_exprimes": 34.12,
+     "pct_inscrits": 22.43
+    }
+   ],
+   "pct_abstention": 28.7,
+   "pct_participation": 71.3,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 65.88
+   }
+  },
+  "95308": {
+   "code_insee": "95308",
+   "nom": "Hérouville",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 456,
+   "abstentions": 83,
+   "votants": 373,
+   "blancs": 19,
+   "nuls": 8,
+   "exprimes": 346,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 186,
+     "pct_exprimes": 53.76,
+     "pct_inscrits": 40.79
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 160,
+     "pct_exprimes": 46.24,
+     "pct_inscrits": 35.09
+    }
+   ],
+   "pct_abstention": 18.2,
+   "pct_participation": 81.8,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 53.76
+   }
+  },
+  "95309": {
+   "code_insee": "95309",
+   "nom": "Hodent",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 156,
+   "abstentions": 27,
+   "votants": 129,
+   "blancs": 5,
+   "nuls": 2,
+   "exprimes": 122,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 64,
+     "pct_exprimes": 52.46,
+     "pct_inscrits": 41.03
+    },
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 58,
+     "pct_exprimes": 47.54,
+     "pct_inscrits": 37.18
+    }
+   ],
+   "pct_abstention": 17.31,
+   "pct_participation": 82.69,
+   "tete": {
+    "nom": "LE PEN",
+    "prenom": "Marine",
+    "nuance": null,
+    "pct_exprimes": 52.46
+   }
+  },
+  "95313": {
+   "code_insee": "95313",
+   "nom": "L'Isle-Adam",
+   "code_circonscription": "02",
+   "bureaux_de_vote": 9,
+   "inscrits": 8754,
+   "abstentions": 2057,
+   "votants": 6697,
+   "blancs": 380,
+   "nuls": 108,
+   "exprimes": 6209,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 4046,
+     "pct_exprimes": 65.16,
+     "pct_inscrits": 46.22
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 2163,
+     "pct_exprimes": 34.84,
+     "pct_inscrits": 24.71
+    }
+   ],
+   "pct_abstention": 23.5,
+   "pct_participation": 76.5,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 65.16
+   }
+  },
+  "95316": {
+   "code_insee": "95316",
+   "nom": "Jagny-Sous-Bois",
+   "code_circonscription": "09",
+   "bureaux_de_vote": 1,
+   "inscrits": 220,
+   "abstentions": 47,
+   "votants": 173,
+   "blancs": 4,
+   "nuls": 14,
+   "exprimes": 155,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 94,
+     "pct_exprimes": 60.65,
+     "pct_inscrits": 42.73
+    },
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 61,
+     "pct_exprimes": 39.35,
+     "pct_inscrits": 27.73
+    }
+   ],
+   "pct_abstention": 21.36,
+   "pct_participation": 78.64,
+   "tete": {
+    "nom": "LE PEN",
+    "prenom": "Marine",
+    "nuance": null,
+    "pct_exprimes": 60.65
+   }
+  },
+  "95323": {
+   "code_insee": "95323",
+   "nom": "Jouy-Le-Moutier",
+   "code_circonscription": "10",
+   "bureaux_de_vote": 8,
+   "inscrits": 11057,
+   "abstentions": 3400,
+   "votants": 7657,
+   "blancs": 556,
+   "nuls": 158,
+   "exprimes": 6943,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 4675,
+     "pct_exprimes": 67.33,
+     "pct_inscrits": 42.28
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 2268,
+     "pct_exprimes": 32.67,
+     "pct_inscrits": 20.51
+    }
+   ],
+   "pct_abstention": 30.75,
+   "pct_participation": 69.25,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 67.33
+   }
+  },
+  "95328": {
+   "code_insee": "95328",
+   "nom": "Labbeville",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 422,
+   "abstentions": 81,
+   "votants": 341,
+   "blancs": 18,
+   "nuls": 5,
+   "exprimes": 318,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 185,
+     "pct_exprimes": 58.18,
+     "pct_inscrits": 43.84
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 133,
+     "pct_exprimes": 41.82,
+     "pct_inscrits": 31.52
+    }
+   ],
+   "pct_abstention": 19.19,
+   "pct_participation": 80.81,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 58.18
+   }
+  },
+  "95331": {
+   "code_insee": "95331",
+   "nom": "Lassy",
+   "code_circonscription": "09",
+   "bureaux_de_vote": 1,
+   "inscrits": 120,
+   "abstentions": 29,
+   "votants": 91,
+   "blancs": 2,
+   "nuls": 0,
+   "exprimes": 89,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 48,
+     "pct_exprimes": 53.93,
+     "pct_inscrits": 40.0
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 41,
+     "pct_exprimes": 46.07,
+     "pct_inscrits": 34.17
+    }
+   ],
+   "pct_abstention": 24.17,
+   "pct_participation": 75.83,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 53.93
+   }
+  },
+  "95341": {
+   "code_insee": "95341",
+   "nom": "Livilliers",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 279,
+   "abstentions": 44,
+   "votants": 235,
+   "blancs": 10,
+   "nuls": 3,
+   "exprimes": 222,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 126,
+     "pct_exprimes": 56.76,
+     "pct_inscrits": 45.16
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 96,
+     "pct_exprimes": 43.24,
+     "pct_inscrits": 34.41
+    }
+   ],
+   "pct_abstention": 15.77,
+   "pct_participation": 84.23,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 56.76
+   }
+  },
+  "95348": {
+   "code_insee": "95348",
+   "nom": "Longuesse",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 423,
+   "abstentions": 103,
+   "votants": 320,
+   "blancs": 7,
+   "nuls": 26,
+   "exprimes": 287,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 181,
+     "pct_exprimes": 63.07,
+     "pct_inscrits": 42.79
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 106,
+     "pct_exprimes": 36.93,
+     "pct_inscrits": 25.06
+    }
+   ],
+   "pct_abstention": 24.35,
+   "pct_participation": 75.65,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 63.07
+   }
+  },
+  "95351": {
+   "code_insee": "95351",
+   "nom": "Louvres",
+   "code_circonscription": "09",
+   "bureaux_de_vote": 7,
+   "inscrits": 6486,
+   "abstentions": 2332,
+   "votants": 4154,
+   "blancs": 294,
+   "nuls": 90,
+   "exprimes": 3770,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 2240,
+     "pct_exprimes": 59.42,
+     "pct_inscrits": 34.54
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 1530,
+     "pct_exprimes": 40.58,
+     "pct_inscrits": 23.59
+    }
+   ],
+   "pct_abstention": 35.95,
+   "pct_participation": 64.05,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 59.42
+   }
+  },
+  "95352": {
+   "code_insee": "95352",
+   "nom": "Luzarches",
+   "code_circonscription": "09",
+   "bureaux_de_vote": 3,
+   "inscrits": 3410,
+   "abstentions": 880,
+   "votants": 2530,
+   "blancs": 182,
+   "nuls": 48,
+   "exprimes": 2300,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 1330,
+     "pct_exprimes": 57.83,
+     "pct_inscrits": 39.0
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 970,
+     "pct_exprimes": 42.17,
+     "pct_inscrits": 28.45
+    }
+   ],
+   "pct_abstention": 25.81,
+   "pct_participation": 74.19,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 57.83
+   }
+  },
+  "95353": {
+   "code_insee": "95353",
+   "nom": "Maffliers",
+   "code_circonscription": "02",
+   "bureaux_de_vote": 1,
+   "inscrits": 1221,
+   "abstentions": 318,
+   "votants": 903,
+   "blancs": 63,
+   "nuls": 16,
+   "exprimes": 824,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 424,
+     "pct_exprimes": 51.46,
+     "pct_inscrits": 34.73
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 400,
+     "pct_exprimes": 48.54,
+     "pct_inscrits": 32.76
+    }
+   ],
+   "pct_abstention": 26.04,
+   "pct_participation": 73.96,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 51.46
+   }
+  },
+  "95355": {
+   "code_insee": "95355",
+   "nom": "Magny-En-Vexin",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 5,
+   "inscrits": 3667,
+   "abstentions": 998,
+   "votants": 2669,
+   "blancs": 152,
+   "nuls": 54,
+   "exprimes": 2463,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 1281,
+     "pct_exprimes": 52.01,
+     "pct_inscrits": 34.93
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 1182,
+     "pct_exprimes": 47.99,
+     "pct_inscrits": 32.23
+    }
+   ],
+   "pct_abstention": 27.22,
+   "pct_participation": 72.78,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 52.01
+   }
+  },
+  "95365": {
+   "code_insee": "95365",
+   "nom": "Mareil-En-France",
+   "code_circonscription": "09",
+   "bureaux_de_vote": 1,
+   "inscrits": 459,
+   "abstentions": 138,
+   "votants": 321,
+   "blancs": 22,
+   "nuls": 5,
+   "exprimes": 294,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 151,
+     "pct_exprimes": 51.36,
+     "pct_inscrits": 32.9
+    },
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 143,
+     "pct_exprimes": 48.64,
+     "pct_inscrits": 31.15
+    }
+   ],
+   "pct_abstention": 30.07,
+   "pct_participation": 69.93,
+   "tete": {
+    "nom": "LE PEN",
+    "prenom": "Marine",
+    "nuance": null,
+    "pct_exprimes": 51.36
+   }
+  },
+  "95369": {
+   "code_insee": "95369",
+   "nom": "Margency",
+   "code_circonscription": "06",
+   "bureaux_de_vote": 2,
+   "inscrits": 2003,
+   "abstentions": 452,
+   "votants": 1551,
+   "blancs": 103,
+   "nuls": 23,
+   "exprimes": 1425,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 998,
+     "pct_exprimes": 70.04,
+     "pct_inscrits": 49.83
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 427,
+     "pct_exprimes": 29.96,
+     "pct_inscrits": 21.32
+    }
+   ],
+   "pct_abstention": 22.57,
+   "pct_participation": 77.43,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 70.04
+   }
+  },
+  "95370": {
+   "code_insee": "95370",
+   "nom": "Marines",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 3,
+   "inscrits": 2429,
+   "abstentions": 694,
+   "votants": 1735,
+   "blancs": 103,
+   "nuls": 18,
+   "exprimes": 1614,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 875,
+     "pct_exprimes": 54.21,
+     "pct_inscrits": 36.02
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 739,
+     "pct_exprimes": 45.79,
+     "pct_inscrits": 30.42
+    }
+   ],
+   "pct_abstention": 28.57,
+   "pct_participation": 71.43,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 54.21
+   }
+  },
+  "95371": {
+   "code_insee": "95371",
+   "nom": "Marly-La-Ville",
+   "code_circonscription": "09",
+   "bureaux_de_vote": 4,
+   "inscrits": 4032,
+   "abstentions": 1216,
+   "votants": 2816,
+   "blancs": 207,
+   "nuls": 58,
+   "exprimes": 2551,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 1371,
+     "pct_exprimes": 53.74,
+     "pct_inscrits": 34.0
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 1180,
+     "pct_exprimes": 46.26,
+     "pct_inscrits": 29.27
+    }
+   ],
+   "pct_abstention": 30.16,
+   "pct_participation": 69.84,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 53.74
+   }
+  },
+  "95379": {
+   "code_insee": "95379",
+   "nom": "Maudétour-En-Vexin",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 171,
+   "abstentions": 21,
+   "votants": 150,
+   "blancs": 11,
+   "nuls": 7,
+   "exprimes": 132,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 77,
+     "pct_exprimes": 58.33,
+     "pct_inscrits": 45.03
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 55,
+     "pct_exprimes": 41.67,
+     "pct_inscrits": 32.16
+    }
+   ],
+   "pct_abstention": 12.28,
+   "pct_participation": 87.72,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 58.33
+   }
+  },
+  "95387": {
+   "code_insee": "95387",
+   "nom": "Menouville",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 45,
+   "abstentions": 8,
+   "votants": 37,
+   "blancs": 4,
+   "nuls": 2,
+   "exprimes": 31,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 18,
+     "pct_exprimes": 58.06,
+     "pct_inscrits": 40.0
+    },
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 13,
+     "pct_exprimes": 41.94,
+     "pct_inscrits": 28.89
+    }
+   ],
+   "pct_abstention": 17.78,
+   "pct_participation": 82.22,
+   "tete": {
+    "nom": "LE PEN",
+    "prenom": "Marine",
+    "nuance": null,
+    "pct_exprimes": 58.06
+   }
+  },
+  "95388": {
+   "code_insee": "95388",
+   "nom": "Menucourt",
+   "code_circonscription": "10",
+   "bureaux_de_vote": 4,
+   "inscrits": 3890,
+   "abstentions": 979,
+   "votants": 2911,
+   "blancs": 206,
+   "nuls": 64,
+   "exprimes": 2641,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 1588,
+     "pct_exprimes": 60.13,
+     "pct_inscrits": 40.82
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 1053,
+     "pct_exprimes": 39.87,
+     "pct_inscrits": 27.07
+    }
+   ],
+   "pct_abstention": 25.17,
+   "pct_participation": 74.83,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 60.13
+   }
+  },
+  "95392": {
+   "code_insee": "95392",
+   "nom": "Mériel",
+   "code_circonscription": "02",
+   "bureaux_de_vote": 4,
+   "inscrits": 3648,
+   "abstentions": 918,
+   "votants": 2730,
+   "blancs": 186,
+   "nuls": 70,
+   "exprimes": 2474,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 1446,
+     "pct_exprimes": 58.45,
+     "pct_inscrits": 39.64
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 1028,
+     "pct_exprimes": 41.55,
+     "pct_inscrits": 28.18
+    }
+   ],
+   "pct_abstention": 25.16,
+   "pct_participation": 74.84,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 58.45
+   }
+  },
+  "95394": {
+   "code_insee": "95394",
+   "nom": "Méry-Sur-Oise",
+   "code_circonscription": "02",
+   "bureaux_de_vote": 7,
+   "inscrits": 6453,
+   "abstentions": 1905,
+   "votants": 4548,
+   "blancs": 291,
+   "nuls": 112,
+   "exprimes": 4145,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 2539,
+     "pct_exprimes": 61.25,
+     "pct_inscrits": 39.35
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 1606,
+     "pct_exprimes": 38.75,
+     "pct_inscrits": 24.89
+    }
+   ],
+   "pct_abstention": 29.52,
+   "pct_participation": 70.48,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 61.25
+   }
+  },
+  "95395": {
+   "code_insee": "95395",
+   "nom": "Le Mesnil-Aubry",
+   "code_circonscription": "07",
+   "bureaux_de_vote": 1,
+   "inscrits": 634,
+   "abstentions": 132,
+   "votants": 502,
+   "blancs": 30,
+   "nuls": 5,
+   "exprimes": 467,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 260,
+     "pct_exprimes": 55.67,
+     "pct_inscrits": 41.01
+    },
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 207,
+     "pct_exprimes": 44.33,
+     "pct_inscrits": 32.65
+    }
+   ],
+   "pct_abstention": 20.82,
+   "pct_participation": 79.18,
+   "tete": {
+    "nom": "LE PEN",
+    "prenom": "Marine",
+    "nuance": null,
+    "pct_exprimes": 55.67
+   }
+  },
+  "95409": {
+   "code_insee": "95409",
+   "nom": "Moisselles",
+   "code_circonscription": "07",
+   "bureaux_de_vote": 1,
+   "inscrits": 852,
+   "abstentions": 189,
+   "votants": 663,
+   "blancs": 44,
+   "nuls": 15,
+   "exprimes": 604,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 330,
+     "pct_exprimes": 54.64,
+     "pct_inscrits": 38.73
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 274,
+     "pct_exprimes": 45.36,
+     "pct_inscrits": 32.16
+    }
+   ],
+   "pct_abstention": 22.18,
+   "pct_participation": 77.82,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 54.64
+   }
+  },
+  "95422": {
+   "code_insee": "95422",
+   "nom": "Montgeroult",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 298,
+   "abstentions": 64,
+   "votants": 234,
+   "blancs": 20,
+   "nuls": 8,
+   "exprimes": 206,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 139,
+     "pct_exprimes": 67.48,
+     "pct_inscrits": 46.64
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 67,
+     "pct_exprimes": 32.52,
+     "pct_inscrits": 22.48
+    }
+   ],
+   "pct_abstention": 21.48,
+   "pct_participation": 78.52,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 67.48
+   }
+  },
+  "95424": {
+   "code_insee": "95424",
+   "nom": "Montigny-Lès-Cormeilles",
+   "code_circonscription": "03",
+   "bureaux_de_vote": 13,
+   "inscrits": 11953,
+   "abstentions": 4378,
+   "votants": 7575,
+   "blancs": 555,
+   "nuls": 149,
+   "exprimes": 6871,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 4712,
+     "pct_exprimes": 68.58,
+     "pct_inscrits": 39.42
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 2159,
+     "pct_exprimes": 31.42,
+     "pct_inscrits": 18.06
+    }
+   ],
+   "pct_abstention": 36.63,
+   "pct_participation": 63.37,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 68.58
+   }
+  },
+  "95426": {
+   "code_insee": "95426",
+   "nom": "Montlignon",
+   "code_circonscription": "04",
+   "bureaux_de_vote": 2,
+   "inscrits": 2213,
+   "abstentions": 537,
+   "votants": 1676,
+   "blancs": 108,
+   "nuls": 23,
+   "exprimes": 1545,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 1022,
+     "pct_exprimes": 66.15,
+     "pct_inscrits": 46.18
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 523,
+     "pct_exprimes": 33.85,
+     "pct_inscrits": 23.63
+    }
+   ],
+   "pct_abstention": 24.27,
+   "pct_participation": 75.73,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 66.15
+   }
+  },
+  "95427": {
+   "code_insee": "95427",
+   "nom": "Montmagny",
+   "code_circonscription": "06",
+   "bureaux_de_vote": 8,
+   "inscrits": 7536,
+   "abstentions": 2706,
+   "votants": 4830,
+   "blancs": 329,
+   "nuls": 90,
+   "exprimes": 4411,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 3218,
+     "pct_exprimes": 72.95,
+     "pct_inscrits": 42.7
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 1193,
+     "pct_exprimes": 27.05,
+     "pct_inscrits": 15.83
+    }
+   ],
+   "pct_abstention": 35.91,
+   "pct_participation": 64.09,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 72.95
+   }
+  },
+  "95428": {
+   "code_insee": "95428",
+   "nom": "Montmorency",
+   "code_circonscription": "07",
+   "bureaux_de_vote": 11,
+   "inscrits": 13538,
+   "abstentions": 3709,
+   "votants": 9829,
+   "blancs": 548,
+   "nuls": 159,
+   "exprimes": 9122,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 6619,
+     "pct_exprimes": 72.56,
+     "pct_inscrits": 48.89
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 2503,
+     "pct_exprimes": 27.44,
+     "pct_inscrits": 18.49
+    }
+   ],
+   "pct_abstention": 27.4,
+   "pct_participation": 72.6,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 72.56
+   }
+  },
+  "95429": {
+   "code_insee": "95429",
+   "nom": "Montreuil-Sur-Epte",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 329,
+   "abstentions": 71,
+   "votants": 258,
+   "blancs": 21,
+   "nuls": 5,
+   "exprimes": 232,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 124,
+     "pct_exprimes": 53.45,
+     "pct_inscrits": 37.69
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 108,
+     "pct_exprimes": 46.55,
+     "pct_inscrits": 32.83
+    }
+   ],
+   "pct_abstention": 21.58,
+   "pct_participation": 78.42,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 53.45
+   }
+  },
+  "95430": {
+   "code_insee": "95430",
+   "nom": "Montsoult",
+   "code_circonscription": "02",
+   "bureaux_de_vote": 2,
+   "inscrits": 2639,
+   "abstentions": 702,
+   "votants": 1937,
+   "blancs": 162,
+   "nuls": 28,
+   "exprimes": 1747,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 990,
+     "pct_exprimes": 56.67,
+     "pct_inscrits": 37.51
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 757,
+     "pct_exprimes": 43.33,
+     "pct_inscrits": 28.69
+    }
+   ],
+   "pct_abstention": 26.6,
+   "pct_participation": 73.4,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 56.67
+   }
+  },
+  "95436": {
+   "code_insee": "95436",
+   "nom": "Mours",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 1124,
+   "abstentions": 297,
+   "votants": 827,
+   "blancs": 65,
+   "nuls": 18,
+   "exprimes": 744,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 423,
+     "pct_exprimes": 56.85,
+     "pct_inscrits": 37.63
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 321,
+     "pct_exprimes": 43.15,
+     "pct_inscrits": 28.56
+    }
+   ],
+   "pct_abstention": 26.42,
+   "pct_participation": 73.58,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 56.85
+   }
+  },
+  "95438": {
+   "code_insee": "95438",
+   "nom": "Moussy",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 97,
+   "abstentions": 16,
+   "votants": 81,
+   "blancs": 13,
+   "nuls": 1,
+   "exprimes": 67,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 35,
+     "pct_exprimes": 52.24,
+     "pct_inscrits": 36.08
+    },
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 32,
+     "pct_exprimes": 47.76,
+     "pct_inscrits": 32.99
+    }
+   ],
+   "pct_abstention": 16.49,
+   "pct_participation": 83.51,
+   "tete": {
+    "nom": "LE PEN",
+    "prenom": "Marine",
+    "nuance": null,
+    "pct_exprimes": 52.24
+   }
+  },
+  "95445": {
+   "code_insee": "95445",
+   "nom": "Nerville-La-Forêt",
+   "code_circonscription": "02",
+   "bureaux_de_vote": 1,
+   "inscrits": 459,
+   "abstentions": 93,
+   "votants": 366,
+   "blancs": 17,
+   "nuls": 11,
+   "exprimes": 338,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 212,
+     "pct_exprimes": 62.72,
+     "pct_inscrits": 46.19
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 126,
+     "pct_exprimes": 37.28,
+     "pct_inscrits": 27.45
+    }
+   ],
+   "pct_abstention": 20.26,
+   "pct_participation": 79.74,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 62.72
+   }
+  },
+  "95446": {
+   "code_insee": "95446",
+   "nom": "Nesles-La-Vallée",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 1514,
+   "abstentions": 352,
+   "votants": 1162,
+   "blancs": 80,
+   "nuls": 15,
+   "exprimes": 1067,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 683,
+     "pct_exprimes": 64.01,
+     "pct_inscrits": 45.11
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 384,
+     "pct_exprimes": 35.99,
+     "pct_inscrits": 25.36
+    }
+   ],
+   "pct_abstention": 23.25,
+   "pct_participation": 76.75,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 64.01
+   }
+  },
+  "95447": {
+   "code_insee": "95447",
+   "nom": "Neuilly-En-Vexin",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 147,
+   "abstentions": 20,
+   "votants": 127,
+   "blancs": 7,
+   "nuls": 1,
+   "exprimes": 119,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 69,
+     "pct_exprimes": 57.98,
+     "pct_inscrits": 46.94
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 50,
+     "pct_exprimes": 42.02,
+     "pct_inscrits": 34.01
+    }
+   ],
+   "pct_abstention": 13.61,
+   "pct_participation": 86.39,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 57.98
+   }
+  },
+  "95450": {
+   "code_insee": "95450",
+   "nom": "Neuville-Sur-Oise",
+   "code_circonscription": "02",
+   "bureaux_de_vote": 1,
+   "inscrits": 1188,
+   "abstentions": 227,
+   "votants": 961,
+   "blancs": 61,
+   "nuls": 15,
+   "exprimes": 885,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 624,
+     "pct_exprimes": 70.51,
+     "pct_inscrits": 52.53
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 261,
+     "pct_exprimes": 29.49,
+     "pct_inscrits": 21.97
+    }
+   ],
+   "pct_abstention": 19.11,
+   "pct_participation": 80.89,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 70.51
+   }
+  },
+  "95452": {
+   "code_insee": "95452",
+   "nom": "Nointel",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 605,
+   "abstentions": 121,
+   "votants": 484,
+   "blancs": 54,
+   "nuls": 7,
+   "exprimes": 423,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 246,
+     "pct_exprimes": 58.16,
+     "pct_inscrits": 40.66
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 177,
+     "pct_exprimes": 41.84,
+     "pct_inscrits": 29.26
+    }
+   ],
+   "pct_abstention": 20.0,
+   "pct_participation": 80.0,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 58.16
+   }
+  },
+  "95456": {
+   "code_insee": "95456",
+   "nom": "Noisy-Sur-Oise",
+   "code_circonscription": "02",
+   "bureaux_de_vote": 1,
+   "inscrits": 439,
+   "abstentions": 97,
+   "votants": 342,
+   "blancs": 20,
+   "nuls": 3,
+   "exprimes": 319,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 162,
+     "pct_exprimes": 50.78,
+     "pct_inscrits": 36.9
+    },
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 157,
+     "pct_exprimes": 49.22,
+     "pct_inscrits": 35.76
+    }
+   ],
+   "pct_abstention": 22.1,
+   "pct_participation": 77.9,
+   "tete": {
+    "nom": "LE PEN",
+    "prenom": "Marine",
+    "nuance": null,
+    "pct_exprimes": 50.78
+   }
+  },
+  "95459": {
+   "code_insee": "95459",
+   "nom": "Nucourt",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 575,
+   "abstentions": 116,
+   "votants": 459,
+   "blancs": 27,
+   "nuls": 3,
+   "exprimes": 429,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 228,
+     "pct_exprimes": 53.15,
+     "pct_inscrits": 39.65
+    },
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 201,
+     "pct_exprimes": 46.85,
+     "pct_inscrits": 34.96
+    }
+   ],
+   "pct_abstention": 20.17,
+   "pct_participation": 79.83,
+   "tete": {
+    "nom": "LE PEN",
+    "prenom": "Marine",
+    "nuance": null,
+    "pct_exprimes": 53.15
+   }
+  },
+  "95462": {
+   "code_insee": "95462",
+   "nom": "Omerville",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 271,
+   "abstentions": 59,
+   "votants": 212,
+   "blancs": 14,
+   "nuls": 5,
+   "exprimes": 193,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 97,
+     "pct_exprimes": 50.26,
+     "pct_inscrits": 35.79
+    },
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 96,
+     "pct_exprimes": 49.74,
+     "pct_inscrits": 35.42
+    }
+   ],
+   "pct_abstention": 21.77,
+   "pct_participation": 78.23,
+   "tete": {
+    "nom": "LE PEN",
+    "prenom": "Marine",
+    "nuance": null,
+    "pct_exprimes": 50.26
+   }
+  },
+  "95476": {
+   "code_insee": "95476",
+   "nom": "Osny",
+   "code_circonscription": "10",
+   "bureaux_de_vote": 12,
+   "inscrits": 10904,
+   "abstentions": 3419,
+   "votants": 7485,
+   "blancs": 437,
+   "nuls": 124,
+   "exprimes": 6924,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 4480,
+     "pct_exprimes": 64.7,
+     "pct_inscrits": 41.09
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 2444,
+     "pct_exprimes": 35.3,
+     "pct_inscrits": 22.41
+    }
+   ],
+   "pct_abstention": 31.36,
+   "pct_participation": 68.64,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 64.7
+   }
+  },
+  "95480": {
+   "code_insee": "95480",
+   "nom": "Parmain",
+   "code_circonscription": "02",
+   "bureaux_de_vote": 4,
+   "inscrits": 4297,
+   "abstentions": 1200,
+   "votants": 3097,
+   "blancs": 227,
+   "nuls": 50,
+   "exprimes": 2820,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 1739,
+     "pct_exprimes": 61.67,
+     "pct_inscrits": 40.47
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 1081,
+     "pct_exprimes": 38.33,
+     "pct_inscrits": 25.16
+    }
+   ],
+   "pct_abstention": 27.93,
+   "pct_participation": 72.07,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 61.67
+   }
+  },
+  "95483": {
+   "code_insee": "95483",
+   "nom": "Le Perchay",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 415,
+   "abstentions": 102,
+   "votants": 313,
+   "blancs": 25,
+   "nuls": 6,
+   "exprimes": 282,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 185,
+     "pct_exprimes": 65.6,
+     "pct_inscrits": 44.58
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 97,
+     "pct_exprimes": 34.4,
+     "pct_inscrits": 23.37
+    }
+   ],
+   "pct_abstention": 24.58,
+   "pct_participation": 75.42,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 65.6
+   }
+  },
+  "95487": {
+   "code_insee": "95487",
+   "nom": "Persan",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 6,
+   "inscrits": 6122,
+   "abstentions": 2337,
+   "votants": 3785,
+   "blancs": 249,
+   "nuls": 90,
+   "exprimes": 3446,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 1914,
+     "pct_exprimes": 55.54,
+     "pct_inscrits": 31.26
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 1532,
+     "pct_exprimes": 44.46,
+     "pct_inscrits": 25.02
+    }
+   ],
+   "pct_abstention": 38.17,
+   "pct_participation": 61.83,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 55.54
+   }
+  },
+  "95488": {
+   "code_insee": "95488",
+   "nom": "Pierrelaye",
+   "code_circonscription": "03",
+   "bureaux_de_vote": 7,
+   "inscrits": 5393,
+   "abstentions": 1911,
+   "votants": 3482,
+   "blancs": 237,
+   "nuls": 52,
+   "exprimes": 3193,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 1847,
+     "pct_exprimes": 57.85,
+     "pct_inscrits": 34.25
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 1346,
+     "pct_exprimes": 42.15,
+     "pct_inscrits": 24.96
+    }
+   ],
+   "pct_abstention": 35.43,
+   "pct_participation": 64.57,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 57.85
+   }
+  },
+  "95489": {
+   "code_insee": "95489",
+   "nom": "Piscop",
+   "code_circonscription": "07",
+   "bureaux_de_vote": 1,
+   "inscrits": 466,
+   "abstentions": 89,
+   "votants": 377,
+   "blancs": 32,
+   "nuls": 2,
+   "exprimes": 343,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 179,
+     "pct_exprimes": 52.19,
+     "pct_inscrits": 38.41
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 164,
+     "pct_exprimes": 47.81,
+     "pct_inscrits": 35.19
+    }
+   ],
+   "pct_abstention": 19.1,
+   "pct_participation": 80.9,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 52.19
+   }
+  },
+  "95491": {
+   "code_insee": "95491",
+   "nom": "Le Plessis-Bouchard",
+   "code_circonscription": "03",
+   "bureaux_de_vote": 7,
+   "inscrits": 5712,
+   "abstentions": 1362,
+   "votants": 4350,
+   "blancs": 266,
+   "nuls": 84,
+   "exprimes": 4000,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 2659,
+     "pct_exprimes": 66.47,
+     "pct_inscrits": 46.55
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 1341,
+     "pct_exprimes": 33.52,
+     "pct_inscrits": 23.48
+    }
+   ],
+   "pct_abstention": 23.84,
+   "pct_participation": 76.16,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 66.47
+   }
+  },
+  "95492": {
+   "code_insee": "95492",
+   "nom": "Le Plessis-Gassot",
+   "code_circonscription": "07",
+   "bureaux_de_vote": 1,
+   "inscrits": 61,
+   "abstentions": 8,
+   "votants": 53,
+   "blancs": 6,
+   "nuls": 1,
+   "exprimes": 46,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 31,
+     "pct_exprimes": 67.39,
+     "pct_inscrits": 50.82
+    },
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 15,
+     "pct_exprimes": 32.61,
+     "pct_inscrits": 24.59
+    }
+   ],
+   "pct_abstention": 13.11,
+   "pct_participation": 86.89,
+   "tete": {
+    "nom": "LE PEN",
+    "prenom": "Marine",
+    "nuance": null,
+    "pct_exprimes": 67.39
+   }
+  },
+  "95493": {
+   "code_insee": "95493",
+   "nom": "Le Plessis-Luzarches",
+   "code_circonscription": "09",
+   "bureaux_de_vote": 1,
+   "inscrits": 100,
+   "abstentions": 19,
+   "votants": 81,
+   "blancs": 9,
+   "nuls": 1,
+   "exprimes": 71,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 39,
+     "pct_exprimes": 54.93,
+     "pct_inscrits": 39.0
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 32,
+     "pct_exprimes": 45.07,
+     "pct_inscrits": 32.0
+    }
+   ],
+   "pct_abstention": 19.0,
+   "pct_participation": 81.0,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 54.93
+   }
+  },
+  "95500": {
+   "code_insee": "95500",
+   "nom": "Pontoise",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 22,
+   "inscrits": 17003,
+   "abstentions": 5708,
+   "votants": 11295,
+   "blancs": 770,
+   "nuls": 179,
+   "exprimes": 10346,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 7135,
+     "pct_exprimes": 68.96,
+     "pct_inscrits": 41.96
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 3211,
+     "pct_exprimes": 31.04,
+     "pct_inscrits": 18.88
+    }
+   ],
+   "pct_abstention": 33.57,
+   "pct_participation": 66.43,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 68.96
+   }
+  },
+  "95504": {
+   "code_insee": "95504",
+   "nom": "Presles",
+   "code_circonscription": "02",
+   "bureaux_de_vote": 4,
+   "inscrits": 2703,
+   "abstentions": 638,
+   "votants": 2065,
+   "blancs": 159,
+   "nuls": 45,
+   "exprimes": 1861,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 1090,
+     "pct_exprimes": 58.57,
+     "pct_inscrits": 40.33
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 771,
+     "pct_exprimes": 41.43,
+     "pct_inscrits": 28.52
+    }
+   ],
+   "pct_abstention": 23.6,
+   "pct_participation": 76.4,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 58.57
+   }
+  },
+  "95509": {
+   "code_insee": "95509",
+   "nom": "Puiseux-En-France",
+   "code_circonscription": "09",
+   "bureaux_de_vote": 3,
+   "inscrits": 2527,
+   "abstentions": 809,
+   "votants": 1718,
+   "blancs": 123,
+   "nuls": 46,
+   "exprimes": 1549,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 864,
+     "pct_exprimes": 55.78,
+     "pct_inscrits": 34.19
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 685,
+     "pct_exprimes": 44.22,
+     "pct_inscrits": 27.11
+    }
+   ],
+   "pct_abstention": 32.01,
+   "pct_participation": 67.99,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 55.78
+   }
+  },
+  "95510": {
+   "code_insee": "95510",
+   "nom": "Puiseux-Pontoise",
+   "code_circonscription": "10",
+   "bureaux_de_vote": 1,
+   "inscrits": 381,
+   "abstentions": 95,
+   "votants": 286,
+   "blancs": 1,
+   "nuls": 10,
+   "exprimes": 275,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 196,
+     "pct_exprimes": 71.27,
+     "pct_inscrits": 51.44
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 79,
+     "pct_exprimes": 28.73,
+     "pct_inscrits": 20.73
+    }
+   ],
+   "pct_abstention": 24.93,
+   "pct_participation": 75.07,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 71.27
+   }
+  },
+  "95523": {
+   "code_insee": "95523",
+   "nom": "La Roche-Guyon",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 307,
+   "abstentions": 82,
+   "votants": 225,
+   "blancs": 20,
+   "nuls": 2,
+   "exprimes": 203,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 131,
+     "pct_exprimes": 64.53,
+     "pct_inscrits": 42.67
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 72,
+     "pct_exprimes": 35.47,
+     "pct_inscrits": 23.45
+    }
+   ],
+   "pct_abstention": 26.71,
+   "pct_participation": 73.29,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 64.53
+   }
+  },
+  "95527": {
+   "code_insee": "95527",
+   "nom": "Roissy-En-France",
+   "code_circonscription": "09",
+   "bureaux_de_vote": 1,
+   "inscrits": 1538,
+   "abstentions": 480,
+   "votants": 1058,
+   "blancs": 52,
+   "nuls": 22,
+   "exprimes": 984,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 514,
+     "pct_exprimes": 52.24,
+     "pct_inscrits": 33.42
+    },
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 470,
+     "pct_exprimes": 47.76,
+     "pct_inscrits": 30.56
+    }
+   ],
+   "pct_abstention": 31.21,
+   "pct_participation": 68.79,
+   "tete": {
+    "nom": "LE PEN",
+    "prenom": "Marine",
+    "nuance": null,
+    "pct_exprimes": 52.24
+   }
+  },
+  "95529": {
+   "code_insee": "95529",
+   "nom": "Ronquerolles",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 648,
+   "abstentions": 157,
+   "votants": 491,
+   "blancs": 45,
+   "nuls": 4,
+   "exprimes": 442,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 237,
+     "pct_exprimes": 53.62,
+     "pct_inscrits": 36.57
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 205,
+     "pct_exprimes": 46.38,
+     "pct_inscrits": 31.64
+    }
+   ],
+   "pct_abstention": 24.23,
+   "pct_participation": 75.77,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 53.62
+   }
+  },
+  "95535": {
+   "code_insee": "95535",
+   "nom": "Sagy",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 924,
+   "abstentions": 262,
+   "votants": 662,
+   "blancs": 41,
+   "nuls": 10,
+   "exprimes": 611,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 337,
+     "pct_exprimes": 55.16,
+     "pct_inscrits": 36.47
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 274,
+     "pct_exprimes": 44.84,
+     "pct_inscrits": 29.65
+    }
+   ],
+   "pct_abstention": 28.35,
+   "pct_participation": 71.65,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 55.16
+   }
+  },
+  "95539": {
+   "code_insee": "95539",
+   "nom": "Saint-Brice-Sous-Forêt",
+   "code_circonscription": "07",
+   "bureaux_de_vote": 9,
+   "inscrits": 8865,
+   "abstentions": 3081,
+   "votants": 5784,
+   "blancs": 333,
+   "nuls": 116,
+   "exprimes": 5335,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 3414,
+     "pct_exprimes": 63.99,
+     "pct_inscrits": 38.51
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 1921,
+     "pct_exprimes": 36.01,
+     "pct_inscrits": 21.67
+    }
+   ],
+   "pct_abstention": 34.75,
+   "pct_participation": 65.25,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 63.99
+   }
+  },
+  "95541": {
+   "code_insee": "95541",
+   "nom": "Saint-Clair-Sur-Epte",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 618,
+   "abstentions": 185,
+   "votants": 433,
+   "blancs": 32,
+   "nuls": 2,
+   "exprimes": 399,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 243,
+     "pct_exprimes": 60.9,
+     "pct_inscrits": 39.32
+    },
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 156,
+     "pct_exprimes": 39.1,
+     "pct_inscrits": 25.24
+    }
+   ],
+   "pct_abstention": 29.94,
+   "pct_participation": 70.06,
+   "tete": {
+    "nom": "LE PEN",
+    "prenom": "Marine",
+    "nuance": null,
+    "pct_exprimes": 60.9
+   }
+  },
+  "95543": {
+   "code_insee": "95543",
+   "nom": "Saint-Cyr-En-Arthies",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 174,
+   "abstentions": 34,
+   "votants": 140,
+   "blancs": 9,
+   "nuls": 2,
+   "exprimes": 129,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 77,
+     "pct_exprimes": 59.69,
+     "pct_inscrits": 44.25
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 52,
+     "pct_exprimes": 40.31,
+     "pct_inscrits": 29.89
+    }
+   ],
+   "pct_abstention": 19.54,
+   "pct_participation": 80.46,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 59.69
+   }
+  },
+  "95554": {
+   "code_insee": "95554",
+   "nom": "Saint-Gervais",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 700,
+   "abstentions": 137,
+   "votants": 563,
+   "blancs": 48,
+   "nuls": 10,
+   "exprimes": 505,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 310,
+     "pct_exprimes": 61.39,
+     "pct_inscrits": 44.29
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 195,
+     "pct_exprimes": 38.61,
+     "pct_inscrits": 27.86
+    }
+   ],
+   "pct_abstention": 19.57,
+   "pct_participation": 80.43,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 61.39
+   }
+  },
+  "95555": {
+   "code_insee": "95555",
+   "nom": "Saint-Gratien",
+   "code_circonscription": "06",
+   "bureaux_de_vote": 11,
+   "inscrits": 13332,
+   "abstentions": 4573,
+   "votants": 8759,
+   "blancs": 569,
+   "nuls": 141,
+   "exprimes": 8049,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 5840,
+     "pct_exprimes": 72.56,
+     "pct_inscrits": 43.8
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 2209,
+     "pct_exprimes": 27.44,
+     "pct_inscrits": 16.57
+    }
+   ],
+   "pct_abstention": 34.3,
+   "pct_participation": 65.7,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 72.56
+   }
+  },
+  "95563": {
+   "code_insee": "95563",
+   "nom": "Saint-Leu-La-Forêt",
+   "code_circonscription": "04",
+   "bureaux_de_vote": 10,
+   "inscrits": 11338,
+   "abstentions": 3149,
+   "votants": 8189,
+   "blancs": 488,
+   "nuls": 140,
+   "exprimes": 7561,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 5336,
+     "pct_exprimes": 70.57,
+     "pct_inscrits": 47.06
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 2225,
+     "pct_exprimes": 29.43,
+     "pct_inscrits": 19.62
+    }
+   ],
+   "pct_abstention": 27.77,
+   "pct_participation": 72.23,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 70.57
+   }
+  },
+  "95566": {
+   "code_insee": "95566",
+   "nom": "Saint-Martin-Du-Tertre",
+   "code_circonscription": "02",
+   "bureaux_de_vote": 2,
+   "inscrits": 1823,
+   "abstentions": 606,
+   "votants": 1217,
+   "blancs": 96,
+   "nuls": 30,
+   "exprimes": 1091,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 575,
+     "pct_exprimes": 52.7,
+     "pct_inscrits": 31.54
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 516,
+     "pct_exprimes": 47.3,
+     "pct_inscrits": 28.3
+    }
+   ],
+   "pct_abstention": 33.24,
+   "pct_participation": 66.76,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 52.7
+   }
+  },
+  "95572": {
+   "code_insee": "95572",
+   "nom": "Saint-Ouen-L'Aumône",
+   "code_circonscription": "02",
+   "bureaux_de_vote": 12,
+   "inscrits": 13031,
+   "abstentions": 4624,
+   "votants": 8407,
+   "blancs": 493,
+   "nuls": 246,
+   "exprimes": 7668,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 5152,
+     "pct_exprimes": 67.19,
+     "pct_inscrits": 39.54
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 2516,
+     "pct_exprimes": 32.81,
+     "pct_inscrits": 19.31
+    }
+   ],
+   "pct_abstention": 35.48,
+   "pct_participation": 64.52,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 67.19
+   }
+  },
+  "95574": {
+   "code_insee": "95574",
+   "nom": "Saint-Prix",
+   "code_circonscription": "04",
+   "bureaux_de_vote": 7,
+   "inscrits": 5565,
+   "abstentions": 1554,
+   "votants": 4011,
+   "blancs": 235,
+   "nuls": 82,
+   "exprimes": 3694,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 2505,
+     "pct_exprimes": 67.81,
+     "pct_inscrits": 45.01
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 1189,
+     "pct_exprimes": 32.19,
+     "pct_inscrits": 21.37
+    }
+   ],
+   "pct_abstention": 27.92,
+   "pct_participation": 72.08,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 67.81
+   }
+  },
+  "95580": {
+   "code_insee": "95580",
+   "nom": "Saint-Witz",
+   "code_circonscription": "09",
+   "bureaux_de_vote": 2,
+   "inscrits": 1940,
+   "abstentions": 483,
+   "votants": 1457,
+   "blancs": 58,
+   "nuls": 17,
+   "exprimes": 1382,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 931,
+     "pct_exprimes": 67.37,
+     "pct_inscrits": 47.99
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 451,
+     "pct_exprimes": 32.63,
+     "pct_inscrits": 23.25
+    }
+   ],
+   "pct_abstention": 24.9,
+   "pct_participation": 75.1,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 67.37
+   }
+  },
+  "95582": {
+   "code_insee": "95582",
+   "nom": "Sannois",
+   "code_circonscription": "06",
+   "bureaux_de_vote": 17,
+   "inscrits": 16542,
+   "abstentions": 5219,
+   "votants": 11323,
+   "blancs": 706,
+   "nuls": 182,
+   "exprimes": 10435,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 7304,
+     "pct_exprimes": 70.0,
+     "pct_inscrits": 44.15
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 3131,
+     "pct_exprimes": 30.0,
+     "pct_inscrits": 18.93
+    }
+   ],
+   "pct_abstention": 31.55,
+   "pct_participation": 68.45,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 70.0
+   }
+  },
+  "95584": {
+   "code_insee": "95584",
+   "nom": "Santeuil",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 497,
+   "abstentions": 92,
+   "votants": 405,
+   "blancs": 24,
+   "nuls": 10,
+   "exprimes": 371,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 225,
+     "pct_exprimes": 60.65,
+     "pct_inscrits": 45.27
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 146,
+     "pct_exprimes": 39.35,
+     "pct_inscrits": 29.38
+    }
+   ],
+   "pct_abstention": 18.51,
+   "pct_participation": 81.49,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 60.65
+   }
+  },
+  "95585": {
+   "code_insee": "95585",
+   "nom": "Sarcelles",
+   "code_circonscription": "08",
+   "bureaux_de_vote": 30,
+   "inscrits": 28301,
+   "abstentions": 12720,
+   "votants": 15581,
+   "blancs": 974,
+   "nuls": 283,
+   "exprimes": 14324,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 9722,
+     "pct_exprimes": 67.87,
+     "pct_inscrits": 34.35
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 4602,
+     "pct_exprimes": 32.13,
+     "pct_inscrits": 16.26
+    }
+   ],
+   "pct_abstention": 44.95,
+   "pct_participation": 55.05,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 67.87
+   }
+  },
+  "95592": {
+   "code_insee": "95592",
+   "nom": "Seraincourt",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 988,
+   "abstentions": 221,
+   "votants": 767,
+   "blancs": 55,
+   "nuls": 11,
+   "exprimes": 701,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 405,
+     "pct_exprimes": 57.77,
+     "pct_inscrits": 40.99
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 296,
+     "pct_exprimes": 42.23,
+     "pct_inscrits": 29.96
+    }
+   ],
+   "pct_abstention": 22.37,
+   "pct_participation": 77.63,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 57.77
+   }
+  },
+  "95594": {
+   "code_insee": "95594",
+   "nom": "Seugy",
+   "code_circonscription": "02",
+   "bureaux_de_vote": 1,
+   "inscrits": 769,
+   "abstentions": 165,
+   "votants": 604,
+   "blancs": 38,
+   "nuls": 14,
+   "exprimes": 552,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 306,
+     "pct_exprimes": 55.43,
+     "pct_inscrits": 39.79
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 246,
+     "pct_exprimes": 44.57,
+     "pct_inscrits": 31.99
+    }
+   ],
+   "pct_abstention": 21.46,
+   "pct_participation": 78.54,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 55.43
+   }
+  },
+  "95598": {
+   "code_insee": "95598",
+   "nom": "Soisy-Sous-Montmorency",
+   "code_circonscription": "06",
+   "bureaux_de_vote": 10,
+   "inscrits": 11734,
+   "abstentions": 3866,
+   "votants": 7868,
+   "blancs": 486,
+   "nuls": 127,
+   "exprimes": 7255,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 5168,
+     "pct_exprimes": 71.23,
+     "pct_inscrits": 44.04
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 2087,
+     "pct_exprimes": 28.77,
+     "pct_inscrits": 17.79
+    }
+   ],
+   "pct_abstention": 32.95,
+   "pct_participation": 67.05,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 71.23
+   }
+  },
+  "95604": {
+   "code_insee": "95604",
+   "nom": "Survilliers",
+   "code_circonscription": "09",
+   "bureaux_de_vote": 2,
+   "inscrits": 2390,
+   "abstentions": 706,
+   "votants": 1684,
+   "blancs": 119,
+   "nuls": 35,
+   "exprimes": 1530,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 775,
+     "pct_exprimes": 50.65,
+     "pct_inscrits": 32.43
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 755,
+     "pct_exprimes": 49.35,
+     "pct_inscrits": 31.59
+    }
+   ],
+   "pct_abstention": 29.54,
+   "pct_participation": 70.46,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 50.65
+   }
+  },
+  "95607": {
+   "code_insee": "95607",
+   "nom": "Taverny",
+   "code_circonscription": "03",
+   "bureaux_de_vote": 18,
+   "inscrits": 17317,
+   "abstentions": 4970,
+   "votants": 12347,
+   "blancs": 869,
+   "nuls": 255,
+   "exprimes": 11223,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 7438,
+     "pct_exprimes": 66.27,
+     "pct_inscrits": 42.95
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 3785,
+     "pct_exprimes": 33.73,
+     "pct_inscrits": 21.86
+    }
+   ],
+   "pct_abstention": 28.7,
+   "pct_participation": 71.3,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 66.27
+   }
+  },
+  "95610": {
+   "code_insee": "95610",
+   "nom": "Théméricourt",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 233,
+   "abstentions": 58,
+   "votants": 175,
+   "blancs": 10,
+   "nuls": 3,
+   "exprimes": 162,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 112,
+     "pct_exprimes": 69.14,
+     "pct_inscrits": 48.07
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 50,
+     "pct_exprimes": 30.86,
+     "pct_inscrits": 21.46
+    }
+   ],
+   "pct_abstention": 24.89,
+   "pct_participation": 75.11,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 69.14
+   }
+  },
+  "95611": {
+   "code_insee": "95611",
+   "nom": "Theuville",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 27,
+   "abstentions": 2,
+   "votants": 25,
+   "blancs": 0,
+   "nuls": 0,
+   "exprimes": 25,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 18,
+     "pct_exprimes": 72.0,
+     "pct_inscrits": 66.67
+    },
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 7,
+     "pct_exprimes": 28.0,
+     "pct_inscrits": 25.93
+    }
+   ],
+   "pct_abstention": 7.41,
+   "pct_participation": 92.59,
+   "tete": {
+    "nom": "LE PEN",
+    "prenom": "Marine",
+    "nuance": null,
+    "pct_exprimes": 72.0
+   }
+  },
+  "95612": {
+   "code_insee": "95612",
+   "nom": "Le Thillay",
+   "code_circonscription": "09",
+   "bureaux_de_vote": 3,
+   "inscrits": 2430,
+   "abstentions": 848,
+   "votants": 1582,
+   "blancs": 99,
+   "nuls": 40,
+   "exprimes": 1443,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 732,
+     "pct_exprimes": 50.73,
+     "pct_inscrits": 30.12
+    },
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 711,
+     "pct_exprimes": 49.27,
+     "pct_inscrits": 29.26
+    }
+   ],
+   "pct_abstention": 34.9,
+   "pct_participation": 65.1,
+   "tete": {
+    "nom": "LE PEN",
+    "prenom": "Marine",
+    "nuance": null,
+    "pct_exprimes": 50.73
+   }
+  },
+  "95625": {
+   "code_insee": "95625",
+   "nom": "Us",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 960,
+   "abstentions": 203,
+   "votants": 757,
+   "blancs": 66,
+   "nuls": 11,
+   "exprimes": 680,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 388,
+     "pct_exprimes": 57.06,
+     "pct_inscrits": 40.42
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 292,
+     "pct_exprimes": 42.94,
+     "pct_inscrits": 30.42
+    }
+   ],
+   "pct_abstention": 21.15,
+   "pct_participation": 78.85,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 57.06
+   }
+  },
+  "95627": {
+   "code_insee": "95627",
+   "nom": "Vallangoujard",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 447,
+   "abstentions": 80,
+   "votants": 367,
+   "blancs": 20,
+   "nuls": 5,
+   "exprimes": 342,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 203,
+     "pct_exprimes": 59.36,
+     "pct_inscrits": 45.41
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 139,
+     "pct_exprimes": 40.64,
+     "pct_inscrits": 31.1
+    }
+   ],
+   "pct_abstention": 17.9,
+   "pct_participation": 82.1,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 59.36
+   }
+  },
+  "95628": {
+   "code_insee": "95628",
+   "nom": "Valmondois",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 968,
+   "abstentions": 232,
+   "votants": 736,
+   "blancs": 58,
+   "nuls": 15,
+   "exprimes": 663,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 389,
+     "pct_exprimes": 58.67,
+     "pct_inscrits": 40.19
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 274,
+     "pct_exprimes": 41.33,
+     "pct_inscrits": 28.31
+    }
+   ],
+   "pct_abstention": 23.97,
+   "pct_participation": 76.03,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 58.67
+   }
+  },
+  "95633": {
+   "code_insee": "95633",
+   "nom": "Vaudherland",
+   "code_circonscription": "09",
+   "bureaux_de_vote": 1,
+   "inscrits": 59,
+   "abstentions": 17,
+   "votants": 42,
+   "blancs": 2,
+   "nuls": 1,
+   "exprimes": 39,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 32,
+     "pct_exprimes": 82.05,
+     "pct_inscrits": 54.24
+    },
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 7,
+     "pct_exprimes": 17.95,
+     "pct_inscrits": 11.86
+    }
+   ],
+   "pct_abstention": 28.81,
+   "pct_participation": 71.19,
+   "tete": {
+    "nom": "LE PEN",
+    "prenom": "Marine",
+    "nuance": null,
+    "pct_exprimes": 82.05
+   }
+  },
+  "95637": {
+   "code_insee": "95637",
+   "nom": "Vauréal",
+   "code_circonscription": "10",
+   "bureaux_de_vote": 12,
+   "inscrits": 11529,
+   "abstentions": 3654,
+   "votants": 7875,
+   "blancs": 701,
+   "nuls": 0,
+   "exprimes": 7174,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 5214,
+     "pct_exprimes": 72.68,
+     "pct_inscrits": 45.23
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 1960,
+     "pct_exprimes": 27.32,
+     "pct_inscrits": 17.0
+    }
+   ],
+   "pct_abstention": 31.69,
+   "pct_participation": 68.31,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 72.68
+   }
+  },
+  "95641": {
+   "code_insee": "95641",
+   "nom": "Vémars",
+   "code_circonscription": "09",
+   "bureaux_de_vote": 1,
+   "inscrits": 1785,
+   "abstentions": 585,
+   "votants": 1200,
+   "blancs": 97,
+   "nuls": 20,
+   "exprimes": 1083,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 556,
+     "pct_exprimes": 51.34,
+     "pct_inscrits": 31.15
+    },
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 527,
+     "pct_exprimes": 48.66,
+     "pct_inscrits": 29.52
+    }
+   ],
+   "pct_abstention": 32.77,
+   "pct_participation": 67.23,
+   "tete": {
+    "nom": "LE PEN",
+    "prenom": "Marine",
+    "nuance": null,
+    "pct_exprimes": 51.34
+   }
+  },
+  "95651": {
+   "code_insee": "95651",
+   "nom": "Vétheuil",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 608,
+   "abstentions": 134,
+   "votants": 474,
+   "blancs": 31,
+   "nuls": 11,
+   "exprimes": 432,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 288,
+     "pct_exprimes": 66.67,
+     "pct_inscrits": 47.37
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 144,
+     "pct_exprimes": 33.33,
+     "pct_inscrits": 23.68
+    }
+   ],
+   "pct_abstention": 22.04,
+   "pct_participation": 77.96,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 66.67
+   }
+  },
+  "95652": {
+   "code_insee": "95652",
+   "nom": "Viarmes",
+   "code_circonscription": "02",
+   "bureaux_de_vote": 3,
+   "inscrits": 4026,
+   "abstentions": 1106,
+   "votants": 2920,
+   "blancs": 165,
+   "nuls": 57,
+   "exprimes": 2698,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 1422,
+     "pct_exprimes": 52.71,
+     "pct_inscrits": 35.32
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 1276,
+     "pct_exprimes": 47.29,
+     "pct_inscrits": 31.69
+    }
+   ],
+   "pct_abstention": 27.47,
+   "pct_participation": 72.53,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 52.71
+   }
+  },
+  "95656": {
+   "code_insee": "95656",
+   "nom": "Vienne-En-Arthies",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 332,
+   "abstentions": 58,
+   "votants": 274,
+   "blancs": 22,
+   "nuls": 5,
+   "exprimes": 247,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 142,
+     "pct_exprimes": 57.49,
+     "pct_inscrits": 42.77
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 105,
+     "pct_exprimes": 42.51,
+     "pct_inscrits": 31.63
+    }
+   ],
+   "pct_abstention": 17.47,
+   "pct_participation": 82.53,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 57.49
+   }
+  },
+  "95658": {
+   "code_insee": "95658",
+   "nom": "Vigny",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 888,
+   "abstentions": 215,
+   "votants": 673,
+   "blancs": 34,
+   "nuls": 13,
+   "exprimes": 626,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 391,
+     "pct_exprimes": 62.46,
+     "pct_inscrits": 44.03
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 235,
+     "pct_exprimes": 37.54,
+     "pct_inscrits": 26.46
+    }
+   ],
+   "pct_abstention": 24.21,
+   "pct_participation": 75.79,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 62.46
+   }
+  },
+  "95660": {
+   "code_insee": "95660",
+   "nom": "Villaines-Sous-Bois",
+   "code_circonscription": "02",
+   "bureaux_de_vote": 1,
+   "inscrits": 536,
+   "abstentions": 118,
+   "votants": 418,
+   "blancs": 23,
+   "nuls": 9,
+   "exprimes": 386,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 194,
+     "pct_exprimes": 50.26,
+     "pct_inscrits": 36.19
+    },
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 192,
+     "pct_exprimes": 49.74,
+     "pct_inscrits": 35.82
+    }
+   ],
+   "pct_abstention": 22.01,
+   "pct_participation": 77.99,
+   "tete": {
+    "nom": "LE PEN",
+    "prenom": "Marine",
+    "nuance": null,
+    "pct_exprimes": 50.26
+   }
+  },
+  "95675": {
+   "code_insee": "95675",
+   "nom": "Villeron",
+   "code_circonscription": "09",
+   "bureaux_de_vote": 1,
+   "inscrits": 796,
+   "abstentions": 195,
+   "votants": 601,
+   "blancs": 42,
+   "nuls": 13,
+   "exprimes": 546,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 294,
+     "pct_exprimes": 53.85,
+     "pct_inscrits": 36.93
+    },
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 252,
+     "pct_exprimes": 46.15,
+     "pct_inscrits": 31.66
+    }
+   ],
+   "pct_abstention": 24.5,
+   "pct_participation": 75.5,
+   "tete": {
+    "nom": "LE PEN",
+    "prenom": "Marine",
+    "nuance": null,
+    "pct_exprimes": 53.85
+   }
+  },
+  "95676": {
+   "code_insee": "95676",
+   "nom": "Villers-En-Arthies",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 389,
+   "abstentions": 70,
+   "votants": 319,
+   "blancs": 25,
+   "nuls": 6,
+   "exprimes": 288,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 149,
+     "pct_exprimes": 51.74,
+     "pct_inscrits": 38.3
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 139,
+     "pct_exprimes": 48.26,
+     "pct_inscrits": 35.73
+    }
+   ],
+   "pct_abstention": 17.99,
+   "pct_participation": 82.01,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 51.74
+   }
+  },
+  "95678": {
+   "code_insee": "95678",
+   "nom": "Villiers-Adam",
+   "code_circonscription": "02",
+   "bureaux_de_vote": 1,
+   "inscrits": 605,
+   "abstentions": 108,
+   "votants": 497,
+   "blancs": 35,
+   "nuls": 18,
+   "exprimes": 444,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 248,
+     "pct_exprimes": 55.86,
+     "pct_inscrits": 40.99
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 196,
+     "pct_exprimes": 44.14,
+     "pct_inscrits": 32.4
+    }
+   ],
+   "pct_abstention": 17.85,
+   "pct_participation": 82.15,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 55.86
+   }
+  },
+  "95680": {
+   "code_insee": "95680",
+   "nom": "Villiers-Le-Bel",
+   "code_circonscription": "08",
+   "bureaux_de_vote": 13,
+   "inscrits": 12414,
+   "abstentions": 5099,
+   "votants": 7315,
+   "blancs": 452,
+   "nuls": 161,
+   "exprimes": 6702,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 4541,
+     "pct_exprimes": 67.76,
+     "pct_inscrits": 36.58
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 2161,
+     "pct_exprimes": 32.24,
+     "pct_inscrits": 17.41
+    }
+   ],
+   "pct_abstention": 41.07,
+   "pct_participation": 58.93,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 67.76
+   }
+  },
+  "95682": {
+   "code_insee": "95682",
+   "nom": "Villiers-Le-Sec",
+   "code_circonscription": "09",
+   "bureaux_de_vote": 1,
+   "inscrits": 110,
+   "abstentions": 26,
+   "votants": 84,
+   "blancs": 3,
+   "nuls": 1,
+   "exprimes": 80,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 50,
+     "pct_exprimes": 62.5,
+     "pct_inscrits": 45.45
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 30,
+     "pct_exprimes": 37.5,
+     "pct_inscrits": 27.27
+    }
+   ],
+   "pct_abstention": 23.64,
+   "pct_participation": 76.36,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 62.5
+   }
+  },
+  "95690": {
+   "code_insee": "95690",
+   "nom": "Wy-Dit-Joli-Village",
+   "code_circonscription": "01",
+   "bureaux_de_vote": 1,
+   "inscrits": 285,
+   "abstentions": 53,
+   "votants": 232,
+   "blancs": 13,
+   "nuls": 4,
+   "exprimes": 215,
+   "candidats": [
+    {
+     "nuance": null,
+     "nom": "MACRON",
+     "prenom": "Emmanuel",
+     "voix": 129,
+     "pct_exprimes": 60.0,
+     "pct_inscrits": 45.26
+    },
+    {
+     "nuance": null,
+     "nom": "LE PEN",
+     "prenom": "Marine",
+     "voix": 86,
+     "pct_exprimes": 40.0,
+     "pct_inscrits": 30.18
+    }
+   ],
+   "pct_abstention": 18.6,
+   "pct_participation": 81.4,
+   "tete": {
+    "nom": "MACRON",
+    "prenom": "Emmanuel",
+    "nuance": null,
+    "pct_exprimes": 60.0
+   }
+  }
+ }
+}

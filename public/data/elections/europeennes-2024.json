@@ -1,0 +1,8 @@
+{
+  "election": "Européennes 2024",
+  "tour": 1,
+  "date": "2024-06-09",
+  "status": "a_completer",
+  "note": "Structure prête pour l'intégration des résultats réels. Non chargé dans cette version.",
+  "communes": {}
+}

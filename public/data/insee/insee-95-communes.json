@@ -1,0 +1,27 @@
+{
+  "status": "a_completer",
+  "note": "Le croisement sociodémographique (structure par âge, catégories socioprofessionnelles) nécessite les fichiers INSEE RP (recensement de la population) au niveau communal. Les tentatives de récupération dans cette session ont échoué pour des raisons d'accès réseau (voir DATA.md). La structure ci-dessous documente le schéma attendu pour une intégration ultérieure.",
+  "schema": {
+    "code_insee": "string",
+    "population": "number",
+    "age": {
+      "0_14": "number (%)",
+      "15_29": "number (%)",
+      "30_44": "number (%)",
+      "45_59": "number (%)",
+      "60_74": "number (%)",
+      "75_plus": "number (%)"
+    },
+    "csp": {
+      "agriculteurs": "number (%)",
+      "artisans_commercants": "number (%)",
+      "cadres": "number (%)",
+      "professions_intermediaires": "number (%)",
+      "employes": "number (%)",
+      "ouvriers": "number (%)",
+      "retraites": "number (%)",
+      "sans_activite": "number (%)"
+    }
+  },
+  "communes": {}
+}
