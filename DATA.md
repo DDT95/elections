@@ -49,12 +49,15 @@ Ce document distingue précisément ce qui est **réel** (données officielles v
 - **Méthode de construction des contours** : dissolution géométrique réelle, mais au niveau **bureau de vote** (et non commune) — nécessaire car deux communes denses, Argenteuil (95018) et Cergy (95127), sont chacune scindées entre plusieurs cantons (Argenteuil-1/2/3, Cergy-1/2). Chacun des 810 polygones de bureaux de vote (§2) a été affecté à son canton réel via la jointure sur `codeBureauVote`, puis les polygones ont été fusionnés par canton. 808/810 bureaux se sont joints directement (numérotation identique entre le millésime des contours de bureaux et celui des Départementales 2021) ; les 2 bureaux restants ont été rattachés au canton majoritaire de leur commune (méthode de repli, toujours basée sur un code de canton réel, jamais inventé). Résultat : **21/21 cantons produits**, y compris les 3 cantons partiels d'Argenteuil et les 2 de Cergy, correctement scindés.
 - Sanity check : nombre de cantons obtenu (21) conforme à l'attendu pour le Val-d'Oise depuis le redécoupage cantonal de 2015.
 
-## 7bis. Départementales 2021 (2nd tour) — RÉEL ; 1er tour à compléter
+## 7bis. Départementales 2021 (1er et 2nd tour) — RÉEL
 
-- Fichiers : `public/data/elections/departementales-2021-t2.json` (commune), `departementales-2021-t2-canton.json` (canton — échelle nativement pertinente pour ce scrutin), `departementales-2021-t2-bv.json` (bureau de vote). `departementales-2021-t1.json` reste une structure vide (`status: "a_completer"`) : seul le 2nd tour a été transmis.
-- Source : **export officiel DGRC fourni par l'utilisateur**, fichier résultats définitifs par bureau de vote, France entière (809 bureaux du Val-d'Oise après filtrage sur `code_departement = 95`), binômes candidats (jusqu'à 2 par bureau en 2nd tour, colonnes détectées dynamiquement).
-- Couverture : **184/184 communes, 21/21 cantons, 809/809 bureaux de vote (100 %)** au niveau participation et détail par binôme.
-- Ce scrutin est le seul dont l'échelle native est le canton (chaque binôme se présente dans un seul canton) : c'est donc la donnée la plus riche pour tester l'échelle cantonale de l'Atlas.
+- Fichiers : `public/data/elections/departementales-2021-t1.json` / `-t2.json` (commune), `-t1-canton.json` / `-t2-canton.json` (canton — échelle nativement pertinente pour ce scrutin), `-t1-bv.json` / `-t2-bv.json` (bureau de vote).
+- Source : **export officiel DGRC fourni par l'utilisateur**, fichiers résultats définitifs par bureau de vote, France entière, filtrés sur `Code du département = 95`. Le 1er tour est un CSV `;`-délimité en encodage **cp1252/Windows-1252** (décodé explicitly avec cet encodage pour éviter tout mojibake sur les noms accentués) ; le 2nd tour est le fichier `.xlsx` déjà documenté. Binômes candidats détectés dynamiquement par blocs de colonnes répétées (jusqu'à 9 binômes par bureau au 1er tour selon les cantons, 2 au 2nd tour).
+- Couverture :
+  - **1er tour** : **184/184 communes, 21/21 cantons, 809/809 bureaux de vote (100 %)** — y compris Gouzangrez, présente ici contrairement aux scrutins 2024 (Législatives, Européennes), ce qui confirme que son absence ailleurs tient à la source de ces scrutins précis et non à une règle générale d'exclusion de la commune.
+  - **2nd tour** : **184/184 communes, 21/21 cantons, 809/809 bureaux de vote (100 %)**.
+- Cohérence vérifiée : le nombre d'inscrits total (729 528 au 1er tour, 729 641 au 2nd) est stable entre les deux tours, comme attendu.
+- Ce scrutin est le seul dont l'échelle native est le canton (chaque binôme se présente dans un seul canton) et le seul couvert aux deux tours avec la présidentielle 2022 et les législatives 2024 : c'est la donnée la plus riche pour tester l'échelle cantonale de l'Atlas.
 
 ## 8. Profil sociodémographique (âge, CSP) — À COMPLÉTER (contrainte d'accès réseau)
 
@@ -84,6 +87,6 @@ L'environnement d'exécution restreint les accès réseau sortants à une liste 
 | Municipales 2020 T2 — participation | Réel | 35/184 (structurel) | idem |
 | Municipales 2020 T1/T2 — détail liste/candidat | À compléter | — | non traité (volume de pagination) |
 | Contours cantons (95) | Réel | 21/21 | dissolution BV réelle, référentiel Départementales 2021 (utilisateur) |
+| Départementales 2021 T1 — commune, canton, bureau | Réel | 184/184, 21/21, 809/809 (100 %) | export officiel DGRC (utilisateur) |
 | Départementales 2021 T2 — commune, canton, bureau | Réel | 184/184, 21/21, 809/809 (100 %) | export officiel DGRC (utilisateur) |
-| Départementales 2021 T1 | À compléter | — | non fourni par l'utilisateur |
 | Profil sociodémographique (âge, CSP) | À compléter | — | INSEE RP 2022/Filosofi 2021 (Parquet, accès réseau bloqué) |

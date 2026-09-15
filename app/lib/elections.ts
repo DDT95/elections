@@ -38,7 +38,7 @@ export const ELECTIONS: ElectionDef[] = [
     shortLabel: "Départementales 2021",
     status: "reel",
     tours: [
-      { id: "t1", label: "1er tour (20 juin 2021) — à compléter", file: "departementales-2021-t1" },
+      { id: "t1", label: "1er tour (20 juin 2021)", file: "departementales-2021-t1" },
       { id: "t2", label: "2nd tour (27 juin 2021)", file: "departementales-2021-t2" },
     ],
   },

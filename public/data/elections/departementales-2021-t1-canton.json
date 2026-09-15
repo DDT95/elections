@@ -1,0 +1,1347 @@
+{
+ "election": "Départementales 2021",
+ "tour": 1,
+ "date": "2021-06-20",
+ "status": "reel",
+ "source": {
+  "producer": "Ministère de l'Intérieur (DGRC) — export officiel bureau de vote",
+  "dataset": "Résultats définitifs par bureau de vote, France entière (fourni par l'utilisateur)",
+  "url": "https://www.data.gouv.fr/"
+ },
+ "cantons": {
+  "16": {
+   "code_canton": "16",
+   "nom": "Pontoise",
+   "bureaux_de_vote": 56,
+   "inscrits": 33263,
+   "abstentions": 22595,
+   "votants": 10668,
+   "blancs": 303,
+   "nuls": 112,
+   "exprimes": 10253,
+   "nb_communes": 32,
+   "candidats": [
+    {
+     "nom": "M. DUBRAY Paul et Mme FROMENTEIL Anne",
+     "prenom": null,
+     "nuance": "BC-UD",
+     "voix": 3343,
+     "pct_exprimes": 32.61,
+     "pct_inscrits": 10.05
+    },
+    {
+     "nom": "M. BARBARIT Christian et Mme HENRY Stéphanie",
+     "prenom": null,
+     "nuance": "BC-RN",
+     "voix": 2125,
+     "pct_exprimes": 20.73,
+     "pct_inscrits": 6.39
+    },
+    {
+     "nom": "Mme ARIÈS Bénédicte et M. FOUCOU Julien",
+     "prenom": null,
+     "nuance": "BC-UGE",
+     "voix": 1808,
+     "pct_exprimes": 17.63,
+     "pct_inscrits": 5.44
+    },
+    {
+     "nom": "Mme CHAMPION - BOURDOU Catherine et M. GIROUD Marc",
+     "prenom": null,
+     "nuance": "BC-DIV",
+     "voix": 1490,
+     "pct_exprimes": 14.53,
+     "pct_inscrits": 4.48
+    },
+    {
+     "nom": "M. LEGRIS Edwin et Mme NGUYEN DÉROSIER Sandra",
+     "prenom": null,
+     "nuance": "BC-UGE",
+     "voix": 1158,
+     "pct_exprimes": 11.29,
+     "pct_inscrits": 3.48
+    },
+    {
+     "nom": "Mme BOUGARA Bouchra et M. NORZIELUS Jean-Richard",
+     "prenom": null,
+     "nuance": "BC-ECO",
+     "voix": 329,
+     "pct_exprimes": 3.21,
+     "pct_inscrits": 0.99
+    }
+   ],
+   "pct_abstention": 67.93,
+   "pct_participation": 32.07,
+   "tete": {
+    "nom": "M. DUBRAY Paul et Mme FROMENTEIL Anne",
+    "prenom": null,
+    "nuance": "BC-UD",
+    "pct_exprimes": 32.61
+   }
+  },
+  "20": {
+   "code_canton": "20",
+   "nom": "Vauréal",
+   "bureaux_de_vote": 61,
+   "inscrits": 37050,
+   "abstentions": 25293,
+   "votants": 11757,
+   "blancs": 574,
+   "nuls": 124,
+   "exprimes": 11059,
+   "nb_communes": 39,
+   "candidats": [
+    {
+     "nom": "Mme JOSÉ Patricia et M. VATEL Thomas",
+     "prenom": null,
+     "nuance": "BC-LR",
+     "voix": 3820,
+     "pct_exprimes": 34.54,
+     "pct_inscrits": 10.31
+    },
+    {
+     "nom": "Mme CHEVALIER Lydia et M. PROFFIT BRULFERT Eric",
+     "prenom": null,
+     "nuance": "BC-UGE",
+     "voix": 3180,
+     "pct_exprimes": 28.75,
+     "pct_inscrits": 8.58
+    },
+    {
+     "nom": "Mme BRUNA Annika et M. PIERRE Philippe",
+     "prenom": null,
+     "nuance": "BC-RN",
+     "voix": 2294,
+     "pct_exprimes": 20.74,
+     "pct_inscrits": 6.19
+    },
+    {
+     "nom": "M. DAGUE Didier et Mme DAMANI BEUREL Kinjal",
+     "prenom": null,
+     "nuance": "BC-DVG",
+     "voix": 1382,
+     "pct_exprimes": 12.5,
+     "pct_inscrits": 3.73
+    },
+    {
+     "nom": "Mme LE GUILCHER Annick et M. MENARD Jérôme",
+     "prenom": null,
+     "nuance": "BC-DIV",
+     "voix": 383,
+     "pct_exprimes": 3.46,
+     "pct_inscrits": 1.03
+    }
+   ],
+   "pct_abstention": 68.27,
+   "pct_participation": 31.73,
+   "tete": {
+    "nom": "Mme JOSÉ Patricia et M. VATEL Thomas",
+    "prenom": null,
+    "nuance": "BC-LR",
+    "pct_exprimes": 34.54
+   }
+  },
+  "15": {
+   "code_canton": "15",
+   "nom": "Montmorency",
+   "bureaux_de_vote": 36,
+   "inscrits": 39019,
+   "abstentions": 26682,
+   "votants": 12337,
+   "blancs": 223,
+   "nuls": 139,
+   "exprimes": 11975,
+   "nb_communes": 6,
+   "candidats": [
+    {
+     "nom": "Mme PHILIPPON Aziza et M. STREHAIANO Luc",
+     "prenom": null,
+     "nuance": "BC-LR",
+     "voix": 4616,
+     "pct_exprimes": 38.55,
+     "pct_inscrits": 11.83
+    },
+    {
+     "nom": "M. DELCOMBRE François et Mme PHILIPPE Sandra",
+     "prenom": null,
+     "nuance": "BC-UGE",
+     "voix": 2946,
+     "pct_exprimes": 24.6,
+     "pct_inscrits": 7.55
+    },
+    {
+     "nom": "M. CORCEIRO David et Mme LAVOIX Linda",
+     "prenom": null,
+     "nuance": "BC-UC",
+     "voix": 2736,
+     "pct_exprimes": 22.85,
+     "pct_inscrits": 7.01
+    },
+    {
+     "nom": "M. JEZEQUEL Marc et Mme MERIENNE Véronique",
+     "prenom": null,
+     "nuance": "BC-RN",
+     "voix": 1677,
+     "pct_exprimes": 14.0,
+     "pct_inscrits": 4.3
+    }
+   ],
+   "pct_abstention": 68.38,
+   "pct_participation": 31.62,
+   "tete": {
+    "nom": "Mme PHILIPPON Aziza et M. STREHAIANO Luc",
+    "prenom": null,
+    "nuance": "BC-LR",
+    "pct_exprimes": 38.55
+   }
+  },
+  "01": {
+   "code_canton": "01",
+   "nom": "Argenteuil-1",
+   "bureaux_de_vote": 35,
+   "inscrits": 37250,
+   "abstentions": 27205,
+   "votants": 10045,
+   "blancs": 209,
+   "nuls": 115,
+   "exprimes": 9721,
+   "nb_communes": 3,
+   "candidats": [
+    {
+     "nom": "Mme AHRES Malika et M. BACHARD Julien",
+     "prenom": null,
+     "nuance": "BC-LR",
+     "voix": 3212,
+     "pct_exprimes": 33.04,
+     "pct_inscrits": 8.62
+    },
+    {
+     "nom": "Mme JACQUET - LÉGER Célia et M. MÉTÉZEAU Philippe",
+     "prenom": null,
+     "nuance": "BC-UCD",
+     "voix": 2107,
+     "pct_exprimes": 21.67,
+     "pct_inscrits": 5.66
+    },
+    {
+     "nom": "Mme DAVID Catherine et M. LASSOUED Samir",
+     "prenom": null,
+     "nuance": "BC-UGE",
+     "voix": 1734,
+     "pct_exprimes": 17.84,
+     "pct_inscrits": 4.66
+    },
+    {
+     "nom": "M. MARLY Jean-Baptiste et Mme VACCARI Nathalie",
+     "prenom": null,
+     "nuance": "BC-RN",
+     "voix": 1587,
+     "pct_exprimes": 16.33,
+     "pct_inscrits": 4.26
+    },
+    {
+     "nom": "M. HEURFIN Gilles et Mme ROZENFELD Muriel",
+     "prenom": null,
+     "nuance": "BC-UG",
+     "voix": 1081,
+     "pct_exprimes": 11.12,
+     "pct_inscrits": 2.9
+    }
+   ],
+   "pct_abstention": 73.03,
+   "pct_participation": 26.97,
+   "tete": {
+    "nom": "Mme AHRES Malika et M. BACHARD Julien",
+    "prenom": null,
+    "nuance": "BC-LR",
+    "pct_exprimes": 33.04
+   }
+  },
+  "02": {
+   "code_canton": "02",
+   "nom": "Argenteuil-2",
+   "bureaux_de_vote": 29,
+   "inscrits": 29501,
+   "abstentions": 23441,
+   "votants": 6060,
+   "blancs": 201,
+   "nuls": 115,
+   "exprimes": 5744,
+   "nb_communes": 1,
+   "candidats": [
+    {
+     "nom": "M. BERTOLINI Pascal et Mme METREF Nadia",
+     "prenom": null,
+     "nuance": "BC-UGE",
+     "voix": 1314,
+     "pct_exprimes": 22.88,
+     "pct_inscrits": 4.45
+    },
+    {
+     "nom": "Mme GONÇALVES Carine et M. MECHRIA Ouissam",
+     "prenom": null,
+     "nuance": "BC-DVD",
+     "voix": 1074,
+     "pct_exprimes": 18.7,
+     "pct_inscrits": 3.64
+    },
+    {
+     "nom": "M. DRUINAUD Maxime et Mme HOCINI Pamela",
+     "prenom": null,
+     "nuance": "BC-UG",
+     "voix": 961,
+     "pct_exprimes": 16.73,
+     "pct_inscrits": 3.26
+    },
+    {
+     "nom": "M. GALLET Alain et Mme MARCEL-MAUPIN Yolande",
+     "prenom": null,
+     "nuance": "BC-RN",
+     "voix": 945,
+     "pct_exprimes": 16.45,
+     "pct_inscrits": 3.2
+    },
+    {
+     "nom": "Mme ABID-BENALI Fawzia et M. CASELLATO Nicolas",
+     "prenom": null,
+     "nuance": "BC-REM",
+     "voix": 686,
+     "pct_exprimes": 11.94,
+     "pct_inscrits": 2.33
+    },
+    {
+     "nom": "M. HAMIDA Abdelkader et Mme RYADI Sandra",
+     "prenom": null,
+     "nuance": "BC-RDG",
+     "voix": 472,
+     "pct_exprimes": 8.22,
+     "pct_inscrits": 1.6
+    },
+    {
+     "nom": "M. DEBEAUD Franck et Mme NDAYA MASHINDA Marie-Jeannette",
+     "prenom": null,
+     "nuance": "BC-DIV",
+     "voix": 292,
+     "pct_exprimes": 5.08,
+     "pct_inscrits": 0.99
+    }
+   ],
+   "pct_abstention": 79.46,
+   "pct_participation": 20.54,
+   "tete": {
+    "nom": "M. BERTOLINI Pascal et Mme METREF Nadia",
+    "prenom": null,
+    "nuance": "BC-UGE",
+    "pct_exprimes": 22.88
+   }
+  },
+  "03": {
+   "code_canton": "03",
+   "nom": "Argenteuil-3",
+   "bureaux_de_vote": 31,
+   "inscrits": 30881,
+   "abstentions": 24693,
+   "votants": 6188,
+   "blancs": 273,
+   "nuls": 142,
+   "exprimes": 5773,
+   "nb_communes": 2,
+   "candidats": [
+    {
+     "nom": "M. BOUGEARD Nicolas et Mme MENHAOUARA Nessrine",
+     "prenom": null,
+     "nuance": "BC-SOC",
+     "voix": 2135,
+     "pct_exprimes": 36.98,
+     "pct_inscrits": 6.91
+    },
+    {
+     "nom": "Mme GICQUEL Camille et M. ROULLIER Marc",
+     "prenom": null,
+     "nuance": "BC-DVD",
+     "voix": 1635,
+     "pct_exprimes": 28.32,
+     "pct_inscrits": 5.29
+    },
+    {
+     "nom": "M. HAROUCH Schemsdine et Mme NOEL Marjorie",
+     "prenom": null,
+     "nuance": "BC-EXG",
+     "voix": 1070,
+     "pct_exprimes": 18.53,
+     "pct_inscrits": 3.46
+    },
+    {
+     "nom": "Mme LAFHAL Fatima et M. MUSSARD Olivier",
+     "prenom": null,
+     "nuance": "BC-REM",
+     "voix": 545,
+     "pct_exprimes": 9.44,
+     "pct_inscrits": 1.76
+    },
+    {
+     "nom": "M. ADALOU Lahacene et Mme KORICHI ABDELOUHAB Nasséra",
+     "prenom": null,
+     "nuance": "BC-DIV",
+     "voix": 216,
+     "pct_exprimes": 3.74,
+     "pct_inscrits": 0.7
+    },
+    {
+     "nom": "M. BENCHIKH-LEHOCINE Chekib et Mme KAABECHE Dalila",
+     "prenom": null,
+     "nuance": "BC-UC",
+     "voix": 172,
+     "pct_exprimes": 2.98,
+     "pct_inscrits": 0.56
+    }
+   ],
+   "pct_abstention": 79.96,
+   "pct_participation": 20.04,
+   "tete": {
+    "nom": "M. BOUGEARD Nicolas et Mme MENHAOUARA Nessrine",
+    "prenom": null,
+    "nuance": "BC-SOC",
+    "pct_exprimes": 36.98
+   }
+  },
+  "11": {
+   "code_canton": "11",
+   "nom": "Garges-lès-Gonesse",
+   "bureaux_de_vote": 24,
+   "inscrits": 26016,
+   "abstentions": 20918,
+   "votants": 5098,
+   "blancs": 145,
+   "nuls": 81,
+   "exprimes": 4872,
+   "nb_communes": 2,
+   "candidats": [
+    {
+     "nom": "Mme MOINE Sarah et M. ZINAOUI Ramzi",
+     "prenom": null,
+     "nuance": "BC-UDI",
+     "voix": 1947,
+     "pct_exprimes": 39.96,
+     "pct_inscrits": 7.48
+    },
+    {
+     "nom": "M. ISIP André et Mme THIRY Catherine",
+     "prenom": null,
+     "nuance": "BC-RN",
+     "voix": 854,
+     "pct_exprimes": 17.53,
+     "pct_inscrits": 3.28
+    },
+    {
+     "nom": "Mme DIEN Myriam et M. DIEU Christophe",
+     "prenom": null,
+     "nuance": "BC-UG",
+     "voix": 748,
+     "pct_exprimes": 15.35,
+     "pct_inscrits": 2.88
+    },
+    {
+     "nom": "Mme EL MEDASSI Rafika et M. NGUYEN Dean",
+     "prenom": null,
+     "nuance": "BC-ECO",
+     "voix": 721,
+     "pct_exprimes": 14.8,
+     "pct_inscrits": 2.77
+    },
+    {
+     "nom": "M. BENOUARET Abdellah et Mme VIJAYAKUMAR Umaiyal",
+     "prenom": null,
+     "nuance": "BC-DIV",
+     "voix": 602,
+     "pct_exprimes": 12.36,
+     "pct_inscrits": 2.31
+    }
+   ],
+   "pct_abstention": 80.4,
+   "pct_participation": 19.6,
+   "tete": {
+    "nom": "Mme MOINE Sarah et M. ZINAOUI Ramzi",
+    "prenom": null,
+    "nuance": "BC-UDI",
+    "pct_exprimes": 39.96
+   }
+  },
+  "14": {
+   "code_canton": "14",
+   "nom": "L'Isle-Adam",
+   "bureaux_de_vote": 46,
+   "inscrits": 40610,
+   "abstentions": 28477,
+   "votants": 12133,
+   "blancs": 248,
+   "nuls": 117,
+   "exprimes": 11768,
+   "nb_communes": 15,
+   "candidats": [
+    {
+     "nom": "Mme ECARD Sabrina et M. TOUBOUL Morgan",
+     "prenom": null,
+     "nuance": "BC-LR",
+     "voix": 4805,
+     "pct_exprimes": 40.83,
+     "pct_inscrits": 11.83
+    },
+    {
+     "nom": "M. LE BON Emeric et Mme NAVARRE Romana",
+     "prenom": null,
+     "nuance": "BC-RN",
+     "voix": 2696,
+     "pct_exprimes": 22.91,
+     "pct_inscrits": 6.64
+    },
+    {
+     "nom": "M. APARICIO Jean-Michel et Mme MULLER Claudine",
+     "prenom": null,
+     "nuance": "BC-UGE",
+     "voix": 2589,
+     "pct_exprimes": 22.0,
+     "pct_inscrits": 6.38
+    },
+    {
+     "nom": "Mme DOUAY Céline et M. LACASSAGNE Sylvain",
+     "prenom": null,
+     "nuance": "BC-UGE",
+     "voix": 1678,
+     "pct_exprimes": 14.26,
+     "pct_inscrits": 4.13
+    }
+   ],
+   "pct_abstention": 70.12,
+   "pct_participation": 29.88,
+   "tete": {
+    "nom": "Mme ECARD Sabrina et M. TOUBOUL Morgan",
+    "prenom": null,
+    "nuance": "BC-LR",
+    "pct_exprimes": 40.83
+   }
+  },
+  "09": {
+   "code_canton": "09",
+   "nom": "Fosses",
+   "bureaux_de_vote": 46,
+   "inscrits": 39724,
+   "abstentions": 28406,
+   "votants": 11318,
+   "blancs": 277,
+   "nuls": 137,
+   "exprimes": 10904,
+   "nb_communes": 24,
+   "candidats": [
+    {
+     "nom": "Mme RAFAITIN MARIN Agnès et M. ROBIN Patrice",
+     "prenom": null,
+     "nuance": "BC-DVD",
+     "voix": 3657,
+     "pct_exprimes": 33.54,
+     "pct_inscrits": 9.21
+    },
+    {
+     "nom": "Mme JEAN JACQUES Vostila et M. MARCEL Bruno",
+     "prenom": null,
+     "nuance": "BC-RN",
+     "voix": 2844,
+     "pct_exprimes": 26.08,
+     "pct_inscrits": 7.16
+    },
+    {
+     "nom": "M. BARROS Pierre et Mme DELPRAT Catherine",
+     "prenom": null,
+     "nuance": "BC-UG",
+     "voix": 2787,
+     "pct_exprimes": 25.56,
+     "pct_inscrits": 7.02
+    },
+    {
+     "nom": "Mme DUMENIL Isabelle et M. GUERZOU Abderhamane",
+     "prenom": null,
+     "nuance": "BC-ECO",
+     "voix": 1616,
+     "pct_exprimes": 14.82,
+     "pct_inscrits": 4.07
+    }
+   ],
+   "pct_abstention": 71.51,
+   "pct_participation": 28.49,
+   "tete": {
+    "nom": "Mme RAFAITIN MARIN Agnès et M. ROBIN Patrice",
+    "prenom": null,
+    "nuance": "BC-DVD",
+    "pct_exprimes": 33.54
+   }
+  },
+  "17": {
+   "code_canton": "17",
+   "nom": "Saint-Ouen-l'Aumône",
+   "bureaux_de_vote": 39,
+   "inscrits": 35694,
+   "abstentions": 25443,
+   "votants": 10251,
+   "blancs": 217,
+   "nuls": 145,
+   "exprimes": 9889,
+   "nb_communes": 12,
+   "candidats": [
+    {
+     "nom": "M. ÉON Pierre-Édouard et Mme PÉLISSIER Véronique",
+     "prenom": null,
+     "nuance": "BC-LR",
+     "voix": 3569,
+     "pct_exprimes": 36.09,
+     "pct_inscrits": 10.0
+    },
+    {
+     "nom": "Mme HADIZADEH Ayda et M. LE DISEZ Bruno",
+     "prenom": null,
+     "nuance": "BC-SOC",
+     "voix": 1977,
+     "pct_exprimes": 19.99,
+     "pct_inscrits": 5.54
+    },
+    {
+     "nom": "Mme COUROT Geneviève et M. MILLIER Daniel",
+     "prenom": null,
+     "nuance": "BC-RN",
+     "voix": 1926,
+     "pct_exprimes": 19.48,
+     "pct_inscrits": 5.4
+    },
+    {
+     "nom": "M. DURIEUX Jérôme et Mme FRATANI Marie-Noëlle",
+     "prenom": null,
+     "nuance": "BC-UG",
+     "voix": 1255,
+     "pct_exprimes": 12.69,
+     "pct_inscrits": 3.52
+    },
+    {
+     "nom": "M. TEMBO Norbert-Olivier et Mme ZAMI Chrystelle",
+     "prenom": null,
+     "nuance": "BC-REM",
+     "voix": 1162,
+     "pct_exprimes": 11.75,
+     "pct_inscrits": 3.26
+    }
+   ],
+   "pct_abstention": 71.28,
+   "pct_participation": 28.72,
+   "tete": {
+    "nom": "M. ÉON Pierre-Édouard et Mme PÉLISSIER Véronique",
+    "prenom": null,
+    "nuance": "BC-LR",
+    "pct_exprimes": 36.09
+   }
+  },
+  "07": {
+   "code_canton": "07",
+   "nom": "Domont",
+   "bureaux_de_vote": 46,
+   "inscrits": 42551,
+   "abstentions": 29424,
+   "votants": 13127,
+   "blancs": 369,
+   "nuls": 161,
+   "exprimes": 12597,
+   "nb_communes": 11,
+   "candidats": [
+    {
+     "nom": "M. MEURANT Sébastien et Mme VILLECOURT Céline",
+     "prenom": null,
+     "nuance": "BC-LR",
+     "voix": 5150,
+     "pct_exprimes": 40.88,
+     "pct_inscrits": 12.1
+    },
+    {
+     "nom": "Mme LOUP Michèle et M. VIDAL Loïc",
+     "prenom": null,
+     "nuance": "BC-UGE",
+     "voix": 2719,
+     "pct_exprimes": 21.58,
+     "pct_inscrits": 6.39
+    },
+    {
+     "nom": "Mme DAUMAS Fabienne et M. PAUSIER Erick",
+     "prenom": null,
+     "nuance": "BC-RN",
+     "voix": 2643,
+     "pct_exprimes": 20.98,
+     "pct_inscrits": 6.21
+    },
+    {
+     "nom": "Mme MARTIAL Rebecca et M. SOAVI Didier",
+     "prenom": null,
+     "nuance": "BC-SOC",
+     "voix": 1922,
+     "pct_exprimes": 15.26,
+     "pct_inscrits": 4.52
+    },
+    {
+     "nom": "M. COUDERT Noël et Mme SIFFLET Marie Josèphe",
+     "prenom": null,
+     "nuance": "BC-EXG",
+     "voix": 163,
+     "pct_exprimes": 1.29,
+     "pct_inscrits": 0.38
+    }
+   ],
+   "pct_abstention": 69.15,
+   "pct_participation": 30.85,
+   "tete": {
+    "nom": "M. MEURANT Sébastien et Mme VILLECOURT Céline",
+    "prenom": null,
+    "nuance": "BC-LR",
+    "pct_exprimes": 40.88
+   }
+  },
+  "19": {
+   "code_canton": "19",
+   "nom": "Taverny",
+   "bureaux_de_vote": 39,
+   "inscrits": 33638,
+   "abstentions": 23895,
+   "votants": 9743,
+   "blancs": 194,
+   "nuls": 91,
+   "exprimes": 9458,
+   "nb_communes": 4,
+   "candidats": [
+    {
+     "nom": "Mme BOISSEAU Laetitia et M. LAMBERT-MOTTE Gérard",
+     "prenom": null,
+     "nuance": "BC-UD",
+     "voix": 4019,
+     "pct_exprimes": 42.49,
+     "pct_inscrits": 11.95
+    },
+    {
+     "nom": "Mme BAETA Yolande et M. CAUËT Claude",
+     "prenom": null,
+     "nuance": "BC-UG",
+     "voix": 1857,
+     "pct_exprimes": 19.63,
+     "pct_inscrits": 5.52
+    },
+    {
+     "nom": "M. COTTINET Thomas et Mme SAVVA Christine",
+     "prenom": null,
+     "nuance": "BC-UGE",
+     "voix": 1793,
+     "pct_exprimes": 18.96,
+     "pct_inscrits": 5.33
+    },
+    {
+     "nom": "M. GUIRCHOUN Hector et Mme ROUSSEL Nelly",
+     "prenom": null,
+     "nuance": "BC-RN",
+     "voix": 1789,
+     "pct_exprimes": 18.92,
+     "pct_inscrits": 5.32
+    }
+   ],
+   "pct_abstention": 71.04,
+   "pct_participation": 28.96,
+   "tete": {
+    "nom": "Mme BOISSEAU Laetitia et M. LAMBERT-MOTTE Gérard",
+    "prenom": null,
+    "nuance": "BC-UD",
+    "pct_exprimes": 42.49
+   }
+  },
+  "05": {
+   "code_canton": "05",
+   "nom": "Cergy-2",
+   "bureaux_de_vote": 31,
+   "inscrits": 32887,
+   "abstentions": 23893,
+   "votants": 8994,
+   "blancs": 209,
+   "nuls": 86,
+   "exprimes": 8699,
+   "nb_communes": 5,
+   "candidats": [
+    {
+     "nom": "Mme ETORÉ-MANIKA Edwina et M. PUEYO Alexandre",
+     "prenom": null,
+     "nuance": "BC-LR",
+     "voix": 3190,
+     "pct_exprimes": 36.67,
+     "pct_inscrits": 9.7
+    },
+    {
+     "nom": "M. FLORCZAK Hervé et Mme MERIZIO Monique",
+     "prenom": null,
+     "nuance": "BC-DVC",
+     "voix": 1829,
+     "pct_exprimes": 21.03,
+     "pct_inscrits": 5.56
+    },
+    {
+     "nom": "Mme CORVIN Élina et M. ERRANDONEA Brice",
+     "prenom": null,
+     "nuance": "BC-UGE",
+     "voix": 1681,
+     "pct_exprimes": 19.32,
+     "pct_inscrits": 5.11
+    },
+    {
+     "nom": "M. AMELA Didier et Mme SKALINSKI Charmen",
+     "prenom": null,
+     "nuance": "BC-RN",
+     "voix": 1262,
+     "pct_exprimes": 14.51,
+     "pct_inscrits": 3.84
+    },
+    {
+     "nom": "M. GAGUI Nadir et Mme OULD BIYE Natacha",
+     "prenom": null,
+     "nuance": "BC-DVG",
+     "voix": 672,
+     "pct_exprimes": 7.73,
+     "pct_inscrits": 2.04
+    },
+    {
+     "nom": "Mme BONUCCI Laura et M. DELAHAYE Roland",
+     "prenom": null,
+     "nuance": "BC-EXG",
+     "voix": 65,
+     "pct_exprimes": 0.75,
+     "pct_inscrits": 0.2
+    }
+   ],
+   "pct_abstention": 72.65,
+   "pct_participation": 27.35,
+   "tete": {
+    "nom": "Mme ETORÉ-MANIKA Edwina et M. PUEYO Alexandre",
+    "prenom": null,
+    "nuance": "BC-LR",
+    "pct_exprimes": 36.67
+   }
+  },
+  "21": {
+   "code_canton": "21",
+   "nom": "Villiers-le-Bel",
+   "bureaux_de_vote": 36,
+   "inscrits": 32524,
+   "abstentions": 25343,
+   "votants": 7181,
+   "blancs": 160,
+   "nuls": 144,
+   "exprimes": 6877,
+   "nb_communes": 7,
+   "candidats": [
+    {
+     "nom": "M. SABOURET Cédric et Mme TOUNGSI-SIMO Cécilia",
+     "prenom": null,
+     "nuance": "BC-UG",
+     "voix": 2171,
+     "pct_exprimes": 31.57,
+     "pct_inscrits": 6.68
+    },
+    {
+     "nom": "M. CAURO Christian et Mme TECHTACH Djida",
+     "prenom": null,
+     "nuance": "BC-DVG",
+     "voix": 1437,
+     "pct_exprimes": 20.9,
+     "pct_inscrits": 4.42
+    },
+    {
+     "nom": "Mme HUMBERT Anabelle et M. MOULINES Philippe",
+     "prenom": null,
+     "nuance": "BC-RN",
+     "voix": 1085,
+     "pct_exprimes": 15.78,
+     "pct_inscrits": 3.34
+    },
+    {
+     "nom": "Mme LAURENDOT Christelle et M. ZOUGAGH Khalid",
+     "prenom": null,
+     "nuance": "BC-UGE",
+     "voix": 804,
+     "pct_exprimes": 11.69,
+     "pct_inscrits": 2.47
+    },
+    {
+     "nom": "M. MALLARD Francis et Mme YAKAN Maryline",
+     "prenom": null,
+     "nuance": "BC-LR",
+     "voix": 720,
+     "pct_exprimes": 10.47,
+     "pct_inscrits": 2.21
+    },
+    {
+     "nom": "M. ANGREVIER Patrick et Mme DE ALMEIDA Sandrine",
+     "prenom": null,
+     "nuance": "BC-UDI",
+     "voix": 409,
+     "pct_exprimes": 5.95,
+     "pct_inscrits": 1.26
+    },
+    {
+     "nom": "M. DEBRUYNE Philippe et Mme NDJOCK Suzanne",
+     "prenom": null,
+     "nuance": "BC-UG",
+     "voix": 251,
+     "pct_exprimes": 3.65,
+     "pct_inscrits": 0.77
+    }
+   ],
+   "pct_abstention": 77.92,
+   "pct_participation": 22.08,
+   "tete": {
+    "nom": "M. SABOURET Cédric et Mme TOUNGSI-SIMO Cécilia",
+    "prenom": null,
+    "nuance": "BC-UG",
+    "pct_exprimes": 31.57
+   }
+  },
+  "04": {
+   "code_canton": "04",
+   "nom": "Cergy-1",
+   "bureaux_de_vote": 37,
+   "inscrits": 34516,
+   "abstentions": 26927,
+   "votants": 7589,
+   "blancs": 197,
+   "nuls": 77,
+   "exprimes": 7315,
+   "nb_communes": 3,
+   "candidats": [
+    {
+     "nom": "M. DECLERCK Mickaël et Mme TINLAND Virginie",
+     "prenom": null,
+     "nuance": "BC-LR",
+     "voix": 1907,
+     "pct_exprimes": 26.07,
+     "pct_inscrits": 5.52
+    },
+    {
+     "nom": "M. NICOLLET Eric et Mme YAÏCH Daisy",
+     "prenom": null,
+     "nuance": "BC-UG",
+     "voix": 1558,
+     "pct_exprimes": 21.3,
+     "pct_inscrits": 4.51
+    },
+    {
+     "nom": "Mme BRACONNIER Lydie et M. DURAND Richard",
+     "prenom": null,
+     "nuance": "BC-RN",
+     "voix": 1214,
+     "pct_exprimes": 16.6,
+     "pct_inscrits": 3.52
+    },
+    {
+     "nom": "Mme KOUETE Reine et M. SABATIER Pierre",
+     "prenom": null,
+     "nuance": "BC-REM",
+     "voix": 886,
+     "pct_exprimes": 12.11,
+     "pct_inscrits": 2.57
+    },
+    {
+     "nom": "M. LEBLANC Henri et Mme SAITOULI Sanaa",
+     "prenom": null,
+     "nuance": "BC-DIV",
+     "voix": 847,
+     "pct_exprimes": 11.58,
+     "pct_inscrits": 2.45
+    },
+    {
+     "nom": "M. BELLOC Augustin et Mme ROCHDI Keltoum",
+     "prenom": null,
+     "nuance": "BC-DVG",
+     "voix": 748,
+     "pct_exprimes": 10.23,
+     "pct_inscrits": 2.17
+    },
+    {
+     "nom": "M. BINET Matthieu et Mme QUENTON Martine",
+     "prenom": null,
+     "nuance": "BC-EXG",
+     "voix": 103,
+     "pct_exprimes": 1.41,
+     "pct_inscrits": 0.3
+    },
+    {
+     "nom": "M. BERTHOUMIEU Jean-Marc et Mme MARCUSSY Béatrice",
+     "prenom": null,
+     "nuance": "BC-RDG",
+     "voix": 52,
+     "pct_exprimes": 0.71,
+     "pct_inscrits": 0.15
+    }
+   ],
+   "pct_abstention": 78.01,
+   "pct_participation": 21.99,
+   "tete": {
+    "nom": "M. DECLERCK Mickaël et Mme TINLAND Virginie",
+    "prenom": null,
+    "nuance": "BC-LR",
+    "pct_exprimes": 26.07
+   }
+  },
+  "12": {
+   "code_canton": "12",
+   "nom": "Goussainville",
+   "bureaux_de_vote": 40,
+   "inscrits": 33844,
+   "abstentions": 26265,
+   "votants": 7579,
+   "blancs": 135,
+   "nuls": 90,
+   "exprimes": 7354,
+   "nb_communes": 9,
+   "candidats": [
+    {
+     "nom": "M. ARCIERO Anthony et Mme RUSIN Isabelle",
+     "prenom": null,
+     "nuance": "BC-LR",
+     "voix": 2293,
+     "pct_exprimes": 31.18,
+     "pct_inscrits": 6.78
+    },
+    {
+     "nom": "M. DUBOIS Jean-Michel et Mme ISIP Florina",
+     "prenom": null,
+     "nuance": "BC-RN",
+     "voix": 1499,
+     "pct_exprimes": 20.38,
+     "pct_inscrits": 4.43
+    },
+    {
+     "nom": "Mme ANDRIANASOLO Patricia et M. BOUAZIZI Ali",
+     "prenom": null,
+     "nuance": "BC-DIV",
+     "voix": 1340,
+     "pct_exprimes": 18.22,
+     "pct_inscrits": 3.96
+    },
+    {
+     "nom": "Mme MISIAK - MARCHAND Corinne et M. THOREAU Eddy",
+     "prenom": null,
+     "nuance": "BC-COM",
+     "voix": 1026,
+     "pct_exprimes": 13.95,
+     "pct_inscrits": 3.03
+    },
+    {
+     "nom": "M. BOURAKBA Abdelkrim et Mme DFILI Leïla",
+     "prenom": null,
+     "nuance": "BC-ECO",
+     "voix": 639,
+     "pct_exprimes": 8.69,
+     "pct_inscrits": 1.89
+    },
+    {
+     "nom": "M. BAGAYOKO Yssa et Mme DANET Véronique",
+     "prenom": null,
+     "nuance": "BC-DVG",
+     "voix": 557,
+     "pct_exprimes": 7.57,
+     "pct_inscrits": 1.65
+    }
+   ],
+   "pct_abstention": 77.61,
+   "pct_participation": 22.39,
+   "tete": {
+    "nom": "M. ARCIERO Anthony et Mme RUSIN Isabelle",
+    "prenom": null,
+    "nuance": "BC-LR",
+    "pct_exprimes": 31.18
+   }
+  },
+  "10": {
+   "code_canton": "10",
+   "nom": "Franconville",
+   "bureaux_de_vote": 39,
+   "inscrits": 37899,
+   "abstentions": 27176,
+   "votants": 10723,
+   "blancs": 210,
+   "nuls": 99,
+   "exprimes": 10414,
+   "nb_communes": 2,
+   "candidats": [
+    {
+     "nom": "M. BOËDEC Yannick et Mme CAVECCHI Marie-Christine",
+     "prenom": null,
+     "nuance": "BC-LR",
+     "voix": 6224,
+     "pct_exprimes": 59.77,
+     "pct_inscrits": 16.42
+    },
+    {
+     "nom": "Mme HENRY - AUTISSIER Brigitte et M. MACÉ Régis",
+     "prenom": null,
+     "nuance": "BC-RN",
+     "voix": 1583,
+     "pct_exprimes": 15.2,
+     "pct_inscrits": 4.18
+    },
+    {
+     "nom": "Mme MENDY-LASCOT Françoise et M. SOARES Carlos",
+     "prenom": null,
+     "nuance": "BC-DIV",
+     "voix": 1339,
+     "pct_exprimes": 12.86,
+     "pct_inscrits": 3.53
+    },
+    {
+     "nom": "M. LIGNEREUX Xavier et Mme N'DIAYE Feinda",
+     "prenom": null,
+     "nuance": "BC-UG",
+     "voix": 1268,
+     "pct_exprimes": 12.18,
+     "pct_inscrits": 3.35
+    }
+   ],
+   "pct_abstention": 71.71,
+   "pct_participation": 28.29,
+   "tete": {
+    "nom": "M. BOËDEC Yannick et Mme CAVECCHI Marie-Christine",
+    "prenom": null,
+    "nuance": "BC-LR",
+    "pct_exprimes": 59.77
+   }
+  },
+  "06": {
+   "code_canton": "06",
+   "nom": "Deuil-la-Barre",
+   "bureaux_de_vote": 38,
+   "inscrits": 36375,
+   "abstentions": 27727,
+   "votants": 8648,
+   "blancs": 160,
+   "nuls": 88,
+   "exprimes": 8400,
+   "nb_communes": 4,
+   "candidats": [
+    {
+     "nom": "Mme SCOLAN Muriel et M. SUEUR Philippe",
+     "prenom": null,
+     "nuance": "BC-UD",
+     "voix": 2809,
+     "pct_exprimes": 33.44,
+     "pct_inscrits": 7.72
+    },
+    {
+     "nom": "Mme JOUSSERAND Célia et M. MEREL Thierry",
+     "prenom": null,
+     "nuance": "BC-UGE",
+     "voix": 2468,
+     "pct_exprimes": 29.38,
+     "pct_inscrits": 6.78
+    },
+    {
+     "nom": "M. FLOQUET Patrick et Mme PAQUIRI LEPRINCE Soraya",
+     "prenom": null,
+     "nuance": "BC-UD",
+     "voix": 1769,
+     "pct_exprimes": 21.06,
+     "pct_inscrits": 4.86
+    },
+    {
+     "nom": "M. BUDINI Jean-François et Mme CLEUET Christine",
+     "prenom": null,
+     "nuance": "BC-RN",
+     "voix": 1354,
+     "pct_exprimes": 16.12,
+     "pct_inscrits": 3.72
+    }
+   ],
+   "pct_abstention": 76.23,
+   "pct_participation": 23.77,
+   "tete": {
+    "nom": "Mme SCOLAN Muriel et M. SUEUR Philippe",
+    "prenom": null,
+    "nuance": "BC-UD",
+    "pct_exprimes": 33.44
+   }
+  },
+  "08": {
+   "code_canton": "08",
+   "nom": "Ermont",
+   "bureaux_de_vote": 34,
+   "inscrits": 33791,
+   "abstentions": 23707,
+   "votants": 10084,
+   "blancs": 169,
+   "nuls": 92,
+   "exprimes": 9823,
+   "nb_communes": 2,
+   "candidats": [
+    {
+     "nom": "M. HAQUIN Xavier et Mme PLELAN Noellie",
+     "prenom": null,
+     "nuance": "BC-UD",
+     "voix": 3438,
+     "pct_exprimes": 35.0,
+     "pct_inscrits": 10.17
+    },
+    {
+     "nom": "M. BERTHAULT Grégory et Mme KALACHNIKOFF Clarisse",
+     "prenom": null,
+     "nuance": "BC-ECO",
+     "voix": 1448,
+     "pct_exprimes": 14.74,
+     "pct_inscrits": 4.29
+    },
+    {
+     "nom": "Mme DRAGIN Catherine Marielle et M. MELO DELGADO César",
+     "prenom": null,
+     "nuance": "BC-REM",
+     "voix": 1445,
+     "pct_exprimes": 14.71,
+     "pct_inscrits": 4.28
+    },
+    {
+     "nom": "M. BOTTEAUX Alain et Mme DESMONTS Véronique",
+     "prenom": null,
+     "nuance": "BC-RN",
+     "voix": 1336,
+     "pct_exprimes": 13.6,
+     "pct_inscrits": 3.95
+    },
+    {
+     "nom": "Mme DÉCHAUX Hanen et M. GUILLON Gauthier",
+     "prenom": null,
+     "nuance": "BC-UG",
+     "voix": 1171,
+     "pct_exprimes": 11.92,
+     "pct_inscrits": 3.47
+    },
+    {
+     "nom": "Mme CAUZARD Carole et M. HEUSSER Jean-François",
+     "prenom": null,
+     "nuance": "BC-UGE",
+     "voix": 985,
+     "pct_exprimes": 10.03,
+     "pct_inscrits": 2.91
+    }
+   ],
+   "pct_abstention": 70.16,
+   "pct_participation": 29.84,
+   "tete": {
+    "nom": "M. HAQUIN Xavier et Mme PLELAN Noellie",
+    "prenom": null,
+    "nuance": "BC-UD",
+    "pct_exprimes": 35.0
+   }
+  },
+  "13": {
+   "code_canton": "13",
+   "nom": "Herblay-sur-Seine",
+   "bureaux_de_vote": 36,
+   "inscrits": 34438,
+   "abstentions": 25075,
+   "votants": 9363,
+   "blancs": 226,
+   "nuls": 135,
+   "exprimes": 9002,
+   "nb_communes": 3,
+   "candidats": [
+    {
+     "nom": "Mme MELO Manuela et M. ROULEAU Philippe",
+     "prenom": null,
+     "nuance": "BC-UD",
+     "voix": 4871,
+     "pct_exprimes": 54.11,
+     "pct_inscrits": 14.14
+    },
+    {
+     "nom": "Mme BOTELLA Laure et M. BOUTEILLÉ Gérald",
+     "prenom": null,
+     "nuance": "BC-UG",
+     "voix": 2623,
+     "pct_exprimes": 29.14,
+     "pct_inscrits": 7.62
+    },
+    {
+     "nom": "M. HERBY Gaëtan et Mme MAJOROS Marcelline",
+     "prenom": null,
+     "nuance": "BC-RN",
+     "voix": 1508,
+     "pct_exprimes": 16.75,
+     "pct_inscrits": 4.38
+    }
+   ],
+   "pct_abstention": 72.81,
+   "pct_participation": 27.19,
+   "tete": {
+    "nom": "Mme MELO Manuela et M. ROULEAU Philippe",
+    "prenom": null,
+    "nuance": "BC-UD",
+    "pct_exprimes": 54.11
+   }
+  },
+  "18": {
+   "code_canton": "18",
+   "nom": "Sarcelles",
+   "bureaux_de_vote": 30,
+   "inscrits": 28057,
+   "abstentions": 23129,
+   "votants": 4928,
+   "blancs": 230,
+   "nuls": 121,
+   "exprimes": 4577,
+   "nb_communes": 1,
+   "candidats": [
+    {
+     "nom": "M. HADDAD Patrick et Mme ISRAEL Déborah",
+     "prenom": null,
+     "nuance": "BC-SOC",
+     "voix": 2907,
+     "pct_exprimes": 63.51,
+     "pct_inscrits": 10.36
+    },
+    {
+     "nom": "Mme MOUHAMAD Roumana et M. ZOLA Aristote",
+     "prenom": null,
+     "nuance": "BC-ECO",
+     "voix": 697,
+     "pct_exprimes": 15.23,
+     "pct_inscrits": 2.48
+    },
+    {
+     "nom": "M. ALVAREZ Manuel et Mme MOUYOMBO Cynthia",
+     "prenom": null,
+     "nuance": "BC-COM",
+     "voix": 431,
+     "pct_exprimes": 9.42,
+     "pct_inscrits": 1.54
+    },
+    {
+     "nom": "M. NEDJAR Michel et Mme SEEVARAT Patricia",
+     "prenom": null,
+     "nuance": "BC-DVC",
+     "voix": 369,
+     "pct_exprimes": 8.06,
+     "pct_inscrits": 1.32
+    },
+    {
+     "nom": "M. FLETCHER Arnaud et Mme MAHFOUD BRETON Assya",
+     "prenom": null,
+     "nuance": "BC-DIV",
+     "voix": 173,
+     "pct_exprimes": 3.78,
+     "pct_inscrits": 0.62
+    }
+   ],
+   "pct_abstention": 82.44,
+   "pct_participation": 17.56,
+   "tete": {
+    "nom": "M. HADDAD Patrick et Mme ISRAEL Déborah",
+    "prenom": null,
+    "nuance": "BC-SOC",
+    "pct_exprimes": 63.51
+   }
+  }
+ }
+}
