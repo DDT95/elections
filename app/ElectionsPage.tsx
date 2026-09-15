@@ -2,6 +2,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { ELECTIONS, findElection } from "./lib/elections";
 import { colorForCandidate, sequentialColor, SEQUENTIAL_STEPS } from "./lib/color";
+import { nuanceInfo } from "./lib/nuances";
 import type { ElectionCircoFile, ElectionCommuneFile, MetricId, Scale, UnitResult } from "./lib/types";
 import electionSources from "../config/election-sources.json";
 
@@ -248,7 +249,11 @@ export default function ElectionsPage() {
     if (metric === "tete") {
       const t = u.tete;
       if (!t) return { value: null, color: "#c7cfda", label: "—" };
-      return { value: t.pct_exprimes, color: colorForCandidate(t.nom), label: `${t.prenom ?? ""} ${t.nom ?? ""} · ${t.pct_exprimes.toFixed(1)} %` };
+      return {
+        value: t.pct_exprimes,
+        color: colorForCandidate(t.nom, t.nuance),
+        label: `${t.prenom ?? ""} ${t.nom ?? ""} · ${t.pct_exprimes.toFixed(1)} %`,
+      };
     }
     if (metric === "score_candidat") {
       const [nom, prenom] = scoreCandidat.split("|");
@@ -821,19 +826,24 @@ export default function ElectionsPage() {
 
 function Legend({ metric, scoreCandidat, current }: { metric: MetricId; scoreCandidat: string; current?: ElectionCommuneFile }) {
   if (metric === "tete") {
-    const leaders = new Map<string, string>();
+    // Une entrée par tête de liste/candidat en tête d'au moins une unité, mais regroupée
+    // visuellement par couleur (donc par nuance quand elle est connue) pour rester lisible
+    // même sur un scrutin à très nombreuses listes (municipales).
+    const leaders = new Map<string, { color: string; nuance?: string | null }>();
     if (current) {
       Object.values(current.communes).forEach((c) => {
-        if (c.tete?.nom) leaders.set(c.tete.nom, colorForCandidate(c.tete.nom));
+        if (c.tete?.nom) leaders.set(c.tete.nom, { color: colorForCandidate(c.tete.nom, c.tete.nuance), nuance: c.tete.nuance });
       });
     }
     return (
       <div className="elec-legend">
         <p className="elec-legend-title">Légende — tête de liste</p>
         <div className="elec-legend-swatches">
-          {Array.from(leaders.entries()).map(([nom, color]) => (
+          {Array.from(leaders.entries()).map(([nom, { color, nuance }]) => (
             <div key={nom} className="elec-legend-swatch">
-              <i style={{ background: color }} /> {nom}
+              <i style={{ background: color }} />
+              <span>{nom}</span>
+              {nuance && <em className="elec-nuance-tag">{nuance}</em>}
             </div>
           ))}
         </div>
@@ -918,30 +928,45 @@ function PopulationSparkline({ data }: { data: { annee: number; population: numb
   );
 }
 
+// Liste de résultats sous forme de cartes colorées par nuance (plutôt qu'un tableau plat) :
+// liseré et pastille de couleur à gauche = famille politique (app/lib/nuances.ts), barre
+// proportionnelle au score, trophée sur la tête de liste/candidat arrivé en tête. Reste
+// sobre (pas de logo de parti, jamais utilisé — voir DATA.md) tout en donnant une lecture
+// plus immédiate qu'un tableau pour un scrutin à de nombreuses listes (municipales).
 function CandidateTable({ candidats }: { candidats: UnitResult["candidats"] }) {
   const max = Math.max(...candidats.map((c) => c.pct_exprimes), 1);
   return (
-    <table className="elec-table">
-      <thead>
-        <tr>
-          <th>Candidat</th>
-          <th>Voix</th>
-          <th>% exprimés</th>
-        </tr>
-      </thead>
-      <tbody>
-        {candidats.map((c, i) => (
-          <tr key={i} className={i === 0 ? "lead" : ""}>
-            <td>
-              {c.prenom} {c.nom}
-              <br />
-              <span className="elec-candidate-bar" style={{ width: `${(c.pct_exprimes / max) * 60}px`, background: colorForCandidate(c.nom) }} />
-            </td>
-            <td className="num">{c.voix.toLocaleString("fr-FR")}</td>
-            <td className="num">{c.pct_exprimes.toFixed(2)} %</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
+    <div className="elec-cand-list">
+      {candidats.map((c, i) => {
+        const color = colorForCandidate(c.nom, c.nuance);
+        const info = nuanceInfo(c.nuance);
+        return (
+          <div key={i} className={`elec-cand-card ${i === 0 ? "lead" : ""}`} style={{ borderLeftColor: color }}>
+            <div className="elec-cand-card-head">
+              <span className="elec-cand-name">
+                {i === 0 && (
+                  <span className="elec-cand-trophy" aria-hidden="true" title="Arrivé·e en tête">
+                    ★
+                  </span>
+                )}
+                {c.prenom} {c.nom}
+              </span>
+              <span className="elec-nuance-pill" style={{ background: color }} title={info.label}>
+                {c.nuance || "—"}
+              </span>
+            </div>
+            <div className="elec-cand-bar-track">
+              <div className="elec-cand-bar-fill" style={{ width: `${(c.pct_exprimes / max) * 100}%`, background: color }} />
+            </div>
+            <div className="elec-cand-card-foot">
+              <span>{info.label}</span>
+              <span className="num">
+                {c.voix.toLocaleString("fr-FR")} voix · {c.pct_exprimes.toFixed(2)} %
+              </span>
+            </div>
+          </div>
+        );
+      })}
+    </div>
   );
 }

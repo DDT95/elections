@@ -42,8 +42,24 @@ body{font-family:"Marianne",Arial,sans-serif}
 .elec-legend-scale span{flex:1;height:100%}
 .elec-legend-labels{display:flex;justify-content:space-between;margin-top:5px;font-size:9px;color:#647381}
 .elec-legend-swatches{display:grid;gap:6px}
-.elec-legend-swatch{display:flex;align-items:center;gap:8px;font-size:10px;color:#334}
+.elec-legend-swatch{display:flex;align-items:center;gap:6px;font-size:10px;color:#334}
 .elec-legend-swatch i{width:13px;height:13px;border-radius:4px;flex:none;border:1px solid #0002}
+.elec-nuance-tag{margin-left:2px;padding:1px 5px;border-radius:99px;background:#e9edf3;color:#596274;font-style:normal;font-size:8px;font-weight:800;letter-spacing:.03em}
+
+/* Cartes de résultats par candidat/liste, colorées par nuance politique (app/lib/nuances.ts) */
+.elec-cand-list{display:grid;gap:8px}
+.elec-cand-card{padding:10px 12px;border-radius:10px;border-left:5px solid #8b93a1;background:#f7f8fb;transition:transform .15s ease,box-shadow .15s ease}
+.elec-cand-card.lead{background:#fbfaf3;box-shadow:0 3px 14px #00000014}
+.elec-cand-card:hover{transform:translateX(2px)}
+.elec-cand-card-head{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.elec-cand-name{display:flex;align-items:center;gap:6px;color:#17202a;font-size:12px;font-weight:700}
+.elec-cand-card.lead .elec-cand-name{color:#070047;font-weight:800}
+.elec-cand-trophy{color:#e0a900;font-size:12px;line-height:1}
+.elec-nuance-pill{flex:none;padding:3px 8px;border-radius:99px;color:#fff;font-size:9px;font-weight:800;letter-spacing:.03em;text-shadow:0 1px 1px #0004}
+.elec-cand-bar-track{height:8px;margin-top:7px;border-radius:99px;background:#e1e7eb;overflow:hidden}
+.elec-cand-bar-fill{height:100%;border-radius:inherit;transition:width .3s ease}
+.elec-cand-card-foot{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:6px;font-size:9px;color:#647381}
+.elec-cand-card-foot .num{color:#334;font-weight:700;font-variant-numeric:tabular-nums}
 .elec-metric-help{margin:6px 20px 0;font-size:9.5px;color:#8a5d00;line-height:1.4;padding:8px 10px;background:#fff8ea;border-left:3px solid #e4a63c;border-radius:6px}
 .elec-bar-panel{margin:0 20px 14px;padding:13px;border-radius:12px;background:#f6f9fa}
 .elec-bar-panel h4{margin:0 0 10px;font-size:10px;font-weight:800;letter-spacing:.05em;color:#070047;text-transform:uppercase}

@@ -1,22 +1,33 @@
-// Palette pour les nuances politiques (approximation usuelle des couleurs de presse
-// française, utilisée uniquement pour la lecture cartographique — non officielle).
+import { nuanceInfo } from "./nuances";
+
+// Repli par nom de famille pour les scrutins dont la source ne porte pas de code de
+// nuance exploitable (Présidentielle 2022 : les fichiers ne renseignent que le nom du
+// candidat). Couleurs alignées sur la même convention presse que app/lib/nuances.ts.
 const CANDIDATE_COLORS: Record<string, string> = {
-  ARTHAUD: "#8b0000",
-  MÉLENCHON: "#dd3333",
-  ROUSSEL: "#b02020",
-  HIDALGO: "#e8a0b0",
-  JADOT: "#2e7d32",
-  MACRON: "#f6c700",
-  LASSALLE: "#8a5a30",
-  PÉCRESSE: "#0057b7",
-  DUPONT_AIGNAN: "#2255aa",
-  "DUPONT-AIGNAN": "#2255aa",
-  ZEMMOUR: "#5b2ca0",
-  "LE PEN": "#0b3d91",
-  POUTOU: "#a1272f",
+  ARTHAUD: "#7A0C0C",
+  MÉLENCHON: "#CE0500",
+  ROUSSEL: "#D2001F",
+  HIDALGO: "#FF8AA6",
+  JADOT: "#18753C",
+  MACRON: "#FFD666",
+  LASSALLE: "#8B93A1",
+  PÉCRESSE: "#0066CC",
+  DUPONT_AIGNAN: "#4B2E83",
+  "DUPONT-AIGNAN": "#4B2E83",
+  ZEMMOUR: "#4B2E83",
+  "LE PEN": "#14213D",
+  POUTOU: "#7A0C0C",
 };
 
-export function colorForCandidate(nom: string | null | undefined): string {
+/** Couleur d'un candidat/liste : priorité au code de nuance officiel (résolu via
+ * app/lib/nuances.ts) quand la source en porte un, sinon repli sur le nom (utile pour la
+ * Présidentielle 2022, seul scrutin de l'Atlas sans code de nuance dans sa source), sinon
+ * gris neutre — jamais de couleur inventée sans un de ces deux signaux réels. */
+export function colorForCandidate(nom: string | null | undefined, nuance?: string | null): string {
+  if (nuance) {
+    const info = nuanceInfo(nuance);
+    if (info.label !== "Nuance non répertoriée") return info.color;
+  }
   if (!nom) return "#8892a0";
   return CANDIDATE_COLORS[nom.toUpperCase()] || "#8892a0";
 }
