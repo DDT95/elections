@@ -573,15 +573,7 @@ export default function ElectionsPage() {
           <h1>Atlas électoral du Val-d'Oise</h1>
           <p>Résultats, participation et profil sociodémographique — communes, cantons, circonscriptions et département</p>
         </div>
-        <div className="elec-header-actions">
-          <div className="elec-livebox">
-            <i />
-            <span>
-              <strong>Données contrôlées</strong>
-              <small>7 scrutins réels · couverture documentée</small>
-            </span>
-          </div>
-        </div>
+        <div className="elec-header-actions" />
       </header>
       <div className="elec-progress">
         <span style={{ width: loading ? "40%" : "100%" }} />
@@ -724,7 +716,7 @@ export default function ElectionsPage() {
                     <p className="elec-context-note"><strong>Source :</strong> INSEE, recensement de la population 2022.</p>
                   </Section>
                 )}
-                <Section title="Participation" state="Données réelles">
+                <Section title="Participation" state={election.shortLabel}>
                   <div className="participation-gauge"><span style={{width:`${selectedUnit.pct_participation}%`}}/><b>{selectedUnit.pct_participation.toFixed(1)} %</b></div>
                   <div className="elec-kpis">
                     <Kpi label="Inscrits" value={selectedUnit.inscrits.toLocaleString("fr-FR")} />
@@ -759,7 +751,7 @@ export default function ElectionsPage() {
       </div>
       <footer className="elec-footer">
         <span>Atlas électoral du Val-d'Oise — DDT 95</span>
-        <span>Municipales 2026, Présidentielle 2022, Législatives 2024, Européennes 2024, Municipales 2020, Départementales 2021 · données réelles</span>
+        <span>Municipales, présidentielles, législatives, européennes et départementales</span>
       </footer>
 
       <dialog ref={departmentDialog} className="elec-dept-dialog">
