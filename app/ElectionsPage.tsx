@@ -122,7 +122,6 @@ export default function ElectionsPage() {
   const [hoveredUnit, setHoveredUnit] = useState<{ name: string; result: UnitResult | null } | null>(null);
   const [sources, setSources] = useState<SourceEntry[]>([]);
   const [loading, setLoading] = useState(true);
-  const [exportOpen, setExportOpen] = useState(false);
   const sourceDialog = useRef<HTMLDialogElement>(null);
   const departmentDialog = useRef<HTMLDialogElement>(null);
 
@@ -359,13 +358,14 @@ export default function ElectionsPage() {
 
     // Style de base (repos), survol (aperçu léger au passage de la souris) et sélection
     // (halo persistant tant que la fiche est ouverte pour cette unité). Le survol et la
-    // sélection restent visuellement distincts : le survol éclaircit juste le contour, la
-    // sélection l'épaissit fortement dans le bleu de la marque avec un liseré pointillé.
+    // sélection restent visuellement distincts, mais sans contour bleu vif (jugé trop
+    // marqué sur la carte neutre) : gris foncé discret au survol, noir épais et pointillé
+    // pour la sélection persistante.
     function withHover(base: any) {
-      return { ...base, color: "#5b6bff", weight: base.weight + 1.2 };
+      return { ...base, color: "#4b5563", weight: base.weight + 1.2 };
     }
     function withSelected(base: any) {
-      return { ...base, color: "#000091", weight: base.weight + 2.2, dashArray: "5,3", opacity: 1 };
+      return { ...base, color: "#17202a", weight: base.weight + 2.2, dashArray: "5,3", opacity: 1 };
     }
 
     function wireFeature(code: string, lyr: any, name: string, result: UnitResult | null) {
@@ -574,14 +574,6 @@ export default function ElectionsPage() {
     downloadBlob(`${scale}-${dataKey}.geojson`, JSON.stringify(enriched), "application/geo+json");
   }
 
-  function exportFeatureGeoJSON() {
-    if (!selectedUnit) return;
-    const geo = layerGeoOf();
-    const feature = geo?.features.find((f: any) => layerGeoAndCodeOf(f) === selectedCode);
-    if (!feature) return;
-    downloadBlob(`${selectedUnit.nom}-${dataKey}.geojson`, JSON.stringify({ type: "Feature", ...feature, properties: { ...feature.properties, resultats: selectedUnit } }), "application/geo+json");
-  }
-
   // ---- Impression ----
   // Le PDF montre toujours le scrutin le plus récent disponible (dernier élément de
   // scaleSnapshots/departmentSnapshots, triés par date), jamais le scrutin actuellement
@@ -706,7 +698,7 @@ export default function ElectionsPage() {
               <small>Cabinet du préfet — usage interne</small>
             </span>
           </div>
-          <div className="elec-export-bottom"><button type="button" onClick={() => setExportOpen((o) => !o)}>Exporter la couche affichée (GeoJSON)</button>{exportOpen&&<div>{<button onClick={()=>{exportLayerGeoJSON();setExportOpen(false)}}>Toute la couche « {SCALES.find(s=>s.id===scale)?.label} »</button>}{selectedUnit&&<button onClick={()=>{exportFeatureGeoJSON();setExportOpen(false)}}>Uniquement « {selectedUnit.nom} »</button>}</div>}</div>
+          <div className="elec-export-bottom"><button type="button" onClick={exportLayerGeoJSON}>Exporter la couche affichée (GeoJSON)</button></div>
         </aside>
 
         <section className="elec-map-shell">
@@ -811,9 +803,6 @@ export default function ElectionsPage() {
                 )}
                 <div className="elec-actions elec-actions-bottom">
                   <button onClick={printUnit}>Imprimer la fiche</button>
-                  <a href="#" onClick={(e) => { e.preventDefault(); exportFeatureGeoJSON(); }}>
-                    Exporter GeoJSON
-                  </a>
                 </div>
               </div>
             </>
@@ -1034,7 +1023,22 @@ function buildDepartmentScenarios(communeData: Record<string, UnitResult>, datas
     {label:"Territoires jeunes davantage mobilisés",explanation:`Le poids des communes comptant au moins ${threshold.toFixed(1)} % de 15–24 ans augmente de 10 %.`,data:simulate(code=>socioByCommune[code]?.jeunes>=threshold?1.1:1)},
     {label:"Rattrapage de l’abstention",explanation:`Les communes sous la moyenne départementale remontent à ${avg.toFixed(1)} % de participation.`,data:simulate((_code,u)=>u.pct_participation&&u.pct_participation<avg?avg/u.pct_participation:1)}
   ];
-  return raw.map(sc=>{const effects=sensitivities.map(x=>({...x,value:sc.data[x.id]??0,delta:(sc.data[x.id]??0)-(baseline[x.id]??0)})),ordered=effects.slice().sort((a,b)=>Math.abs(b.delta)-Math.abs(a.delta)),main=ordered[0];return{label:sc.label,explanation:sc.explanation,effects,conclusion:Math.abs(main.delta)<.05?"Rapport de forces quasiment inchangé.":`${main.label} est la sensibilité la plus affectée (${main.delta>=0?"+":""}${main.delta.toFixed(1)} point).`}});
+  return raw.map(sc=>{
+    const effects=sensitivities.map(x=>({...x,value:sc.data[x.id]??0,delta:(sc.data[x.id]??0)-(baseline[x.id]??0)}));
+    const ordered=effects.slice().sort((a,b)=>Math.abs(b.delta)-Math.abs(a.delta));
+    const main=ordered[0];
+    const gain=effects.slice().sort((a,b)=>b.delta-a.delta)[0];
+    const loss=effects.slice().sort((a,b)=>a.delta-b.delta)[0];
+    let conclusion:string;
+    if (Math.abs(main.delta) < .05) {
+      conclusion = "Le rapport de forces entre sensibilités resterait quasiment inchangé par rapport aux européennes 2024 : ce scénario ne déplace pas assez de voix pour rebattre les grands équilibres.";
+    } else if (gain.delta > .05 && loss.delta < -.05 && gain.id !== loss.id) {
+      conclusion = `${gain.label} en tirerait le plus grand bénéfice (${gain.delta>=0?"+":""}${gain.delta.toFixed(1)} point), tandis que ${loss.label} reculerait le plus (${loss.delta.toFixed(1)} point). Une simulation à participation modifiée, pas une prévision électorale.`;
+    } else {
+      conclusion = `${main.label} est la sensibilité la plus affectée par ce scénario (${main.delta>=0?"+":""}${main.delta.toFixed(1)} point), sans bouleverser le reste du rapport de forces. Une simulation à participation modifiée, pas une prévision électorale.`;
+    }
+    return{label:sc.label,explanation:sc.explanation,effects,conclusion};
+  });
 }
 
 // Sénateurs du Val-d'Oise élus en septembre 2023 (série renouvelée, mandat jusqu'en 2029) —
