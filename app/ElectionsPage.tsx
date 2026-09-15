@@ -153,8 +153,8 @@ export default function ElectionsPage() {
 
   useEffect(() => {
     const tours = ELECTIONS.flatMap((item) => item.tours.map((itemTour) => ({ election: item, tour: itemTour })));
-    Promise.all(tours.map(async ({ tour: itemTour }) => [itemTour.file, await fetchJson<ElectionCommuneFile>(`/data/elections/${itemTour.file}.json`)] as const))
-      .then((entries) => setAllElectionData(Object.fromEntries(entries)))
+    Promise.all(tours.map(async ({ tour: itemTour }) => [itemTour.file, await fetchJson<ElectionCommuneFile>(`/data/elections/${itemTour.file}.json`), await fetchJson<any>(`/data/elections/${itemTour.file}-canton.json`).catch(()=>null), await fetchJson<ElectionCircoFile>(`/data/elections/${itemTour.file}-circo.json`).catch(()=>null)] as const))
+      .then((entries) => { setAllElectionData(Object.fromEntries(entries.map(([key,file])=>[key,file]))); setCantonData(prev=>({...prev,...Object.fromEntries(entries.map(([key,,file])=>[`${key}-canton`,file]))})); setCircoData(prev=>({...prev,...Object.fromEntries(entries.filter(([, , ,file])=>file).map(([key,,,file])=>[`${key}-circo`,file]))})); })
       .catch(() => {});
   }, []);
 
@@ -492,13 +492,11 @@ export default function ElectionsPage() {
       if (!file) return [];
       if (scale === "commune") { const result=file.communes[selectedCode]; return result?[{key:itemTour.file,election:item.shortLabel,tour:itemTour.label,date:file.date,result}]:[]; }
       if (scale !== "canton" && scale !== "circonscription") return [];
-      const field=scale === "canton" ? "code_canton" : "code_circonscription";
-      const communes=Object.fromEntries(Object.entries(file.communes).filter(([,unit])=>String((unit as any)[field]??"").padStart(2,"0")===selectedCode.padStart(2,"0")));
-      if (!Object.keys(communes).length) return [];
-      const result=aggregateDepartment({...file,communes}); result.nom=selectedUnit?.nom??selectedCode;
+      const result = scale === "canton" ? cantonData[`${itemTour.file}-canton`]?.cantons?.[selectedCode] : circoData[`${itemTour.file}-circo`]?.circonscriptions?.[selectedCode];
+      if (!result) return [];
       return [{key:itemTour.file,election:item.shortLabel,tour:itemTour.label,date:file.date,result}];
     })).sort((a,b)=>a.date.localeCompare(b.date));
-  }, [allElectionData, scale, selectedCode, selectedUnit?.nom]);
+  }, [allElectionData, cantonData, circoData, scale, selectedCode]);
   const departmentSnapshots = useMemo<ElectionSnapshot[]>(() => ELECTIONS.flatMap(item => item.tours.flatMap(itemTour => { const file=allElectionData[itemTour.file]; return file?[{key:itemTour.file,election:item.shortLabel,tour:itemTour.label,date:file.date,result:aggregateDepartment(file)}]:[]; })).sort((a,b)=>a.date.localeCompare(b.date)), [allElectionData]);
   const departmentSocio = useMemo<SocioProfile | null>(() => { const values=Object.values(socioData); const population=values.reduce((s,v)=>s+v.population,0); if(!population)return null; return {population,jeunes:values.reduce((s,v)=>s+v.jeunes*v.population,0)/population,seniors:values.reduce((s,v)=>s+v.seniors*v.population,0)/population,diplomesSup:values.reduce((s,v)=>s+v.diplomesSup*v.population,0)/population}; }, [socioData]);
   const averageCommuneParticipation = scaleSnapshots.length ? scaleSnapshots.reduce((sum,snapshot)=>sum+snapshot.result.pct_participation,0)/scaleSnapshots.length : 0;
