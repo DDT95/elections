@@ -34,6 +34,9 @@ The implementation follows the source composition: State identity header, rounde
 - P1: candidate bars were normalized against the leading candidate, making 32.83% appear as a full bar. Fixed with an absolute 0–100% scale.
 - P1: fixed percentage bounds flattened some elections into a single dark color. Fixed with data-driven bounds and continuous color interpolation.
 - P1: the INSEE section exposed an internal completion message. Fixed by aggregating the available INSEE RP 2022 bureau context into commune profiles and rendering the indicators directly.
+- P1: three large cards followed the map hover and obscured the territory. Fixed by restoring a compact hover label and reserving the detailed synthesis for the click-opened right drawer.
+- P1: political evolution only tracked RN, LFI and a combined left total. Fixed with a five-sensitivity stacked history and seven colored political-family trends across comparable first rounds.
+- P1: a commune click exposed only the active election. Fixed with the top four results and participation for all 13 available election rounds.
 - Post-fix evidence: the final in-app Browser capture shows the Atlas switch pattern, three-card portrait and unobstructed bottom actions.
 
 ## Remaining findings
