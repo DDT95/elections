@@ -1127,11 +1127,25 @@ function CommuneSynthesis({ snapshots, currentKey, mode }: { snapshots: Election
   const seriesScores = nationalSeries.map(snapshot => ({snapshot, scores:politicalScores(snapshot.result,"sensitivity")}));
   if (mode === "sensitivities" && seriesScores.length) {
     const averages = sensitivities.map(item => ({...item,value:seriesScores.reduce((sum,point)=>sum+(point.scores[item.id]??0),0)/seriesScores.length})).sort((a,b)=>b.value-a.value);
-    return <Section title="Sensibilité moyenne du territoire" state={`${seriesScores.length} scrutins nationaux`}>
-      <div className="average-sensitivity">{averages.map(item=><article key={item.id}><span><strong>{item.label}</strong><b>{item.value.toFixed(1)} %</b></span><i><em style={{width:`${Math.min(100,item.value/60*100)}%`,background:item.color}}/></i></article>)}</div>
-      <div className="average-scale"><span>0 %</span><span>30 %</span><span>60 %</span></div>
-      <p className="elec-synthesis-intro">Moyenne des présidentielles 2017 et 2022, des européennes 2024 et des législatives 2024. Repère synthétique, pas une prévision.</p>
-    </Section>;
+    const familySeries = nationalSeries.map(snapshot => ({snapshot, scores:politicalScores(snapshot.result,"family")}));
+    const avgFamily = (ids:string[]) => familySeries.length?familySeries.reduce((sum,point)=>sum+ids.reduce((s,id)=>s+(point.scores[id]??0),0),0)/familySeries.length:0;
+    const leftDetail = [
+      { id: "lfi", label: "La France insoumise", value: avgFamily(["lfi"]), color: "#ce0500" },
+      { id: "socdem", label: "Social-démocratie (PS, radicaux de gauche, écologistes)", value: avgFamily(["social_left","ecologist"]), color: "#e4287c" },
+      { id: "pcf", label: "Parti communiste", value: avgFamily(["pcf"]), color: "#d2001f" },
+    ].sort((a,b)=>b.value-a.value);
+    return <>
+      <Section title="Sensibilité moyenne du territoire" state={`${seriesScores.length} scrutins nationaux`}>
+        <div className="average-sensitivity">{averages.map(item=><article key={item.id}><span><strong>{item.label}</strong><b>{item.value.toFixed(1)} %</b></span><i><em style={{width:`${Math.min(100,item.value/60*100)}%`,background:item.color}}/></i></article>)}</div>
+        <div className="average-scale"><span>0 %</span><span>30 %</span><span>60 %</span></div>
+        <p className="elec-synthesis-intro">Moyenne des présidentielles 2017 et 2022, des européennes 2024 et des législatives 2024. Repère synthétique, pas une prévision.</p>
+      </Section>
+      <Section title="Détail de la gauche" state={`${familySeries.length} scrutins nationaux`}>
+        <p className="elec-synthesis-intro">La « Gauche » regroupée ci-dessus recouvre trois familles distinctes : La France insoumise, la social-démocratie (parti socialiste, radicaux de gauche et écologistes) et le parti communiste. Même moyenne des scrutins que ci-dessus.</p>
+        <div className="average-sensitivity">{leftDetail.map(item=><article key={item.id}><span><strong>{item.label}</strong><b>{item.value.toFixed(1)} %</b></span><i><em style={{width:`${Math.min(100,item.value/60*100)}%`,background:item.color}}/></i></article>)}</div>
+        <div className="average-scale"><span>0 %</span><span>30 %</span><span>60 %</span></div>
+      </Section>
+    </>;
   }
   if (mode === "families") {
     return <Section title="Évolution politique" state="4 scrutins nationaux">
