@@ -1,972 +1,143 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import { useEffect, useMemo, useRef, useState } from "react";
-import { ELECTIONS, findElection } from "./lib/elections";
-import { colorForCandidate, sequentialColor, SEQUENTIAL_STEPS } from "./lib/color";
-import { nuanceInfo } from "./lib/nuances";
-import type { ElectionCircoFile, ElectionCommuneFile, MetricId, Scale, UnitResult } from "./lib/types";
-import electionSources from "../config/election-sources.json";
+import { useEffect, useMemo, useRef, useState } from 'react';
+import type { FeatureCollection } from 'geojson';
+import ElectionMap, { featureCode, type Metric } from './ElectionMap';
+import { ELECTIONS } from './lib/elections';
+import { SEQUENTIAL_STEPS, colorForCandidate } from './lib/color';
+import { canReadLeader, candidateKey, compareCommunes, contextFor, csvCell, download, normalText, number, percent, points, ratio, statusLabel, totals, type ContextFile, type Result, type ResultsFile } from './lib/analysis';
+import type { Scale } from './lib/types';
+import sources from '../config/election-sources.json';
 
-const ATLAS_URL = "https://ddt95.github.io/atlas-territorial-95/";
-const basePath = (import.meta as any).env?.BASE_URL?.replace(/\/$/, "") || "";
-
-type SourceEntry = { id: string; label: string; producer: string; url: string; frequency: string };
-
-async function fetchJson<T>(path: string): Promise<T> {
-  const res = await fetch(`${basePath}${path}`);
-  if (!res.ok) throw new Error(`Échec de chargement : ${path}`);
-  return res.json();
-}
-
-function round2(n: number): number {
-  return Math.round(n * 100) / 100;
-}
-
-function downloadBlob(filename: string, content: string, type: string) {
-  const blob = new Blob([content], { type });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = filename;
-  document.body.appendChild(a);
-  a.click();
-  a.remove();
-  setTimeout(() => URL.revokeObjectURL(url), 60000);
-}
-
-const METRICS: { id: MetricId; label: string }[] = [
-  { id: "tete", label: "Parti/candidat arrivé en tête" },
-  { id: "score_candidat", label: "Score d'un candidat" },
-  { id: "abstention", label: "Abstention" },
-  { id: "participation", label: "Participation" },
+const BASE=import.meta.env.BASE_URL;
+const cache=new Map<string,Promise<unknown>>();
+const SCALES: {id:Scale;label:string;suffix:string;key:keyof ResultsFile;geo:string}[]=[
+  {id:'commune',label:'Communes',suffix:'',key:'communes',geo:'communes-95'},
+  {id:'bv',label:'Bureaux de vote',suffix:'-bv',key:'bureaux',geo:'bureaux-vote-95'},
+  {id:'canton',label:'Cantons',suffix:'-canton',key:'cantons',geo:'cantons-95'},
+  {id:'circonscription',label:'Circonscriptions',suffix:'-circo',key:'circonscriptions',geo:'circonscriptions-95'},
 ];
+const SCRUTINS=ELECTIONS.flatMap(e=>e.tours.map(t=>({key:t.file,label:`${e.label} · ${t.label}`,election:e.id})));
+const EMPTY:Record<string,Result>={};
+function useData<T>(path:string|null) {
+  const [state,setState]=useState<{path:string|null;data:T|null;error:string|null}>({path:null,data:null,error:null});
+  const [attempt,setAttempt]=useState(0);
+  useEffect(()=>{
+    let active=true;
+    if(!path)return;
+    if(!cache.has(path))cache.set(path,fetch(BASE+path).then(r=>{if(!r.ok)throw new Error(`HTTP ${r.status}`);return r.json();}).catch(e=>{cache.delete(path);throw e;}));
+    cache.get(path)!.then(data=>{if(active)setState({path,data:data as T,error:null});}).catch(()=>{if(active)setState({path,data:null,error:'Le chargement a échoué. Vos données ne sont pas remplacées par des zéros.'});});
+    return()=>{active=false;};
+  },[path,attempt]);
+  return {data:state.path===path?state.data:null,error:state.path===path?state.error:null,loading:!!path&&(state.path!==path||(!state.data&&!state.error)),retry:()=>{if(path)cache.delete(path);setState({path:null,data:null,error:null});setAttempt(n=>n+1);}};
+}
 
-const SCALES: { id: Scale; label: string }[] = [
-  { id: "commune", label: "Commune" },
-  { id: "bv", label: "Bureau de vote" },
-  { id: "canton", label: "Canton" },
-  { id: "circonscription", label: "Circonscription" },
-];
-
-export default function ElectionsPage() {
-  const mapNode = useRef<HTMLDivElement>(null);
-  const mapRef = useRef<any>(null);
-  const layerRef = useRef<any>(null);
-  const initialBoundsRef = useRef<any>(null);
-  // code -> layer Leaflet pour l'échelle actuellement affichée, et fonctions de style associées
-  // (base / survol / sélection), utilisées à la fois à la construction de la couche et pour
-  // appliquer/retirer le halo persistant de sélection sans reconstruire toute la couche.
-  const layersByCodeRef = useRef<Record<string, any>>({});
-  const styleFnsRef = useRef<{ base: (code: string) => any; hover: (code: string) => any; selected: (code: string) => any } | null>(null);
-  const selectedCodeRef = useRef<string | null>(null);
-
-  const [scale, setScale] = useState<Scale>("commune");
-  const [electionId, setElectionId] = useState("pres-2022");
-  const [tourId, setTourId] = useState("t2");
-  const [metric, setMetric] = useState<MetricId>("tete");
-  const [scoreCandidat, setScoreCandidat] = useState<string>("");
-
-  const [communesGeo, setCommunesGeo] = useState<any>(null);
-  const [circoGeo, setCircoGeo] = useState<any>(null);
-  const [bvGeo, setBvGeo] = useState<any>(null);
-  const [cantonGeo, setCantonGeo] = useState<any>(null);
-  const [electionData, setElectionData] = useState<Record<string, ElectionCommuneFile>>({});
-  const [circoData, setCircoData] = useState<Record<string, ElectionCircoFile>>({});
-  const [cantonData, setCantonData] = useState<Record<string, any>>({});
-  const [bvData, setBvData] = useState<Record<string, any>>({});
-  const [inseeStatus, setInseeStatus] = useState<"a_completer" | "reel">("a_completer");
-  const [populationData, setPopulationData] = useState<Record<string, { annee: number; population: number }[]>>({});
-
-  const [selectedCode, setSelectedCode] = useState<string | null>(null);
-  const [sources, setSources] = useState<SourceEntry[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [exportOpen, setExportOpen] = useState(false);
-  const sourceDialog = useRef<HTMLDialogElement>(null);
-
-  const election = findElection(electionId);
-  const tour = election.tours.find((t) => t.id === tourId) ?? election.tours[0];
-  const dataKey = tour.file;
-  const current = electionData[dataKey];
-  const tourStatus: "reel" | "a_completer" = current?.status ?? election.status;
-
-  // ---- Chargement des données statiques ----
-  useEffect(() => {
-    setSources(electionSources as SourceEntry[]);
-    Promise.all([
-      fetchJson<any>("/data/geo/communes-95.geojson"),
-      fetchJson<any>("/data/geo/circonscriptions-95.geojson"),
-      fetchJson<any>("/data/geo/bureaux-vote-95.geojson").catch(() => null),
-      fetchJson<any>("/data/geo/cantons-95.geojson").catch(() => null),
-      fetchJson<any>("/data/insee/insee-95-communes.json").catch(() => ({ status: "a_completer" })),
-      fetchJson<any>("/data/insee/population-historique-95.json").catch(() => null),
-    ])
-      .then(([communes, circo, bv, canton, insee, population]) => {
-        setCommunesGeo(communes);
-        setCircoGeo(circo);
-        setBvGeo(bv);
-        setCantonGeo(canton);
-        setInseeStatus(insee.status || "a_completer");
-        setPopulationData(population?.communes || {});
-      })
-      .finally(() => setLoading(false));
-  }, []);
-
-  useEffect(() => {
-    if (electionData[dataKey]) return;
-    fetchJson<ElectionCommuneFile>(`/data/elections/${dataKey}.json`)
-      .then((d) => setElectionData((prev) => ({ ...prev, [dataKey]: d })))
-      .catch(() => {});
-  }, [dataKey]);
-
-  useEffect(() => {
-    const circoKey = `${dataKey}-circo`;
-    if (circoData[circoKey] || election.status !== "reel") return;
-    fetchJson<ElectionCircoFile>(`/data/elections/${dataKey}-circo.json`)
-      .then((d) => setCircoData((prev) => ({ ...prev, [circoKey]: d })))
-      .catch(() => {});
-  }, [dataKey, election.status]);
-
-  useEffect(() => {
-    const cantonKey = `${dataKey}-canton`;
-    if (cantonData[cantonKey] !== undefined || election.status !== "reel") return;
-    fetchJson<any>(`/data/elections/${dataKey}-canton.json`)
-      .then((d) => setCantonData((prev) => ({ ...prev, [cantonKey]: d })))
-      .catch(() => setCantonData((prev) => ({ ...prev, [cantonKey]: null })));
-  }, [dataKey, election.status]);
-
-  useEffect(() => {
-    if (election.status !== "reel") return;
-    const bvKey = `${dataKey}-bv`;
-    if (bvData[bvKey] || bvData[bvKey] === null) return;
-    fetchJson<any>(`/data/elections/${dataKey}-bv.json`)
-      .then((d) => setBvData((prev) => ({ ...prev, [bvKey]: d })))
-      .catch(() => setBvData((prev) => ({ ...prev, [bvKey]: null })));
-  }, [dataKey, election.status]);
-
-  // Normalise un enregistrement "bureau" (schéma brut) vers un UnitResult exploitable par
-  // les mêmes fonctions (metricInfo, CandidateTable, fiche…) que commune/circonscription.
-  function normalizeBureau(b: any): UnitResult {
-    const inscrits = b.inscrits || 1;
-    const exprimes = b.exprimes || 1;
-    const cands = (b.candidats || []).map((c: any) => ({
-      ...c,
-      pct_exprimes: c.pct_exprimes ?? round2((c.voix * 100) / exprimes),
-      pct_inscrits: c.pct_inscrits ?? round2((c.voix * 100) / inscrits),
-    }));
-    return {
-      code_insee: b.code_insee,
-      nom: `${b.nom_commune ?? ""} — bureau ${b.code_bv ?? ""}`,
-      code_circonscription: b.code_circonscription ?? null,
-      inscrits: b.inscrits,
-      abstentions: b.abstentions,
-      votants: b.votants,
-      blancs: b.blancs,
-      nuls: b.nuls,
-      exprimes: b.exprimes,
-      pct_abstention: b.pct_abstention ?? round2((b.abstentions * 100) / inscrits),
-      pct_participation: b.pct_participation ?? round2((b.votants * 100) / inscrits),
-      candidats: cands,
-      tete: cands[0] ? { nom: cands[0].nom, prenom: cands[0].prenom, nuance: cands[0].nuance, pct_exprimes: cands[0].pct_exprimes } : undefined,
-    };
+export default function ElectionsPage(){
+  const [view,setView]=useState<'explorer'|'comparer'|'comprendre'>('explorer');
+  const [scrutin,setScrutin]=useState('pres-2022-t2');
+  const [scale,setScale]=useState<Scale>('commune');
+  const [metric,setMetric]=useState<Metric>('participation');
+  const [candidate,setCandidate]=useState('');
+  const [selected,setSelected]=useState<string|null>(null);
+  const [search,setSearch]=useState('');
+  const [sort,setSort]=useState('nom');
+  const [reference,setReference]=useState('pres-2017-t2');
+  const [compareSearch,setCompareSearch]=useState('');
+  const [compareSort,setCompareSort]=useState('delta');
+  const [message,setMessage]=useState('');
+  const dialog=useRef<HTMLDialogElement>(null);
+  const def=SCALES.find(s=>s.id===scale)!;
+  const activeElection=SCRUTINS.find(s=>s.key===scrutin)!;
+  const election=ELECTIONS.find(e=>e.id===activeElection.election)!;
+  const commune=useData<ResultsFile>(`data/elections/${scrutin}.json`);
+  const raw=useData<ResultsFile>(`data/elections/${scrutin}${def.suffix}.json`);
+  const bv=useData<ResultsFile>(`data/elections/${scrutin}-bv.json`);
+  const comparison=useData<ResultsFile>(view==='comparer'?`data/elections/${reference}.json`:null);
+  const geo=useData<FeatureCollection>(`data/geo/${scale==='commune'&&Number(scrutin.match(/\d{4}/)?.[0])<2024?'communes-historique-95':def.geo}.geojson`);
+  const mask=useData<FeatureCollection>('data/geo/masque-95.geojson');
+  const outline=useData<FeatureCollection>('data/geo/departement-95.geojson');
+  const context=useData<ContextFile>('data/insee/context-95.json');
+  const population=useData<{communes:Record<string,{annee:number;population:number}[]>}>('data/insee/population-historique-95.json');
+  const quality=useData<{elections:Record<string,{bureaux:number;mapped:number;unmapped:string[];incomplete:number;unassigned_canton:number;unassigned_circo:number}>}>('data/quality.json');
+  const units=(raw.data?.[def.key] as Record<string,Result>|undefined)??EMPTY;
+  const chosen=selected?units[selected]:null;
+  const all=Object.values(commune.data?.communes??EMPTY);
+  const total=totals(all);
+  const coverage=quality.data?.elections[scrutin];
+  const rows=useMemo(()=>Object.entries(units).filter(([code,u])=>normalText(`${code} ${u.nom}`).includes(normalText(search))).sort((a,b)=>sort==='nom'?a[1].nom.localeCompare(b[1].nom,'fr'):sort==='inscrits'?b[1].inscrits-a[1].inscrits:a[1].pct_participation-b[1].pct_participation),[units,search,sort]);
+  const candidates=useMemo(()=>{const c=new Map<string,Result['candidats'][number]>();Object.values(units).filter(canReadLeader).forEach(u=>u.candidats.forEach(v=>c.set(candidateKey(v),v)));return [...c.entries()].sort((a,b)=>(a[1].nom??'').localeCompare(b[1].nom??'','fr'));},[units]);
+  useEffect(()=>{if(!candidates.some(([key])=>key===candidate))setCandidate(candidates[0]?.[0]??'');},[candidates,candidate]);
+  useEffect(()=>{setSelected(null);setSearch('');setMessage('');},[scale,scrutin]);
+  useEffect(()=>{if(selected)document.getElementById('territory-title')?.focus();},[selected]);
+  const comparative=useMemo(()=>compareCommunes(comparison.data?.communes??EMPTY,commune.data?.communes??EMPTY),[comparison.data,commune.data]);
+  const comparedRows=comparative.filter(r=>normalText(`${r.code} ${r.nom}`).includes(normalText(compareSearch))).sort((a,b)=>compareSort==='nom'?a.nom.localeCompare(b.nom,'fr'):compareSort==='increase'?b.delta-a.delta:a.delta-b.delta);
+  const ctA=totals(comparative.map(r=>r.left)),ctB=totals(comparative.map(r=>r.right));
+  const chosenBv=useMemo(()=>Object.keys(bv.data?.bureaux??{}).filter(code=>scale==='bv'?code===selected:scale==='commune'?(code.slice(0,5)===selected||(scrutin.startsWith('pres-2017')&&selected==='95040'&&code.startsWith('95259'))):scale==='canton'?bv.data!.bureaux![code].code_canton===selected:bv.data!.bureaux![code].code_circonscription===selected),[bv.data,selected,scale,scrutin]);
+  const demographic=contextFor(context.data,chosenBv);
+  const leaders=new Map<string,{name:string;color:string}>();
+  if(metric==='tete')Object.values(units).filter(canReadLeader).forEach(u=>{const c=u.candidats[0];const color=colorForCandidate(c.nom,c.nuance);const key=c.nuance||c.nom||'';leaders.set(key,{name:c.nuance||`${c.prenom??''} ${c.nom??''}`,color});});
+  function exportTable(){
+    const data=[['Code','Territoire','Inscrits','Votants','Abstentions','Participation (%)','Blancs','Nuls','Exprimés','Qualité','Scrutin'],...rows.map(([code,u])=>[code,u.nom,u.inscrits,u.votants,u.abstentions,u.pct_participation,u.blancs,u.nuls,u.exprimes,statusLabel(u),activeElection.label])];
+    download(`${scrutin}-${scale}.csv`,'\uFEFF'+data.map(r=>r.map(csvCell).join(';')).join('\r\n'),'text/csv;charset=utf-8');
+  }
+  function exportGeo(){
+    if(!geo.data)return;
+    const known=new Set(geo.data.features.map(f=>featureCode(f,scale)));
+    const features=geo.data.features.map(f=>{const properties={...f.properties};delete properties._selected;return {...f,properties:{...properties,scrutin,resultats:units[featureCode(f,scale)]??null}};});
+    for(const [code,u] of Object.entries(units))if(!known.has(code))features.push({type:'Feature',geometry:null,properties:{code,scrutin,resultats:u}} as unknown as typeof features[number]);
+    download(`${scrutin}-${scale}.geojson`,JSON.stringify({type:'FeatureCollection',features}),'application/geo+json');
+  }
+  function print(){
+    if(!chosen)return;
+    const token=crypto.randomUUID();
+    try{localStorage.setItem(`elections-print-${token}`,JSON.stringify({unit:chosen,election:activeElection.label,scale:def.label,coverage:chosenBv.length,context:demographic,source:sources,date:new Date().toISOString(),participation:total.participation}));window.open(`${BASE}print.html#${token}`,'_blank','noopener');}catch{setMessage('L’impression nécessite le stockage local du navigateur. Vous pouvez exporter le tableau CSV.');}
+  }
+  function exportComparison(){download(`comparaison-${reference}-${scrutin}.csv`,'\uFEFF'+[['Code','Commune',`Participation ${reference}`,`Participation ${scrutin}`,'Écart (points)','Votants référence','Votants sélection'],...comparedRows.map(r=>[r.code,r.nom,r.left.pct_participation,r.right.pct_participation,r.delta,r.left.votants,r.right.votants])].map(r=>r.map(csvCell).join(';')).join('\r\n'),'text/csv;charset=utf-8');}
+  function exportNote(){
+    const diff=ctA.participation!==null&&ctB.participation!==null?points(ctB.participation-ctA.participation):'—';
+    const content=`# Atlas électoral du Val-d’Oise\n\n## Comparaison de la participation\n\nRéférence : ${SCRUTINS.find(s=>s.key===reference)?.label}\nSélection : ${activeElection.label}\n\nPérimètre : ${comparative.length} communes présentes intégralement aux deux scrutins, géographie harmonisée (Commeny/Gouzangrez et Avernes/Gadancourt réunies).\nParticipation : ${percent(ctA.participation)} → ${percent(ctB.participation)} (${diff}).\nVotants : ${number(ctA.votants)} → ${number(ctB.votants)}.\n\nLe taux est calculé sur la somme des votants et des inscrits, pas sur la moyenne des pourcentages communaux. Les communes partiellement concernées par un second tour sont exclues. Un changement de participation ne démontre pas un transfert de voix. Les municipales 2020 ont eu lieu dans le contexte de la pandémie.\n\nSource : Ministère de l’Intérieur, exports de résultats définitifs. Voir DATA.md et public/data/quality.json du dépôt DDT95/elections pour la provenance détaillée.\nÉdité le ${new Date().toLocaleDateString('fr-FR')}.\n`;
+    download(`note-${reference}-${scrutin}.md`,content);
   }
 
-  // Liste des candidats disponibles pour l'élection courante (pour le sélecteur "score d'un candidat")
-  const candidateList = useMemo(() => {
-    if (!current) return [];
-    const set = new Map<string, string>();
-    Object.values(current.communes).forEach((c) =>
-      c.candidats.forEach((cd) => {
-        const key = `${cd.nom}|${cd.prenom}`;
-        if (!set.has(key)) set.set(key, `${cd.prenom ?? ""} ${cd.nom ?? ""}`.trim());
-      }),
-    );
-    return Array.from(set.entries());
-  }, [current]);
-
-  useEffect(() => {
-    if (candidateList.length && !candidateList.find(([k]) => k === scoreCandidat)) {
-      setScoreCandidat(candidateList[0][0]);
-    }
-  }, [candidateList]);
-
-  // ---- Initialisation Leaflet ----
-  useEffect(() => {
-    if (!document.getElementById("elec-leaflet-css")) {
-      const css = document.createElement("link");
-      css.id = "elec-leaflet-css";
-      css.rel = "stylesheet";
-      css.href = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";
-      document.head.appendChild(css);
-    }
-    const start = () => {
-      if (mapRef.current || !mapNode.current) return;
-      const L = (window as any).L;
-      if (!L) return;
-      if (mapNode.current.offsetWidth === 0) {
-        requestAnimationFrame(start);
-        return;
-      }
-      const bounds = L.latLngBounds([
-        [48.89, 1.6],
-        [49.25, 2.6],
-      ]);
-      initialBoundsRef.current = bounds;
-      const map = L.map(mapNode.current, { zoomControl: false, minZoom: 9, maxBoundsViscosity: 0.6 }).fitBounds(
-        bounds,
-        { padding: [8, 8], animate: false },
-      );
-      mapRef.current = map;
-      map.setMaxBounds(bounds.pad(0.3));
-      L.control.zoom({ position: "bottomleft" }).addTo(map);
-      L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-        maxZoom: 19,
-        className: "elec-neutral-tiles",
-        attribution: "© OpenStreetMap",
-      }).addTo(map);
-      setMapReady((n) => n + 1);
-    };
-    const existing = document.querySelector<HTMLScriptElement>('script[data-elec-leaflet="true"]');
-    if ((window as any).L) start();
-    else if (existing) existing.addEventListener("load", start, { once: true });
-    else {
-      const script = document.createElement("script");
-      script.src = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js";
-      script.dataset.elecLeaflet = "true";
-      script.onload = start;
-      document.body.appendChild(script);
-    }
-  }, []);
-
-  // Incrémenté une fois que la carte Leaflet est prête (script chargé + conteneur mesurable).
-  // Doit être lu par l'effet de rendu de la couche choroplèthe (sinon celui-ci, qui se déclenche
-  // par ailleurs sur l'arrivée asynchrone des géométries/résultats, peut avoir déjà tenté — et
-  // abandonné faute de carte prête — tous ses passages avant que Leaflet ne finisse de charger ;
-  // sans ce signal en dépendance, aucun de ses effets ultérieurs ne le redéclenche et la carte
-  // reste vide indéfiniment, même si toutes les données sont là).
-  const [mapReady, setMapReady] = useState(0);
-
-  // ---- Détermination des valeurs par unité selon métrique ----
-  function metricInfo(u: UnitResult): { value: number | null; color: string; label: string } {
-    if (metric === "tete") {
-      const t = u.tete;
-      if (!t) return { value: null, color: "#c7cfda", label: "—" };
-      return {
-        value: t.pct_exprimes,
-        color: colorForCandidate(t.nom, t.nuance),
-        label: `${t.prenom ?? ""} ${t.nom ?? ""} · ${t.pct_exprimes.toFixed(1)} %`,
-      };
-    }
-    if (metric === "score_candidat") {
-      const [nom, prenom] = scoreCandidat.split("|");
-      const cd = u.candidats.find((c) => c.nom === nom && c.prenom === prenom);
-      if (!cd) return { value: null, color: "#e6e9ef", label: "—" };
-      return { value: cd.pct_exprimes, color: sequentialColor(cd.pct_exprimes, 0, 50), label: `${cd.pct_exprimes.toFixed(1)} %` };
-    }
-    if (metric === "abstention") {
-      return { value: u.pct_abstention, color: sequentialColor(u.pct_abstention, 10, 45), label: `${u.pct_abstention.toFixed(1)} %` };
-    }
-    return { value: u.pct_participation, color: sequentialColor(u.pct_participation, 55, 90), label: `${u.pct_participation.toFixed(1)} %` };
-  }
-
-  // ---- Rendu de la couche choroplèthe ----
-  useEffect(() => {
-    const L = (window as any).L;
-    const map = mapRef.current;
-    // Tant que Leaflet/la carte ne sont pas prêts, on ne peut rien construire ; cet effet sera
-    // rejoué automatiquement dès que mapReady passera à une valeur non nulle (cf. dépendances
-    // ci-dessous), donc l'abandon ici est temporaire et non définitif.
-    if (!L || !map) return;
-    if (layerRef.current) {
-      map.removeLayer(layerRef.current);
-      layerRef.current = null;
-    }
-    layersByCodeRef.current = {};
-    styleFnsRef.current = null;
-
-    // Style de base (repos), survol (aperçu léger au passage de la souris) et sélection
-    // (halo persistant tant que la fiche est ouverte pour cette unité). Le survol et la
-    // sélection restent visuellement distincts : le survol éclaircit juste le contour, la
-    // sélection l'épaissit fortement dans le bleu de la marque avec un liseré pointillé.
-    function withHover(base: any) {
-      return { ...base, color: "#5b6bff", weight: base.weight + 1.2 };
-    }
-    function withSelected(base: any) {
-      return { ...base, color: "#000091", weight: base.weight + 2.2, dashArray: "5,3", opacity: 1 };
-    }
-
-    function wireFeature(code: string, lyr: any, tooltipHtml: string) {
-      layersByCodeRef.current[code] = lyr;
-      lyr.bindTooltip(tooltipHtml, { sticky: true, className: "elec-tooltip" });
-      lyr.on("click", () => setSelectedCode(code));
-      lyr.on("mouseover", () => {
-        if (selectedCodeRef.current !== code) lyr.setStyle(styleFnsRef.current!.hover(code));
-      });
-      lyr.on("mouseout", () => {
-        lyr.setStyle(selectedCodeRef.current === code ? styleFnsRef.current!.selected(code) : styleFnsRef.current!.base(code));
-      });
-    }
-
-    if (scale === "canton") {
-      const cantons = cantonData[`${dataKey}-canton`]?.cantons;
-      if (!cantonGeo || !cantons) return;
-      const base = (code: string) => {
-        const u = cantons[code];
-        const info = u ? metricInfo(u) : null;
-        return { color: "#fff", weight: 1.6, fillColor: info?.color ?? "#e9edf3", fillOpacity: info ? 0.82 : 0.35 };
-      };
-      styleFnsRef.current = { base, hover: (c) => withHover(base(c)), selected: (c) => withSelected(base(c)) };
-      const layer = L.geoJSON(cantonGeo, {
-        style: (feature: any) => {
-          const code = feature.properties.code_canton;
-          return code === selectedCodeRef.current ? withSelected(base(code)) : base(code);
-        },
-        onEachFeature: (feature: any, lyr: any) => {
-          const code = feature.properties.code_canton;
-          const u = cantons[code];
-          const name = feature.properties.nom;
-          wireFeature(code, lyr, u ? `<b>Canton de ${name}</b><br/>${metricInfo(u).label}` : `Canton de ${name}<br/>Pas de résultat`);
-        },
-      }).addTo(map);
-      layerRef.current = layer;
-      return;
-    }
-    if (scale === "bv") {
-      const bvBureaux = bvData[`${dataKey}-bv`]?.bureaux;
-      if (!bvGeo || !bvBureaux) return;
-      const base = (code: string) => {
-        const b = bvBureaux[code];
-        const info = b ? metricInfo(normalizeBureau(b)) : null;
-        return { color: "#fff", weight: 0.5, fillColor: info?.color ?? "#e9edf3", fillOpacity: info ? 0.82 : 0.35 };
-      };
-      styleFnsRef.current = { base, hover: (c) => withHover(base(c)), selected: (c) => withSelected(base(c)) };
-      const layer = L.geoJSON(bvGeo, {
-        style: (feature: any) => {
-          const code = feature.properties.codeBureauVote;
-          return code === selectedCodeRef.current ? withSelected(base(code)) : base(code);
-        },
-        onEachFeature: (feature: any, lyr: any) => {
-          const code = feature.properties.codeBureauVote;
-          const b = bvBureaux[code];
-          const name = `${feature.properties.nomCommune} — bureau ${feature.properties.numeroBureauVote}`;
-          wireFeature(code, lyr, b ? `<b>${name}</b><br/>${metricInfo(normalizeBureau(b)).label}` : `${name}<br/>Pas de résultat`);
-        },
-      }).addTo(map);
-      layerRef.current = layer;
-      return;
-    }
-    const geo = scale === "circonscription" ? circoGeo : communesGeo;
-    const dataset = scale === "circonscription" ? circoData[`${dataKey}-circo`]?.circonscriptions : current?.communes;
-    if (!geo || !dataset) return;
-
-    const baseWeight = scale === "circonscription" ? 1.4 : 0.8;
-    const base = (code: string) => {
-      const u = dataset[code];
-      const info = u ? metricInfo(u) : { color: "#e9edf3" };
-      return { color: "#fff", weight: baseWeight, fillColor: info.color, fillOpacity: 0.82 };
-    };
-    styleFnsRef.current = { base, hover: (c) => withHover(base(c)), selected: (c) => withSelected(base(c)) };
-    const layer = L.geoJSON(geo, {
-      style: (feature: any) => {
-        const code = scale === "circonscription" ? feature.properties.code_circonscription : feature.properties.code;
-        return code === selectedCodeRef.current ? withSelected(base(code)) : base(code);
-      },
-      onEachFeature: (feature: any, lyr: any) => {
-        const code = scale === "circonscription" ? feature.properties.code_circonscription : feature.properties.code;
-        const u = dataset[code];
-        const name = feature.properties.nom;
-        wireFeature(code, lyr, u ? `<b>${name}</b><br/>${metricInfo(u).label}` : name);
-      },
-    }).addTo(map);
-    layerRef.current = layer;
-  }, [scale, communesGeo, circoGeo, bvGeo, bvData, cantonGeo, cantonData, current, circoData, dataKey, metric, scoreCandidat, mapReady]);
-
-  // Garde selectedCodeRef synchronisé (lu par les gestionnaires mouseover/mouseout ci-dessus,
-  // qui sont attachés une seule fois par construction de couche et ne doivent pas figer
-  // l'ancienne sélection) et applique/retire le halo de sélection persistant sans reconstruire
-  // toute la couche géographique à chaque clic.
-  useEffect(() => {
-    const prev = selectedCodeRef.current;
-    selectedCodeRef.current = selectedCode;
-    const fns = styleFnsRef.current;
-    if (!fns) return;
-    if (prev && prev !== selectedCode && layersByCodeRef.current[prev]) {
-      layersByCodeRef.current[prev].setStyle(fns.base(prev));
-    }
-    if (selectedCode && layersByCodeRef.current[selectedCode]) {
-      layersByCodeRef.current[selectedCode].setStyle(fns.selected(selectedCode));
-    }
-  }, [selectedCode]);
-
-  const selectedUnit: UnitResult | null = useMemo(() => {
-    if (!selectedCode) return null;
-    if (scale === "circonscription") return circoData[`${dataKey}-circo`]?.circonscriptions[selectedCode] ?? null;
-    if (scale === "bv") {
-      const b = bvData[`${dataKey}-bv`]?.bureaux?.[selectedCode];
-      return b ? normalizeBureau(b) : null;
-    }
-    if (scale === "canton") return cantonData[`${dataKey}-canton`]?.cantons?.[selectedCode] ?? null;
-    return current?.communes[selectedCode] ?? null;
-  }, [selectedCode, scale, current, circoData, bvData, cantonData, dataKey]);
-
-  const drawerOpen = !!selectedUnit;
-
-  function resetSelection() {
-    setSelectedCode(null);
-  }
-
-  function recenter() {
-    if (mapRef.current && initialBoundsRef.current) {
-      mapRef.current.fitBounds(initialBoundsRef.current, { padding: [8, 8] });
-    }
-  }
-
-  // ---- Export GeoJSON ----
-  function layerGeoOf(): any {
-    if (scale === "circonscription") return circoGeo;
-    if (scale === "bv") return bvGeo;
-    if (scale === "canton") return cantonGeo;
-    return communesGeo;
-  }
-  function layerDatasetOf(): Record<string, UnitResult> | undefined {
-    if (scale === "circonscription") return circoData[`${dataKey}-circo`]?.circonscriptions;
-    if (scale === "bv") return bvData[`${dataKey}-bv`]?.bureaux;
-    if (scale === "canton") return cantonData[`${dataKey}-canton`]?.cantons;
-    return current?.communes;
-  }
-  function layerGeoAndCodeOf(f: any): string {
-    if (scale === "circonscription") return f.properties.code_circonscription;
-    if (scale === "bv") return f.properties.codeBureauVote;
-    if (scale === "canton") return f.properties.code_canton;
-    return f.properties.code;
-  }
-
-  function exportLayerGeoJSON() {
-    const geo = layerGeoOf();
-    if (!geo) return;
-    const dataset = layerDatasetOf();
-    const enriched = {
-      ...geo,
-      features: geo.features.map((f: any) => {
-        const code = layerGeoAndCodeOf(f);
-        const u = dataset?.[code];
-        return { ...f, properties: { ...f.properties, resultats: u ?? null } };
-      }),
-    };
-    downloadBlob(`${scale}-${dataKey}.geojson`, JSON.stringify(enriched), "application/geo+json");
-  }
-
-  function exportFeatureGeoJSON() {
-    if (!selectedUnit) return;
-    const geo = layerGeoOf();
-    const feature = geo?.features.find((f: any) => layerGeoAndCodeOf(f) === selectedCode);
-    if (!feature) return;
-    downloadBlob(`${selectedUnit.nom}-${dataKey}.geojson`, JSON.stringify({ type: "Feature", ...feature, properties: { ...feature.properties, resultats: selectedUnit } }), "application/geo+json");
-  }
-
-  // ---- Impression ----
-  function printUnit() {
-    if (!selectedUnit) return;
-    (window as any).electionsPrintApp = {
-      analysis: {
-        scale,
-        code: selectedCode,
-        unit: selectedUnit,
-        election: election.label,
-        tourLabel: tour.label,
-      },
-    };
-    window.open(`${basePath}/print.html`, "_blank", "noopener");
-  }
-
-  return (
-    <main className="elec-page">
-      <header className="elec-header">
-        <a href={ATLAS_URL} target="_blank" rel="noreferrer" aria-label="Ouvrir l'Atlas territorial du Val-d'Oise">
-          <img src={`${basePath}/prefet-val-doise-logo.png`} alt="Préfet du Val-d'Oise" />
-        </a>
-        <div className="elec-header-copy">
-          <span>ATLAS ÉLECTORAL</span>
-          <h1>Atlas électoral du Val-d'Oise</h1>
-          <p>Résultats, participation et profil sociodémographique — commune, bureau de vote, canton, circonscription</p>
-        </div>
-        <div className="elec-header-actions">
-          <a className="elec-backlink" href={ATLAS_URL} target="_blank" rel="noreferrer">
-            ← Retour à l'Atlas
-          </a>
-          <div className="elec-livebox">
-            <i />
-            <span>
-              <strong>Données contrôlées</strong>
-              <small>4 scrutins réels · bureaux de vote géolocalisés</small>
-            </span>
-          </div>
-        </div>
-      </header>
-      <div className="elec-progress">
-        <span style={{ width: loading ? "40%" : "100%" }} />
-      </div>
-      <div className="elec-workspace">
-        <aside className="elec-sidebar">
-          <div className="elec-sidebar-intro">
-            <span>LECTURE CARTOGRAPHIQUE</span>
-            <h2>
-              Analyser
-              <br />
-              un scrutin
-            </h2>
-          </div>
-
-          <div className="elec-sidebar-block-title">Échelle</div>
-          <div className="elec-pillgroup">
-            {SCALES.map((s) => (
-              <button
-                key={s.id}
-                type="button"
-                className={`elec-pill ${scale === s.id ? "active" : ""}`}
-                onClick={() => {
-                  setScale(s.id);
-                  resetSelection();
-                }}
-              >
-                {s.label}
-              </button>
-            ))}
-          </div>
-          {scale === "bv" && (
-            <p className="elec-scale-note">
-              Échelle bureau de vote : contours réels (810 bureaux, IGN/INSEE). Cliquez un bureau sur la carte pour sa fiche.
-            </p>
-          )}
-          {scale === "canton" && (
-            <p className="elec-scale-note">
-              Échelle canton : 21 cantons réels (redécoupage 2015, contours dissous à partir des bureaux de vote — Argenteuil et Cergy
-              correctement scindés sur plusieurs cantons). Résultats réels disponibles pour tous les scrutins chargés (agrégation
-              directe des résultats communaux ou par bureau, sans donnée inventée).
-            </p>
-          )}
-
-          <div className="elec-sidebar-block-title">Élection</div>
-          <select
-            className="elec-select"
-            value={electionId}
-            onChange={(e) => {
-              setElectionId(e.target.value);
-              const el = findElection(e.target.value);
-              setTourId(el.tours[el.tours.length - 1].id);
-              resetSelection();
-            }}
-          >
-            {ELECTIONS.map((e) => (
-              <option key={e.id} value={e.id}>
-                {e.label}
-                {e.status === "a_completer" ? " (à compléter)" : ""}
-              </option>
-            ))}
-          </select>
-          <select
-            className="elec-select"
-            value={tourId}
-            onChange={(e) => {
-              setTourId(e.target.value);
-              resetSelection();
-            }}
-          >
-            {election.tours.map((t) => (
-              <option key={t.id} value={t.id}>
-                {t.label}
-              </option>
-            ))}
-          </select>
-          {tourStatus === "a_completer" && (
-            <p className="elec-scale-note warn">
-              Données à compléter pour ce tour : la structure est prête mais aucun résultat réel n'est chargé (voir DATA.md).
-            </p>
-          )}
-
-          {tourStatus === "reel" && (
-            <>
-              <div className="elec-sidebar-block-title">Indicateur cartographié</div>
-              <div className="elec-pillgroup cols-1">
-                {METRICS.map((m) => (
-                  <button
-                    key={m.id}
-                    type="button"
-                    className={`elec-pill ${metric === m.id ? "active" : ""}`}
-                    onClick={() => setMetric(m.id)}
-                  >
-                    {m.label}
-                  </button>
-                ))}
-              </div>
-              {metric === "score_candidat" && (
-                <select className="elec-select" value={scoreCandidat} onChange={(e) => setScoreCandidat(e.target.value)}>
-                  {candidateList.map(([key, label]) => (
-                    <option key={key} value={key}>
-                      {label}
-                    </option>
-                  ))}
-                </select>
-              )}
-              <Legend metric={metric} scoreCandidat={scoreCandidat} current={current} />
-            </>
-          )}
-
-          <div className="elec-sidebar-block-title">Croisement sociodémographique</div>
-          {inseeStatus === "a_completer" ? (
-            <p className="elec-scale-note warn">
-              Données INSEE (âge, CSP) à compléter — voir DATA.md pour le détail. La structure de croisement est prête et s'activera
-              automatiquement dès l'intégration des fichiers INSEE RP.
-            </p>
-          ) : (
-            <p className="elec-scale-note">Croisement disponible.</p>
-          )}
-
-          <div className="elec-sidebar-block-title">Couches et export</div>
-          <div className="elec-pillgroup cols-1">
-            <button type="button" className="elec-pill" onClick={recenter}>
-              Recentrer sur le Val-d'Oise
-            </button>
-            <div className="elec-export-menu">
-              <button type="button" className="elec-pill" onClick={() => setExportOpen((o) => !o)}>
-                Exporter la couche affichée (GeoJSON)
-              </button>
-              {exportOpen && (
-                <div className="elec-export-menu-list">
-                  <button
-                    type="button"
-                    onClick={() => {
-                      exportLayerGeoJSON();
-                      setExportOpen(false);
-                    }}
-                  >
-                    Toute la couche « {SCALES.find((s) => s.id === scale)?.label} »
-                  </button>
-                  {selectedUnit && (
-                    <button
-                      type="button"
-                      onClick={() => {
-                        exportFeatureGeoJSON();
-                        setExportOpen(false);
-                      }}
-                    >
-                      Uniquement « {selectedUnit.nom} »
-                    </button>
-                  )}
-                </div>
-              )}
-            </div>
-          </div>
-
-          <button type="button" className="elec-sources-button" onClick={() => sourceDialog.current?.showModal()}>
-            Sources, millésimes et licences
-          </button>
-          <div className="elec-sidebar-status">
-            <i />
-            <span>
-              <strong>Val-d'Oise (95) · 184 communes</strong>
-              <small>Cabinet du préfet — usage interne</small>
-            </span>
-          </div>
-        </aside>
-
-        <section className="elec-map-shell">
-          <div ref={mapNode} className="elec-map" aria-label="Carte électorale du Val-d'Oise" />
-          {scale === "canton" && election.status === "reel" && !cantonData[`${dataKey}-canton`] && (
-            <div
-              style={{
-                position: "absolute",
-                inset: 0,
-                zIndex: 400,
-                display: "grid",
-                placeItems: "center",
-                background: "#eef1f7cc",
-                pointerEvents: "none",
-              }}
-            >
-              <div style={{ maxWidth: 360, padding: 18, background: "#070047f0", color: "#fff", borderRadius: 14, fontSize: 12, textAlign: "center" }}>
-                Résultats par canton non disponibles pour ce scrutin (voir DATA.md).
-              </div>
-            </div>
-          )}
-          {scale === "bv" && election.status === "reel" && !bvData[`${dataKey}-bv`] && (
-            <div
-              style={{
-                position: "absolute",
-                inset: 0,
-                zIndex: 400,
-                display: "grid",
-                placeItems: "center",
-                background: "#eef1f7cc",
-                pointerEvents: "none",
-              }}
-            >
-              <div style={{ maxWidth: 360, padding: 18, background: "#070047f0", color: "#fff", borderRadius: 14, fontSize: 12, textAlign: "center" }}>
-                Résultats par bureau de vote non disponibles pour ce scrutin (voir DATA.md).
-              </div>
-            </div>
-          )}
-          <div className="elec-hint">
-            <i />
-            <span>
-              <strong>{drawerOpen ? "Fiche disponible" : "Sélectionnez une unité"}</strong>
-              <small>{drawerOpen ? selectedUnit?.nom : "Cliquez sur la carte ou choisissez un bureau"}</small>
-            </span>
-          </div>
+  return <main>
+    <header className="app-header"><img src={BASE+'prefet-val-doise-logo.png'} alt="Préfet du Val-d’Oise"/><div><div className="eyebrow">DDT 95 · OBSERVATION TERRITORIALE</div><h1>Atlas électoral du Val-d'Oise</h1><p>Comprendre les résultats, la participation et les évolutions des territoires.</p></div><button className="quiet" onClick={()=>dialog.current?.showModal()}>Sources & méthode</button></header>
+    <nav className="view-nav" aria-label="Modes de lecture">{[['explorer','01','Explorer les territoires'],['comparer','02','Comparer dans le temps'],['comprendre','03','Comprendre les chiffres']].map(([id,n,label])=><button key={id} aria-current={view===id?'page':undefined} onClick={()=>setView(id as typeof view)}><span>{n}</span>{label}</button>)}</nav>
+    <div className="workspace">
+      <section className="selection-panel" aria-label="Choix du scrutin"><div><div className="eyebrow">LE SCRUTIN OBSERVÉ</div><h2>{election.label}</h2></div><label>Élection<select value={election.id} onChange={e=>{const d=ELECTIONS.find(v=>v.id===e.target.value)!;setScrutin(d.tours[0].file);}}>{ELECTIONS.map(e=><option key={e.id} value={e.id}>{e.label}</option>)}</select></label><label>Tour<select value={scrutin} onChange={e=>setScrutin(e.target.value)}>{election.tours.map(t=><option key={t.file} value={t.file}>{t.label}</option>)}</select></label><div className="scope-label">{commune.loading?'Chargement…':`${all.length} communes concernées`}<small>{coverage?`${number(coverage.bureaux)} bureaux avec résultats`:'Couverture en cours de lecture'}</small></div></section>
+      <LoadState data={commune}/>
+      {commune.data&&<section className="summary" aria-label="Synthèse du scrutin"><Kpi label="Participation" value={percent(total.participation)} note="Votants / inscrits sur le périmètre de ce tour"/><Kpi label="Votants" value={number(total.votants)} note={`sur ${number(total.inscrits)} inscrits`}/><Kpi label="Abstention" value={percent(ratio(total.abstentions,total.inscrits))} note={`${number(total.abstentions)} personnes inscrites n’ont pas voté`}/><Kpi label="Blancs et nuls" value={percent(ratio(total.blancs+total.nuls,total.votants))} note={`${number(total.blancs+total.nuls)} bulletins, en % des votants`}/></section>}
+      {scrutin.startsWith('pres-2017')&&<p className="scope-note">Géographie communale harmonisée : Gadancourt est regroupée avec Avernes (fusion en 2018). Les résultats de 185 communes d’origine sont conservés.</p>}{scrutin.includes('-t2')&&<p className="scope-note">Second tour : les chiffres portent uniquement sur les bureaux ayant voté à ce tour. Une zone sans résultat peut avoir été pourvue au premier tour.</p>}
+      {view==='explorer'&&<>
+        <section className="exploration">
+          <aside className="controls"><h3>Lire la carte</h3><label>Échelle<select value={scale} onChange={e=>setScale(e.target.value as Scale)}>{SCALES.map(s=><option key={s.id} value={s.id}>{s.label}</option>)}</select></label><label>Indicateur<select value={metric} onChange={e=>setMetric(e.target.value as Metric)}><option value="participation">Participation (% des inscrits)</option><option value="abstention">Abstention (% des inscrits)</option><option value="tete">Candidat / liste en tête</option><option value="score_candidat">Score d’un candidat (% exprimés)</option></select></label>
+          {metric==='score_candidat'&&<label>Candidat<select value={candidate} onChange={e=>setCandidate(e.target.value)}>{candidates.map(([key,c])=><option key={key} value={key}>{c.prenom} {c.nom}</option>)}</select></label>}
+          <div className="legend">{metric==='tete'?<><strong>Nuance ou candidat</strong><div className="legend-items">{[...leaders.entries()].map(([k,v])=><span key={k}><i style={{background:v.color}}/>{v.name}</span>)}</div></>:<><strong>{metric==='score_candidat'?'Part des exprimés':'Part des inscrits'}</strong><div className="color-scale">{SEQUENTIAL_STEPS.map(c=><i key={c} style={{background:c}}/>)}</div><div className="scale-ends"><span>0 %</span><span>100 %</span></div></>}<p><i className="no-data"/> Gris : résultat absent, non comparable ou incomplet.</p></div>
+          {(metric==='tete'||metric==='score_candidat')&&<p className="notice">Les regroupements de plusieurs élections locales ne sont pas colorés par candidat. Arriver en tête dans une commune ne signifie pas être élu.</p>}
+          <div className="map-method"><strong>Une carte pour se repérer</strong><p>Les contours des bureaux, cantons et circonscriptions sont reconstitués, non opposables. Les identifiants et les périmètres peuvent évoluer entre deux scrutins.</p>{coverage&&scale==='bv'&&<p>{coverage.mapped}/{coverage.bureaux} bureaux associés à un contour. Les {coverage.unmapped.length} autres restent dans le tableau et les exports.</p>}</div>
+          <button className="quiet" disabled={!geo.data||!raw.data} onClick={exportGeo}>Exporter la couche GeoJSON</button>
+          </aside>
+          <div className="map-area"><LoadState data={raw}/><LoadState data={geo}/><LoadState data={mask}/>{geo.data&&mask.data&&<ElectionMap geo={geo.data} mask={mask.data} outline={outline.data} units={units} scale={scale} metric={metric} candidate={candidate} selected={selected} onSelect={setSelected}/>}</div>
         </section>
-
-        <aside className={`elec-drawer ${drawerOpen ? "open" : ""}`} aria-label="Fiche du scrutin">
-          <div className="elec-drawer-head">
-            <small>
-              {SCALES.find((s) => s.id === scale)?.label?.toUpperCase()} · {election.shortLabel.toUpperCase()} · {tour.label}
-            </small>
-            <h2>{selectedUnit?.nom || "—"}</h2>
-            <p>
-              {selectedUnit?.code_insee ? `Code INSEE ${selectedUnit.code_insee}` : selectedUnit?.code_circonscription ? `Code ${selectedUnit.code_circonscription}` : ""}
-            </p>
-            <button className="elec-close" onClick={resetSelection} aria-label="Fermer" title="Fermer">
-              ×
-            </button>
-          </div>
-          {selectedUnit && (
-            <>
-              <div className="elec-actions">
-                <button onClick={printUnit}>Imprimer la fiche</button>
-                <a href="#" onClick={(e) => { e.preventDefault(); exportFeatureGeoJSON(); }}>
-                  Exporter GeoJSON
-                </a>
-              </div>
-              <div className="elec-body">
-                <Section title="Participation" state="Données réelles">
-                  <div className="elec-kpis">
-                    <Kpi label="Inscrits" value={selectedUnit.inscrits.toLocaleString("fr-FR")} />
-                    <Kpi label="Votants" value={selectedUnit.votants.toLocaleString("fr-FR")} />
-                    <Kpi label="Abstention" value={`${selectedUnit.pct_abstention.toFixed(1)} %`} />
-                    <Kpi label="Participation" value={`${selectedUnit.pct_participation.toFixed(1)} %`} />
-                    <Kpi label="Blancs" value={selectedUnit.blancs.toLocaleString("fr-FR")} />
-                    <Kpi label="Nuls" value={selectedUnit.nuls.toLocaleString("fr-FR")} />
-                  </div>
-                </Section>
-                <Section title="Résultats par candidat" state={selectedUnit.candidats.length ? `${selectedUnit.candidats.length} candidats` : "À compléter"}>
-                  {selectedUnit.candidats.length ? (
-                    <CandidateTable candidats={selectedUnit.candidats} />
-                  ) : (
-                    <p className="elec-empty">Détail par liste/candidat non chargé pour ce scrutin (participation réelle disponible ci-dessus). Voir DATA.md.</p>
-                  )}
-                </Section>
-                {scale === "commune" && (
-                  <Section
-                    title="Évolution de la population"
-                    state={selectedCode && populationData[selectedCode]?.length ? "Données réelles (INSEE)" : "À compléter"}
-                  >
-                    {selectedCode && populationData[selectedCode]?.length ? (
-                      <PopulationSparkline data={populationData[selectedCode]} />
-                    ) : (
-                      <p className="elec-empty">
-                        Population historique non disponible pour cette commune dans le jeu de données INSEE (voir DATA.md).
-                      </p>
-                    )}
-                  </Section>
-                )}
-                <Section title="Croisement sociodémographique" state={inseeStatus === "a_completer" ? "À compléter" : "Disponible"}>
-                  {inseeStatus === "a_completer" ? (
-                    <p className="elec-empty">
-                      Le croisement âge / catégorie socioprofessionnelle nécessite l'intégration des fichiers INSEE RP au niveau
-                      communal (voir DATA.md pour le plan d'intégration).
-                    </p>
-                  ) : (
-                    <p className="elec-empty">Aucune donnée.</p>
-                  )}
-                </Section>
-              </div>
-            </>
-          )}
-        </aside>
-      </div>
-      <footer className="elec-footer">
-        <span>Atlas électoral du Val-d'Oise — DDT 95 · module de l'Atlas territorial</span>
-        <span>Municipales 2026, Présidentielle 2022, Législatives 2024, Européennes 2024, Municipales 2020, Départementales 2021 · données réelles</span>
-      </footer>
-
-      <dialog ref={sourceDialog} className="elec-source-dialog">
-        <header>
-          <h2>Sources, millésimes et licences</h2>
-          <button onClick={() => sourceDialog.current?.close()} aria-label="Fermer">
-            ×
-          </button>
-        </header>
-        <div className="dialog-body">
-          <table>
-            <thead>
-              <tr>
-                <th>Donnée</th>
-                <th>Producteur</th>
-                <th>Fréquence</th>
-                <th>Lien</th>
-              </tr>
-            </thead>
-            <tbody>
-              {sources.map((s) => (
-                <tr key={s.id}>
-                  <td>{s.label}</td>
-                  <td>{s.producer}</td>
-                  <td>{s.frequency}</td>
-                  <td>
-                    <a href={s.url} target="_blank" rel="noreferrer">
-                      Ouvrir ↗
-                    </a>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </dialog>
-    </main>
-  );
-}
-
-function Legend({ metric, scoreCandidat, current }: { metric: MetricId; scoreCandidat: string; current?: ElectionCommuneFile }) {
-  if (metric === "tete") {
-    // Une entrée par tête de liste/candidat en tête d'au moins une unité, mais regroupée
-    // visuellement par couleur (donc par nuance quand elle est connue) pour rester lisible
-    // même sur un scrutin à très nombreuses listes (municipales).
-    const leaders = new Map<string, { color: string; nuance?: string | null }>();
-    if (current) {
-      Object.values(current.communes).forEach((c) => {
-        if (c.tete?.nom) leaders.set(c.tete.nom, { color: colorForCandidate(c.tete.nom, c.tete.nuance), nuance: c.tete.nuance });
-      });
-    }
-    return (
-      <div className="elec-legend">
-        <p className="elec-legend-title">Légende — tête de liste</p>
-        <div className="elec-legend-swatches">
-          {Array.from(leaders.entries()).map(([nom, { color, nuance }]) => (
-            <div key={nom} className="elec-legend-swatch">
-              <i style={{ background: color }} />
-              <span>{nom}</span>
-              {nuance && <em className="elec-nuance-tag">{nuance}</em>}
-            </div>
-          ))}
-        </div>
-      </div>
-    );
-  }
-  const bounds = metric === "abstention" ? [10, 45] : metric === "participation" ? [55, 90] : [0, 50];
-  return (
-    <div className="elec-legend">
-      <p className="elec-legend-title">Légende — {metric === "score_candidat" ? scoreCandidat.split("|")[0] : metric}</p>
-      <div className="elec-legend-scale">
-        {SEQUENTIAL_STEPS.map((c, i) => (
-          <span key={i} style={{ background: c }} />
-        ))}
-      </div>
-      <div className="elec-legend-labels">
-        <span>{bounds[0]} %</span>
-        <span>{bounds[1]} %</span>
-      </div>
+        {selected&&<section className="territory" aria-labelledby="territory-title"><div className="section-heading"><div><div className="eyebrow">ZOOM TERRITORIAL</div><h2 id="territory-title" tabIndex={-1}>{chosen?.nom??'Territoire sans résultat à ce tour'}</h2></div><button className="quiet" onClick={()=>setSelected(null)}>Fermer la fiche</button></div>{chosen?<>
+          <div className="territory-top"><span className={`badge ${chosen.quality!=='complete'||chosen.partial_scope?'warning':''}`}>{statusLabel(chosen)}</span><span>Code {selected} · {def.label}</span><button className="quiet" onClick={print}>Imprimer / PDF</button></div>
+          {chosen.partial_scope&&<p className="notice">Seuls {chosen.bureaux_de_vote} bureaux sur {chosen.nb_bureaux_attendus} sont concernés à ce tour. Ce taux ne décrit pas l’ensemble du territoire.</p>}
+          <div className="territory-grid"><div><h3>La participation en perspective</h3><div className="big-rate">{percent(ratio(chosen.votants,chosen.inscrits))}</div><p>{number(chosen.votants)} votants sur {number(chosen.inscrits)} inscrits.</p>{total.participation!==null&&<p><strong>{points(chosen.pct_participation-total.participation)}</strong> par rapport au taux du périmètre départemental de ce tour.</p>}<ParticipationBar unit={chosen}/><p className="muted">{number(chosen.exprimes)} exprimés · {number(chosen.blancs)} blancs · {number(chosen.nuls)} nuls.</p>{chosenBv.length>0&&<p className="muted">Résultats issus de {chosenBv.length} bureau{chosenBv.length>1?'x':''}.</p>}</div>
+          <div><h3>Résultats du scrutin</h3><CandidateResults unit={chosen}/></div>
+          <div><h3>Le contexte démographique</h3>{context.loading?<p>Chargement du contexte…</p>:context.error?<LoadState data={context}/>:demographic?<><span className="badge warning">Estimations · RP 2022</span><p className="muted">{demographic.covered}/{demographic.total} bureaux du territoire associés au contexte. Habitants, et non électeurs.</p><ContextRate label="15–24 ans" value={demographic.youth} denominator="population estimée"/><ContextRate label="65 ans et plus" value={demographic.senior} denominator="population estimée"/><ContextRate label="Cadres" value={demographic.cadres} denominator="population de 15 ans et plus, base CSP"/><ContextRate label="Ouvriers" value={demographic.workers} denominator="population de 15 ans et plus, base CSP"/><ContextRate label="Diplômés du supérieur" value={demographic.graduates} denominator="15 ans et plus non scolarisés"/><p className="notice">Estimations du projet André à partir des IRIS INSEE, réparties spatialement vers les bureaux. Elles ne décrivent pas le vote des individus et ne démontrent pas de causalité.</p></>:<p>Pas de contexte sociodémographique associé à ce territoire.</p>}{scale==='commune'&&population.data?.communes[selected]&&<Population data={population.data.communes[selected]}/>}</div></div>
+          </>:<p className="notice">Aucun résultat chargé pour ce territoire à ce tour. Pour un second tour, consultez aussi le premier tour ; cette absence n’est pas un taux de 0 %.</p>}</section>}
+        <section className="table-section"><div className="section-heading"><div><div className="eyebrow">TOUS LES TERRITOIRES, Y COMPRIS SANS CONTOUR</div><h2>Rechercher et situer un territoire</h2></div><button className="quiet" disabled={!raw.data} onClick={exportTable}>Exporter le tableau CSV</button></div><div className="table-controls"><label>Nom ou code<input type="search" placeholder="Cergy, Sarcelles, 95018…" value={search} onChange={e=>setSearch(e.target.value)}/></label><label>Trier par<select value={sort} onChange={e=>setSort(e.target.value)}><option value="nom">Nom du territoire</option><option value="participation">Participation croissante</option><option value="inscrits">Nombre d’inscrits décroissant</option></select></label><span>{rows.length} résultat{rows.length>1?'s':''}</span></div><div className="table-scroll"><table><thead><tr><th>Territoire</th><th>Inscrits</th><th>Participation</th><th>Écart au taux du tour</th><th>Lecture</th></tr></thead><tbody>{rows.map(([code,u])=><tr key={code} className={code===selected?'selected':''}><td><button className="text-button" onClick={()=>setSelected(code)}>{u.nom}</button><small>{code}</small></td><td>{number(u.inscrits)}</td><td>{percent(ratio(u.votants,u.inscrits))}</td><td>{total.participation===null?'—':points(u.pct_participation-total.participation)}</td><td>{statusLabel(u)}</td></tr>)}</tbody></table>{!rows.length&&!raw.loading&&<p className="empty">Aucun territoire ne correspond à cette recherche.</p>}</div></section>
+      </>}
+      {view==='comparer'&&<section className="comparison"><div className="section-heading"><div><div className="eyebrow">UNE ÉVOLUTION, SUR UN PÉRIMÈTRE EXPLICITE</div><h2>Comment la participation a-t-elle changé ?</h2></div></div><div className="comparison-select"><label>Point de départ<select value={reference} onChange={e=>setReference(e.target.value)}>{SCRUTINS.map(s=><option key={s.key} value={s.key}>{s.label}</option>)}</select></label><div className="comparison-arrow">→</div><div><span className="muted">Scrutin observé</span><strong>{activeElection.label}</strong><small>Modifiable en haut de la page</small></div></div><LoadState data={comparison}/>{reference===scrutin?<p className="notice">Choisissez deux scrutins différents pour étudier une évolution.</p>:comparison.data&&commune.data&&<><div className="comparison-summary"><Kpi label="Au point de départ" value={percent(ctA.participation)} note={`${number(ctA.votants)} votants`}/><Kpi label="Au scrutin observé" value={percent(ctB.participation)} note={`${number(ctB.votants)} votants`}/><Kpi label="Évolution" value={ctA.participation===null||ctB.participation===null?'—':points(ctB.participation-ctA.participation)} note={`${comparative.length} communes comparables`}/></div><p className="notice">Comparaison limitée aux <strong>{comparative.length} communes intégralement présentes aux deux scrutins</strong>. Commeny/Gouzangrez et Avernes/Gadancourt sont réunies pour harmoniser la géographie. Les communes partiellement concernées par un second tour sont exclues. Les taux sont pondérés par les inscrits de chaque scrutin.</p>{reference.includes('2020')||scrutin.includes('2020')?<p className="notice">Les municipales 2020 se sont déroulées dans le contexte de la pandémie. Cette comparaison appelle une lecture particulière.</p>:null}{SCRUTINS.find(s=>s.key===reference)?.election!==election.id&&<p className="muted">Deux types d’élections peuvent mobiliser différemment et ne pas avoir exactement le même corps électoral. Cette évolution ne mesure pas un transfert de voix.</p>}<div className="table-controls"><label>Rechercher une commune<input type="search" placeholder="Nom ou code" value={compareSearch} onChange={e=>setCompareSearch(e.target.value)}/></label><label>Classer les évolutions<select value={compareSort} onChange={e=>setCompareSort(e.target.value)}><option value="delta">Baisses d’abord</option><option value="increase">Hausses d’abord</option><option value="nom">Nom</option></select></label><button className="quiet" disabled={!comparative.length} onClick={exportComparison}>Exporter CSV</button><button className="primary" disabled={!comparative.length} onClick={exportNote}>Télécharger la note de synthèse</button></div><div className="table-scroll"><table><thead><tr><th>Commune</th><th>Point de départ</th><th>Scrutin observé</th><th>Écart de participation</th><th>Variation des votants</th></tr></thead><tbody>{comparedRows.map(r=><tr key={r.code}><td>{r.nom}<small>{r.code}</small></td><td>{percent(r.left.pct_participation)}</td><td>{percent(r.right.pct_participation)}</td><td><div className="delta-cell"><span>{points(r.delta)}</span><div className="delta-track"><i style={{width:`${Math.min(Math.abs(r.delta),50)}%`,left:r.delta>=0?'50%':`${50-Math.min(Math.abs(r.delta),50)}%`,background:r.delta>=0?'#000091':'#a85b23'}}/></div></div></td><td>{r.right.votants-r.left.votants>0?'+':''}{number(r.right.votants-r.left.votants)}</td></tr>)}</tbody></table>{!comparedRows.length&&<p className="empty">Aucune commune comparable dans cette sélection.</p>}</div></>}</section>}
+      {view==='comprendre'&&<section className="understand"><div className="section-heading"><div><div className="eyebrow">LES CLÉS DE LECTURE</div><h2>Ce que les chiffres disent — et leurs limites</h2></div></div><div className="explain-grid"><article><span className="chapter">01</span><h3>Qui compte-t-on ?</h3><p><strong>Inscrits</strong> : personnes figurant sur les listes électorales. <strong>Votants</strong> : personnes ayant participé.</p><p>Les votants se répartissent entre <strong>exprimés, blancs et nuls</strong>. L’abstention concerne les inscrits n’ayant pas voté.</p><p className="formula">Inscrits = votants + abstentions<br/>Votants = exprimés + blancs + nuls</p></article><article><span className="chapter">02</span><h3>Un pourcentage de quoi ?</h3><p>La participation se rapporte aux <strong>inscrits</strong>. Le score d’un candidat se rapporte généralement aux <strong>exprimés</strong>.</p><p>Avec 100 inscrits, 60 votants et 54 exprimés, un candidat obtenant 27 voix réalise 50 % des exprimés, mais 27 % des inscrits.</p><p className="formula">Toujours regarder le dénominateur.</p></article><article><span className="chapter">03</span><h3>Points et pourcentages</h3><p>Passer de 60 % à 65 % représente <strong>+5 points</strong>. La hausse relative est de 8,3 %.</p><p>L’atlas utilise les points pour comparer les taux, et le nombre de personnes pour mesurer les volumes.</p><p className="formula">Taux d’ensemble = total des votants / total des inscrits</p></article><article><span className="chapter">04</span><h3>Une couleur n’est pas une victoire</h3><p>Être en tête dans un bureau ne signifie pas remporter l’élection. Le siège se décide au niveau de la commune, du canton ou de la circonscription selon le scrutin.</p><p>Des candidats locaux ne concourent pas partout. Leurs scores ne sont pas classés ensemble dans les territoires mélangeant plusieurs élections.</p></article><article><span className="chapter">05</span><h3>Des territoires qui changent</h3><p>Les bureaux et leurs contours peuvent évoluer. Gouzangrez et Commeny ont fusionné en 2024 ; Gadancourt et Avernes en 2018. La comparaison communale réunit ces anciennes communes.</p><p>Les contours de bureaux sont des reconstructions. Un identifiant identique entre deux années ne garantit pas une frontière identique.</p></article><article><span className="chapter">06</span><h3>Contexte et explication</h3><p>Le contexte sociodémographique décrit des habitants, pas directement les électeurs. Les données au bureau sont des estimations spatiales à partir des IRIS.</p><p>Une proximité entre âge, diplôme et participation ne prouve pas un lien de cause à effet. L’atlas ne prédit pas le vote individuel ou le résultat de 2027.</p></article></div></section>}
+      {message&&<p role="status" className="notice">{message}</p>}
+      <footer className="app-footer"><span>DDT du Val-d’Oise · Sources publiques · {ELECTIONS.length} scrutins</span><button className="text-button" onClick={()=>dialog.current?.showModal()}>Provenance et limites des données</button></footer>
     </div>
-  );
+    <dialog ref={dialog} className="sources-dialog"><header><h2>Sources et méthode</h2><button className="quiet" onClick={()=>dialog.current?.close()}>Fermer</button></header><p>Les résultats proviennent des publications du ministère de l’Intérieur. Le contexte démographique estimé est présenté séparément.</p><ul>{sources.map(s=><li key={s.id}><a href={s.url} target="_blank" rel="noreferrer">{s.label} ↗</a><p>{s.producer} · {s.frequency}</p></li>)}</ul><h3>Contrôles et couverture</h3><p>Les inscriptions, votants et bulletins sont contrôlés arithmétiquement. Les résultats des circonscriptions législatives 2024 sont confrontés aux totaux officiels. Les fichiers de traitement, la provenance et les empreintes des sources sont conservés dans le dépôt.</p>{coverage&&<p>Scrutin observé : {coverage.bureaux} bureaux avec résultats, {coverage.mapped} avec contour ; {coverage.incomplete} avec détail candidat incomplet. {coverage.unassigned_canton} bureaux sans rattachement cantonal et {coverage.unassigned_circo} sans rattachement à une circonscription.</p>}<p>Un résultat « complet » désigne un contrôle arithmétique réussi ; il ne certifie pas le contour géographique. Les regroupements cantonaux reposent sur un référentiel 2021 et les circonscriptions sur les référentiels disponibles 2022/2024.</p><a href="https://github.com/DDT95/elections/blob/main/DATA.md" target="_blank" rel="noreferrer">Documentation détaillée des données ↗</a></dialog>
+  </main>;
 }
 
-function Section({ title, state, children }: { title: string; state: string; children: React.ReactNode }) {
-  return (
-    <section className="elec-section">
-      <div className="elec-section-title">
-        <h3>{title}</h3>
-        <span className="elec-state">{state}</span>
-      </div>
-      {children}
-    </section>
-  );
-}
-
-function Kpi({ label, value }: { label: string; value: string }) {
-  return (
-    <div>
-      <span>{label}</span>
-      <strong>{value}</strong>
-    </div>
-  );
-}
-
-function PopulationSparkline({ data }: { data: { annee: number; population: number }[] }) {
-  if (!data.length) return null;
-  const w = 260;
-  const h = 56;
-  const pad = 4;
-  const min = Math.min(...data.map((d) => d.population));
-  const max = Math.max(...data.map((d) => d.population));
-  const range = max - min || 1;
-  const x = (i: number) => pad + (i / (data.length - 1 || 1)) * (w - pad * 2);
-  const y = (v: number) => h - pad - ((v - min) / range) * (h - pad * 2);
-  const points = data.map((d, i) => `${x(i)},${y(d.population)}`).join(" ");
-  const first = data[0];
-  const last = data[data.length - 1];
-  const delta = last.population - first.population;
-  const pct = first.population ? (delta / first.population) * 100 : 0;
-  return (
-    <div className="elec-population">
-      <svg width={w} height={h} viewBox={`0 0 ${w} ${h}`} role="img" aria-label="Évolution de la population">
-        <polyline points={points} fill="none" stroke="var(--blue, #000091)" strokeWidth={2} />
-        {data.map((d, i) => (
-          <circle key={d.annee} cx={x(i)} cy={y(d.population)} r={i === data.length - 1 ? 3 : 1.5} fill="var(--blue, #000091)" />
-        ))}
-      </svg>
-      <div className="elec-population-legend">
-        <span>
-          {first.annee} : <strong>{first.population.toLocaleString("fr-FR")}</strong> hab.
-        </span>
-        <span>
-          {last.annee} : <strong>{last.population.toLocaleString("fr-FR")}</strong> hab.
-        </span>
-        <span className={delta >= 0 ? "up" : "down"}>
-          {delta >= 0 ? "+" : ""}
-          {delta.toLocaleString("fr-FR")} ({pct >= 0 ? "+" : ""}
-          {pct.toFixed(1)} %) depuis {first.annee}
-        </span>
-      </div>
-    </div>
-  );
-}
-
-// Liste de résultats sous forme de cartes colorées par nuance (plutôt qu'un tableau plat) :
-// liseré et pastille de couleur à gauche = famille politique (app/lib/nuances.ts), barre
-// proportionnelle au score, trophée sur la tête de liste/candidat arrivé en tête. Reste
-// sobre (pas de logo de parti, jamais utilisé — voir DATA.md) tout en donnant une lecture
-// plus immédiate qu'un tableau pour un scrutin à de nombreuses listes (municipales).
-function CandidateTable({ candidats }: { candidats: UnitResult["candidats"] }) {
-  const max = Math.max(...candidats.map((c) => c.pct_exprimes), 1);
-  return (
-    <div className="elec-cand-list">
-      {candidats.map((c, i) => {
-        const color = colorForCandidate(c.nom, c.nuance);
-        const info = nuanceInfo(c.nuance);
-        return (
-          <div key={i} className={`elec-cand-card ${i === 0 ? "lead" : ""}`} style={{ borderLeftColor: color }}>
-            <div className="elec-cand-card-head">
-              <span className="elec-cand-name">
-                {i === 0 && (
-                  <span className="elec-cand-trophy" aria-hidden="true" title="Arrivé·e en tête">
-                    ★
-                  </span>
-                )}
-                {c.prenom} {c.nom}
-              </span>
-              <span className="elec-nuance-pill" style={{ background: color }} title={info.label}>
-                {c.nuance || "—"}
-              </span>
-            </div>
-            <div className="elec-cand-bar-track">
-              <div className="elec-cand-bar-fill" style={{ width: `${(c.pct_exprimes / max) * 100}%`, background: color }} />
-            </div>
-            <div className="elec-cand-card-foot">
-              <span>{info.label}</span>
-              <span className="num">
-                {c.voix.toLocaleString("fr-FR")} voix · {c.pct_exprimes.toFixed(2)} %
-              </span>
-            </div>
-          </div>
-        );
-      })}
-    </div>
-  );
-}
+function LoadState({data}:{data:{loading:boolean;error:string|null;retry:()=>void}}){return data.error?<div role="alert" className="notice">{data.error} <button onClick={data.retry}>Réessayer</button></div>:data.loading?<div className="loading" role="status">Chargement des données…</div>:null;}
+function Kpi({label,value,note}:{label:string;value:string;note:string}){return <article className="kpi"><span>{label}</span><strong>{value}</strong><small>{note}</small></article>;}
+function ParticipationBar({unit:u}:{unit:Result}){return <div className="participation-strip" role="img" aria-label={`${percent(ratio(u.exprimes,u.inscrits))} exprimés, ${percent(ratio(u.blancs+u.nuls,u.inscrits))} blancs et nuls, ${percent(ratio(u.abstentions,u.inscrits))} abstentions, en part des inscrits`}><span style={{width:`${ratio(u.exprimes,u.inscrits)??0}%`,background:'#000091'}}/><span style={{width:`${ratio(u.blancs+u.nuls,u.inscrits)??0}%`,background:'#9dbfe0'}}/><span style={{width:`${ratio(u.abstentions,u.inscrits)??0}%`,background:'#d8dfe3'}}/></div>;}
+function CandidateResults({unit:u}:{unit:Result}){if(u.mixed_contests)return <p className="notice">Ce territoire regroupe plusieurs élections locales. Sélectionnez un bureau de vote ou l’échelle propre au scrutin pour lire les candidats sans les mettre artificiellement en concurrence.</p>;
+  return <>{u.quality!=='complete'&&<p className="notice">{u.quality==='multi_vote'?'Municipales 2020 : plusieurs suffrages par bulletin étaient possibles dans ces communes. La somme des scores peut dépasser 100 %. Aucun classement de listes n’est déduit.':'Détail candidat incomplet : aucun candidat en tête n’est déduit.'}</p>}<div className="candidate-results">{u.candidats.map((c,i)=><div className="candidate" key={`${candidateKey(c)}-${i}`}><div><strong>{c.prenom} {c.nom}</strong><span>{percent(c.pct_exprimes)}</span></div><div className="candidate-track"><i style={{width:`${Math.min(100,c.pct_exprimes)}%`,background:colorForCandidate(c.nom,c.nuance)}}/></div><small>{number(c.voix)} voix · {percent(ratio(c.voix,u.inscrits))} des inscrits{c.nuance?` · ${c.nuance}`:''}</small></div>)}</div>{canReadLeader(u)&&u.candidats.length>1&&<p className="muted">Écart entre les deux premiers : {number(u.candidats[0].voix-u.candidats[1].voix)} voix, soit {points(u.candidats[0].pct_exprimes-u.candidats[1].pct_exprimes)} des exprimés.</p>}</>;}
+function ContextRate({label,value,denominator}:{label:string;value:number|null;denominator:string}){return <div className="context-rate"><span>{label}<small>{denominator}</small></span><strong>{percent(value)}</strong></div>;}
+function Population({data}:{data:{annee:number;population:number}[]}){if(!data.length)return null;const min=Math.min(...data.map(d=>d.population)),max=Math.max(...data.map(d=>d.population)),first=data[0],last=data[data.length-1];return <div className="population"><h4>Population municipale · INSEE</h4><svg viewBox="0 0 300 70" role="img" aria-label={`Population : ${first.population} habitants en ${first.annee}, ${last.population} en ${last.annee}. Axe vertical de ${min} à ${max} habitants.`}><polyline fill="none" stroke="#000091" strokeWidth="2" points={data.map((d,i)=>`${5+i/(data.length-1||1)*290},${60-(d.population-min)/(max-min||1)*50}`).join(' ')}/></svg><p>{first.annee} : {number(first.population)} → {last.annee} : <strong>{number(last.population)} habitants</strong></p><small>Échelle verticale ajustée ({number(min)}–{number(max)}). Série indépendante des résultats électoraux.</small></div>;}

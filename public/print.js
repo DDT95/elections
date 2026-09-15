@@ -1,66 +1,18 @@
-(function () {
-  const opener = window.opener;
-  const app = opener && opener.electionsPrintApp;
-  const analysis = app && app.analysis;
-  if (!app || !analysis) {
-    document.body.innerHTML =
-      '<p style="padding:40px;font:16px Marianne,Arial,sans-serif">' +
-      "Cette page s’ouvre depuis le bouton « Imprimer la fiche » de l’Atlas électoral, une fois une unité sélectionnée." +
-      "</p>";
-    return;
-  }
-
-  const { unit, election, tourLabel, scale } = analysis;
-  const scaleLabels = { commune: "Commune", bv: "Bureau de vote", canton: "Canton", circonscription: "Circonscription" };
-
-  document.getElementById("printTitle").textContent = unit.nom;
-  document.getElementById("printSubtitle").textContent = `${scaleLabels[scale] || scale} · ${election} · ${tourLabel}`;
-
-  const today = new Date().toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" });
-  document.getElementById("printSources").innerHTML =
-    `<span>Sources : Ministère de l'Intérieur, data.gouv.fr (agrégation Etalab), IGN</span><br/><span>Édité le ${today} — DDT 95</span>`;
-
-  document.getElementById("printSide").innerHTML = `
-    <div class="side-card">
-      <h2>Participation</h2>
-      <div class="side-row"><span>Inscrits</span><strong>${unit.inscrits.toLocaleString("fr-FR")}</strong></div>
-      <div class="side-row"><span>Votants</span><strong>${unit.votants.toLocaleString("fr-FR")}</strong></div>
-      <div class="side-row"><span>Abstention</span><strong>${unit.pct_abstention.toFixed(1)} %</strong></div>
-      <div class="side-row"><span>Participation</span><strong>${unit.pct_participation.toFixed(1)} %</strong></div>
-      <div class="side-row"><span>Blancs</span><strong>${unit.blancs.toLocaleString("fr-FR")}</strong></div>
-      <div class="side-row"><span>Nuls</span><strong>${unit.nuls.toLocaleString("fr-FR")}</strong></div>
-    </div>
-  `;
-
-  const rows = (unit.candidats || [])
-    .map(
-      (c, i) =>
-        `<tr class="${i === 0 ? "lead" : ""}"><td>${c.prenom || ""} ${c.nom || ""}</td><td class="num">${c.voix.toLocaleString("fr-FR")}</td><td class="num">${c.pct_exprimes.toFixed(2)} %</td></tr>`,
-    )
-    .join("");
-  document.getElementById("printTable").innerHTML = `
-    <table>
-      <thead><tr><th>Candidat / liste</th><th>Voix</th><th>% exprimés</th></tr></thead>
-      <tbody>${rows}</tbody>
-    </table>
-  `;
-
-  const statusEl = document.getElementById("pdfStatus");
-  async function buildPdf() {
-    const node = document.getElementById("printPage");
-    const canvas = await html2canvas(node, { scale: 2.2, useCORS: true, backgroundColor: "#ffffff" });
-    const { jsPDF } = window.jspdf;
-    const doc = new jsPDF({ orientation: "landscape", unit: "mm", format: "a4" });
-    const w = 297,
-      h = (canvas.height * w) / canvas.width;
-    doc.addImage(canvas.toDataURL("image/jpeg", 0.92), "JPEG", 0, 0, w, h, undefined, "FAST");
-    const blobUrl = URL.createObjectURL(doc.output("blob"));
-    window.location.replace(blobUrl);
-  }
-  setTimeout(() => {
-    buildPdf().catch((err) => {
-      console.error(err);
-      statusEl.textContent = "La génération du PDF a échoué. Réessayez depuis la fiche.";
-    });
-  }, 500);
+(function(){
+  const token=location.hash.slice(1),content=document.getElementById('content');
+  let data;
+  try{const raw=localStorage.getItem('elections-print-'+token);data=raw?JSON.parse(raw):null;localStorage.removeItem('elections-print-'+token);}catch{}
+  if(!data){content.textContent='Ouvrez une fiche territoriale puis utilisez le bouton « Imprimer / PDF ».';document.getElementById('printButton').disabled=true;return;}
+  const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const num=n=>Number(n).toLocaleString('fr-FR',{maximumFractionDigits:0});
+  const pct=n=>n==null?'—':Number(n).toLocaleString('fr-FR',{maximumFractionDigits:1})+' %';
+  const u=data.unit;
+  const status=u.quality==='partial'?'Détail candidat incomplet':u.quality==='multi_vote'?'Plusieurs votes possibles par bulletin':u.partial_scope?'Périmètre partiel à ce tour':'Résultats arithmétiquement complets';
+  content.innerHTML=`<header><img src="prefet-val-doise-logo.png" alt="Préfet du Val-d’Oise"><div><p>ATLAS ÉLECTORAL DU VAL-D’OISE</p><h1>${esc(u.nom)}</h1><p>${esc(data.election)} · ${esc(data.scale)}</p></div></header><p class="notice">${status}${u.partial_scope?' · Seuls '+num(u.bureaux_de_vote)+' bureaux sur '+num(u.nb_bureaux_attendus)+' sont concernés.':''}</p><h2>Participation</h2><table><thead><tr><th>Inscrits</th><th>Votants</th><th>Participation</th><th>Abstentions</th><th>Blancs</th><th>Nuls</th><th>Exprimés</th></tr></thead><tbody><tr><td>${num(u.inscrits)}</td><td>${num(u.votants)}</td><td>${pct(u.pct_participation)}</td><td>${num(u.abstentions)}</td><td>${num(u.blancs)}</td><td>${num(u.nuls)}</td><td>${num(u.exprimes)}</td></tr></tbody></table><p>Participation sur le périmètre départemental de ce tour : ${pct(data.participation)}. Taux calculés sur les inscrits.</p>`;
+  if(u.mixed_contests)content.innerHTML+='<p class="notice">Ce territoire regroupe plusieurs élections locales : les candidats ne sont pas présentés dans un classement commun.</p>';
+  else content.innerHTML+=`<h2>Résultats par candidat / liste</h2><table><thead><tr><th>Candidat / liste</th><th>Nuance</th><th>Voix</th><th>% exprimés</th><th>% inscrits</th></tr></thead><tbody>${u.candidats.map(c=>`<tr><td>${esc(c.prenom)} ${esc(c.nom)}</td><td>${esc(c.nuance)}</td><td>${num(c.voix)}</td><td>${pct(c.pct_exprimes)}</td><td>${pct(u.inscrits?c.voix*100/u.inscrits:null)}</td></tr>`).join('')}</tbody></table><p>Arriver en tête dans un bureau ou une commune ne suffit pas à déterminer l’élu du scrutin. Pour les municipales 2020 à plusieurs votes possibles, la somme des scores peut dépasser 100 %.</p>`;
+  const c=data.context;
+  if(c)content.innerHTML+=`<h2>Contexte sociodémographique estimé · RP 2022</h2><p>${c.covered}/${c.total} bureaux associés au contexte. Estimations spatiales du projet André à partir des IRIS INSEE, concernant les habitants et non les électeurs.</p><table><thead><tr><th>15–24 ans / population</th><th>65 ans et plus / population</th><th>Cadres / 15 ans et plus (CSP)</th><th>Ouvriers / 15 ans et plus (CSP)</th><th>Supérieur / 15 ans et plus non scolarisés</th></tr></thead><tbody><tr><td>${pct(c.youth)}</td><td>${pct(c.senior)}</td><td>${pct(c.cadres)}</td><td>${pct(c.workers)}</td><td>${pct(c.graduates)}</td></tr></tbody></table><p>Ces estimations ne démontrent aucune causalité ni aucun comportement électoral individuel.</p>`;
+  content.innerHTML+=`<footer><h2>Sources et limites</h2><p>Résultats : Ministère de l’Intérieur, publications définitives et exports DGRC. Contours reconstitués, non opposables ; couverture géographique distincte des résultats. Pour les seconds tours, les totaux concernent uniquement les bureaux ayant voté.</p><p>Provenance détaillée : https://github.com/DDT95/elections/blob/main/DATA.md</p><p>Fiche éditée le ${esc(new Date(data.date).toLocaleDateString('fr-FR'))} · DDT du Val-d’Oise</p></footer>`;
+  document.getElementById('printButton').addEventListener('click',()=>window.print());
 })();

@@ -27,6 +27,8 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - run: npm test
+      - run: npx tsc --noEmit
       - run: npm run build:github
       - run: cp dist-github/index.html dist-github/404.html
       - uses: actions/configure-pages@v5
