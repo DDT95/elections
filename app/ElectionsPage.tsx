@@ -11,6 +11,7 @@ const basePath = (import.meta as any).env?.BASE_URL?.replace(/\/$/, "") || "";
 
 type SourceEntry = { id: string; label: string; producer: string; url: string; frequency: string };
 type SocioProfile = { population: number; jeunes: number; seniors: number; diplomesSup: number };
+type ElectionSnapshot = { key: string; election: string; tour: string; date: string; result: UnitResult };
 
 function aggregateSocio(data: any): Record<string, SocioProfile> {
   const totals: Record<string, Record<string, number>> = {};
@@ -93,6 +94,7 @@ export default function ElectionsPage() {
   const [bvData, setBvData] = useState<Record<string, any>>({});
   const [populationData, setPopulationData] = useState<Record<string, { annee: number; population: number }[]>>({});
   const [socioData, setSocioData] = useState<Record<string, SocioProfile>>({});
+  const [allElectionData, setAllElectionData] = useState<Record<string, ElectionCommuneFile>>({});
 
   const [selectedCode, setSelectedCode] = useState<string | null>(null);
   const [hoveredUnit, setHoveredUnit] = useState<{ name: string; result: UnitResult | null } | null>(null);
@@ -137,6 +139,13 @@ export default function ElectionsPage() {
       .then((d) => setElectionData((prev) => ({ ...prev, [dataKey]: d })))
       .catch(() => {});
   }, [dataKey]);
+
+  useEffect(() => {
+    const tours = ELECTIONS.flatMap((item) => item.tours.map((itemTour) => ({ election: item, tour: itemTour })));
+    Promise.all(tours.map(async ({ tour: itemTour }) => [itemTour.file, await fetchJson<ElectionCommuneFile>(`/data/elections/${itemTour.file}.json`)] as const))
+      .then((entries) => setAllElectionData(Object.fromEntries(entries)))
+      .catch(() => {});
+  }, []);
 
   useEffect(() => {
     const circoKey = `${dataKey}-circo`;
@@ -456,14 +465,14 @@ export default function ElectionsPage() {
 
   const drawerOpen = !!selectedUnit;
   const selectedSocio = scale === "commune" && selectedCode ? socioData[selectedCode] : null;
-  const portraitUnit = hoveredUnit?.result ?? selectedUnit ?? (scale === "commune" ? current?.communes["95127"] : null);
-  const portraitName = hoveredUnit?.name ?? selectedUnit?.nom ?? (scale === "commune" ? current?.communes["95127"]?.nom : null);
-  const portraitCode = hoveredUnit ? "Survol" : selectedCode ?? (scale === "commune" ? "95127" : "");
-  const portraitRunnerUp = portraitUnit?.candidats?.[1];
-  const portraitGap = portraitUnit?.tete && portraitRunnerUp
-    ? portraitUnit.tete.pct_exprimes - portraitRunnerUp.pct_exprimes
-    : null;
-
+  const communeSnapshots = useMemo<ElectionSnapshot[]>(() => {
+    if (scale !== "commune" || !selectedCode) return [];
+    return ELECTIONS.flatMap((item) => item.tours.flatMap((itemTour) => {
+      const file = allElectionData[itemTour.file];
+      const result = file?.communes[selectedCode];
+      return result ? [{ key: itemTour.file, election: item.shortLabel, tour: itemTour.label, date: file.date, result }] : [];
+    })).sort((a, b) => a.date.localeCompare(b.date));
+  }, [allElectionData, scale, selectedCode]);
   function resetSelection() {
     setSelectedCode(null);
   }
@@ -708,30 +717,7 @@ export default function ElectionsPage() {
 
         <section className="elec-map-shell">
           <div ref={mapNode} className="elec-map" aria-label="Carte électorale du Val-d'Oise" />
-          {portraitUnit && (
-            <div className="elec-orbit" aria-live="polite">
-              <article className="elec-orbit-card result">
-                <h3>Résultat</h3>
-                <span>En tête</span>
-                <strong className="candidate-name">{portraitUnit.tete ? `${portraitUnit.tete.prenom ?? ""} ${portraitUnit.tete.nom ?? ""}` : "Non disponible"}</strong>
-                <b>{portraitUnit.tete ? `${portraitUnit.tete.pct_exprimes.toFixed(1)} %` : "—"}</b>
-                <small>{portraitUnit.tete?.nuance ?? "Nuance non renseignée"}</small>
-              </article>
-              <article className="elec-orbit-card participation">
-                <h3>Participation</h3>
-                <span>Part des inscrits ayant voté</span>
-                <strong>{portraitUnit.pct_participation.toFixed(1)} %</strong>
-                <i className="participation-track"><em style={{ width: `${portraitUnit.pct_participation}%` }} /></i>
-                <small>{portraitUnit.votants.toLocaleString("fr-FR")} votants sur {portraitUnit.inscrits.toLocaleString("fr-FR")} inscrits</small>
-              </article>
-              <div className="elec-focus-label"><strong>{portraitName}</strong><span>Sous la loupe · {portraitCode}</span></div>
-              <article className="elec-orbit-card electorate">
-                <h3>Corps électoral</h3>
-                <div><span>Inscrits<strong>{portraitUnit.inscrits.toLocaleString("fr-FR")}</strong><small>{portraitUnit.exprimes.toLocaleString("fr-FR")} exprimés</small></span><span>Abstention<strong>{portraitUnit.pct_abstention.toFixed(1)} %</strong><small>{portraitUnit.abstentions.toLocaleString("fr-FR")} personnes</small></span><span>Écart entre les deux premiers<strong>{portraitGap === null ? "—" : `${portraitGap.toFixed(1)} pts`}</strong><small>Lecture du rapport de forces</small></span></div>
-                <button type="button" onClick={() => portraitCode !== "Survol" && setSelectedCode(portraitCode)}>Voir toutes les données</button>
-              </article>
-            </div>
-          )}
+          {hoveredUnit && <div className="elec-hover-card compact" aria-live="polite"><strong>{hoveredUnit.name}</strong>{hoveredUnit.result ? <><span>{metricInfo(hoveredUnit.result).label}</span><small>Participation {hoveredUnit.result.pct_participation.toFixed(1)} % · cliquez pour la synthèse complète</small></> : <span>Résultat indisponible</span>}</div>}
           {scale === "canton" && election.status === "reel" && !cantonData[`${dataKey}-canton`] && (
             <div
               style={{
@@ -795,13 +781,13 @@ export default function ElectionsPage() {
                     <Kpi label="Nuls" value={selectedUnit.nuls.toLocaleString("fr-FR")} />
                   </div>
                 </Section>
-                <Section title="Résultats par candidat" state={selectedUnit.candidats.length ? `${selectedUnit.candidats.length} candidats` : "À compléter"}>
-                  {selectedUnit.candidats.length ? (
-                    <CandidateTable candidats={selectedUnit.candidats} />
-                  ) : (
-                    <p className="elec-empty">Le détail par liste ou candidat n’est pas disponible pour ce scrutin.</p>
-                  )}
-                </Section>
+                {scale === "commune" ? (
+                  <CommuneSynthesis snapshots={communeSnapshots} />
+                ) : (
+                  <Section title="Résultats par candidat" state={selectedUnit.candidats.length ? `${selectedUnit.candidats.length} candidats` : "Indisponible"}>
+                    {selectedUnit.candidats.length ? <CandidateTable candidats={selectedUnit.candidats} /> : <p className="elec-empty">Le détail par liste ou candidat n’est pas disponible pour ce scrutin.</p>}
+                  </Section>
+                )}
                 {scale === "commune" && (
                   <Section
                     title="Évolution de la population"
@@ -982,6 +968,71 @@ function PopulationSparkline({ data }: { data: { annee: number; population: numb
       </div>
     </div>
   );
+}
+
+type PoliticalGroup = { sensitivity: string; family: string };
+function politicalGroup(nuance: string | null, fullName: string): PoliticalGroup {
+  const code = nuance?.toUpperCase().trim() ?? "";
+  const name = fullName.toUpperCase();
+  if (["EXG", "LEXG", "BC-EXG"].includes(code) || name.includes("ARTHAUD") || name.includes("POUTOU")) return { sensitivity: "extreme_left", family: "extreme_left" };
+  if (["FI", "LFI"].includes(code) || name.includes("MÉLENCHON") || name.includes("MELENCHON") || name.includes("LFI")) return { sensitivity: "left", family: "lfi" };
+  if (["COM", "LCOM", "BC-COM"].includes(code) || name.includes("ROUSSEL")) return { sensitivity: "left", family: "pcf" };
+  if (["ECO", "LECO", "VEC", "LVEC", "BC-ECO"].includes(code) || name.includes("JADOT")) return { sensitivity: "left", family: "ecologist" };
+  if (["UG", "LUG", "UGE", "BC-UG", "BC-UGE", "SOC", "LSOC", "BC-SOC", "RDG", "BC-RDG", "DVG", "LDVG", "BC-DVG"].includes(code) || name.includes("HIDALGO")) return { sensitivity: "left", family: "social_left" };
+  if (["ENS", "LENS", "REM", "LREM", "BC-REM"].includes(code) || name.includes("MACRON")) return { sensitivity: "center", family: "presidential" };
+  if (["UDI", "LUD", "MDM", "LMDM", "LUC", "UC", "BC-UDI", "BC-UC", "BC-UCD", "BC-UD"].includes(code)) return { sensitivity: "center", family: "center" };
+  if (["LR", "LLR", "DR", "BC-LR"].includes(code) || name.includes("FILLON") || name.includes("PÉCRESSE") || name.includes("PECRESSE")) return { sensitivity: "right", family: "lr" };
+  if (["DVD", "LDVD", "DVC", "LDVC", "BC-DVD", "BC-DVC"].includes(code)) return { sensitivity: "right", family: "other_right" };
+  if (["RN", "LRN", "BC-RN"].includes(code) || name.includes("LE PEN") || name.includes("BARDELLA")) return { sensitivity: "far_right", family: "rn" };
+  if (["REC", "LREC", "EXD", "LEXD", "UXD"].includes(code) || name.includes("ZEMMOUR")) return { sensitivity: "far_right", family: "reconquest" };
+  return { sensitivity: "other", family: "other" };
+}
+
+function politicalScores(result: UnitResult, dimension: "sensitivity" | "family") {
+  const scores: Record<string, number> = {};
+  result.candidats.forEach((candidate) => {
+    const group = politicalGroup(candidate.nuance, `${candidate.prenom ?? ""} ${candidate.nom ?? ""}`);
+    const key = group[dimension];
+    scores[key] = (scores[key] ?? 0) + candidate.pct_exprimes;
+  });
+  return scores;
+}
+
+function CommuneSynthesis({ snapshots }: { snapshots: ElectionSnapshot[] }) {
+  const firstRounds = snapshots.filter((snapshot) => snapshot.key.endsWith("-t1") || !snapshot.key.match(/-t\d$/));
+  const sensitivities = [
+    { id: "extreme_left", label: "Extrême gauche", color: "#7a0c0c" },
+    { id: "left", label: "Gauche", color: "#e4287c" },
+    { id: "center", label: "Centre", color: "#e8b62f" },
+    { id: "right", label: "Droite", color: "#2878c8" },
+    { id: "far_right", label: "Extrême droite", color: "#14213d" },
+  ];
+  const families = [
+    { id: "lfi", label: "LFI", color: "#ce0500" }, { id: "social_left", label: "Gauche sociale", color: "#e4287c" },
+    { id: "ecologist", label: "Écologistes", color: "#18753c" }, { id: "presidential", label: "Majorité présidentielle", color: "#e8b62f" },
+    { id: "lr", label: "LR", color: "#0066cc" }, { id: "rn", label: "RN", color: "#14213d" }, { id: "reconquest", label: "Reconquête", color: "#4b2e83" },
+  ];
+  return <>
+    <Section title="Évolution par sensibilité" state={`${firstRounds.length} premiers tours`}>
+      <div className="sensitivity-legend">{sensitivities.map((item) => <span key={item.id}><i style={{background:item.color}}/>{item.label}</span>)}</div>
+      <div className="sensitivity-history">{firstRounds.map((snapshot) => { const scores = politicalScores(snapshot.result, "sensitivity"); return <article key={snapshot.key}><header><strong>{snapshot.election}</strong><span>{snapshot.date.slice(0,4)}</span></header><div>{sensitivities.map((item) => { const value=scores[item.id]??0; return value>0 ? <i key={item.id} style={{width:`${value}%`,background:item.color}} title={`${item.label} : ${value.toFixed(1)} %`}>{value>=9?`${value.toFixed(0)} %`:""}</i>:null;})}</div></article>;})}</div>
+      <p className="elec-synthesis-intro">Chaque ligne totalise les voix par grande sensibilité au premier tour. Le reliquat correspond aux candidatures diverses ou non classées.</p>
+    </Section>
+    <Section title="Évolution par famille politique" state="Scores comparables">
+      <div className="family-trends">{families.map((family) => { const points=firstRounds.map(snapshot=>({snapshot,value:politicalScores(snapshot.result,"family")[family.id]})); const comparable=points.filter(point=>point.value!==undefined); const delta=(comparable.at(-1)?.value??0)-(comparable[0]?.value??0); return <article key={family.id} style={{"--family-color":family.color} as CSSProperties}><header><strong>{family.label}</strong><b className={delta>=0?"up":"down"}>{delta>=0?"+":""}{delta.toFixed(1)} pts</b></header><div>{points.map(({snapshot,value})=><span key={snapshot.key} title={`${snapshot.election} ${snapshot.date.slice(0,4)}`}><i>{value!==undefined&&<em style={{height:`${Math.max(3,value)}%`}}/>}</i><small>{value===undefined?"—":value.toFixed(0)}</small></span>)}</div></article>;})}</div>
+      <p className="elec-synthesis-intro">Un tiret signifie que la famille ne présentait pas de candidature identifiable. La variation compare ses deux présences disponibles.</p>
+    </Section>
+    <Section title="Tous les résultats électoraux" state={`${snapshots.length} tours disponibles`}>
+      <p className="elec-synthesis-intro">Les quatre candidatures ou listes arrivées en tête à chaque tour.</p>
+      <div className="elec-all-elections">{snapshots.slice().reverse().map((snapshot) => <article key={snapshot.key}>
+        <header><div><strong>{snapshot.election}</strong><small>{snapshot.tour}</small></div><span>Participation <b>{snapshot.result.pct_participation.toFixed(1)} %</b></span></header>
+        <div>{snapshot.result.candidats.slice().sort((a,b) => b.pct_exprimes - a.pct_exprimes).slice(0,4).map((candidate, index) => {
+          const color = colorForCandidate(candidate.nom, candidate.nuance);
+          return <div className="elec-top-result" key={`${candidate.nom}-${candidate.prenom}-${index}`}><span className="rank">{index + 1}</span><div><strong>{candidate.prenom} {candidate.nom ?? nuanceInfo(candidate.nuance).label}</strong><i><em style={{ width: `${Math.max(0, Math.min(100, candidate.pct_exprimes))}%`, background: color }} /></i></div><b>{candidate.pct_exprimes.toFixed(1)} %</b></div>;
+        })}</div>
+      </article>)}</div>
+    </Section>
+  </>;
 }
 
 // Liste de résultats sous forme de cartes colorées par nuance (plutôt qu'un tableau plat) :
