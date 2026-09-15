@@ -1,6 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { CSSProperties } from "react";
+import L from "leaflet";
+import "leaflet/dist/leaflet.css";
 import { ELECTIONS, findElection } from "./lib/elections";
 import { colorForCandidate, sequentialColor, SEQUENTIAL_STEPS } from "./lib/color";
 import { nuanceInfo } from "./lib/nuances";
@@ -8,6 +10,7 @@ import type { ElectionCircoFile, ElectionCommuneFile, MetricId, Scale, UnitResul
 import electionSources from "../config/election-sources.json";
 
 const basePath = (import.meta as any).env?.BASE_URL?.replace(/\/$/, "") || "";
+const ATLAS_URL = "https://ddt95.github.io/atlas-territorial-95/";
 
 type SourceEntry = { id: string; label: string; producer: string; url: string; frequency: string };
 type SocioProfile = { population: number; jeunes: number; seniors: number; diplomesSup: number };
@@ -251,18 +254,17 @@ export default function ElectionsPage() {
   }, [current, metric, scoreCandidat]);
 
   // ---- Initialisation Leaflet ----
+  // Leaflet est importé comme module ES (voir l'import en tête de fichier) et donc intégré au
+  // bundle JS/CSS de l'application, plutôt que chargé depuis unpkg via une balise <script>
+  // injectée à l'exécution : sur un réseau qui bloque les CDN publics (constaté dans
+  // l'environnement de développement de cette session lui-même, voir DATA.md), un chargement
+  // dépendant d'unpkg ne se termine jamais et la carte reste vierge en permanence à l'ouverture,
+  // même avec le correctif mapReady ci-dessous (qui rejoue l'effet une fois la carte prête, mais
+  // ne peut rien si le script Leaflet lui-même n'arrive jamais). En bundlant Leaflet, il n'y a
+  // plus aucune requête réseau externe à attendre pour que `L` soit disponible.
   useEffect(() => {
-    if (!document.getElementById("elec-leaflet-css")) {
-      const css = document.createElement("link");
-      css.id = "elec-leaflet-css";
-      css.rel = "stylesheet";
-      css.href = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";
-      document.head.appendChild(css);
-    }
     const start = () => {
       if (mapRef.current || !mapNode.current) return;
-      const L = (window as any).L;
-      if (!L) return;
       if (mapNode.current.offsetWidth === 0) {
         requestAnimationFrame(start);
         return;
@@ -281,16 +283,7 @@ export default function ElectionsPage() {
       L.control.zoom({ position: "bottomright" }).addTo(map);
       setMapReady((n) => n + 1);
     };
-    const existing = document.querySelector<HTMLScriptElement>('script[data-elec-leaflet="true"]');
-    if ((window as any).L) start();
-    else if (existing) existing.addEventListener("load", start, { once: true });
-    else {
-      const script = document.createElement("script");
-      script.src = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js";
-      script.dataset.elecLeaflet = "true";
-      script.onload = start;
-      document.body.appendChild(script);
-    }
+    start();
   }, []);
 
   // Incrémenté une fois que la carte Leaflet est prête (script chargé + conteneur mesurable).
@@ -302,9 +295,8 @@ export default function ElectionsPage() {
   const [mapReady, setMapReady] = useState(0);
 
   useEffect(() => {
-    const L = (window as any).L;
     const map = mapRef.current;
-    if (!L || !map || !maskGeo || !mapReady) return;
+    if (!map || !maskGeo || !mapReady) return;
     if (!map.getPane("outside-mask")) {
       const pane = map.createPane("outside-mask");
       pane.style.zIndex = "350";
@@ -315,7 +307,9 @@ export default function ElectionsPage() {
       interactive: false,
       style: { stroke: false, fillColor: "#e7ebee", fillOpacity: 0.92 },
     }).addTo(map);
-    return () => mask.remove();
+    return () => {
+      mask.remove();
+    };
   }, [maskGeo, mapReady]);
 
   // ---- Détermination des valeurs par unité selon métrique ----
@@ -346,12 +340,11 @@ export default function ElectionsPage() {
 
   // ---- Rendu de la couche choroplèthe ----
   useEffect(() => {
-    const L = (window as any).L;
     const map = mapRef.current;
-    // Tant que Leaflet/la carte ne sont pas prêts, on ne peut rien construire ; cet effet sera
-    // rejoué automatiquement dès que mapReady passera à une valeur non nulle (cf. dépendances
+    // Tant que la carte n'est pas prête, on ne peut rien construire ; cet effet sera rejoué
+    // automatiquement dès que mapReady passera à une valeur non nulle (cf. dépendances
     // ci-dessous), donc l'abandon ici est temporaire et non définitif.
-    if (!L || !map) return;
+    if (!map) return;
     if (layerRef.current) {
       map.removeLayer(layerRef.current);
       layerRef.current = null;
@@ -600,15 +593,19 @@ export default function ElectionsPage() {
   return (
     <main className="elec-page">
       <header className="elec-header">
-        <div className="elec-header-logo">
+        <a href={ATLAS_URL} target="_blank" rel="noreferrer" aria-label="Ouvrir l'Atlas territorial du Val-d'Oise" className="elec-header-logo">
           <img src={`${basePath}/prefet-val-doise-logo.png`} alt="Préfet du Val-d'Oise" />
-        </div>
+        </a>
         <div className="elec-header-copy">
           <span>ATLAS ÉLECTORAL</span>
           <h1>Atlas électoral du Val-d'Oise</h1>
           <p>Résultats, participation et profil sociodémographique — communes, cantons, circonscriptions et département</p>
         </div>
-        <div className="elec-header-actions" />
+        <div className="elec-header-actions">
+          <a className="elec-backlink" href={ATLAS_URL} target="_blank" rel="noreferrer">
+            ← Retour à l'Atlas
+          </a>
+        </div>
       </header>
       <div className="elec-progress">
         <span style={{ width: loading ? "40%" : "100%" }} />
