@@ -581,25 +581,6 @@ export default function ElectionsPage() {
             <h2>Informations affichées</h2>
           </div>
 
-          <div className="elec-sidebar-block-title">Échelle d’analyse</div>
-          <div className="elec-switch-list">
-            {SCALES.map((s) => (
-              <label
-                key={s.id}
-                className="elec-switch"
-                style={{ "--switch-color": s.id === "commune" ? "#000091" : s.id === "bv" ? "#e1000f" : s.id === "canton" ? "#a558a0" : "#00a95f" } as CSSProperties}
-              >
-                <input type="radio" name="scale" checked={scale === s.id} onChange={() => { setScale(s.id); resetSelection(); }} />
-                <span><strong>{s.label}</strong><small>{s.id === "commune" ? "Lecture territoriale" : s.id === "bv" ? "Résultats les plus fins" : s.id === "canton" ? "21 cantons" : "10 circonscriptions"}</small></span>
-              </label>
-            ))}
-          </div>
-          {scale === "bv" && (
-            <p className="elec-scale-note">
-              Échelle bureau de vote : contours réels (810 bureaux, IGN/INSEE). Cliquez un bureau sur la carte pour sa fiche.
-            </p>
-          )}
-
           <div className="elec-sidebar-block-title">Élection</div>
           <select
             className="elec-select"
@@ -638,34 +619,6 @@ export default function ElectionsPage() {
             <p className="elec-scale-note warn">
               Les résultats officiels ne sont pas disponibles pour ce tour.
             </p>
-          )}
-
-          {tourStatus === "reel" && (
-            <>
-              <div className="elec-sidebar-block-title">Informations affichées</div>
-              <div className="elec-switch-list">
-                {METRICS.map((m) => (
-                  <label
-                    key={m.id}
-                    className="elec-switch"
-                    style={{ "--switch-color": m.id === "tete" ? "#000091" : m.id === "score_candidat" ? "#e8a33e" : m.id === "abstention" ? "#a558a0" : "#00a95f" } as CSSProperties}
-                  >
-                    <input type="radio" name="metric" checked={metric === m.id} onChange={() => setMetric(m.id)} />
-                    <span><strong>{m.label}</strong><small>{m.id === "tete" ? "Rapport de forces" : m.id === "score_candidat" ? "% des exprimés" : m.id === "abstention" ? "% des inscrits" : "Votants · inscrits"}</small></span>
-                  </label>
-                ))}
-              </div>
-              {metric === "score_candidat" && (
-                <select className="elec-select" value={scoreCandidat} onChange={(e) => setScoreCandidat(e.target.value)}>
-                  {candidateList.map(([key, label]) => (
-                    <option key={key} value={key}>
-                      {label}
-                    </option>
-                  ))}
-                </select>
-              )}
-              {metric !== "none" && <Legend metric={metric} scoreCandidat={scoreCandidat} current={current} bounds={metricRange} />}
-            </>
           )}
 
           <div className="elec-sidebar-block-title">Couches et export</div>
@@ -753,7 +706,7 @@ export default function ElectionsPage() {
               </div>
             </div>
           )}
-          {metric === "none" && <div className="elec-map-onboarding"><strong>Commencez par choisir une lecture</strong><span><b>1</b> Sélectionnez une information dans le volet gauche</span><span><b>2</b> Survolez une commune pour lire sa valeur</span><span><b>3</b> Cliquez pour ouvrir son portrait complet</span></div>}
+          {metric === "none" && <div className="elec-map-onboarding"><strong>Explorez les communes du Val-d’Oise</strong><span><b>1</b> Survolez une commune pour l’identifier</span><span><b>2</b> Cliquez pour ouvrir son portrait complet</span></div>}
           <div className="elec-hint"><span><strong>Survolez pour lire · cliquez pour ouvrir la synthèse</strong></span></div>
         </section>
 
