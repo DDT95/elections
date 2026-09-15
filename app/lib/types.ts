@@ -30,7 +30,7 @@ export type ElectionCommuneFile = {
   tour: number;
   date: string;
   label?: string;
-  status: "reel" | "a_completer";
+  status: "publie" | "a_completer";
   note?: string;
   source?: { producer: string; dataset: string; url: string };
   communes: Record<string, UnitResult>;
@@ -40,7 +40,7 @@ export type ElectionCircoFile = {
   election: string;
   tour: number;
   date: string;
-  status: "reel" | "a_completer";
+  status: "publie" | "a_completer";
   note?: string;
   circonscriptions: Record<string, UnitResult>;
 };
@@ -52,7 +52,7 @@ export type ElectionDef = {
   label: string;
   shortLabel: string;
   tours: { id: string; label: string; file: string }[];
-  status: "reel" | "a_completer";
+  status: "publie" | "a_completer";
 };
 
 export type MetricId = "tete" | "score_candidat" | "abstention" | "participation";

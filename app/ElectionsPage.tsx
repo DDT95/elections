@@ -118,7 +118,7 @@ export default function ElectionsPage() {
   const tour = election.tours.find((t) => t.id === tourId) ?? election.tours[0];
   const dataKey = tour.file;
   const current = electionData[dataKey];
-  const tourStatus: "reel" | "a_completer" = current?.status ?? election.status;
+  const tourStatus: "publie" | "a_completer" = current?.status ?? election.status;
 
   // ---- Chargement des données statiques ----
   useEffect(() => {
@@ -160,7 +160,7 @@ export default function ElectionsPage() {
 
   useEffect(() => {
     const circoKey = `${dataKey}-circo`;
-    if (circoData[circoKey] || election.status !== "reel") return;
+    if (circoData[circoKey] || election.status !== "publie") return;
     fetchJson<ElectionCircoFile>(`/data/elections/${dataKey}-circo.json`)
       .then((d) => setCircoData((prev) => ({ ...prev, [circoKey]: d })))
       .catch(() => {});
@@ -168,14 +168,14 @@ export default function ElectionsPage() {
 
   useEffect(() => {
     const cantonKey = `${dataKey}-canton`;
-    if (cantonData[cantonKey] !== undefined || election.status !== "reel") return;
+    if (cantonData[cantonKey] !== undefined || election.status !== "publie") return;
     fetchJson<any>(`/data/elections/${dataKey}-canton.json`)
       .then((d) => setCantonData((prev) => ({ ...prev, [cantonKey]: d })))
       .catch(() => setCantonData((prev) => ({ ...prev, [cantonKey]: null })));
   }, [dataKey, election.status]);
 
   useEffect(() => {
-    if (election.status !== "reel") return;
+    if (election.status !== "publie") return;
     const bvKey = `${dataKey}-bv`;
     if (bvData[bvKey] || bvData[bvKey] === null) return;
     fetchJson<any>(`/data/elections/${dataKey}-bv.json`)
@@ -651,7 +651,7 @@ export default function ElectionsPage() {
         <section className="elec-map-shell">
           <div ref={mapNode} className="elec-map" aria-label="Carte électorale du Val-d'Oise" />
           {hoveredUnit && <div className="elec-hover-card compact" aria-live="polite"><strong>{hoveredUnit.name}</strong>{hoveredUnit.result ? <>{metric !== "none" && <span>{metricInfo(hoveredUnit.result).label}</span>}<small>Participation {hoveredUnit.result.pct_participation.toFixed(1)} % · cliquez pour la synthèse complète</small></> : <span>Résultat indisponible</span>}</div>}
-          {scale === "canton" && election.status === "reel" && !cantonData[`${dataKey}-canton`] && (
+          {scale === "canton" && election.status === "publie" && !cantonData[`${dataKey}-canton`] && (
             <div
               style={{
                 position: "absolute",
@@ -668,7 +668,7 @@ export default function ElectionsPage() {
               </div>
             </div>
           )}
-          {scale === "bv" && election.status === "reel" && !bvData[`${dataKey}-bv`] && (
+          {scale === "bv" && election.status === "publie" && !bvData[`${dataKey}-bv`] && (
             <div
               style={{
                 position: "absolute",

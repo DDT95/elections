@@ -22,7 +22,7 @@ const CANDIDATE_COLORS: Record<string, string> = {
 /** Couleur d'un candidat/liste : priorité au code de nuance officiel (résolu via
  * app/lib/nuances.ts) quand la source en porte un, sinon repli sur le nom (utile pour la
  * Présidentielle 2022, seul scrutin de l'Atlas sans code de nuance dans sa source), sinon
- * gris neutre — jamais de couleur inventée sans un de ces deux signaux réels. */
+ * gris neutre — jamais de couleur inventée sans un de ces deux indicateurs disponibles. */
 export function colorForCandidate(nom: string | null | undefined, nuance?: string | null): string {
   if (nuance) {
     const info = nuanceInfo(nuance);

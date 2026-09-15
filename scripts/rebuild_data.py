@@ -100,7 +100,7 @@ def main():
                 normalize(u)
                 assert u['quality'] == 'complete', key
                 bureaux[key] = u
-        write(DATA/f'elections/pres-{year}-t{tour}-bv.json', {'election': f'Présidentielle {year}', 'tour': tour, 'date': date, 'status': 'reel', 'bureaux': bureaux})
+        write(DATA/f'elections/pres-{year}-t{tour}-bv.json', {'election': f'Présidentielle {year}', 'tour': tour, 'date': date, 'status': 'publie', 'bureaux': bureaux})
 
     # Official circonscription candidate registers identify each legislative contest.
     official = {}
