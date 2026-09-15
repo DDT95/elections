@@ -111,8 +111,8 @@ export default function ElectionsPage() {
   const [sources, setSources] = useState<SourceEntry[]>([]);
   const [loading, setLoading] = useState(true);
   const [exportOpen, setExportOpen] = useState(false);
-  const [departmentOpen, setDepartmentOpen] = useState(false);
   const sourceDialog = useRef<HTMLDialogElement>(null);
+  const departmentDialog = useRef<HTMLDialogElement>(null);
 
   const election = findElection(electionId);
   const tour = election.tours.find((t) => t.id === tourId) ?? election.tours[0];
@@ -362,7 +362,7 @@ export default function ElectionsPage() {
 
     function wireFeature(code: string, lyr: any, name: string, result: UnitResult | null) {
       layersByCodeRef.current[code] = lyr;
-      lyr.on("click", () => { setDepartmentOpen(false); setSelectedCode(code); });
+      lyr.on("click", () => setSelectedCode(code));
       lyr.on("mouseover", () => {
         setHoveredUnit({ name, result });
         if (selectedCodeRef.current !== code) lyr.setStyle(styleFnsRef.current!.hover(code));
@@ -475,7 +475,7 @@ export default function ElectionsPage() {
     return current?.communes[selectedCode] ?? null;
   }, [selectedCode, scale, current, circoData, bvData, cantonData, dataKey]);
 
-  const drawerOpen = !!selectedUnit || departmentOpen;
+  const drawerOpen = !!selectedUnit;
   const selectedSocio = scale === "commune" && selectedCode ? socioData[selectedCode] : null;
   const communeSnapshots = useMemo<ElectionSnapshot[]>(() => {
     if (scale !== "commune" || !selectedCode) return [];
@@ -571,7 +571,7 @@ export default function ElectionsPage() {
         <div className="elec-header-copy">
           <span>ATLAS ÉLECTORAL</span>
           <h1>Atlas électoral du Val-d'Oise</h1>
-          <p>Résultats, participation et profil sociodémographique — communes et analyse départementale</p>
+          <p>Résultats, participation et profil sociodémographique — communes, cantons, circonscriptions et département</p>
         </div>
         <div className="elec-header-actions">
           <div className="elec-livebox">
@@ -595,10 +595,14 @@ export default function ElectionsPage() {
 
           <div className="elec-primary-tools">
             <button type="button" onClick={recenter}>Recentrer</button>
-            <button type="button" className="analysis" onClick={() => { setSelectedCode(null); setDepartmentOpen(true); }}>Analyse départementale</button>
+            <button type="button" className="analysis" onClick={() => departmentDialog.current?.showModal()}>Analyse départementale</button>
           </div>
 
-          <div className="elec-sidebar-block-title">Élection</div>
+          <div className="elec-scale-menu" aria-label="Échelle cartographique">
+            {[{id:"commune",label:"Communes",note:"184 territoires"},{id:"canton",label:"Cantons",note:"21 cantons"},{id:"circonscription",label:"Circonscriptions",note:"10 circonscriptions législatives"}].map(item=><button key={item.id} className={scale===item.id?"active":""} onClick={()=>{setScale(item.id as Scale);resetSelection();}}><span><strong>{item.label}</strong><small>{item.note}</small></span><b>›</b></button>)}
+          </div>
+
+          <div className="elec-sidebar-block-title">Élection et tour</div>
           <select
             className="elec-select"
             value={electionId}
@@ -638,39 +642,6 @@ export default function ElectionsPage() {
             </p>
           )}
 
-          <div className="elec-sidebar-block-title">Export</div>
-          <div className="elec-pillgroup cols-1">
-            <div className="elec-export-menu">
-              <button type="button" className="elec-pill" onClick={() => setExportOpen((o) => !o)}>
-                Exporter la couche affichée (GeoJSON)
-              </button>
-              {exportOpen && (
-                <div className="elec-export-menu-list">
-                  <button
-                    type="button"
-                    onClick={() => {
-                      exportLayerGeoJSON();
-                      setExportOpen(false);
-                    }}
-                  >
-                    Toute la couche « {SCALES.find((s) => s.id === scale)?.label} »
-                  </button>
-                  {selectedUnit && (
-                    <button
-                      type="button"
-                      onClick={() => {
-                        exportFeatureGeoJSON();
-                        setExportOpen(false);
-                      }}
-                    >
-                      Uniquement « {selectedUnit.nom} »
-                    </button>
-                  )}
-                </div>
-              )}
-            </div>
-          </div>
-
           <button type="button" className="elec-sources-button" onClick={() => sourceDialog.current?.showModal()}>
             Sources, millésimes et licences
           </button>
@@ -681,6 +652,7 @@ export default function ElectionsPage() {
               <small>Cabinet du préfet — usage interne</small>
             </span>
           </div>
+          <div className="elec-export-bottom"><button type="button" onClick={() => setExportOpen((o) => !o)}>Exporter la couche affichée (GeoJSON)</button>{exportOpen&&<div>{<button onClick={()=>{exportLayerGeoJSON();setExportOpen(false)}}>Toute la couche « {SCALES.find(s=>s.id===scale)?.label} »</button>}{selectedUnit&&<button onClick={()=>{exportFeatureGeoJSON();setExportOpen(false)}}>Uniquement « {selectedUnit.nom} »</button>}</div>}</div>
         </aside>
 
         <section className="elec-map-shell">
@@ -720,24 +692,23 @@ export default function ElectionsPage() {
               </div>
             </div>
           )}
-          {metric === "none" && <div className="elec-map-onboarding"><strong>Explorez les communes du Val-d’Oise</strong><span><b>1</b> Survolez une commune pour l’identifier</span><span><b>2</b> Cliquez pour ouvrir son portrait complet</span></div>}
+          {metric === "none" && <div className="elec-map-onboarding"><strong>Explorez le Val-d’Oise par {scale === "commune" ? "commune" : scale === "canton" ? "canton" : "circonscription"}</strong><span><b>1</b> Survolez un territoire pour l’identifier</span><span><b>2</b> Cliquez pour ouvrir sa fiche</span></div>}
           <div className="elec-hint"><span><strong>Survolez pour lire · cliquez pour ouvrir la synthèse</strong></span></div>
         </section>
 
         <aside className={`elec-drawer ${drawerOpen ? "open" : ""}`} aria-label="Fiche du scrutin">
           <div className="elec-drawer-head">
             <small>
-              {departmentOpen ? "ANALYSE DÉPARTEMENTALE" : `${SCALES.find((s) => s.id === scale)?.label?.toUpperCase()} · ${election.shortLabel.toUpperCase()} · ${tour.label}`}
+              {`${SCALES.find((s) => s.id === scale)?.label?.toUpperCase()} · ${election.shortLabel.toUpperCase()} · ${tour.label}`}
             </small>
-            <h2>{departmentOpen ? "Val-d’Oise" : selectedUnit?.nom || "—"}</h2>
+            <h2>{selectedUnit?.nom || "—"}</h2>
             <p>
-              {departmentOpen ? "Résultats agrégés des 184 communes" : selectedUnit?.code_insee ? `Code INSEE ${selectedUnit.code_insee}` : selectedUnit?.code_circonscription ? `Code ${selectedUnit.code_circonscription}` : ""}
+              {selectedUnit?.code_insee ? `Code INSEE ${selectedUnit.code_insee}` : selectedUnit?.code_circonscription ? `Code ${selectedUnit.code_circonscription}` : ""}
             </p>
-            <button className="elec-close" onClick={() => { resetSelection(); setDepartmentOpen(false); }} aria-label="Fermer" title="Fermer">
+            <button className="elec-close" onClick={resetSelection} aria-label="Fermer" title="Fermer">
               ×
             </button>
           </div>
-          {departmentOpen && <div className="elec-body"><DepartmentAnalysis snapshots={departmentSnapshots} socio={departmentSocio} communeData={allElectionData["europeennes-2024"]?.communes ?? {}} socioByCommune={socioData} /></div>}
           {selectedUnit && (
             <>
               <div className="elec-body">
@@ -790,6 +761,11 @@ export default function ElectionsPage() {
         <span>Atlas électoral du Val-d'Oise — DDT 95</span>
         <span>Municipales 2026, Présidentielle 2022, Législatives 2024, Européennes 2024, Municipales 2020, Départementales 2021 · données réelles</span>
       </footer>
+
+      <dialog ref={departmentDialog} className="elec-dept-dialog">
+        <header><div><small>ANALYSE DÉPARTEMENTALE</small><h2>Val-d’Oise</h2><p>Résultats agrégés des 184 communes</p></div><div className="dept-dialog-actions"><button className="dept-pdf" onClick={() => window.print()}>Imprimer / PDF</button><button className="dept-dialog-close" onClick={() => departmentDialog.current?.close()} aria-label="Fermer">×</button></div></header>
+        <div className="dept-dialog-body"><DepartmentAnalysis snapshots={departmentSnapshots} socio={departmentSocio} communeData={allElectionData["europeennes-2024"]?.communes ?? {}} datasets={allElectionData} socioByCommune={socioData} /></div>
+      </dialog>
 
       <dialog ref={sourceDialog} className="elec-source-dialog">
         <header>
@@ -970,7 +946,7 @@ function electionAccent(key: string) {
   return "#ce614a";
 }
 
-function DepartmentAnalysis({ snapshots, socio, communeData, socioByCommune }: { snapshots: ElectionSnapshot[]; socio: SocioProfile | null; communeData: Record<string, UnitResult>; socioByCommune: Record<string, SocioProfile> }) {
+function DepartmentAnalysis({ snapshots, socio, communeData, datasets, socioByCommune }: { snapshots: ElectionSnapshot[]; socio: SocioProfile | null; communeData: Record<string, UnitResult>; datasets: Record<string,ElectionCommuneFile>; socioByCommune: Record<string, SocioProfile> }) {
   const current = snapshots.find(s => s.key === "europeennes-2024") ?? snapshots.at(-1);
   if (!current) return <p className="elec-empty">Chargement de l’analyse départementale…</p>;
   const presidential = snapshots.filter(s => s.key.startsWith("pres-") && s.key.endsWith("-t1"));
@@ -982,15 +958,19 @@ function DepartmentAnalysis({ snapshots, socio, communeData, socioByCommune }: {
   const baseline = Object.fromEntries(sensitivities.map(s => [s.id,currentSensitivity[s.id]??0]));
   const simulate = (factorFor:(code:string,u:UnitResult)=>number) => { const votes:Record<string,number>={}; let total=0; Object.entries(communeData).forEach(([code,u])=>{const factor=factorFor(code,u); total+=u.exprimes*factor; u.candidats.forEach(c=>{const group=politicalGroup(c.nuance,`${c.prenom??""} ${c.nom??""}`).sensitivity;votes[group]=(votes[group]??0)+c.voix*factor;});}); return Object.fromEntries(sensitivities.map(s=>[s.id,total?(votes[s.id]??0)*100/total:0])); };
   const avgParticipation = current.result.pct_participation;
-  const equalTurnout = simulate((_code,u)=>u.pct_participation ? avgParticipation/u.pct_participation : 1);
+  const referenceKeys=["pres-2017-t1","pres-2022-t1","europeennes-2024"];
+  const usualTurnout = simulate((code,u)=>{const values=referenceKeys.map(k=>datasets[k]?.communes[code]?.pct_participation).filter((v):v is number=>Number.isFinite(v));const target=values.length?values.reduce((a,b)=>a+b,0)/values.length:avgParticipation;return u.pct_participation?target/u.pct_participation:1;});
+  const highTurnout = simulate((code,u)=>{const target=datasets["pres-2017-t1"]?.communes[code]?.pct_participation??u.pct_participation;return u.pct_participation?target/u.pct_participation:1;});
+  const catchup = simulate((_code,u)=>u.pct_participation&&u.pct_participation<avgParticipation?avgParticipation/u.pct_participation:1);
   const youthValues=Object.values(socioByCommune).map(s=>s.jeunes).sort((a,b)=>a-b), youthThreshold=youthValues[Math.floor(youthValues.length*.75)]??100;
   const youthTerritories = simulate((code)=>socioByCommune[code]?.jeunes>=youthThreshold?1.1:1);
-  const scenarios=[{label:"Vote observé",data:baseline,note:"Européennes 2024"},{label:"Participation homogène",data:equalTurnout,note:"Même taux de participation dans chaque commune"},{label:"Communes jeunes +10 %",data:youthTerritories,note:`Poids accru des communes comptant au moins ${youthThreshold.toFixed(1)} % de 15–24 ans`}];
+  const scenarios=[{label:"Vote observé",data:baseline,note:"Européennes 2024 · participation 48,3 %"},{label:"Participation habituelle",data:usualTurnout,note:"Profil moyen communal des présidentielles 2017/2022 et européennes 2024"},{label:"Participation haute",data:highTurnout,note:"Profil territorial de la présidentielle 2017 · 77,1 %"},{label:"Communes jeunes +10 %",data:youthTerritories,note:`Poids accru des communes comptant au moins ${youthThreshold.toFixed(1)} % de 15–24 ans`},{label:"Rattrapage des communes abstentionnistes",data:catchup,note:"Les communes sous la moyenne atteignent 48,3 % de participation"}];
   const mainSensitivity=sensitivities.slice().sort((a,b)=>(baseline[b.id]??0)-(baseline[a.id]??0))[0];
   const participationSeries=snapshots.filter(s=>s.key.startsWith("pres-")&&s.key.endsWith("-t1")||s.key.startsWith("europeennes-")).map(s=>({label:s.election.replace("Présidentielle ","Prés. ").replace("Européennes ","Euro. "),value:s.result.pct_participation}));
   return <>
     <p className="dept-analysis-base">Base des scénarios : Européennes 2024</p><div className="dept-summary"><div><span>Participation</span><strong>{current.result.pct_participation.toFixed(1)} %</strong></div><div><span>Sensibilité en tête</span><strong style={{color:mainSensitivity.color}}>{mainSensitivity.label}</strong></div><div><span>Exprimés</span><strong>{current.result.exprimes.toLocaleString("fr-FR")}</strong></div></div>
-    {socio && <Section title="Profil du département" state="INSEE RP 2022"><div className="dept-profile"><strong>{Math.round(socio.population).toLocaleString("fr-FR")} habitants</strong><div>{[["15–24 ans",socio.jeunes,"#00a7b5"],["65 ans ou plus",socio.seniors,"#a558a0"],["Diplôme supérieur",socio.diplomesSup,"#18753c"]].map(([label,value,color])=><span key={String(label)}><b>{label}</b><i><em style={{width:`${value}%`,background:String(color)}}/></i><strong>{Number(value).toFixed(1)} %</strong></span>)}</div></div></Section>}
+    {socio && <Section title="Bilan sociodémographique" state="INSEE RP 2022"><div className="dept-profile"><strong>{Math.round(socio.population).toLocaleString("fr-FR")} habitants</strong><div>{[["15–24 ans",socio.jeunes,"#00a7b5"],["65 ans ou plus",socio.seniors,"#a558a0"],["Diplôme supérieur",socio.diplomesSup,"#18753c"]].map(([label,value,color])=><span key={String(label)}><b>{label}</b><i><em style={{width:`${value}%`,background:String(color)}}/></i><strong>{Number(value).toFixed(1)} %</strong></span>)}</div></div></Section>}
+    <Section title="Bilan électoral" state="Européennes 2024"><div className="dept-top-four">{current.result.candidats.slice(0,4).map((c,i)=><div key={`${c.nom}-${i}`}><span><b>{i+1}</b><strong>{c.prenom} {c.nom}</strong></span><i><em style={{width:`${c.pct_exprimes}%`,background:colorForCandidate(c.nom,c.nuance)}}/></i><b>{c.pct_exprimes.toFixed(1)} %</b></div>)}</div><div className="dept-balance">{sensitivities.map(s=>{const value=baseline[s.id]??0;return value?<i key={s.id} style={{width:`${value}%`,background:s.color}} title={`${s.label} ${value.toFixed(1)} %`}>{value>=11?`${value.toFixed(0)} %`:""}</i>:null})}</div></Section>
     <Section title="Participation" state="Scrutins nationaux"><div className="dept-participation-chart">{participationSeries.map(p=><span key={p.label}><i><em style={{height:`${p.value}%`}}/></i><b>{p.value.toFixed(1)} %</b><small>{p.label}</small></span>)}</div></Section>
     <Section title="Évolution des votes" state="Présidentielles 2017–2022"><p className="elec-synthesis-intro">Premiers tours comparés à scrutin identique.</p><div className="dept-evolution">{families.map(f=>{const start=politicalScores(presidential[0]?.result??current.result,"family")[f.id]??0,end=politicalScores(presidential.at(-1)?.result??current.result,"family")[f.id]??0,delta=end-start;return <div key={f.id} style={{"--trend":f.color} as CSSProperties}><span><strong>{f.label}</strong><b className={delta>=0?"up":"down"}>{delta>=0?"+":""}{delta.toFixed(1)} pts</b></span><i><em style={{width:`${Math.min(100,end)}%`}}/></i><small>2017 {start.toFixed(1)} % → 2022 {end.toFixed(1)} %</small></div>})}</div></Section>
     <Section title="Scénarios" state="Simulation territoriale"><p className="elec-synthesis-intro">Les hypothèses modifient le poids des communes ; elles ne prédisent pas le vote individuel.</p><div className="dept-scenarios">{scenarios.map(sc=><article key={sc.label}><header><strong>{sc.label}</strong><small>{sc.note}</small></header><div>{sensitivities.map(s=><i key={s.id} style={{width:`${sc.data[s.id]??0}%`,background:s.color}} title={`${s.label} ${(sc.data[s.id]??0).toFixed(1)} %`}>{(sc.data[s.id]??0)>=11?`${(sc.data[s.id]??0).toFixed(0)} %`:""}</i>)}</div></article>)}</div></Section>

@@ -30,6 +30,11 @@
 - [x] Évolution politique limitée aux premiers tours présidentiels 2017 et 2022.
 - [x] Scénarios fondés sur les Européennes 2024, avec hypothèses affichées.
 - [x] Absence de déduction individuelle à partir des données territoriales.
+- [x] Analyse présentée dans une fenêtre centrale imprimable en PDF.
+- [x] Bilan sociodémographique et bilan électoral séparés.
+- [x] Scénarios de participation habituelle, haute, jeunesse territoriale et rattrapage.
+- [x] Échelles commune, canton et circonscription rétablies sous forme de menu.
+- [x] Export GeoJSON placé au dernier rang du volet gauche.
 
 - Source visual truth: `/var/folders/3h/px_6bwl96w50x8y34bkz_k_80000gn/T/TemporaryItems/NSIRD_screencaptureui_xYSZXd/Capture d’écran 2026-09-15 à 12.28.51.png`
 - Source pixels: 2730 × 1966, browser chrome excluded from the visual comparison.
