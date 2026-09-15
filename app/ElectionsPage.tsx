@@ -592,7 +592,7 @@ export default function ElectionsPage() {
           </div>
 
           <div className="elec-scale-menu" aria-label="Échelle cartographique">
-            {[{id:"commune",label:"Communes",note:"184 territoires"},{id:"canton",label:"Cantons",note:"21 cantons"},{id:"circonscription",label:"Circonscriptions",note:"10 circonscriptions législatives"}].map(item=><button key={item.id} className={scale===item.id?"active":""} onClick={()=>{setScale(item.id as Scale);resetSelection();}}><span><strong>{item.label}</strong><small>{item.note}</small></span><b>›</b></button>)}
+            {[{id:"commune",label:"Communes",note:"184 territoires"},{id:"canton",label:"Cantons",note:"21 cantons"},{id:"circonscription",label:"Circonscriptions",note:"10 circonscriptions législatives"}].map(item=><label key={item.id} className="elec-scale-switch"><input type="radio" name="scale" checked={scale===item.id} onChange={()=>{setScale(item.id as Scale);resetSelection();}}/><span><strong>{item.label}</strong><small>{item.note}</small></span></label>)}
           </div>
 
           <div className="elec-sidebar-block-title">Élection et tour</div>
