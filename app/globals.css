@@ -127,7 +127,9 @@ body{font-family:"Marianne",Arial,sans-serif}
 
 /* Bloc "Élection et tour" : même carte à bordure que la liste des échelles (.elec-scale-menu)
    juste au-dessus, au lieu d'un simple titre suivi de deux <select> flottants sans cadre. */
-.elec-select-group{margin:0 18px 12px;border:1px solid #d7e0e6;border-radius:10px;overflow:hidden;background:#fff}
-.elec-select-group .elec-sidebar-block-title{padding:10px 12px 6px;color:#000091}
-.elec-select-group .elec-select{width:100%;height:auto;margin:0;padding:10px 12px;border:0;border-top:1px solid #e6ebef;border-radius:0;background:#fff;box-shadow:none}
-.elec-select-group .elec-select:focus{outline:2px solid #000091;outline-offset:-2px}
+.elec-select-group{margin:0 18px 12px;border:1px solid #d7e0e6;border-radius:16px;overflow:hidden;background:#f6f8fa}
+.elec-select-group .elec-sidebar-block-title{padding:10px 14px 4px;color:#000091}
+.elec-select-group .elec-select{appearance:none;-webkit-appearance:none;width:calc(100% - 24px);height:auto;margin:6px 12px;padding:11px 34px 11px 16px;border:1.5px solid #c7d3dc;border-radius:999px;background:#fff url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6'><path d='M1 1l4 4 4-4' stroke='%23000091' stroke-width='1.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>") no-repeat right 14px center;background-size:10px 6px;box-shadow:none;color:#17202a;font:700 12px "Marianne",Arial,sans-serif;cursor:pointer;transition:border-color .15s,box-shadow .15s}
+.elec-select-group .elec-select:last-of-type{margin-bottom:12px}
+.elec-select-group .elec-select:hover{border-color:#000091}
+.elec-select-group .elec-select:focus{outline:none;border-color:#000091;box-shadow:0 0 0 3px #00009122}
