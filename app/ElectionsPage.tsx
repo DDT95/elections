@@ -221,7 +221,7 @@ export default function ElectionsPage() {
         className: "elec-neutral-tiles",
         attribution: "© OpenStreetMap",
       }).addTo(map);
-      setForceRedraw((n) => n + 1);
+      setMapReady((n) => n + 1);
     };
     const existing = document.querySelector<HTMLScriptElement>('script[data-elec-leaflet="true"]');
     if ((window as any).L) start();
@@ -235,7 +235,13 @@ export default function ElectionsPage() {
     }
   }, []);
 
-  const [, setForceRedraw] = useState(0);
+  // Incrémenté une fois que la carte Leaflet est prête (script chargé + conteneur mesurable).
+  // Doit être lu par l'effet de rendu de la couche choroplèthe (sinon celui-ci, qui se déclenche
+  // par ailleurs sur l'arrivée asynchrone des géométries/résultats, peut avoir déjà tenté — et
+  // abandonné faute de carte prête — tous ses passages avant que Leaflet ne finisse de charger ;
+  // sans ce signal en dépendance, aucun de ses effets ultérieurs ne le redéclenche et la carte
+  // reste vide indéfiniment, même si toutes les données sont là).
+  const [mapReady, setMapReady] = useState(0);
 
   // ---- Détermination des valeurs par unité selon métrique ----
   function metricInfo(u: UnitResult): { value: number | null; color: string; label: string } {
@@ -260,6 +266,9 @@ export default function ElectionsPage() {
   useEffect(() => {
     const L = (window as any).L;
     const map = mapRef.current;
+    // Tant que Leaflet/la carte ne sont pas prêts, on ne peut rien construire ; cet effet sera
+    // rejoué automatiquement dès que mapReady passera à une valeur non nulle (cf. dépendances
+    // ci-dessous), donc l'abandon ici est temporaire et non définitif.
     if (!L || !map) return;
     if (layerRef.current) {
       map.removeLayer(layerRef.current);
@@ -363,7 +372,7 @@ export default function ElectionsPage() {
       },
     }).addTo(map);
     layerRef.current = layer;
-  }, [scale, communesGeo, circoGeo, bvGeo, bvData, cantonGeo, cantonData, current, circoData, dataKey, metric, scoreCandidat]);
+  }, [scale, communesGeo, circoGeo, bvGeo, bvData, cantonGeo, cantonData, current, circoData, dataKey, metric, scoreCandidat, mapReady]);
 
   // Garde selectedCodeRef synchronisé (lu par les gestionnaires mouseover/mouseout ci-dessus,
   // qui sont attachés une seule fois par construction de couche et ne doivent pas figer
