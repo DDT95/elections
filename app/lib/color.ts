@@ -38,8 +38,10 @@ const SEQUENTIAL = ["#eef1ff", "#c9d3fb", "#9fabf3", "#6d7ce6", "#3f4cc9", "#1b1
 export function sequentialColor(value: number, min: number, max: number): string {
   if (max <= min) return SEQUENTIAL[2];
   const t = Math.max(0, Math.min(1, (value - min) / (max - min)));
-  const idx = Math.min(SEQUENTIAL.length - 1, Math.floor(t * SEQUENTIAL.length));
-  return SEQUENTIAL[idx];
+  const start = [238, 241, 255];
+  const end = [27, 31, 143];
+  const rgb = start.map((channel, index) => Math.round(channel + (end[index] - channel) * t));
+  return `rgb(${rgb.join(",")})`;
 }
 
 export const SEQUENTIAL_STEPS = SEQUENTIAL;

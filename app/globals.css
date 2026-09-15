@@ -96,3 +96,4 @@ body{font-family:"Marianne",Arial,sans-serif}
 @media(max-width:700px){.elec-pillgroup,.elec-select,.elec-legend,.elec-bar-panel,.elec-scale-note{margin-left:12px;margin-right:12px}}
 .elec-orbit-card.electorate{bottom:1%}.elec-focus-label{top:45%}
 .elec-sidebar{overflow-y:auto;overscroll-behavior:contain}.elec-sidebar-status{flex:none}
+.elec-context-note{margin:12px 0 0;padding:10px 12px;border-left:4px solid #00a7b5;background:#eef7f8;color:#4f5f6f;font-size:10px;line-height:1.45}.socio-kpis>div:nth-child(2){border-top-color:#e8a33e}.socio-kpis>div:nth-child(3){border-top-color:#a558a0}.socio-kpis>div:nth-child(4){border-top-color:#18753c}
