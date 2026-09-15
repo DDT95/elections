@@ -95,6 +95,11 @@ export default function ElectionsPage() {
   const [scale, setScale] = useState<Scale>("commune");
   const [electionId, setElectionId] = useState("pres-2022");
   const [tourId, setTourId] = useState("t2");
+  // Le menu Élection/Tour démarre sans choix visible ("—") tant que l'utilisateur n'a rien
+  // sélectionné, pour que la carte neutre au chargement (metric = "none") se comprenne : rien
+  // n'est affiché sur la carte parce que rien n'a encore été choisi. electionId/tourId gardent
+  // en interne une valeur par défaut (données déjà prêtes en arrière-plan dès le premier choix).
+  const [hasChosenScrutin, setHasChosenScrutin] = useState(false);
   const [metric, setMetric] = useState<DisplayMetric>("none");
   const [scoreCandidat, setScoreCandidat] = useState<string>("");
 
@@ -569,19 +574,24 @@ export default function ElectionsPage() {
   }
 
   // ---- Impression ----
+  // Le PDF montre toujours le scrutin le plus récent disponible (dernier élément de
+  // scaleSnapshots/departmentSnapshots, triés par date), jamais le scrutin actuellement
+  // sélectionné dans le menu Élection/Tour : ce menu ne pilote que la couleur de la carte
+  // (cf. Participation/CommuneSynthesis ci-dessus, même logique).
   function printUnit() {
     if (!selectedUnit) return;
+    const latest = scaleSnapshots.at(-1);
     const token = crypto.randomUUID();
     localStorage.setItem(
       `elections-print-${token}`,
       JSON.stringify({
-        unit: selectedUnit,
-        election: `${election.label} · ${tour.label}`,
+        unit: latest?.result ?? selectedUnit,
+        election: latest ? `${latest.election} · ${latest.tour}` : `${election.label} · ${tour.label}`,
         scale: SCALES.find((item) => item.id === scale)?.label ?? scale,
         coverage: 1,
         source: electionSources,
         snapshots: scaleSnapshots,
-        currentKey: dataKey,
+        currentKey: latest?.key ?? dataKey,
         socio: selectedSocio,
         populationHistory: selectedCode ? populationData[selectedCode] ?? [] : [],
         date: new Date().toISOString(),
@@ -589,7 +599,7 @@ export default function ElectionsPage() {
     );
     window.open(`${basePath}/print.html#${token}`, "_blank", "noopener");
   }
-  function printDepartment(){const unit=allElectionData[dataKey]?aggregateDepartment(allElectionData[dataKey]):null;if(!unit)return;const token=crypto.randomUUID();const scenarios=buildDepartmentScenarios(allElectionData["europeennes-2024"]?.communes??{},allElectionData,socioData);localStorage.setItem(`elections-print-${token}`,JSON.stringify({unit,election:`${election.label} · ${tour.label}`,scale:"Département",snapshots:departmentSnapshots,currentKey:dataKey,socio:departmentSocio,populationHistory:[],scenarios,date:new Date().toISOString()}));window.open(`${basePath}/print.html#${token}`,"_blank","noopener");}
+  function printDepartment(){const latest=departmentSnapshots.at(-1);const unit=latest?.result;if(!unit)return;const token=crypto.randomUUID();const scenarios=buildDepartmentScenarios(allElectionData["europeennes-2024"]?.communes??{},allElectionData,socioData);localStorage.setItem(`elections-print-${token}`,JSON.stringify({unit,election:`${latest.election} · ${latest.tour}`,scale:"Département",snapshots:departmentSnapshots,currentKey:latest.key,socio:departmentSocio,populationHistory:[],scenarios,date:new Date().toISOString()}));window.open(`${basePath}/print.html#${token}`,"_blank","noopener");}
 
   return (
     <main className="elec-page">
@@ -618,23 +628,21 @@ export default function ElectionsPage() {
             <button type="button" className="analysis" onClick={() => departmentDialog.current?.showModal()}>Analyse départementale</button>
           </div>
 
-          <div className="elec-scale-menu" aria-label="Échelle cartographique">
-            {[{id:"commune",label:"Communes",note:"184 territoires"}].map(item=><label key={item.id} className="elec-scale-switch"><input type="radio" name="scale" checked={scale===item.id} onChange={()=>{setScale(item.id as Scale);resetSelection();}}/><span><strong>{item.label}</strong><small>{item.note}</small></span></label>)}
-          </div>
-
           <div className="elec-select-group">
             <div className="elec-sidebar-block-title">Élection et tour</div>
             <select
               className="elec-select"
-              value={electionId}
+              value={hasChosenScrutin ? electionId : ""}
               onChange={(e) => {
                 setElectionId(e.target.value);
                 const el = findElection(e.target.value);
                 setTourId(el.tours[el.tours.length - 1].id);
                 setMetric("tete");
+                setHasChosenScrutin(true);
                 resetSelection();
               }}
             >
+              <option value="" disabled hidden>-----</option>
               {ELECTIONS.map((e) => (
                 <option key={e.id} value={e.id}>
                   {e.label}
@@ -644,13 +652,15 @@ export default function ElectionsPage() {
             </select>
             <select
               className="elec-select"
-              value={tourId}
+              value={hasChosenScrutin ? tourId : ""}
               onChange={(e) => {
                 setTourId(e.target.value);
                 setMetric("tete");
+                setHasChosenScrutin(true);
                 resetSelection();
               }}
             >
+              <option value="" disabled hidden>-----</option>
               {election.tours.map((t) => (
                 <option key={t.id} value={t.id}>
                   {t.label}
@@ -1004,7 +1014,12 @@ function DepartmentAnalysis({ snapshots, currentKey, socio, communeData, dataset
   return <>
     {socio&&<Section title="Profil sociodémographique" state="INSEE RP 2022"><div className="socio-profile"><div className="socio-pop"><span>Population</span><strong>{Math.round(socio.population).toLocaleString("fr-FR")}</strong><small>habitants</small></div><div className="socio-bars">{[{label:"15 à 24 ans",value:socio.jeunes,color:"#00a7b5"},{label:"65 ans ou plus",value:socio.seniors,color:"#a558a0"},{label:"Diplôme supérieur",value:socio.diplomesSup,color:"#18753c"}].map(item=><div key={item.label}><span><b>{item.label}</b><strong>{item.value.toFixed(1)} %</strong></span><i><em style={{width:`${item.value}%`,background:item.color}}/></i></div>)}</div></div></Section>}
     <Section title="Participation" state={`Moyenne sur ${snapshots.length} tours`}><div className="participation-gauge"><span style={{width:`${avg}%`}}/><b>{avg.toFixed(1)} %</b></div><div className="participation-analysis"><div><span>Participation moyenne</span><strong>{avg.toFixed(1)} %</strong><small>sur {snapshots.length} tours disponibles</small></div><div><span>Abstention moyenne</span><strong>{(100-avg).toFixed(1)} %</strong><small>sur la même période</small></div><div><span>Participation au dernier scrutin</span><strong>{current.result.pct_participation.toFixed(1)} %</strong><small>{current.election} · {current.tour}</small></div><div><span>Abstention au dernier scrutin</span><strong>{current.result.pct_abstention.toFixed(1)} %</strong></div></div></Section>
-    <CommuneSynthesis snapshots={snapshots} currentKey={currentKey} mode="results"/><CommuneSynthesis snapshots={snapshots} currentKey={currentKey} mode="families"/><CommuneSynthesis snapshots={snapshots} currentKey={currentKey} mode="sensitivities"/>
+    {/* Pas de section "résultats" candidat par candidat ici : sommer les résultats municipaux
+        de 184 communes ne produit aucun candidat réel à l'échelle du département (les
+        municipales se jouent commune par commune). Une analyse départementale montre des
+        moyennes/tendances par sensibilité politique (ci-dessous), jamais un faux classement
+        de candidats agrégés. */}
+    <CommuneSynthesis snapshots={snapshots} currentKey={currentKey} mode="families"/><CommuneSynthesis snapshots={snapshots} currentKey={currentKey} mode="sensitivities"/>
     <Section title="Scénarios de participation" state="Européennes 2024"><p className="elec-synthesis-intro">Chaque scénario modifie la mobilisation territoriale puis mesure l’effet sur les grandes sensibilités.</p><div className="scenario-cards">{scenarios.map(sc=><article key={sc.label}><header><strong>{sc.label}</strong><p>{sc.explanation}</p></header><div>{sc.effects.map(effect=><span key={effect.id}><b>{effect.label}</b><i><em style={{width:`${Math.min(100,Math.abs(effect.delta)*35)}%`,background:effect.color}}/></i><strong className={effect.delta>=0?"up":"down"}>{effect.delta>=0?"+":""}{effect.delta.toFixed(1)} pt</strong></span>)}</div><footer>{sc.conclusion}</footer></article>)}</div></Section>
   </>;
 }
