@@ -600,7 +600,7 @@ export default function ElectionsPage() {
         <div className="elec-header-copy">
           <span>ATLAS ÉLECTORAL</span>
           <h1>Atlas électoral du Val-d'Oise</h1>
-          <p>Résultats, participation et profil sociodémographique — communes, EPCI et département</p>
+          <p>Résultats, participation et profil sociodémographique — communes et département</p>
         </div>
       </header>
       <div className="elec-progress">
@@ -619,7 +619,7 @@ export default function ElectionsPage() {
           </div>
 
           <div className="elec-scale-menu" aria-label="Échelle cartographique">
-            {[{id:"commune",label:"Communes",note:"184 territoires"},{id:"epci",label:"EPCI",note:"12 territoires intercommunaux"}].map(item=><label key={item.id} className="elec-scale-switch"><input type="radio" name="scale" checked={scale===item.id} onChange={()=>{setScale(item.id as Scale);resetSelection();}}/><span><strong>{item.label}</strong><small>{item.note}</small></span></label>)}
+            {[{id:"commune",label:"Communes",note:"184 territoires"}].map(item=><label key={item.id} className="elec-scale-switch"><input type="radio" name="scale" checked={scale===item.id} onChange={()=>{setScale(item.id as Scale);resetSelection();}}/><span><strong>{item.label}</strong><small>{item.note}</small></span></label>)}
           </div>
 
           <div className="elec-select-group">
