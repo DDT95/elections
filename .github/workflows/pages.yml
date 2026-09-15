@@ -30,6 +30,8 @@ jobs:
       - run: npm run build:github
       - run: cp dist-github/index.html dist-github/404.html
       - uses: actions/configure-pages@v5
+        with:
+          enablement: true
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist-github
