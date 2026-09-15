@@ -45,7 +45,7 @@ export type ElectionCircoFile = {
   circonscriptions: Record<string, UnitResult>;
 };
 
-export type Scale = "commune" | "bv" | "canton" | "circonscription";
+export type Scale = "commune" | "bv" | "epci" | "canton" | "circonscription";
 
 export type ElectionDef = {
   id: string;

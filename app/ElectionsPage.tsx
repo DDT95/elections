@@ -39,6 +39,8 @@ async function fetchJson<T>(path: string): Promise<T> {
 function round2(n: number): number {
   return Math.round(n * 100) / 100;
 }
+const TERRITORY_COLORS=["#c9e7f2","#f6d6a8","#d8c8ed","#bfe3d0","#f3c3d3","#d6e5a8","#f0c5ad","#c8d5f2"];
+function territoryColor(code:string){return TERRITORY_COLORS[[...code].reduce((sum,char)=>sum+char.charCodeAt(0),0)%TERRITORY_COLORS.length];}
 
 function aggregateDepartment(file: ElectionCommuneFile): UnitResult {
   const units = Object.values(file.communes);
@@ -71,6 +73,7 @@ const METRICS: { id: MetricId; label: string }[] = [
 const SCALES: { id: Scale; label: string }[] = [
   { id: "commune", label: "Commune" },
   { id: "bv", label: "Bureau de vote" },
+  { id: "epci", label: "EPCI" },
   { id: "canton", label: "Canton" },
   { id: "circonscription", label: "Circonscription" },
 ];
@@ -97,6 +100,8 @@ export default function ElectionsPage() {
   const [circoGeo, setCircoGeo] = useState<any>(null);
   const [bvGeo, setBvGeo] = useState<any>(null);
   const [cantonGeo, setCantonGeo] = useState<any>(null);
+  const [epciGeo, setEpciGeo] = useState<any>(null);
+  const [communeEpci, setCommuneEpci] = useState<Record<string,string>>({});
   const [maskGeo, setMaskGeo] = useState<any>(null);
   const [electionData, setElectionData] = useState<Record<string, ElectionCommuneFile>>({});
   const [circoData, setCircoData] = useState<Record<string, ElectionCircoFile>>({});
@@ -128,15 +133,19 @@ export default function ElectionsPage() {
       fetchJson<any>("/data/geo/circonscriptions-95.geojson"),
       fetchJson<any>("/data/geo/bureaux-vote-95.geojson").catch(() => null),
       fetchJson<any>("/data/geo/cantons-95.geojson").catch(() => null),
+      fetchJson<any>("/data/geo/epcis-95.geojson").catch(() => null),
+      fetchJson<any[]>("/data/geo/communes-epci-95.json").catch(() => []),
       fetchJson<any>("/data/geo/masque-95.geojson").catch(() => null),
       fetchJson<any>("/data/insee/context-95.json").catch(() => null),
       fetchJson<any>("/data/insee/population-historique-95.json").catch(() => null),
     ])
-      .then(([communes, circo, bv, canton, mask, insee, population]) => {
+      .then(([communes, circo, bv, canton, epci, epciLinks, mask, insee, population]) => {
         setCommunesGeo(communes);
         setCircoGeo(circo);
         setBvGeo(bv);
         setCantonGeo(canton);
+        setEpciGeo(epci);
+        setCommuneEpci(Object.fromEntries(epciLinks.map(item=>[item.code,item.codeEpci])));
         setMaskGeo(mask);
         setSocioData(aggregateSocio(insee));
         setPopulationData(population?.communes || {});
@@ -379,7 +388,7 @@ export default function ElectionsPage() {
       const base = (code: string) => {
         const u = cantons[code];
         const info = u ? metricInfo(u) : null;
-        return { color: "#fff", weight: 1.6, fillColor: info?.color ?? "#e9edf3", fillOpacity: info ? 0.82 : 0.35 };
+        return { color: "#fff", weight: 1.6, fillColor: metric === "none" ? territoryColor(code) : info?.color ?? "#e9edf3", fillOpacity: 0.82 };
       };
       styleFnsRef.current = { base, hover: (c) => withHover(base(c)), selected: (c) => withSelected(base(c)) };
       const layer = L.geoJSON(cantonGeo, {
@@ -396,6 +405,13 @@ export default function ElectionsPage() {
       }).addTo(map);
       layerRef.current = layer;
       return;
+    }
+    if (scale === "epci") {
+      if (!epciGeo || !current) return;
+      const results=Object.fromEntries(epciGeo.features.map((feature:any)=>{const code=feature.properties.code,communes=Object.fromEntries(Object.entries(current.communes).filter(([commune])=>communeEpci[commune]===code));return [code,Object.keys(communes).length?aggregateDepartment({...current,communes}):null]}));
+      const base=(code:string)=>{const u=results[code],info=u?metricInfo(u):null;return {color:"#fff",weight:1.8,fillColor:metric==="none"?territoryColor(code):info?.color??"#e9edf3",fillOpacity:.84}};
+      styleFnsRef.current={base,hover:c=>withHover(base(c)),selected:c=>withSelected(base(c))};
+      layerRef.current=L.geoJSON(epciGeo,{style:(feature:any)=>{const code=feature.properties.code;return code===selectedCodeRef.current?withSelected(base(code)):base(code)},onEachFeature:(feature:any,lyr:any)=>{const code=feature.properties.code;wireFeature(code,lyr,feature.properties.name,results[code])}}).addTo(map);return;
     }
     if (scale === "bv") {
       const bvBureaux = bvData[`${dataKey}-bv`]?.bureaux;
@@ -429,7 +445,7 @@ export default function ElectionsPage() {
     const base = (code: string) => {
       const u = dataset[code];
       const info = u ? metricInfo(u) : { color: "#e9edf3" };
-      return { color: "#fff", weight: baseWeight, fillColor: info.color, fillOpacity: metric === "none" ? 0.72 : 0.82 };
+      return { color: "#fff", weight: baseWeight, fillColor: metric === "none" ? territoryColor(code) : info.color, fillOpacity: 0.82 };
     };
     styleFnsRef.current = { base, hover: (c) => withHover(base(c)), selected: (c) => withSelected(base(c)) };
     const layer = L.geoJSON(geo, {
@@ -445,7 +461,7 @@ export default function ElectionsPage() {
       },
     }).addTo(map);
     layerRef.current = layer;
-  }, [scale, communesGeo, circoGeo, bvGeo, bvData, cantonGeo, cantonData, current, circoData, dataKey, metric, scoreCandidat, mapReady]);
+  }, [scale, communesGeo, circoGeo, epciGeo, communeEpci, bvGeo, bvData, cantonGeo, cantonData, current, circoData, dataKey, metric, scoreCandidat, mapReady]);
 
   // Garde selectedCodeRef synchronisé (lu par les gestionnaires mouseover/mouseout ci-dessus,
   // qui sont attachés une seule fois par construction de couche et ne doivent pas figer
@@ -467,13 +483,14 @@ export default function ElectionsPage() {
   const selectedUnit: UnitResult | null = useMemo(() => {
     if (!selectedCode) return null;
     if (scale === "circonscription") return circoData[`${dataKey}-circo`]?.circonscriptions[selectedCode] ?? null;
+    if (scale === "epci" && current) { const communes=Object.fromEntries(Object.entries(current.communes).filter(([code])=>communeEpci[code]===selectedCode)); if(!Object.keys(communes).length)return null; const result=aggregateDepartment({...current,communes}); result.nom=epciGeo?.features?.find((f:any)=>f.properties.code===selectedCode)?.properties.name??selectedCode; return result; }
     if (scale === "bv") {
       const b = bvData[`${dataKey}-bv`]?.bureaux?.[selectedCode];
       return b ? normalizeBureau(b) : null;
     }
     if (scale === "canton") return cantonData[`${dataKey}-canton`]?.cantons?.[selectedCode] ?? null;
     return current?.communes[selectedCode] ?? null;
-  }, [selectedCode, scale, current, circoData, bvData, cantonData, dataKey]);
+  }, [selectedCode, scale, current, circoData, bvData, cantonData, dataKey, communeEpci, epciGeo]);
 
   const drawerOpen = !!selectedUnit;
   const selectedSocio = scale === "commune" && selectedCode ? socioData[selectedCode] : null;
@@ -491,12 +508,13 @@ export default function ElectionsPage() {
       const file=allElectionData[itemTour.file];
       if (!file) return [];
       if (scale === "commune") { const result=file.communes[selectedCode]; return result?[{key:itemTour.file,election:item.shortLabel,tour:itemTour.label,date:file.date,result}]:[]; }
+      if (scale === "epci") { const communes=Object.fromEntries(Object.entries(file.communes).filter(([code])=>communeEpci[code]===selectedCode)); if(!Object.keys(communes).length)return []; return [{key:itemTour.file,election:item.shortLabel,tour:itemTour.label,date:file.date,result:aggregateDepartment({...file,communes})}]; }
       if (scale !== "canton" && scale !== "circonscription") return [];
       const result = scale === "canton" ? cantonData[`${itemTour.file}-canton`]?.cantons?.[selectedCode] : circoData[`${itemTour.file}-circo`]?.circonscriptions?.[selectedCode];
       if (!result) return [];
       return [{key:itemTour.file,election:item.shortLabel,tour:itemTour.label,date:file.date,result}];
     })).sort((a,b)=>a.date.localeCompare(b.date));
-  }, [allElectionData, cantonData, circoData, scale, selectedCode]);
+  }, [allElectionData, cantonData, circoData, communeEpci, scale, selectedCode]);
   const departmentSnapshots = useMemo<ElectionSnapshot[]>(() => ELECTIONS.flatMap(item => item.tours.flatMap(itemTour => { const file=allElectionData[itemTour.file]; return file?[{key:itemTour.file,election:item.shortLabel,tour:itemTour.label,date:file.date,result:aggregateDepartment(file)}]:[]; })).sort((a,b)=>a.date.localeCompare(b.date)), [allElectionData]);
   const departmentSocio = useMemo<SocioProfile | null>(() => { const values=Object.values(socioData); const population=values.reduce((s,v)=>s+v.population,0); if(!population)return null; return {population,jeunes:values.reduce((s,v)=>s+v.jeunes*v.population,0)/population,seniors:values.reduce((s,v)=>s+v.seniors*v.population,0)/population,diplomesSup:values.reduce((s,v)=>s+v.diplomesSup*v.population,0)/population}; }, [socioData]);
   const averageCommuneParticipation = scaleSnapshots.length ? scaleSnapshots.reduce((sum,snapshot)=>sum+snapshot.result.pct_participation,0)/scaleSnapshots.length : 0;
@@ -513,6 +531,7 @@ export default function ElectionsPage() {
   // ---- Export GeoJSON ----
   function layerGeoOf(): any {
     if (scale === "circonscription") return circoGeo;
+    if (scale === "epci") return epciGeo;
     if (scale === "bv") return bvGeo;
     if (scale === "canton") return cantonGeo;
     return communesGeo;
@@ -525,6 +544,7 @@ export default function ElectionsPage() {
   }
   function layerGeoAndCodeOf(f: any): string {
     if (scale === "circonscription") return f.properties.code_circonscription;
+    if (scale === "epci") return f.properties.code;
     if (scale === "bv") return f.properties.codeBureauVote;
     if (scale === "canton") return f.properties.code_canton;
     return f.properties.code;
@@ -604,7 +624,7 @@ export default function ElectionsPage() {
           </div>
 
           <div className="elec-scale-menu" aria-label="Échelle cartographique">
-            {[{id:"commune",label:"Communes",note:"184 territoires"},{id:"canton",label:"Cantons",note:"21 cantons"},{id:"circonscription",label:"Circonscriptions",note:"10 circonscriptions législatives"}].map(item=><label key={item.id} className="elec-scale-switch"><input type="radio" name="scale" checked={scale===item.id} onChange={()=>{setScale(item.id as Scale);resetSelection();}}/><span><strong>{item.label}</strong><small>{item.note}</small></span></label>)}
+            {[{id:"commune",label:"Communes",note:"184 territoires"},{id:"epci",label:"EPCI",note:"12 territoires intercommunaux"},{id:"canton",label:"Cantons",note:"21 cantons"},{id:"circonscription",label:"Circonscriptions",note:"10 circonscriptions législatives"}].map(item=><label key={item.id} className="elec-scale-switch"><input type="radio" name="scale" checked={scale===item.id} onChange={()=>{setScale(item.id as Scale);resetSelection();}}/><span><strong>{item.label}</strong><small>{item.note}</small></span></label>)}
           </div>
 
           <div className="elec-sidebar-block-title">Élection et tour</div>
@@ -697,7 +717,7 @@ export default function ElectionsPage() {
               </div>
             </div>
           )}
-          {metric === "none" && <div className="elec-map-onboarding"><strong>Explorez le Val-d’Oise par {scale === "commune" ? "commune" : scale === "canton" ? "canton" : "circonscription"}</strong><span><b>1</b> Survolez un territoire pour l’identifier</span><span><b>2</b> Cliquez pour ouvrir sa fiche</span></div>}
+          {metric === "none" && <div className="elec-map-onboarding"><strong>Explorez le Val-d’Oise par {scale === "commune" ? "commune" : scale === "epci" ? "EPCI" : scale === "canton" ? "canton" : "circonscription"}</strong><span><b>1</b> Survolez un territoire pour l’identifier</span><span><b>2</b> Cliquez pour ouvrir sa fiche</span></div>}
         </section>
 
         <aside className={`elec-drawer ${drawerOpen ? "open" : ""}`} aria-label="Fiche du scrutin">
