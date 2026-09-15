@@ -1120,8 +1120,87 @@ function DepartmentAnalysis({ snapshots, currentKey, socio, communeData, dataset
         moyennes/tendances par sensibilité politique (ci-dessous), jamais un faux classement
         de candidats agrégés. */}
     <CommuneSynthesis snapshots={snapshots} currentKey={currentKey} mode="families"/><CommuneSynthesis snapshots={snapshots} currentKey={currentKey} mode="sensitivities"/>
-    <Section title="Scénarios de participation" state="Européennes 2024"><p className="elec-synthesis-intro">Chaque scénario modifie la mobilisation territoriale puis mesure l’effet sur les grandes sensibilités : les barres montrent, comme pour la sensibilité moyenne du territoire ci-dessus, le score simulé de chaque sensibilité ; l’écart entre parenthèses indique la variation par rapport à la moyenne européennes 2024 (vert = progression, rouge = recul). Le détail par parti de la gauche et de l’extrême droite, puis le duel LFI / RN / Centre, figurent sous chaque carte.</p><div className="scenario-cards">{scenarios.map(sc=><article key={sc.label}><header><strong>{sc.label}</strong><p>{sc.explanation}</p></header><div className="average-sensitivity">{sc.effects.slice().sort((a,b)=>b.value-a.value).map(effect=><article key={effect.id}><span><strong>{effect.label}</strong><b>{effect.value.toFixed(1)} % <em className={effect.delta>=0?"up":"down"}>({effect.delta>=0?"+":""}{effect.delta.toFixed(1)} pt)</em></b></span><i><em style={{width:`${Math.min(100,effect.value/60*100)}%`,background:effect.color}}/></i></article>)}</div><div className="average-scale"><span>0 %</span><span>30 %</span><span>60 %</span></div>{sc.effects.filter(effect=>effect.detail?.length).map(effect=><div key={effect.id} className="scenario-detail"><span className="scenario-detail-title">Détail « {effect.label} »</span><div className="average-sensitivity compact">{effect.detail!.map(d=><article key={d.id}><span><strong>{d.label}</strong><b>{d.value.toFixed(1)} % <em className={d.delta>=0?"up":"down"}>({d.delta>=0?"+":""}{d.delta.toFixed(1)} pt)</em></b></span><i><em style={{width:`${Math.min(100,d.value/60*100)}%`,background:d.color}}/></i></article>)}</div></div>)}{sc.duel?.length===3&&<div className="scenario-detail"><span className="scenario-detail-title">Duel LFI · RN · Centre</span><div className="average-sensitivity compact">{sc.duel.map(d=><article key={d.id}><span><strong>{d.label}</strong><b>{d.value.toFixed(1)} % <em className={d.delta>=0?"up":"down"}>({d.delta>=0?"+":""}{d.delta.toFixed(1)} pt)</em></b></span><i><em style={{width:`${Math.min(100,d.value/60*100)}%`,background:d.color}}/></i></article>)}</div></div>}<footer>{sc.conclusion}</footer></article>)}</div></Section>
+    <Section title="Scénarios de participation" state="Européennes 2024">
+      <p className="elec-synthesis-intro">Chaque scénario modifie la mobilisation territoriale puis mesure l’effet sur les grandes sensibilités : les barres montrent, comme pour la sensibilité moyenne du territoire ci-dessus, le score simulé de chaque sensibilité ; l’écart entre parenthèses indique la variation par rapport à la moyenne européennes 2024 (vert = progression, rouge = recul). Sous chaque carte : le détail par parti de la gauche et de l’extrême droite, puis le duel LFI · RN · Centre en donut.</p>
+      <ScenarioTrendChart scenarios={scenarios} />
+      <div className="scenario-cards">{scenarios.map(sc=>
+        <article key={sc.label}>
+          <header><strong>{sc.label}</strong><p>{sc.explanation}</p></header>
+          <span className="scenario-block-title">Sensibilités simulées</span>
+          <div className="average-sensitivity">{sc.effects.slice().sort((a,b)=>b.value-a.value).map(effect=><article key={effect.id}><span><strong>{effect.label}</strong><b>{effect.value.toFixed(1)} % <em className={effect.delta>=0?"up":"down"}>({effect.delta>=0?"+":""}{effect.delta.toFixed(1)} pt)</em></b></span><i><em style={{width:`${Math.min(100,effect.value/60*100)}%`,background:effect.color}}/></i></article>)}</div>
+          <div className="average-scale"><span>0 %</span><span>30 %</span><span>60 %</span></div>
+          {sc.effects.filter(effect=>effect.detail?.length).map(effect=>
+            <div key={effect.id} className="scenario-detail">
+              <span className="scenario-detail-title"><i style={{background:effect.color}}/>Détail « {effect.label} »</span>
+              <div className="average-sensitivity compact">{effect.detail!.map(d=><article key={d.id}><span><strong>{d.label}</strong><b>{d.value.toFixed(1)} % <em className={d.delta>=0?"up":"down"}>({d.delta>=0?"+":""}{d.delta.toFixed(1)} pt)</em></b></span><i><em style={{width:`${Math.min(100,d.value/60*100)}%`,background:d.color}}/></i></article>)}</div>
+            </div>
+          )}
+          {sc.duel?.length===3 && <ScenarioDuel duel={sc.duel}/>}
+          <footer>{sc.conclusion}</footer>
+        </article>
+      )}</div>
+    </Section>
   </>;
+}
+
+const SHORT_POLE_LABEL: Record<string,string> = { lfi: "LFI", rn: "RN", center: "Centre" };
+function ScenarioDuel({ duel }: { duel: { id: string; label: string; value: number; delta: number; color: string }[] }) {
+  const total = duel.reduce((sum,d)=>sum+d.value,0) || 1;
+  const r = 40, C = 2*Math.PI*r;
+  let offset = 0;
+  const leader = duel.slice().sort((a,b)=>b.value-a.value)[0];
+  return (
+    <div className="scenario-duel">
+      <span className="scenario-duel-title">★ Duel LFI · RN · Centre</span>
+      <div className="scenario-duel-body">
+        <svg viewBox="0 0 100 100" className="scenario-duel-donut" role="img" aria-label={`${leader.label} en tête avec ${leader.value.toFixed(1)} %`}>
+          <circle cx="50" cy="50" r={r} fill="none" stroke="#e3e8ee" strokeWidth="15"/>
+          {duel.map(d=>{const len=C*d.value/total,seg=<circle key={d.id} cx="50" cy="50" r={r} fill="none" stroke={d.color} strokeWidth="15" strokeDasharray={`${len} ${C-len}`} strokeDashoffset={-offset} transform="rotate(-90 50 50)"/>;offset+=len;return seg})}
+          <text x="50" y="47" textAnchor="middle" className="scenario-duel-value">{leader.value.toFixed(1)} %</text>
+          <text x="50" y="61" textAnchor="middle" className="scenario-duel-leader">{SHORT_POLE_LABEL[leader.id] ?? leader.label}</text>
+        </svg>
+        <ul className="scenario-duel-legend">{duel.map(d=><li key={d.id}><i style={{background:d.color}}/><span>{d.label}</span><b>{d.value.toFixed(1)} %</b><em className={d.delta>=0?"up":"down"}>({d.delta>=0?"+":""}{d.delta.toFixed(1)} pt)</em></li>)}</ul>
+      </div>
+      <p className="scenario-duel-note">Part relative entre ces trois pôles seulement (hors autres familles) — écarts calculés par rapport à la moyenne européennes 2024.</p>
+    </div>
+  );
+}
+
+function ScenarioTrendChart({ scenarios }: { scenarios: { label: string; duel?: { id: string; label: string; value: number; color: string }[] }[] }) {
+  const withDuel = scenarios.filter((sc): sc is typeof sc & { duel: NonNullable<typeof sc["duel"]> } => (sc.duel?.length ?? 0) === 3);
+  if (withDuel.length < 2) return null;
+  const width = 600, height = 190, padL = 8, padR = 80, padT = 14, padB = 24;
+  const maxVal = Math.max(...withDuel.flatMap(sc=>sc.duel.map(d=>d.value)), 10);
+  const x = (i:number) => padL + (i*(width-padL-padR))/Math.max(1,withDuel.length-1);
+  const y = (v:number) => height-padB-(v/maxVal)*(height-padT-padB);
+  const poles = ["lfi","rn","center"].map(id=>{
+    const first = withDuel[0].duel.find(d=>d.id===id);
+    const last = withDuel[withDuel.length-1].duel.find(d=>d.id===id);
+    return first && last ? { id, color: first.color, value: last.value, y: y(last.value) } : null;
+  }).filter((p): p is NonNullable<typeof p> => p !== null).sort((a,b)=>a.y-b.y);
+  poles.forEach((p,i)=>{ if (i>0 && p.y - poles[i-1].y < 12) p.y = poles[i-1].y + 12; });
+  return (
+    <div className="scenario-trend">
+      <span className="scenario-trend-title">Le duel, scénario par scénario</span>
+      <svg viewBox={`0 0 ${width} ${height}`} className="scenario-trend-chart" role="img" aria-label="Évolution de LFI, RN et Centre selon les scénarios simulés">
+        <line x1={padL} y1={height-padB} x2={width-padR} y2={height-padB} className="scenario-trend-axis"/>
+        {["lfi","rn","center"].map(id=>{
+          const first = withDuel[0].duel.find(d=>d.id===id); if(!first) return null;
+          const points = withDuel.map((sc,i)=>`${x(i)},${y(sc.duel.find(d=>d.id===id)?.value ?? 0)}`).join(" ");
+          const pole = poles.find(p=>p.id===id);
+          return (
+            <g key={id}>
+              <polyline points={points} fill="none" stroke={first.color} strokeWidth="2.5" strokeLinejoin="round" strokeLinecap="round"/>
+              {withDuel.map((sc,i)=><circle key={i} cx={x(i)} cy={y(sc.duel.find(d=>d.id===id)?.value ?? 0)} r="4" fill={first.color}/>)}
+              {pole && <text x={x(withDuel.length-1)+8} y={pole.y+3} className="scenario-trend-label" fill={first.color}>{SHORT_POLE_LABEL[id]} {pole.value.toFixed(0)} %</text>}
+            </g>
+          );
+        })}
+        {withDuel.map((_sc,i)=><text key={i} x={x(i)} y={height-6} textAnchor="middle" className="scenario-trend-tick">{i+1}</text>)}
+      </svg>
+      <p className="scenario-trend-note">{withDuel.map((sc,i)=>`${i+1}. ${sc.label}`).join(" · ")}</p>
+    </div>
+  );
 }
 
 function CommuneSynthesis({ snapshots, currentKey, mode }: { snapshots: ElectionSnapshot[]; currentKey: string; mode: "results" | "families" | "sensitivities" }) {
