@@ -93,7 +93,7 @@ export default function ElectionsPage() {
   const [scale, setScale] = useState<Scale>("commune");
   const [electionId, setElectionId] = useState("pres-2022");
   const [tourId, setTourId] = useState("t2");
-  const [metric, setMetric] = useState<DisplayMetric>("tete");
+  const [metric, setMetric] = useState<DisplayMetric>("none");
   const [scoreCandidat, setScoreCandidat] = useState<string>("");
 
   const [communesGeo, setCommunesGeo] = useState<any>(null);
@@ -596,6 +596,7 @@ export default function ElectionsPage() {
     );
     window.open(`${basePath}/print.html#${token}`, "_blank", "noopener");
   }
+  function printDepartment(){const unit=allElectionData[dataKey]?aggregateDepartment(allElectionData[dataKey]):null;if(!unit)return;const token=crypto.randomUUID();localStorage.setItem(`elections-print-${token}`,JSON.stringify({unit,election:`${election.label} · ${tour.label}`,scale:"Département",snapshots:departmentSnapshots,currentKey:dataKey,socio:departmentSocio,populationHistory:[],date:new Date().toISOString()}));window.open(`${basePath}/print.html#${token}`,"_blank","noopener");}
 
   return (
     <main className="elec-page">
@@ -787,7 +788,7 @@ export default function ElectionsPage() {
       </footer>
 
       <dialog ref={departmentDialog} className="elec-dept-dialog">
-        <header><div><small>ANALYSE DÉPARTEMENTALE</small><h2>Val-d’Oise</h2><p>Résultats agrégés des 184 communes</p></div><div className="dept-dialog-actions"><button className="dept-pdf" onClick={() => window.print()}>Imprimer / PDF</button><button className="dept-dialog-close" onClick={() => departmentDialog.current?.close()} aria-label="Fermer">×</button></div></header>
+        <header><div><small>ANALYSE DÉPARTEMENTALE</small><h2>Val-d’Oise</h2><p>Résultats agrégés des 184 communes</p></div><div className="dept-dialog-actions"><button className="dept-pdf" onClick={printDepartment}>Ouvrir la fiche PDF</button><button className="dept-dialog-close" onClick={() => departmentDialog.current?.close()} aria-label="Fermer">×</button></div></header>
         <div className="dept-dialog-body"><DepartmentAnalysis snapshots={departmentSnapshots} socio={departmentSocio} communeData={allElectionData["europeennes-2024"]?.communes ?? {}} datasets={allElectionData} socioByCommune={socioData} /></div>
       </dialog>
 
@@ -919,6 +920,7 @@ function PopulationSparkline({ data }: { data: { annee: number; population: numb
         </svg>
         <div className="elec-population-axis"><span>{first.annee}</span><span>{middle.annee}</span><span>{last.annee}</span></div>
       </div>
+      <p className="population-scale-note">Échelle resserrée entre {min.toLocaleString("fr-FR")} et {max.toLocaleString("fr-FR")} habitants : la courbe ne part pas de zéro.</p>
       <div className="elec-population-values">
         <span><small>Au départ</small><strong>{first.population.toLocaleString("fr-FR")}</strong><em>habitants en {first.annee}</em></span>
         <span><small>Dernière valeur</small><strong>{last.population.toLocaleString("fr-FR")}</strong><em>habitants en {last.annee}</em></span>
@@ -929,6 +931,17 @@ function PopulationSparkline({ data }: { data: { annee: number; population: numb
 }
 
 type PoliticalGroup = { sensitivity: string; family: string };
+function partyLabel(candidate:{nom:string|null;prenom:string|null;nuance:string|null}){
+  const name=`${candidate.prenom??""} ${candidate.nom??""}`.toUpperCase();
+  if(name.includes("FRANCE REVIENT")||name.includes("BARDELLA")||name.includes("LE PEN"))return "Rassemblement national";
+  if(name.includes("LFI")||name.includes("MÉLENCHON")||name.includes("MELENCHON"))return "La France insoumise";
+  if(name.includes("BESOIN D'EUROPE")||name.includes("MACRON"))return "Renaissance · MoDem · Horizons";
+  if(name.includes("REVEIL EUR")||name.includes("RÉVEIL EUR"))return "Parti socialiste · Place publique";
+  if(name.includes("ZEMMOUR")||name.includes("RECONQU"))return "Reconquête";
+  const info=nuanceInfo(candidate.nuance); if(info.label!=="Nuance non répertoriée")return info.label;
+  const group=politicalGroup(candidate.nuance,name).sensitivity;
+  return ({extreme_left:"Extrême gauche",left:"Gauche",center:"Centre",right:"Droite",far_right:"Extrême droite",other:"Sensibilité non renseignée"} as Record<string,string>)[group];
+}
 function politicalGroup(nuance: string | null, fullName: string): PoliticalGroup {
   const code = nuance?.toUpperCase().trim() ?? "";
   const name = fullName.toUpperCase();
@@ -990,8 +1003,8 @@ function DepartmentAnalysis({ snapshots, socio, communeData, datasets, socioByCo
   return <>
     <p className="dept-analysis-base">Base des scénarios : Européennes 2024</p><div className="dept-summary"><div><span>Participation</span><strong>{current.result.pct_participation.toFixed(1)} %</strong></div><div><span>Sensibilité en tête</span><strong style={{color:mainSensitivity.color}}>{mainSensitivity.label}</strong></div><div><span>Exprimés</span><strong>{current.result.exprimes.toLocaleString("fr-FR")}</strong></div></div>
     {socio && <Section title="Bilan sociodémographique" state="INSEE RP 2022"><div className="dept-profile"><strong>{Math.round(socio.population).toLocaleString("fr-FR")} habitants</strong><div>{[["15–24 ans",socio.jeunes,"#00a7b5"],["65 ans ou plus",socio.seniors,"#a558a0"],["Diplôme supérieur",socio.diplomesSup,"#18753c"]].map(([label,value,color])=><span key={String(label)}><b>{label}</b><i><em style={{width:`${value}%`,background:String(color)}}/></i><strong>{Number(value).toFixed(1)} %</strong></span>)}</div></div></Section>}
-    <Section title="Bilan électoral" state="Européennes 2024"><div className="dept-top-four">{current.result.candidats.slice(0,4).map((c,i)=><div key={`${c.nom}-${i}`}><span><b>{i+1}</b><strong>{c.prenom} {c.nom}</strong></span><i><em style={{width:`${c.pct_exprimes}%`,background:colorForCandidate(c.nom,c.nuance)}}/></i><b>{c.pct_exprimes.toFixed(1)} %</b></div>)}</div><div className="dept-balance">{sensitivities.map(s=>{const value=baseline[s.id]??0;return value?<i key={s.id} style={{width:`${value}%`,background:s.color}} title={`${s.label} ${value.toFixed(1)} %`}>{value>=11?`${value.toFixed(0)} %`:""}</i>:null})}</div></Section>
-    <Section title="Participation" state="Scrutins nationaux"><div className="dept-participation-chart">{participationSeries.map(p=><span key={p.label}><i><em style={{height:`${p.value}%`}}/></i><b>{p.value.toFixed(1)} %</b><small>{p.label}</small></span>)}</div></Section>
+    <Section title="Bilan électoral · Européennes 2024" state="4 premiers"><div className="dept-top-four">{current.result.candidats.slice(0,4).map((c,i)=><div key={`${c.nom}-${i}`}><span><b>{i+1}</b><strong>{c.prenom} {c.nom}<small>{partyLabel(c)}</small></strong></span><i><em style={{width:`${c.pct_exprimes}%`,background:colorForCandidate(c.nom,c.nuance)}}/></i><b>{c.pct_exprimes.toFixed(1)} %</b></div>)}</div><div className="dept-balance">{sensitivities.map(s=>{const value=baseline[s.id]??0;return value?<i key={s.id} style={{width:`${value}%`,background:s.color}} title={`${s.label} ${value.toFixed(1)} %`}>{value>=11?`${value.toFixed(0)} %`:""}</i>:null})}</div></Section>
+    <Section title="Participation moyenne" state={`${participationSeries.length} scrutins nationaux`}><div className="dept-participation-summary"><article><span>Moyenne</span><strong>{(participationSeries.reduce((sum,p)=>sum+p.value,0)/participationSeries.length).toFixed(1)} %</strong></article><article><span>Plus haute</span><strong>{Math.max(...participationSeries.map(p=>p.value)).toFixed(1)} %</strong></article><article><span>Plus basse</span><strong>{Math.min(...participationSeries.map(p=>p.value)).toFixed(1)} %</strong></article></div><div className="dept-participation-lines">{participationSeries.map((p,i)=><div key={p.label}><span>{p.label}</span><i><em style={{width:`${p.value}%`,background:["#6a5acd","#a558a0","#18753c","#e4794a"][i%4]}}/></i><b>{p.value.toFixed(1)} %</b></div>)}</div></Section>
     <Section title="Évolution des votes" state="Présidentielles 2017–2022"><p className="elec-synthesis-intro">Premiers tours comparés à scrutin identique.</p><div className="dept-evolution">{families.map(f=>{const start=politicalScores(presidential[0]?.result??current.result,"family")[f.id]??0,end=politicalScores(presidential.at(-1)?.result??current.result,"family")[f.id]??0,delta=end-start;return <div key={f.id} style={{"--trend":f.color} as CSSProperties}><span><strong>{f.label}</strong><b className={delta>=0?"up":"down"}>{delta>=0?"+":""}{delta.toFixed(1)} pts</b></span><i><em style={{width:`${Math.min(100,end)}%`}}/></i><small>2017 {start.toFixed(1)} % → 2022 {end.toFixed(1)} %</small></div>})}</div></Section>
     <Section title="Scénarios de participation" state="Comparaison au vote observé"><p className="elec-synthesis-intro">Chaque scénario change uniquement le poids des communes selon leur niveau de participation. Les choix politiques observés dans chaque commune restent inchangés.</p><div className="scenario-method"><article><strong>Participation habituelle</strong><span>Chaque commune retrouve sa participation moyenne mesurée sur les présidentielles 2017 et 2022 et les européennes 2024.</span></article><article><strong>Participation haute</strong><span>Chaque commune reprend son niveau de mobilisation de la présidentielle 2017, scrutin le plus participatif de la série.</span></article><article><strong>Communes jeunes +10 %</strong><span>Le poids des communes ayant le plus de 15–24 ans augmente de 10 %. Ce test porte sur les territoires jeunes, pas sur le vote individuel des jeunes.</span></article><article><strong>Rattrapage de l’abstention</strong><span>Les communes sous la moyenne départementale sont remontées à 48,3 % de participation.</span></article></div><div className="scenario-impact"><header><strong>Scénario</strong><strong>Progression</strong><strong>Recul</strong><strong>Amplitude</strong></header>{scenarios.slice(1).map(sc=>{const changes=sensitivities.map(s=>({...s,delta:(sc.data[s.id]??0)-(baseline[s.id]??0)}));const up=changes.slice().sort((a,b)=>b.delta-a.delta)[0],down=changes.slice().sort((a,b)=>a.delta-b.delta)[0],effect=Math.max(...changes.map(c=>Math.abs(c.delta)));return <article key={sc.label}><div><strong>{sc.label}</strong><small>{sc.note}</small></div><span style={{color:up.color}}>{up.delta>0.05?`${up.label} +${up.delta.toFixed(1)} pt`:"Pas de hausse nette"}</span><span style={{color:down.color}}>{down.delta<-0.05?`${down.label} ${down.delta.toFixed(1)} pt`:"Pas de recul net"}</span><b className={effect<.2?"neutral":"marked"}>{effect<.2?"Effet faible":`${effect.toFixed(1)} pt`}</b></article>})}</div></Section>
     <Section title="Lecture" state="Constats"><ul className="dept-findings"><li><b>Rapport de forces actuel :</b> {mainSensitivity.label.toLowerCase()} en tête avec {(baseline[mainSensitivity.id]??0).toFixed(1)} % des exprimés classés.</li><li><b>Participation :</b> {current.result.pct_abstention.toFixed(1)} % d’abstention au tour sélectionné.</li><li><b>Effet territorial jeunesse :</b> {sensitivities.map(s=>({label:s.label,delta:(youthTerritories[s.id]??0)-(baseline[s.id]??0)})).sort((a,b)=>Math.abs(b.delta)-Math.abs(a.delta))[0].label} varie le plus dans le scénario, sans permettre d’en déduire le vote des jeunes.</li></ul></Section>
@@ -1039,7 +1052,7 @@ function CommuneSynthesis({ snapshots, currentKey, mode }: { snapshots: Election
         <header><strong>{label}</strong><span>{rounds.length} tour{rounds.length > 1 ? "s" : ""}</span></header>
         {rounds.map(snapshot => <div className="election-round" key={snapshot.key}><div className="round-heading"><strong>{snapshot.tour}</strong><span>Participation <b>{snapshot.result.pct_participation.toFixed(1)} %</b></span></div><div>{snapshot.result.candidats.slice().sort((a,b) => b.pct_exprimes - a.pct_exprimes).slice(0,4).map((candidate, index) => {
           const color = colorForCandidate(candidate.nom, candidate.nuance);
-          return <div className="elec-top-result" key={`${candidate.nom}-${candidate.prenom}-${index}`}><span className="rank">{index + 1}</span><div><strong>{candidate.prenom} {candidate.nom ?? nuanceInfo(candidate.nuance).label}</strong><i><em style={{ width: `${Math.max(0, Math.min(100, candidate.pct_exprimes))}%`, background: color }} /></i></div><b>{candidate.pct_exprimes.toFixed(1)} %</b></div>;
+          return <div className="elec-top-result" key={`${candidate.nom}-${candidate.prenom}-${index}`}><span className="rank">{index + 1}</span><div><strong>{candidate.prenom} {candidate.nom ?? ""}<small>{partyLabel(candidate)}</small></strong><i><em style={{ width: `${Math.max(0, Math.min(100, candidate.pct_exprimes))}%`, background: color }} /></i></div><b>{candidate.pct_exprimes.toFixed(1)} %</b></div>;
         })}</div></div>)}
       </article>)}</div>
     </Section>;
@@ -1075,7 +1088,7 @@ function CandidateTable({ candidats }: { candidats: UnitResult["candidats"] }) {
               <div className="elec-cand-bar-fill" style={{ width: `${Math.max(0, Math.min(100, c.pct_exprimes))}%`, background: color }} />
             </div>
             <div className="elec-cand-card-foot">
-              <span>{info.label}</span>
+              <span>{partyLabel(c)}</span>
               <span className="num">
                 {c.voix.toLocaleString("fr-FR")} voix · {c.pct_exprimes.toFixed(2)} %
               </span>
