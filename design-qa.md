@@ -21,6 +21,16 @@
 - [x] NFP conservé comme coalition « Union de la gauche », sans ventilation artificielle.
 - [x] Sensibilités limitées au tour sélectionné pour éviter les comparaisons trompeuses.
 
+## 15 septembre 2026 — analyse départementale
+
+- [x] Accès « Recentrer » et « Analyse départementale » placés en tête du volet.
+- [x] Agrégation départementale réalisée à partir des voix et des effectifs bruts.
+- [x] Profil INSEE pondéré par la population.
+- [x] Participation comparée sur les scrutins nationaux disponibles.
+- [x] Évolution politique limitée aux premiers tours présidentiels 2017 et 2022.
+- [x] Scénarios fondés sur les Européennes 2024, avec hypothèses affichées.
+- [x] Absence de déduction individuelle à partir des données territoriales.
+
 - Source visual truth: `/var/folders/3h/px_6bwl96w50x8y34bkz_k_80000gn/T/TemporaryItems/NSIRD_screencaptureui_xYSZXd/Capture d’écran 2026-09-15 à 12.28.51.png`
 - Source pixels: 2730 × 1966, browser chrome excluded from the visual comparison.
 - Implementation: `http://127.0.0.1:5173/?review=switches`
