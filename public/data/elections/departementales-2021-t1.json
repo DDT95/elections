@@ -1,0 +1,8 @@
+{
+  "election": "Départementales 2021",
+  "tour": 1,
+  "date": "2021-06-20",
+  "status": "a_completer",
+  "note": "1er tour non fourni dans cette session (seul le 2nd tour a été transmis par l'utilisateur, fichier officiel DGRC). Structure prête pour intégration ultérieure.",
+  "communes": {}
+}

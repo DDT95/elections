@@ -33,6 +33,16 @@ export const ELECTIONS: ElectionDef[] = [
     tours: [{ id: "t1", label: "9 juin 2024", file: "europeennes-2024" }],
   },
   {
+    id: "departementales-2021",
+    label: "Départementales 2021",
+    shortLabel: "Départementales 2021",
+    status: "reel",
+    tours: [
+      { id: "t1", label: "1er tour (20 juin 2021) — à compléter", file: "departementales-2021-t1" },
+      { id: "t2", label: "2nd tour (27 juin 2021)", file: "departementales-2021-t2" },
+    ],
+  },
+  {
     id: "municipales-2020",
     label: "Municipales 2020",
     shortLabel: "Municipales 2020",

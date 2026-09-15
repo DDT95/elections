@@ -13,7 +13,7 @@ Ce document distingue précisément ce qui est **réel** (données officielles v
 - Fichier : `public/data/geo/bureaux-vote-95.geojson`
 - Source : même méthode que [« Proposition de contours des bureaux de vote »](https://www.data.gouv.fr/datasets/proposition-de-contours-des-bureaux-de-vote) (INSEE / Etalab, polygones de Voronoï à partir du Répertoire électoral unique) — **810 bureaux du Val-d'Oise**, géométries MultiPolygon, propriétés `codeCommune`, `numeroBureauVote`, `codeBureauVote` (ex. `95002_0001`), `codeCirconscription`.
 - **Obtention** : le téléchargement direct du fichier France entière (~645 Mo, hébergé sur `object.files.data.gouv.fr`) s'est heurté au blocage réseau documenté plus bas (§7) — `object.files.data.gouv.fr` fait partie des domaines refusés par le proxy de sortie de cette session, confirmé par plusieurs tentatives (`curl`, outil de récupération web dédié). L'utilisateur a fourni un **export local** du même jeu de données (réalisé dans QGIS, filtré sur `codeDepartement = 95`), ce qui a permis d'intégrer la couche sans la fabriquer ni l'approximer.
-- Utilisée comme couche cartographique réelle pour l'échelle « bureau de vote », jointe aux résultats via la clé `codeBureauVote` (identique au format `id_brut_miom` / `code_insee_code_bv` utilisé dans les fichiers de résultats, ex. `95002_0001`).
+- Utilisée comme couche cartographique réelle pour l'échelle « bureau de vote », jointe aux résultats via la clé `codeBureauVote` (identique au format `id_brut_miom` / `code_insee_code_bv` utilisé dans les fichiers de résultats, ex. `95002_0001`). Toutes les sources bureau de vote (Tabular API et exports DGRC officiels) sont normalisées vers cette même convention (commune sur 5 chiffres, numéro de bureau sur 4 chiffres avec zéros de tête) lors de leur traitement, y compris lorsque le fichier source utilise un format différent (ex. « Code de la commune » : « 002 » ou « Code BV » : « 1 » sans zéros).
 
 ## 3. Présidentielle 2022 (1er et 2nd tour) — RÉEL
 
@@ -25,7 +25,7 @@ Ce document distingue précisément ce qui est **réel** (données officielles v
 ## 4. Législatives 2024 (1er et 2nd tour) — RÉEL
 
 - Fichiers : `public/data/elections/legislatives-2024-t1.json`, `legislatives-2024-t1-bv.json`, `legislatives-2024-t2.json`, `legislatives-2024-t2-bv.json`.
-- **1er tour** : source Tabular API de « Données des élections agrégées » (`id_election = 2024_legi_t1`), même méthode que la présidentielle. Couverture : **183/184 communes** (la commune de Gouzangrez, ~130 électeurs inscrits, est absente du jeu de données source pour ce scrutin — absence constatée de façon identique dans les 3 sources Tabular API interrogées pour 2024, cohérente avec un rattachement administratif de son bureau de vote plutôt qu'une lacune de récupération) ; **828/828 bureaux de vote** pour les résultats généraux (100 % des communes présentes) ; détail par candidat présent pour la totalité des 183 communes (aucune commune entièrement sans détail), avec une légère incomplétude résiduelle possible au niveau bureau individuel du même ordre que pour la présidentielle T1.
+- **1er tour** : recalculé à partir d'un **export officiel DGRC fourni par l'utilisateur**, fichier résultats définitifs par bureau de vote (828 features), format large avec jusqu'à 19 candidats détectés dynamiquement par bureau. Couverture : **828/828 bureaux de vote (100 %)**, **183/184 communes**. La commune de Gouzangrez (~130 électeurs inscrits) est absente de ce fichier officiel exactement comme de la source Tabular API utilisée initialement — son absence est donc confirmée comme un fait réel des données sources (rattachement administratif de son bureau de vote), pas une lacune de récupération. Remplace l'agrégation Tabular API précédente (qui plafonnait à 98 % de couverture du détail candidat) ; les totaux départementaux sont strictement identiques (744 653 inscrits, 471 441 exprimés), ce qui confirme la cohérence entre les deux sources. Deux candidats élus dès le 1er tour sont correctement identifiés (Paul Vannier et Carlos Martens Bilongo, tous deux Union de la gauche).
 - **2nd tour** : **export officiel DGRC fourni par l'utilisateur**, fichier résultats définitifs par bureau de vote (703 features). Couverture : **177/184 communes, 703/703 bureaux, 100 %** — 177/184 est un résultat structurellement normal et non une donnée manquante : seules les communes rattachées à une circonscription ayant nécessité un second tour votent à ce tour (7 des 10 circonscriptions du Val-d'Oise ont été tranchées dès le premier tour en 2024). Le tour a été déterminé par déduction des données elles-mêmes (candidats « élus » avec des scores de 25 à 47 % des exprimés, impossibles en 1er tour où l'élection directe exige plus de 50 % des exprimés **et** plus de 25 % des inscrits) plutôt que supposé a priori.
 
 ## 5. Européennes 2024 — RÉEL
@@ -41,9 +41,20 @@ Ce document distingue précisément ce qui est **réel** (données officielles v
 - Couverture réelle de la participation : **T1 : 184/184 communes (100 %)** ; **T2 : 35/184 communes** — résultat structurellement normal (seules les communes n'ayant pas obtenu de liste majoritaire dès le 1er tour organisent un 2nd tour ; le 2nd tour 2020 a en outre été reporté au 28 juin 2020 pour cause de COVID-19, ce report est appliqué à la date affichée).
 - L'interface affiche un badge « à compléter » spécifiquement sur la section « résultats par candidat » pour ce scrutin, tout en affichant les chiffres réels de participation.
 
-## 7. Canton — À COMPLÉTER
+## 7. Canton — RÉEL
 
-- Aucune table de correspondance commune ↔ canton à jour et fiable n'a pu être récupérée dans le temps imparti. Plutôt que produire un canton approximatif non vérifiable, l'échelle « canton » reste **structurelle uniquement** : sélecteur fonctionnel, message « à compléter » explicite, aucun contour ni résultat affiché.
+- Fichier de contours : `public/data/geo/cantons-95.geojson` (21 cantons — Val-d'Oise post-redécoupage 2015).
+- Fichiers de résultats : `public/data/elections/departementales-2021-t2-canton.json`.
+- **Source de la correspondance commune/bureau ↔ canton** : le fichier officiel DGRC des Départementales 2021 (2nd tour, §10 ci-dessous), qui porte le code et le libellé de canton réels pour chacun de ses 809 bureaux de vote du Val-d'Oise. C'est la première donnée de cette session à fournir un référentiel cantonal fiable et à jour.
+- **Méthode de construction des contours** : dissolution géométrique réelle, mais au niveau **bureau de vote** (et non commune) — nécessaire car deux communes denses, Argenteuil (95018) et Cergy (95127), sont chacune scindées entre plusieurs cantons (Argenteuil-1/2/3, Cergy-1/2). Chacun des 810 polygones de bureaux de vote (§2) a été affecté à son canton réel via la jointure sur `codeBureauVote`, puis les polygones ont été fusionnés par canton. 808/810 bureaux se sont joints directement (numérotation identique entre le millésime des contours de bureaux et celui des Départementales 2021) ; les 2 bureaux restants ont été rattachés au canton majoritaire de leur commune (méthode de repli, toujours basée sur un code de canton réel, jamais inventé). Résultat : **21/21 cantons produits**, y compris les 3 cantons partiels d'Argenteuil et les 2 de Cergy, correctement scindés.
+- Sanity check : nombre de cantons obtenu (21) conforme à l'attendu pour le Val-d'Oise depuis le redécoupage cantonal de 2015.
+
+## 7bis. Départementales 2021 (2nd tour) — RÉEL ; 1er tour à compléter
+
+- Fichiers : `public/data/elections/departementales-2021-t2.json` (commune), `departementales-2021-t2-canton.json` (canton — échelle nativement pertinente pour ce scrutin), `departementales-2021-t2-bv.json` (bureau de vote). `departementales-2021-t1.json` reste une structure vide (`status: "a_completer"`) : seul le 2nd tour a été transmis.
+- Source : **export officiel DGRC fourni par l'utilisateur**, fichier résultats définitifs par bureau de vote, France entière (809 bureaux du Val-d'Oise après filtrage sur `code_departement = 95`), binômes candidats (jusqu'à 2 par bureau en 2nd tour, colonnes détectées dynamiquement).
+- Couverture : **184/184 communes, 21/21 cantons, 809/809 bureaux de vote (100 %)** au niveau participation et détail par binôme.
+- Ce scrutin est le seul dont l'échelle native est le canton (chaque binôme se présente dans un seul canton) : c'est donc la donnée la plus riche pour tester l'échelle cantonale de l'Atlas.
 
 ## 8. Profil sociodémographique (âge, CSP) — À COMPLÉTER (contrainte d'accès réseau)
 
@@ -66,11 +77,13 @@ L'environnement d'exécution restreint les accès réseau sortants à une liste 
 | Présidentielle 2022 T1 — bureau (détail candidat) | Réel | 795/811 (98 %) | idem |
 | Présidentielle 2022 T2 — commune et bureau | Réel | 184/184, 811/811 (100 %) | export officiel DGRC (utilisateur) |
 | Présidentielle 2022 T1/T2 — circonscription | Réel | 10/10 | agrégation + dissolution géométrique réelle |
-| Législatives 2024 T1 — commune et bureau | Réel | 183/184, 828/828 | data.gouv.fr, Tabular API |
+| Législatives 2024 T1 — commune et bureau | Réel | 183/184 (Gouzangrez absente, confirmé), 828/828 (100 %) | export officiel DGRC (utilisateur) |
 | Législatives 2024 T2 — commune et bureau | Réel | 177/184 (structurel), 703/703 | export officiel DGRC (utilisateur) |
 | Européennes 2024 — commune et bureau | Réel | 183/184, 828/828 | export officiel DGRC (utilisateur) |
 | Municipales 2020 T1 — participation | Réel | 184/184 | data.gouv.fr, Tabular API |
 | Municipales 2020 T2 — participation | Réel | 35/184 (structurel) | idem |
 | Municipales 2020 T1/T2 — détail liste/candidat | À compléter | — | non traité (volume de pagination) |
-| Contours et résultats cantons | À compléter | — | table de correspondance non trouvée |
+| Contours cantons (95) | Réel | 21/21 | dissolution BV réelle, référentiel Départementales 2021 (utilisateur) |
+| Départementales 2021 T2 — commune, canton, bureau | Réel | 184/184, 21/21, 809/809 (100 %) | export officiel DGRC (utilisateur) |
+| Départementales 2021 T1 | À compléter | — | non fourni par l'utilisateur |
 | Profil sociodémographique (âge, CSP) | À compléter | — | INSEE RP 2022/Filosofi 2021 (Parquet, accès réseau bloqué) |

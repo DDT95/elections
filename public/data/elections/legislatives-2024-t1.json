@@ -4,11 +4,11 @@
  "date": "2024-06-30",
  "status": "reel",
  "source": {
-  "producer": "Ministère de l'Intérieur / data.gouv.fr (agrégation Etalab)",
-  "dataset": "Données des élections agrégées",
-  "url": "https://www.data.gouv.fr/datasets/donnees-des-elections-agregees"
+  "producer": "Ministère de l'Intérieur (DGRC) — export officiel bureau de vote",
+  "dataset": "Résultats définitifs par bureau de vote (fourni par l'utilisateur)",
+  "url": "https://www.data.gouv.fr/"
  },
- "note": "183/184 communes (commune de Gouzangrez absente du jeu de données source pour ce scrutin). Détail par candidat manquant pour 0 commune(s) en raison de limites de pagination de l'API — turnout réel disponible pour toutes les communes présentes.",
+ "note": "828/828 bureaux (100%). Commune(s) absente(s) du fichier officiel : 95282 Remplace l'agrégation Tabular API précédente (98% de couverture candidat).",
  "communes": {
   "95002": {
    "code_insee": "95002",
@@ -55,14 +55,6 @@
      "pct_inscrits": 3.04
     },
     {
-     "nom": "GÉHAN",
-     "prenom": "Barbara",
-     "nuance": "EXG",
-     "voix": 5,
-     "pct_exprimes": 0.98,
-     "pct_inscrits": 0.72
-    },
-    {
      "nom": "DE GARILS",
      "prenom": "Laure",
      "nuance": "REC",
@@ -79,17 +71,25 @@
      "pct_inscrits": 0.72
     },
     {
-     "nom": "LAH",
-     "prenom": "Sami",
-     "nuance": "DIV",
-     "voix": 0,
-     "pct_exprimes": 0.0,
-     "pct_inscrits": 0.0
+     "nom": "GÉHAN",
+     "prenom": "Barbara",
+     "nuance": "EXG",
+     "voix": 5,
+     "pct_exprimes": 0.98,
+     "pct_inscrits": 0.72
     },
     {
      "nom": "SOUSSI",
      "prenom": "Ethel",
      "nuance": "EXG",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "LAH",
+     "prenom": "Sami",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -259,14 +259,6 @@
      "pct_inscrits": 0.33
     },
     {
-     "nom": "LAH",
-     "prenom": "Sami",
-     "nuance": "DIV",
-     "voix": 0,
-     "pct_exprimes": 0.0,
-     "pct_inscrits": 0.0
-    },
-    {
      "nom": "DE GARILS",
      "prenom": "Laure",
      "nuance": "REC",
@@ -278,6 +270,14 @@
      "nom": "SOUSSI",
      "prenom": "Ethel",
      "nuance": "EXG",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "LAH",
+     "prenom": "Sami",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -337,17 +337,17 @@
      "pct_inscrits": 2.13
     },
     {
-     "nom": "LESSAINT",
-     "prenom": "Lionel",
-     "nuance": "DSV",
+     "nom": "DE GARILS",
+     "prenom": "Laure",
+     "nuance": "REC",
      "voix": 1,
      "pct_exprimes": 0.96,
      "pct_inscrits": 0.71
     },
     {
-     "nom": "DE GARILS",
-     "prenom": "Laure",
-     "nuance": "REC",
+     "nom": "LESSAINT",
+     "prenom": "Lionel",
+     "nuance": "DSV",
      "voix": 1,
      "pct_exprimes": 0.96,
      "pct_inscrits": 0.71
@@ -361,17 +361,17 @@
      "pct_inscrits": 0.0
     },
     {
-     "nom": "LAH",
-     "prenom": "Sami",
-     "nuance": "DIV",
+     "nom": "GÉHAN",
+     "prenom": "Barbara",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "GÉHAN",
-     "prenom": "Barbara",
-     "nuance": "EXG",
+     "nom": "LAH",
+     "prenom": "Sami",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -504,9 +504,9 @@
      "nom": "VANNIER",
      "prenom": "Paul",
      "nuance": "UG",
-     "voix": 17644,
-     "pct_exprimes": 55.49,
-     "pct_inscrits": 32.45
+     "voix": 17895,
+     "pct_exprimes": 56.28,
+     "pct_inscrits": 32.92
     },
     {
      "nom": "HOARAU",
@@ -528,9 +528,9 @@
      "nom": "MEZIANE",
      "prenom": "Boualem",
      "nuance": "LR",
-     "voix": 2731,
-     "pct_exprimes": 8.59,
-     "pct_inscrits": 5.02
+     "voix": 2771,
+     "pct_exprimes": 8.72,
+     "pct_inscrits": 5.1
     },
     {
      "nom": "MARIETTE",
@@ -544,9 +544,9 @@
      "nom": "LESUEUR",
      "prenom": "Dominique",
      "nuance": "ECO",
-     "voix": 399,
-     "pct_exprimes": 1.25,
-     "pct_inscrits": 0.73
+     "voix": 409,
+     "pct_exprimes": 1.29,
+     "pct_inscrits": 0.75
     },
     {
      "nom": "PHAM",
@@ -579,7 +579,7 @@
     "nom": "VANNIER",
     "prenom": "Paul",
     "nuance": "UG",
-    "pct_exprimes": 55.49
+    "pct_exprimes": 56.28
    }
   },
   "95019": {
@@ -775,6 +775,14 @@
    "exprimes": 134,
    "candidats": [
     {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 65,
+     "pct_exprimes": 48.51,
+     "pct_inscrits": 33.85
+    },
+    {
      "nom": "CHANDLER",
      "prenom": "Émilie",
      "nuance": "ENS",
@@ -799,17 +807,17 @@
      "pct_inscrits": 3.12
     },
     {
-     "nom": "LESSAINT",
-     "prenom": "Lionel",
-     "nuance": "DSV",
+     "nom": "DE GARILS",
+     "prenom": "Laure",
+     "nuance": "REC",
      "voix": 3,
      "pct_exprimes": 2.24,
      "pct_inscrits": 1.56
     },
     {
-     "nom": "DE GARILS",
-     "prenom": "Laure",
-     "nuance": "REC",
+     "nom": "LESSAINT",
+     "prenom": "Lionel",
+     "nuance": "DSV",
      "voix": 3,
      "pct_exprimes": 2.24,
      "pct_inscrits": 1.56
@@ -823,17 +831,17 @@
      "pct_inscrits": 1.56
     },
     {
-     "nom": "LAH",
-     "prenom": "Sami",
-     "nuance": "DIV",
+     "nom": "SOUSSI",
+     "prenom": "Ethel",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "SOUSSI",
-     "prenom": "Ethel",
-     "nuance": "EXG",
+     "nom": "LAH",
+     "prenom": "Sami",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -842,15 +850,15 @@
    "pct_abstention": 29.17,
    "pct_participation": 70.83,
    "tete": {
-    "nom": "CHANDLER",
-    "prenom": "Émilie",
-    "nuance": "ENS",
-    "pct_exprimes": 23.13
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 48.51
    }
   },
   "95026": {
    "code_insee": "95026",
-   "nom": "Asnières-Sur-Oise",
+   "nom": "Asnières-sur-Oise",
    "code_circonscription": null,
    "bureaux_de_vote": 3,
    "inscrits": 2130,
@@ -1011,9 +1019,9 @@
      "pct_inscrits": 0.49
     },
     {
-     "nom": "ARNAL",
-     "prenom": "Didier",
-     "nuance": "DIV",
+     "nom": "CHASTAING",
+     "prenom": "Marie-Christine",
+     "nuance": "DSV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -1027,17 +1035,17 @@
      "pct_inscrits": 0.0
     },
     {
-     "nom": "CHASTAING",
-     "prenom": "Marie-Christine",
-     "nuance": "DSV",
+     "nom": "GAVOIS",
+     "prenom": "Aurélien",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "GAVOIS",
-     "prenom": "Aurélien",
-     "nuance": "EXG",
+     "nom": "ARNAL",
+     "prenom": "Didier",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -1054,7 +1062,7 @@
   },
   "95039": {
    "code_insee": "95039",
-   "nom": "Auvers-Sur-Oise",
+   "nom": "Auvers-sur-Oise",
    "code_circonscription": null,
    "bureaux_de_vote": 6,
    "inscrits": 5240,
@@ -1199,17 +1207,17 @@
      "pct_inscrits": 0.45
     },
     {
-     "nom": "GÉHAN",
-     "prenom": "Barbara",
-     "nuance": "EXG",
+     "nom": "LESSAINT",
+     "prenom": "Lionel",
+     "nuance": "DSV",
      "voix": 3,
      "pct_exprimes": 0.59,
      "pct_inscrits": 0.45
     },
     {
-     "nom": "LESSAINT",
-     "prenom": "Lionel",
-     "nuance": "DSV",
+     "nom": "GÉHAN",
+     "prenom": "Barbara",
+     "nuance": "EXG",
      "voix": 3,
      "pct_exprimes": 0.59,
      "pct_inscrits": 0.45
@@ -1242,7 +1250,7 @@
   },
   "95042": {
    "code_insee": "95042",
-   "nom": "Baillet-En-France",
+   "nom": "Baillet-en-France",
    "code_circonscription": null,
    "bureaux_de_vote": 1,
    "inscrits": 1546,
@@ -1403,14 +1411,6 @@
      "pct_inscrits": 0.96
     },
     {
-     "nom": "LAH",
-     "prenom": "Sami",
-     "nuance": "DIV",
-     "voix": 0,
-     "pct_exprimes": 0.0,
-     "pct_inscrits": 0.0
-    },
-    {
      "nom": "SOUSSI",
      "prenom": "Ethel",
      "nuance": "EXG",
@@ -1422,6 +1422,14 @@
      "nom": "GÉHAN",
      "prenom": "Barbara",
      "nuance": "EXG",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "LAH",
+     "prenom": "Sami",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -1513,17 +1521,17 @@
      "pct_inscrits": 0.57
     },
     {
-     "nom": "BELMOKHTAR",
-     "prenom": "Samira",
-     "nuance": "DVG",
+     "nom": "BLASER",
+     "prenom": "Daniel",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "BLASER",
-     "prenom": "Daniel",
-     "nuance": "EXG",
+     "nom": "BELMOKHTAR",
+     "prenom": "Samira",
+     "nuance": "DVG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -1540,7 +1548,7 @@
   },
   "95052": {
    "code_insee": "95052",
-   "nom": "Beaumont-Sur-Oise",
+   "nom": "Beaumont-sur-Oise",
    "code_circonscription": null,
    "bureaux_de_vote": 5,
    "inscrits": 5725,
@@ -1607,17 +1615,17 @@
      "pct_inscrits": 0.61
     },
     {
-     "nom": "LAH",
-     "prenom": "Sami",
-     "nuance": "DIV",
+     "nom": "SOUSSI",
+     "prenom": "Ethel",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "SOUSSI",
-     "prenom": "Ethel",
-     "nuance": "EXG",
+     "nom": "LAH",
+     "prenom": "Sami",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -1634,7 +1642,7 @@
   },
   "95054": {
    "code_insee": "95054",
-   "nom": "Le Bellay-En-Vexin",
+   "nom": "Le Bellay-en-Vexin",
    "code_circonscription": null,
    "bureaux_de_vote": 1,
    "inscrits": 149,
@@ -1677,17 +1685,17 @@
      "pct_inscrits": 3.36
     },
     {
-     "nom": "GÉHAN",
-     "prenom": "Barbara",
-     "nuance": "EXG",
+     "nom": "LESSAINT",
+     "prenom": "Lionel",
+     "nuance": "DSV",
      "voix": 2,
      "pct_exprimes": 1.77,
      "pct_inscrits": 1.34
     },
     {
-     "nom": "LESSAINT",
-     "prenom": "Lionel",
-     "nuance": "DSV",
+     "nom": "GÉHAN",
+     "prenom": "Barbara",
+     "nuance": "EXG",
      "voix": 2,
      "pct_exprimes": 1.77,
      "pct_inscrits": 1.34
@@ -1701,17 +1709,17 @@
      "pct_inscrits": 0.67
     },
     {
-     "nom": "LAH",
-     "prenom": "Sami",
-     "nuance": "DIV",
+     "nom": "SOUSSI",
+     "prenom": "Ethel",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "SOUSSI",
-     "prenom": "Ethel",
-     "nuance": "EXG",
+     "nom": "LAH",
+     "prenom": "Sami",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -1787,9 +1795,9 @@
      "pct_inscrits": 0.76
     },
     {
-     "nom": "WASSA",
-     "prenom": "Nsimba",
-     "nuance": "DIV",
+     "nom": "RONCHINI",
+     "prenom": "Vanessa",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -1803,9 +1811,9 @@
      "pct_inscrits": 0.0
     },
     {
-     "nom": "RONCHINI",
-     "prenom": "Vanessa",
-     "nuance": "EXG",
+     "nom": "WASSA",
+     "prenom": "Nsimba",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -1822,7 +1830,7 @@
   },
   "95056": {
    "code_insee": "95056",
-   "nom": "Belloy-En-France",
+   "nom": "Belloy-en-France",
    "code_circonscription": null,
    "bureaux_de_vote": 1,
    "inscrits": 1404,
@@ -1897,17 +1905,17 @@
      "pct_inscrits": 0.5
     },
     {
-     "nom": "GAULTIER",
-     "prenom": "Stephane",
-     "nuance": "EXG",
+     "nom": "LESSAINT",
+     "prenom": "Danièle",
+     "nuance": "DSV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "LESSAINT",
-     "prenom": "Danièle",
-     "nuance": "DSV",
+     "nom": "GAULTIER",
+     "prenom": "Stephane",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -1924,7 +1932,7 @@
   },
   "95058": {
    "code_insee": "95058",
-   "nom": "Bernes-Sur-Oise",
+   "nom": "Bernes-sur-Oise",
    "code_circonscription": null,
    "bureaux_de_vote": 2,
    "inscrits": 1713,
@@ -1967,17 +1975,17 @@
      "pct_inscrits": 3.91
     },
     {
-     "nom": "LESSAINT",
-     "prenom": "Lionel",
-     "nuance": "DSV",
+     "nom": "DE GARILS",
+     "prenom": "Laure",
+     "nuance": "REC",
      "voix": 18,
      "pct_exprimes": 1.64,
      "pct_inscrits": 1.05
     },
     {
-     "nom": "DE GARILS",
-     "prenom": "Laure",
-     "nuance": "REC",
+     "nom": "LESSAINT",
+     "prenom": "Lionel",
+     "nuance": "DSV",
      "voix": 18,
      "pct_exprimes": 1.64,
      "pct_inscrits": 1.05
@@ -2085,17 +2093,17 @@
      "pct_inscrits": 0.37
     },
     {
-     "nom": "LAH",
-     "prenom": "Sami",
-     "nuance": "DIV",
+     "nom": "SOUSSI",
+     "prenom": "Ethel",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "SOUSSI",
-     "prenom": "Ethel",
-     "nuance": "EXG",
+     "nom": "LAH",
+     "prenom": "Sami",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -2187,17 +2195,17 @@
      "pct_inscrits": 0.59
     },
     {
-     "nom": "BELMOKHTAR",
-     "prenom": "Samira",
-     "nuance": "DVG",
+     "nom": "BLASER",
+     "prenom": "Daniel",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "BLASER",
-     "prenom": "Daniel",
-     "nuance": "EXG",
+     "nom": "BELMOKHTAR",
+     "prenom": "Samira",
+     "nuance": "DVG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -2214,7 +2222,7 @@
   },
   "95061": {
    "code_insee": "95061",
-   "nom": "Béthemont-La-Forêt",
+   "nom": "Béthemont-la-Forêt",
    "code_circonscription": null,
    "bureaux_de_vote": 1,
    "inscrits": 338,
@@ -2289,17 +2297,17 @@
      "pct_inscrits": 0.3
     },
     {
-     "nom": "BELMOKHTAR",
-     "prenom": "Samira",
-     "nuance": "DVG",
+     "nom": "BLASER",
+     "prenom": "Daniel",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "BLASER",
-     "prenom": "Daniel",
-     "nuance": "EXG",
+     "nom": "BELMOKHTAR",
+     "prenom": "Samira",
+     "nuance": "DVG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -2496,7 +2504,7 @@
   },
   "95078": {
    "code_insee": "95078",
-   "nom": "Boissy-L'Aillerie",
+   "nom": "Boissy-l'Aillerie",
    "code_circonscription": null,
    "bureaux_de_vote": 1,
    "inscrits": 1374,
@@ -2582,7 +2590,7 @@
   },
   "95088": {
    "code_insee": "95088",
-   "nom": "Bonneuil-En-France",
+   "nom": "Bonneuil-en-France",
    "code_circonscription": null,
    "bureaux_de_vote": 1,
    "inscrits": 572,
@@ -2641,17 +2649,17 @@
      "pct_inscrits": 1.05
     },
     {
-     "nom": "TONDU",
-     "prenom": "Jean-Baptiste",
-     "nuance": "EXG",
+     "nom": "KHERFI",
+     "prenom": "Malika",
+     "nuance": "DVC",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "KHERFI",
-     "prenom": "Malika",
-     "nuance": "DVC",
+     "nom": "TONDU",
+     "prenom": "Jean-Baptiste",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -2727,9 +2735,9 @@
      "pct_inscrits": 0.65
     },
     {
-     "nom": "ARNAL",
-     "prenom": "Didier",
-     "nuance": "DIV",
+     "nom": "CHASTAING",
+     "prenom": "Marie-Christine",
+     "nuance": "DSV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -2751,9 +2759,9 @@
      "pct_inscrits": 0.0
     },
     {
-     "nom": "CHASTAING",
-     "prenom": "Marie-Christine",
-     "nuance": "DSV",
+     "nom": "ARNAL",
+     "prenom": "Didier",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -2821,9 +2829,9 @@
      "pct_inscrits": 1.02
     },
     {
-     "nom": "WASSA",
-     "prenom": "Nsimba",
-     "nuance": "DIV",
+     "nom": "RONCHINI",
+     "prenom": "Vanessa",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -2845,9 +2853,9 @@
      "pct_inscrits": 0.0
     },
     {
-     "nom": "RONCHINI",
-     "prenom": "Vanessa",
-     "nuance": "EXG",
+     "nom": "WASSA",
+     "prenom": "Nsimba",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -2864,7 +2872,7 @@
   },
   "95101": {
    "code_insee": "95101",
-   "nom": "Bray-Et-Lû",
+   "nom": "Bray-et-Lû",
    "code_circonscription": null,
    "bureaux_de_vote": 1,
    "inscrits": 617,
@@ -2907,17 +2915,17 @@
      "pct_inscrits": 2.43
     },
     {
-     "nom": "GÉHAN",
-     "prenom": "Barbara",
-     "nuance": "EXG",
+     "nom": "LESSAINT",
+     "prenom": "Lionel",
+     "nuance": "DSV",
      "voix": 4,
      "pct_exprimes": 0.91,
      "pct_inscrits": 0.65
     },
     {
-     "nom": "LESSAINT",
-     "prenom": "Lionel",
-     "nuance": "DSV",
+     "nom": "GÉHAN",
+     "prenom": "Barbara",
+     "nuance": "EXG",
      "voix": 4,
      "pct_exprimes": 0.91,
      "pct_inscrits": 0.65
@@ -2931,17 +2939,17 @@
      "pct_inscrits": 0.32
     },
     {
-     "nom": "LAH",
-     "prenom": "Sami",
-     "nuance": "DIV",
+     "nom": "SOUSSI",
+     "prenom": "Ethel",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "SOUSSI",
-     "prenom": "Ethel",
-     "nuance": "EXG",
+     "nom": "LAH",
+     "prenom": "Sami",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -3025,17 +3033,17 @@
      "pct_inscrits": 0.31
     },
     {
-     "nom": "LAH",
-     "prenom": "Sami",
-     "nuance": "DIV",
+     "nom": "SOUSSI",
+     "prenom": "Ethel",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "SOUSSI",
-     "prenom": "Ethel",
-     "nuance": "EXG",
+     "nom": "LAH",
+     "prenom": "Sami",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -3119,17 +3127,17 @@
      "pct_inscrits": 1.04
     },
     {
-     "nom": "LAH",
-     "prenom": "Sami",
-     "nuance": "DIV",
+     "nom": "SOUSSI",
+     "prenom": "Ethel",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "SOUSSI",
-     "prenom": "Ethel",
-     "nuance": "EXG",
+     "nom": "LAH",
+     "prenom": "Sami",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -3146,7 +3154,7 @@
   },
   "95116": {
    "code_insee": "95116",
-   "nom": "Bruyères-Sur-Oise",
+   "nom": "Bruyères-sur-Oise",
    "code_circonscription": null,
    "bureaux_de_vote": 3,
    "inscrits": 2934,
@@ -3307,17 +3315,17 @@
      "pct_inscrits": 0.45
     },
     {
-     "nom": "LAH",
-     "prenom": "Sami",
-     "nuance": "DIV",
+     "nom": "SOUSSI",
+     "prenom": "Ethel",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "SOUSSI",
-     "prenom": "Ethel",
-     "nuance": "EXG",
+     "nom": "LAH",
+     "prenom": "Sami",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -3334,7 +3342,7 @@
   },
   "95120": {
    "code_insee": "95120",
-   "nom": "Butry-Sur-Oise",
+   "nom": "Butry-sur-Oise",
    "code_circonscription": null,
    "bureaux_de_vote": 2,
    "inscrits": 1688,
@@ -3401,17 +3409,17 @@
      "pct_inscrits": 0.36
     },
     {
-     "nom": "LAH",
-     "prenom": "Sami",
-     "nuance": "DIV",
+     "nom": "SOUSSI",
+     "prenom": "Ethel",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "SOUSSI",
-     "prenom": "Ethel",
-     "nuance": "EXG",
+     "nom": "LAH",
+     "prenom": "Sami",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -3498,9 +3506,9 @@
      "nom": "SAINT-JEAN",
      "prenom": "Albert",
      "nuance": "UDI",
-     "voix": 318,
-     "pct_exprimes": 1.7,
-     "pct_inscrits": 1.04
+     "voix": 329,
+     "pct_exprimes": 1.76,
+     "pct_inscrits": 1.08
     },
     {
      "nom": "PAIN",
@@ -3594,7 +3602,7 @@
   },
   "95134": {
    "code_insee": "95134",
-   "nom": "Champagne-Sur-Oise",
+   "nom": "Champagne-sur-Oise",
    "code_circonscription": null,
    "bureaux_de_vote": 4,
    "inscrits": 3719,
@@ -3661,17 +3669,17 @@
      "pct_inscrits": 0.38
     },
     {
-     "nom": "LAH",
-     "prenom": "Sami",
-     "nuance": "DIV",
+     "nom": "SOUSSI",
+     "prenom": "Ethel",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "SOUSSI",
-     "prenom": "Ethel",
-     "nuance": "EXG",
+     "nom": "LAH",
+     "prenom": "Sami",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -3688,7 +3696,7 @@
   },
   "95139": {
    "code_insee": "95139",
-   "nom": "La Chapelle-En-Vexin",
+   "nom": "La Chapelle-en-Vexin",
    "code_circonscription": null,
    "bureaux_de_vote": 1,
    "inscrits": 227,
@@ -3747,6 +3755,14 @@
      "pct_inscrits": 0.44
     },
     {
+     "nom": "DE GARILS",
+     "prenom": "Laure",
+     "nuance": "REC",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
      "nom": "SOUSSI",
      "prenom": "Ethel",
      "nuance": "EXG",
@@ -3758,14 +3774,6 @@
      "nom": "LAH",
      "prenom": "Sami",
      "nuance": "DIV",
-     "voix": 0,
-     "pct_exprimes": 0.0,
-     "pct_inscrits": 0.0
-    },
-    {
-     "nom": "DE GARILS",
-     "prenom": "Laure",
-     "nuance": "REC",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -3833,8 +3841,24 @@
      "pct_inscrits": 0.0
     },
     {
+     "nom": "LESSAINT",
+     "prenom": "Lionel",
+     "nuance": "DSV",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
      "nom": "SOUSSI",
      "prenom": "Ethel",
+     "nuance": "EXG",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "GÉHAN",
+     "prenom": "Barbara",
      "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
@@ -3844,22 +3868,6 @@
      "nom": "LAH",
      "prenom": "Sami",
      "nuance": "DIV",
-     "voix": 0,
-     "pct_exprimes": 0.0,
-     "pct_inscrits": 0.0
-    },
-    {
-     "nom": "LESSAINT",
-     "prenom": "Lionel",
-     "nuance": "DSV",
-     "voix": 0,
-     "pct_exprimes": 0.0,
-     "pct_inscrits": 0.0
-    },
-    {
-     "nom": "GÉHAN",
-     "prenom": "Barbara",
-     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -3970,7 +3978,7 @@
   },
   "95144": {
    "code_insee": "95144",
-   "nom": "Châtenay-En-France",
+   "nom": "Châtenay-en-France",
    "code_circonscription": null,
    "bureaux_de_vote": 1,
    "inscrits": 51,
@@ -4021,14 +4029,6 @@
      "pct_inscrits": 5.88
     },
     {
-     "nom": "WASSA",
-     "prenom": "Nsimba",
-     "nuance": "DIV",
-     "voix": 0,
-     "pct_exprimes": 0.0,
-     "pct_inscrits": 0.0
-    },
-    {
      "nom": "RONCHINI",
      "prenom": "Vanessa",
      "nuance": "EXG",
@@ -4048,6 +4048,14 @@
      "nom": "HANRYON",
      "prenom": "Danièle",
      "nuance": "EXG",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "WASSA",
+     "prenom": "Nsimba",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -4123,6 +4131,14 @@
      "pct_inscrits": 0.99
     },
     {
+     "nom": "RONCHINI",
+     "prenom": "Vanessa",
+     "nuance": "EXG",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
      "nom": "NAJIB",
      "prenom": "Mohamed",
      "nuance": "DIV",
@@ -4134,14 +4150,6 @@
      "nom": "WASSA",
      "prenom": "Nsimba",
      "nuance": "DIV",
-     "voix": 0,
-     "pct_exprimes": 0.0,
-     "pct_inscrits": 0.0
-    },
-    {
-     "nom": "RONCHINI",
-     "prenom": "Vanessa",
-     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -4319,14 +4327,6 @@
      "pct_inscrits": 0.45
     },
     {
-     "nom": "BELMOKHTAR",
-     "prenom": "Samira",
-     "nuance": "DVG",
-     "voix": 0,
-     "pct_exprimes": 0.0,
-     "pct_inscrits": 0.0
-    },
-    {
      "nom": "BLASER",
      "prenom": "Daniel",
      "nuance": "EXG",
@@ -4338,6 +4338,14 @@
      "nom": "MUNOZ",
      "prenom": "Juan",
      "nuance": "EXG",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "BELMOKHTAR",
+     "prenom": "Samira",
+     "nuance": "DVG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -4354,7 +4362,7 @@
   },
   "95154": {
    "code_insee": "95154",
-   "nom": "Chennevières-Lès-Louvres",
+   "nom": "Chennevières-lès-Louvres",
    "code_circonscription": null,
    "bureaux_de_vote": 1,
    "inscrits": 204,
@@ -4413,14 +4421,6 @@
      "pct_inscrits": 0.0
     },
     {
-     "nom": "WASSA",
-     "prenom": "Nsimba",
-     "nuance": "DIV",
-     "voix": 0,
-     "pct_exprimes": 0.0,
-     "pct_inscrits": 0.0
-    },
-    {
      "nom": "SAID",
      "prenom": "David",
      "nuance": "REC",
@@ -4431,6 +4431,14 @@
     {
      "nom": "NAJIB",
      "prenom": "Mohamed",
+     "nuance": "DIV",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "WASSA",
+     "prenom": "Nsimba",
      "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
@@ -4515,17 +4523,17 @@
      "pct_inscrits": 0.0
     },
     {
-     "nom": "LAH",
-     "prenom": "Sami",
-     "nuance": "DIV",
+     "nom": "SOUSSI",
+     "prenom": "Ethel",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "SOUSSI",
-     "prenom": "Ethel",
-     "nuance": "EXG",
+     "nom": "LAH",
+     "prenom": "Sami",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -4542,7 +4550,7 @@
   },
   "95166": {
    "code_insee": "95166",
-   "nom": "Cléry-En-Vexin",
+   "nom": "Cléry-en-Vexin",
    "code_circonscription": null,
    "bureaux_de_vote": 1,
    "inscrits": 331,
@@ -4609,17 +4617,17 @@
      "pct_inscrits": 0.0
     },
     {
-     "nom": "LAH",
-     "prenom": "Sami",
-     "nuance": "DIV",
+     "nom": "SOUSSI",
+     "prenom": "Ethel",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "SOUSSI",
-     "prenom": "Ethel",
-     "nuance": "EXG",
+     "nom": "LAH",
+     "prenom": "Sami",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -4687,14 +4695,6 @@
      "pct_inscrits": 0.84
     },
     {
-     "nom": "GÉHAN",
-     "prenom": "Barbara",
-     "nuance": "EXG",
-     "voix": 1,
-     "pct_exprimes": 0.3,
-     "pct_inscrits": 0.21
-    },
-    {
      "nom": "LESSAINT",
      "prenom": "Lionel",
      "nuance": "DSV",
@@ -4703,17 +4703,25 @@
      "pct_inscrits": 0.21
     },
     {
-     "nom": "LAH",
-     "prenom": "Sami",
-     "nuance": "DIV",
-     "voix": 0,
-     "pct_exprimes": 0.0,
-     "pct_inscrits": 0.0
+     "nom": "GÉHAN",
+     "prenom": "Barbara",
+     "nuance": "EXG",
+     "voix": 1,
+     "pct_exprimes": 0.3,
+     "pct_inscrits": 0.21
     },
     {
      "nom": "SOUSSI",
      "prenom": "Ethel",
      "nuance": "EXG",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "LAH",
+     "prenom": "Sami",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -4789,6 +4797,14 @@
      "pct_inscrits": 1.31
     },
     {
+     "nom": "DE GARILS",
+     "prenom": "Laure",
+     "nuance": "REC",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
      "nom": "SOUSSI",
      "prenom": "Ethel",
      "nuance": "EXG",
@@ -4800,14 +4816,6 @@
      "nom": "LAH",
      "prenom": "Sami",
      "nuance": "DIV",
-     "voix": 0,
-     "pct_exprimes": 0.0,
-     "pct_inscrits": 0.0
-    },
-    {
-     "nom": "DE GARILS",
-     "prenom": "Laure",
-     "nuance": "REC",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -4824,7 +4832,7 @@
   },
   "95176": {
    "code_insee": "95176",
-   "nom": "Cormeilles-En-Parisis",
+   "nom": "Cormeilles-en-Parisis",
    "code_circonscription": null,
    "bureaux_de_vote": 18,
    "inscrits": 17182,
@@ -4843,20 +4851,20 @@
      "pct_inscrits": 22.55
     },
     {
+     "nom": "RILHAC",
+     "prenom": "Cécile",
+     "nuance": "ENS",
+     "voix": 3041,
+     "pct_exprimes": 26.13,
+     "pct_inscrits": 17.7
+    },
+    {
      "nom": "LELAIDIER",
      "prenom": "Kimberley",
      "nuance": "RN",
      "voix": 3028,
      "pct_exprimes": 26.02,
      "pct_inscrits": 17.62
-    },
-    {
-     "nom": "RILHAC",
-     "prenom": "Cécile",
-     "nuance": "ENS",
-     "voix": 2859,
-     "pct_exprimes": 24.57,
-     "pct_inscrits": 16.64
     },
     {
      "nom": "VINCENT",
@@ -4878,9 +4886,9 @@
      "nom": "GUÉBIN",
      "prenom": "Laetitia",
      "nuance": "DIV",
-     "voix": 163,
-     "pct_exprimes": 1.4,
-     "pct_inscrits": 0.95
+     "voix": 182,
+     "pct_exprimes": 1.56,
+     "pct_inscrits": 1.06
     },
     {
      "nom": "SIMONNOT",
@@ -4926,7 +4934,7 @@
   },
   "95177": {
    "code_insee": "95177",
-   "nom": "Cormeilles-En-Vexin",
+   "nom": "Cormeilles-en-Vexin",
    "code_circonscription": null,
    "bureaux_de_vote": 1,
    "inscrits": 901,
@@ -4993,17 +5001,17 @@
      "pct_inscrits": 0.55
     },
     {
-     "nom": "LAH",
-     "prenom": "Sami",
-     "nuance": "DIV",
+     "nom": "SOUSSI",
+     "prenom": "Ethel",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "SOUSSI",
-     "prenom": "Ethel",
-     "nuance": "EXG",
+     "nom": "LAH",
+     "prenom": "Sami",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -5020,7 +5028,7 @@
   },
   "95181": {
    "code_insee": "95181",
-   "nom": "Courcelles-Sur-Viosne",
+   "nom": "Courcelles-sur-Viosne",
    "code_circonscription": null,
    "bureaux_de_vote": 1,
    "inscrits": 230,
@@ -5200,7 +5208,7 @@
   },
   "95197": {
    "code_insee": "95197",
-   "nom": "Deuil-La-Barre",
+   "nom": "Deuil-la-Barre",
    "code_circonscription": null,
    "bureaux_de_vote": 16,
    "inscrits": 14700,
@@ -5230,9 +5238,9 @@
      "nom": "BRUNA",
      "prenom": "Annika",
      "nuance": "RN",
-     "voix": 1844,
-     "pct_exprimes": 19.4,
-     "pct_inscrits": 12.54
+     "voix": 1983,
+     "pct_exprimes": 20.86,
+     "pct_inscrits": 13.49
     },
     {
      "nom": "GUILBAUD",
@@ -5278,9 +5286,9 @@
      "nom": "REINMANN",
      "prenom": "Agnès",
      "nuance": "EXG",
-     "voix": 56,
-     "pct_exprimes": 0.59,
-     "pct_inscrits": 0.38
+     "voix": 61,
+     "pct_exprimes": 0.64,
+     "pct_inscrits": 0.41
     },
     {
      "nom": "DAGEVILLE",
@@ -5316,9 +5324,9 @@
      "nom": "ESKENAZI",
      "prenom": "Romain",
      "nuance": "UG",
-     "voix": 2035,
-     "pct_exprimes": 30.41,
-     "pct_inscrits": 20.08
+     "voix": 2372,
+     "pct_exprimes": 35.45,
+     "pct_inscrits": 23.41
     },
     {
      "nom": "QUENTIN",
@@ -5340,9 +5348,9 @@
      "nom": "YALCIN",
      "prenom": "Jean-Pierre",
      "nuance": "LR",
-     "voix": 513,
-     "pct_exprimes": 7.67,
-     "pct_inscrits": 5.06
+     "voix": 589,
+     "pct_exprimes": 8.8,
+     "pct_inscrits": 5.81
     },
     {
      "nom": "SUAREZ",
@@ -5369,17 +5377,17 @@
      "pct_inscrits": 0.03
     },
     {
-     "nom": "GAVOIS",
-     "prenom": "Aurélien",
-     "nuance": "EXG",
+     "nom": "UZAN",
+     "prenom": "Linda",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "UZAN",
-     "prenom": "Linda",
-     "nuance": "DIV",
+     "nom": "GAVOIS",
+     "prenom": "Aurélien",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -5399,7 +5407,7 @@
     "nom": "ESKENAZI",
     "prenom": "Romain",
     "nuance": "UG",
-    "pct_exprimes": 30.41
+    "pct_exprimes": 35.45
    }
   },
   "95203": {
@@ -5557,14 +5565,6 @@
      "pct_inscrits": 0.0
     },
     {
-     "nom": "ARNAL",
-     "prenom": "Didier",
-     "nuance": "DIV",
-     "voix": 0,
-     "pct_exprimes": 0.0,
-     "pct_inscrits": 0.0
-    },
-    {
      "nom": "UZAN",
      "prenom": "Linda",
      "nuance": "DIV",
@@ -5576,6 +5576,14 @@
      "nom": "GAVOIS",
      "prenom": "Aurélien",
      "nuance": "EXG",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "ARNAL",
+     "prenom": "Didier",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -5592,7 +5600,7 @@
   },
   "95210": {
    "code_insee": "95210",
-   "nom": "Enghien-Les-Bains",
+   "nom": "Enghien-les-Bains",
    "code_circonscription": null,
    "bureaux_de_vote": 9,
    "inscrits": 7699,
@@ -5638,17 +5646,17 @@
      "nom": "ELÉLOUÉ-VALMAR",
      "prenom": "Loïc",
      "nuance": "REG",
-     "voix": 104,
-     "pct_exprimes": 1.84,
-     "pct_inscrits": 1.35
+     "voix": 110,
+     "pct_exprimes": 1.95,
+     "pct_inscrits": 1.43
     },
     {
      "nom": "LASMARRIGUES",
      "prenom": "Jean Bernard",
      "nuance": "REC",
-     "voix": 98,
-     "pct_exprimes": 1.74,
-     "pct_inscrits": 1.27
+     "voix": 107,
+     "pct_exprimes": 1.9,
+     "pct_inscrits": 1.39
     },
     {
      "nom": "MIKAEL",
@@ -5788,7 +5796,7 @@
   },
   "95212": {
    "code_insee": "95212",
-   "nom": "Epiais-Lès-Louvres",
+   "nom": "Epiais-lès-Louvres",
    "code_circonscription": null,
    "bureaux_de_vote": 1,
    "inscrits": 87,
@@ -5799,17 +5807,17 @@
    "exprimes": 62,
    "candidats": [
     {
-     "nom": "LE GALL",
-     "prenom": "Arnaud",
-     "nuance": "UG",
+     "nom": "MARION",
+     "prenom": "Agnès",
+     "nuance": "RN",
      "voix": 23,
      "pct_exprimes": 37.1,
      "pct_inscrits": 26.44
     },
     {
-     "nom": "MARION",
-     "prenom": "Agnès",
-     "nuance": "RN",
+     "nom": "LE GALL",
+     "prenom": "Arnaud",
+     "nuance": "UG",
      "voix": 23,
      "pct_exprimes": 37.1,
      "pct_inscrits": 26.44
@@ -5831,8 +5839,8 @@
      "pct_inscrits": 5.75
     },
     {
-     "nom": "HANRYON",
-     "prenom": "Danièle",
+     "nom": "RONCHINI",
+     "prenom": "Vanessa",
      "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
@@ -5855,8 +5863,8 @@
      "pct_inscrits": 0.0
     },
     {
-     "nom": "RONCHINI",
-     "prenom": "Vanessa",
+     "nom": "HANRYON",
+     "prenom": "Danièle",
      "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
@@ -5874,9 +5882,9 @@
    "pct_abstention": 27.59,
    "pct_participation": 72.41,
    "tete": {
-    "nom": "LE GALL",
-    "prenom": "Arnaud",
-    "nuance": "UG",
+    "nom": "MARION",
+    "prenom": "Agnès",
+    "nuance": "RN",
     "pct_exprimes": 37.1
    }
   },
@@ -5925,17 +5933,17 @@
      "pct_inscrits": 4.37
     },
     {
-     "nom": "GÉHAN",
-     "prenom": "Barbara",
-     "nuance": "EXG",
+     "nom": "LESSAINT",
+     "prenom": "Lionel",
+     "nuance": "DSV",
      "voix": 5,
      "pct_exprimes": 1.23,
      "pct_inscrits": 0.91
     },
     {
-     "nom": "LESSAINT",
-     "prenom": "Lionel",
-     "nuance": "DSV",
+     "nom": "GÉHAN",
+     "prenom": "Barbara",
+     "nuance": "EXG",
      "voix": 5,
      "pct_exprimes": 1.23,
      "pct_inscrits": 0.91
@@ -6003,17 +6011,17 @@
      "pct_inscrits": 15.62
     },
     {
-     "nom": "LE GALL",
-     "prenom": "Arnaud",
-     "nuance": "UG",
+     "nom": "SAID",
+     "prenom": "David",
+     "nuance": "REC",
      "voix": 2,
      "pct_exprimes": 10.53,
      "pct_inscrits": 6.25
     },
     {
-     "nom": "SAID",
-     "prenom": "David",
-     "nuance": "REC",
+     "nom": "LE GALL",
+     "prenom": "Arnaud",
+     "nuance": "UG",
      "voix": 2,
      "pct_exprimes": 10.53,
      "pct_inscrits": 6.25
@@ -6043,17 +6051,17 @@
      "pct_inscrits": 0.0
     },
     {
-     "nom": "WASSA",
-     "prenom": "Nsimba",
-     "nuance": "DIV",
+     "nom": "HANRYON",
+     "prenom": "Danièle",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "HANRYON",
-     "prenom": "Danièle",
-     "nuance": "EXG",
+     "nom": "WASSA",
+     "prenom": "Nsimba",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -6145,17 +6153,17 @@
      "pct_inscrits": 0.59
     },
     {
-     "nom": "GAULTIER",
-     "prenom": "Stephane",
-     "nuance": "EXG",
+     "nom": "LESSAINT",
+     "prenom": "Danièle",
+     "nuance": "DSV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "LESSAINT",
-     "prenom": "Danièle",
-     "nuance": "DSV",
+     "nom": "GAULTIER",
+     "prenom": "Stephane",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -6325,14 +6333,6 @@
      "pct_inscrits": 0.0
     },
     {
-     "nom": "ARNAL",
-     "prenom": "Didier",
-     "nuance": "DIV",
-     "voix": 0,
-     "pct_exprimes": 0.0,
-     "pct_inscrits": 0.0
-    },
-    {
      "nom": "UZAN",
      "prenom": "Linda",
      "nuance": "DIV",
@@ -6344,6 +6344,14 @@
      "nom": "GAVOIS",
      "prenom": "Aurélien",
      "nuance": "EXG",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "ARNAL",
+     "prenom": "Didier",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -6360,7 +6368,7 @@
   },
   "95241": {
    "code_insee": "95241",
-   "nom": "Fontenay-En-Parisis",
+   "nom": "Fontenay-en-Parisis",
    "code_circonscription": null,
    "bureaux_de_vote": 1,
    "inscrits": 1217,
@@ -6427,16 +6435,16 @@
      "pct_inscrits": 0.0
     },
     {
-     "nom": "WASSA",
-     "prenom": "Nsimba",
+     "nom": "NAJIB",
+     "prenom": "Mohamed",
      "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "NAJIB",
-     "prenom": "Mohamed",
+     "nom": "WASSA",
+     "prenom": "Nsimba",
      "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
@@ -6513,14 +6521,6 @@
      "pct_inscrits": 0.63
     },
     {
-     "nom": "WASSA",
-     "prenom": "Nsimba",
-     "nuance": "DIV",
-     "voix": 0,
-     "pct_exprimes": 0.0,
-     "pct_inscrits": 0.0
-    },
-    {
      "nom": "RONCHINI",
      "prenom": "Vanessa",
      "nuance": "EXG",
@@ -6531,6 +6531,14 @@
     {
      "nom": "NAJIB",
      "prenom": "Mohamed",
+     "nuance": "DIV",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "WASSA",
+     "prenom": "Nsimba",
      "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
@@ -6570,9 +6578,9 @@
      "nom": "MEURANT",
      "prenom": "Sébastien",
      "nuance": "UXD",
-     "voix": 3572,
-     "pct_exprimes": 26.2,
-     "pct_inscrits": 16.19
+     "voix": 3757,
+     "pct_exprimes": 27.56,
+     "pct_inscrits": 17.03
     },
     {
      "nom": "MOUTCHOU",
@@ -6701,17 +6709,17 @@
      "pct_inscrits": 0.0
     },
     {
-     "nom": "LAH",
-     "prenom": "Sami",
-     "nuance": "DIV",
+     "nom": "GÉHAN",
+     "prenom": "Barbara",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "GÉHAN",
-     "prenom": "Barbara",
-     "nuance": "EXG",
+     "nom": "LAH",
+     "prenom": "Sami",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -6787,6 +6795,14 @@
      "pct_inscrits": 0.47
     },
     {
+     "nom": "DE GARILS",
+     "prenom": "Laure",
+     "nuance": "REC",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
      "nom": "SOUSSI",
      "prenom": "Ethel",
      "nuance": "EXG",
@@ -6798,14 +6814,6 @@
      "nom": "LAH",
      "prenom": "Sami",
      "nuance": "DIV",
-     "voix": 0,
-     "pct_exprimes": 0.0,
-     "pct_inscrits": 0.0
-    },
-    {
-     "nom": "DE GARILS",
-     "prenom": "Laure",
-     "nuance": "REC",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -6924,7 +6932,7 @@
   },
   "95257": {
    "code_insee": "95257",
-   "nom": "La Frette-Sur-Seine",
+   "nom": "La Frette-sur-Seine",
    "code_circonscription": null,
    "bureaux_de_vote": 3,
    "inscrits": 3194,
@@ -7077,17 +7085,17 @@
      "pct_inscrits": 1.02
     },
     {
-     "nom": "GÉHAN",
-     "prenom": "Barbara",
-     "nuance": "EXG",
+     "nom": "LESSAINT",
+     "prenom": "Lionel",
+     "nuance": "DSV",
      "voix": 1,
      "pct_exprimes": 0.46,
      "pct_inscrits": 0.34
     },
     {
-     "nom": "LESSAINT",
-     "prenom": "Lionel",
-     "nuance": "DSV",
+     "nom": "GÉHAN",
+     "prenom": "Barbara",
+     "nuance": "EXG",
      "voix": 1,
      "pct_exprimes": 0.46,
      "pct_inscrits": 0.34
@@ -7120,7 +7128,7 @@
   },
   "95268": {
    "code_insee": "95268",
-   "nom": "Garges-Lès-Gonesse",
+   "nom": "Garges-lès-Gonesse",
    "code_circonscription": null,
    "bureaux_de_vote": 20,
    "inscrits": 19104,
@@ -7182,9 +7190,9 @@
      "nom": "GAJDOS",
      "prenom": "Rémi",
      "nuance": "EXG",
-     "voix": 90,
-     "pct_exprimes": 0.91,
-     "pct_inscrits": 0.47
+     "voix": 93,
+     "pct_exprimes": 0.94,
+     "pct_inscrits": 0.49
     },
     {
      "nom": "TONDU",
@@ -7273,17 +7281,17 @@
      "pct_inscrits": 0.47
     },
     {
-     "nom": "LAH",
-     "prenom": "Sami",
-     "nuance": "DIV",
+     "nom": "SOUSSI",
+     "prenom": "Ethel",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "SOUSSI",
-     "prenom": "Ethel",
-     "nuance": "EXG",
+     "nom": "LAH",
+     "prenom": "Sami",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -7367,17 +7375,17 @@
      "pct_inscrits": 0.53
     },
     {
-     "nom": "LAH",
-     "prenom": "Sami",
-     "nuance": "DIV",
+     "nom": "SOUSSI",
+     "prenom": "Ethel",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "SOUSSI",
-     "prenom": "Ethel",
-     "nuance": "EXG",
+     "nom": "LAH",
+     "prenom": "Sami",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -7408,9 +7416,9 @@
      "nom": "LE GALL",
      "prenom": "Arnaud",
      "nuance": "UG",
-     "voix": 3752,
-     "pct_exprimes": 46.35,
-     "pct_inscrits": 25.18
+     "voix": 3984,
+     "pct_exprimes": 49.22,
+     "pct_inscrits": 26.74
     },
     {
      "nom": "MARION",
@@ -7456,9 +7464,9 @@
      "nom": "WASSA",
      "prenom": "Nsimba",
      "nuance": "DIV",
-     "voix": 75,
-     "pct_exprimes": 0.93,
-     "pct_inscrits": 0.5
+     "voix": 78,
+     "pct_exprimes": 0.96,
+     "pct_inscrits": 0.52
     },
     {
      "nom": "RONCHINI",
@@ -7483,7 +7491,7 @@
     "nom": "LE GALL",
     "prenom": "Arnaud",
     "nuance": "UG",
-    "pct_exprimes": 46.35
+    "pct_exprimes": 49.22
    }
   },
   "95280": {
@@ -7582,7 +7590,7 @@
   },
   "95287": {
    "code_insee": "95287",
-   "nom": "Grisy-Les-Plâtres",
+   "nom": "Grisy-les-Plâtres",
    "code_circonscription": null,
    "bureaux_de_vote": 1,
    "inscrits": 537,
@@ -7735,9 +7743,9 @@
      "pct_inscrits": 0.74
     },
     {
-     "nom": "GAVOIS",
-     "prenom": "Aurélien",
-     "nuance": "EXG",
+     "nom": "CHASTAING",
+     "prenom": "Marie-Christine",
+     "nuance": "DSV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -7751,17 +7759,17 @@
      "pct_inscrits": 0.0
     },
     {
-     "nom": "ARNAL",
-     "prenom": "Didier",
-     "nuance": "DIV",
+     "nom": "GAVOIS",
+     "prenom": "Aurélien",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "CHASTAING",
-     "prenom": "Marie-Christine",
-     "nuance": "DSV",
+     "nom": "ARNAL",
+     "prenom": "Didier",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -7778,7 +7786,7 @@
   },
   "95295": {
    "code_insee": "95295",
-   "nom": "Guiry-En-Vexin",
+   "nom": "Guiry-en-Vexin",
    "code_circonscription": null,
    "bureaux_de_vote": 1,
    "inscrits": 116,
@@ -7821,6 +7829,14 @@
      "pct_inscrits": 6.03
     },
     {
+     "nom": "LESSAINT",
+     "prenom": "Lionel",
+     "nuance": "DSV",
+     "voix": 1,
+     "pct_exprimes": 1.01,
+     "pct_inscrits": 0.86
+    },
+    {
      "nom": "GÉHAN",
      "prenom": "Barbara",
      "nuance": "EXG",
@@ -7829,12 +7845,12 @@
      "pct_inscrits": 0.86
     },
     {
-     "nom": "LESSAINT",
-     "prenom": "Lionel",
-     "nuance": "DSV",
-     "voix": 1,
-     "pct_exprimes": 1.01,
-     "pct_inscrits": 0.86
+     "nom": "DE GARILS",
+     "prenom": "Laure",
+     "nuance": "REC",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
     },
     {
      "nom": "SOUSSI",
@@ -7848,14 +7864,6 @@
      "nom": "LAH",
      "prenom": "Sami",
      "nuance": "DIV",
-     "voix": 0,
-     "pct_exprimes": 0.0,
-     "pct_inscrits": 0.0
-    },
-    {
-     "nom": "DE GARILS",
-     "prenom": "Laure",
-     "nuance": "REC",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -7939,17 +7947,17 @@
      "pct_inscrits": 0.22
     },
     {
-     "nom": "LAH",
-     "prenom": "Sami",
-     "nuance": "DIV",
+     "nom": "SOUSSI",
+     "prenom": "Ethel",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "SOUSSI",
-     "prenom": "Ethel",
-     "nuance": "EXG",
+     "nom": "LAH",
+     "prenom": "Sami",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -8017,17 +8025,17 @@
      "pct_inscrits": 1.49
     },
     {
-     "nom": "GÉHAN",
-     "prenom": "Barbara",
-     "nuance": "EXG",
+     "nom": "LESSAINT",
+     "prenom": "Lionel",
+     "nuance": "DSV",
      "voix": 2,
      "pct_exprimes": 1.29,
      "pct_inscrits": 0.99
     },
     {
-     "nom": "LESSAINT",
-     "prenom": "Lionel",
-     "nuance": "DSV",
+     "nom": "GÉHAN",
+     "prenom": "Barbara",
+     "nuance": "EXG",
      "voix": 2,
      "pct_exprimes": 1.29,
      "pct_inscrits": 0.99
@@ -8111,14 +8119,6 @@
      "pct_inscrits": 1.25
     },
     {
-     "nom": "LESSAINT",
-     "prenom": "Lionel",
-     "nuance": "DSV",
-     "voix": 1,
-     "pct_exprimes": 0.8,
-     "pct_inscrits": 0.62
-    },
-    {
      "nom": "DE GARILS",
      "prenom": "Laure",
      "nuance": "REC",
@@ -8127,17 +8127,25 @@
      "pct_inscrits": 0.62
     },
     {
-     "nom": "LAH",
-     "prenom": "Sami",
-     "nuance": "DIV",
-     "voix": 0,
-     "pct_exprimes": 0.0,
-     "pct_inscrits": 0.0
+     "nom": "LESSAINT",
+     "prenom": "Lionel",
+     "nuance": "DSV",
+     "voix": 1,
+     "pct_exprimes": 0.8,
+     "pct_inscrits": 0.62
     },
     {
      "nom": "SOUSSI",
      "prenom": "Ethel",
      "nuance": "EXG",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "LAH",
+     "prenom": "Sami",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -8221,17 +8229,17 @@
      "pct_inscrits": 0.0
     },
     {
-     "nom": "LAH",
-     "prenom": "Sami",
-     "nuance": "DIV",
+     "nom": "GÉHAN",
+     "prenom": "Barbara",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "GÉHAN",
-     "prenom": "Barbara",
-     "nuance": "EXG",
+     "nom": "LAH",
+     "prenom": "Sami",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -8248,7 +8256,7 @@
   },
   "95306": {
    "code_insee": "95306",
-   "nom": "Herblay-Sur-Seine",
+   "nom": "Herblay-sur-Seine",
    "code_circonscription": null,
    "bureaux_de_vote": 21,
    "inscrits": 20231,
@@ -8278,9 +8286,9 @@
      "nom": "RILHAC",
      "prenom": "Cécile",
      "nuance": "ENS",
-     "voix": 3055,
-     "pct_exprimes": 22.73,
-     "pct_inscrits": 15.1
+     "voix": 3156,
+     "pct_exprimes": 23.48,
+     "pct_inscrits": 15.6
     },
     {
      "nom": "VINCENT",
@@ -8310,17 +8318,17 @@
      "nom": "SIMONNOT",
      "prenom": "Alexandre",
      "nuance": "REC",
-     "voix": 157,
-     "pct_exprimes": 1.17,
-     "pct_inscrits": 0.78
+     "voix": 163,
+     "pct_exprimes": 1.21,
+     "pct_inscrits": 0.81
     },
     {
      "nom": "MUNOZ",
      "prenom": "Juan",
      "nuance": "EXG",
-     "voix": 104,
-     "pct_exprimes": 0.77,
-     "pct_inscrits": 0.51
+     "voix": 113,
+     "pct_exprimes": 0.84,
+     "pct_inscrits": 0.56
     },
     {
      "nom": "BLASER",
@@ -8350,7 +8358,7 @@
   },
   "95308": {
    "code_insee": "95308",
-   "nom": "Hérouville-En-Vexin",
+   "nom": "Hérouville-en-Vexin",
    "code_circonscription": null,
    "bureaux_de_vote": 1,
    "inscrits": 474,
@@ -8495,17 +8503,17 @@
      "pct_inscrits": 1.83
     },
     {
-     "nom": "LESSAINT",
-     "prenom": "Lionel",
-     "nuance": "DSV",
+     "nom": "DE GARILS",
+     "prenom": "Laure",
+     "nuance": "REC",
      "voix": 2,
      "pct_exprimes": 1.65,
      "pct_inscrits": 1.22
     },
     {
-     "nom": "DE GARILS",
-     "prenom": "Laure",
-     "nuance": "REC",
+     "nom": "LESSAINT",
+     "prenom": "Lionel",
+     "nuance": "DSV",
      "voix": 2,
      "pct_exprimes": 1.65,
      "pct_inscrits": 1.22
@@ -8640,7 +8648,7 @@
   },
   "95316": {
    "code_insee": "95316",
-   "nom": "Jagny-Sous-Bois",
+   "nom": "Jagny-sous-Bois",
    "code_circonscription": null,
    "bureaux_de_vote": 1,
    "inscrits": 218,
@@ -8699,14 +8707,6 @@
      "pct_inscrits": 0.46
     },
     {
-     "nom": "WASSA",
-     "prenom": "Nsimba",
-     "nuance": "DIV",
-     "voix": 0,
-     "pct_exprimes": 0.0,
-     "pct_inscrits": 0.0
-    },
-    {
      "nom": "RONCHINI",
      "prenom": "Vanessa",
      "nuance": "EXG",
@@ -8717,6 +8717,14 @@
     {
      "nom": "NAJIB",
      "prenom": "Mohamed",
+     "nuance": "DIV",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "WASSA",
+     "prenom": "Nsimba",
      "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
@@ -8734,7 +8742,7 @@
   },
   "95323": {
    "code_insee": "95323",
-   "nom": "Jouy-Le-Moutier",
+   "nom": "Jouy-le-Moutier",
    "code_circonscription": null,
    "bureaux_de_vote": 11,
    "inscrits": 11437,
@@ -8871,14 +8879,6 @@
      "pct_inscrits": 0.75
     },
     {
-     "nom": "GÉHAN",
-     "prenom": "Barbara",
-     "nuance": "EXG",
-     "voix": 1,
-     "pct_exprimes": 0.35,
-     "pct_inscrits": 0.25
-    },
-    {
      "nom": "DE GARILS",
      "prenom": "Laure",
      "nuance": "REC",
@@ -8887,17 +8887,25 @@
      "pct_inscrits": 0.25
     },
     {
-     "nom": "LAH",
-     "prenom": "Sami",
-     "nuance": "DIV",
-     "voix": 0,
-     "pct_exprimes": 0.0,
-     "pct_inscrits": 0.0
+     "nom": "GÉHAN",
+     "prenom": "Barbara",
+     "nuance": "EXG",
+     "voix": 1,
+     "pct_exprimes": 0.35,
+     "pct_inscrits": 0.25
     },
     {
      "nom": "SOUSSI",
      "prenom": "Ethel",
      "nuance": "EXG",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "LAH",
+     "prenom": "Sami",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -8957,17 +8965,17 @@
      "pct_inscrits": 10.0
     },
     {
-     "nom": "SAID",
-     "prenom": "David",
-     "nuance": "REC",
+     "nom": "RONCHINI",
+     "prenom": "Vanessa",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "RONCHINI",
-     "prenom": "Vanessa",
-     "nuance": "EXG",
+     "nom": "SAID",
+     "prenom": "David",
+     "nuance": "REC",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -9075,17 +9083,17 @@
      "pct_inscrits": 0.68
     },
     {
-     "nom": "LAH",
-     "prenom": "Sami",
-     "nuance": "DIV",
+     "nom": "SOUSSI",
+     "prenom": "Ethel",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "SOUSSI",
-     "prenom": "Ethel",
-     "nuance": "EXG",
+     "nom": "LAH",
+     "prenom": "Sami",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -9153,14 +9161,6 @@
      "pct_inscrits": 1.2
     },
     {
-     "nom": "GÉHAN",
-     "prenom": "Barbara",
-     "nuance": "EXG",
-     "voix": 4,
-     "pct_exprimes": 1.27,
-     "pct_inscrits": 0.96
-    },
-    {
      "nom": "DE GARILS",
      "prenom": "Laure",
      "nuance": "REC",
@@ -9169,17 +9169,25 @@
      "pct_inscrits": 0.96
     },
     {
-     "nom": "LAH",
-     "prenom": "Sami",
-     "nuance": "DIV",
-     "voix": 0,
-     "pct_exprimes": 0.0,
-     "pct_inscrits": 0.0
+     "nom": "GÉHAN",
+     "prenom": "Barbara",
+     "nuance": "EXG",
+     "voix": 4,
+     "pct_exprimes": 1.27,
+     "pct_inscrits": 0.96
     },
     {
      "nom": "SOUSSI",
      "prenom": "Ethel",
      "nuance": "EXG",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "LAH",
+     "prenom": "Sami",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -9255,14 +9263,6 @@
      "pct_inscrits": 0.4
     },
     {
-     "nom": "WASSA",
-     "prenom": "Nsimba",
-     "nuance": "DIV",
-     "voix": 0,
-     "pct_exprimes": 0.0,
-     "pct_inscrits": 0.0
-    },
-    {
      "nom": "RONCHINI",
      "prenom": "Vanessa",
      "nuance": "EXG",
@@ -9273,6 +9273,14 @@
     {
      "nom": "NAJIB",
      "prenom": "Mohamed",
+     "nuance": "DIV",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "WASSA",
+     "prenom": "Nsimba",
      "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
@@ -9459,17 +9467,17 @@
      "pct_inscrits": 0.32
     },
     {
-     "nom": "GAULTIER",
-     "prenom": "Stephane",
-     "nuance": "EXG",
+     "nom": "LESSAINT",
+     "prenom": "Danièle",
+     "nuance": "DSV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "LESSAINT",
-     "prenom": "Danièle",
-     "nuance": "DSV",
+     "nom": "GAULTIER",
+     "prenom": "Stephane",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -9486,7 +9494,7 @@
   },
   "95355": {
    "code_insee": "95355",
-   "nom": "Magny-En-Vexin",
+   "nom": "Magny-en-Vexin",
    "code_circonscription": null,
    "bureaux_de_vote": 5,
    "inscrits": 3829,
@@ -9508,17 +9516,17 @@
      "nom": "CHANDLER",
      "prenom": "Émilie",
      "nuance": "ENS",
-     "voix": 577,
-     "pct_exprimes": 23.57,
-     "pct_inscrits": 15.07
+     "voix": 640,
+     "pct_exprimes": 26.14,
+     "pct_inscrits": 16.71
     },
     {
      "nom": "JULES-ARTHUR",
      "prenom": "Maximillien",
      "nuance": "UG",
-     "voix": 507,
-     "pct_exprimes": 20.71,
-     "pct_inscrits": 13.24
+     "voix": 577,
+     "pct_exprimes": 23.57,
+     "pct_inscrits": 15.07
     },
     {
      "nom": "RICHARD",
@@ -9580,7 +9588,7 @@
   },
   "95365": {
    "code_insee": "95365",
-   "nom": "Mareil-En-France",
+   "nom": "Mareil-en-France",
    "code_circonscription": null,
    "bureaux_de_vote": 1,
    "inscrits": 464,
@@ -9623,14 +9631,6 @@
      "pct_inscrits": 6.9
     },
     {
-     "nom": "HANRYON",
-     "prenom": "Danièle",
-     "nuance": "EXG",
-     "voix": 2,
-     "pct_exprimes": 0.68,
-     "pct_inscrits": 0.43
-    },
-    {
      "nom": "SAID",
      "prenom": "David",
      "nuance": "REC",
@@ -9639,17 +9639,25 @@
      "pct_inscrits": 0.43
     },
     {
-     "nom": "NAJIB",
-     "prenom": "Mohamed",
-     "nuance": "DIV",
-     "voix": 0,
-     "pct_exprimes": 0.0,
-     "pct_inscrits": 0.0
+     "nom": "HANRYON",
+     "prenom": "Danièle",
+     "nuance": "EXG",
+     "voix": 2,
+     "pct_exprimes": 0.68,
+     "pct_inscrits": 0.43
     },
     {
      "nom": "RONCHINI",
      "prenom": "Vanessa",
      "nuance": "EXG",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "NAJIB",
+     "prenom": "Mohamed",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -9843,17 +9851,17 @@
      "pct_inscrits": 0.68
     },
     {
-     "nom": "LAH",
-     "prenom": "Sami",
-     "nuance": "DIV",
+     "nom": "SOUSSI",
+     "prenom": "Ethel",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "SOUSSI",
-     "prenom": "Ethel",
-     "nuance": "EXG",
+     "nom": "LAH",
+     "prenom": "Sami",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -9870,7 +9878,7 @@
   },
   "95371": {
    "code_insee": "95371",
-   "nom": "Marly-La-Ville",
+   "nom": "Marly-la-Ville",
    "code_circonscription": null,
    "bureaux_de_vote": 4,
    "inscrits": 4029,
@@ -9929,17 +9937,17 @@
      "pct_inscrits": 0.45
     },
     {
-     "nom": "NAJIB",
-     "prenom": "Mohamed",
-     "nuance": "DIV",
+     "nom": "RONCHINI",
+     "prenom": "Vanessa",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "RONCHINI",
-     "prenom": "Vanessa",
-     "nuance": "EXG",
+     "nom": "NAJIB",
+     "prenom": "Mohamed",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -9964,7 +9972,7 @@
   },
   "95379": {
    "code_insee": "95379",
-   "nom": "Maudétour-En-Vexin",
+   "nom": "Maudétour-en-Vexin",
    "code_circonscription": null,
    "bureaux_de_vote": 1,
    "inscrits": 161,
@@ -10015,14 +10023,6 @@
      "pct_inscrits": 1.24
     },
     {
-     "nom": "GÉHAN",
-     "prenom": "Barbara",
-     "nuance": "EXG",
-     "voix": 1,
-     "pct_exprimes": 0.84,
-     "pct_inscrits": 0.62
-    },
-    {
      "nom": "DE GARILS",
      "prenom": "Laure",
      "nuance": "REC",
@@ -10031,17 +10031,25 @@
      "pct_inscrits": 0.62
     },
     {
-     "nom": "LAH",
-     "prenom": "Sami",
-     "nuance": "DIV",
-     "voix": 0,
-     "pct_exprimes": 0.0,
-     "pct_inscrits": 0.0
+     "nom": "GÉHAN",
+     "prenom": "Barbara",
+     "nuance": "EXG",
+     "voix": 1,
+     "pct_exprimes": 0.84,
+     "pct_inscrits": 0.62
     },
     {
      "nom": "SOUSSI",
      "prenom": "Ethel",
      "nuance": "EXG",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "LAH",
+     "prenom": "Sami",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -10109,9 +10117,9 @@
      "pct_inscrits": 0.0
     },
     {
-     "nom": "GÉHAN",
-     "prenom": "Barbara",
-     "nuance": "EXG",
+     "nom": "LESSAINT",
+     "prenom": "Lionel",
+     "nuance": "DSV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -10125,17 +10133,17 @@
      "pct_inscrits": 0.0
     },
     {
-     "nom": "LAH",
-     "prenom": "Sami",
-     "nuance": "DIV",
+     "nom": "GÉHAN",
+     "prenom": "Barbara",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "LESSAINT",
-     "prenom": "Lionel",
-     "nuance": "DSV",
+     "nom": "LAH",
+     "prenom": "Sami",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -10340,7 +10348,7 @@
   },
   "95394": {
    "code_insee": "95394",
-   "nom": "Méry-Sur-Oise",
+   "nom": "Méry-sur-Oise",
    "code_circonscription": null,
    "bureaux_de_vote": 7,
    "inscrits": 6587,
@@ -10386,9 +10394,9 @@
      "nom": "OUBAIROUK",
      "prenom": "Brahim",
      "nuance": "DIV",
-     "voix": 65,
-     "pct_exprimes": 1.54,
-     "pct_inscrits": 0.99
+     "voix": 73,
+     "pct_exprimes": 1.73,
+     "pct_inscrits": 1.11
     },
     {
      "nom": "IVANAJ",
@@ -10501,9 +10509,9 @@
      "pct_inscrits": 0.95
     },
     {
-     "nom": "GAVOIS",
-     "prenom": "Aurélien",
-     "nuance": "EXG",
+     "nom": "CHASTAING",
+     "prenom": "Marie-Christine",
+     "nuance": "DSV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -10517,9 +10525,9 @@
      "pct_inscrits": 0.0
     },
     {
-     "nom": "CHASTAING",
-     "prenom": "Marie-Christine",
-     "nuance": "DSV",
+     "nom": "GAVOIS",
+     "prenom": "Aurélien",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -10611,17 +10619,17 @@
      "pct_inscrits": 0.0
     },
     {
-     "nom": "GAVOIS",
-     "prenom": "Aurélien",
-     "nuance": "EXG",
+     "nom": "UZAN",
+     "prenom": "Linda",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "UZAN",
-     "prenom": "Linda",
-     "nuance": "DIV",
+     "nom": "GAVOIS",
+     "prenom": "Aurélien",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -10665,17 +10673,17 @@
      "pct_inscrits": 21.67
     },
     {
-     "nom": "SICARD",
-     "prenom": "Anne",
-     "nuance": "RN",
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
      "voix": 62,
      "pct_exprimes": 28.31,
      "pct_inscrits": 20.67
     },
     {
-     "nom": "JULES-ARTHUR",
-     "prenom": "Maximillien",
-     "nuance": "UG",
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
      "voix": 62,
      "pct_exprimes": 28.31,
      "pct_inscrits": 20.67
@@ -10713,17 +10721,17 @@
      "pct_inscrits": 0.33
     },
     {
-     "nom": "LAH",
-     "prenom": "Sami",
-     "nuance": "DIV",
+     "nom": "SOUSSI",
+     "prenom": "Ethel",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "SOUSSI",
-     "prenom": "Ethel",
-     "nuance": "EXG",
+     "nom": "LAH",
+     "prenom": "Sami",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -10740,7 +10748,7 @@
   },
   "95424": {
    "code_insee": "95424",
-   "nom": "Montigny-Lès-Cormeilles",
+   "nom": "Montigny-lès-Cormeilles",
    "code_circonscription": null,
    "bureaux_de_vote": 13,
    "inscrits": 12312,
@@ -10802,9 +10810,9 @@
      "nom": "SIMONNOT",
      "prenom": "Alexandre",
      "nuance": "REC",
-     "voix": 73,
-     "pct_exprimes": 1.0,
-     "pct_inscrits": 0.59
+     "voix": 79,
+     "pct_exprimes": 1.08,
+     "pct_inscrits": 0.64
     },
     {
      "nom": "MUNOZ",
@@ -10901,17 +10909,17 @@
      "pct_inscrits": 0.52
     },
     {
-     "nom": "DURAND",
-     "prenom": "Robin",
-     "nuance": "DIV",
+     "nom": "MARTIN",
+     "prenom": "Antonin",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "MARTIN",
-     "prenom": "Antonin",
-     "nuance": "EXG",
+     "nom": "DURAND",
+     "prenom": "Robin",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -11089,14 +11097,6 @@
      "pct_inscrits": 0.59
     },
     {
-     "nom": "UZAN",
-     "prenom": "Linda",
-     "nuance": "DIV",
-     "voix": 0,
-     "pct_exprimes": 0.0,
-     "pct_inscrits": 0.0
-    },
-    {
      "nom": "CHASTAING",
      "prenom": "Marie-Christine",
      "nuance": "DSV",
@@ -11105,8 +11105,8 @@
      "pct_inscrits": 0.0
     },
     {
-     "nom": "ARNAL",
-     "prenom": "Didier",
+     "nom": "UZAN",
+     "prenom": "Linda",
      "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
@@ -11116,6 +11116,14 @@
      "nom": "GAVOIS",
      "prenom": "Aurélien",
      "nuance": "EXG",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "ARNAL",
+     "prenom": "Didier",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -11132,7 +11140,7 @@
   },
   "95429": {
    "code_insee": "95429",
-   "nom": "Montreuil-Sur-Epte",
+   "nom": "Montreuil-sur-Epte",
    "code_circonscription": null,
    "bureaux_de_vote": 1,
    "inscrits": 326,
@@ -11395,17 +11403,17 @@
      "pct_inscrits": 0.78
     },
     {
-     "nom": "LAH",
-     "prenom": "Sami",
-     "nuance": "DIV",
+     "nom": "SOUSSI",
+     "prenom": "Ethel",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "SOUSSI",
-     "prenom": "Ethel",
-     "nuance": "EXG",
+     "nom": "LAH",
+     "prenom": "Sami",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -11473,22 +11481,6 @@
      "pct_inscrits": 4.04
     },
     {
-     "nom": "SOUSSI",
-     "prenom": "Ethel",
-     "nuance": "EXG",
-     "voix": 0,
-     "pct_exprimes": 0.0,
-     "pct_inscrits": 0.0
-    },
-    {
-     "nom": "LAH",
-     "prenom": "Sami",
-     "nuance": "DIV",
-     "voix": 0,
-     "pct_exprimes": 0.0,
-     "pct_inscrits": 0.0
-    },
-    {
      "nom": "DE GARILS",
      "prenom": "Laure",
      "nuance": "REC",
@@ -11500,6 +11492,22 @@
      "nom": "LESSAINT",
      "prenom": "Lionel",
      "nuance": "DSV",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "SOUSSI",
+     "prenom": "Ethel",
+     "nuance": "EXG",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "LAH",
+     "prenom": "Sami",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -11516,7 +11524,7 @@
   },
   "95445": {
    "code_insee": "95445",
-   "nom": "Nerville-La-Forêt",
+   "nom": "Nerville-la-Forêt",
    "code_circonscription": null,
    "bureaux_de_vote": 1,
    "inscrits": 469,
@@ -11591,17 +11599,17 @@
      "pct_inscrits": 0.21
     },
     {
-     "nom": "GAULTIER",
-     "prenom": "Stephane",
-     "nuance": "EXG",
+     "nom": "LESSAINT",
+     "prenom": "Danièle",
+     "nuance": "DSV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "LESSAINT",
-     "prenom": "Danièle",
-     "nuance": "DSV",
+     "nom": "GAULTIER",
+     "prenom": "Stephane",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -11618,7 +11626,7 @@
   },
   "95446": {
    "code_insee": "95446",
-   "nom": "Nesles-La-Vallée",
+   "nom": "Nesles-la-Vallée",
    "code_circonscription": null,
    "bureaux_de_vote": 1,
    "inscrits": 1499,
@@ -11685,17 +11693,17 @@
      "pct_inscrits": 0.73
     },
     {
-     "nom": "LAH",
-     "prenom": "Sami",
-     "nuance": "DIV",
+     "nom": "SOUSSI",
+     "prenom": "Ethel",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "SOUSSI",
-     "prenom": "Ethel",
-     "nuance": "EXG",
+     "nom": "LAH",
+     "prenom": "Sami",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -11712,7 +11720,7 @@
   },
   "95447": {
    "code_insee": "95447",
-   "nom": "Neuilly-En-Vexin",
+   "nom": "Neuilly-en-Vexin",
    "code_circonscription": null,
    "bureaux_de_vote": 1,
    "inscrits": 160,
@@ -11771,6 +11779,14 @@
      "pct_inscrits": 1.88
     },
     {
+     "nom": "DE GARILS",
+     "prenom": "Laure",
+     "nuance": "REC",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
      "nom": "SOUSSI",
      "prenom": "Ethel",
      "nuance": "EXG",
@@ -11782,14 +11798,6 @@
      "nom": "LAH",
      "prenom": "Sami",
      "nuance": "DIV",
-     "voix": 0,
-     "pct_exprimes": 0.0,
-     "pct_inscrits": 0.0
-    },
-    {
-     "nom": "DE GARILS",
-     "prenom": "Laure",
-     "nuance": "REC",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -11806,7 +11814,7 @@
   },
   "95450": {
    "code_insee": "95450",
-   "nom": "Neuville-Sur-Oise",
+   "nom": "Neuville-sur-Oise",
    "code_circonscription": null,
    "bureaux_de_vote": 1,
    "inscrits": 1223,
@@ -11881,17 +11889,17 @@
      "pct_inscrits": 0.08
     },
     {
-     "nom": "GAULTIER",
-     "prenom": "Stephane",
-     "nuance": "EXG",
+     "nom": "LESSAINT",
+     "prenom": "Danièle",
+     "nuance": "DSV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "LESSAINT",
-     "prenom": "Danièle",
-     "nuance": "DSV",
+     "nom": "GAULTIER",
+     "prenom": "Stephane",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -11975,17 +11983,17 @@
      "pct_inscrits": 0.81
     },
     {
-     "nom": "LAH",
-     "prenom": "Sami",
-     "nuance": "DIV",
+     "nom": "SOUSSI",
+     "prenom": "Ethel",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "SOUSSI",
-     "prenom": "Ethel",
-     "nuance": "EXG",
+     "nom": "LAH",
+     "prenom": "Sami",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -12002,7 +12010,7 @@
   },
   "95456": {
    "code_insee": "95456",
-   "nom": "Noisy-Sur-Oise",
+   "nom": "Noisy-sur-Oise",
    "code_circonscription": null,
    "bureaux_de_vote": 1,
    "inscrits": 417,
@@ -12171,17 +12179,17 @@
      "pct_inscrits": 0.18
     },
     {
-     "nom": "LAH",
-     "prenom": "Sami",
-     "nuance": "DIV",
+     "nom": "SOUSSI",
+     "prenom": "Ethel",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "SOUSSI",
-     "prenom": "Ethel",
-     "nuance": "EXG",
+     "nom": "LAH",
+     "prenom": "Sami",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -12265,17 +12273,17 @@
      "pct_inscrits": 1.48
     },
     {
-     "nom": "LAH",
-     "prenom": "Sami",
-     "nuance": "DIV",
+     "nom": "SOUSSI",
+     "prenom": "Ethel",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "SOUSSI",
-     "prenom": "Ethel",
-     "nuance": "EXG",
+     "nom": "LAH",
+     "prenom": "Sami",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -12453,17 +12461,17 @@
      "pct_inscrits": 0.49
     },
     {
-     "nom": "GAULTIER",
-     "prenom": "Stephane",
-     "nuance": "EXG",
+     "nom": "LESSAINT",
+     "prenom": "Danièle",
+     "nuance": "DSV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "LESSAINT",
-     "prenom": "Danièle",
-     "nuance": "DSV",
+     "nom": "GAULTIER",
+     "prenom": "Stephane",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -12641,17 +12649,17 @@
      "pct_inscrits": 0.57
     },
     {
-     "nom": "LAH",
-     "prenom": "Sami",
-     "nuance": "DIV",
+     "nom": "SOUSSI",
+     "prenom": "Ethel",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "SOUSSI",
-     "prenom": "Ethel",
-     "nuance": "EXG",
+     "nom": "LAH",
+     "prenom": "Sami",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -12714,9 +12722,9 @@
      "nom": "HERBAL",
      "prenom": "Samira",
      "nuance": "ECO",
-     "voix": 65,
-     "pct_exprimes": 1.96,
-     "pct_inscrits": 1.18
+     "voix": 71,
+     "pct_exprimes": 2.14,
+     "pct_inscrits": 1.29
     },
     {
      "nom": "GUÉBIN",
@@ -12730,9 +12738,9 @@
      "nom": "SIMONNOT",
      "prenom": "Alexandre",
      "nuance": "REC",
-     "voix": 46,
-     "pct_exprimes": 1.39,
-     "pct_inscrits": 0.83
+     "voix": 53,
+     "pct_exprimes": 1.6,
+     "pct_inscrits": 0.96
     },
     {
      "nom": "MUNOZ",
@@ -12837,17 +12845,17 @@
      "pct_inscrits": 0.0
     },
     {
-     "nom": "GAVOIS",
-     "prenom": "Aurélien",
-     "nuance": "EXG",
+     "nom": "UZAN",
+     "prenom": "Linda",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "UZAN",
-     "prenom": "Linda",
-     "nuance": "DIV",
+     "nom": "GAVOIS",
+     "prenom": "Aurélien",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -12947,17 +12955,17 @@
      "pct_inscrits": 0.43
     },
     {
-     "nom": "BELMOKHTAR",
-     "prenom": "Samira",
-     "nuance": "DVG",
+     "nom": "BLASER",
+     "prenom": "Daniel",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "BLASER",
-     "prenom": "Daniel",
-     "nuance": "EXG",
+     "nom": "BELMOKHTAR",
+     "prenom": "Samira",
+     "nuance": "DVG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -13025,9 +13033,9 @@
      "pct_inscrits": 2.99
     },
     {
-     "nom": "UZAN",
-     "prenom": "Linda",
-     "nuance": "DIV",
+     "nom": "CHASTAING",
+     "prenom": "Marie-Christine",
+     "nuance": "DSV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -13041,9 +13049,9 @@
      "pct_inscrits": 0.0
     },
     {
-     "nom": "CHASTAING",
-     "prenom": "Marie-Christine",
-     "nuance": "DSV",
+     "nom": "UZAN",
+     "prenom": "Linda",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -13135,14 +13143,6 @@
      "pct_inscrits": 1.02
     },
     {
-     "nom": "WASSA",
-     "prenom": "Nsimba",
-     "nuance": "DIV",
-     "voix": 0,
-     "pct_exprimes": 0.0,
-     "pct_inscrits": 0.0
-    },
-    {
      "nom": "RONCHINI",
      "prenom": "Vanessa",
      "nuance": "EXG",
@@ -13153,6 +13153,14 @@
     {
      "nom": "NAJIB",
      "prenom": "Mohamed",
+     "nuance": "DIV",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "WASSA",
+     "prenom": "Nsimba",
      "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
@@ -13302,9 +13310,9 @@
      "nom": "PAIN",
      "prenom": "Frédéric",
      "nuance": "LR",
-     "voix": 87,
-     "pct_exprimes": 4.31,
-     "pct_inscrits": 3.11
+     "voix": 122,
+     "pct_exprimes": 6.04,
+     "pct_inscrits": 4.36
     },
     {
      "nom": "IVANAJ",
@@ -13366,7 +13374,7 @@
   },
   "95509": {
    "code_insee": "95509",
-   "nom": "Puiseux-En-France",
+   "nom": "Puiseux-en-France",
    "code_circonscription": null,
    "bureaux_de_vote": 3,
    "inscrits": 2582,
@@ -13433,16 +13441,16 @@
      "pct_inscrits": 0.0
     },
     {
-     "nom": "WASSA",
-     "prenom": "Nsimba",
+     "nom": "NAJIB",
+     "prenom": "Mohamed",
      "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "NAJIB",
-     "prenom": "Mohamed",
+     "nom": "WASSA",
+     "prenom": "Nsimba",
      "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
@@ -13640,7 +13648,7 @@
   },
   "95527": {
    "code_insee": "95527",
-   "nom": "Roissy-En-France",
+   "nom": "Roissy-en-France",
    "code_circonscription": null,
    "bureaux_de_vote": 1,
    "inscrits": 1544,
@@ -13699,9 +13707,9 @@
      "pct_inscrits": 0.65
     },
     {
-     "nom": "WASSA",
-     "prenom": "Nsimba",
-     "nuance": "DIV",
+     "nom": "RONCHINI",
+     "prenom": "Vanessa",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -13715,9 +13723,9 @@
      "pct_inscrits": 0.0
     },
     {
-     "nom": "RONCHINI",
-     "prenom": "Vanessa",
-     "nuance": "EXG",
+     "nom": "WASSA",
+     "prenom": "Nsimba",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -13922,7 +13930,7 @@
   },
   "95539": {
    "code_insee": "95539",
-   "nom": "Saint-Brice-Sous-Forêt",
+   "nom": "Saint-Brice-sous-Forêt",
    "code_circonscription": null,
    "bureaux_de_vote": 9,
    "inscrits": 9091,
@@ -13981,17 +13989,9 @@
      "pct_inscrits": 0.88
     },
     {
-     "nom": "GAVOIS",
-     "prenom": "Aurélien",
-     "nuance": "EXG",
-     "voix": 0,
-     "pct_exprimes": 0.0,
-     "pct_inscrits": 0.0
-    },
-    {
-     "nom": "ARNAL",
-     "prenom": "Didier",
-     "nuance": "DIV",
+     "nom": "CHASTAING",
+     "prenom": "Marie-Christine",
+     "nuance": "DSV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -14005,9 +14005,17 @@
      "pct_inscrits": 0.0
     },
     {
-     "nom": "CHASTAING",
-     "prenom": "Marie-Christine",
-     "nuance": "DSV",
+     "nom": "GAVOIS",
+     "prenom": "Aurélien",
+     "nuance": "EXG",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "ARNAL",
+     "prenom": "Didier",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -14024,7 +14032,7 @@
   },
   "95541": {
    "code_insee": "95541",
-   "nom": "Saint-Clair-Sur-Epte",
+   "nom": "Saint-Clair-sur-Epte",
    "code_circonscription": null,
    "bureaux_de_vote": 1,
    "inscrits": 630,
@@ -14091,17 +14099,17 @@
      "pct_inscrits": 0.63
     },
     {
-     "nom": "LAH",
-     "prenom": "Sami",
-     "nuance": "DIV",
+     "nom": "SOUSSI",
+     "prenom": "Ethel",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "SOUSSI",
-     "prenom": "Ethel",
-     "nuance": "EXG",
+     "nom": "LAH",
+     "prenom": "Sami",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -14118,7 +14126,7 @@
   },
   "95543": {
    "code_insee": "95543",
-   "nom": "Saint-Cyr-En-Arthies",
+   "nom": "Saint-Cyr-en-Arthies",
    "code_circonscription": null,
    "bureaux_de_vote": 1,
    "inscrits": 173,
@@ -14255,17 +14263,17 @@
      "pct_inscrits": 3.63
     },
     {
-     "nom": "LESSAINT",
-     "prenom": "Lionel",
-     "nuance": "DSV",
+     "nom": "DE GARILS",
+     "prenom": "Laure",
+     "nuance": "REC",
      "voix": 13,
      "pct_exprimes": 2.49,
      "pct_inscrits": 1.89
     },
     {
-     "nom": "DE GARILS",
-     "prenom": "Laure",
-     "nuance": "REC",
+     "nom": "LESSAINT",
+     "prenom": "Lionel",
+     "nuance": "DSV",
      "voix": 13,
      "pct_exprimes": 2.49,
      "pct_inscrits": 1.89
@@ -14320,9 +14328,17 @@
      "nom": "CATHALA",
      "prenom": "Gabrielle",
      "nuance": "UG",
-     "voix": 3052,
-     "pct_exprimes": 36.21,
-     "pct_inscrits": 22.74
+     "voix": 3282,
+     "pct_exprimes": 38.94,
+     "pct_inscrits": 24.45
+    },
+    {
+     "nom": "FOLEST",
+     "prenom": "Estelle",
+     "nuance": "ENS",
+     "voix": 1929,
+     "pct_exprimes": 22.89,
+     "pct_inscrits": 14.37
     },
     {
      "nom": "BRUNA",
@@ -14331,14 +14347,6 @@
      "voix": 1797,
      "pct_exprimes": 21.32,
      "pct_inscrits": 13.39
-    },
-    {
-     "nom": "FOLEST",
-     "prenom": "Estelle",
-     "nuance": "ENS",
-     "voix": 1670,
-     "pct_exprimes": 19.81,
-     "pct_inscrits": 12.44
     },
     {
      "nom": "GUILBAUD",
@@ -14403,12 +14411,12 @@
     "nom": "CATHALA",
     "prenom": "Gabrielle",
     "nuance": "UG",
-    "pct_exprimes": 36.21
+    "pct_exprimes": 38.94
    }
   },
   "95563": {
    "code_insee": "95563",
-   "nom": "Saint-Leu-La-Forêt",
+   "nom": "Saint-Leu-la-Forêt",
    "code_circonscription": null,
    "bureaux_de_vote": 10,
    "inscrits": 11418,
@@ -14494,7 +14502,7 @@
   },
   "95566": {
    "code_insee": "95566",
-   "nom": "Saint-Martin-Du-Tertre",
+   "nom": "Saint-Martin-du-Tertre",
    "code_circonscription": null,
    "bureaux_de_vote": 2,
    "inscrits": 1830,
@@ -14545,17 +14553,17 @@
      "pct_inscrits": 1.48
     },
     {
-     "nom": "CASSAN",
-     "prenom": "Éric",
-     "nuance": "EXG",
+     "nom": "IVANAJ",
+     "prenom": "Alvin",
+     "nuance": "DIV",
      "voix": 14,
      "pct_exprimes": 1.31,
      "pct_inscrits": 0.77
     },
     {
-     "nom": "IVANAJ",
-     "prenom": "Alvin",
-     "nuance": "DIV",
+     "nom": "CASSAN",
+     "prenom": "Éric",
+     "nuance": "EXG",
      "voix": 14,
      "pct_exprimes": 1.31,
      "pct_inscrits": 0.77
@@ -14596,7 +14604,7 @@
   },
   "95572": {
    "code_insee": "95572",
-   "nom": "Saint-Ouen-L'Aumône",
+   "nom": "Saint-Ouen-l'Aumône",
    "code_circonscription": null,
    "bureaux_de_vote": 12,
    "inscrits": 13321,
@@ -14671,17 +14679,17 @@
      "pct_inscrits": 0.44
     },
     {
-     "nom": "GAULTIER",
-     "prenom": "Stephane",
-     "nuance": "EXG",
+     "nom": "LESSAINT",
+     "prenom": "Danièle",
+     "nuance": "DSV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "LESSAINT",
-     "prenom": "Danièle",
-     "nuance": "DSV",
+     "nom": "GAULTIER",
+     "prenom": "Stephane",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -14851,16 +14859,16 @@
      "pct_inscrits": 0.0
     },
     {
-     "nom": "WASSA",
-     "prenom": "Nsimba",
+     "nom": "NAJIB",
+     "prenom": "Mohamed",
      "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "NAJIB",
-     "prenom": "Mohamed",
+     "nom": "WASSA",
+     "prenom": "Nsimba",
      "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
@@ -14892,9 +14900,9 @@
      "nom": "CATHALA",
      "prenom": "Gabrielle",
      "nuance": "UG",
-     "voix": 4039,
-     "pct_exprimes": 37.17,
-     "pct_inscrits": 24.15
+     "voix": 4286,
+     "pct_exprimes": 39.45,
+     "pct_inscrits": 25.63
     },
     {
      "nom": "BRUNA",
@@ -14908,9 +14916,9 @@
      "nom": "FOLEST",
      "prenom": "Estelle",
      "nuance": "ENS",
-     "voix": 2403,
-     "pct_exprimes": 22.12,
-     "pct_inscrits": 14.37
+     "voix": 2543,
+     "pct_exprimes": 23.41,
+     "pct_inscrits": 15.21
     },
     {
      "nom": "GUILBAUD",
@@ -14940,9 +14948,9 @@
      "nom": "LASMARRIGUES",
      "prenom": "Jean Bernard",
      "nuance": "REC",
-     "voix": 126,
-     "pct_exprimes": 1.16,
-     "pct_inscrits": 0.75
+     "voix": 136,
+     "pct_exprimes": 1.25,
+     "pct_inscrits": 0.81
     },
     {
      "nom": "REINMANN",
@@ -14975,7 +14983,7 @@
     "nom": "CATHALA",
     "prenom": "Gabrielle",
     "nuance": "UG",
-    "pct_exprimes": 37.17
+    "pct_exprimes": 39.45
    }
   },
   "95584": {
@@ -15047,17 +15055,17 @@
      "pct_inscrits": 0.4
     },
     {
-     "nom": "LAH",
-     "prenom": "Sami",
-     "nuance": "DIV",
+     "nom": "SOUSSI",
+     "prenom": "Ethel",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "SOUSSI",
-     "prenom": "Ethel",
-     "nuance": "EXG",
+     "nom": "LAH",
+     "prenom": "Sami",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -15112,9 +15120,9 @@
      "nom": "QUENTIN",
      "prenom": "David",
      "nuance": "RN",
-     "voix": 1237,
-     "pct_exprimes": 8.45,
-     "pct_inscrits": 4.53
+     "voix": 1354,
+     "pct_exprimes": 9.25,
+     "pct_inscrits": 4.96
     },
     {
      "nom": "DA SILVA",
@@ -15160,9 +15168,9 @@
      "nom": "VIEVILLE",
      "prenom": "Virginie",
      "nuance": "REC",
-     "voix": 153,
-     "pct_exprimes": 1.05,
-     "pct_inscrits": 0.56
+     "voix": 162,
+     "pct_exprimes": 1.11,
+     "pct_inscrits": 0.59
     },
     {
      "nom": "KHERFI",
@@ -15197,22 +15205,6 @@
      "pct_inscrits": 0.0
     },
     {
-     "nom": "UZAN",
-     "prenom": "Linda",
-     "nuance": "DIV",
-     "voix": 0,
-     "pct_exprimes": 0.0,
-     "pct_inscrits": 0.0
-    },
-    {
-     "nom": "ARNAL",
-     "prenom": "Didier",
-     "nuance": "DIV",
-     "voix": 0,
-     "pct_exprimes": 0.0,
-     "pct_inscrits": 0.0
-    },
-    {
      "nom": "CHASTAING",
      "prenom": "Marie-Christine",
      "nuance": "DSV",
@@ -15221,9 +15213,25 @@
      "pct_inscrits": 0.0
     },
     {
+     "nom": "UZAN",
+     "prenom": "Linda",
+     "nuance": "DIV",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
      "nom": "GAVOIS",
      "prenom": "Aurélien",
      "nuance": "EXG",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "ARNAL",
+     "prenom": "Didier",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -15377,16 +15385,16 @@
      "pct_inscrits": 4.02
     },
     {
-     "nom": "OUBAIROUK",
-     "prenom": "Brahim",
+     "nom": "IVANAJ",
+     "prenom": "Alvin",
      "nuance": "DIV",
      "voix": 8,
      "pct_exprimes": 1.44,
      "pct_inscrits": 1.04
     },
     {
-     "nom": "IVANAJ",
-     "prenom": "Alvin",
+     "nom": "OUBAIROUK",
+     "prenom": "Brahim",
      "nuance": "DIV",
      "voix": 8,
      "pct_exprimes": 1.44,
@@ -15436,7 +15444,7 @@
   },
   "95598": {
    "code_insee": "95598",
-   "nom": "Soisy-Sous-Montmorency",
+   "nom": "Soisy-sous-Montmorency",
    "code_circonscription": null,
    "bureaux_de_vote": 10,
    "inscrits": 11899,
@@ -15670,9 +15678,9 @@
      "nom": "VINCENT",
      "prenom": "Laetitia",
      "nuance": "LR",
-     "voix": 801,
-     "pct_exprimes": 6.74,
-     "pct_inscrits": 4.54
+     "voix": 841,
+     "pct_exprimes": 7.08,
+     "pct_inscrits": 4.77
     },
     {
      "nom": "HERBAL",
@@ -15707,17 +15715,17 @@
      "pct_inscrits": 0.53
     },
     {
-     "nom": "BELMOKHTAR",
-     "prenom": "Samira",
-     "nuance": "DVG",
+     "nom": "BLASER",
+     "prenom": "Daniel",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "BLASER",
-     "prenom": "Daniel",
-     "nuance": "EXG",
+     "nom": "BELMOKHTAR",
+     "prenom": "Samira",
+     "nuance": "DVG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -15745,17 +15753,17 @@
    "exprimes": 157,
    "candidats": [
     {
-     "nom": "CHANDLER",
-     "prenom": "Émilie",
-     "nuance": "ENS",
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
      "voix": 52,
      "pct_exprimes": 33.12,
      "pct_inscrits": 23.11
     },
     {
-     "nom": "SICARD",
-     "prenom": "Anne",
-     "nuance": "RN",
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
      "voix": 52,
      "pct_exprimes": 33.12,
      "pct_inscrits": 23.11
@@ -15785,17 +15793,17 @@
      "pct_inscrits": 1.33
     },
     {
-     "nom": "LAH",
-     "prenom": "Sami",
-     "nuance": "DIV",
+     "nom": "DE GARILS",
+     "prenom": "Laure",
+     "nuance": "REC",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "DE GARILS",
-     "prenom": "Laure",
-     "nuance": "REC",
+     "nom": "SOUSSI",
+     "prenom": "Ethel",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -15809,9 +15817,9 @@
      "pct_inscrits": 0.0
     },
     {
-     "nom": "SOUSSI",
-     "prenom": "Ethel",
-     "nuance": "EXG",
+     "nom": "LAH",
+     "prenom": "Sami",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -15820,9 +15828,9 @@
    "pct_abstention": 28.0,
    "pct_participation": 72.0,
    "tete": {
-    "nom": "CHANDLER",
-    "prenom": "Émilie",
-    "nuance": "ENS",
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
     "pct_exprimes": 33.12
    }
   },
@@ -15863,17 +15871,17 @@
      "pct_inscrits": 9.52
     },
     {
-     "nom": "SOUSSI",
-     "prenom": "Ethel",
-     "nuance": "EXG",
+     "nom": "DE GARILS",
+     "prenom": "Laure",
+     "nuance": "REC",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "LAH",
-     "prenom": "Sami",
-     "nuance": "DIV",
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -15887,9 +15895,9 @@
      "pct_inscrits": 0.0
     },
     {
-     "nom": "DE GARILS",
-     "prenom": "Laure",
-     "nuance": "REC",
+     "nom": "SOUSSI",
+     "prenom": "Ethel",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -15903,9 +15911,9 @@
      "pct_inscrits": 0.0
     },
     {
-     "nom": "JULES-ARTHUR",
-     "prenom": "Maximillien",
-     "nuance": "UG",
+     "nom": "LAH",
+     "prenom": "Sami",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -15981,6 +15989,14 @@
      "pct_inscrits": 0.57
     },
     {
+     "nom": "RONCHINI",
+     "prenom": "Vanessa",
+     "nuance": "EXG",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
      "nom": "NAJIB",
      "prenom": "Mohamed",
      "nuance": "DIV",
@@ -15992,14 +16008,6 @@
      "nom": "WASSA",
      "prenom": "Nsimba",
      "nuance": "DIV",
-     "voix": 0,
-     "pct_exprimes": 0.0,
-     "pct_inscrits": 0.0
-    },
-    {
-     "nom": "RONCHINI",
-     "prenom": "Vanessa",
-     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -16083,17 +16091,17 @@
      "pct_inscrits": 0.63
     },
     {
-     "nom": "LAH",
-     "prenom": "Sami",
-     "nuance": "DIV",
+     "nom": "SOUSSI",
+     "prenom": "Ethel",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "SOUSSI",
-     "prenom": "Ethel",
-     "nuance": "EXG",
+     "nom": "LAH",
+     "prenom": "Sami",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -16317,14 +16325,6 @@
      "pct_inscrits": 51.61
     },
     {
-     "nom": "LE GALL",
-     "prenom": "Arnaud",
-     "nuance": "UG",
-     "voix": 5,
-     "pct_exprimes": 10.87,
-     "pct_inscrits": 8.06
-    },
-    {
      "nom": "ARCIERO",
      "prenom": "Anthony",
      "nuance": "LR",
@@ -16333,12 +16333,12 @@
      "pct_inscrits": 8.06
     },
     {
-     "nom": "HANRYON",
-     "prenom": "Danièle",
-     "nuance": "EXG",
-     "voix": 2,
-     "pct_exprimes": 4.35,
-     "pct_inscrits": 3.23
+     "nom": "LE GALL",
+     "prenom": "Arnaud",
+     "nuance": "UG",
+     "voix": 5,
+     "pct_exprimes": 10.87,
+     "pct_inscrits": 8.06
     },
     {
      "nom": "DEMIR",
@@ -16349,9 +16349,17 @@
      "pct_inscrits": 3.23
     },
     {
-     "nom": "NAJIB",
-     "prenom": "Mohamed",
-     "nuance": "DIV",
+     "nom": "HANRYON",
+     "prenom": "Danièle",
+     "nuance": "EXG",
+     "voix": 2,
+     "pct_exprimes": 4.35,
+     "pct_inscrits": 3.23
+    },
+    {
+     "nom": "RONCHINI",
+     "prenom": "Vanessa",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -16365,17 +16373,17 @@
      "pct_inscrits": 0.0
     },
     {
-     "nom": "WASSA",
-     "prenom": "Nsimba",
+     "nom": "NAJIB",
+     "prenom": "Mohamed",
      "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "RONCHINI",
-     "prenom": "Vanessa",
-     "nuance": "EXG",
+     "nom": "WASSA",
+     "prenom": "Nsimba",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -16623,17 +16631,17 @@
      "pct_inscrits": 1.33
     },
     {
-     "nom": "LESSAINT",
-     "prenom": "Lionel",
-     "nuance": "DSV",
+     "nom": "DE GARILS",
+     "prenom": "Laure",
+     "nuance": "REC",
      "voix": 2,
      "pct_exprimes": 0.43,
      "pct_inscrits": 0.33
     },
     {
-     "nom": "DE GARILS",
-     "prenom": "Laure",
-     "nuance": "REC",
+     "nom": "LESSAINT",
+     "prenom": "Lionel",
+     "nuance": "DSV",
      "voix": 2,
      "pct_exprimes": 0.43,
      "pct_inscrits": 0.33
@@ -16768,7 +16776,7 @@
   },
   "95656": {
    "code_insee": "95656",
-   "nom": "Vienne-En-Arthies",
+   "nom": "Vienne-en-Arthies",
    "code_circonscription": null,
    "bureaux_de_vote": 1,
    "inscrits": 328,
@@ -16803,6 +16811,14 @@
      "pct_inscrits": 16.77
     },
     {
+     "nom": "RICHARD",
+     "prenom": "Michel",
+     "nuance": "LR",
+     "voix": 16,
+     "pct_exprimes": 6.5,
+     "pct_inscrits": 4.88
+    },
+    {
      "nom": "GÉHAN",
      "prenom": "Barbara",
      "nuance": "EXG",
@@ -16819,9 +16835,25 @@
      "pct_inscrits": 0.61
     },
     {
+     "nom": "LESSAINT",
+     "prenom": "Lionel",
+     "nuance": "DSV",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
      "nom": "SOUSSI",
      "prenom": "Ethel",
      "nuance": "EXG",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    },
+    {
+     "nom": "LAH",
+     "prenom": "Sami",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -16932,7 +16964,7 @@
   },
   "95660": {
    "code_insee": "95660",
-   "nom": "Villaines-Sous-Bois",
+   "nom": "Villaines-sous-Bois",
    "code_circonscription": null,
    "bureaux_de_vote": 1,
    "inscrits": 549,
@@ -16983,16 +17015,16 @@
      "pct_inscrits": 1.46
     },
     {
-     "nom": "OUBAIROUK",
-     "prenom": "Brahim",
+     "nom": "IVANAJ",
+     "prenom": "Alvin",
      "nuance": "DIV",
      "voix": 6,
      "pct_exprimes": 1.57,
      "pct_inscrits": 1.09
     },
     {
-     "nom": "IVANAJ",
-     "prenom": "Alvin",
+     "nom": "OUBAIROUK",
+     "prenom": "Brahim",
      "nuance": "DIV",
      "voix": 6,
      "pct_exprimes": 1.57,
@@ -17101,16 +17133,16 @@
      "pct_inscrits": 0.0
     },
     {
-     "nom": "WASSA",
-     "prenom": "Nsimba",
+     "nom": "NAJIB",
+     "prenom": "Mohamed",
      "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "NAJIB",
-     "prenom": "Mohamed",
+     "nom": "WASSA",
+     "prenom": "Nsimba",
      "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
@@ -17128,7 +17160,7 @@
   },
   "95676": {
    "code_insee": "95676",
-   "nom": "Villers-En-Arthies",
+   "nom": "Villers-en-Arthies",
    "code_circonscription": null,
    "bureaux_de_vote": 1,
    "inscrits": 396,
@@ -17195,17 +17227,17 @@
      "pct_inscrits": 0.0
     },
     {
-     "nom": "LAH",
-     "prenom": "Sami",
-     "nuance": "DIV",
+     "nom": "SOUSSI",
+     "prenom": "Ethel",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "SOUSSI",
-     "prenom": "Ethel",
-     "nuance": "EXG",
+     "nom": "LAH",
+     "prenom": "Sami",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -17265,17 +17297,17 @@
      "pct_inscrits": 5.37
     },
     {
-     "nom": "CASSAN",
-     "prenom": "Éric",
-     "nuance": "EXG",
+     "nom": "OUBAIROUK",
+     "prenom": "Brahim",
+     "nuance": "DIV",
      "voix": 5,
      "pct_exprimes": 1.05,
      "pct_inscrits": 0.81
     },
     {
-     "nom": "OUBAIROUK",
-     "prenom": "Brahim",
-     "nuance": "DIV",
+     "nom": "CASSAN",
+     "prenom": "Éric",
+     "nuance": "EXG",
      "voix": 5,
      "pct_exprimes": 1.05,
      "pct_inscrits": 0.81
@@ -17297,17 +17329,17 @@
      "pct_inscrits": 0.49
     },
     {
-     "nom": "GAULTIER",
-     "prenom": "Stephane",
-     "nuance": "EXG",
+     "nom": "LESSAINT",
+     "prenom": "Danièle",
+     "nuance": "DSV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "LESSAINT",
-     "prenom": "Danièle",
-     "nuance": "DSV",
+     "nom": "GAULTIER",
+     "prenom": "Stephane",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
@@ -17324,7 +17356,7 @@
   },
   "95680": {
    "code_insee": "95680",
-   "nom": "Villiers-Le-Bel",
+   "nom": "Villiers-le-Bel",
    "code_circonscription": null,
    "bureaux_de_vote": 15,
    "inscrits": 13193,
@@ -17410,7 +17442,7 @@
   },
   "95682": {
    "code_insee": "95682",
-   "nom": "Villiers-Le-Sec",
+   "nom": "Villiers-le-Sec",
    "code_circonscription": null,
    "bureaux_de_vote": 1,
    "inscrits": 113,
@@ -17504,7 +17536,7 @@
   },
   "95690": {
    "code_insee": "95690",
-   "nom": "Wy-Dit-Joli-Village",
+   "nom": "Wy-dit-Joli-Village",
    "code_circonscription": null,
    "bureaux_de_vote": 1,
    "inscrits": 288,
@@ -17547,17 +17579,17 @@
      "pct_inscrits": 5.56
     },
     {
-     "nom": "LESSAINT",
-     "prenom": "Lionel",
-     "nuance": "DSV",
+     "nom": "DE GARILS",
+     "prenom": "Laure",
+     "nuance": "REC",
      "voix": 2,
      "pct_exprimes": 0.9,
      "pct_inscrits": 0.69
     },
     {
-     "nom": "DE GARILS",
-     "prenom": "Laure",
-     "nuance": "REC",
+     "nom": "LESSAINT",
+     "prenom": "Lionel",
+     "nuance": "DSV",
      "voix": 2,
      "pct_exprimes": 0.9,
      "pct_inscrits": 0.69
@@ -17571,17 +17603,17 @@
      "pct_inscrits": 0.69
     },
     {
-     "nom": "LAH",
-     "prenom": "Sami",
-     "nuance": "DIV",
+     "nom": "SOUSSI",
+     "prenom": "Ethel",
+     "nuance": "EXG",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0
     },
     {
-     "nom": "SOUSSI",
-     "prenom": "Ethel",
-     "nuance": "EXG",
+     "nom": "LAH",
+     "prenom": "Sami",
+     "nuance": "DIV",
      "voix": 0,
      "pct_exprimes": 0.0,
      "pct_inscrits": 0.0

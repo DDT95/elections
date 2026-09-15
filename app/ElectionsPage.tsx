@@ -61,8 +61,10 @@ export default function ElectionsPage() {
   const [communesGeo, setCommunesGeo] = useState<any>(null);
   const [circoGeo, setCircoGeo] = useState<any>(null);
   const [bvGeo, setBvGeo] = useState<any>(null);
+  const [cantonGeo, setCantonGeo] = useState<any>(null);
   const [electionData, setElectionData] = useState<Record<string, ElectionCommuneFile>>({});
   const [circoData, setCircoData] = useState<Record<string, ElectionCircoFile>>({});
+  const [cantonData, setCantonData] = useState<Record<string, any>>({});
   const [bvData, setBvData] = useState<Record<string, any>>({});
   const [inseeStatus, setInseeStatus] = useState<"a_completer" | "reel">("a_completer");
 
@@ -76,6 +78,7 @@ export default function ElectionsPage() {
   const tour = election.tours.find((t) => t.id === tourId) ?? election.tours[0];
   const dataKey = tour.file;
   const current = electionData[dataKey];
+  const tourStatus: "reel" | "a_completer" = current?.status ?? election.status;
 
   // ---- Chargement des données statiques ----
   useEffect(() => {
@@ -84,12 +87,14 @@ export default function ElectionsPage() {
       fetchJson<any>("/data/geo/communes-95.geojson"),
       fetchJson<any>("/data/geo/circonscriptions-95.geojson"),
       fetchJson<any>("/data/geo/bureaux-vote-95.geojson").catch(() => null),
+      fetchJson<any>("/data/geo/cantons-95.geojson").catch(() => null),
       fetchJson<any>("/data/insee/insee-95-communes.json").catch(() => ({ status: "a_completer" })),
     ])
-      .then(([communes, circo, bv, insee]) => {
+      .then(([communes, circo, bv, canton, insee]) => {
         setCommunesGeo(communes);
         setCircoGeo(circo);
         setBvGeo(bv);
+        setCantonGeo(canton);
         setInseeStatus(insee.status || "a_completer");
       })
       .finally(() => setLoading(false));
@@ -108,6 +113,14 @@ export default function ElectionsPage() {
     fetchJson<ElectionCircoFile>(`/data/elections/${dataKey}-circo.json`)
       .then((d) => setCircoData((prev) => ({ ...prev, [circoKey]: d })))
       .catch(() => {});
+  }, [dataKey, election.status]);
+
+  useEffect(() => {
+    const cantonKey = `${dataKey}-canton`;
+    if (cantonData[cantonKey] !== undefined || election.status !== "reel") return;
+    fetchJson<any>(`/data/elections/${dataKey}-canton.json`)
+      .then((d) => setCantonData((prev) => ({ ...prev, [cantonKey]: d })))
+      .catch(() => setCantonData((prev) => ({ ...prev, [cantonKey]: null })));
   }, [dataKey, election.status]);
 
   useEffect(() => {
@@ -243,7 +256,32 @@ export default function ElectionsPage() {
       map.removeLayer(layerRef.current);
       layerRef.current = null;
     }
-    if (scale === "canton") return; // pas de contours pour cette échelle dans cette version
+    if (scale === "canton") {
+      const cantons = cantonData[`${dataKey}-canton`]?.cantons;
+      if (!cantonGeo || !cantons) return;
+      const layer = L.geoJSON(cantonGeo, {
+        style: (feature: any) => {
+          const code = feature.properties.code_canton;
+          const u = cantons[code];
+          const info = u ? metricInfo(u) : null;
+          return { color: "#fff", weight: 1.6, fillColor: info?.color ?? "#e9edf3", fillOpacity: info ? 0.82 : 0.35 };
+        },
+        onEachFeature: (feature: any, lyr: any) => {
+          const code = feature.properties.code_canton;
+          const u = cantons[code];
+          const name = feature.properties.nom;
+          lyr.bindTooltip(u ? `<b>Canton de ${name}</b><br/>${metricInfo(u).label}` : `Canton de ${name}<br/>Pas de résultat`, {
+            sticky: true,
+            className: "elec-tooltip",
+          });
+          lyr.on("click", () => setSelectedCode(code));
+          lyr.on("mouseover", () => lyr.setStyle({ weight: 2.6, color: "#000091" }));
+          lyr.on("mouseout", () => lyr.setStyle({ weight: 1.6, color: "#fff" }));
+        },
+      }).addTo(map);
+      layerRef.current = layer;
+      return;
+    }
     if (scale === "bv") {
       const bvBureaux = bvData[`${dataKey}-bv`]?.bureaux;
       if (!bvGeo || !bvBureaux) return;
@@ -292,7 +330,7 @@ export default function ElectionsPage() {
       },
     }).addTo(map);
     layerRef.current = layer;
-  }, [scale, communesGeo, circoGeo, bvGeo, bvData, current, circoData, dataKey, metric, scoreCandidat]);
+  }, [scale, communesGeo, circoGeo, bvGeo, bvData, cantonGeo, cantonData, current, circoData, dataKey, metric, scoreCandidat]);
 
   const selectedUnit: UnitResult | null = useMemo(() => {
     if (!selectedCode) return null;
@@ -301,8 +339,9 @@ export default function ElectionsPage() {
       const b = bvData[`${dataKey}-bv`]?.bureaux?.[selectedCode];
       return b ? normalizeBureau(b) : null;
     }
+    if (scale === "canton") return cantonData[`${dataKey}-canton`]?.cantons?.[selectedCode] ?? null;
     return current?.communes[selectedCode] ?? null;
-  }, [selectedCode, scale, current, circoData, bvData, dataKey]);
+  }, [selectedCode, scale, current, circoData, bvData, cantonData, dataKey]);
 
   const drawerOpen = !!selectedUnit;
 
@@ -317,21 +356,29 @@ export default function ElectionsPage() {
   }
 
   // ---- Export GeoJSON ----
+  function layerGeoOf(): any {
+    if (scale === "circonscription") return circoGeo;
+    if (scale === "bv") return bvGeo;
+    if (scale === "canton") return cantonGeo;
+    return communesGeo;
+  }
+  function layerDatasetOf(): Record<string, UnitResult> | undefined {
+    if (scale === "circonscription") return circoData[`${dataKey}-circo`]?.circonscriptions;
+    if (scale === "bv") return bvData[`${dataKey}-bv`]?.bureaux;
+    if (scale === "canton") return cantonData[`${dataKey}-canton`]?.cantons;
+    return current?.communes;
+  }
   function layerGeoAndCodeOf(f: any): string {
     if (scale === "circonscription") return f.properties.code_circonscription;
     if (scale === "bv") return f.properties.codeBureauVote;
+    if (scale === "canton") return f.properties.code_canton;
     return f.properties.code;
   }
 
   function exportLayerGeoJSON() {
-    const geo = scale === "circonscription" ? circoGeo : scale === "bv" ? bvGeo : communesGeo;
+    const geo = layerGeoOf();
     if (!geo) return;
-    const dataset =
-      scale === "circonscription"
-        ? circoData[`${dataKey}-circo`]?.circonscriptions
-        : scale === "bv"
-          ? bvData[`${dataKey}-bv`]?.bureaux
-          : current?.communes;
+    const dataset = layerDatasetOf();
     const enriched = {
       ...geo,
       features: geo.features.map((f: any) => {
@@ -345,7 +392,7 @@ export default function ElectionsPage() {
 
   function exportFeatureGeoJSON() {
     if (!selectedUnit) return;
-    const geo = scale === "circonscription" ? circoGeo : scale === "bv" ? bvGeo : communesGeo;
+    const geo = layerGeoOf();
     const feature = geo?.features.find((f: any) => layerGeoAndCodeOf(f) === selectedCode);
     if (!feature) return;
     downloadBlob(`${selectedUnit.nom}-${dataKey}.geojson`, JSON.stringify({ type: "Feature", ...feature, properties: { ...feature.properties, resultats: selectedUnit } }), "application/geo+json");
@@ -426,8 +473,9 @@ export default function ElectionsPage() {
             </p>
           )}
           {scale === "canton" && (
-            <p className="elec-scale-note warn">
-              Échelle canton : structure prête, contours et résultats à compléter (référentiel cantonal non intégré dans cette version).
+            <p className="elec-scale-note">
+              Échelle canton : 21 cantons réels (redécoupage 2015, contours dissous à partir des bureaux de vote — Argenteuil et Cergy
+              correctement scindés sur plusieurs cantons). Résultats réels disponibles pour les Départementales 2021 (2nd tour).
             </p>
           )}
 
@@ -463,13 +511,13 @@ export default function ElectionsPage() {
               </option>
             ))}
           </select>
-          {election.status === "a_completer" && (
+          {tourStatus === "a_completer" && (
             <p className="elec-scale-note warn">
-              Données à compléter pour ce scrutin : la structure est prête mais aucun résultat réel n'est chargé (voir DATA.md).
+              Données à compléter pour ce tour : la structure est prête mais aucun résultat réel n'est chargé (voir DATA.md).
             </p>
           )}
 
-          {election.status === "reel" && scale !== "canton" && (
+          {tourStatus === "reel" && (
             <>
               <div className="elec-sidebar-block-title">Indicateur cartographié</div>
               <div className="elec-pillgroup cols-1">
@@ -557,7 +605,7 @@ export default function ElectionsPage() {
 
         <section className="elec-map-shell">
           <div ref={mapNode} className="elec-map" aria-label="Carte électorale du Val-d'Oise" />
-          {scale === "canton" && (
+          {scale === "canton" && election.status === "reel" && !cantonData[`${dataKey}-canton`] && (
             <div
               style={{
                 position: "absolute",
@@ -570,7 +618,7 @@ export default function ElectionsPage() {
               }}
             >
               <div style={{ maxWidth: 360, padding: 18, background: "#070047f0", color: "#fff", borderRadius: 14, fontSize: 12, textAlign: "center" }}>
-                Échelle canton : contours et résultats à compléter.
+                Résultats par canton non disponibles pour ce scrutin (voir DATA.md).
               </div>
             </div>
           )}
