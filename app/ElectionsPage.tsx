@@ -485,9 +485,23 @@ export default function ElectionsPage() {
       return result ? [{ key: itemTour.file, election: item.shortLabel, tour: itemTour.label, date: file.date, result }] : [];
     })).sort((a, b) => a.date.localeCompare(b.date));
   }, [allElectionData, scale, selectedCode]);
+  const scaleSnapshots = useMemo<ElectionSnapshot[]>(() => {
+    if (!selectedCode) return [];
+    return ELECTIONS.flatMap(item => item.tours.flatMap(itemTour => {
+      const file=allElectionData[itemTour.file];
+      if (!file) return [];
+      if (scale === "commune") { const result=file.communes[selectedCode]; return result?[{key:itemTour.file,election:item.shortLabel,tour:itemTour.label,date:file.date,result}]:[]; }
+      if (scale !== "canton" && scale !== "circonscription") return [];
+      const field=scale === "canton" ? "code_canton" : "code_circonscription";
+      const communes=Object.fromEntries(Object.entries(file.communes).filter(([,unit])=>String((unit as any)[field]??"").padStart(2,"0")===selectedCode.padStart(2,"0")));
+      if (!Object.keys(communes).length) return [];
+      const result=aggregateDepartment({...file,communes}); result.nom=selectedUnit?.nom??selectedCode;
+      return [{key:itemTour.file,election:item.shortLabel,tour:itemTour.label,date:file.date,result}];
+    })).sort((a,b)=>a.date.localeCompare(b.date));
+  }, [allElectionData, scale, selectedCode, selectedUnit?.nom]);
   const departmentSnapshots = useMemo<ElectionSnapshot[]>(() => ELECTIONS.flatMap(item => item.tours.flatMap(itemTour => { const file=allElectionData[itemTour.file]; return file?[{key:itemTour.file,election:item.shortLabel,tour:itemTour.label,date:file.date,result:aggregateDepartment(file)}]:[]; })).sort((a,b)=>a.date.localeCompare(b.date)), [allElectionData]);
   const departmentSocio = useMemo<SocioProfile | null>(() => { const values=Object.values(socioData); const population=values.reduce((s,v)=>s+v.population,0); if(!population)return null; return {population,jeunes:values.reduce((s,v)=>s+v.jeunes*v.population,0)/population,seniors:values.reduce((s,v)=>s+v.seniors*v.population,0)/population,diplomesSup:values.reduce((s,v)=>s+v.diplomesSup*v.population,0)/population}; }, [socioData]);
-  const averageCommuneParticipation = communeSnapshots.length ? communeSnapshots.reduce((sum,snapshot)=>sum+snapshot.result.pct_participation,0)/communeSnapshots.length : 0;
+  const averageCommuneParticipation = scaleSnapshots.length ? scaleSnapshots.reduce((sum,snapshot)=>sum+snapshot.result.pct_participation,0)/scaleSnapshots.length : 0;
   function resetSelection() {
     setSelectedCode(null);
   }
@@ -553,7 +567,7 @@ export default function ElectionsPage() {
         scale: SCALES.find((item) => item.id === scale)?.label ?? scale,
         coverage: 1,
         source: electionSources,
-        snapshots: communeSnapshots,
+        snapshots: scaleSnapshots,
         currentKey: dataKey,
         socio: selectedSocio,
         populationHistory: selectedCode ? populationData[selectedCode] ?? [] : [],
@@ -720,7 +734,7 @@ export default function ElectionsPage() {
                   <div className="participation-gauge"><span style={{width:`${selectedUnit.pct_participation}%`}}/><b>{selectedUnit.pct_participation.toFixed(1)} %</b></div>
                   <div className="participation-analysis">
                     <div><span>Participation du scrutin</span><strong>{selectedUnit.pct_participation.toFixed(1)} %</strong><small className={selectedUnit.pct_participation>=averageCommuneParticipation?"up":"down"}>{selectedUnit.pct_participation>=averageCommuneParticipation?"+":""}{(selectedUnit.pct_participation-averageCommuneParticipation).toFixed(1)} pts par rapport à la moyenne</small></div>
-                    <div><span>Participation moyenne</span><strong>{averageCommuneParticipation.toFixed(1)} %</strong><small>sur {communeSnapshots.length} tours disponibles</small></div>
+                    <div><span>Participation moyenne</span><strong>{averageCommuneParticipation.toFixed(1)} %</strong><small>sur {scaleSnapshots.length} tours disponibles</small></div>
                     <div><span>Abstention du scrutin</span><strong>{selectedUnit.pct_abstention.toFixed(1)} %</strong><small>{selectedUnit.abstentions.toLocaleString("fr-FR")} abstentionnistes</small></div>
                     <div><span>Abstention moyenne</span><strong>{(100-averageCommuneParticipation).toFixed(1)} %</strong><small>sur la même période</small></div>
                   </div>
