@@ -10,6 +10,23 @@ import electionSources from "../config/election-sources.json";
 const basePath = (import.meta as any).env?.BASE_URL?.replace(/\/$/, "") || "";
 
 type SourceEntry = { id: string; label: string; producer: string; url: string; frequency: string };
+type SocioProfile = { population: number; jeunes: number; seniors: number; diplomesSup: number };
+
+function aggregateSocio(data: any): Record<string, SocioProfile> {
+  const totals: Record<string, Record<string, number>> = {};
+  Object.entries(data?.bureaux ?? {}).forEach(([bureau, raw]) => {
+    const code = bureau.slice(0, 5);
+    const values = raw as Record<string, number>;
+    const target = totals[code] ?? (totals[code] = {});
+    Object.entries(values).forEach(([key, value]) => { target[key] = (target[key] ?? 0) + (Number(value) || 0); });
+  });
+  return Object.fromEntries(Object.entries(totals).map(([code, value]) => [code, {
+    population: value.P_POP ?? 0,
+    jeunes: value.P_POP ? ((value.P_POP1524 ?? 0) * 100) / value.P_POP : 0,
+    seniors: value.P_POP ? (((value.P_POP6579 ?? 0) + (value.P_POP80P ?? 0)) * 100) / value.P_POP : 0,
+    diplomesSup: value.P_NSCOL15P ? (((value.P_NSCOL15P_SUP2 ?? 0) + (value.P_NSCOL15P_SUP34 ?? 0) + (value.P_NSCOL15P_SUP5 ?? 0)) * 100) / value.P_NSCOL15P : 0,
+  }]));
+}
 
 async function fetchJson<T>(path: string): Promise<T> {
   const res = await fetch(`${basePath}${path}`);
@@ -74,8 +91,8 @@ export default function ElectionsPage() {
   const [circoData, setCircoData] = useState<Record<string, ElectionCircoFile>>({});
   const [cantonData, setCantonData] = useState<Record<string, any>>({});
   const [bvData, setBvData] = useState<Record<string, any>>({});
-  const [inseeStatus, setInseeStatus] = useState<"a_completer" | "reel">("a_completer");
   const [populationData, setPopulationData] = useState<Record<string, { annee: number; population: number }[]>>({});
+  const [socioData, setSocioData] = useState<Record<string, SocioProfile>>({});
 
   const [selectedCode, setSelectedCode] = useState<string | null>(null);
   const [hoveredUnit, setHoveredUnit] = useState<{ name: string; result: UnitResult | null } | null>(null);
@@ -99,7 +116,7 @@ export default function ElectionsPage() {
       fetchJson<any>("/data/geo/bureaux-vote-95.geojson").catch(() => null),
       fetchJson<any>("/data/geo/cantons-95.geojson").catch(() => null),
       fetchJson<any>("/data/geo/masque-95.geojson").catch(() => null),
-      fetchJson<any>("/data/insee/insee-95-communes.json").catch(() => ({ status: "a_completer" })),
+      fetchJson<any>("/data/insee/context-95.json").catch(() => null),
       fetchJson<any>("/data/insee/population-historique-95.json").catch(() => null),
     ])
       .then(([communes, circo, bv, canton, mask, insee, population]) => {
@@ -108,7 +125,7 @@ export default function ElectionsPage() {
         setBvGeo(bv);
         setCantonGeo(canton);
         setMaskGeo(mask);
-        setInseeStatus(insee.status || "a_completer");
+        setSocioData(aggregateSocio(insee));
         setPopulationData(population?.communes || {});
       })
       .finally(() => setLoading(false));
@@ -191,6 +208,19 @@ export default function ElectionsPage() {
       setScoreCandidat(candidateList[0][0]);
     }
   }, [candidateList]);
+
+  const metricRange = useMemo<[number, number]>(() => {
+    if (!current || metric === "tete") return [0, 100];
+    const values = Object.values(current.communes).map((unit) => {
+      if (metric === "abstention") return unit.pct_abstention;
+      if (metric === "participation") return unit.pct_participation;
+      const [nom, prenom] = scoreCandidat.split("|");
+      return unit.candidats.find((candidate) => candidate.nom === nom && candidate.prenom === prenom)?.pct_exprimes ?? 0;
+    }).filter(Number.isFinite);
+    const min = Math.floor(Math.min(...values));
+    const max = Math.ceil(Math.max(...values));
+    return min === max ? [min - 1, max + 1] : [min, max];
+  }, [current, metric, scoreCandidat]);
 
   // ---- Initialisation Leaflet ----
   useEffect(() => {
@@ -275,12 +305,12 @@ export default function ElectionsPage() {
       const [nom, prenom] = scoreCandidat.split("|");
       const cd = u.candidats.find((c) => c.nom === nom && c.prenom === prenom);
       if (!cd) return { value: null, color: "#e6e9ef", label: "—" };
-      return { value: cd.pct_exprimes, color: sequentialColor(cd.pct_exprimes, 0, 50), label: `${cd.pct_exprimes.toFixed(1)} %` };
+      return { value: cd.pct_exprimes, color: sequentialColor(cd.pct_exprimes, metricRange[0], metricRange[1]), label: `${cd.pct_exprimes.toFixed(1)} %` };
     }
     if (metric === "abstention") {
-      return { value: u.pct_abstention, color: sequentialColor(u.pct_abstention, 10, 45), label: `${u.pct_abstention.toFixed(1)} %` };
+      return { value: u.pct_abstention, color: sequentialColor(u.pct_abstention, metricRange[0], metricRange[1]), label: `${u.pct_abstention.toFixed(1)} %` };
     }
-    return { value: u.pct_participation, color: sequentialColor(u.pct_participation, 55, 90), label: `${u.pct_participation.toFixed(1)} %` };
+    return { value: u.pct_participation, color: sequentialColor(u.pct_participation, metricRange[0], metricRange[1]), label: `${u.pct_participation.toFixed(1)} %` };
   }
 
   // ---- Rendu de la couche choroplèthe ----
@@ -425,6 +455,7 @@ export default function ElectionsPage() {
   }, [selectedCode, scale, current, circoData, bvData, cantonData, dataKey]);
 
   const drawerOpen = !!selectedUnit;
+  const selectedSocio = scale === "commune" && selectedCode ? socioData[selectedCode] : null;
   const portraitUnit = hoveredUnit?.result ?? selectedUnit ?? (scale === "commune" ? current?.communes["95127"] : null);
   const portraitName = hoveredUnit?.name ?? selectedUnit?.nom ?? (scale === "commune" ? current?.communes["95127"]?.nom : null);
   const portraitCode = hoveredUnit ? "Survol" : selectedCode ?? (scale === "commune" ? "95127" : "");
@@ -595,7 +626,7 @@ export default function ElectionsPage() {
           </select>
           {tourStatus === "a_completer" && (
             <p className="elec-scale-note warn">
-              Données à compléter pour ce tour : la structure est prête mais aucun résultat réel n'est chargé (voir DATA.md).
+              Les résultats officiels ne sont pas disponibles pour ce tour.
             </p>
           )}
 
@@ -623,18 +654,8 @@ export default function ElectionsPage() {
                   ))}
                 </select>
               )}
-              <Legend metric={metric} scoreCandidat={scoreCandidat} current={current} />
+              <Legend metric={metric} scoreCandidat={scoreCandidat} current={current} bounds={metricRange} />
             </>
-          )}
-
-          <div className="elec-sidebar-block-title">Croisement sociodémographique</div>
-          {inseeStatus === "a_completer" ? (
-            <p className="elec-scale-note warn">
-              Données INSEE (âge, CSP) à compléter — voir DATA.md pour le détail. La structure de croisement est prête et s'activera
-              automatiquement dès l'intégration des fichiers INSEE RP.
-            </p>
-          ) : (
-            <p className="elec-scale-note">Croisement disponible.</p>
           )}
 
           <div className="elec-sidebar-block-title">Couches et export</div>
@@ -724,7 +745,7 @@ export default function ElectionsPage() {
               }}
             >
               <div style={{ maxWidth: 360, padding: 18, background: "#070047f0", color: "#fff", borderRadius: 14, fontSize: 12, textAlign: "center" }}>
-                Résultats par canton non disponibles pour ce scrutin (voir DATA.md).
+                Résultats par canton non disponibles pour ce scrutin.
               </div>
             </div>
           )}
@@ -741,7 +762,7 @@ export default function ElectionsPage() {
               }}
             >
               <div style={{ maxWidth: 360, padding: 18, background: "#070047f0", color: "#fff", borderRadius: 14, fontSize: 12, textAlign: "center" }}>
-                Résultats par bureau de vote non disponibles pour ce scrutin (voir DATA.md).
+                Résultats par bureau de vote non disponibles pour ce scrutin.
               </div>
             </div>
           )}
@@ -778,7 +799,7 @@ export default function ElectionsPage() {
                   {selectedUnit.candidats.length ? (
                     <CandidateTable candidats={selectedUnit.candidats} />
                   ) : (
-                    <p className="elec-empty">Détail par liste/candidat non chargé pour ce scrutin (participation réelle disponible ci-dessus). Voir DATA.md.</p>
+                    <p className="elec-empty">Le détail par liste ou candidat n’est pas disponible pour ce scrutin.</p>
                   )}
                 </Section>
                 {scale === "commune" && (
@@ -790,21 +811,22 @@ export default function ElectionsPage() {
                       <PopulationSparkline data={populationData[selectedCode]} />
                     ) : (
                       <p className="elec-empty">
-                        Population historique non disponible pour cette commune dans le jeu de données INSEE (voir DATA.md).
+                        Population historique non disponible pour cette commune.
                       </p>
                     )}
                   </Section>
                 )}
-                <Section title="Croisement sociodémographique" state={inseeStatus === "a_completer" ? "À compléter" : "Disponible"}>
-                  {inseeStatus === "a_completer" ? (
-                    <p className="elec-empty">
-                      Le croisement âge / catégorie socioprofessionnelle nécessite l'intégration des fichiers INSEE RP au niveau
-                      communal (voir DATA.md pour le plan d'intégration).
-                    </p>
-                  ) : (
-                    <p className="elec-empty">Aucune donnée.</p>
-                  )}
-                </Section>
+                {scale === "commune" && selectedSocio && (
+                  <Section title="Profil sociodémographique" state="INSEE RP 2022">
+                    <div className="elec-kpis socio-kpis">
+                      <Kpi label="Population estimée" value={Math.round(selectedSocio.population).toLocaleString("fr-FR")} />
+                      <Kpi label="15 à 24 ans" value={`${selectedSocio.jeunes.toFixed(1)} %`} />
+                      <Kpi label="65 ans ou plus" value={`${selectedSocio.seniors.toFixed(1)} %`} />
+                      <Kpi label="Diplôme supérieur" value={`${selectedSocio.diplomesSup.toFixed(1)} %`} />
+                    </div>
+                    <p className="elec-context-note">Estimation territoriale issue du recensement INSEE 2022. Les habitants ne sont pas assimilés aux électeurs et aucun lien causal avec le vote n’est déduit.</p>
+                  </Section>
+                )}
                 <div className="elec-actions elec-actions-bottom">
                   <button onClick={printUnit}>Imprimer la fiche</button>
                   <a href="#" onClick={(e) => { e.preventDefault(); exportFeatureGeoJSON(); }}>
@@ -859,7 +881,7 @@ export default function ElectionsPage() {
   );
 }
 
-function Legend({ metric, scoreCandidat, current }: { metric: MetricId; scoreCandidat: string; current?: ElectionCommuneFile }) {
+function Legend({ metric, scoreCandidat, current, bounds }: { metric: MetricId; scoreCandidat: string; current?: ElectionCommuneFile; bounds: [number, number] }) {
   if (metric === "tete") {
     // Une entrée par tête de liste/candidat en tête d'au moins une unité, mais regroupée
     // visuellement par couleur (donc par nuance quand elle est connue) pour rester lisible
@@ -885,7 +907,6 @@ function Legend({ metric, scoreCandidat, current }: { metric: MetricId; scoreCan
       </div>
     );
   }
-  const bounds = metric === "abstention" ? [10, 45] : metric === "participation" ? [55, 90] : [0, 50];
   return (
     <div className="elec-legend">
       <p className="elec-legend-title">Légende — {metric === "score_candidat" ? scoreCandidat.split("|")[0] : metric}</p>
@@ -969,7 +990,6 @@ function PopulationSparkline({ data }: { data: { annee: number; population: numb
 // sobre (pas de logo de parti, jamais utilisé — voir DATA.md) tout en donnant une lecture
 // plus immédiate qu'un tableau pour un scrutin à de nombreuses listes (municipales).
 function CandidateTable({ candidats }: { candidats: UnitResult["candidats"] }) {
-  const max = Math.max(...candidats.map((c) => c.pct_exprimes), 1);
   return (
     <div className="elec-cand-list">
       {candidats.map((c, i) => {
@@ -991,7 +1011,7 @@ function CandidateTable({ candidats }: { candidats: UnitResult["candidats"] }) {
               </span>
             </div>
             <div className="elec-cand-bar-track">
-              <div className="elec-cand-bar-fill" style={{ width: `${(c.pct_exprimes / max) * 100}%`, background: color }} />
+              <div className="elec-cand-bar-fill" style={{ width: `${Math.max(0, Math.min(100, c.pct_exprimes))}%`, background: color }} />
             </div>
             <div className="elec-cand-card-foot">
               <span>{info.label}</span>

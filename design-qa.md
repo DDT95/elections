@@ -31,6 +31,9 @@ The implementation follows the source composition: State identity header, rounde
 - P1: segmented controls differed from the Atlas charter. Fixed by implementing switch rows with labels and descriptions.
 - P1: the map offered only a small tooltip. Fixed with three persistent portrait cards driven by the hovered territory.
 - P2: print and export appeared before the content. Fixed by moving both actions below the detailed results.
+- P1: candidate bars were normalized against the leading candidate, making 32.83% appear as a full bar. Fixed with an absolute 0–100% scale.
+- P1: fixed percentage bounds flattened some elections into a single dark color. Fixed with data-driven bounds and continuous color interpolation.
+- P1: the INSEE section exposed an internal completion message. Fixed by aggregating the available INSEE RP 2022 bureau context into commune profiles and rendering the indicators directly.
 - Post-fix evidence: the final in-app Browser capture shows the Atlas switch pattern, three-card portrait and unobstructed bottom actions.
 
 ## Remaining findings
