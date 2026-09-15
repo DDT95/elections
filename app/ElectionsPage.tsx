@@ -1016,11 +1016,18 @@ function buildDepartmentScenarios(communeData: Record<string, UnitResult>, datas
   const baseline=politicalScores(euro,"sensitivity"),avg=euro.pct_participation;
   const simulate=(factorFor:(code:string,u:UnitResult)=>number)=>{const votes:Record<string,number>={};let total=0;Object.entries(communeData).forEach(([code,u])=>{const factor=factorFor(code,u);total+=u.exprimes*factor;u.candidats.forEach(c=>{const group=politicalGroup(c.nuance,`${c.prenom??""} ${c.nom??""}`).sensitivity;votes[group]=(votes[group]??0)+c.voix*factor})});return Object.fromEntries(sensitivities.map(x=>[x.id,total?(votes[x.id]??0)*100/total:0]))};
   const refs=["pres-2017-t1","pres-2022-t1","europeennes-2024"];
-  const youth=Object.values(socioByCommune).map(x=>x.jeunes).sort((a,b)=>a-b),threshold=youth[Math.floor(youth.length*.75)]??100;
+  const lowRefs=["pres-2017-t1","pres-2022-t1","europeennes-2024","municipales-2020-t1"];
+  const percentile75=(values:number[])=>{const sorted=values.slice().sort((a,b)=>a-b);return sorted[Math.floor(sorted.length*.75)]??100};
+  const youthThreshold=percentile75(Object.values(socioByCommune).map(x=>x.jeunes));
+  const seniorsThreshold=percentile75(Object.values(socioByCommune).map(x=>x.seniors));
+  const diplomaThreshold=percentile75(Object.values(socioByCommune).map(x=>x.diplomesSup));
   const raw=[
     {label:"Participation habituelle",explanation:"Chaque commune retrouve sa participation moyenne observée aux présidentielles 2017 et 2022 et aux européennes 2024.",data:simulate((code,u)=>{const values=refs.map(k=>datasets[k]?.communes[code]?.pct_participation).filter((v):v is number=>Number.isFinite(v)),target=values.length?values.reduce((a,b)=>a+b,0)/values.length:avg;return u.pct_participation?target/u.pct_participation:1})},
     {label:"Participation haute",explanation:"Chaque commune retrouve son niveau de participation de la présidentielle 2017, le plus élevé de la série.",data:simulate((code,u)=>{const target=datasets["pres-2017-t1"]?.communes[code]?.pct_participation??u.pct_participation;return u.pct_participation?target/u.pct_participation:1})},
-    {label:"Territoires jeunes davantage mobilisés",explanation:`Le poids des communes comptant au moins ${threshold.toFixed(1)} % de 15–24 ans augmente de 10 %.`,data:simulate(code=>socioByCommune[code]?.jeunes>=threshold?1.1:1)},
+    {label:"Participation basse (abstention record)",explanation:"Chaque commune retombe à son niveau de participation le plus bas observé dans la série (présidentielles 2017/2022, européennes 2024, municipales 2020 — abstention record de la période Covid).",data:simulate((code,u)=>{const values=lowRefs.map(k=>datasets[k]?.communes[code]?.pct_participation).filter((v):v is number=>Number.isFinite(v)),target=values.length?Math.min(...values):u.pct_participation;return u.pct_participation?target/u.pct_participation:1})},
+    {label:"Territoires jeunes davantage mobilisés",explanation:`Le poids des communes comptant au moins ${youthThreshold.toFixed(1)} % de 15–24 ans augmente de 10 %.`,data:simulate(code=>socioByCommune[code]?.jeunes>=youthThreshold?1.1:1)},
+    {label:"Seniors davantage mobilisés",explanation:`Le poids des communes comptant au moins ${seniorsThreshold.toFixed(1)} % de 65 ans et plus augmente de 10 % — les seniors votent historiquement bien plus que la moyenne.`,data:simulate(code=>socioByCommune[code]?.seniors>=seniorsThreshold?1.1:1)},
+    {label:"Territoires diplômés davantage mobilisés",explanation:`Le poids des communes comptant au moins ${diplomaThreshold.toFixed(1)} % de diplômés du supérieur augmente de 10 % — le diplôme est, avec l'âge, l'un des prédicteurs les plus robustes de la participation.`,data:simulate(code=>socioByCommune[code]?.diplomesSup>=diplomaThreshold?1.1:1)},
     {label:"Rattrapage de l’abstention",explanation:`Les communes sous la moyenne départementale remontent à ${avg.toFixed(1)} % de participation.`,data:simulate((_code,u)=>u.pct_participation&&u.pct_participation<avg?avg/u.pct_participation:1)}
   ];
   return raw.map(sc=>{
