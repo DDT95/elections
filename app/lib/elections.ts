@@ -5,6 +5,10 @@ import type { ElectionDef } from "./types";
 // public/data/elections/. Les scrutins marqués "a_completer" ont leur
 // structure de données prête mais aucun résultat réel encore chargé.
 export const ELECTIONS: ElectionDef[] = [
+  { id: "pres-2017", label: "Présidentielle 2017", shortLabel: "Présidentielle 2017", status: "reel", tours: [
+    {id:"t1",label:"1er tour (23 avril 2017)",file:"pres-2017-t1"},
+    {id:"t2",label:"2nd tour (7 mai 2017)",file:"pres-2017-t2"}
+  ] },
   {
     id: "municipales-2026",
     label: "Municipales 2026",
@@ -12,7 +16,7 @@ export const ELECTIONS: ElectionDef[] = [
     status: "reel",
     tours: [
       { id: "t1", label: "1er tour (15 mars 2026)", file: "municipales-2026-t1" },
-      { id: "t2", label: "2nd tour (23 mars 2026)", file: "municipales-2026-t2" },
+      { id: "t2", label: "2nd tour (22 mars 2026)", file: "municipales-2026-t2" },
     ],
   },
   {

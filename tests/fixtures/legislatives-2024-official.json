@@ -1,0 +1,241 @@
+{
+  "1": {
+    "01": {
+      "inscrits": 84016,
+      "votants": 57474,
+      "exprimes": 55941,
+      "candidats": {
+        "DE GARILS|Laure": 574,
+        "JULES-ARTHUR|Maximillien": 17230,
+        "LESSAINT|Lionel": 755,
+        "SOUSSI|Ethel": 0,
+        "RICHARD|Michel": 3468,
+        "SICARD|Anne": 18823,
+        "GÉHAN|Barbara": 826,
+        "CHANDLER|Émilie": 14244,
+        "LAH|Sami": 21
+      }
+    },
+    "02": {
+      "inscrits": 78781,
+      "votants": 52689,
+      "exprimes": 51453,
+      "candidats": {
+        "IVANAJ|Alvin": 621,
+        "REMY|Nadejda": 15544,
+        "LESSAINT|Danièle": 6,
+        "OUBAIROUK|Brahim": 818,
+        "GAULTIER|Stephane": 0,
+        "HADIZADEH|Ayda": 17221,
+        "CASSAN|Éric": 456,
+        "PAIN|Frédéric": 3214,
+        "CHANZY|Philippe": 529,
+        "VUILLETET|Guillaume": 13044
+      }
+    },
+    "03": {
+      "inscrits": 96306,
+      "votants": 65131,
+      "exprimes": 63827,
+      "candidats": {
+        "SIMONNOT|Alexandre": 837,
+        "LELAIDIER|Kimberley": 17608,
+        "BLASER|Daniel": 7,
+        "MAUREL|Emmanuel": 22742,
+        "MUNOZ|Juan": 468,
+        "RILHAC|Cécile": 15013,
+        "GUÉBIN|Laetitia": 1046,
+        "VINCENT|Laetitia": 4816,
+        "BELMOKHTAR|Samira": 0,
+        "HERBAL|Samira": 1290
+      }
+    },
+    "04": {
+      "inscrits": 76262,
+      "votants": 51482,
+      "exprimes": 50492,
+      "candidats": {
+        "MEURANT|Sébastien": 13238,
+        "LACOUTURE|Karine": 17498,
+        "MARTIN|Antonin": 0,
+        "BERTHAULT|Grégory": 2132,
+        "RODSPHON|Inthone": 3003,
+        "MOUTCHOU|Naïma": 14084,
+        "DURAND|Robin": 52,
+        "L'HOMMEDET|Marie-Françoise": 485
+      }
+    },
+    "05": {
+      "inscrits": 70843,
+      "votants": 42576,
+      "exprimes": 41616,
+      "candidats": {
+        "HOARAU|Quentin": 7784,
+        "LILIYAJE|Fatima": 5389,
+        "POIAGHI|Jean-Baptiste": 189,
+        "BALEUR|Thès": 251,
+        "VANNIER|Paul": 23308,
+        "LESUEUR|Dominique": 555,
+        "PHAM|Gilbert": 412,
+        "MARIETTE|Dominique": 558,
+        "MEZIANE|Boualem": 3170
+      }
+    },
+    "06": {
+      "inscrits": 75753,
+      "votants": 50321,
+      "exprimes": 49435,
+      "candidats": {
+        "FOLEST|Estelle": 12745,
+        "ELÉLOUÉ-VALMAR|Loïc": 1049,
+        "GUILBAUD|Audrey": 3737,
+        "CATHALA|Gabrielle": 18603,
+        "REINMANN|Agnès": 370,
+        "CELESTIN|Christophe": 427,
+        "DAGEVILLE|Marine": 0,
+        "LASMARRIGUES|Jean Bernard": 683,
+        "BRUNA|Annika": 10911,
+        "MIKAEL|Emmanuel": 910
+      }
+    },
+    "07": {
+      "inscrits": 68539,
+      "votants": 45277,
+      "exprimes": 44271,
+      "candidats": {
+        "SUAREZ|Valérie": 578,
+        "CHASTAING|Marie-Christine": 3,
+        "VIEVILLE|Virginie": 696,
+        "ESKENAZI|Romain": 16797,
+        "UZAN|Linda": 0,
+        "YALCIN|Jean-Pierre": 3891,
+        "DA SILVA|Dominique": 10241,
+        "GAVOIS|Aurélien": 0,
+        "ARNAL|Didier": 0,
+        "QUENTIN|David": 12065
+      }
+    },
+    "08": {
+      "inscrits": 55766,
+      "votants": 31193,
+      "exprimes": 29838,
+      "candidats": {
+        "KHERFI|Malika": 451,
+        "FOUCHEREAU|Thierry": 5840,
+        "ANGREVIER|Patrick": 1961,
+        "ZINAOUI|Ramzi": 3293,
+        "BILONGO|Carlos Martens": 17386,
+        "TONDU|Jean-Baptiste": 0,
+        "GAJDOS|Rémi": 404,
+        "VARELA|Luisa": 503
+      }
+    },
+    "09": {
+      "inscrits": 71614,
+      "votants": 43168,
+      "exprimes": 42126,
+      "candidats": {
+        "RONCHINI|Vanessa": 0,
+        "SAID|David": 381,
+        "NAJIB|Mohamed": 0,
+        "DEMIR|Elisa": 6149,
+        "HANRYON|Danièle": 621,
+        "ARCIERO|Anthony": 4789,
+        "MARION|Agnès": 12872,
+        "WASSA|Nsimba": 157,
+        "LE GALL|Arnaud": 17157
+      }
+    },
+    "10": {
+      "inscrits": 66773,
+      "votants": 43585,
+      "exprimes": 42442,
+      "candidats": {
+        "FLAUX|Christophe": 489,
+        "ÉTORÉ-MANIKA|Edwina": 4249,
+        "TACHÉ|Aurélien": 18306,
+        "SAINT-JEAN|Albert": 1107,
+        "MACÉ|Lisbeth": 9667,
+        "KRIMI|Sonia": 8129,
+        "CAILLOT|Jean": 7,
+        "DE LA FAYE|Souade": 488
+      }
+    }
+  },
+  "2": {
+    "01": {
+      "inscrits": 84034,
+      "votants": 57719,
+      "exprimes": 56053,
+      "candidats": {
+        "JULES-ARTHUR|Maximillien": 20534,
+        "SICARD|Anne": 21025,
+        "CHANDLER|Émilie": 14494
+      }
+    },
+    "02": {
+      "inscrits": 78796,
+      "votants": 51986,
+      "exprimes": 47623,
+      "candidats": {
+        "REMY|Nadejda": 19281,
+        "HADIZADEH|Ayda": 28342
+      }
+    },
+    "03": {
+      "inscrits": 96317,
+      "votants": 63885,
+      "exprimes": 58349,
+      "candidats": {
+        "LELAIDIER|Kimberley": 21860,
+        "MAUREL|Emmanuel": 36489
+      }
+    },
+    "04": {
+      "inscrits": 76259,
+      "votants": 48508,
+      "exprimes": 44848,
+      "candidats": {
+        "LACOUTURE|Karine": 20008,
+        "MOUTCHOU|Naïma": 24840
+      }
+    },
+    "06": {
+      "inscrits": 75779,
+      "votants": 49825,
+      "exprimes": 48864,
+      "candidats": {
+        "FOLEST|Estelle": 16149,
+        "CATHALA|Gabrielle": 21326,
+        "BRUNA|Annika": 11389
+      }
+    },
+    "07": {
+      "inscrits": 68578,
+      "votants": 44078,
+      "exprimes": 40801,
+      "candidats": {
+        "ESKENAZI|Romain": 24713,
+        "QUENTIN|David": 16088
+      }
+    },
+    "09": {
+      "inscrits": 71644,
+      "votants": 42982,
+      "exprimes": 39682,
+      "candidats": {
+        "MARION|Agnès": 15764,
+        "LE GALL|Arnaud": 23918
+      }
+    },
+    "10": {
+      "inscrits": 66806,
+      "votants": 42750,
+      "exprimes": 38568,
+      "candidats": {
+        "TACHÉ|Aurélien": 26852,
+        "MACÉ|Lisbeth": 11716
+      }
+    }
+  }
+}

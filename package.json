@@ -8,19 +8,21 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build:github": "vite build --config vite.github.config.ts"
+    "build:github": "vite build --config vite.github.config.ts",
+    "test": "node --experimental-strip-types --test tests/*.test.mjs"
   },
   "dependencies": {
-    "jspdf": "^4.2.1",
+    "leaflet": "^1.9.4",
     "react": "19.2.6",
     "react-dom": "19.2.6"
   },
   "devDependencies": {
+    "@types/leaflet": "^1.9.20",
     "@types/node": "^26.5.1",
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
     "@vitejs/plugin-react": "6.0.2",
     "typescript": "5.9.3",
-    "vite": "8.0.13"
+    "vite": "^8.3.0"
   }
 }

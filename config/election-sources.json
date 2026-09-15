@@ -1,11 +1,65 @@
 [
-  {"id":"communes","label":"Contours des communes (95)","producer":"IGN / Etalab (france-geojson)","url":"https://github.com/gregoiredavid/france-geojson","frequency":"ponctuelle"},
-  {"id":"pres2022","label":"Résultats Présidentielle 2022 (T1/T2)","producer":"Ministère de l'Intérieur / data.gouv.fr (agrégation Etalab)","url":"https://www.data.gouv.fr/datasets/donnees-des-elections-agregees","frequency":"définitive"},
-  {"id":"legi2024","label":"Résultats Législatives 2024 (à intégrer)","producer":"Ministère de l'Intérieur / data.gouv.fr","url":"https://www.data.gouv.fr/datasets/elections-legislatives-des-30-juin-et-7-juillet-2024-resultats-definitifs-du-2nd-tour","frequency":"définitive"},
-  {"id":"euro2024","label":"Résultats Européennes 2024 (à intégrer)","producer":"Ministère de l'Intérieur / data.gouv.fr","url":"https://www.data.gouv.fr/","frequency":"définitive"},
-  {"id":"muni2020","label":"Résultats Municipales 2020 (à intégrer)","producer":"Ministère de l'Intérieur / data.gouv.fr","url":"https://www.data.gouv.fr/","frequency":"définitive"},
-  {"id":"circonscriptions","label":"Circonscriptions législatives (dissolution des communes)","producer":"Reconstitué à partir des codes circonscription réels du Ministère de l'Intérieur","url":"https://www.data.gouv.fr/datasets/donnees-des-elections-agregees","frequency":"ponctuelle"},
-  {"id":"bv","label":"Bureaux de vote — résultats (sans contour géographique)","producer":"Ministère de l'Intérieur / data.gouv.fr (agrégation Etalab)","url":"https://www.data.gouv.fr/datasets/donnees-des-elections-agregees","frequency":"définitive"},
-  {"id":"insee","label":"Profil sociodémographique (âge, CSP) — à compléter","producer":"INSEE (recensement de la population)","url":"https://www.insee.fr/fr/statistiques","frequency":"annuelle"},
-  {"id":"ddt95-open-data","label":"Données DDT 95","producer":"DDT du Val-d'Oise","url":"https://www.data.gouv.fr/api/1/organizations/direction-departementale-des-territoires-du-val-doise/","frequency":"hebdomadaire"}
+  {
+    "id": "resultats",
+    "label": "Résultats électoraux — ministère de l’Intérieur",
+    "producer": "Ministère de l’Intérieur (exports définitifs et DGRC)",
+    "url": "https://www.archives-resultats-elections.interieur.gouv.fr/",
+    "frequency": "À chaque scrutin"
+  },
+  {
+    "id": "pres2022",
+    "label": "Présidentielle 2022 T1 — export officiel complet",
+    "producer": "Ministère de l’Intérieur",
+    "url": "https://www.data.gouv.fr/datasets/election-presidentielle-des-10-et-24-avril-2022-resultats-definitifs-du-1er-tour",
+    "frequency": "Définitifs"
+  },
+  {
+    "id": "pres2017",
+    "label": "Présidentielle 2017 — bureaux de vote",
+    "producer": "Ministère de l’Intérieur",
+    "url": "https://www.data.gouv.fr/datasets/election-presidentielle-des-23-avril-et-7-mai-2017-resultats-definitifs-du-1er-tour-par-bureaux-de-vote",
+    "frequency": "Définitifs"
+  },
+  {
+    "id": "context",
+    "label": "Contexte sociodémographique estimé — RP 2022",
+    "producer": "Projet André ; interpolation à partir des IRIS INSEE — Licence Ouverte 2.0",
+    "url": "https://www.data.gouv.fr/datasets/profil-sociodemographique-des-bureaux-de-vote-france-metropolitaine-insee-rp-2022-filosofi-2021",
+    "frequency": "Millésime RP 2022"
+  },
+  {
+    "id": "geo",
+    "label": "Contours communaux et masque départemental",
+    "producer": "france-geojson ; union géométrique pour le masque et Commeny",
+    "url": "https://github.com/gregoiredavid/france-geojson",
+    "frequency": "Référentiel historique, fusion Commeny appliquée en 2024"
+  },
+  {
+    "id": "bureaux",
+    "label": "Contours des bureaux — reconstructions",
+    "producer": "Export fourni lors de la construction ; contours reconstitués, non opposables",
+    "url": "https://www.data.gouv.fr/datasets/proposition-de-contours-des-bureaux-de-vote",
+    "frequency": "810 contours dans la couche disponible"
+  },
+  {
+    "id": "population",
+    "label": "Population municipale historique",
+    "producer": "INSEE, export fourni lors de la construction",
+    "url": "https://www.insee.fr/fr/statistiques",
+    "frequency": "2006–2023"
+  },
+  {
+    "id": "commeny",
+    "label": "Fusion Commeny / Gouzangrez",
+    "producer": "INSEE — Code officiel géographique",
+    "url": "https://www.insee.fr/fr/metadonnees/geographie/commune/95169-commeny",
+    "frequency": "1er janvier 2024"
+  },
+  {
+    "id": "avernes",
+    "label": "Fusion Avernes / Gadancourt",
+    "producer": "INSEE — Code officiel géographique",
+    "url": "https://www.insee.fr/fr/metadonnees/geographie/commune/95040-avernes",
+    "frequency": "1er janvier 2018"
+  }
 ]
