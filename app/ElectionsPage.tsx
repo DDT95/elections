@@ -516,6 +516,15 @@ export default function ElectionsPage() {
   }, [allElectionData, cantonData, circoData, communeEpci, scale, selectedCode]);
   const departmentSnapshots = useMemo<ElectionSnapshot[]>(() => ELECTIONS.flatMap(item => item.tours.flatMap(itemTour => { const file=allElectionData[itemTour.file]; return file?[{key:itemTour.file,election:item.shortLabel,tour:itemTour.label,date:file.date,result:aggregateDepartment(file)}]:[]; })).sort((a,b)=>a.date.localeCompare(b.date)), [allElectionData]);
   const departmentSocio = useMemo<SocioProfile | null>(() => { const values=Object.values(socioData); const population=values.reduce((s,v)=>s+v.population,0); if(!population)return null; return {population,jeunes:values.reduce((s,v)=>s+v.jeunes*v.population,0)/population,seniors:values.reduce((s,v)=>s+v.seniors*v.population,0)/population,diplomesSup:values.reduce((s,v)=>s+v.diplomesSup*v.population,0)/population}; }, [socioData]);
+  // Députés élus aux Législatives 2024 : 2nd tour par défaut, complété par le 1er tour pour les
+  // 2 circonscriptions où un·e candidat·e a obtenu la majorité absolue dès le 1er tour (pas de
+  // second tour organisé pour elles — données réelles des deux tours, jamais un candidat inventé).
+  const deputies = useMemo<Record<string, UnitResult> | null>(() => {
+    const t1 = circoData["legislatives-2024-t1-circo"]?.circonscriptions;
+    const t2 = circoData["legislatives-2024-t2-circo"]?.circonscriptions;
+    if (!t1 && !t2) return null;
+    return { ...(t1 ?? {}), ...(t2 ?? {}) };
+  }, [circoData]);
   const averageCommuneParticipation = scaleSnapshots.length ? scaleSnapshots.reduce((sum,snapshot)=>sum+snapshot.result.pct_participation,0)/scaleSnapshots.length : 0;
   const latestScaleSnapshot = scaleSnapshots.at(-1) ?? null;
   function resetSelection() {
@@ -797,7 +806,7 @@ export default function ElectionsPage() {
 
       <dialog ref={departmentDialog} className="elec-dept-dialog">
         <header><div><small>ANALYSE DÉPARTEMENTALE</small><h2>Val-d’Oise</h2><p>Résultats agrégés des 184 communes</p></div><div className="dept-dialog-actions"><button className="dept-pdf" onClick={printDepartment}>Ouvrir la fiche PDF</button><button className="dept-dialog-close" onClick={() => departmentDialog.current?.close()} aria-label="Fermer">×</button></div></header>
-        <div className="dept-dialog-body"><DepartmentAnalysis snapshots={departmentSnapshots} currentKey={dataKey} socio={departmentSocio} communeData={allElectionData["europeennes-2024"]?.communes ?? {}} datasets={allElectionData} socioByCommune={socioData} /></div>
+        <div className="dept-dialog-body"><DepartmentAnalysis snapshots={departmentSnapshots} currentKey={dataKey} socio={departmentSocio} communeData={allElectionData["europeennes-2024"]?.communes ?? {}} datasets={allElectionData} socioByCommune={socioData} deputies={deputies} councillors={cantonData["departementales-2021-t2-canton"]?.cantons ?? null} /></div>
       </dialog>
 
       <dialog ref={sourceDialog} className="elec-source-dialog">
@@ -1007,13 +1016,61 @@ function buildDepartmentScenarios(communeData: Record<string, UnitResult>, datas
   return raw.map(sc=>{const effects=sensitivities.map(x=>({...x,value:sc.data[x.id]??0,delta:(sc.data[x.id]??0)-(baseline[x.id]??0)})),ordered=effects.slice().sort((a,b)=>Math.abs(b.delta)-Math.abs(a.delta)),main=ordered[0];return{label:sc.label,explanation:sc.explanation,effects,conclusion:Math.abs(main.delta)<.05?"Rapport de forces quasiment inchangé.":`${main.label} est la sensibilité la plus affectée (${main.delta>=0?"+":""}${main.delta.toFixed(1)} point).`}});
 }
 
-function DepartmentAnalysis({ snapshots, currentKey, socio, communeData, datasets, socioByCommune }: { snapshots: ElectionSnapshot[]; currentKey:string; socio: SocioProfile | null; communeData: Record<string, UnitResult>; datasets: Record<string,ElectionCommuneFile>; socioByCommune: Record<string, SocioProfile> }) {
+// Sénateurs du Val-d'Oise élus en septembre 2023 (série renouvelée, mandat jusqu'en 2029) —
+// aucune donnée d'élection sénatoriale dans ce projet (scrutin indirect par grands électeurs,
+// hors périmètre des sources data.gouv.fr utilisées ailleurs) : liste et groupe politique
+// vérifiés individuellement sur les fiches officielles senat.fr de chaque sénateur.
+const SENATORS: { nom: string; prenom: string; nuance: string }[] = [
+  { nom: "BAZIN", prenom: "Arnaud", nuance: "LR" },
+  { nom: "EUSTACHE-BRINIO", prenom: "Jacqueline", nuance: "LR" },
+  { nom: "FARGEOT", prenom: "Daniel", nuance: "UC" },
+  { nom: "TEMAL", prenom: "Rachid", nuance: "SOC" },
+  { nom: "BARROS", prenom: "Pierre", nuance: "COM" },
+];
+
+function ElectedList({ items }: { items: { nom: string; prenom?: string | null; nuance: string | null; subtitle?: string }[] }) {
+  return (
+    <div className="elec-cand-list">
+      {items.map((item, i) => {
+        const color = colorForCandidate(item.nom, item.nuance);
+        const info = nuanceInfo(item.nuance);
+        return (
+          <div key={i} className="elec-cand-card" style={{ borderLeftColor: color }}>
+            <div className="elec-cand-card-head">
+              <span className="elec-cand-name">{item.prenom ? `${item.prenom} ${item.nom}` : item.nom}</span>
+              <span className="elec-nuance-pill" style={{ background: color }} title={info.label}>{item.nuance || "—"}</span>
+            </div>
+            {item.subtitle && <div className="elec-cand-card-foot"><span>{item.subtitle}</span></div>}
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+function DepartmentAnalysis({ snapshots, currentKey, socio, communeData, datasets, socioByCommune, deputies, councillors }: { snapshots: ElectionSnapshot[]; currentKey:string; socio: SocioProfile | null; communeData: Record<string, UnitResult>; datasets: Record<string,ElectionCommuneFile>; socioByCommune: Record<string, SocioProfile>; deputies: Record<string, UnitResult> | null; councillors: Record<string, UnitResult> | null }) {
   const current=snapshots.at(-1);if(!current)return <p className="elec-empty">Chargement de l’analyse départementale…</p>;
   const avg=snapshots.length?snapshots.reduce((sum,x)=>sum+x.result.pct_participation,0)/snapshots.length:0;
   const scenarios=buildDepartmentScenarios(communeData,datasets,socioByCommune);
   return <>
     {socio&&<Section title="Profil sociodémographique" state="INSEE RP 2022"><div className="socio-profile"><div className="socio-pop"><span>Population</span><strong>{Math.round(socio.population).toLocaleString("fr-FR")}</strong><small>habitants</small></div><div className="socio-bars">{[{label:"15 à 24 ans",value:socio.jeunes,color:"#00a7b5"},{label:"65 ans ou plus",value:socio.seniors,color:"#a558a0"},{label:"Diplôme supérieur",value:socio.diplomesSup,color:"#18753c"}].map(item=><div key={item.label}><span><b>{item.label}</b><strong>{item.value.toFixed(1)} %</strong></span><i><em style={{width:`${item.value}%`,background:item.color}}/></i></div>)}</div></div></Section>}
     <Section title="Participation" state={`Moyenne sur ${snapshots.length} tours`}><div className="participation-gauge"><span style={{width:`${avg}%`}}/><b>{avg.toFixed(1)} %</b></div><div className="participation-analysis"><div><span>Participation moyenne</span><strong>{avg.toFixed(1)} %</strong><small>sur {snapshots.length} tours disponibles</small></div><div><span>Abstention moyenne</span><strong>{(100-avg).toFixed(1)} %</strong><small>sur la même période</small></div><div><span>Participation au dernier scrutin</span><strong>{current.result.pct_participation.toFixed(1)} %</strong><small>{current.election} · {current.tour}</small></div><div><span>Abstention au dernier scrutin</span><strong>{current.result.pct_abstention.toFixed(1)} %</strong></div></div></Section>
+    <Section title="Députés élus" state={deputies ? `${Object.keys(deputies).length} circonscriptions` : "Indisponible"}>
+      <p className="elec-synthesis-intro">Élu·e·s aux législatives 2024, par circonscription (2nd tour, ou 1er tour pour les 2 circonscriptions décidées dès celui-ci).</p>
+      {deputies ? (
+        <ElectedList items={Object.values(deputies).filter(c=>c.tete).map(c=>({ nom: c.tete!.nom ?? "—", prenom: c.tete!.prenom, nuance: c.tete!.nuance, subtitle: c.nom }))} />
+      ) : <p className="elec-empty">Chargement…</p>}
+    </Section>
+    <Section title="Sénateurs" state={`${SENATORS.length} sièges`}>
+      <p className="elec-synthesis-intro">Élus en septembre 2023 (mandat jusqu'en 2029). Source : fiches officielles senat.fr.</p>
+      <ElectedList items={SENATORS} />
+    </Section>
+    <Section title="Conseil départemental" state={councillors ? `${Object.keys(councillors).length} cantons` : "Indisponible"}>
+      <p className="elec-synthesis-intro">Binômes élus au 2nd tour des départementales 2021, par canton (2 conseiller·ère·s par canton).</p>
+      {councillors ? (
+        <ElectedList items={Object.values(councillors).filter(c=>c.tete).map(c=>({ nom: c.tete!.nom ?? "—", prenom: null, nuance: c.tete!.nuance, subtitle: c.nom }))} />
+      ) : <p className="elec-empty">Chargement…</p>}
+    </Section>
     {/* Pas de section "résultats" candidat par candidat ici : sommer les résultats municipaux
         de 184 communes ne produit aucun candidat réel à l'échelle du département (les
         municipales se jouent commune par commune). Une analyse départementale montre des

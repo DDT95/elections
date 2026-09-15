@@ -14,6 +14,21 @@ Sept scrutins sont disponibles : présidentielles 2017 et 2022, départementales
 - **Municipales 2020 T1** : certains bulletins permettent plusieurs suffrages (ancien régime des petites communes). Une somme des voix supérieure aux exprimés n’est pas interprétée comme un résultat de liste ; le statut `multi_vote` désactive la carte par candidat.
 - **Municipales 2020 T2** : 8 bureaux ont une somme des voix différente des exprimés dans la source héritée. Ils sont signalés `partial` ; leur participation reste utilisable, mais aucun candidat en tête n’est déduit. Un export officiel complet reste à intégrer pour ce tour.
 
+## Bilan départemental — parlementaires et conseil départemental
+
+Ajouté sur demande de la préfecture dans l'« Analyse départementale » (web et PDF) :
+
+- **Députés élus** : dérivés des résultats réels déjà présents (`legislatives-2024-t2-circo.json`, complété par `legislatives-2024-t1-circo.json` pour les 5e et 8e circonscriptions, décidées dès le premier tour — voir ci-dessus). Aucune donnée nouvelle, simple lecture du candidat en tête par circonscription.
+- **Conseil départemental** : dérivé des résultats réels des départementales 2021 T2 par canton (`departementales-2021-t2-canton.json`), binôme en tête par canton (21 cantons × 2 = 42 sièges).
+- **Sénateurs** : aucune élection sénatoriale dans les jeux de données de ce projet (scrutin indirect par grands électeurs, hors périmètre des sources data.gouv.fr utilisées ailleurs pour les autres scrutins). Liste des 5 sénateurs du Val-d'Oise (élus en septembre 2023, mandat jusqu'en 2029) saisie manuellement dans `app/ElectionsPage.tsx` (constante `SENATORS`), chaque nom et groupe politique vérifié individuellement sur sa fiche officielle senat.fr :
+  - [Arnaud Bazin (LR)](https://www.senat.fr/senateur/bazin_arnaud19667j.html)
+  - [Jacqueline Eustache-Brinio (LR)](https://www.senat.fr/senateur/eustache_brinio_jacqueline19673g.html)
+  - [Daniel Fargeot (Union centriste)](https://www.senat.fr/senateur/fargeot_daniel21086n.html)
+  - [Rachid Temal (Socialiste)](https://www.senat.fr/senateur/temal_rachid19669l.html)
+  - [Pierre Barros (Communiste républicain citoyen et écologiste - Kanaky)](https://www.senat.fr/senateur/barros_pierre21084l.html)
+
+  À vérifier/mettre à jour manuellement en cas de démission, décès ou nouvelle élection sénatoriale (prochain renouvellement de la série du Val-d'Oise : 2029) — cette liste n'est pas rafraîchie automatiquement.
+
 ## Agrégations
 
 Les effectifs sont additionnés puis les taux recalculés. Aucune moyenne simple de pourcentages n’est utilisée. Une commune, un canton ou une circonscription regroupant plusieurs scrutins locaux porte `mixed_contests` : l’interface masque le classement commun et la coloration par candidat. Les résultats de participation restent lisibles. La mention « complet » correspond au contrôle arithmétique, pas à une certification de la géométrie.
