@@ -95,7 +95,7 @@ export default function ElectionsPage() {
   const [scale, setScale] = useState<Scale>("commune");
   const [electionId, setElectionId] = useState("pres-2022");
   const [tourId, setTourId] = useState("t2");
-  const [metric, setMetric] = useState<DisplayMetric>("tete");
+  const [metric, setMetric] = useState<DisplayMetric>("none");
   const [scoreCandidat, setScoreCandidat] = useState<string>("");
 
   const [communesGeo, setCommunesGeo] = useState<any>(null);
@@ -512,6 +512,7 @@ export default function ElectionsPage() {
   const departmentSnapshots = useMemo<ElectionSnapshot[]>(() => ELECTIONS.flatMap(item => item.tours.flatMap(itemTour => { const file=allElectionData[itemTour.file]; return file?[{key:itemTour.file,election:item.shortLabel,tour:itemTour.label,date:file.date,result:aggregateDepartment(file)}]:[]; })).sort((a,b)=>a.date.localeCompare(b.date)), [allElectionData]);
   const departmentSocio = useMemo<SocioProfile | null>(() => { const values=Object.values(socioData); const population=values.reduce((s,v)=>s+v.population,0); if(!population)return null; return {population,jeunes:values.reduce((s,v)=>s+v.jeunes*v.population,0)/population,seniors:values.reduce((s,v)=>s+v.seniors*v.population,0)/population,diplomesSup:values.reduce((s,v)=>s+v.diplomesSup*v.population,0)/population}; }, [socioData]);
   const averageCommuneParticipation = scaleSnapshots.length ? scaleSnapshots.reduce((sum,snapshot)=>sum+snapshot.result.pct_participation,0)/scaleSnapshots.length : 0;
+  const latestScaleSnapshot = scaleSnapshots.at(-1) ?? null;
   function resetSelection() {
     setSelectedCode(null);
   }
@@ -744,13 +745,17 @@ export default function ElectionsPage() {
                     <p className="elec-context-note"><strong>Source :</strong> INSEE, recensement de la population 2022.</p>
                   </Section>
                 )}
-                <Section title="Participation" state={election.shortLabel}>
-                  <div className="participation-gauge"><span style={{width:`${selectedUnit.pct_participation}%`}}/><b>{selectedUnit.pct_participation.toFixed(1)} %</b></div>
+                <Section title="Participation" state={`Moyenne sur ${scaleSnapshots.length} tours`}>
+                  <div className="participation-gauge"><span style={{width:`${averageCommuneParticipation}%`}}/><b>{averageCommuneParticipation.toFixed(1)} %</b></div>
                   <div className="participation-analysis">
-                    <div><span>Participation du scrutin</span><strong>{selectedUnit.pct_participation.toFixed(1)} %</strong><small className={selectedUnit.pct_participation>=averageCommuneParticipation?"up":"down"}>{selectedUnit.pct_participation>=averageCommuneParticipation?"+":""}{(selectedUnit.pct_participation-averageCommuneParticipation).toFixed(1)} pts par rapport à la moyenne</small></div>
                     <div><span>Participation moyenne</span><strong>{averageCommuneParticipation.toFixed(1)} %</strong><small>sur {scaleSnapshots.length} tours disponibles</small></div>
-                    <div><span>Abstention du scrutin</span><strong>{selectedUnit.pct_abstention.toFixed(1)} %</strong><small>{selectedUnit.abstentions.toLocaleString("fr-FR")} abstentionnistes</small></div>
                     <div><span>Abstention moyenne</span><strong>{(100-averageCommuneParticipation).toFixed(1)} %</strong><small>sur la même période</small></div>
+                    {latestScaleSnapshot && (
+                      <>
+                        <div><span>Participation au dernier scrutin</span><strong>{latestScaleSnapshot.result.pct_participation.toFixed(1)} %</strong><small className={latestScaleSnapshot.result.pct_participation>=averageCommuneParticipation?"up":"down"}>{latestScaleSnapshot.result.pct_participation>=averageCommuneParticipation?"+":""}{(latestScaleSnapshot.result.pct_participation-averageCommuneParticipation).toFixed(1)} pts par rapport à la moyenne · {latestScaleSnapshot.election} · {latestScaleSnapshot.tour}</small></div>
+                        <div><span>Abstention au dernier scrutin</span><strong>{latestScaleSnapshot.result.pct_abstention.toFixed(1)} %</strong><small>{latestScaleSnapshot.result.abstentions.toLocaleString("fr-FR")} abstentionnistes</small></div>
+                      </>
+                    )}
                   </div>
                 </Section>
                 {scale !== "bv" ? (
@@ -891,11 +896,16 @@ function PopulationSparkline({ data }: { data: { annee: number; population: numb
   const w = 260;
   const h = 56;
   const pad = 4;
+  // Marge verticale interne supplémentaire (en plus de `pad`) : sans elle, l'année dont la
+  // population est la plus basse retombe exactement sur le bord inférieur du graphique, ce qui
+  // se lit visuellement comme "population = 0" cette année-là — alors que l'échelle est
+  // volontairement resserrée (voir la note sous le graphique) et ne part jamais de zéro.
+  const vpad = 8;
   const min = Math.min(...data.map((d) => d.population));
   const max = Math.max(...data.map((d) => d.population));
   const range = max - min || 1;
   const x = (i: number) => pad + (i / (data.length - 1 || 1)) * (w - pad * 2);
-  const y = (v: number) => h - pad - ((v - min) / range) * (h - pad * 2);
+  const y = (v: number) => h - pad - vpad - ((v - min) / range) * (h - pad * 2 - vpad * 2);
   const points = data.map((d, i) => `${x(i)},${y(d.population)}`).join(" ");
   const first = data[0];
   const last = data[data.length - 1];
@@ -907,7 +917,6 @@ function PopulationSparkline({ data }: { data: { annee: number; population: numb
       <div className="elec-population-title"><strong>Population de la commune</strong><span>{first.annee}–{last.annee}</span></div>
       <div className="elec-population-chart">
         <svg width={w} height={h} viewBox={`0 0 ${w} ${h}`} role="img" aria-label={`Population de ${first.annee} à ${last.annee}`}>
-          <line x1={pad} y1={h-pad} x2={w-pad} y2={h-pad} stroke="#d8e0e8" strokeWidth="1" />
           <polyline points={points} fill="none" stroke="var(--blue, #000091)" strokeWidth={2.5} />
           {data.map((d, i) => <circle key={d.annee} cx={x(i)} cy={y(d.population)} r={i === 0 || i === data.length - 1 ? 3 : 1.5} fill="var(--blue, #000091)" />)}
         </svg>
@@ -989,12 +998,12 @@ function buildDepartmentScenarios(communeData: Record<string, UnitResult>, datas
 }
 
 function DepartmentAnalysis({ snapshots, currentKey, socio, communeData, datasets, socioByCommune }: { snapshots: ElectionSnapshot[]; currentKey:string; socio: SocioProfile | null; communeData: Record<string, UnitResult>; datasets: Record<string,ElectionCommuneFile>; socioByCommune: Record<string, SocioProfile> }) {
-  const current=snapshots.find(x=>x.key===currentKey)??snapshots.at(-1);if(!current)return <p className="elec-empty">Chargement de l’analyse départementale…</p>;
+  const current=snapshots.at(-1);if(!current)return <p className="elec-empty">Chargement de l’analyse départementale…</p>;
   const avg=snapshots.length?snapshots.reduce((sum,x)=>sum+x.result.pct_participation,0)/snapshots.length:0;
   const scenarios=buildDepartmentScenarios(communeData,datasets,socioByCommune);
   return <>
     {socio&&<Section title="Profil sociodémographique" state="INSEE RP 2022"><div className="socio-profile"><div className="socio-pop"><span>Population</span><strong>{Math.round(socio.population).toLocaleString("fr-FR")}</strong><small>habitants</small></div><div className="socio-bars">{[{label:"15 à 24 ans",value:socio.jeunes,color:"#00a7b5"},{label:"65 ans ou plus",value:socio.seniors,color:"#a558a0"},{label:"Diplôme supérieur",value:socio.diplomesSup,color:"#18753c"}].map(item=><div key={item.label}><span><b>{item.label}</b><strong>{item.value.toFixed(1)} %</strong></span><i><em style={{width:`${item.value}%`,background:item.color}}/></i></div>)}</div></div></Section>}
-    <Section title="Participation" state={current.election}><div className="participation-gauge"><span style={{width:`${current.result.pct_participation}%`}}/><b>{current.result.pct_participation.toFixed(1)} %</b></div><div className="participation-analysis"><div><span>Participation du scrutin</span><strong>{current.result.pct_participation.toFixed(1)} %</strong><small>{current.tour}</small></div><div><span>Participation moyenne</span><strong>{avg.toFixed(1)} %</strong><small>sur {snapshots.length} tours disponibles</small></div><div><span>Abstention du scrutin</span><strong>{current.result.pct_abstention.toFixed(1)} %</strong></div><div><span>Abstention moyenne</span><strong>{(100-avg).toFixed(1)} %</strong></div></div></Section>
+    <Section title="Participation" state={`Moyenne sur ${snapshots.length} tours`}><div className="participation-gauge"><span style={{width:`${avg}%`}}/><b>{avg.toFixed(1)} %</b></div><div className="participation-analysis"><div><span>Participation moyenne</span><strong>{avg.toFixed(1)} %</strong><small>sur {snapshots.length} tours disponibles</small></div><div><span>Abstention moyenne</span><strong>{(100-avg).toFixed(1)} %</strong><small>sur la même période</small></div><div><span>Participation au dernier scrutin</span><strong>{current.result.pct_participation.toFixed(1)} %</strong><small>{current.election} · {current.tour}</small></div><div><span>Abstention au dernier scrutin</span><strong>{current.result.pct_abstention.toFixed(1)} %</strong></div></div></Section>
     <CommuneSynthesis snapshots={snapshots} currentKey={currentKey} mode="results"/><CommuneSynthesis snapshots={snapshots} currentKey={currentKey} mode="families"/><CommuneSynthesis snapshots={snapshots} currentKey={currentKey} mode="sensitivities"/>
     <Section title="Scénarios de participation" state="Européennes 2024"><p className="elec-synthesis-intro">Chaque scénario modifie la mobilisation territoriale puis mesure l’effet sur les grandes sensibilités.</p><div className="scenario-cards">{scenarios.map(sc=><article key={sc.label}><header><strong>{sc.label}</strong><p>{sc.explanation}</p></header><div>{sc.effects.map(effect=><span key={effect.id}><b>{effect.label}</b><i><em style={{width:`${Math.min(100,Math.abs(effect.delta)*35)}%`,background:effect.color}}/></i><strong className={effect.delta>=0?"up":"down"}>{effect.delta>=0?"+":""}{effect.delta.toFixed(1)} pt</strong></span>)}</div><footer>{sc.conclusion}</footer></article>)}</div></Section>
   </>;
@@ -1028,11 +1037,12 @@ function CommuneSynthesis({ snapshots, currentKey, mode }: { snapshots: Election
   }
   // Le menu Élection/Tour ne pilote que la couleur de la carte principale (voir metric/scale
   // plus haut) : cette section reste indépendante de ce choix et montre TOUS les scrutins
-  // disponibles à cette échelle, dans l'ordre chronologique (snapshots est déjà trié par date),
-  // pour permettre une vraie comparaison dans le temps plutôt qu'un résultat isolé.
-  const grouped = snapshots.reduce<Record<string, ElectionSnapshot[]>>((acc, snapshot) => { (acc[snapshot.election] ??= []).push(snapshot); return acc; }, {});
+  // disponibles à cette échelle, du plus récent au plus ancien (snapshots est trié par date
+  // croissante, donc inversé ici), pour permettre une vraie comparaison dans le temps plutôt
+  // qu'un résultat isolé.
+  const grouped = snapshots.slice().reverse().reduce<Record<string, ElectionSnapshot[]>>((acc, snapshot) => { (acc[snapshot.election] ??= []).push(snapshot); return acc; }, {});
   return <Section title="Derniers résultats par scrutin" state={snapshots.length ? `${snapshots.length} tours` : "Indisponible"}>
-      <p className="elec-synthesis-intro">Les quatre premiers candidats de chaque scrutin, dans l'ordre chronologique, avec leur parti ou leur sensibilité politique.</p>
+      <p className="elec-synthesis-intro">Les quatre premiers candidats de chaque scrutin, du plus récent au plus ancien, avec leur parti ou leur sensibilité politique.</p>
       <div className="elec-all-elections">{Object.entries(grouped).map(([label, rounds]) => <article key={label} style={{"--election-color":electionAccent(rounds[0].key)} as CSSProperties}>
         <header><strong>{label}</strong><span>{rounds.length} tour{rounds.length > 1 ? "s" : ""}</span></header>
         {rounds.map(snapshot => <div className="election-round" key={snapshot.key}><div className="round-heading"><strong>{snapshot.tour}</strong><span>Participation <b>{snapshot.result.pct_participation.toFixed(1)} %</b></span></div><div>{snapshot.result.candidats.slice().sort((a,b) => b.pct_exprimes - a.pct_exprimes).slice(0,4).map((candidate, index) => {
