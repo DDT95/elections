@@ -95,7 +95,7 @@ export default function ElectionsPage() {
   const [scale, setScale] = useState<Scale>("commune");
   const [electionId, setElectionId] = useState("pres-2022");
   const [tourId, setTourId] = useState("t2");
-  const [metric, setMetric] = useState<DisplayMetric>("none");
+  const [metric, setMetric] = useState<DisplayMetric>("tete");
   const [scoreCandidat, setScoreCandidat] = useState<string>("");
 
   const [communesGeo, setCommunesGeo] = useState<any>(null);
