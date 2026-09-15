@@ -1,0 +1,1077 @@
+{
+ "election": "Municipales 2026",
+ "tour": 2,
+ "date": "2026-03-23",
+ "status": "reel",
+ "note": "Agrégation réelle par canton, calculée à partir des résultats réels par bureau de vote de ce scrutin et du référentiel bureau↔canton réel (Départementales 2021, export officiel DGRC). Aucune donnée de vote n'est inventée : simple somme au niveau bureau de vote, ce qui permet de restituer correctement les cantons partagés entre plusieurs communes (Argenteuil, Cergy).",
+ "cantons": {
+  "02": {
+   "bureaux_de_vote": 29,
+   "inscrits": 31413,
+   "abstentions": 16817,
+   "votants": 14596,
+   "blancs": 435,
+   "nuls": 204,
+   "exprimes": 13957,
+   "nom": "Argenteuil-2",
+   "candidats": [
+    {
+     "nom": "MOTHRON",
+     "prenom": "Georges",
+     "nuance": "LDVD",
+     "voix": 7504,
+     "pct_exprimes": 53.77,
+     "pct_inscrits": 23.89
+    },
+    {
+     "nom": "ZEGHLI",
+     "prenom": "Yassin",
+     "nuance": "LFI",
+     "voix": 6453,
+     "pct_exprimes": 46.23,
+     "pct_inscrits": 20.54
+    }
+   ],
+   "pct_abstention": 53.54,
+   "pct_participation": 46.46,
+   "tete": {
+    "nom": "MOTHRON",
+    "prenom": "Georges",
+    "nuance": "LDVD",
+    "pct_exprimes": 53.77
+   },
+   "nb_communes": 1,
+   "code_canton": "02"
+  },
+  "03": {
+   "bureaux_de_vote": 31,
+   "inscrits": 34269,
+   "abstentions": 19767,
+   "votants": 14502,
+   "blancs": 351,
+   "nuls": 147,
+   "exprimes": 14004,
+   "nom": "Argenteuil-3",
+   "candidats": [
+    {
+     "nom": "MOTHRON",
+     "prenom": "Georges",
+     "nuance": "LDVD",
+     "voix": 3619,
+     "pct_exprimes": 25.84,
+     "pct_inscrits": 10.56
+    },
+    {
+     "nom": "ZEGHLI",
+     "prenom": "Yassin",
+     "nuance": "LFI",
+     "voix": 3573,
+     "pct_exprimes": 25.51,
+     "pct_inscrits": 10.43
+    },
+    {
+     "nom": "MENHAOUARA",
+     "prenom": "Nessrine",
+     "nuance": "LSOC",
+     "voix": 3560,
+     "pct_exprimes": 25.42,
+     "pct_inscrits": 10.39
+    },
+    {
+     "nom": "NOEL",
+     "prenom": "Philippe",
+     "nuance": "LDVG",
+     "voix": 1821,
+     "pct_exprimes": 13.0,
+     "pct_inscrits": 5.31
+    },
+    {
+     "nom": "AOUCHICHE",
+     "prenom": "Nadia",
+     "nuance": "LFI",
+     "voix": 1431,
+     "pct_exprimes": 10.22,
+     "pct_inscrits": 4.18
+    }
+   ],
+   "pct_abstention": 57.68,
+   "pct_participation": 42.32,
+   "tete": {
+    "nom": "MOTHRON",
+    "prenom": "Georges",
+    "nuance": "LDVD",
+    "pct_exprimes": 25.84
+   },
+   "nb_communes": 2,
+   "code_canton": "03"
+  },
+  "01": {
+   "bureaux_de_vote": 24,
+   "inscrits": 25173,
+   "abstentions": 11479,
+   "votants": 13694,
+   "blancs": 196,
+   "nuls": 99,
+   "exprimes": 13399,
+   "nom": "Argenteuil-1",
+   "candidats": [
+    {
+     "nom": "PONCHEL",
+     "prenom": "Nicolas",
+     "nuance": "LDVD",
+     "voix": 3317,
+     "pct_exprimes": 24.76,
+     "pct_inscrits": 13.18
+    },
+    {
+     "nom": "MOTHRON",
+     "prenom": "Georges",
+     "nuance": "LDVD",
+     "voix": 2770,
+     "pct_exprimes": 20.67,
+     "pct_inscrits": 11.0
+    },
+    {
+     "nom": "JAMET",
+     "prenom": "Bernard",
+     "nuance": "LDVD",
+     "voix": 2426,
+     "pct_exprimes": 18.11,
+     "pct_inscrits": 9.64
+    },
+    {
+     "nom": "LASSOUED",
+     "prenom": "Samir",
+     "nuance": "LUG",
+     "voix": 2374,
+     "pct_exprimes": 17.72,
+     "pct_inscrits": 9.43
+    },
+    {
+     "nom": "JACQUET-LÉGER",
+     "prenom": "Célia",
+     "nuance": "LDIV",
+     "voix": 1271,
+     "pct_exprimes": 9.49,
+     "pct_inscrits": 5.05
+    },
+    {
+     "nom": "ZEGHLI",
+     "prenom": "Yassin",
+     "nuance": "LFI",
+     "voix": 1241,
+     "pct_exprimes": 9.26,
+     "pct_inscrits": 4.93
+    }
+   ],
+   "pct_abstention": 45.6,
+   "pct_participation": 54.4,
+   "tete": {
+    "nom": "PONCHEL",
+    "prenom": "Nicolas",
+    "nuance": "LDVD",
+    "pct_exprimes": 24.76
+   },
+   "nb_communes": 2,
+   "code_canton": "01"
+  },
+  "14": {
+   "bureaux_de_vote": 5,
+   "inscrits": 5968,
+   "abstentions": 2928,
+   "votants": 3040,
+   "blancs": 71,
+   "nuls": 43,
+   "exprimes": 2926,
+   "nom": "L'Isle-Adam",
+   "candidats": [
+    {
+     "nom": "APARICIO",
+     "prenom": "Jean-Michel",
+     "nuance": "LDVG",
+     "voix": 1756,
+     "pct_exprimes": 60.01,
+     "pct_inscrits": 29.42
+    },
+    {
+     "nom": "RENOU",
+     "prenom": "Xavier",
+     "nuance": "LDIV",
+     "voix": 1170,
+     "pct_exprimes": 39.99,
+     "pct_inscrits": 19.6
+    }
+   ],
+   "pct_abstention": 49.06,
+   "pct_participation": 50.94,
+   "tete": {
+    "nom": "APARICIO",
+    "prenom": "Jean-Michel",
+    "nuance": "LDVG",
+    "pct_exprimes": 60.01
+   },
+   "nb_communes": 1,
+   "code_canton": "14"
+  },
+  "19": {
+   "bureaux_de_vote": 6,
+   "inscrits": 5692,
+   "abstentions": 2484,
+   "votants": 3208,
+   "blancs": 30,
+   "nuls": 22,
+   "exprimes": 3156,
+   "nom": "Taverny",
+   "candidats": [
+    {
+     "nom": "DUGLÉ DANGUILHEN",
+     "prenom": "Laurianne",
+     "nuance": "LDIV",
+     "voix": 1902,
+     "pct_exprimes": 60.27,
+     "pct_inscrits": 33.42
+    },
+    {
+     "nom": "DERVEAUX",
+     "prenom": "Nathalie",
+     "nuance": "LDVG",
+     "voix": 1040,
+     "pct_exprimes": 32.95,
+     "pct_inscrits": 18.27
+    },
+    {
+     "nom": "DOMERGUE",
+     "prenom": "Elie",
+     "nuance": "LDVG",
+     "voix": 214,
+     "pct_exprimes": 6.78,
+     "pct_inscrits": 3.76
+    }
+   ],
+   "pct_abstention": 43.64,
+   "pct_participation": 56.36,
+   "tete": {
+    "nom": "DUGLÉ DANGUILHEN",
+    "prenom": "Laurianne",
+    "nuance": "LDIV",
+    "pct_exprimes": 60.27
+   },
+   "nb_communes": 1,
+   "code_canton": "19"
+  },
+  "17": {
+   "bureaux_de_vote": 2,
+   "inscrits": 1712,
+   "abstentions": 595,
+   "votants": 1117,
+   "blancs": 5,
+   "nuls": 2,
+   "exprimes": 1110,
+   "nom": "Saint-Ouen-l'Aumône",
+   "candidats": [
+    {
+     "nom": "NOËL",
+     "prenom": "Claude",
+     "nuance": null,
+     "voix": 417,
+     "pct_exprimes": 37.57,
+     "pct_inscrits": 24.36
+    },
+    {
+     "nom": "DESFOUX",
+     "prenom": "Daniel",
+     "nuance": null,
+     "voix": 385,
+     "pct_exprimes": 34.68,
+     "pct_inscrits": 22.49
+    },
+    {
+     "nom": "PORTET",
+     "prenom": "Frédéric",
+     "nuance": null,
+     "voix": 308,
+     "pct_exprimes": 27.75,
+     "pct_inscrits": 17.99
+    }
+   ],
+   "pct_abstention": 34.75,
+   "pct_participation": 65.25,
+   "tete": {
+    "nom": "NOËL",
+    "prenom": "Claude",
+    "nuance": null,
+    "pct_exprimes": 37.57
+   },
+   "nb_communes": 1,
+   "code_canton": "17"
+  },
+  "04": {
+   "bureaux_de_vote": 24,
+   "inscrits": 22582,
+   "abstentions": 12371,
+   "votants": 10211,
+   "blancs": 107,
+   "nuls": 70,
+   "exprimes": 10034,
+   "nom": "Cergy-1",
+   "candidats": [
+    {
+     "nom": "JEANDON",
+     "prenom": "Jean-Paul",
+     "nuance": "LUG",
+     "voix": 3724,
+     "pct_exprimes": 37.11,
+     "pct_inscrits": 16.49
+    },
+    {
+     "nom": "PAYET",
+     "prenom": "Armand",
+     "nuance": "LDVD",
+     "voix": 3460,
+     "pct_exprimes": 34.48,
+     "pct_inscrits": 15.32
+    },
+    {
+     "nom": "YAÏCH",
+     "prenom": "Daisy",
+     "nuance": "LFI",
+     "voix": 2850,
+     "pct_exprimes": 28.4,
+     "pct_inscrits": 12.62
+    }
+   ],
+   "pct_abstention": 54.78,
+   "pct_participation": 45.22,
+   "tete": {
+    "nom": "JEANDON",
+    "prenom": "Jean-Paul",
+    "nuance": "LUG",
+    "pct_exprimes": 37.11
+   },
+   "nb_communes": 1,
+   "code_canton": "04"
+  },
+  "05": {
+   "bureaux_de_vote": 11,
+   "inscrits": 9637,
+   "abstentions": 4791,
+   "votants": 4846,
+   "blancs": 64,
+   "nuls": 27,
+   "exprimes": 4755,
+   "nom": "Cergy-2",
+   "candidats": [
+    {
+     "nom": "PAYET",
+     "prenom": "Armand",
+     "nuance": "LDVD",
+     "voix": 1848,
+     "pct_exprimes": 38.86,
+     "pct_inscrits": 19.18
+    },
+    {
+     "nom": "JEANDON",
+     "prenom": "Jean-Paul",
+     "nuance": "LUG",
+     "voix": 1769,
+     "pct_exprimes": 37.2,
+     "pct_inscrits": 18.36
+    },
+    {
+     "nom": "YAÏCH",
+     "prenom": "Daisy",
+     "nuance": "LFI",
+     "voix": 1138,
+     "pct_exprimes": 23.93,
+     "pct_inscrits": 11.81
+    }
+   ],
+   "pct_abstention": 49.71,
+   "pct_participation": 50.29,
+   "tete": {
+    "nom": "PAYET",
+    "prenom": "Armand",
+    "nuance": "LDVD",
+    "pct_exprimes": 38.86
+   },
+   "nb_communes": 1,
+   "code_canton": "05"
+  },
+  "20": {
+   "bureaux_de_vote": 10,
+   "inscrits": 8787,
+   "abstentions": 3784,
+   "votants": 5003,
+   "blancs": 46,
+   "nuls": 43,
+   "exprimes": 4914,
+   "nom": "Vauréal",
+   "candidats": [
+    {
+     "nom": "PUECH D'ALISSAC",
+     "prenom": "Luc",
+     "nuance": "LDVD",
+     "voix": 1202,
+     "pct_exprimes": 24.46,
+     "pct_inscrits": 13.68
+    },
+    {
+     "nom": "MATHARAN",
+     "prenom": "Sophie",
+     "nuance": "LDVG",
+     "voix": 1032,
+     "pct_exprimes": 21.0,
+     "pct_inscrits": 11.74
+    },
+    {
+     "nom": "FOLLMER",
+     "prenom": "Olivier",
+     "nuance": "LDIV",
+     "voix": 1004,
+     "pct_exprimes": 20.43,
+     "pct_inscrits": 11.43
+    },
+    {
+     "nom": "VATEL",
+     "prenom": "Thomas",
+     "nuance": "LDVD",
+     "voix": 973,
+     "pct_exprimes": 19.8,
+     "pct_inscrits": 11.07
+    },
+    {
+     "nom": "BOUSLAM",
+     "prenom": "Maryeme",
+     "nuance": "LDIV",
+     "voix": 419,
+     "pct_exprimes": 8.53,
+     "pct_inscrits": 4.77
+    },
+    {
+     "nom": "SALMAT",
+     "prenom": "Ghislaine",
+     "nuance": "LDVG",
+     "voix": 284,
+     "pct_exprimes": 5.78,
+     "pct_inscrits": 3.23
+    }
+   ],
+   "pct_abstention": 43.06,
+   "pct_participation": 56.94,
+   "tete": {
+    "nom": "PUECH D'ALISSAC",
+    "prenom": "Luc",
+    "nuance": "LDVD",
+    "pct_exprimes": 24.46
+   },
+   "nb_communes": 2,
+   "code_canton": "20"
+  },
+  "07": {
+   "bureaux_de_vote": 27,
+   "inscrits": 27100,
+   "abstentions": 11497,
+   "votants": 15603,
+   "blancs": 144,
+   "nuls": 94,
+   "exprimes": 15365,
+   "nom": "Domont",
+   "candidats": [
+    {
+     "nom": "VIDAL",
+     "prenom": "Loïc",
+     "nuance": "LDVG",
+     "voix": 2423,
+     "pct_exprimes": 15.77,
+     "pct_inscrits": 8.94
+    },
+    {
+     "nom": "BOURDIN",
+     "prenom": "Frédéric",
+     "nuance": "LDVD",
+     "voix": 2405,
+     "pct_exprimes": 15.65,
+     "pct_inscrits": 8.87
+    },
+    {
+     "nom": "BILLET",
+     "prenom": "Sandra",
+     "nuance": "LDVD",
+     "voix": 2199,
+     "pct_exprimes": 14.31,
+     "pct_inscrits": 8.11
+    },
+    {
+     "nom": "MEURANT",
+     "prenom": "Sébastien",
+     "nuance": "LDVD",
+     "voix": 1876,
+     "pct_exprimes": 12.21,
+     "pct_inscrits": 6.92
+    },
+    {
+     "nom": "FOY",
+     "prenom": "Ingrid",
+     "nuance": "LDVG",
+     "voix": 1496,
+     "pct_exprimes": 9.74,
+     "pct_inscrits": 5.52
+    },
+    {
+     "nom": "PAIN",
+     "prenom": "Régis",
+     "nuance": "LDVD",
+     "voix": 1442,
+     "pct_exprimes": 9.38,
+     "pct_inscrits": 5.32
+    },
+    {
+     "nom": "CARTIER",
+     "prenom": "Sylvie",
+     "nuance": "LDVD",
+     "voix": 1403,
+     "pct_exprimes": 9.13,
+     "pct_inscrits": 5.18
+    },
+    {
+     "nom": "QUENTIN",
+     "prenom": "David",
+     "nuance": "LRN",
+     "voix": 767,
+     "pct_exprimes": 4.99,
+     "pct_inscrits": 2.83
+    },
+    {
+     "nom": "HOUSSAIS",
+     "prenom": "Frédéric",
+     "nuance": "LDVD",
+     "voix": 531,
+     "pct_exprimes": 3.46,
+     "pct_inscrits": 1.96
+    },
+    {
+     "nom": "BERNARD",
+     "prenom": "Franck",
+     "nuance": "LDIV",
+     "voix": 483,
+     "pct_exprimes": 3.14,
+     "pct_inscrits": 1.78
+    },
+    {
+     "nom": "MARTIN",
+     "prenom": "Josette",
+     "nuance": "LDIV",
+     "voix": 340,
+     "pct_exprimes": 2.21,
+     "pct_inscrits": 1.25
+    }
+   ],
+   "pct_abstention": 42.42,
+   "pct_participation": 57.58,
+   "tete": {
+    "nom": "VIDAL",
+    "prenom": "Loïc",
+    "nuance": "LDVG",
+    "pct_exprimes": 15.77
+   },
+   "nb_communes": 3,
+   "code_canton": "07"
+  },
+  "08": {
+   "bureaux_de_vote": 34,
+   "inscrits": 35184,
+   "abstentions": 17077,
+   "votants": 18107,
+   "blancs": 381,
+   "nuls": 169,
+   "exprimes": 17557,
+   "nom": "Ermont",
+   "candidats": [
+    {
+     "nom": "BEAULANDE",
+     "prenom": "Marie-José",
+     "nuance": "LDVG",
+     "voix": 4780,
+     "pct_exprimes": 27.23,
+     "pct_inscrits": 13.59
+    },
+    {
+     "nom": "HAQUIN",
+     "prenom": "Xavier",
+     "nuance": "LDVD",
+     "voix": 4412,
+     "pct_exprimes": 25.13,
+     "pct_inscrits": 12.54
+    },
+    {
+     "nom": "DUBLINEAU",
+     "prenom": "Grégoire",
+     "nuance": "LLR",
+     "voix": 3750,
+     "pct_exprimes": 21.36,
+     "pct_inscrits": 10.66
+    },
+    {
+     "nom": "LACOUTURE",
+     "prenom": "Karine",
+     "nuance": "LUG",
+     "voix": 2921,
+     "pct_exprimes": 16.64,
+     "pct_inscrits": 8.3
+    },
+    {
+     "nom": "ROUSSEAU",
+     "prenom": "Catherine",
+     "nuance": "LDVD",
+     "voix": 1694,
+     "pct_exprimes": 9.65,
+     "pct_inscrits": 4.81
+    }
+   ],
+   "pct_abstention": 48.54,
+   "pct_participation": 51.46,
+   "tete": {
+    "nom": "BEAULANDE",
+    "prenom": "Marie-José",
+    "nuance": "LDVG",
+    "pct_exprimes": 27.23
+   },
+   "nb_communes": 2,
+   "code_canton": "08"
+  },
+  "09": {
+   "bureaux_de_vote": 10,
+   "inscrits": 10889,
+   "abstentions": 4519,
+   "votants": 6370,
+   "blancs": 92,
+   "nuls": 46,
+   "exprimes": 6232,
+   "nom": "Fosses",
+   "candidats": [
+    {
+     "nom": "DELPRAT",
+     "prenom": "Catherine",
+     "nuance": "LSOC",
+     "voix": 1513,
+     "pct_exprimes": 24.28,
+     "pct_inscrits": 13.89
+    },
+    {
+     "nom": "SELOSSE",
+     "prenom": "Philippe",
+     "nuance": "LDIV",
+     "voix": 1292,
+     "pct_exprimes": 20.73,
+     "pct_inscrits": 11.87
+    },
+    {
+     "nom": "RENÉ",
+     "prenom": "Séjiane",
+     "nuance": "LDIV",
+     "voix": 868,
+     "pct_exprimes": 13.93,
+     "pct_inscrits": 7.97
+    },
+    {
+     "nom": "MURRU",
+     "prenom": "Yves",
+     "nuance": "LDIV",
+     "voix": 526,
+     "pct_exprimes": 8.44,
+     "pct_inscrits": 4.83
+    },
+    {
+     "nom": "BENYAHIA",
+     "prenom": "Nathalie",
+     "nuance": null,
+     "voix": 517,
+     "pct_exprimes": 8.3,
+     "pct_inscrits": 4.75
+    },
+    {
+     "nom": "FERON",
+     "prenom": "Jacques",
+     "nuance": null,
+     "voix": 489,
+     "pct_exprimes": 7.85,
+     "pct_inscrits": 4.49
+    },
+    {
+     "nom": "KARADAG",
+     "prenom": "Hasan",
+     "nuance": null,
+     "voix": 405,
+     "pct_exprimes": 6.5,
+     "pct_inscrits": 3.72
+    },
+    {
+     "nom": "PY",
+     "prenom": "Roland",
+     "nuance": null,
+     "voix": 360,
+     "pct_exprimes": 5.78,
+     "pct_inscrits": 3.31
+    },
+    {
+     "nom": "MATUSIAK",
+     "prenom": "Clément",
+     "nuance": null,
+     "voix": 168,
+     "pct_exprimes": 2.7,
+     "pct_inscrits": 1.54
+    },
+    {
+     "nom": "GASTAN",
+     "prenom": "Catherine",
+     "nuance": "LDIV",
+     "voix": 94,
+     "pct_exprimes": 1.51,
+     "pct_inscrits": 0.86
+    }
+   ],
+   "pct_abstention": 41.5,
+   "pct_participation": 58.5,
+   "tete": {
+    "nom": "DELPRAT",
+    "prenom": "Catherine",
+    "nuance": "LSOC",
+    "pct_exprimes": 24.28
+   },
+   "nb_communes": 4,
+   "code_canton": "09"
+  },
+  "12": {
+   "bureaux_de_vote": 22,
+   "inscrits": 18060,
+   "abstentions": 8791,
+   "votants": 9269,
+   "blancs": 127,
+   "nuls": 95,
+   "exprimes": 9047,
+   "nom": "Goussainville",
+   "candidats": [
+    {
+     "nom": "LAVILLE",
+     "prenom": "Jean-Charles",
+     "nuance": "LUG",
+     "voix": 4255,
+     "pct_exprimes": 47.03,
+     "pct_inscrits": 23.56
+    },
+    {
+     "nom": "HAMIDA",
+     "prenom": "Abdelaziz",
+     "nuance": "LDVG",
+     "voix": 4230,
+     "pct_exprimes": 46.76,
+     "pct_inscrits": 23.42
+    },
+    {
+     "nom": "BENABDELAZIZ",
+     "prenom": "Farid",
+     "nuance": null,
+     "voix": 276,
+     "pct_exprimes": 3.05,
+     "pct_inscrits": 1.53
+    },
+    {
+     "nom": "DIDIER",
+     "prenom": "Frédéric",
+     "nuance": null,
+     "voix": 175,
+     "pct_exprimes": 1.93,
+     "pct_inscrits": 0.97
+    },
+    {
+     "nom": "POTTIER",
+     "prenom": "Christel",
+     "nuance": null,
+     "voix": 111,
+     "pct_exprimes": 1.23,
+     "pct_inscrits": 0.61
+    }
+   ],
+   "pct_abstention": 48.68,
+   "pct_participation": 51.32,
+   "tete": {
+    "nom": "LAVILLE",
+    "prenom": "Jean-Charles",
+    "nuance": "LUG",
+    "pct_exprimes": 47.03
+   },
+   "nb_communes": 2,
+   "code_canton": "12"
+  },
+  "06": {
+   "bureaux_de_vote": 13,
+   "inscrits": 13657,
+   "abstentions": 5940,
+   "votants": 7717,
+   "blancs": 77,
+   "nuls": 48,
+   "exprimes": 7592,
+   "nom": "Deuil-la-Barre",
+   "candidats": [
+    {
+     "nom": "CHIKH",
+     "prenom": "Belkacem",
+     "nuance": "LDVG",
+     "voix": 2078,
+     "pct_exprimes": 27.37,
+     "pct_inscrits": 15.22
+    },
+    {
+     "nom": "JEFFROY",
+     "prenom": "François",
+     "nuance": "LDIV",
+     "voix": 1741,
+     "pct_exprimes": 22.93,
+     "pct_inscrits": 12.75
+    },
+    {
+     "nom": "ROSE",
+     "prenom": "François",
+     "nuance": "LDVD",
+     "voix": 1697,
+     "pct_exprimes": 22.35,
+     "pct_inscrits": 12.43
+    },
+    {
+     "nom": "CANCOUET",
+     "prenom": "Patrick",
+     "nuance": "LDVD",
+     "voix": 1678,
+     "pct_exprimes": 22.1,
+     "pct_inscrits": 12.29
+    },
+    {
+     "nom": "MAICHE",
+     "prenom": "Bakhta",
+     "nuance": "LDVD",
+     "voix": 398,
+     "pct_exprimes": 5.24,
+     "pct_inscrits": 2.91
+    }
+   ],
+   "pct_abstention": 43.49,
+   "pct_participation": 56.51,
+   "tete": {
+    "nom": "CHIKH",
+    "prenom": "Belkacem",
+    "nuance": "LDVG",
+    "pct_exprimes": 27.37
+   },
+   "nb_communes": 2,
+   "code_canton": "06"
+  },
+  "16": {
+   "bureaux_de_vote": 3,
+   "inscrits": 2248,
+   "abstentions": 801,
+   "votants": 1447,
+   "blancs": 14,
+   "nuls": 9,
+   "exprimes": 1424,
+   "nom": "Pontoise",
+   "candidats": [
+    {
+     "nom": "DÉJARDIN",
+     "prenom": "Michel",
+     "nuance": "LDIV",
+     "voix": 614,
+     "pct_exprimes": 43.12,
+     "pct_inscrits": 27.31
+    },
+    {
+     "nom": "NINOT",
+     "prenom": "Nadine",
+     "nuance": "LDVG",
+     "voix": 421,
+     "pct_exprimes": 29.56,
+     "pct_inscrits": 18.73
+    },
+    {
+     "nom": "FABREGES",
+     "prenom": "Philippe",
+     "nuance": null,
+     "voix": 202,
+     "pct_exprimes": 14.19,
+     "pct_inscrits": 8.99
+    },
+    {
+     "nom": "PICHERY",
+     "prenom": "Stéphane",
+     "nuance": null,
+     "voix": 187,
+     "pct_exprimes": 13.13,
+     "pct_inscrits": 8.32
+    }
+   ],
+   "pct_abstention": 35.63,
+   "pct_participation": 64.37,
+   "tete": {
+    "nom": "DÉJARDIN",
+    "prenom": "Michel",
+    "nuance": "LDIV",
+    "pct_exprimes": 43.12
+   },
+   "nb_communes": 2,
+   "code_canton": "16"
+  },
+  "18": {
+   "bureaux_de_vote": 30,
+   "inscrits": 28168,
+   "abstentions": 13227,
+   "votants": 14941,
+   "blancs": 149,
+   "nuls": 120,
+   "exprimes": 14672,
+   "nom": "Sarcelles",
+   "candidats": [
+    {
+     "nom": "KONATE",
+     "prenom": "Bassi",
+     "nuance": "LDIV",
+     "voix": 8120,
+     "pct_exprimes": 55.34,
+     "pct_inscrits": 28.83
+    },
+    {
+     "nom": "VALENTIN",
+     "prenom": "François-Xavier",
+     "nuance": "LDIV",
+     "voix": 6552,
+     "pct_exprimes": 44.66,
+     "pct_inscrits": 23.26
+    }
+   ],
+   "pct_abstention": 46.96,
+   "pct_participation": 53.04,
+   "tete": {
+    "nom": "KONATE",
+    "prenom": "Bassi",
+    "nuance": "LDIV",
+    "pct_exprimes": 55.34
+   },
+   "nb_communes": 1,
+   "code_canton": "18"
+  },
+  "15": {
+   "bureaux_de_vote": 10,
+   "inscrits": 12140,
+   "abstentions": 5673,
+   "votants": 6467,
+   "blancs": 64,
+   "nuls": 54,
+   "exprimes": 6349,
+   "nom": "Montmorency",
+   "candidats": [
+    {
+     "nom": "NAUDET",
+     "prenom": "Nicolas",
+     "nuance": "LDVD",
+     "voix": 2720,
+     "pct_exprimes": 42.84,
+     "pct_inscrits": 22.41
+    },
+    {
+     "nom": "STREHAIANO",
+     "prenom": "Luc",
+     "nuance": "LDVD",
+     "voix": 2247,
+     "pct_exprimes": 35.39,
+     "pct_inscrits": 18.51
+    },
+    {
+     "nom": "BEKARE",
+     "prenom": "Omar",
+     "nuance": "LDIV",
+     "voix": 930,
+     "pct_exprimes": 14.65,
+     "pct_inscrits": 7.66
+    },
+    {
+     "nom": "CORCEIRO",
+     "prenom": "David",
+     "nuance": "LDVC",
+     "voix": 452,
+     "pct_exprimes": 7.12,
+     "pct_inscrits": 3.72
+    }
+   ],
+   "pct_abstention": 46.73,
+   "pct_participation": 53.27,
+   "tete": {
+    "nom": "NAUDET",
+    "prenom": "Nicolas",
+    "nuance": "LDVD",
+    "pct_exprimes": 42.84
+   },
+   "nb_communes": 1,
+   "code_canton": "15"
+  },
+  "21": {
+   "bureaux_de_vote": 16,
+   "inscrits": 14143,
+   "abstentions": 6980,
+   "votants": 7163,
+   "blancs": 74,
+   "nuls": 83,
+   "exprimes": 7006,
+   "nom": "Villiers-le-Bel",
+   "candidats": [
+    {
+     "nom": "BILONGO",
+     "prenom": "Carlos Martens",
+     "nuance": "LFI",
+     "voix": 2818,
+     "pct_exprimes": 40.22,
+     "pct_inscrits": 19.93
+    },
+    {
+     "nom": "TECHTACH",
+     "prenom": "Djida",
+     "nuance": "LSOC",
+     "voix": 2798,
+     "pct_exprimes": 39.94,
+     "pct_inscrits": 19.78
+    },
+    {
+     "nom": "LUNAZZI",
+     "prenom": "Fabio",
+     "nuance": "LDVC",
+     "voix": 651,
+     "pct_exprimes": 9.29,
+     "pct_inscrits": 4.6
+    },
+    {
+     "nom": "GEBAUER",
+     "prenom": "Patrice",
+     "nuance": "LDVD",
+     "voix": 584,
+     "pct_exprimes": 8.34,
+     "pct_inscrits": 4.13
+    },
+    {
+     "nom": "ROMERO",
+     "prenom": "Jean-Marie",
+     "nuance": "LDIV",
+     "voix": 155,
+     "pct_exprimes": 2.21,
+     "pct_inscrits": 1.1
+    }
+   ],
+   "pct_abstention": 49.35,
+   "pct_participation": 50.65,
+   "tete": {
+    "nom": "BILONGO",
+    "prenom": "Carlos Martens",
+    "nuance": "LFI",
+    "pct_exprimes": 40.22
+   },
+   "nb_communes": 2,
+   "code_canton": "21"
+  }
+ }
+}

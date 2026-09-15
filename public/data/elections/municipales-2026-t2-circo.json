@@ -1,0 +1,845 @@
+{
+ "election": "Municipales 2026",
+ "tour": 2,
+ "date": "2026-03-23",
+ "status": "reel",
+ "note": "Agrégation réelle par circonscription, calculée à partir des résultats communaux réels de ce scrutin et du référentiel commune↔circonscription réel (Présidentielle 2022, codes officiels du Ministère de l'Intérieur). Aucune nouvelle donnée de vote n'est inventée : il s'agit d'une simple somme.",
+ "circonscriptions": {
+  "05": {
+   "nb_communes": 2,
+   "bureaux_de_vote": 67,
+   "inscrits": 73543,
+   "abstentions": 40256,
+   "votants": 33287,
+   "blancs": 911,
+   "nuls": 404,
+   "exprimes": 31972,
+   "candidats": [
+    {
+     "nom": "MOTHRON",
+     "prenom": "Georges",
+     "nuance": "LDVD",
+     "voix": 13893,
+     "pct_exprimes": 43.45,
+     "pct_inscrits": 18.89
+    },
+    {
+     "nom": "ZEGHLI",
+     "prenom": "Yassin",
+     "nuance": "LFI",
+     "voix": 11267,
+     "pct_exprimes": 35.24,
+     "pct_inscrits": 15.32
+    },
+    {
+     "nom": "MENHAOUARA",
+     "prenom": "Nessrine",
+     "nuance": "LSOC",
+     "voix": 3560,
+     "pct_exprimes": 11.13,
+     "pct_inscrits": 4.84
+    },
+    {
+     "nom": "NOEL",
+     "prenom": "Philippe",
+     "nuance": "LDVG",
+     "voix": 1821,
+     "pct_exprimes": 5.7,
+     "pct_inscrits": 2.48
+    },
+    {
+     "nom": "AOUCHICHE",
+     "prenom": "Nadia",
+     "nuance": "LFI",
+     "voix": 1431,
+     "pct_exprimes": 4.48,
+     "pct_inscrits": 1.95
+    }
+   ],
+   "pct_abstention": 54.74,
+   "pct_participation": 45.26,
+   "tete": {
+    "nom": "MOTHRON",
+    "prenom": "Georges",
+    "nuance": "LDVD",
+    "pct_exprimes": 43.45
+   },
+   "nom": "5e circonscription du Val-d'Oise",
+   "code_circonscription": "05"
+  },
+  "01": {
+   "nb_communes": 5,
+   "bureaux_de_vote": 16,
+   "inscrits": 14732,
+   "abstentions": 6217,
+   "votants": 8515,
+   "blancs": 119,
+   "nuls": 80,
+   "exprimes": 8316,
+   "candidats": [
+    {
+     "nom": "APARICIO",
+     "prenom": "Jean-Michel",
+     "nuance": "LDVG",
+     "voix": 1756,
+     "pct_exprimes": 21.12,
+     "pct_inscrits": 11.92
+    },
+    {
+     "nom": "PUECH D'ALISSAC",
+     "prenom": "Luc",
+     "nuance": "LDVD",
+     "voix": 1202,
+     "pct_exprimes": 14.45,
+     "pct_inscrits": 8.16
+    },
+    {
+     "nom": "RENOU",
+     "prenom": "Xavier",
+     "nuance": "LDIV",
+     "voix": 1170,
+     "pct_exprimes": 14.07,
+     "pct_inscrits": 7.94
+    },
+    {
+     "nom": "VATEL",
+     "prenom": "Thomas",
+     "nuance": "LDVD",
+     "voix": 973,
+     "pct_exprimes": 11.7,
+     "pct_inscrits": 6.6
+    },
+    {
+     "nom": "DÉJARDIN",
+     "prenom": "Michel",
+     "nuance": "LDIV",
+     "voix": 824,
+     "pct_exprimes": 9.91,
+     "pct_inscrits": 5.59
+    },
+    {
+     "nom": "NINOT",
+     "prenom": "Nadine",
+     "nuance": "LDVG",
+     "voix": 608,
+     "pct_exprimes": 7.31,
+     "pct_inscrits": 4.13
+    },
+    {
+     "nom": "NOËL",
+     "prenom": "Claude",
+     "nuance": null,
+     "voix": 417,
+     "pct_exprimes": 5.01,
+     "pct_inscrits": 2.83
+    },
+    {
+     "nom": "DESFOUX",
+     "prenom": "Daniel",
+     "nuance": null,
+     "voix": 385,
+     "pct_exprimes": 4.63,
+     "pct_inscrits": 2.61
+    },
+    {
+     "nom": "PORTET",
+     "prenom": "Frédéric",
+     "nuance": null,
+     "voix": 308,
+     "pct_exprimes": 3.7,
+     "pct_inscrits": 2.09
+    },
+    {
+     "nom": "SALMAT",
+     "prenom": "Ghislaine",
+     "nuance": "LDVG",
+     "voix": 284,
+     "pct_exprimes": 3.42,
+     "pct_inscrits": 1.93
+    },
+    {
+     "nom": "FABREGES",
+     "prenom": "Philippe",
+     "nuance": null,
+     "voix": 202,
+     "pct_exprimes": 2.43,
+     "pct_inscrits": 1.37
+    },
+    {
+     "nom": "PICHERY",
+     "prenom": "Stéphane",
+     "nuance": null,
+     "voix": 187,
+     "pct_exprimes": 2.25,
+     "pct_inscrits": 1.27
+    }
+   ],
+   "pct_abstention": 42.2,
+   "pct_participation": 57.8,
+   "tete": {
+    "nom": "APARICIO",
+    "prenom": "Jean-Michel",
+    "nuance": "LDVG",
+    "pct_exprimes": 21.12
+   },
+   "nom": "1e circonscription du Val-d'Oise",
+   "code_circonscription": "01"
+  },
+  "03": {
+   "nb_communes": 2,
+   "bureaux_de_vote": 15,
+   "inscrits": 11708,
+   "abstentions": 5007,
+   "votants": 6701,
+   "blancs": 111,
+   "nuls": 69,
+   "exprimes": 6521,
+   "candidats": [
+    {
+     "nom": "DUGLÉ DANGUILHEN",
+     "prenom": "Laurianne",
+     "nuance": "LDIV",
+     "voix": 1902,
+     "pct_exprimes": 29.17,
+     "pct_inscrits": 16.25
+    },
+    {
+     "nom": "PAIN",
+     "prenom": "Régis",
+     "nuance": "LDVD",
+     "voix": 1690,
+     "pct_exprimes": 25.92,
+     "pct_inscrits": 14.43
+    },
+    {
+     "nom": "CARTIER",
+     "prenom": "Sylvie",
+     "nuance": "LDVD",
+     "voix": 1675,
+     "pct_exprimes": 25.69,
+     "pct_inscrits": 14.31
+    },
+    {
+     "nom": "DERVEAUX",
+     "prenom": "Nathalie",
+     "nuance": "LDVG",
+     "voix": 1040,
+     "pct_exprimes": 15.95,
+     "pct_inscrits": 8.88
+    },
+    {
+     "nom": "DOMERGUE",
+     "prenom": "Elie",
+     "nuance": "LDVG",
+     "voix": 214,
+     "pct_exprimes": 3.28,
+     "pct_inscrits": 1.83
+    }
+   ],
+   "pct_abstention": 42.77,
+   "pct_participation": 57.23,
+   "tete": {
+    "nom": "DUGLÉ DANGUILHEN",
+    "prenom": "Laurianne",
+    "nuance": "LDIV",
+    "pct_exprimes": 29.17
+   },
+   "nom": "3e circonscription du Val-d'Oise",
+   "code_circonscription": "03"
+  },
+  "10": {
+   "nb_communes": 2,
+   "bureaux_de_vote": 40,
+   "inscrits": 36950,
+   "abstentions": 19397,
+   "votants": 17553,
+   "blancs": 193,
+   "nuls": 116,
+   "exprimes": 17244,
+   "candidats": [
+    {
+     "nom": "JEANDON",
+     "prenom": "Jean-Paul",
+     "nuance": "LUG",
+     "voix": 5493,
+     "pct_exprimes": 31.85,
+     "pct_inscrits": 14.87
+    },
+    {
+     "nom": "PAYET",
+     "prenom": "Armand",
+     "nuance": "LDVD",
+     "voix": 5308,
+     "pct_exprimes": 30.78,
+     "pct_inscrits": 14.37
+    },
+    {
+     "nom": "YAÏCH",
+     "prenom": "Daisy",
+     "nuance": "LFI",
+     "voix": 3988,
+     "pct_exprimes": 23.13,
+     "pct_inscrits": 10.79
+    },
+    {
+     "nom": "MATHARAN",
+     "prenom": "Sophie",
+     "nuance": "LDVG",
+     "voix": 1032,
+     "pct_exprimes": 5.98,
+     "pct_inscrits": 2.79
+    },
+    {
+     "nom": "FOLLMER",
+     "prenom": "Olivier",
+     "nuance": "LDIV",
+     "voix": 1004,
+     "pct_exprimes": 5.82,
+     "pct_inscrits": 2.72
+    },
+    {
+     "nom": "BOUSLAM",
+     "prenom": "Maryeme",
+     "nuance": "LDIV",
+     "voix": 419,
+     "pct_exprimes": 2.43,
+     "pct_inscrits": 1.13
+    }
+   ],
+   "pct_abstention": 52.5,
+   "pct_participation": 47.5,
+   "tete": {
+    "nom": "JEANDON",
+    "prenom": "Jean-Paul",
+    "nuance": "LUG",
+    "pct_exprimes": 31.85
+   },
+   "nom": "10e circonscription du Val-d'Oise",
+   "code_circonscription": "10"
+  },
+  "07": {
+   "nb_communes": 3,
+   "bureaux_de_vote": 19,
+   "inscrits": 20741,
+   "abstentions": 8789,
+   "votants": 11952,
+   "blancs": 120,
+   "nuls": 69,
+   "exprimes": 11763,
+   "candidats": [
+    {
+     "nom": "BOURDIN",
+     "prenom": "Frédéric",
+     "nuance": "LDVD",
+     "voix": 2405,
+     "pct_exprimes": 20.45,
+     "pct_inscrits": 11.6
+    },
+    {
+     "nom": "JEFFROY",
+     "prenom": "François",
+     "nuance": "LDIV",
+     "voix": 1741,
+     "pct_exprimes": 14.8,
+     "pct_inscrits": 8.39
+    },
+    {
+     "nom": "CANCOUET",
+     "prenom": "Patrick",
+     "nuance": "LDVD",
+     "voix": 1678,
+     "pct_exprimes": 14.27,
+     "pct_inscrits": 8.09
+    },
+    {
+     "nom": "DELPRAT",
+     "prenom": "Catherine",
+     "nuance": "LSOC",
+     "voix": 1513,
+     "pct_exprimes": 12.86,
+     "pct_inscrits": 7.29
+    },
+    {
+     "nom": "FOY",
+     "prenom": "Ingrid",
+     "nuance": "LDVG",
+     "voix": 1496,
+     "pct_exprimes": 12.72,
+     "pct_inscrits": 7.21
+    },
+    {
+     "nom": "SELOSSE",
+     "prenom": "Philippe",
+     "nuance": "LDIV",
+     "voix": 1292,
+     "pct_exprimes": 10.98,
+     "pct_inscrits": 6.23
+    },
+    {
+     "nom": "QUENTIN",
+     "prenom": "David",
+     "nuance": "LRN",
+     "voix": 767,
+     "pct_exprimes": 6.52,
+     "pct_inscrits": 3.7
+    },
+    {
+     "nom": "HOUSSAIS",
+     "prenom": "Frédéric",
+     "nuance": "LDVD",
+     "voix": 531,
+     "pct_exprimes": 4.51,
+     "pct_inscrits": 2.56
+    },
+    {
+     "nom": "MARTIN",
+     "prenom": "Josette",
+     "nuance": "LDIV",
+     "voix": 340,
+     "pct_exprimes": 2.89,
+     "pct_inscrits": 1.64
+    }
+   ],
+   "pct_abstention": 42.38,
+   "pct_participation": 57.62,
+   "tete": {
+    "nom": "BOURDIN",
+    "prenom": "Frédéric",
+    "nuance": "LDVD",
+    "pct_exprimes": 20.45
+   },
+   "nom": "7e circonscription du Val-d'Oise",
+   "code_circonscription": "07"
+  },
+  "04": {
+   "nb_communes": 3,
+   "bureaux_de_vote": 44,
+   "inscrits": 46864,
+   "abstentions": 21705,
+   "votants": 25159,
+   "blancs": 422,
+   "nuls": 199,
+   "exprimes": 24538,
+   "candidats": [
+    {
+     "nom": "BEAULANDE",
+     "prenom": "Marie-José",
+     "nuance": "LDVG",
+     "voix": 4780,
+     "pct_exprimes": 19.48,
+     "pct_inscrits": 10.2
+    },
+    {
+     "nom": "HAQUIN",
+     "prenom": "Xavier",
+     "nuance": "LDVD",
+     "voix": 4412,
+     "pct_exprimes": 17.98,
+     "pct_inscrits": 9.41
+    },
+    {
+     "nom": "DUBLINEAU",
+     "prenom": "Grégoire",
+     "nuance": "LLR",
+     "voix": 3750,
+     "pct_exprimes": 15.28,
+     "pct_inscrits": 8.0
+    },
+    {
+     "nom": "LACOUTURE",
+     "prenom": "Karine",
+     "nuance": "LUG",
+     "voix": 2921,
+     "pct_exprimes": 11.9,
+     "pct_inscrits": 6.23
+    },
+    {
+     "nom": "VIDAL",
+     "prenom": "Loïc",
+     "nuance": "LDVG",
+     "voix": 2423,
+     "pct_exprimes": 9.87,
+     "pct_inscrits": 5.17
+    },
+    {
+     "nom": "BILLET",
+     "prenom": "Sandra",
+     "nuance": "LDVD",
+     "voix": 2199,
+     "pct_exprimes": 8.96,
+     "pct_inscrits": 4.69
+    },
+    {
+     "nom": "MEURANT",
+     "prenom": "Sébastien",
+     "nuance": "LDVD",
+     "voix": 1876,
+     "pct_exprimes": 7.65,
+     "pct_inscrits": 4.0
+    },
+    {
+     "nom": "ROUSSEAU",
+     "prenom": "Catherine",
+     "nuance": "LDVD",
+     "voix": 1694,
+     "pct_exprimes": 6.9,
+     "pct_inscrits": 3.61
+    },
+    {
+     "nom": "BERNARD",
+     "prenom": "Franck",
+     "nuance": "LDIV",
+     "voix": 483,
+     "pct_exprimes": 1.97,
+     "pct_inscrits": 1.03
+    }
+   ],
+   "pct_abstention": 46.31,
+   "pct_participation": 53.69,
+   "tete": {
+    "nom": "BEAULANDE",
+    "prenom": "Marie-José",
+    "nuance": "LDVG",
+    "pct_exprimes": 19.48
+   },
+   "nom": "4e circonscription du Val-d'Oise",
+   "code_circonscription": "04"
+  },
+  "09": {
+   "nb_communes": 5,
+   "bureaux_de_vote": 31,
+   "inscrits": 26084,
+   "abstentions": 12019,
+   "votants": 14065,
+   "blancs": 177,
+   "nuls": 133,
+   "exprimes": 13755,
+   "candidats": [
+    {
+     "nom": "HAMIDA",
+     "prenom": "Abdelaziz",
+     "nuance": "LDVG",
+     "voix": 4440,
+     "pct_exprimes": 32.28,
+     "pct_inscrits": 17.02
+    },
+    {
+     "nom": "LAVILLE",
+     "prenom": "Jean-Charles",
+     "nuance": "LUG",
+     "voix": 4369,
+     "pct_exprimes": 31.76,
+     "pct_inscrits": 16.75
+    },
+    {
+     "nom": "RENÉ",
+     "prenom": "Séjiane",
+     "nuance": "LDIV",
+     "voix": 868,
+     "pct_exprimes": 6.31,
+     "pct_inscrits": 3.33
+    },
+    {
+     "nom": "LUNAZZI",
+     "prenom": "Fabio",
+     "nuance": "LDVC",
+     "voix": 651,
+     "pct_exprimes": 4.73,
+     "pct_inscrits": 2.5
+    },
+    {
+     "nom": "GEBAUER",
+     "prenom": "Patrice",
+     "nuance": "LDVD",
+     "voix": 584,
+     "pct_exprimes": 4.25,
+     "pct_inscrits": 2.24
+    },
+    {
+     "nom": "BENABDELAZIZ",
+     "prenom": "Farid",
+     "nuance": null,
+     "voix": 579,
+     "pct_exprimes": 4.21,
+     "pct_inscrits": 2.22
+    },
+    {
+     "nom": "MURRU",
+     "prenom": "Yves",
+     "nuance": "LDIV",
+     "voix": 526,
+     "pct_exprimes": 3.82,
+     "pct_inscrits": 2.02
+    },
+    {
+     "nom": "KARADAG",
+     "prenom": "Hasan",
+     "nuance": null,
+     "voix": 405,
+     "pct_exprimes": 2.94,
+     "pct_inscrits": 1.55
+    },
+    {
+     "nom": "PY",
+     "prenom": "Roland",
+     "nuance": null,
+     "voix": 360,
+     "pct_exprimes": 2.62,
+     "pct_inscrits": 1.38
+    },
+    {
+     "nom": "DIDIER",
+     "prenom": "Frédéric",
+     "nuance": null,
+     "voix": 309,
+     "pct_exprimes": 2.25,
+     "pct_inscrits": 1.18
+    },
+    {
+     "nom": "POTTIER",
+     "prenom": "Christel",
+     "nuance": null,
+     "voix": 247,
+     "pct_exprimes": 1.8,
+     "pct_inscrits": 0.95
+    },
+    {
+     "nom": "MATUSIAK",
+     "prenom": "Clément",
+     "nuance": null,
+     "voix": 168,
+     "pct_exprimes": 1.22,
+     "pct_inscrits": 0.64
+    },
+    {
+     "nom": "ROMERO",
+     "prenom": "Jean-Marie",
+     "nuance": "LDIV",
+     "voix": 155,
+     "pct_exprimes": 1.13,
+     "pct_inscrits": 0.59
+    },
+    {
+     "nom": "GASTAN",
+     "prenom": "Catherine",
+     "nuance": "LDIV",
+     "voix": 94,
+     "pct_exprimes": 0.68,
+     "pct_inscrits": 0.36
+    }
+   ],
+   "pct_abstention": 46.08,
+   "pct_participation": 53.92,
+   "tete": {
+    "nom": "HAMIDA",
+    "prenom": "Abdelaziz",
+    "nuance": "LDVG",
+    "pct_exprimes": 32.28
+   },
+   "nom": "9e circonscription du Val-d'Oise",
+   "code_circonscription": "09"
+  },
+  "06": {
+   "nb_communes": 3,
+   "bureaux_de_vote": 35,
+   "inscrits": 37792,
+   "abstentions": 17577,
+   "votants": 20215,
+   "blancs": 178,
+   "nuls": 127,
+   "exprimes": 19910,
+   "candidats": [
+    {
+     "nom": "PONCHEL",
+     "prenom": "Nicolas",
+     "nuance": "LDVD",
+     "voix": 3317,
+     "pct_exprimes": 16.66,
+     "pct_inscrits": 8.78
+    },
+    {
+     "nom": "NAUDET",
+     "prenom": "Nicolas",
+     "nuance": "LDVD",
+     "voix": 2720,
+     "pct_exprimes": 13.66,
+     "pct_inscrits": 7.2
+    },
+    {
+     "nom": "JAMET",
+     "prenom": "Bernard",
+     "nuance": "LDVD",
+     "voix": 2426,
+     "pct_exprimes": 12.18,
+     "pct_inscrits": 6.42
+    },
+    {
+     "nom": "LASSOUED",
+     "prenom": "Samir",
+     "nuance": "LUG",
+     "voix": 2374,
+     "pct_exprimes": 11.92,
+     "pct_inscrits": 6.28
+    },
+    {
+     "nom": "STREHAIANO",
+     "prenom": "Luc",
+     "nuance": "LDVD",
+     "voix": 2247,
+     "pct_exprimes": 11.29,
+     "pct_inscrits": 5.95
+    },
+    {
+     "nom": "CHIKH",
+     "prenom": "Belkacem",
+     "nuance": "LDVG",
+     "voix": 2078,
+     "pct_exprimes": 10.44,
+     "pct_inscrits": 5.5
+    },
+    {
+     "nom": "ROSE",
+     "prenom": "François",
+     "nuance": "LDVD",
+     "voix": 1697,
+     "pct_exprimes": 8.52,
+     "pct_inscrits": 4.49
+    },
+    {
+     "nom": "JACQUET-LÉGER",
+     "prenom": "Célia",
+     "nuance": "LDIV",
+     "voix": 1271,
+     "pct_exprimes": 6.38,
+     "pct_inscrits": 3.36
+    },
+    {
+     "nom": "BEKARE",
+     "prenom": "Omar",
+     "nuance": "LDIV",
+     "voix": 930,
+     "pct_exprimes": 4.67,
+     "pct_inscrits": 2.46
+    },
+    {
+     "nom": "CORCEIRO",
+     "prenom": "David",
+     "nuance": "LDVC",
+     "voix": 452,
+     "pct_exprimes": 2.27,
+     "pct_inscrits": 1.2
+    },
+    {
+     "nom": "MAICHE",
+     "prenom": "Bakhta",
+     "nuance": "LDVD",
+     "voix": 398,
+     "pct_exprimes": 2.0,
+     "pct_inscrits": 1.05
+    }
+   ],
+   "pct_abstention": 46.51,
+   "pct_participation": 53.49,
+   "tete": {
+    "nom": "PONCHEL",
+    "prenom": "Nicolas",
+    "nuance": "LDVD",
+    "pct_exprimes": 16.66
+   },
+   "nom": "6e circonscription du Val-d'Oise",
+   "code_circonscription": "06"
+  },
+  "02": {
+   "nb_communes": 1,
+   "bureaux_de_vote": 2,
+   "inscrits": 1889,
+   "abstentions": 860,
+   "votants": 1029,
+   "blancs": 13,
+   "nuls": 10,
+   "exprimes": 1006,
+   "candidats": [
+    {
+     "nom": "BENYAHIA",
+     "prenom": "Nathalie",
+     "nuance": null,
+     "voix": 517,
+     "pct_exprimes": 51.39,
+     "pct_inscrits": 27.37
+    },
+    {
+     "nom": "FERON",
+     "prenom": "Jacques",
+     "nuance": null,
+     "voix": 489,
+     "pct_exprimes": 48.61,
+     "pct_inscrits": 25.89
+    }
+   ],
+   "pct_abstention": 45.53,
+   "pct_participation": 54.47,
+   "tete": {
+    "nom": "BENYAHIA",
+    "prenom": "Nathalie",
+    "nuance": null,
+    "pct_exprimes": 51.39
+   },
+   "nom": "2e circonscription du Val-d'Oise",
+   "code_circonscription": "02"
+  },
+  "08": {
+   "nb_communes": 2,
+   "bureaux_de_vote": 45,
+   "inscrits": 41857,
+   "abstentions": 20108,
+   "votants": 21749,
+   "blancs": 223,
+   "nuls": 198,
+   "exprimes": 21328,
+   "candidats": [
+    {
+     "nom": "KONATE",
+     "prenom": "Bassi",
+     "nuance": "LDIV",
+     "voix": 8120,
+     "pct_exprimes": 38.07,
+     "pct_inscrits": 19.4
+    },
+    {
+     "nom": "VALENTIN",
+     "prenom": "François-Xavier",
+     "nuance": "LDIV",
+     "voix": 6552,
+     "pct_exprimes": 30.72,
+     "pct_inscrits": 15.65
+    },
+    {
+     "nom": "TECHTACH",
+     "prenom": "Djida",
+     "nuance": "LSOC",
+     "voix": 3415,
+     "pct_exprimes": 16.01,
+     "pct_inscrits": 8.16
+    },
+    {
+     "nom": "BILONGO",
+     "prenom": "Carlos Martens",
+     "nuance": "LFI",
+     "voix": 3241,
+     "pct_exprimes": 15.2,
+     "pct_inscrits": 7.74
+    }
+   ],
+   "pct_abstention": 48.04,
+   "pct_participation": 51.96,
+   "tete": {
+    "nom": "KONATE",
+    "prenom": "Bassi",
+    "nuance": "LDIV",
+    "pct_exprimes": 38.07
+   },
+   "nom": "8e circonscription du Val-d'Oise",
+   "code_circonscription": "08"
+  }
+ }
+}

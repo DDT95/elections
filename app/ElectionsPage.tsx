@@ -51,6 +51,12 @@ export default function ElectionsPage() {
   const mapRef = useRef<any>(null);
   const layerRef = useRef<any>(null);
   const initialBoundsRef = useRef<any>(null);
+  // code -> layer Leaflet pour l'échelle actuellement affichée, et fonctions de style associées
+  // (base / survol / sélection), utilisées à la fois à la construction de la couche et pour
+  // appliquer/retirer le halo persistant de sélection sans reconstruire toute la couche.
+  const layersByCodeRef = useRef<Record<string, any>>({});
+  const styleFnsRef = useRef<{ base: (code: string) => any; hover: (code: string) => any; selected: (code: string) => any } | null>(null);
+  const selectedCodeRef = useRef<string | null>(null);
 
   const [scale, setScale] = useState<Scale>("commune");
   const [electionId, setElectionId] = useState("pres-2022");
@@ -259,27 +265,51 @@ export default function ElectionsPage() {
       map.removeLayer(layerRef.current);
       layerRef.current = null;
     }
+    layersByCodeRef.current = {};
+    styleFnsRef.current = null;
+
+    // Style de base (repos), survol (aperçu léger au passage de la souris) et sélection
+    // (halo persistant tant que la fiche est ouverte pour cette unité). Le survol et la
+    // sélection restent visuellement distincts : le survol éclaircit juste le contour, la
+    // sélection l'épaissit fortement dans le bleu de la marque avec un liseré pointillé.
+    function withHover(base: any) {
+      return { ...base, color: "#5b6bff", weight: base.weight + 1.2 };
+    }
+    function withSelected(base: any) {
+      return { ...base, color: "#000091", weight: base.weight + 2.2, dashArray: "5,3", opacity: 1 };
+    }
+
+    function wireFeature(code: string, lyr: any, tooltipHtml: string) {
+      layersByCodeRef.current[code] = lyr;
+      lyr.bindTooltip(tooltipHtml, { sticky: true, className: "elec-tooltip" });
+      lyr.on("click", () => setSelectedCode(code));
+      lyr.on("mouseover", () => {
+        if (selectedCodeRef.current !== code) lyr.setStyle(styleFnsRef.current!.hover(code));
+      });
+      lyr.on("mouseout", () => {
+        lyr.setStyle(selectedCodeRef.current === code ? styleFnsRef.current!.selected(code) : styleFnsRef.current!.base(code));
+      });
+    }
+
     if (scale === "canton") {
       const cantons = cantonData[`${dataKey}-canton`]?.cantons;
       if (!cantonGeo || !cantons) return;
+      const base = (code: string) => {
+        const u = cantons[code];
+        const info = u ? metricInfo(u) : null;
+        return { color: "#fff", weight: 1.6, fillColor: info?.color ?? "#e9edf3", fillOpacity: info ? 0.82 : 0.35 };
+      };
+      styleFnsRef.current = { base, hover: (c) => withHover(base(c)), selected: (c) => withSelected(base(c)) };
       const layer = L.geoJSON(cantonGeo, {
         style: (feature: any) => {
           const code = feature.properties.code_canton;
-          const u = cantons[code];
-          const info = u ? metricInfo(u) : null;
-          return { color: "#fff", weight: 1.6, fillColor: info?.color ?? "#e9edf3", fillOpacity: info ? 0.82 : 0.35 };
+          return code === selectedCodeRef.current ? withSelected(base(code)) : base(code);
         },
         onEachFeature: (feature: any, lyr: any) => {
           const code = feature.properties.code_canton;
           const u = cantons[code];
           const name = feature.properties.nom;
-          lyr.bindTooltip(u ? `<b>Canton de ${name}</b><br/>${metricInfo(u).label}` : `Canton de ${name}<br/>Pas de résultat`, {
-            sticky: true,
-            className: "elec-tooltip",
-          });
-          lyr.on("click", () => setSelectedCode(code));
-          lyr.on("mouseover", () => lyr.setStyle({ weight: 2.6, color: "#000091" }));
-          lyr.on("mouseout", () => lyr.setStyle({ weight: 1.6, color: "#fff" }));
+          wireFeature(code, lyr, u ? `<b>Canton de ${name}</b><br/>${metricInfo(u).label}` : `Canton de ${name}<br/>Pas de résultat`);
         },
       }).addTo(map);
       layerRef.current = layer;
@@ -288,24 +318,22 @@ export default function ElectionsPage() {
     if (scale === "bv") {
       const bvBureaux = bvData[`${dataKey}-bv`]?.bureaux;
       if (!bvGeo || !bvBureaux) return;
+      const base = (code: string) => {
+        const b = bvBureaux[code];
+        const info = b ? metricInfo(normalizeBureau(b)) : null;
+        return { color: "#fff", weight: 0.5, fillColor: info?.color ?? "#e9edf3", fillOpacity: info ? 0.82 : 0.35 };
+      };
+      styleFnsRef.current = { base, hover: (c) => withHover(base(c)), selected: (c) => withSelected(base(c)) };
       const layer = L.geoJSON(bvGeo, {
         style: (feature: any) => {
           const code = feature.properties.codeBureauVote;
-          const b = bvBureaux[code];
-          const info = b ? metricInfo(normalizeBureau(b)) : null;
-          return { color: "#fff", weight: 0.5, fillColor: info?.color ?? "#e9edf3", fillOpacity: info ? 0.82 : 0.35 };
+          return code === selectedCodeRef.current ? withSelected(base(code)) : base(code);
         },
         onEachFeature: (feature: any, lyr: any) => {
           const code = feature.properties.codeBureauVote;
           const b = bvBureaux[code];
           const name = `${feature.properties.nomCommune} — bureau ${feature.properties.numeroBureauVote}`;
-          lyr.bindTooltip(b ? `<b>${name}</b><br/>${metricInfo(normalizeBureau(b)).label}` : `${name}<br/>Pas de résultat`, {
-            sticky: true,
-            className: "elec-tooltip",
-          });
-          lyr.on("click", () => setSelectedCode(code));
-          lyr.on("mouseover", () => lyr.setStyle({ weight: 1.8, color: "#000091" }));
-          lyr.on("mouseout", () => lyr.setStyle({ weight: 0.5, color: "#fff" }));
+          wireFeature(code, lyr, b ? `<b>${name}</b><br/>${metricInfo(normalizeBureau(b)).label}` : `${name}<br/>Pas de résultat`);
         },
       }).addTo(map);
       layerRef.current = layer;
@@ -315,25 +343,44 @@ export default function ElectionsPage() {
     const dataset = scale === "circonscription" ? circoData[`${dataKey}-circo`]?.circonscriptions : current?.communes;
     if (!geo || !dataset) return;
 
+    const baseWeight = scale === "circonscription" ? 1.4 : 0.8;
+    const base = (code: string) => {
+      const u = dataset[code];
+      const info = u ? metricInfo(u) : { color: "#e9edf3" };
+      return { color: "#fff", weight: baseWeight, fillColor: info.color, fillOpacity: 0.82 };
+    };
+    styleFnsRef.current = { base, hover: (c) => withHover(base(c)), selected: (c) => withSelected(base(c)) };
     const layer = L.geoJSON(geo, {
       style: (feature: any) => {
         const code = scale === "circonscription" ? feature.properties.code_circonscription : feature.properties.code;
-        const u = dataset[code];
-        const info = u ? metricInfo(u) : { color: "#e9edf3" };
-        return { color: "#fff", weight: scale === "circonscription" ? 1.4 : 0.8, fillColor: info.color, fillOpacity: 0.82 };
+        return code === selectedCodeRef.current ? withSelected(base(code)) : base(code);
       },
       onEachFeature: (feature: any, lyr: any) => {
         const code = scale === "circonscription" ? feature.properties.code_circonscription : feature.properties.code;
         const u = dataset[code];
         const name = feature.properties.nom;
-        lyr.bindTooltip(u ? `<b>${name}</b><br/>${metricInfo(u).label}` : name, { sticky: true, className: "elec-tooltip" });
-        lyr.on("click", () => setSelectedCode(code));
-        lyr.on("mouseover", () => lyr.setStyle({ weight: 2.4, color: "#000091" }));
-        lyr.on("mouseout", () => lyr.setStyle({ weight: scale === "circonscription" ? 1.4 : 0.8, color: "#fff" }));
+        wireFeature(code, lyr, u ? `<b>${name}</b><br/>${metricInfo(u).label}` : name);
       },
     }).addTo(map);
     layerRef.current = layer;
   }, [scale, communesGeo, circoGeo, bvGeo, bvData, cantonGeo, cantonData, current, circoData, dataKey, metric, scoreCandidat]);
+
+  // Garde selectedCodeRef synchronisé (lu par les gestionnaires mouseover/mouseout ci-dessus,
+  // qui sont attachés une seule fois par construction de couche et ne doivent pas figer
+  // l'ancienne sélection) et applique/retire le halo de sélection persistant sans reconstruire
+  // toute la couche géographique à chaque clic.
+  useEffect(() => {
+    const prev = selectedCodeRef.current;
+    selectedCodeRef.current = selectedCode;
+    const fns = styleFnsRef.current;
+    if (!fns) return;
+    if (prev && prev !== selectedCode && layersByCodeRef.current[prev]) {
+      layersByCodeRef.current[prev].setStyle(fns.base(prev));
+    }
+    if (selectedCode && layersByCodeRef.current[selectedCode]) {
+      layersByCodeRef.current[selectedCode].setStyle(fns.selected(selectedCode));
+    }
+  }, [selectedCode]);
 
   const selectedUnit: UnitResult | null = useMemo(() => {
     if (!selectedCode) return null;
@@ -722,7 +769,7 @@ export default function ElectionsPage() {
       </div>
       <footer className="elec-footer">
         <span>Atlas électoral du Val-d'Oise — DDT 95 · module de l'Atlas territorial</span>
-        <span>Présidentielle 2022, Législatives 2024, Européennes 2024, Municipales 2020 · données réelles</span>
+        <span>Municipales 2026, Présidentielle 2022, Législatives 2024, Européennes 2024, Municipales 2020, Départementales 2021 · données réelles</span>
       </footer>
 
       <dialog ref={sourceDialog} className="elec-source-dialog">

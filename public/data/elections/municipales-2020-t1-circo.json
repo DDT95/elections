@@ -232,12 +232,28 @@
      "pct_inscrits": 0.42
     },
     {
+     "nom": "MORIN",
+     "prenom": "Dominique",
+     "nuance": "NC",
+     "voix": 339,
+     "pct_exprimes": 0.98,
+     "pct_inscrits": 0.42
+    },
+    {
      "nom": "AZE",
      "prenom": "Catherine",
      "nuance": "LNC",
      "voix": 337,
      "pct_exprimes": 0.98,
      "pct_inscrits": 0.41
+    },
+    {
+     "nom": "HAMON",
+     "prenom": "Stéphanie",
+     "nuance": "NC",
+     "voix": 328,
+     "pct_exprimes": 0.95,
+     "pct_inscrits": 0.4
     },
     {
      "nom": "PELLETIER",
@@ -272,16 +288,16 @@
      "pct_inscrits": 0.35
     },
     {
-     "nom": "PINSSON",
-     "prenom": "Franck",
+     "nom": "PETIT",
+     "prenom": "Christine",
      "nuance": "NC",
      "voix": 260,
      "pct_exprimes": 0.75,
      "pct_inscrits": 0.32
     },
     {
-     "nom": "PETIT",
-     "prenom": "Christine",
+     "nom": "PINSSON",
+     "prenom": "Franck",
      "nuance": "NC",
      "voix": 260,
      "pct_exprimes": 0.75,
@@ -456,16 +472,16 @@
      "pct_inscrits": 0.3
     },
     {
-     "nom": "DEHOLLANDER",
-     "prenom": "Carole",
+     "nom": "RICHTER",
+     "prenom": "Stefan",
      "nuance": "NC",
      "voix": 245,
      "pct_exprimes": 0.71,
      "pct_inscrits": 0.3
     },
     {
-     "nom": "RICHTER",
-     "prenom": "Stefan",
+     "nom": "DEHOLLANDER",
+     "prenom": "Carole",
      "nuance": "NC",
      "voix": 245,
      "pct_exprimes": 0.71,
@@ -488,6 +504,14 @@
      "pct_inscrits": 0.3
     },
     {
+     "nom": "VACHER",
+     "prenom": "Patrick",
+     "nuance": "NC",
+     "voix": 244,
+     "pct_exprimes": 0.71,
+     "pct_inscrits": 0.3
+    },
+    {
      "nom": "POULAIN-DUVAL",
      "prenom": "Sandrine",
      "nuance": "NC",
@@ -496,8 +520,8 @@
      "pct_inscrits": 0.3
     },
     {
-     "nom": "VACHER",
-     "prenom": "Patrick",
+     "nom": "HUET",
+     "prenom": "François",
      "nuance": "NC",
      "voix": 244,
      "pct_exprimes": 0.71,
@@ -512,11 +536,11 @@
      "pct_inscrits": 0.3
     },
     {
-     "nom": "HUET",
-     "prenom": "François",
+     "nom": "LETAILLEUR",
+     "prenom": "Jean-Jacques",
      "nuance": "NC",
-     "voix": 244,
-     "pct_exprimes": 0.71,
+     "voix": 243,
+     "pct_exprimes": 0.7,
      "pct_inscrits": 0.3
     },
     {
@@ -544,6 +568,22 @@
      "pct_inscrits": 0.3
     },
     {
+     "nom": "CARPENTIER",
+     "prenom": "Catherine",
+     "nuance": "NC",
+     "voix": 242,
+     "pct_exprimes": 0.7,
+     "pct_inscrits": 0.3
+    },
+    {
+     "nom": "THOMAS",
+     "prenom": "Gilles",
+     "nuance": "NC",
+     "voix": 242,
+     "pct_exprimes": 0.7,
+     "pct_inscrits": 0.3
+    },
+    {
      "nom": "ZORIO",
      "prenom": "Martine",
      "nuance": "NC",
@@ -556,6 +596,14 @@
      "prenom": "Romuald",
      "nuance": "NC",
      "voix": 242,
+     "pct_exprimes": 0.7,
+     "pct_inscrits": 0.3
+    },
+    {
+     "nom": "SCHWEITZER",
+     "prenom": "Bernard",
+     "nuance": "NC",
+     "voix": 241,
      "pct_exprimes": 0.7,
      "pct_inscrits": 0.3
     },
@@ -581,6 +629,14 @@
      "nuance": "NC",
      "voix": 241,
      "pct_exprimes": 0.7,
+     "pct_inscrits": 0.3
+    },
+    {
+     "nom": "FOUCAULT",
+     "prenom": "Jérôme",
+     "nuance": "NC",
+     "voix": 240,
+     "pct_exprimes": 0.69,
      "pct_inscrits": 0.3
     },
     {
@@ -610,6 +666,14 @@
     {
      "nom": "PÉAN",
      "prenom": "Bruno",
+     "nuance": "NC",
+     "voix": 239,
+     "pct_exprimes": 0.69,
+     "pct_inscrits": 0.29
+    },
+    {
+     "nom": "DUPREZ",
+     "prenom": "Patrick",
      "nuance": "NC",
      "voix": 239,
      "pct_exprimes": 0.69,
@@ -664,6 +728,14 @@
      "pct_inscrits": 0.29
     },
     {
+     "nom": "DEVICQUE-FOURNIER",
+     "prenom": "Estelle",
+     "nuance": "NC",
+     "voix": 237,
+     "pct_exprimes": 0.69,
+     "pct_inscrits": 0.29
+    },
+    {
      "nom": "DEVIENNE",
      "prenom": "Anthony",
      "nuance": "NC",
@@ -696,6 +768,14 @@
      "pct_inscrits": 0.29
     },
     {
+     "nom": "DUVAL",
+     "prenom": "Sandra",
+     "nuance": "NC",
+     "voix": 236,
+     "pct_exprimes": 0.68,
+     "pct_inscrits": 0.29
+    },
+    {
      "nom": "BOURCIGAUX",
      "prenom": "Jean",
      "nuance": "NC",
@@ -720,16 +800,16 @@
      "pct_inscrits": 0.29
     },
     {
-     "nom": "NEGRERIE",
-     "prenom": "Stéphane",
+     "nom": "DUMOUCEL",
+     "prenom": "Jean-Marie",
      "nuance": "NC",
      "voix": 235,
      "pct_exprimes": 0.68,
      "pct_inscrits": 0.29
     },
     {
-     "nom": "DUMOUCEL",
-     "prenom": "Jean-Marie",
+     "nom": "NEGRERIE",
+     "prenom": "Stéphane",
      "nuance": "NC",
      "voix": 235,
      "pct_exprimes": 0.68,
@@ -744,16 +824,16 @@
      "pct_inscrits": 0.29
     },
     {
-     "nom": "FREULON",
-     "prenom": "Amélie",
+     "nom": "CHIBANI",
+     "prenom": "Ahcene",
      "nuance": "NC",
      "voix": 234,
      "pct_exprimes": 0.68,
      "pct_inscrits": 0.29
     },
     {
-     "nom": "CHIBANI",
-     "prenom": "Ahcene",
+     "nom": "FREULON",
+     "prenom": "Amélie",
      "nuance": "NC",
      "voix": 234,
      "pct_exprimes": 0.68,
@@ -784,14 +864,6 @@
      "pct_inscrits": 0.29
     },
     {
-     "nom": "HERPIN-POULENAT",
-     "prenom": "Dominique",
-     "nuance": "NC",
-     "voix": 234,
-     "pct_exprimes": 0.68,
-     "pct_inscrits": 0.29
-    },
-    {
      "nom": "MIRAMONT",
      "prenom": "Jennifer",
      "nuance": "NC",
@@ -800,8 +872,40 @@
      "pct_inscrits": 0.29
     },
     {
+     "nom": "HERPIN-POULENAT",
+     "prenom": "Dominique",
+     "nuance": "NC",
+     "voix": 234,
+     "pct_exprimes": 0.68,
+     "pct_inscrits": 0.29
+    },
+    {
      "nom": "REDON",
      "prenom": "Dorothée",
+     "nuance": "NC",
+     "voix": 233,
+     "pct_exprimes": 0.67,
+     "pct_inscrits": 0.29
+    },
+    {
+     "nom": "SORET",
+     "prenom": "Violette",
+     "nuance": "NC",
+     "voix": 233,
+     "pct_exprimes": 0.67,
+     "pct_inscrits": 0.29
+    },
+    {
+     "nom": "GAUDFRIN",
+     "prenom": "Eric",
+     "nuance": "NC",
+     "voix": 233,
+     "pct_exprimes": 0.67,
+     "pct_inscrits": 0.29
+    },
+    {
+     "nom": "DE DREE",
+     "prenom": "Paul",
      "nuance": "NC",
      "voix": 233,
      "pct_exprimes": 0.67,
@@ -824,6 +928,14 @@
      "pct_inscrits": 0.29
     },
     {
+     "nom": "BENOIST",
+     "prenom": "Angélique",
+     "nuance": "NC",
+     "voix": 233,
+     "pct_exprimes": 0.67,
+     "pct_inscrits": 0.29
+    },
+    {
      "nom": "DEBBAH",
      "prenom": "Nadia",
      "nuance": "NC",
@@ -840,18 +952,18 @@
      "pct_inscrits": 0.29
     },
     {
-     "nom": "BENOIST",
-     "prenom": "Angélique",
+     "nom": "DUFOURMANTEL",
+     "prenom": "Didier",
      "nuance": "NC",
      "voix": 233,
      "pct_exprimes": 0.67,
      "pct_inscrits": 0.29
     },
     {
-     "nom": "DUFOURMANTEL",
-     "prenom": "Didier",
+     "nom": "DEPONT",
+     "prenom": "Christophe",
      "nuance": "NC",
-     "voix": 233,
+     "voix": 232,
      "pct_exprimes": 0.67,
      "pct_inscrits": 0.29
     },
@@ -874,14 +986,6 @@
     {
      "nom": "URVOY",
      "prenom": "Denis",
-     "nuance": "NC",
-     "voix": 232,
-     "pct_exprimes": 0.67,
-     "pct_inscrits": 0.29
-    },
-    {
-     "nom": "DEPONT",
-     "prenom": "Christophe",
      "nuance": "NC",
      "voix": 232,
      "pct_exprimes": 0.67,
@@ -976,8 +1080,8 @@
      "pct_inscrits": 0.28
     },
     {
-     "nom": "LEFEVRE",
-     "prenom": "Raymond",
+     "nom": "DUSSAULX",
+     "prenom": "Céline",
      "nuance": "NC",
      "voix": 227,
      "pct_exprimes": 0.66,
@@ -986,6 +1090,14 @@
     {
      "nom": "DESOR",
      "prenom": "Philippe",
+     "nuance": "NC",
+     "voix": 227,
+     "pct_exprimes": 0.66,
+     "pct_inscrits": 0.28
+    },
+    {
+     "nom": "LEFEVRE",
+     "prenom": "Raymond",
      "nuance": "NC",
      "voix": 227,
      "pct_exprimes": 0.66,
@@ -1008,16 +1120,16 @@
      "pct_inscrits": 0.28
     },
     {
-     "nom": "DUSSURE",
-     "prenom": "Fernand",
+     "nom": "COLLURA",
+     "prenom": "Jean-Guy",
      "nuance": "NC",
      "voix": 226,
      "pct_exprimes": 0.65,
      "pct_inscrits": 0.28
     },
     {
-     "nom": "COLLURA",
-     "prenom": "Jean-Guy",
+     "nom": "DUSSURE",
+     "prenom": "Fernand",
      "nuance": "NC",
      "voix": 226,
      "pct_exprimes": 0.65,
@@ -1072,6 +1184,14 @@
      "pct_inscrits": 0.27
     },
     {
+     "nom": "ROCHETTE",
+     "prenom": "Alain",
+     "nuance": "NC",
+     "voix": 222,
+     "pct_exprimes": 0.64,
+     "pct_inscrits": 0.27
+    },
+    {
      "nom": "DAVID",
      "prenom": "Catherine",
      "nuance": "NC",
@@ -1112,16 +1232,16 @@
      "pct_inscrits": 0.27
     },
     {
-     "nom": "LEBECQ",
-     "prenom": "Jacques",
+     "nom": "SINGEOT",
+     "prenom": "Mickael",
      "nuance": "NC",
      "voix": 219,
      "pct_exprimes": 0.63,
      "pct_inscrits": 0.27
     },
     {
-     "nom": "SINGEOT",
-     "prenom": "Mickael",
+     "nom": "LEBECQ",
+     "prenom": "Jacques",
      "nuance": "NC",
      "voix": 219,
      "pct_exprimes": 0.63,
@@ -1152,16 +1272,16 @@
      "pct_inscrits": 0.27
     },
     {
-     "nom": "PARÉ",
-     "prenom": "Jean Pierre",
+     "nom": "HEUDEBERT",
+     "prenom": "Michel",
      "nuance": "NC",
      "voix": 217,
      "pct_exprimes": 0.63,
      "pct_inscrits": 0.27
     },
     {
-     "nom": "HEUDEBERT",
-     "prenom": "Michel",
+     "nom": "PARÉ",
+     "prenom": "Jean Pierre",
      "nuance": "NC",
      "voix": 217,
      "pct_exprimes": 0.63,
@@ -1208,6 +1328,14 @@
      "pct_inscrits": 0.27
     },
     {
+     "nom": "COUBRICHE",
+     "prenom": "Romain",
+     "nuance": "NC",
+     "voix": 216,
+     "pct_exprimes": 0.63,
+     "pct_inscrits": 0.27
+    },
+    {
      "nom": "LEBLANC",
      "prenom": "Audrey",
      "nuance": "NC",
@@ -1218,14 +1346,6 @@
     {
      "nom": "DONET",
      "prenom": "Patrick",
-     "nuance": "NC",
-     "voix": 216,
-     "pct_exprimes": 0.63,
-     "pct_inscrits": 0.27
-    },
-    {
-     "nom": "COUBRICHE",
-     "prenom": "Romain",
      "nuance": "NC",
      "voix": 216,
      "pct_exprimes": 0.63,
@@ -1280,14 +1400,6 @@
      "pct_inscrits": 0.26
     },
     {
-     "nom": "DEUTSCH",
-     "prenom": "Isabelle",
-     "nuance": "NC",
-     "voix": 214,
-     "pct_exprimes": 0.62,
-     "pct_inscrits": 0.26
-    },
-    {
      "nom": "LANDEMARD",
      "prenom": "Pierre",
      "nuance": "NC",
@@ -1296,8 +1408,24 @@
      "pct_inscrits": 0.26
     },
     {
+     "nom": "DEUTSCH",
+     "prenom": "Isabelle",
+     "nuance": "NC",
+     "voix": 214,
+     "pct_exprimes": 0.62,
+     "pct_inscrits": 0.26
+    },
+    {
      "nom": "LEMOINE",
      "prenom": "Philippe",
+     "nuance": "NC",
+     "voix": 214,
+     "pct_exprimes": 0.62,
+     "pct_inscrits": 0.26
+    },
+    {
+     "nom": "MESNIL",
+     "prenom": "Céline",
      "nuance": "NC",
      "voix": 214,
      "pct_exprimes": 0.62,
@@ -1328,16 +1456,16 @@
      "pct_inscrits": 0.26
     },
     {
-     "nom": "FISCHER",
-     "prenom": "Franck",
+     "nom": "FERRAY",
+     "prenom": "Gregory",
      "nuance": "NC",
      "voix": 213,
      "pct_exprimes": 0.62,
      "pct_inscrits": 0.26
     },
     {
-     "nom": "FERRAY",
-     "prenom": "Gregory",
+     "nom": "FISCHER",
+     "prenom": "Franck",
      "nuance": "NC",
      "voix": 213,
      "pct_exprimes": 0.62,
@@ -1424,16 +1552,16 @@
      "pct_inscrits": 0.26
     },
     {
-     "nom": "SICOT",
-     "prenom": "Michel",
+     "nom": "GIRARD",
+     "prenom": "Nathalie",
      "nuance": "NC",
      "voix": 209,
      "pct_exprimes": 0.61,
      "pct_inscrits": 0.26
     },
     {
-     "nom": "GIRARD",
-     "prenom": "Nathalie",
+     "nom": "SICOT",
+     "prenom": "Michel",
      "nuance": "NC",
      "voix": 209,
      "pct_exprimes": 0.61,
@@ -1552,6 +1680,14 @@
      "pct_inscrits": 0.24
     },
     {
+     "nom": "BESNARD",
+     "prenom": "Michel",
+     "nuance": "NC",
+     "voix": 195,
+     "pct_exprimes": 0.56,
+     "pct_inscrits": 0.24
+    },
+    {
      "nom": "LEROUX",
      "prenom": "Sylvain",
      "nuance": "NC",
@@ -1560,16 +1696,16 @@
      "pct_inscrits": 0.24
     },
     {
-     "nom": "HOT",
-     "prenom": "Elodie",
+     "nom": "BOTTO FLAMENT",
+     "prenom": "Sophie",
      "nuance": "NC",
      "voix": 195,
      "pct_exprimes": 0.56,
      "pct_inscrits": 0.24
     },
     {
-     "nom": "BOTTO FLAMENT",
-     "prenom": "Sophie",
+     "nom": "HOT",
+     "prenom": "Elodie",
      "nuance": "NC",
      "voix": 195,
      "pct_exprimes": 0.56,
@@ -1592,16 +1728,16 @@
      "pct_inscrits": 0.24
     },
     {
-     "nom": "SZCZEPANIAK",
-     "prenom": "Didier",
+     "nom": "VAN DE WIEL",
+     "prenom": "Claire",
      "nuance": "NC",
      "voix": 194,
      "pct_exprimes": 0.56,
      "pct_inscrits": 0.24
     },
     {
-     "nom": "VAN DE WIEL",
-     "prenom": "Claire",
+     "nom": "SZCZEPANIAK",
+     "prenom": "Didier",
      "nuance": "NC",
      "voix": 194,
      "pct_exprimes": 0.56,
@@ -1640,6 +1776,14 @@
      "pct_inscrits": 0.24
     },
     {
+     "nom": "DE SMEDT",
+     "prenom": "Arnaud",
+     "nuance": "NC",
+     "voix": 192,
+     "pct_exprimes": 0.56,
+     "pct_inscrits": 0.24
+    },
+    {
      "nom": "DESPRÉS",
      "prenom": "Christine",
      "nuance": "NC",
@@ -1656,40 +1800,8 @@
      "pct_inscrits": 0.24
     },
     {
-     "nom": "DE SMEDT",
-     "prenom": "Arnaud",
-     "nuance": "NC",
-     "voix": 192,
-     "pct_exprimes": 0.56,
-     "pct_inscrits": 0.24
-    },
-    {
-     "nom": "HARANGER",
-     "prenom": "Benoit",
-     "nuance": "NC",
-     "voix": 192,
-     "pct_exprimes": 0.56,
-     "pct_inscrits": 0.24
-    },
-    {
-     "nom": "PEPIN",
-     "prenom": "Stephane",
-     "nuance": "NC",
-     "voix": 192,
-     "pct_exprimes": 0.56,
-     "pct_inscrits": 0.24
-    },
-    {
-     "nom": "LANDRE",
-     "prenom": "Jacques",
-     "nuance": "NC",
-     "voix": 192,
-     "pct_exprimes": 0.56,
-     "pct_inscrits": 0.24
-    },
-    {
-     "nom": "LEVEL",
-     "prenom": "Sophie",
+     "nom": "BRETON",
+     "prenom": "Romain",
      "nuance": "NC",
      "voix": 192,
      "pct_exprimes": 0.56,
@@ -1712,8 +1824,32 @@
      "pct_inscrits": 0.24
     },
     {
-     "nom": "BRETON",
-     "prenom": "Romain",
+     "nom": "HARANGER",
+     "prenom": "Benoit",
+     "nuance": "NC",
+     "voix": 192,
+     "pct_exprimes": 0.56,
+     "pct_inscrits": 0.24
+    },
+    {
+     "nom": "LANDRE",
+     "prenom": "Jacques",
+     "nuance": "NC",
+     "voix": 192,
+     "pct_exprimes": 0.56,
+     "pct_inscrits": 0.24
+    },
+    {
+     "nom": "LEVEL",
+     "prenom": "Sophie",
+     "nuance": "NC",
+     "voix": 192,
+     "pct_exprimes": 0.56,
+     "pct_inscrits": 0.24
+    },
+    {
+     "nom": "PEPIN",
+     "prenom": "Stephane",
      "nuance": "NC",
      "voix": 192,
      "pct_exprimes": 0.56,
@@ -1744,14 +1880,6 @@
      "pct_inscrits": 0.23
     },
     {
-     "nom": "HAMANN",
-     "prenom": "Laurent",
-     "nuance": "NC",
-     "voix": 191,
-     "pct_exprimes": 0.55,
-     "pct_inscrits": 0.23
-    },
-    {
      "nom": "EQUI",
      "prenom": "Sébastien",
      "nuance": "NC",
@@ -1760,16 +1888,24 @@
      "pct_inscrits": 0.23
     },
     {
-     "nom": "GUILMIN",
-     "prenom": "Bruno",
+     "nom": "HAMANN",
+     "prenom": "Laurent",
      "nuance": "NC",
-     "voix": 190,
+     "voix": 191,
      "pct_exprimes": 0.55,
      "pct_inscrits": 0.23
     },
     {
      "nom": "VANDENBORGHT",
      "prenom": "Natacha",
+     "nuance": "NC",
+     "voix": 190,
+     "pct_exprimes": 0.55,
+     "pct_inscrits": 0.23
+    },
+    {
+     "nom": "GUILMIN",
+     "prenom": "Bruno",
      "nuance": "NC",
      "voix": 190,
      "pct_exprimes": 0.55,
@@ -1816,16 +1952,16 @@
      "pct_inscrits": 0.23
     },
     {
-     "nom": "VANDEPUTTE",
-     "prenom": "Pierre",
+     "nom": "ROGER DE VILLERS",
+     "prenom": "Alexandre",
      "nuance": "NC",
      "voix": 189,
      "pct_exprimes": 0.55,
      "pct_inscrits": 0.23
     },
     {
-     "nom": "ROGER DE VILLERS",
-     "prenom": "Alexandre",
+     "nom": "VANDEPUTTE",
+     "prenom": "Pierre",
      "nuance": "NC",
      "voix": 189,
      "pct_exprimes": 0.55,
@@ -1896,10 +2032,10 @@
      "pct_inscrits": 0.23
     },
     {
-     "nom": "FRANCOUT-PHAM",
-     "prenom": "Cristele",
+     "nom": "PAPILLON",
+     "prenom": "Bernard",
      "nuance": "NC",
-     "voix": 186,
+     "voix": 187,
      "pct_exprimes": 0.54,
      "pct_inscrits": 0.23
     },
@@ -1920,8 +2056,16 @@
      "pct_inscrits": 0.23
     },
     {
-     "nom": "PETIT",
-     "prenom": "Bertrand",
+     "nom": "FRANCOUT-PHAM",
+     "prenom": "Cristele",
+     "nuance": "NC",
+     "voix": 186,
+     "pct_exprimes": 0.54,
+     "pct_inscrits": 0.23
+    },
+    {
+     "nom": "TROGNON",
+     "prenom": "Chantal",
      "nuance": "NC",
      "voix": 186,
      "pct_exprimes": 0.54,
@@ -1936,8 +2080,8 @@
      "pct_inscrits": 0.23
     },
     {
-     "nom": "TROGNON",
-     "prenom": "Chantal",
+     "nom": "PETIT",
+     "prenom": "Bertrand",
      "nuance": "NC",
      "voix": 186,
      "pct_exprimes": 0.54,
@@ -1976,16 +2120,16 @@
      "pct_inscrits": 0.23
     },
     {
-     "nom": "FLOTTE",
-     "prenom": "Vincent",
+     "nom": "POCHET",
+     "prenom": "Stéphane",
      "nuance": "NC",
      "voix": 185,
      "pct_exprimes": 0.54,
      "pct_inscrits": 0.23
     },
     {
-     "nom": "POCHET",
-     "prenom": "Stéphane",
+     "nom": "FLOTTE",
+     "prenom": "Vincent",
      "nuance": "NC",
      "voix": 185,
      "pct_exprimes": 0.54,
@@ -2018,6 +2162,22 @@
     {
      "nom": "BEAUCHAMP",
      "prenom": "Alain",
+     "nuance": "NC",
+     "voix": 184,
+     "pct_exprimes": 0.53,
+     "pct_inscrits": 0.23
+    },
+    {
+     "nom": "CLABAUT",
+     "prenom": "Michel",
+     "nuance": "NC",
+     "voix": 184,
+     "pct_exprimes": 0.53,
+     "pct_inscrits": 0.23
+    },
+    {
+     "nom": "HALTER",
+     "prenom": "Marlène",
      "nuance": "NC",
      "voix": 184,
      "pct_exprimes": 0.53,
@@ -2064,6 +2224,14 @@
      "pct_inscrits": 0.22
     },
     {
+     "nom": "GARDES",
+     "prenom": "Aurore",
+     "nuance": "NC",
+     "voix": 182,
+     "pct_exprimes": 0.53,
+     "pct_inscrits": 0.22
+    },
+    {
      "nom": "PINCHON",
      "prenom": "Brigitte",
      "nuance": "NC",
@@ -2080,14 +2248,6 @@
      "pct_inscrits": 0.22
     },
     {
-     "nom": "RIOM",
-     "prenom": "Hélène",
-     "nuance": "NC",
-     "voix": 181,
-     "pct_exprimes": 0.52,
-     "pct_inscrits": 0.22
-    },
-    {
      "nom": "LIGNON",
      "prenom": "Catherine",
      "nuance": "NC",
@@ -2096,8 +2256,8 @@
      "pct_inscrits": 0.22
     },
     {
-     "nom": "MARCINIK",
-     "prenom": "Maria",
+     "nom": "RIOM",
+     "prenom": "Hélène",
      "nuance": "NC",
      "voix": 181,
      "pct_exprimes": 0.52,
@@ -2106,6 +2266,14 @@
     {
      "nom": "SARGERET",
      "prenom": "Marc",
+     "nuance": "NC",
+     "voix": 181,
+     "pct_exprimes": 0.52,
+     "pct_inscrits": 0.22
+    },
+    {
+     "nom": "MARCINIK",
+     "prenom": "Maria",
      "nuance": "NC",
      "voix": 181,
      "pct_exprimes": 0.52,
@@ -2168,8 +2336,16 @@
      "pct_inscrits": 0.22
     },
     {
-     "nom": "SENEQUIER",
-     "prenom": "Alexander",
+     "nom": "RAZAFIMBELO",
+     "prenom": "Michel",
+     "nuance": "NC",
+     "voix": 178,
+     "pct_exprimes": 0.52,
+     "pct_inscrits": 0.22
+    },
+    {
+     "nom": "VATTAIRE",
+     "prenom": "Audrey",
      "nuance": "NC",
      "voix": 178,
      "pct_exprimes": 0.52,
@@ -2178,6 +2354,14 @@
     {
      "nom": "GRANCHER",
      "prenom": "Thibaut",
+     "nuance": "NC",
+     "voix": 178,
+     "pct_exprimes": 0.52,
+     "pct_inscrits": 0.22
+    },
+    {
+     "nom": "SENEQUIER",
+     "prenom": "Alexander",
      "nuance": "NC",
      "voix": 178,
      "pct_exprimes": 0.52,
@@ -2224,6 +2408,22 @@
      "pct_inscrits": 0.22
     },
     {
+     "nom": "DEMORGNY",
+     "prenom": "Alexandre",
+     "nuance": "NC",
+     "voix": 175,
+     "pct_exprimes": 0.51,
+     "pct_inscrits": 0.22
+    },
+    {
+     "nom": "BIRON",
+     "prenom": "Olivier",
+     "nuance": "NC",
+     "voix": 174,
+     "pct_exprimes": 0.5,
+     "pct_inscrits": 0.21
+    },
+    {
      "nom": "RICHER",
      "prenom": "Marc",
      "nuance": "NC",
@@ -2232,16 +2432,16 @@
      "pct_inscrits": 0.21
     },
     {
-     "nom": "MOCHON",
-     "prenom": "Michel",
+     "nom": "POTTIER",
+     "prenom": "Nathalie",
      "nuance": "NC",
      "voix": 174,
      "pct_exprimes": 0.5,
      "pct_inscrits": 0.21
     },
     {
-     "nom": "POTTIER",
-     "prenom": "Nathalie",
+     "nom": "MOCHON",
+     "prenom": "Michel",
      "nuance": "NC",
      "voix": 174,
      "pct_exprimes": 0.5,
@@ -2312,6 +2512,22 @@
      "pct_inscrits": 0.21
     },
     {
+     "nom": "BERKANI",
+     "prenom": "Bezza",
+     "nuance": "NC",
+     "voix": 172,
+     "pct_exprimes": 0.5,
+     "pct_inscrits": 0.21
+    },
+    {
+     "nom": "PLESSIS",
+     "prenom": "Daniel",
+     "nuance": "NC",
+     "voix": 172,
+     "pct_exprimes": 0.5,
+     "pct_inscrits": 0.21
+    },
+    {
      "nom": "BASCOU",
      "prenom": "Xavier",
      "nuance": "NC",
@@ -2328,14 +2544,6 @@
      "pct_inscrits": 0.21
     },
     {
-     "nom": "POUSSEROT",
-     "prenom": "Cécile",
-     "nuance": "NC",
-     "voix": 171,
-     "pct_exprimes": 0.5,
-     "pct_inscrits": 0.21
-    },
-    {
      "nom": "MICHAUX",
      "prenom": "Pascal",
      "nuance": "NC",
@@ -2344,8 +2552,8 @@
      "pct_inscrits": 0.21
     },
     {
-     "nom": "PLA",
-     "prenom": "Jean-Marc",
+     "nom": "POUSSEROT",
+     "prenom": "Cécile",
      "nuance": "NC",
      "voix": 171,
      "pct_exprimes": 0.5,
@@ -2354,6 +2562,14 @@
     {
      "nom": "CHERMANNE",
      "prenom": "Jean-Yves",
+     "nuance": "NC",
+     "voix": 171,
+     "pct_exprimes": 0.5,
+     "pct_inscrits": 0.21
+    },
+    {
+     "nom": "PLA",
+     "prenom": "Jean-Marc",
      "nuance": "NC",
      "voix": 171,
      "pct_exprimes": 0.5,
@@ -2384,8 +2600,16 @@
      "pct_inscrits": 0.21
     },
     {
-     "nom": "STEIN",
-     "prenom": "Benoit",
+     "nom": "BRIGANT",
+     "prenom": "Valentine",
+     "nuance": "NC",
+     "voix": 170,
+     "pct_exprimes": 0.49,
+     "pct_inscrits": 0.21
+    },
+    {
+     "nom": "PICARD",
+     "prenom": "Romain",
      "nuance": "NC",
      "voix": 170,
      "pct_exprimes": 0.49,
@@ -2400,8 +2624,8 @@
      "pct_inscrits": 0.21
     },
     {
-     "nom": "PICARD",
-     "prenom": "Romain",
+     "nom": "STEIN",
+     "prenom": "Benoit",
      "nuance": "NC",
      "voix": 170,
      "pct_exprimes": 0.49,
@@ -2418,6 +2642,14 @@
     {
      "nom": "DESLANDES",
      "prenom": "Olivier",
+     "nuance": "NC",
+     "voix": 169,
+     "pct_exprimes": 0.49,
+     "pct_inscrits": 0.21
+    },
+    {
+     "nom": "MERVEILLEUX",
+     "prenom": "Julien",
      "nuance": "NC",
      "voix": 169,
      "pct_exprimes": 0.49,
@@ -2466,6 +2698,14 @@
     {
      "nom": "CORDEAU",
      "prenom": "Tommy",
+     "nuance": "NC",
+     "voix": 168,
+     "pct_exprimes": 0.49,
+     "pct_inscrits": 0.21
+    },
+    {
+     "nom": "HONDROYANIDI",
+     "prenom": "Habiba",
      "nuance": "NC",
      "voix": 168,
      "pct_exprimes": 0.49,
@@ -2536,16 +2776,16 @@
      "pct_inscrits": 0.21
     },
     {
-     "nom": "DUHAMEL",
-     "prenom": "Franck",
+     "nom": "BLAIN",
+     "prenom": "Bernard",
      "nuance": "NC",
      "voix": 167,
      "pct_exprimes": 0.48,
      "pct_inscrits": 0.21
     },
     {
-     "nom": "BLAIN",
-     "prenom": "Bernard",
+     "nom": "DUHAMEL",
+     "prenom": "Franck",
      "nuance": "NC",
      "voix": 167,
      "pct_exprimes": 0.48,
@@ -2560,16 +2800,16 @@
      "pct_inscrits": 0.21
     },
     {
-     "nom": "SOUCHET",
-     "prenom": "Cedric",
+     "nom": "METAIS",
+     "prenom": "Derry",
      "nuance": "NC",
      "voix": 167,
      "pct_exprimes": 0.48,
      "pct_inscrits": 0.21
     },
     {
-     "nom": "METAIS",
-     "prenom": "Derry",
+     "nom": "SOUCHET",
+     "prenom": "Cedric",
      "nuance": "NC",
      "voix": 167,
      "pct_exprimes": 0.48,
@@ -2584,14 +2824,6 @@
      "pct_inscrits": 0.21
     },
     {
-     "nom": "HUBERT-DORÉ",
-     "prenom": "Anaïs",
-     "nuance": "NC",
-     "voix": 167,
-     "pct_exprimes": 0.48,
-     "pct_inscrits": 0.21
-    },
-    {
      "nom": "BOURGES",
      "prenom": "Audrey",
      "nuance": "NC",
@@ -2600,16 +2832,24 @@
      "pct_inscrits": 0.21
     },
     {
-     "nom": "DE KERSAUSON",
-     "prenom": "Sylvie",
+     "nom": "HUBERT-DORÉ",
+     "prenom": "Anaïs",
+     "nuance": "NC",
+     "voix": 167,
+     "pct_exprimes": 0.48,
+     "pct_inscrits": 0.21
+    },
+    {
+     "nom": "BILLIAULT",
+     "prenom": "Elsa",
      "nuance": "NC",
      "voix": 166,
      "pct_exprimes": 0.48,
      "pct_inscrits": 0.2
     },
     {
-     "nom": "BILLIAULT",
-     "prenom": "Elsa",
+     "nom": "DE KERSAUSON",
+     "prenom": "Sylvie",
      "nuance": "NC",
      "voix": 166,
      "pct_exprimes": 0.48,
@@ -2632,8 +2872,8 @@
      "pct_inscrits": 0.2
     },
     {
-     "nom": "BERNARD",
-     "prenom": "Laurent",
+     "nom": "TEILLAND",
+     "prenom": "Alain",
      "nuance": "NC",
      "voix": 166,
      "pct_exprimes": 0.48,
@@ -2648,8 +2888,8 @@
      "pct_inscrits": 0.2
     },
     {
-     "nom": "TEILLAND",
-     "prenom": "Alain",
+     "nom": "BERNARD",
+     "prenom": "Laurent",
      "nuance": "NC",
      "voix": 166,
      "pct_exprimes": 0.48,
@@ -2672,16 +2912,16 @@
      "pct_inscrits": 0.2
     },
     {
-     "nom": "RIDEL",
-     "prenom": "Matthieu",
+     "nom": "DEXIDIEUX",
+     "prenom": "Eric",
      "nuance": "NC",
      "voix": 166,
      "pct_exprimes": 0.48,
      "pct_inscrits": 0.2
     },
     {
-     "nom": "DEXIDIEUX",
-     "prenom": "Eric",
+     "nom": "RIDEL",
+     "prenom": "Matthieu",
      "nuance": "NC",
      "voix": 166,
      "pct_exprimes": 0.48,
@@ -2696,16 +2936,16 @@
      "pct_inscrits": 0.2
     },
     {
-     "nom": "NAKIB",
-     "prenom": "Farida",
+     "nom": "DURANTE",
+     "prenom": "Alexandre",
      "nuance": "NC",
      "voix": 165,
      "pct_exprimes": 0.48,
      "pct_inscrits": 0.2
     },
     {
-     "nom": "DURANTE",
-     "prenom": "Alexandre",
+     "nom": "NAKIB",
+     "prenom": "Farida",
      "nuance": "NC",
      "voix": 165,
      "pct_exprimes": 0.48,
@@ -2722,6 +2962,14 @@
     {
      "nom": "LAPORTE",
      "prenom": "Mathilde",
+     "nuance": "NC",
+     "voix": 165,
+     "pct_exprimes": 0.48,
+     "pct_inscrits": 0.2
+    },
+    {
+     "nom": "BIENFAIT",
+     "prenom": "Alexandre",
      "nuance": "NC",
      "voix": 165,
      "pct_exprimes": 0.48,
@@ -2824,6 +3072,14 @@
      "pct_inscrits": 0.2
     },
     {
+     "nom": "LADAM",
+     "prenom": "Patrick",
+     "nuance": "NC",
+     "voix": 163,
+     "pct_exprimes": 0.47,
+     "pct_inscrits": 0.2
+    },
+    {
      "nom": "CAZANAVE",
      "prenom": "Patrick",
      "nuance": "NC",
@@ -2832,16 +3088,16 @@
      "pct_inscrits": 0.2
     },
     {
-     "nom": "LUCAS",
-     "prenom": "Hélène",
+     "nom": "GUGGER",
+     "prenom": "Marion",
      "nuance": "NC",
      "voix": 162,
      "pct_exprimes": 0.47,
      "pct_inscrits": 0.2
     },
     {
-     "nom": "GUGGER",
-     "prenom": "Marion",
+     "nom": "LUCAS",
+     "prenom": "Hélène",
      "nuance": "NC",
      "voix": 162,
      "pct_exprimes": 0.47,
@@ -2856,16 +3112,16 @@
      "pct_inscrits": 0.2
     },
     {
-     "nom": "ENERIZ",
-     "prenom": "Jean Michel",
+     "nom": "OCKET",
+     "prenom": "Philippe",
      "nuance": "NC",
      "voix": 162,
      "pct_exprimes": 0.47,
      "pct_inscrits": 0.2
     },
     {
-     "nom": "OCKET",
-     "prenom": "Philippe",
+     "nom": "ENERIZ",
+     "prenom": "Jean Michel",
      "nuance": "NC",
      "voix": 162,
      "pct_exprimes": 0.47,
@@ -2912,16 +3168,16 @@
      "pct_inscrits": 0.2
     },
     {
-     "nom": "DUTAT",
-     "prenom": "Didier",
+     "nom": "RAMDANE",
+     "prenom": "Bachir",
      "nuance": "NC",
      "voix": 160,
      "pct_exprimes": 0.46,
      "pct_inscrits": 0.2
     },
     {
-     "nom": "RAMDANE",
-     "prenom": "Bachir",
+     "nom": "DUTAT",
+     "prenom": "Didier",
      "nuance": "NC",
      "voix": 160,
      "pct_exprimes": 0.46,
@@ -2936,8 +3192,8 @@
      "pct_inscrits": 0.2
     },
     {
-     "nom": "KPAKPO",
-     "prenom": "Margaux",
+     "nom": "CATHELINAUD",
+     "prenom": "Eric",
      "nuance": "NC",
      "voix": 159,
      "pct_exprimes": 0.46,
@@ -2952,8 +3208,8 @@
      "pct_inscrits": 0.2
     },
     {
-     "nom": "CUSSOT",
-     "prenom": "Marie-Anne",
+     "nom": "KPAKPO",
+     "prenom": "Margaux",
      "nuance": "NC",
      "voix": 159,
      "pct_exprimes": 0.46,
@@ -2962,6 +3218,14 @@
     {
      "nom": "BADER",
      "prenom": "Clara",
+     "nuance": "NC",
+     "voix": 159,
+     "pct_exprimes": 0.46,
+     "pct_inscrits": 0.2
+    },
+    {
+     "nom": "CUSSOT",
+     "prenom": "Marie-Anne",
      "nuance": "NC",
      "voix": 159,
      "pct_exprimes": 0.46,
@@ -3072,16 +3336,16 @@
      "pct_inscrits": 0.19
     },
     {
-     "nom": "PIGEON",
-     "prenom": "Claire",
+     "nom": "MEYER",
+     "prenom": "Thierry",
      "nuance": "NC",
      "voix": 154,
      "pct_exprimes": 0.45,
      "pct_inscrits": 0.19
     },
     {
-     "nom": "MEYER",
-     "prenom": "Thierry",
+     "nom": "PIGEON",
+     "prenom": "Claire",
      "nuance": "NC",
      "voix": 154,
      "pct_exprimes": 0.45,
@@ -3096,16 +3360,16 @@
      "pct_inscrits": 0.19
     },
     {
-     "nom": "CHARTIER",
-     "prenom": "Nathalie",
+     "nom": "HARDY",
+     "prenom": "Elodie",
      "nuance": "NC",
      "voix": 153,
      "pct_exprimes": 0.44,
      "pct_inscrits": 0.19
     },
     {
-     "nom": "WLODARCZYK",
-     "prenom": "Francine",
+     "nom": "CHARTIER",
+     "prenom": "Nathalie",
      "nuance": "NC",
      "voix": 153,
      "pct_exprimes": 0.44,
@@ -3120,8 +3384,8 @@
      "pct_inscrits": 0.19
     },
     {
-     "nom": "BICHEMIN",
-     "prenom": "Thierry",
+     "nom": "WLODARCZYK",
+     "prenom": "Francine",
      "nuance": "NC",
      "voix": 153,
      "pct_exprimes": 0.44,
@@ -3136,6 +3400,14 @@
      "pct_inscrits": 0.19
     },
     {
+     "nom": "BICHEMIN",
+     "prenom": "Thierry",
+     "nuance": "NC",
+     "voix": 153,
+     "pct_exprimes": 0.44,
+     "pct_inscrits": 0.19
+    },
+    {
      "nom": "VERCRUYSSE",
      "prenom": "Mathilde",
      "nuance": "NC",
@@ -3144,8 +3416,24 @@
      "pct_inscrits": 0.19
     },
     {
+     "nom": "MICHAUD",
+     "prenom": "Corinne",
+     "nuance": "NC",
+     "voix": 152,
+     "pct_exprimes": 0.44,
+     "pct_inscrits": 0.19
+    },
+    {
      "nom": "VISBECQ",
      "prenom": "Robert",
+     "nuance": "NC",
+     "voix": 152,
+     "pct_exprimes": 0.44,
+     "pct_inscrits": 0.19
+    },
+    {
+     "nom": "SAUVE",
+     "prenom": "Eric",
      "nuance": "NC",
      "voix": 152,
      "pct_exprimes": 0.44,
@@ -3192,6 +3480,14 @@
      "pct_inscrits": 0.19
     },
     {
+     "nom": "COURTE",
+     "prenom": "Thomas",
+     "nuance": "NC",
+     "voix": 151,
+     "pct_exprimes": 0.44,
+     "pct_inscrits": 0.19
+    },
+    {
      "nom": "VELSCH",
      "prenom": "Frederic",
      "nuance": "NC",
@@ -3202,14 +3498,6 @@
     {
      "nom": "FAUGERAS",
      "prenom": "Jessica",
-     "nuance": "NC",
-     "voix": 151,
-     "pct_exprimes": 0.44,
-     "pct_inscrits": 0.19
-    },
-    {
-     "nom": "COURTE",
-     "prenom": "Thomas",
      "nuance": "NC",
      "voix": 151,
      "pct_exprimes": 0.44,
@@ -3256,6 +3544,14 @@
      "pct_inscrits": 0.19
     },
     {
+     "nom": "DIAMORO",
+     "prenom": "Denis",
+     "nuance": "NC",
+     "voix": 151,
+     "pct_exprimes": 0.44,
+     "pct_inscrits": 0.19
+    },
+    {
      "nom": "DRUGÉ",
      "prenom": "Bernard",
      "nuance": "NC",
@@ -3272,14 +3568,6 @@
      "pct_inscrits": 0.19
     },
     {
-     "nom": "DIAMORO",
-     "prenom": "Denis",
-     "nuance": "NC",
-     "voix": 151,
-     "pct_exprimes": 0.44,
-     "pct_inscrits": 0.19
-    },
-    {
      "nom": "COLNAT-RATTIER",
      "prenom": "Audrey",
      "nuance": "NC",
@@ -3288,16 +3576,16 @@
      "pct_inscrits": 0.19
     },
     {
-     "nom": "CHABRIER",
-     "prenom": "Gildas",
+     "nom": "D'ORNANO",
+     "prenom": "Eric",
      "nuance": "NC",
      "voix": 150,
      "pct_exprimes": 0.43,
      "pct_inscrits": 0.18
     },
     {
-     "nom": "D'ORNANO",
-     "prenom": "Eric",
+     "nom": "CHABRIER",
+     "prenom": "Gildas",
      "nuance": "NC",
      "voix": 150,
      "pct_exprimes": 0.43,
@@ -3312,14 +3600,6 @@
      "pct_inscrits": 0.18
     },
     {
-     "nom": "MAGNAN",
-     "prenom": "Jacky",
-     "nuance": "NC",
-     "voix": 150,
-     "pct_exprimes": 0.43,
-     "pct_inscrits": 0.18
-    },
-    {
      "nom": "DELORME",
      "prenom": "Franck",
      "nuance": "NC",
@@ -3328,8 +3608,24 @@
      "pct_inscrits": 0.18
     },
     {
+     "nom": "MAGNAN",
+     "prenom": "Jacky",
+     "nuance": "NC",
+     "voix": 150,
+     "pct_exprimes": 0.43,
+     "pct_inscrits": 0.18
+    },
+    {
      "nom": "ANNEQUIN",
      "prenom": "Carine",
+     "nuance": "NC",
+     "voix": 150,
+     "pct_exprimes": 0.43,
+     "pct_inscrits": 0.18
+    },
+    {
+     "nom": "MORIN",
+     "prenom": "Franck",
      "nuance": "NC",
      "voix": 150,
      "pct_exprimes": 0.43,
@@ -3346,22 +3642,6 @@
     {
      "nom": "JARRAUD",
      "prenom": "Claire",
-     "nuance": "NC",
-     "voix": 150,
-     "pct_exprimes": 0.43,
-     "pct_inscrits": 0.18
-    },
-    {
-     "nom": "MORIN",
-     "prenom": "Dominique",
-     "nuance": "NC",
-     "voix": 150,
-     "pct_exprimes": 0.43,
-     "pct_inscrits": 0.18
-    },
-    {
-     "nom": "MORIN",
-     "prenom": "Franck",
      "nuance": "NC",
      "voix": 150,
      "pct_exprimes": 0.43,
@@ -3392,16 +3672,16 @@
      "pct_inscrits": 0.18
     },
     {
-     "nom": "GIRAUD",
-     "prenom": "Veronique",
+     "nom": "DEMULDER",
+     "prenom": "Sylvain",
      "nuance": "NC",
      "voix": 150,
      "pct_exprimes": 0.43,
      "pct_inscrits": 0.18
     },
     {
-     "nom": "DEMULDER",
-     "prenom": "Sylvain",
+     "nom": "GIRAUD",
+     "prenom": "Veronique",
      "nuance": "NC",
      "voix": 150,
      "pct_exprimes": 0.43,
@@ -3424,6 +3704,14 @@
      "pct_inscrits": 0.18
     },
     {
+     "nom": "KEITA",
+     "prenom": "Alexandre",
+     "nuance": "NC",
+     "voix": 149,
+     "pct_exprimes": 0.43,
+     "pct_inscrits": 0.18
+    },
+    {
      "nom": "BOURBON",
      "prenom": "Christian",
      "nuance": "NC",
@@ -3434,14 +3722,6 @@
     {
      "nom": "BOUDEAU",
      "prenom": "Yvan",
-     "nuance": "NC",
-     "voix": 149,
-     "pct_exprimes": 0.43,
-     "pct_inscrits": 0.18
-    },
-    {
-     "nom": "ROSIER",
-     "prenom": "Claude-Bernard",
      "nuance": "NC",
      "voix": 149,
      "pct_exprimes": 0.43,
@@ -3464,16 +3744,16 @@
      "pct_inscrits": 0.18
     },
     {
-     "nom": "MARTEAU",
-     "prenom": "Daniel",
+     "nom": "ROSIER",
+     "prenom": "Claude-Bernard",
      "nuance": "NC",
      "voix": 149,
      "pct_exprimes": 0.43,
      "pct_inscrits": 0.18
     },
     {
-     "nom": "REINERMANN",
-     "prenom": "Johann",
+     "nom": "MARTEAU",
+     "prenom": "Daniel",
      "nuance": "NC",
      "voix": 149,
      "pct_exprimes": 0.43,
@@ -3488,8 +3768,8 @@
      "pct_inscrits": 0.18
     },
     {
-     "nom": "DUCHÊNE",
-     "prenom": "Brigitte",
+     "nom": "REINERMANN",
+     "prenom": "Johann",
      "nuance": "NC",
      "voix": 149,
      "pct_exprimes": 0.43,
@@ -3504,6 +3784,14 @@
      "pct_inscrits": 0.18
     },
     {
+     "nom": "DUCHÊNE",
+     "prenom": "Brigitte",
+     "nuance": "NC",
+     "voix": 149,
+     "pct_exprimes": 0.43,
+     "pct_inscrits": 0.18
+    },
+    {
      "nom": "WIDERKHER",
      "prenom": "Philippe",
      "nuance": "NC",
@@ -3512,16 +3800,16 @@
      "pct_inscrits": 0.18
     },
     {
-     "nom": "BELLY",
-     "prenom": "Isabelle",
+     "nom": "DE LA ROCHEFOUCAULD",
+     "prenom": "Guy Antoine",
      "nuance": "NC",
      "voix": 149,
      "pct_exprimes": 0.43,
      "pct_inscrits": 0.18
     },
     {
-     "nom": "DE LA ROCHEFOUCAULD",
-     "prenom": "Guy Antoine",
+     "nom": "BELLY",
+     "prenom": "Isabelle",
      "nuance": "NC",
      "voix": 149,
      "pct_exprimes": 0.43,
@@ -3568,14 +3856,6 @@
      "pct_inscrits": 0.18
     },
     {
-     "nom": "BAHRI",
-     "prenom": "Joëlle",
-     "nuance": "NC",
-     "voix": 148,
-     "pct_exprimes": 0.43,
-     "pct_inscrits": 0.18
-    },
-    {
      "nom": "BALAN",
      "prenom": "Stéphane",
      "nuance": "NC",
@@ -3592,6 +3872,14 @@
      "pct_inscrits": 0.18
     },
     {
+     "nom": "BAHRI",
+     "prenom": "Joëlle",
+     "nuance": "NC",
+     "voix": 148,
+     "pct_exprimes": 0.43,
+     "pct_inscrits": 0.18
+    },
+    {
      "nom": "DELAUNE",
      "prenom": "Valerie",
      "nuance": "NC",
@@ -3600,16 +3888,16 @@
      "pct_inscrits": 0.18
     },
     {
-     "nom": "ABONDANCE",
-     "prenom": "Jean",
+     "nom": "CARTON",
+     "prenom": "Cécile",
      "nuance": "NC",
      "voix": 148,
      "pct_exprimes": 0.43,
      "pct_inscrits": 0.18
     },
     {
-     "nom": "CARTON",
-     "prenom": "Cécile",
+     "nom": "ABONDANCE",
+     "prenom": "Jean",
      "nuance": "NC",
      "voix": 148,
      "pct_exprimes": 0.43,
@@ -3704,16 +3992,16 @@
      "pct_inscrits": 0.18
     },
     {
-     "nom": "MAURIN",
-     "prenom": "Thibaud",
+     "nom": "DEGRAIN",
+     "prenom": "Camille",
      "nuance": "NC",
      "voix": 147,
      "pct_exprimes": 0.43,
      "pct_inscrits": 0.18
     },
     {
-     "nom": "DEGRAIN",
-     "prenom": "Camille",
+     "nom": "MAURIN",
+     "prenom": "Thibaud",
      "nuance": "NC",
      "voix": 147,
      "pct_exprimes": 0.43,
@@ -3728,16 +4016,16 @@
      "pct_inscrits": 0.18
     },
     {
-     "nom": "LARDY",
-     "prenom": "Sébastien",
+     "nom": "GUYADER",
+     "prenom": "Caroline",
      "nuance": "NC",
      "voix": 146,
      "pct_exprimes": 0.42,
      "pct_inscrits": 0.18
     },
     {
-     "nom": "GUYADER",
-     "prenom": "Caroline",
+     "nom": "LARDY",
+     "prenom": "Sébastien",
      "nuance": "NC",
      "voix": 146,
      "pct_exprimes": 0.42,
@@ -3760,16 +4048,16 @@
      "pct_inscrits": 0.18
     },
     {
-     "nom": "VAUTIER",
-     "prenom": "Myriam",
+     "nom": "RADET",
+     "prenom": "Emmanuel",
      "nuance": "NC",
      "voix": 146,
      "pct_exprimes": 0.42,
      "pct_inscrits": 0.18
     },
     {
-     "nom": "RADET",
-     "prenom": "Emmanuel",
+     "nom": "VAUTIER",
+     "prenom": "Myriam",
      "nuance": "NC",
      "voix": 146,
      "pct_exprimes": 0.42,
@@ -3786,6 +4074,14 @@
     {
      "nom": "GARREAU",
      "prenom": "Dominique",
+     "nuance": "NC",
+     "voix": 146,
+     "pct_exprimes": 0.42,
+     "pct_inscrits": 0.18
+    },
+    {
+     "nom": "ROGOWSKI",
+     "prenom": "Cédric",
      "nuance": "NC",
      "voix": 146,
      "pct_exprimes": 0.42,
@@ -3816,14 +4112,6 @@
      "pct_inscrits": 0.18
     },
     {
-     "nom": "THIBAULT",
-     "prenom": "Anne-Sophie",
-     "nuance": "NC",
-     "voix": 145,
-     "pct_exprimes": 0.42,
-     "pct_inscrits": 0.18
-    },
-    {
      "nom": "AVENEL",
      "prenom": "Nathalie",
      "nuance": "NC",
@@ -3842,6 +4130,14 @@
     {
      "nom": "MATHIS",
      "prenom": "Jérôme",
+     "nuance": "NC",
+     "voix": 145,
+     "pct_exprimes": 0.42,
+     "pct_inscrits": 0.18
+    },
+    {
+     "nom": "THIBAULT",
+     "prenom": "Anne-Sophie",
      "nuance": "NC",
      "voix": 145,
      "pct_exprimes": 0.42,
@@ -3880,14 +4176,6 @@
      "pct_inscrits": 0.18
     },
     {
-     "nom": "DE LAENDER",
-     "prenom": "Brigitte",
-     "nuance": "NC",
-     "voix": 145,
-     "pct_exprimes": 0.42,
-     "pct_inscrits": 0.18
-    },
-    {
      "nom": "ROBERT",
      "prenom": "Christian",
      "nuance": "NC",
@@ -3896,8 +4184,8 @@
      "pct_inscrits": 0.18
     },
     {
-     "nom": "LEHLEYDER",
-     "prenom": "Daniel",
+     "nom": "DE LAENDER",
+     "prenom": "Brigitte",
      "nuance": "NC",
      "voix": 145,
      "pct_exprimes": 0.42,
@@ -3906,6 +4194,14 @@
     {
      "nom": "HARZO",
      "prenom": "Annette",
+     "nuance": "NC",
+     "voix": 145,
+     "pct_exprimes": 0.42,
+     "pct_inscrits": 0.18
+    },
+    {
+     "nom": "LEHLEYDER",
+     "prenom": "Daniel",
      "nuance": "NC",
      "voix": 145,
      "pct_exprimes": 0.42,
@@ -3992,16 +4288,16 @@
      "pct_inscrits": 0.18
     },
     {
-     "nom": "LESSAINT",
-     "prenom": "Lionel",
+     "nom": "PASQUET",
+     "prenom": "Alain",
      "nuance": "NC",
      "voix": 143,
      "pct_exprimes": 0.41,
      "pct_inscrits": 0.18
     },
     {
-     "nom": "PASQUET",
-     "prenom": "Alain",
+     "nom": "LESSAINT",
+     "prenom": "Lionel",
      "nuance": "NC",
      "voix": 143,
      "pct_exprimes": 0.41,
@@ -4168,16 +4464,16 @@
      "pct_inscrits": 0.17
     },
     {
-     "nom": "BERTRAND",
-     "prenom": "Benoist",
+     "nom": "RIFFAUT",
+     "prenom": "Sébastien",
      "nuance": "NC",
      "voix": 140,
      "pct_exprimes": 0.41,
      "pct_inscrits": 0.17
     },
     {
-     "nom": "RIFFAUT",
-     "prenom": "Sébastien",
+     "nom": "BERTRAND",
+     "prenom": "Benoist",
      "nuance": "NC",
      "voix": 140,
      "pct_exprimes": 0.41,
@@ -4288,16 +4584,16 @@
      "pct_inscrits": 0.17
     },
     {
-     "nom": "MAZUÉ",
-     "prenom": "Fabrice",
+     "nom": "DUMORTIER",
+     "prenom": "Grégoire",
      "nuance": "NC",
      "voix": 138,
      "pct_exprimes": 0.4,
      "pct_inscrits": 0.17
     },
     {
-     "nom": "DUMORTIER",
-     "prenom": "Grégoire",
+     "nom": "MAZUÉ",
+     "prenom": "Fabrice",
      "nuance": "NC",
      "voix": 138,
      "pct_exprimes": 0.4,
@@ -4330,6 +4626,14 @@
     {
      "nom": "LAZAROFF",
      "prenom": "Stephan",
+     "nuance": "NC",
+     "voix": 136,
+     "pct_exprimes": 0.39,
+     "pct_inscrits": 0.17
+    },
+    {
+     "nom": "DEVILLEBICHOT",
+     "prenom": "Alexandre",
      "nuance": "NC",
      "voix": 136,
      "pct_exprimes": 0.39,
@@ -4384,16 +4688,16 @@
      "pct_inscrits": 0.17
     },
     {
-     "nom": "LANGUILLE",
-     "prenom": "Jean-François",
+     "nom": "MONCHECOURT",
+     "prenom": "Patrick",
      "nuance": "NC",
      "voix": 135,
      "pct_exprimes": 0.39,
      "pct_inscrits": 0.17
     },
     {
-     "nom": "MONCHECOURT",
-     "prenom": "Patrick",
+     "nom": "LANGUILLE",
+     "prenom": "Jean-François",
      "nuance": "NC",
      "voix": 135,
      "pct_exprimes": 0.39,
@@ -4420,6 +4724,14 @@
      "prenom": "Thierry",
      "nuance": "NC",
      "voix": 134,
+     "pct_exprimes": 0.39,
+     "pct_inscrits": 0.16
+    },
+    {
+     "nom": "LECONTE",
+     "prenom": "Marc",
+     "nuance": "NC",
+     "voix": 133,
      "pct_exprimes": 0.39,
      "pct_inscrits": 0.16
     },
@@ -4464,8 +4776,8 @@
      "pct_inscrits": 0.16
     },
     {
-     "nom": "BAROUKH",
-     "prenom": "Fanny",
+     "nom": "LE LEER",
+     "prenom": "Mathieu",
      "nuance": "NC",
      "voix": 131,
      "pct_exprimes": 0.38,
@@ -4480,14 +4792,6 @@
      "pct_inscrits": 0.16
     },
     {
-     "nom": "LE LEER",
-     "prenom": "Mathieu",
-     "nuance": "NC",
-     "voix": 131,
-     "pct_exprimes": 0.38,
-     "pct_inscrits": 0.16
-    },
-    {
      "nom": "COURTHEUSE",
      "prenom": "Martine",
      "nuance": "NC",
@@ -4496,10 +4800,10 @@
      "pct_inscrits": 0.16
     },
     {
-     "nom": "MILLON",
-     "prenom": "Martine",
+     "nom": "BAROUKH",
+     "prenom": "Fanny",
      "nuance": "NC",
-     "voix": 130,
+     "voix": 131,
      "pct_exprimes": 0.38,
      "pct_inscrits": 0.16
     },
@@ -4512,8 +4816,8 @@
      "pct_inscrits": 0.16
     },
     {
-     "nom": "DE MAGNITOT",
-     "prenom": "Christophe",
+     "nom": "MILLON",
+     "prenom": "Martine",
      "nuance": "NC",
      "voix": 130,
      "pct_exprimes": 0.38,
@@ -4528,27 +4832,19 @@
      "pct_inscrits": 0.16
     },
     {
-     "nom": "MARANDEL",
-     "prenom": "Annick",
+     "nom": "DE MAGNITOT",
+     "prenom": "Christophe",
      "nuance": "NC",
      "voix": 130,
      "pct_exprimes": 0.38,
      "pct_inscrits": 0.16
     },
     {
-     "nom": "LELIÈVRE",
-     "prenom": "Jean-Marc",
+     "nom": "MARANDEL",
+     "prenom": "Annick",
      "nuance": "NC",
-     "voix": 129,
-     "pct_exprimes": 0.37,
-     "pct_inscrits": 0.16
-    },
-    {
-     "nom": "BOURRIER",
-     "prenom": "Gérard",
-     "nuance": "NC",
-     "voix": 129,
-     "pct_exprimes": 0.37,
+     "voix": 130,
+     "pct_exprimes": 0.38,
      "pct_inscrits": 0.16
     },
     {
@@ -4562,6 +4858,22 @@
     {
      "nom": "DE CARVALHO",
      "prenom": "Oscar",
+     "nuance": "NC",
+     "voix": 129,
+     "pct_exprimes": 0.37,
+     "pct_inscrits": 0.16
+    },
+    {
+     "nom": "LELIÈVRE",
+     "prenom": "Jean-Marc",
+     "nuance": "NC",
+     "voix": 129,
+     "pct_exprimes": 0.37,
+     "pct_inscrits": 0.16
+    },
+    {
+     "nom": "BOURRIER",
+     "prenom": "Gérard",
      "nuance": "NC",
      "voix": 129,
      "pct_exprimes": 0.37,
@@ -4592,16 +4904,16 @@
      "pct_inscrits": 0.16
     },
     {
-     "nom": "GAINCHE",
-     "prenom": "Gisele",
+     "nom": "MARTIN",
+     "prenom": "Harold",
      "nuance": "NC",
      "voix": 128,
      "pct_exprimes": 0.37,
      "pct_inscrits": 0.16
     },
     {
-     "nom": "MARTIN",
-     "prenom": "Harold",
+     "nom": "GAINCHE",
+     "prenom": "Gisele",
      "nuance": "NC",
      "voix": 128,
      "pct_exprimes": 0.37,
@@ -4616,16 +4928,16 @@
      "pct_inscrits": 0.16
     },
     {
-     "nom": "COVELIERS",
-     "prenom": "Ronny",
+     "nom": "RENAUDIN-COTTINET",
+     "prenom": "Beryl",
      "nuance": "NC",
      "voix": 128,
      "pct_exprimes": 0.37,
      "pct_inscrits": 0.16
     },
     {
-     "nom": "RENAUDIN-COTTINET",
-     "prenom": "Beryl",
+     "nom": "COVELIERS",
+     "prenom": "Ronny",
      "nuance": "NC",
      "voix": 128,
      "pct_exprimes": 0.37,
@@ -4664,6 +4976,14 @@
      "pct_inscrits": 0.16
     },
     {
+     "nom": "DROUART",
+     "prenom": "Sylvie",
+     "nuance": "NC",
+     "voix": 127,
+     "pct_exprimes": 0.37,
+     "pct_inscrits": 0.16
+    },
+    {
      "nom": "LEFRANÇOIS",
      "prenom": "Sylvie",
      "nuance": "NC",
@@ -4680,16 +5000,16 @@
      "pct_inscrits": 0.15
     },
     {
-     "nom": "DESPRETZ",
-     "prenom": "Annabelle",
+     "nom": "PETIT",
+     "prenom": "Xavier",
      "nuance": "NC",
      "voix": 126,
      "pct_exprimes": 0.36,
      "pct_inscrits": 0.15
     },
     {
-     "nom": "PETIT",
-     "prenom": "Xavier",
+     "nom": "DESPRETZ",
+     "prenom": "Annabelle",
      "nuance": "NC",
      "voix": 126,
      "pct_exprimes": 0.36,
@@ -4720,16 +5040,16 @@
      "pct_inscrits": 0.15
     },
     {
-     "nom": "BOUCLY",
-     "prenom": "Christian",
+     "nom": "TOULON-CHAUMEAU",
+     "prenom": "Annick",
      "nuance": "NC",
      "voix": 124,
      "pct_exprimes": 0.36,
      "pct_inscrits": 0.15
     },
     {
-     "nom": "TOULON-CHAUMEAU",
-     "prenom": "Annick",
+     "nom": "BOUCLY",
+     "prenom": "Christian",
      "nuance": "NC",
      "voix": 124,
      "pct_exprimes": 0.36,
@@ -4740,6 +5060,14 @@
      "prenom": "Didier",
      "nuance": "LNC",
      "voix": 124,
+     "pct_exprimes": 0.36,
+     "pct_inscrits": 0.15
+    },
+    {
+     "nom": "LE GOFF",
+     "prenom": "Sacha",
+     "nuance": "NC",
+     "voix": 123,
      "pct_exprimes": 0.36,
      "pct_inscrits": 0.15
     },
@@ -4770,6 +5098,14 @@
     {
      "nom": "VAN ISACKER",
      "prenom": "Christian",
+     "nuance": "NC",
+     "voix": 120,
+     "pct_exprimes": 0.35,
+     "pct_inscrits": 0.15
+    },
+    {
+     "nom": "BORGEON",
+     "prenom": "Sophie",
      "nuance": "NC",
      "voix": 120,
      "pct_exprimes": 0.35,
@@ -4808,16 +5144,16 @@
      "pct_inscrits": 0.15
     },
     {
-     "nom": "HAUTCOEUR",
-     "prenom": "Stephane",
+     "nom": "DESSEROY",
+     "prenom": "Lucie",
      "nuance": "NC",
      "voix": 119,
      "pct_exprimes": 0.34,
      "pct_inscrits": 0.15
     },
     {
-     "nom": "DESSEROY",
-     "prenom": "Lucie",
+     "nom": "HAUTCOEUR",
+     "prenom": "Stephane",
      "nuance": "NC",
      "voix": 119,
      "pct_exprimes": 0.34,
@@ -4864,8 +5200,24 @@
      "pct_inscrits": 0.15
     },
     {
+     "nom": "DEPEE",
+     "prenom": "Florence",
+     "nuance": "NC",
+     "voix": 118,
+     "pct_exprimes": 0.34,
+     "pct_inscrits": 0.15
+    },
+    {
      "nom": "BROS",
      "prenom": "Pierre",
+     "nuance": "NC",
+     "voix": 118,
+     "pct_exprimes": 0.34,
+     "pct_inscrits": 0.15
+    },
+    {
+     "nom": "ABOT",
+     "prenom": "Michel",
      "nuance": "NC",
      "voix": 118,
      "pct_exprimes": 0.34,
@@ -4880,6 +5232,14 @@
      "pct_inscrits": 0.15
     },
     {
+     "nom": "BERDIE",
+     "prenom": "Magali",
+     "nuance": "NC",
+     "voix": 118,
+     "pct_exprimes": 0.34,
+     "pct_inscrits": 0.15
+    },
+    {
      "nom": "LE TOULOUSE",
      "prenom": "Anne",
      "nuance": "NC",
@@ -4888,16 +5248,16 @@
      "pct_inscrits": 0.15
     },
     {
-     "nom": "BOURREAU",
-     "prenom": "Julien",
+     "nom": "BAGO",
+     "prenom": "Christian",
      "nuance": "NC",
      "voix": 117,
      "pct_exprimes": 0.34,
      "pct_inscrits": 0.14
     },
     {
-     "nom": "BAGO",
-     "prenom": "Christian",
+     "nom": "BAUDOUIN",
+     "prenom": "Sandra",
      "nuance": "NC",
      "voix": 117,
      "pct_exprimes": 0.34,
@@ -4912,8 +5272,8 @@
      "pct_inscrits": 0.14
     },
     {
-     "nom": "BAUDOUIN",
-     "prenom": "Sandra",
+     "nom": "BOURREAU",
+     "prenom": "Julien",
      "nuance": "NC",
      "voix": 117,
      "pct_exprimes": 0.34,
@@ -4944,6 +5304,14 @@
      "pct_inscrits": 0.14
     },
     {
+     "nom": "ROUSERÉ",
+     "prenom": "Stéphane",
+     "nuance": "NC",
+     "voix": 117,
+     "pct_exprimes": 0.34,
+     "pct_inscrits": 0.14
+    },
+    {
      "nom": "TESFAMIKAEL",
      "prenom": "Maria",
      "nuance": "NC",
@@ -4952,8 +5320,8 @@
      "pct_inscrits": 0.14
     },
     {
-     "nom": "ROUSERÉ",
-     "prenom": "Stéphane",
+     "nom": "COUPPE",
+     "prenom": "Eric",
      "nuance": "NC",
      "voix": 117,
      "pct_exprimes": 0.34,
@@ -4976,6 +5344,14 @@
      "pct_inscrits": 0.14
     },
     {
+     "nom": "DESHUMEURS",
+     "prenom": "Benoît",
+     "nuance": "NC",
+     "voix": 117,
+     "pct_exprimes": 0.34,
+     "pct_inscrits": 0.14
+    },
+    {
      "nom": "MAY",
      "prenom": "Sylvie",
      "nuance": "NC",
@@ -4984,8 +5360,8 @@
      "pct_inscrits": 0.14
     },
     {
-     "nom": "DESHUMEURS",
-     "prenom": "Benoît",
+     "nom": "PRIOU",
+     "prenom": "Eric",
      "nuance": "NC",
      "voix": 117,
      "pct_exprimes": 0.34,
@@ -5032,6 +5408,22 @@
      "pct_inscrits": 0.14
     },
     {
+     "nom": "CLEMENT",
+     "prenom": "Joelle",
+     "nuance": "NC",
+     "voix": 116,
+     "pct_exprimes": 0.34,
+     "pct_inscrits": 0.14
+    },
+    {
+     "nom": "VAILHÉ",
+     "prenom": "Bernard",
+     "nuance": "NC",
+     "voix": 116,
+     "pct_exprimes": 0.34,
+     "pct_inscrits": 0.14
+    },
+    {
      "nom": "NICAULT",
      "prenom": "Adeline",
      "nuance": "NC",
@@ -5072,16 +5464,16 @@
      "pct_inscrits": 0.14
     },
     {
-     "nom": "MARIE",
-     "prenom": "Renée",
+     "nom": "GRAIN",
+     "prenom": "Didier",
      "nuance": "NC",
      "voix": 115,
      "pct_exprimes": 0.33,
      "pct_inscrits": 0.14
     },
     {
-     "nom": "GRAIN",
-     "prenom": "Didier",
+     "nom": "MARIE",
+     "prenom": "Renée",
      "nuance": "NC",
      "voix": 115,
      "pct_exprimes": 0.33,
@@ -5104,8 +5496,8 @@
      "pct_inscrits": 0.14
     },
     {
-     "nom": "ZENIODIS",
-     "prenom": "Jerome",
+     "nom": "MALFATTI",
+     "prenom": "Ghislaine",
      "nuance": "NC",
      "voix": 114,
      "pct_exprimes": 0.33,
@@ -5120,8 +5512,8 @@
      "pct_inscrits": 0.14
     },
     {
-     "nom": "MALFATTI",
-     "prenom": "Ghislaine",
+     "nom": "ZENIODIS",
+     "prenom": "Jerome",
      "nuance": "NC",
      "voix": 114,
      "pct_exprimes": 0.33,
@@ -5136,14 +5528,6 @@
      "pct_inscrits": 0.14
     },
     {
-     "nom": "TARDY",
-     "prenom": "Roseline",
-     "nuance": "NC",
-     "voix": 113,
-     "pct_exprimes": 0.33,
-     "pct_inscrits": 0.14
-    },
-    {
      "nom": "LEBRUN",
      "prenom": "Stéphanie",
      "nuance": "NC",
@@ -5154,6 +5538,14 @@
     {
      "nom": "MAILLIER-GASTÉ",
      "prenom": "Nathalie",
+     "nuance": "NC",
+     "voix": 113,
+     "pct_exprimes": 0.33,
+     "pct_inscrits": 0.14
+    },
+    {
+     "nom": "TARDY",
+     "prenom": "Roseline",
      "nuance": "NC",
      "voix": 113,
      "pct_exprimes": 0.33,
@@ -5208,6 +5600,14 @@
      "pct_inscrits": 0.14
     },
     {
+     "nom": "HENRIOT",
+     "prenom": "Christine",
+     "nuance": "NC",
+     "voix": 111,
+     "pct_exprimes": 0.32,
+     "pct_inscrits": 0.14
+    },
+    {
      "nom": "ROLLAND",
      "prenom": "Sébastien",
      "nuance": "NC",
@@ -5224,16 +5624,16 @@
      "pct_inscrits": 0.14
     },
     {
-     "nom": "HAMELIN",
-     "prenom": "Frédéric",
+     "nom": "CERVEAUX",
+     "prenom": "Cécile",
      "nuance": "NC",
      "voix": 110,
      "pct_exprimes": 0.32,
      "pct_inscrits": 0.14
     },
     {
-     "nom": "CERVEAUX",
-     "prenom": "Cécile",
+     "nom": "HAMELIN",
+     "prenom": "Frédéric",
      "nuance": "NC",
      "voix": 110,
      "pct_exprimes": 0.32,
@@ -5246,6 +5646,14 @@
      "voix": 110,
      "pct_exprimes": 0.32,
      "pct_inscrits": 0.14
+    },
+    {
+     "nom": "RICHARD",
+     "prenom": "Denis",
+     "nuance": "NC",
+     "voix": 109,
+     "pct_exprimes": 0.32,
+     "pct_inscrits": 0.13
     },
     {
      "nom": "CHAUVIN",
@@ -5266,6 +5674,22 @@
     {
      "nom": "GIRRE",
      "prenom": "Aurélie",
+     "nuance": "NC",
+     "voix": 108,
+     "pct_exprimes": 0.31,
+     "pct_inscrits": 0.13
+    },
+    {
+     "nom": "LOESCH",
+     "prenom": "Stéphanie",
+     "nuance": "NC",
+     "voix": 108,
+     "pct_exprimes": 0.31,
+     "pct_inscrits": 0.13
+    },
+    {
+     "nom": "SANCHEZ",
+     "prenom": "Severine",
      "nuance": "NC",
      "voix": 108,
      "pct_exprimes": 0.31,
@@ -5304,16 +5728,16 @@
      "pct_inscrits": 0.13
     },
     {
-     "nom": "COLOMER",
-     "prenom": "Emilie",
+     "nom": "NEGRE",
+     "prenom": "Pascal",
      "nuance": "NC",
      "voix": 107,
      "pct_exprimes": 0.31,
      "pct_inscrits": 0.13
     },
     {
-     "nom": "NEGRE",
-     "prenom": "Pascal",
+     "nom": "COLOMER",
+     "prenom": "Emilie",
      "nuance": "NC",
      "voix": 107,
      "pct_exprimes": 0.31,
@@ -5328,16 +5752,16 @@
      "pct_inscrits": 0.13
     },
     {
-     "nom": "PALKA",
-     "prenom": "Monika",
+     "nom": "MIOT",
+     "prenom": "Anthony",
      "nuance": "NC",
      "voix": 107,
      "pct_exprimes": 0.31,
      "pct_inscrits": 0.13
     },
     {
-     "nom": "MIOT",
-     "prenom": "Anthony",
+     "nom": "PALKA",
+     "prenom": "Monika",
      "nuance": "NC",
      "voix": 107,
      "pct_exprimes": 0.31,
@@ -5392,8 +5816,40 @@
      "pct_inscrits": 0.13
     },
     {
+     "nom": "BELLANGER",
+     "prenom": "Stéphanie",
+     "nuance": "NC",
+     "voix": 105,
+     "pct_exprimes": 0.3,
+     "pct_inscrits": 0.13
+    },
+    {
+     "nom": "CHAFFOTTE MAUBERT",
+     "prenom": "Coralie",
+     "nuance": "NC",
+     "voix": 105,
+     "pct_exprimes": 0.3,
+     "pct_inscrits": 0.13
+    },
+    {
+     "nom": "GARCIA",
+     "prenom": "Joelle",
+     "nuance": "NC",
+     "voix": 105,
+     "pct_exprimes": 0.3,
+     "pct_inscrits": 0.13
+    },
+    {
      "nom": "KOWALSKI",
      "prenom": "Isabelle",
+     "nuance": "NC",
+     "voix": 105,
+     "pct_exprimes": 0.3,
+     "pct_inscrits": 0.13
+    },
+    {
+     "nom": "BLÉCOT",
+     "prenom": "Julien",
      "nuance": "NC",
      "voix": 105,
      "pct_exprimes": 0.3,
@@ -5416,16 +5872,16 @@
      "pct_inscrits": 0.13
     },
     {
-     "nom": "WATEL",
-     "prenom": "Audrey",
+     "nom": "ROBERT",
+     "prenom": "Davy",
      "nuance": "NC",
      "voix": 105,
      "pct_exprimes": 0.3,
      "pct_inscrits": 0.13
     },
     {
-     "nom": "ROBERT",
-     "prenom": "Davy",
+     "nom": "WATEL",
+     "prenom": "Audrey",
      "nuance": "NC",
      "voix": 105,
      "pct_exprimes": 0.3,
@@ -5442,6 +5898,14 @@
     {
      "nom": "HANRAS",
      "prenom": "Guy",
+     "nuance": "NC",
+     "voix": 104,
+     "pct_exprimes": 0.3,
+     "pct_inscrits": 0.13
+    },
+    {
+     "nom": "CAMUS",
+     "prenom": "Laurent",
      "nuance": "NC",
      "voix": 104,
      "pct_exprimes": 0.3,
@@ -5496,6 +5960,38 @@
      "pct_inscrits": 0.13
     },
     {
+     "nom": "GUEUDRÉ",
+     "prenom": "Jean-Luc",
+     "nuance": "NC",
+     "voix": 103,
+     "pct_exprimes": 0.3,
+     "pct_inscrits": 0.13
+    },
+    {
+     "nom": "BOUQUEREL",
+     "prenom": "Jean-Yves",
+     "nuance": "NC",
+     "voix": 103,
+     "pct_exprimes": 0.3,
+     "pct_inscrits": 0.13
+    },
+    {
+     "nom": "CHARRIER",
+     "prenom": "Marie Claude",
+     "nuance": "NC",
+     "voix": 103,
+     "pct_exprimes": 0.3,
+     "pct_inscrits": 0.13
+    },
+    {
+     "nom": "GODEFROY",
+     "prenom": "Christian",
+     "nuance": "NC",
+     "voix": 103,
+     "pct_exprimes": 0.3,
+     "pct_inscrits": 0.13
+    },
+    {
      "nom": "DUCHESNE",
      "prenom": "Alix",
      "nuance": "NC",
@@ -5522,6 +6018,30 @@
     {
      "nom": "JOLIVET",
      "prenom": "Martine",
+     "nuance": "NC",
+     "voix": 102,
+     "pct_exprimes": 0.3,
+     "pct_inscrits": 0.13
+    },
+    {
+     "nom": "GIUMMO",
+     "prenom": "Cecilia",
+     "nuance": "NC",
+     "voix": 102,
+     "pct_exprimes": 0.3,
+     "pct_inscrits": 0.13
+    },
+    {
+     "nom": "MARY",
+     "prenom": "Michel",
+     "nuance": "NC",
+     "voix": 102,
+     "pct_exprimes": 0.3,
+     "pct_inscrits": 0.13
+    },
+    {
+     "nom": "PROTAS",
+     "prenom": "Vera",
      "nuance": "NC",
      "voix": 102,
      "pct_exprimes": 0.3,
@@ -5576,16 +6096,16 @@
      "pct_inscrits": 0.12
     },
     {
-     "nom": "VANAKER",
-     "prenom": "Patrice",
+     "nom": "VIARD",
+     "prenom": "Philippe",
      "nuance": "NC",
      "voix": 101,
      "pct_exprimes": 0.29,
      "pct_inscrits": 0.12
     },
     {
-     "nom": "VIARD",
-     "prenom": "Philippe",
+     "nom": "VANAKER",
+     "prenom": "Patrice",
      "nuance": "NC",
      "voix": 101,
      "pct_exprimes": 0.29,
@@ -5608,6 +6128,14 @@
      "pct_inscrits": 0.12
     },
     {
+     "nom": "DUJARDIN",
+     "prenom": "Mathieu",
+     "nuance": "NC",
+     "voix": 101,
+     "pct_exprimes": 0.29,
+     "pct_inscrits": 0.12
+    },
+    {
      "nom": "LEVARAY",
      "prenom": "Jasmine",
      "nuance": "NC",
@@ -5624,16 +6152,16 @@
      "pct_inscrits": 0.12
     },
     {
-     "nom": "OHEIX",
-     "prenom": "Hervé",
+     "nom": "DAGORY",
+     "prenom": "Laurent",
      "nuance": "NC",
      "voix": 100,
      "pct_exprimes": 0.29,
      "pct_inscrits": 0.12
     },
     {
-     "nom": "DAGORY",
-     "prenom": "Laurent",
+     "nom": "OHEIX",
+     "prenom": "Hervé",
      "nuance": "NC",
      "voix": 100,
      "pct_exprimes": 0.29,
@@ -5704,16 +6232,16 @@
      "pct_inscrits": 0.12
     },
     {
-     "nom": "MECHALI",
-     "prenom": "Anne",
+     "nom": "BIVILLE",
+     "prenom": "Jean-Pierre",
      "nuance": "NC",
      "voix": 99,
      "pct_exprimes": 0.29,
      "pct_inscrits": 0.12
     },
     {
-     "nom": "BIVILLE",
-     "prenom": "Jean-Pierre",
+     "nom": "MECHALI",
+     "prenom": "Anne",
      "nuance": "NC",
      "voix": 99,
      "pct_exprimes": 0.29,
@@ -5728,16 +6256,16 @@
      "pct_inscrits": 0.12
     },
     {
-     "nom": "SEVIN",
-     "prenom": "Jean-Yves",
+     "nom": "DELCAUSSE",
+     "prenom": "Mélanie",
      "nuance": "NC",
      "voix": 98,
      "pct_exprimes": 0.28,
      "pct_inscrits": 0.12
     },
     {
-     "nom": "DELCAUSSE",
-     "prenom": "Mélanie",
+     "nom": "SEVIN",
+     "prenom": "Jean-Yves",
      "nuance": "NC",
      "voix": 98,
      "pct_exprimes": 0.28,
@@ -5754,6 +6282,14 @@
     {
      "nom": "RIOLLET",
      "prenom": "Vincent",
+     "nuance": "NC",
+     "voix": 98,
+     "pct_exprimes": 0.28,
+     "pct_inscrits": 0.12
+    },
+    {
+     "nom": "CONTAT DESFONTAINES",
+     "prenom": "Alain",
      "nuance": "NC",
      "voix": 98,
      "pct_exprimes": 0.28,
@@ -5808,6 +6344,14 @@
      "pct_inscrits": 0.12
     },
     {
+     "nom": "DE SAINT RIQUIER",
+     "prenom": "Mylène",
+     "nuance": "NC",
+     "voix": 97,
+     "pct_exprimes": 0.28,
+     "pct_inscrits": 0.12
+    },
+    {
      "nom": "CHAPEL",
      "prenom": "Clarisse",
      "nuance": "NC",
@@ -5816,8 +6360,16 @@
      "pct_inscrits": 0.12
     },
     {
-     "nom": "DE SAINT RIQUIER",
-     "prenom": "Mylène",
+     "nom": "BARON",
+     "prenom": "Eric",
+     "nuance": "NC",
+     "voix": 97,
+     "pct_exprimes": 0.28,
+     "pct_inscrits": 0.12
+    },
+    {
+     "nom": "CHALET BOULLE",
+     "prenom": "Christine",
      "nuance": "NC",
      "voix": 97,
      "pct_exprimes": 0.28,
@@ -5848,8 +6400,8 @@
      "pct_inscrits": 0.12
     },
     {
-     "nom": "HENIN",
-     "prenom": "Lucie",
+     "nom": "DEDIEU",
+     "prenom": "Armand",
      "nuance": "NC",
      "voix": 96,
      "pct_exprimes": 0.28,
@@ -5864,8 +6416,8 @@
      "pct_inscrits": 0.12
     },
     {
-     "nom": "DEDIEU",
-     "prenom": "Armand",
+     "nom": "HENIN",
+     "prenom": "Lucie",
      "nuance": "NC",
      "voix": 96,
      "pct_exprimes": 0.28,
@@ -5904,16 +6456,16 @@
      "pct_inscrits": 0.12
     },
     {
-     "nom": "DUFOUR",
-     "prenom": "Elizabeth",
+     "nom": "ROBERT",
+     "prenom": "Isabelle",
      "nuance": "NC",
      "voix": 95,
      "pct_exprimes": 0.28,
      "pct_inscrits": 0.12
     },
     {
-     "nom": "ROBERT",
-     "prenom": "Isabelle",
+     "nom": "DUFOUR",
+     "prenom": "Elizabeth",
      "nuance": "NC",
      "voix": 95,
      "pct_exprimes": 0.28,
@@ -5968,14 +6520,6 @@
      "pct_inscrits": 0.12
     },
     {
-     "nom": "HAMON",
-     "prenom": "Stéphanie",
-     "nuance": "NC",
-     "voix": 95,
-     "pct_exprimes": 0.28,
-     "pct_inscrits": 0.12
-    },
-    {
      "nom": "DUBOSC",
      "prenom": "Carole",
      "nuance": "NC",
@@ -6000,6 +6544,14 @@
      "pct_inscrits": 0.12
     },
     {
+     "nom": "RIDOU",
+     "prenom": "Michel",
+     "nuance": "NC",
+     "voix": 94,
+     "pct_exprimes": 0.27,
+     "pct_inscrits": 0.12
+    },
+    {
      "nom": "BILTEREYST",
      "prenom": "Danièle",
      "nuance": "NC",
@@ -6008,8 +6560,8 @@
      "pct_inscrits": 0.12
     },
     {
-     "nom": "RIDOU",
-     "prenom": "Michel",
+     "nom": "KOWALSKI",
+     "prenom": "Alec",
      "nuance": "NC",
      "voix": 94,
      "pct_exprimes": 0.27,
@@ -6024,6 +6576,14 @@
      "pct_inscrits": 0.11
     },
     {
+     "nom": "NOEL",
+     "prenom": "Philippe",
+     "nuance": "NC",
+     "voix": 93,
+     "pct_exprimes": 0.27,
+     "pct_inscrits": 0.11
+    },
+    {
      "nom": "GOULET",
      "prenom": "Catherine",
      "nuance": "NC",
@@ -6032,16 +6592,16 @@
      "pct_inscrits": 0.11
     },
     {
-     "nom": "PIGEONNIER",
-     "prenom": "Alain",
+     "nom": "BAZOT",
+     "prenom": "Ludovic",
      "nuance": "NC",
      "voix": 92,
      "pct_exprimes": 0.27,
      "pct_inscrits": 0.11
     },
     {
-     "nom": "BAZOT",
-     "prenom": "Ludovic",
+     "nom": "PIGEONNIER",
+     "prenom": "Alain",
      "nuance": "NC",
      "voix": 92,
      "pct_exprimes": 0.27,
@@ -6096,6 +6656,14 @@
      "pct_inscrits": 0.11
     },
     {
+     "nom": "FERRARI",
+     "prenom": "Catherine",
+     "nuance": "NC",
+     "voix": 91,
+     "pct_exprimes": 0.26,
+     "pct_inscrits": 0.11
+    },
+    {
      "nom": "VAN",
      "prenom": "Marine",
      "nuance": "NC",
@@ -6106,14 +6674,6 @@
     {
      "nom": "VERMEIRE",
      "prenom": "Didier",
-     "nuance": "NC",
-     "voix": 91,
-     "pct_exprimes": 0.26,
-     "pct_inscrits": 0.11
-    },
-    {
-     "nom": "FERRARI",
-     "prenom": "Catherine",
      "nuance": "NC",
      "voix": 91,
      "pct_exprimes": 0.26,
@@ -6160,6 +6720,14 @@
      "pct_inscrits": 0.11
     },
     {
+     "nom": "LE  DAIN",
+     "prenom": "Gerlove",
+     "nuance": "NC",
+     "voix": 90,
+     "pct_exprimes": 0.26,
+     "pct_inscrits": 0.11
+    },
+    {
      "nom": "SIHAPANYA",
      "prenom": "Vincent",
      "nuance": "NC",
@@ -6176,14 +6744,6 @@
      "pct_inscrits": 0.11
     },
     {
-     "nom": "KOHN",
-     "prenom": "Francis",
-     "nuance": "NC",
-     "voix": 89,
-     "pct_exprimes": 0.26,
-     "pct_inscrits": 0.11
-    },
-    {
      "nom": "MAHIEU",
      "prenom": "Philippe",
      "nuance": "NC",
@@ -6192,16 +6752,24 @@
      "pct_inscrits": 0.11
     },
     {
-     "nom": "MILLOUET",
-     "prenom": "Jacques",
+     "nom": "KOHN",
+     "prenom": "Francis",
+     "nuance": "NC",
+     "voix": 89,
+     "pct_exprimes": 0.26,
+     "pct_inscrits": 0.11
+    },
+    {
+     "nom": "BOUIN",
+     "prenom": "Monique",
      "nuance": "NC",
      "voix": 88,
      "pct_exprimes": 0.25,
      "pct_inscrits": 0.11
     },
     {
-     "nom": "BOUIN",
-     "prenom": "Monique",
+     "nom": "MILLOUET",
+     "prenom": "Jacques",
      "nuance": "NC",
      "voix": 88,
      "pct_exprimes": 0.25,
@@ -6240,14 +6808,6 @@
      "pct_inscrits": 0.11
     },
     {
-     "nom": "BOCQUIAULT-BOULAY",
-     "prenom": "Stéphanie",
-     "nuance": "NC",
-     "voix": 87,
-     "pct_exprimes": 0.25,
-     "pct_inscrits": 0.11
-    },
-    {
      "nom": "MERCIER",
      "prenom": "Catherine",
      "nuance": "NC",
@@ -6256,8 +6816,24 @@
      "pct_inscrits": 0.11
     },
     {
+     "nom": "BOCQUIAULT-BOULAY",
+     "prenom": "Stéphanie",
+     "nuance": "NC",
+     "voix": 87,
+     "pct_exprimes": 0.25,
+     "pct_inscrits": 0.11
+    },
+    {
      "nom": "SOUVANNASING",
      "prenom": "Viviane",
+     "nuance": "NC",
+     "voix": 87,
+     "pct_exprimes": 0.25,
+     "pct_inscrits": 0.11
+    },
+    {
+     "nom": "LAURET",
+     "prenom": "Richard",
      "nuance": "NC",
      "voix": 87,
      "pct_exprimes": 0.25,
@@ -6312,8 +6888,16 @@
      "pct_inscrits": 0.1
     },
     {
-     "nom": "CHIEPPERIN",
-     "prenom": "Cédric",
+     "nom": "GIZARD",
+     "prenom": "Geoffroy",
+     "nuance": "NC",
+     "voix": 85,
+     "pct_exprimes": 0.25,
+     "pct_inscrits": 0.1
+    },
+    {
+     "nom": "JAOUEN",
+     "prenom": "Gilles",
      "nuance": "NC",
      "voix": 85,
      "pct_exprimes": 0.25,
@@ -6322,6 +6906,14 @@
     {
      "nom": "CLAËS",
      "prenom": "Nelly",
+     "nuance": "NC",
+     "voix": 85,
+     "pct_exprimes": 0.25,
+     "pct_inscrits": 0.1
+    },
+    {
+     "nom": "CHIEPPERIN",
+     "prenom": "Cédric",
      "nuance": "NC",
      "voix": 85,
      "pct_exprimes": 0.25,
@@ -6376,16 +6968,24 @@
      "pct_inscrits": 0.1
     },
     {
-     "nom": "VALORZ",
-     "prenom": "Sébastien",
+     "nom": "MESTRE",
+     "prenom": "David",
      "nuance": "NC",
      "voix": 84,
      "pct_exprimes": 0.24,
      "pct_inscrits": 0.1
     },
     {
-     "nom": "PRÉVOST",
-     "prenom": "Antoine",
+     "nom": "ERRARD",
+     "prenom": "Alain",
+     "nuance": "NC",
+     "voix": 84,
+     "pct_exprimes": 0.24,
+     "pct_inscrits": 0.1
+    },
+    {
+     "nom": "VALORZ",
+     "prenom": "Sébastien",
      "nuance": "NC",
      "voix": 84,
      "pct_exprimes": 0.24,
@@ -6400,6 +7000,14 @@
      "pct_inscrits": 0.1
     },
     {
+     "nom": "PRÉVOST",
+     "prenom": "Antoine",
+     "nuance": "NC",
+     "voix": 84,
+     "pct_exprimes": 0.24,
+     "pct_inscrits": 0.1
+    },
+    {
      "nom": "VENDASSI",
      "prenom": "Don-Pierre",
      "nuance": "NC",
@@ -6408,8 +7016,24 @@
      "pct_inscrits": 0.1
     },
     {
-     "nom": "BONNET",
-     "prenom": "Patrice",
+     "nom": "COEFFIER",
+     "prenom": "Sébastien",
+     "nuance": "NC",
+     "voix": 83,
+     "pct_exprimes": 0.24,
+     "pct_inscrits": 0.1
+    },
+    {
+     "nom": "FOURNIER",
+     "prenom": "Sophie",
+     "nuance": "NC",
+     "voix": 83,
+     "pct_exprimes": 0.24,
+     "pct_inscrits": 0.1
+    },
+    {
+     "nom": "LEROUX DALLET",
+     "prenom": "Florence",
      "nuance": "NC",
      "voix": 83,
      "pct_exprimes": 0.24,
@@ -6424,11 +7048,35 @@
      "pct_inscrits": 0.1
     },
     {
+     "nom": "BONNET",
+     "prenom": "Patrice",
+     "nuance": "NC",
+     "voix": 83,
+     "pct_exprimes": 0.24,
+     "pct_inscrits": 0.1
+    },
+    {
      "nom": "PIERRE",
      "prenom": "Didier",
      "nuance": "NC",
      "voix": 83,
      "pct_exprimes": 0.24,
+     "pct_inscrits": 0.1
+    },
+    {
+     "nom": "ROBERT",
+     "prenom": "Christine",
+     "nuance": "NC",
+     "voix": 82,
+     "pct_exprimes": 0.24,
+     "pct_inscrits": 0.1
+    },
+    {
+     "nom": "CHIARADIA",
+     "prenom": "Pierre",
+     "nuance": "NC",
+     "voix": 81,
+     "pct_exprimes": 0.23,
      "pct_inscrits": 0.1
     },
     {
@@ -6472,6 +7120,30 @@
      "pct_inscrits": 0.1
     },
     {
+     "nom": "GIRARD",
+     "prenom": "Jacqueline",
+     "nuance": "NC",
+     "voix": 79,
+     "pct_exprimes": 0.23,
+     "pct_inscrits": 0.1
+    },
+    {
+     "nom": "LAUTIER",
+     "prenom": "Guillaume",
+     "nuance": "NC",
+     "voix": 79,
+     "pct_exprimes": 0.23,
+     "pct_inscrits": 0.1
+    },
+    {
+     "nom": "BOUILLIANT",
+     "prenom": "Sandrine",
+     "nuance": "NC",
+     "voix": 79,
+     "pct_exprimes": 0.23,
+     "pct_inscrits": 0.1
+    },
+    {
      "nom": "BRANSON",
      "prenom": "Isabelle",
      "nuance": "NC",
@@ -6480,16 +7152,16 @@
      "pct_inscrits": 0.1
     },
     {
-     "nom": "LEBARQUE",
-     "prenom": "Nadine",
+     "nom": "CAMBOURIEUX",
+     "prenom": "Frédérique",
      "nuance": "NC",
      "voix": 78,
      "pct_exprimes": 0.23,
      "pct_inscrits": 0.1
     },
     {
-     "nom": "CAMBOURIEUX",
-     "prenom": "Frédérique",
+     "nom": "LEBARQUE",
+     "prenom": "Nadine",
      "nuance": "NC",
      "voix": 78,
      "pct_exprimes": 0.23,
@@ -6504,16 +7176,32 @@
      "pct_inscrits": 0.1
     },
     {
-     "nom": "ZAPPELINI",
-     "prenom": "Alain",
+     "nom": "SAVIGNAT",
+     "prenom": "Yves",
      "nuance": "NC",
-     "voix": 77,
-     "pct_exprimes": 0.22,
-     "pct_inscrits": 0.09
+     "voix": 78,
+     "pct_exprimes": 0.23,
+     "pct_inscrits": 0.1
     },
     {
-     "nom": "LEBARQUE",
-     "prenom": "Sébastien",
+     "nom": "DECOUTURE",
+     "prenom": "Isabelle",
+     "nuance": "NC",
+     "voix": 78,
+     "pct_exprimes": 0.23,
+     "pct_inscrits": 0.1
+    },
+    {
+     "nom": "YVELIN",
+     "prenom": "Philippe",
+     "nuance": "NC",
+     "voix": 78,
+     "pct_exprimes": 0.23,
+     "pct_inscrits": 0.1
+    },
+    {
+     "nom": "CASTRO",
+     "prenom": "Jérémie",
      "nuance": "NC",
      "voix": 77,
      "pct_exprimes": 0.22,
@@ -6528,8 +7216,16 @@
      "pct_inscrits": 0.09
     },
     {
-     "nom": "CASTRO",
-     "prenom": "Jérémie",
+     "nom": "LEBARQUE",
+     "prenom": "Sébastien",
+     "nuance": "NC",
+     "voix": 77,
+     "pct_exprimes": 0.22,
+     "pct_inscrits": 0.09
+    },
+    {
+     "nom": "ZAPPELINI",
+     "prenom": "Alain",
      "nuance": "NC",
      "voix": 77,
      "pct_exprimes": 0.22,
@@ -6538,6 +7234,22 @@
     {
      "nom": "BEERNAERT",
      "prenom": "Pierre-Antoine",
+     "nuance": "NC",
+     "voix": 77,
+     "pct_exprimes": 0.22,
+     "pct_inscrits": 0.09
+    },
+    {
+     "nom": "BATHELIER",
+     "prenom": "Marc",
+     "nuance": "NC",
+     "voix": 77,
+     "pct_exprimes": 0.22,
+     "pct_inscrits": 0.09
+    },
+    {
+     "nom": "GAUNET",
+     "prenom": "Arnaud",
      "nuance": "NC",
      "voix": 77,
      "pct_exprimes": 0.22,
@@ -6560,26 +7272,18 @@
      "pct_inscrits": 0.09
     },
     {
-     "nom": "SIX",
-     "prenom": "Florence",
+     "nom": "NGUIMFACK",
+     "prenom": "Sylvie",
      "nuance": "NC",
      "voix": 76,
      "pct_exprimes": 0.22,
      "pct_inscrits": 0.09
     },
     {
-     "nom": "VILLA",
-     "prenom": "Adrien",
+     "nom": "SIX",
+     "prenom": "Florence",
      "nuance": "NC",
-     "voix": 75,
-     "pct_exprimes": 0.22,
-     "pct_inscrits": 0.09
-    },
-    {
-     "nom": "HERD SMITH",
-     "prenom": "Viviane",
-     "nuance": "NC",
-     "voix": 75,
+     "voix": 76,
      "pct_exprimes": 0.22,
      "pct_inscrits": 0.09
     },
@@ -6600,8 +7304,48 @@
      "pct_inscrits": 0.09
     },
     {
+     "nom": "HERD SMITH",
+     "prenom": "Viviane",
+     "nuance": "NC",
+     "voix": 75,
+     "pct_exprimes": 0.22,
+     "pct_inscrits": 0.09
+    },
+    {
+     "nom": "VILLA",
+     "prenom": "Adrien",
+     "nuance": "NC",
+     "voix": 75,
+     "pct_exprimes": 0.22,
+     "pct_inscrits": 0.09
+    },
+    {
      "nom": "SANYAS",
      "prenom": "Martine",
+     "nuance": "NC",
+     "voix": 75,
+     "pct_exprimes": 0.22,
+     "pct_inscrits": 0.09
+    },
+    {
+     "nom": "FORGE",
+     "prenom": "Sylviane",
+     "nuance": "NC",
+     "voix": 75,
+     "pct_exprimes": 0.22,
+     "pct_inscrits": 0.09
+    },
+    {
+     "nom": "LEPREVOST",
+     "prenom": "Martial",
+     "nuance": "NC",
+     "voix": 75,
+     "pct_exprimes": 0.22,
+     "pct_inscrits": 0.09
+    },
+    {
+     "nom": "VEILLAT",
+     "prenom": "Didier",
      "nuance": "NC",
      "voix": 75,
      "pct_exprimes": 0.22,
@@ -6624,16 +7368,16 @@
      "pct_inscrits": 0.09
     },
     {
-     "nom": "MERCIER",
-     "prenom": "Philippe",
+     "nom": "MARCINIAK",
+     "prenom": "Ondine",
      "nuance": "NC",
      "voix": 74,
      "pct_exprimes": 0.21,
      "pct_inscrits": 0.09
     },
     {
-     "nom": "MARCINIAK",
-     "prenom": "Ondine",
+     "nom": "MERCIER",
+     "prenom": "Philippe",
      "nuance": "NC",
      "voix": 74,
      "pct_exprimes": 0.21,
@@ -6650,6 +7394,38 @@
     {
      "nom": "DEMETRIUS",
      "prenom": "Evelyne",
+     "nuance": "NC",
+     "voix": 74,
+     "pct_exprimes": 0.21,
+     "pct_inscrits": 0.09
+    },
+    {
+     "nom": "JAILLET",
+     "prenom": "Timothée",
+     "nuance": "NC",
+     "voix": 74,
+     "pct_exprimes": 0.21,
+     "pct_inscrits": 0.09
+    },
+    {
+     "nom": "MATHON",
+     "prenom": "Jean-Baptiste",
+     "nuance": "NC",
+     "voix": 74,
+     "pct_exprimes": 0.21,
+     "pct_inscrits": 0.09
+    },
+    {
+     "nom": "FAUVEAU",
+     "prenom": "Delphine",
+     "nuance": "NC",
+     "voix": 74,
+     "pct_exprimes": 0.21,
+     "pct_inscrits": 0.09
+    },
+    {
+     "nom": "LIGNEL",
+     "prenom": "Gérard",
      "nuance": "NC",
      "voix": 74,
      "pct_exprimes": 0.21,
@@ -6680,14 +7456,6 @@
      "pct_inscrits": 0.09
     },
     {
-     "nom": "QUERTIER",
-     "prenom": "Patrick",
-     "nuance": "NC",
-     "voix": 73,
-     "pct_exprimes": 0.21,
-     "pct_inscrits": 0.09
-    },
-    {
      "nom": "MAPELLI ZEIGER",
      "prenom": "Nadine",
      "nuance": "NC",
@@ -6696,8 +7464,40 @@
      "pct_inscrits": 0.09
     },
     {
+     "nom": "QUERTIER",
+     "prenom": "Patrick",
+     "nuance": "NC",
+     "voix": 73,
+     "pct_exprimes": 0.21,
+     "pct_inscrits": 0.09
+    },
+    {
+     "nom": "BERSIER",
+     "prenom": "Dominique",
+     "nuance": "NC",
+     "voix": 73,
+     "pct_exprimes": 0.21,
+     "pct_inscrits": 0.09
+    },
+    {
      "nom": "BAILLET",
      "prenom": "Isabelle",
+     "nuance": "NC",
+     "voix": 72,
+     "pct_exprimes": 0.21,
+     "pct_inscrits": 0.09
+    },
+    {
+     "nom": "LE BOUCHER",
+     "prenom": "Elisabeth",
+     "nuance": "NC",
+     "voix": 72,
+     "pct_exprimes": 0.21,
+     "pct_inscrits": 0.09
+    },
+    {
+     "nom": "DELAHAYE",
+     "prenom": "Maurice",
      "nuance": "NC",
      "voix": 72,
      "pct_exprimes": 0.21,
@@ -6728,48 +7528,40 @@
      "pct_inscrits": 0.09
     },
     {
+     "nom": "DREVET",
+     "prenom": "Eric",
+     "nuance": "NC",
+     "voix": 71,
+     "pct_exprimes": 0.21,
+     "pct_inscrits": 0.09
+    },
+    {
+     "nom": "MILLET",
+     "prenom": "Julien",
+     "nuance": "NC",
+     "voix": 71,
+     "pct_exprimes": 0.21,
+     "pct_inscrits": 0.09
+    },
+    {
+     "nom": "CATHALA",
+     "prenom": "Michel",
+     "nuance": "NC",
+     "voix": 71,
+     "pct_exprimes": 0.21,
+     "pct_inscrits": 0.09
+    },
+    {
+     "nom": "POUSSARD",
+     "prenom": "Cyrille",
+     "nuance": "NC",
+     "voix": 71,
+     "pct_exprimes": 0.21,
+     "pct_inscrits": 0.09
+    },
+    {
      "nom": "BOSSU",
      "prenom": "Olivier",
-     "nuance": "NC",
-     "voix": 70,
-     "pct_exprimes": 0.2,
-     "pct_inscrits": 0.09
-    },
-    {
-     "nom": "MÉNARD",
-     "prenom": "Lauriane",
-     "nuance": "NC",
-     "voix": 70,
-     "pct_exprimes": 0.2,
-     "pct_inscrits": 0.09
-    },
-    {
-     "nom": "BUTTEAU",
-     "prenom": "Laurent",
-     "nuance": "NC",
-     "voix": 70,
-     "pct_exprimes": 0.2,
-     "pct_inscrits": 0.09
-    },
-    {
-     "nom": "ROLLAND",
-     "prenom": "Jean-Claude",
-     "nuance": "NC",
-     "voix": 70,
-     "pct_exprimes": 0.2,
-     "pct_inscrits": 0.09
-    },
-    {
-     "nom": "CORDIER",
-     "prenom": "Sylvain",
-     "nuance": "NC",
-     "voix": 70,
-     "pct_exprimes": 0.2,
-     "pct_inscrits": 0.09
-    },
-    {
-     "nom": "GRANDVAL",
-     "prenom": "Stephane",
      "nuance": "NC",
      "voix": 70,
      "pct_exprimes": 0.2,
@@ -6784,8 +7576,56 @@
      "pct_inscrits": 0.09
     },
     {
+     "nom": "BUTTEAU",
+     "prenom": "Laurent",
+     "nuance": "NC",
+     "voix": 70,
+     "pct_exprimes": 0.2,
+     "pct_inscrits": 0.09
+    },
+    {
+     "nom": "MÉNARD",
+     "prenom": "Lauriane",
+     "nuance": "NC",
+     "voix": 70,
+     "pct_exprimes": 0.2,
+     "pct_inscrits": 0.09
+    },
+    {
+     "nom": "GRANDVAL",
+     "prenom": "Stephane",
+     "nuance": "NC",
+     "voix": 70,
+     "pct_exprimes": 0.2,
+     "pct_inscrits": 0.09
+    },
+    {
+     "nom": "CORDIER",
+     "prenom": "Sylvain",
+     "nuance": "NC",
+     "voix": 70,
+     "pct_exprimes": 0.2,
+     "pct_inscrits": 0.09
+    },
+    {
+     "nom": "ROLLAND",
+     "prenom": "Jean-Claude",
+     "nuance": "NC",
+     "voix": 70,
+     "pct_exprimes": 0.2,
+     "pct_inscrits": 0.09
+    },
+    {
      "nom": "SELHI",
      "prenom": "Audrey",
+     "nuance": "NC",
+     "voix": 69,
+     "pct_exprimes": 0.2,
+     "pct_inscrits": 0.08
+    },
+    {
+     "nom": "FORTIER",
+     "prenom": "Lydie",
      "nuance": "NC",
      "voix": 69,
      "pct_exprimes": 0.2,
@@ -6800,8 +7640,16 @@
      "pct_inscrits": 0.08
     },
     {
-     "nom": "FORTIER",
-     "prenom": "Lydie",
+     "nom": "MARCONNIER",
+     "prenom": "Maryse",
+     "nuance": "NC",
+     "voix": 69,
+     "pct_exprimes": 0.2,
+     "pct_inscrits": 0.08
+    },
+    {
+     "nom": "DELAHAYE",
+     "prenom": "Nathalie",
      "nuance": "NC",
      "voix": 69,
      "pct_exprimes": 0.2,
@@ -6818,6 +7666,22 @@
     {
      "nom": "PELET-FAUCHEUX",
      "prenom": "Edouard",
+     "nuance": "NC",
+     "voix": 68,
+     "pct_exprimes": 0.2,
+     "pct_inscrits": 0.08
+    },
+    {
+     "nom": "BERNARD",
+     "prenom": "Agnès",
+     "nuance": "NC",
+     "voix": 68,
+     "pct_exprimes": 0.2,
+     "pct_inscrits": 0.08
+    },
+    {
+     "nom": "MULLER",
+     "prenom": "Sophie",
      "nuance": "NC",
      "voix": 68,
      "pct_exprimes": 0.2,
@@ -6856,6 +7720,22 @@
      "pct_inscrits": 0.08
     },
     {
+     "nom": "HAUTREUX",
+     "prenom": "Louis",
+     "nuance": "NC",
+     "voix": 66,
+     "pct_exprimes": 0.19,
+     "pct_inscrits": 0.08
+    },
+    {
+     "nom": "POULLAIN",
+     "prenom": "Eric",
+     "nuance": "NC",
+     "voix": 65,
+     "pct_exprimes": 0.19,
+     "pct_inscrits": 0.08
+    },
+    {
      "nom": "LAGRUE",
      "prenom": "Laurine",
      "nuance": "NC",
@@ -6864,8 +7744,16 @@
      "pct_inscrits": 0.08
     },
     {
-     "nom": "POULLAIN",
-     "prenom": "Eric",
+     "nom": "FLAMENT",
+     "prenom": "Dominique",
+     "nuance": "NC",
+     "voix": 65,
+     "pct_exprimes": 0.19,
+     "pct_inscrits": 0.08
+    },
+    {
+     "nom": "DE MAISTRE",
+     "prenom": "Nicolas",
      "nuance": "NC",
      "voix": 65,
      "pct_exprimes": 0.19,
@@ -6904,14 +7792,6 @@
      "pct_inscrits": 0.08
     },
     {
-     "nom": "DODEMAN",
-     "prenom": "Geoffrey",
-     "nuance": "NC",
-     "voix": 63,
-     "pct_exprimes": 0.18,
-     "pct_inscrits": 0.08
-    },
-    {
      "nom": "LAVOCAT",
      "prenom": "Sylvie",
      "nuance": "NC",
@@ -6928,6 +7808,14 @@
      "pct_inscrits": 0.08
     },
     {
+     "nom": "DODEMAN",
+     "prenom": "Geoffrey",
+     "nuance": "NC",
+     "voix": 63,
+     "pct_exprimes": 0.18,
+     "pct_inscrits": 0.08
+    },
+    {
      "nom": "BEERNAERT",
      "prenom": "Jean",
      "nuance": "NC",
@@ -6938,6 +7826,14 @@
     {
      "nom": "RUBANY",
      "prenom": "Ludovic",
+     "nuance": "NC",
+     "voix": 62,
+     "pct_exprimes": 0.18,
+     "pct_inscrits": 0.08
+    },
+    {
+     "nom": "TERRIEN",
+     "prenom": "Danielle",
      "nuance": "NC",
      "voix": 62,
      "pct_exprimes": 0.18,
@@ -6976,6 +7872,14 @@
      "pct_inscrits": 0.07
     },
     {
+     "nom": "DE MONTFORT",
+     "prenom": "Gabriel",
+     "nuance": "NC",
+     "voix": 58,
+     "pct_exprimes": 0.17,
+     "pct_inscrits": 0.07
+    },
+    {
      "nom": "ANGELONI",
      "prenom": "Bruno",
      "nuance": "NC",
@@ -7008,14 +7912,6 @@
      "pct_inscrits": 0.07
     },
     {
-     "nom": "JULMANN",
-     "prenom": "Murielle",
-     "nuance": "NC",
-     "voix": 55,
-     "pct_exprimes": 0.16,
-     "pct_inscrits": 0.07
-    },
-    {
      "nom": "DUCHESNE",
      "prenom": "Loïc",
      "nuance": "NC",
@@ -7024,8 +7920,8 @@
      "pct_inscrits": 0.07
     },
     {
-     "nom": "COQUILLARD",
-     "prenom": "Benoit",
+     "nom": "JULMANN",
+     "prenom": "Murielle",
      "nuance": "NC",
      "voix": 55,
      "pct_exprimes": 0.16,
@@ -7034,6 +7930,14 @@
     {
      "nom": "DESLANDES",
      "prenom": "Daisy",
+     "nuance": "NC",
+     "voix": 55,
+     "pct_exprimes": 0.16,
+     "pct_inscrits": 0.07
+    },
+    {
+     "nom": "LIPAROTI",
+     "prenom": "Marion",
      "nuance": "NC",
      "voix": 55,
      "pct_exprimes": 0.16,
@@ -7056,8 +7960,8 @@
      "pct_inscrits": 0.07
     },
     {
-     "nom": "CAPRON",
-     "prenom": "Philippe",
+     "nom": "OLIVIER",
+     "prenom": "Jerome",
      "nuance": "NC",
      "voix": 55,
      "pct_exprimes": 0.16,
@@ -7072,16 +7976,16 @@
      "pct_inscrits": 0.07
     },
     {
-     "nom": "LIPAROTI",
-     "prenom": "Marion",
+     "nom": "CAPRON",
+     "prenom": "Philippe",
      "nuance": "NC",
      "voix": 55,
      "pct_exprimes": 0.16,
      "pct_inscrits": 0.07
     },
     {
-     "nom": "OLIVIER",
-     "prenom": "Jerome",
+     "nom": "COQUILLARD",
+     "prenom": "Benoit",
      "nuance": "NC",
      "voix": 55,
      "pct_exprimes": 0.16,
@@ -7152,16 +8056,8 @@
      "pct_inscrits": 0.06
     },
     {
-     "nom": "BEDNAREK",
-     "prenom": "Alain",
-     "nuance": "NC",
-     "voix": 48,
-     "pct_exprimes": 0.14,
-     "pct_inscrits": 0.06
-    },
-    {
-     "nom": "MORTIER",
-     "prenom": "Matthieu",
+     "nom": "TROGNON",
+     "prenom": "Vincent",
      "nuance": "NC",
      "voix": 48,
      "pct_exprimes": 0.14,
@@ -7184,14 +8080,6 @@
      "pct_inscrits": 0.06
     },
     {
-     "nom": "AZOUAN",
-     "prenom": "Appy",
-     "nuance": "NC",
-     "voix": 48,
-     "pct_exprimes": 0.14,
-     "pct_inscrits": 0.06
-    },
-    {
      "nom": "JOUX DIT ALISON",
      "prenom": "Magali",
      "nuance": "NC",
@@ -7200,18 +8088,26 @@
      "pct_inscrits": 0.06
     },
     {
-     "nom": "TROGNON",
-     "prenom": "Vincent",
+     "nom": "BEDNAREK",
+     "prenom": "Alain",
      "nuance": "NC",
      "voix": 48,
      "pct_exprimes": 0.14,
      "pct_inscrits": 0.06
     },
     {
-     "nom": "THENAISY",
-     "prenom": "Vanessa",
+     "nom": "MORTIER",
+     "prenom": "Matthieu",
      "nuance": "NC",
-     "voix": 47,
+     "voix": 48,
+     "pct_exprimes": 0.14,
+     "pct_inscrits": 0.06
+    },
+    {
+     "nom": "AZOUAN",
+     "prenom": "Appy",
+     "nuance": "NC",
+     "voix": 48,
      "pct_exprimes": 0.14,
      "pct_inscrits": 0.06
     },
@@ -7232,12 +8128,36 @@
      "pct_inscrits": 0.06
     },
     {
+     "nom": "THENAISY",
+     "prenom": "Vanessa",
+     "nuance": "NC",
+     "voix": 47,
+     "pct_exprimes": 0.14,
+     "pct_inscrits": 0.06
+    },
+    {
      "nom": "VALDELIEVRE",
      "prenom": "Michèle",
      "nuance": "NC",
      "voix": 45,
      "pct_exprimes": 0.13,
      "pct_inscrits": 0.06
+    },
+    {
+     "nom": "VERBEKE",
+     "prenom": "Muriel",
+     "nuance": "NC",
+     "voix": 41,
+     "pct_exprimes": 0.12,
+     "pct_inscrits": 0.05
+    },
+    {
+     "nom": "PICARD",
+     "prenom": "Séverine",
+     "nuance": "NC",
+     "voix": 41,
+     "pct_exprimes": 0.12,
+     "pct_inscrits": 0.05
     },
     {
      "nom": "MERCIER",
@@ -7258,14 +8178,6 @@
     {
      "nom": "COMBECAU",
      "prenom": "Solenn",
-     "nuance": "NC",
-     "voix": 41,
-     "pct_exprimes": 0.12,
-     "pct_inscrits": 0.05
-    },
-    {
-     "nom": "VERBEKE",
-     "prenom": "Muriel",
      "nuance": "NC",
      "voix": 41,
      "pct_exprimes": 0.12,
@@ -7312,6 +8224,14 @@
      "pct_inscrits": 0.05
     },
     {
+     "nom": "VERSET",
+     "prenom": "Nicolas",
+     "nuance": "NC",
+     "voix": 39,
+     "pct_exprimes": 0.11,
+     "pct_inscrits": 0.05
+    },
+    {
      "nom": "MONTHILLER",
      "prenom": "Gérard",
      "nuance": "NC",
@@ -7336,16 +8256,16 @@
      "pct_inscrits": 0.04
     },
     {
-     "nom": "VALLET",
-     "prenom": "Laurent",
+     "nom": "TAVARON",
+     "prenom": "John",
      "nuance": "NC",
      "voix": 33,
      "pct_exprimes": 0.1,
      "pct_inscrits": 0.04
     },
     {
-     "nom": "TAVARON",
-     "prenom": "John",
+     "nom": "VALLET",
+     "prenom": "Laurent",
      "nuance": "NC",
      "voix": 33,
      "pct_exprimes": 0.1,
@@ -7392,24 +8312,8 @@
      "pct_inscrits": 0.04
     },
     {
-     "nom": "REOL",
-     "prenom": "Philippe",
-     "nuance": "NC",
-     "voix": 27,
-     "pct_exprimes": 0.08,
-     "pct_inscrits": 0.03
-    },
-    {
-     "nom": "HOLIGNER",
-     "prenom": "Michel",
-     "nuance": "NC",
-     "voix": 27,
-     "pct_exprimes": 0.08,
-     "pct_inscrits": 0.03
-    },
-    {
-     "nom": "YOUNSI",
-     "prenom": "Ali",
+     "nom": "PION",
+     "prenom": "Christian",
      "nuance": "NC",
      "voix": 27,
      "pct_exprimes": 0.08,
@@ -7424,8 +8328,24 @@
      "pct_inscrits": 0.03
     },
     {
-     "nom": "PION",
-     "prenom": "Christian",
+     "nom": "YOUNSI",
+     "prenom": "Ali",
+     "nuance": "NC",
+     "voix": 27,
+     "pct_exprimes": 0.08,
+     "pct_inscrits": 0.03
+    },
+    {
+     "nom": "HOLIGNER",
+     "prenom": "Michel",
+     "nuance": "NC",
+     "voix": 27,
+     "pct_exprimes": 0.08,
+     "pct_inscrits": 0.03
+    },
+    {
+     "nom": "REOL",
+     "prenom": "Philippe",
      "nuance": "NC",
      "voix": 27,
      "pct_exprimes": 0.08,
@@ -7448,6 +8368,14 @@
      "pct_inscrits": 0.03
     },
     {
+     "nom": "DASSÉ",
+     "prenom": "Claude",
+     "nuance": "NC",
+     "voix": 23,
+     "pct_exprimes": 0.07,
+     "pct_inscrits": 0.03
+    },
+    {
      "nom": "JALLET",
      "prenom": "Henri",
      "nuance": "NC",
@@ -7464,24 +8392,8 @@
      "pct_inscrits": 0.03
     },
     {
-     "nom": "THOMASSIN",
-     "prenom": "Anne-Chantal",
-     "nuance": "NC",
-     "voix": 21,
-     "pct_exprimes": 0.06,
-     "pct_inscrits": 0.03
-    },
-    {
      "nom": "TOJAL",
      "prenom": "Joao",
-     "nuance": "NC",
-     "voix": 21,
-     "pct_exprimes": 0.06,
-     "pct_inscrits": 0.03
-    },
-    {
-     "nom": "SANGNIER",
-     "prenom": "Stéphane",
      "nuance": "NC",
      "voix": 21,
      "pct_exprimes": 0.06,
@@ -7496,16 +8408,32 @@
      "pct_inscrits": 0.03
     },
     {
-     "nom": "BARDOU",
-     "prenom": "Chantal",
+     "nom": "SANGNIER",
+     "prenom": "Stéphane",
+     "nuance": "NC",
+     "voix": 21,
+     "pct_exprimes": 0.06,
+     "pct_inscrits": 0.03
+    },
+    {
+     "nom": "THOMASSIN",
+     "prenom": "Anne-Chantal",
+     "nuance": "NC",
+     "voix": 21,
+     "pct_exprimes": 0.06,
+     "pct_inscrits": 0.03
+    },
+    {
+     "nom": "COLLEAU",
+     "prenom": "Cécile",
      "nuance": "NC",
      "voix": 20,
      "pct_exprimes": 0.06,
      "pct_inscrits": 0.02
     },
     {
-     "nom": "COLLEAU",
-     "prenom": "Cécile",
+     "nom": "BARDOU",
+     "prenom": "Chantal",
      "nuance": "NC",
      "voix": 20,
      "pct_exprimes": 0.06,
@@ -7528,6 +8456,22 @@
      "pct_inscrits": 0.02
     },
     {
+     "nom": "DELACOUR",
+     "prenom": "Hervé",
+     "nuance": "NC",
+     "voix": 17,
+     "pct_exprimes": 0.05,
+     "pct_inscrits": 0.02
+    },
+    {
+     "nom": "PENTHER",
+     "prenom": "Jeremy",
+     "nuance": "NC",
+     "voix": 13,
+     "pct_exprimes": 0.04,
+     "pct_inscrits": 0.02
+    },
+    {
      "nom": "DE LIEDEKERKE BEAUFORT",
      "prenom": "Angèle",
      "nuance": "NC",
@@ -7544,24 +8488,8 @@
      "pct_inscrits": 0.02
     },
     {
-     "nom": "PENTHER",
-     "prenom": "Jeremy",
-     "nuance": "NC",
-     "voix": 13,
-     "pct_exprimes": 0.04,
-     "pct_inscrits": 0.02
-    },
-    {
      "nom": "GOUINEAU",
      "prenom": "Lydie",
-     "nuance": "NC",
-     "voix": 12,
-     "pct_exprimes": 0.03,
-     "pct_inscrits": 0.01
-    },
-    {
-     "nom": "DELILLE",
-     "prenom": "Jean",
      "nuance": "NC",
      "voix": 12,
      "pct_exprimes": 0.03,
@@ -7576,12 +8504,28 @@
      "pct_inscrits": 0.01
     },
     {
+     "nom": "DELILLE",
+     "prenom": "Jean",
+     "nuance": "NC",
+     "voix": 12,
+     "pct_exprimes": 0.03,
+     "pct_inscrits": 0.01
+    },
+    {
      "nom": "MOTHE",
      "prenom": "Léo",
      "nuance": "NC",
      "voix": 11,
      "pct_exprimes": 0.03,
      "pct_inscrits": 0.01
+    },
+    {
+     "nom": "BERTÉ",
+     "prenom": "Sylvain",
+     "nuance": "NC",
+     "voix": 4,
+     "pct_exprimes": 0.01,
+     "pct_inscrits": 0.0
     },
     {
      "nom": "POUTREL",
@@ -7702,6 +8646,14 @@
      "pct_inscrits": 1.13
     },
     {
+     "nom": "CORCEIRO",
+     "prenom": "David",
+     "nuance": "LDVC",
+     "voix": 830,
+     "pct_exprimes": 3.16,
+     "pct_inscrits": 1.1
+    },
+    {
      "nom": "BEKARE",
      "prenom": "Omar",
      "nuance": "LDIV",
@@ -7716,14 +8668,6 @@
      "voix": 770,
      "pct_exprimes": 2.93,
      "pct_inscrits": 1.02
-    },
-    {
-     "nom": "CORCEIRO",
-     "prenom": "David",
-     "nuance": "LDVC",
-     "voix": 743,
-     "pct_exprimes": 2.83,
-     "pct_inscrits": 0.99
     },
     {
      "nom": "HEURFIN",
@@ -7911,9 +8855,9 @@
      "nom": "SLAOUTI",
      "prenom": "Omar",
      "nuance": "LDVG",
-     "voix": 1896,
-     "pct_exprimes": 8.67,
-     "pct_inscrits": 2.73
+     "voix": 1913,
+     "pct_exprimes": 8.74,
+     "pct_inscrits": 2.76
     },
     {
      "nom": "LESPARRE",
@@ -7999,9 +8943,9 @@
      "nom": "MARIETTE",
      "prenom": "Dominique",
      "nuance": "LEXG",
-     "voix": 313,
-     "pct_exprimes": 1.43,
-     "pct_inscrits": 0.45
+     "voix": 318,
+     "pct_exprimes": 1.45,
+     "pct_inscrits": 0.46
     },
     {
      "nom": "CAMPAGNAC",
@@ -8101,9 +9045,9 @@
      "nom": "ASSOR",
      "prenom": "Jocelyn",
      "nuance": "LDIV",
-     "voix": 577,
-     "pct_exprimes": 2.78,
-     "pct_inscrits": 0.87
+     "voix": 583,
+     "pct_exprimes": 2.81,
+     "pct_inscrits": 0.88
     },
     {
      "nom": "CHIKAOUI",
@@ -8162,6 +9106,14 @@
      "pct_inscrits": 0.38
     },
     {
+     "nom": "HOCINI",
+     "prenom": "Pamela",
+     "nuance": "LDVG",
+     "voix": 232,
+     "pct_exprimes": 1.12,
+     "pct_inscrits": 0.35
+    },
+    {
      "nom": "BENOUARET",
      "prenom": "Abdellah",
      "nuance": "LNC",
@@ -8170,20 +9122,12 @@
      "pct_inscrits": 0.32
     },
     {
-     "nom": "HOCINI",
-     "prenom": "Pamela",
-     "nuance": "LDVG",
-     "voix": 208,
-     "pct_exprimes": 1.0,
-     "pct_inscrits": 0.31
-    },
-    {
      "nom": "KALAA",
      "prenom": "Sabry",
      "nuance": "LDVD",
-     "voix": 191,
-     "pct_exprimes": 0.92,
-     "pct_inscrits": 0.29
+     "voix": 203,
+     "pct_exprimes": 0.98,
+     "pct_inscrits": 0.31
     },
     {
      "nom": "HERKAT",
@@ -8440,16 +9384,8 @@
      "pct_inscrits": 0.49
     },
     {
-     "nom": "LE CHOPIER",
-     "prenom": "Corinne",
-     "nuance": "NC",
-     "voix": 306,
-     "pct_exprimes": 1.18,
-     "pct_inscrits": 0.45
-    },
-    {
-     "nom": "VINCENT",
-     "prenom": "Patrick",
+     "nom": "PASQUET",
+     "prenom": "Vincent",
      "nuance": "NC",
      "voix": 306,
      "pct_exprimes": 1.18,
@@ -8464,16 +9400,24 @@
      "pct_inscrits": 0.45
     },
     {
-     "nom": "PASQUET",
-     "prenom": "Vincent",
+     "nom": "VINCENT",
+     "prenom": "Patrick",
      "nuance": "NC",
      "voix": 306,
      "pct_exprimes": 1.18,
      "pct_inscrits": 0.45
     },
     {
-     "nom": "VAN HAECKE",
-     "prenom": "Evelyne",
+     "nom": "LE CHOPIER",
+     "prenom": "Corinne",
+     "nuance": "NC",
+     "voix": 306,
+     "pct_exprimes": 1.18,
+     "pct_inscrits": 0.45
+    },
+    {
+     "nom": "DE BRION",
+     "prenom": "Ariane",
      "nuance": "NC",
      "voix": 305,
      "pct_exprimes": 1.18,
@@ -8488,8 +9432,16 @@
      "pct_inscrits": 0.45
     },
     {
-     "nom": "DE BRION",
-     "prenom": "Ariane",
+     "nom": "CAHOUR",
+     "prenom": "Michel",
+     "nuance": "NC",
+     "voix": 305,
+     "pct_exprimes": 1.18,
+     "pct_inscrits": 0.45
+    },
+    {
+     "nom": "VAN HAECKE",
+     "prenom": "Evelyne",
      "nuance": "NC",
      "voix": 305,
      "pct_exprimes": 1.18,
@@ -8504,24 +9456,16 @@
      "pct_inscrits": 0.45
     },
     {
-     "nom": "CAHOUR",
-     "prenom": "Michel",
-     "nuance": "NC",
-     "voix": 305,
-     "pct_exprimes": 1.18,
-     "pct_inscrits": 0.45
-    },
-    {
-     "nom": "LECLAIRE",
-     "prenom": "Patrice",
+     "nom": "SAVY",
+     "prenom": "Marie-Laure",
      "nuance": "NC",
      "voix": 304,
      "pct_exprimes": 1.17,
      "pct_inscrits": 0.45
     },
     {
-     "nom": "SAVY",
-     "prenom": "Marie-Laure",
+     "nom": "LECLAIRE",
+     "prenom": "Patrice",
      "nuance": "NC",
      "voix": 304,
      "pct_exprimes": 1.17,
@@ -8624,16 +9568,16 @@
      "pct_inscrits": 0.39
     },
     {
-     "nom": "DUPE",
-     "prenom": "Philippe",
+     "nom": "CAMPIN",
+     "prenom": "Jacquies",
      "nuance": "NC",
      "voix": 235,
      "pct_exprimes": 0.91,
      "pct_inscrits": 0.35
     },
     {
-     "nom": "CAMPIN",
-     "prenom": "Jacquies",
+     "nom": "DUPE",
+     "prenom": "Philippe",
      "nuance": "NC",
      "voix": 235,
      "pct_exprimes": 0.91,
@@ -8752,14 +9696,6 @@
      "pct_inscrits": 0.33
     },
     {
-     "nom": "LEGRAND-HAMON",
-     "prenom": "Céline",
-     "nuance": "NC",
-     "voix": 225,
-     "pct_exprimes": 0.87,
-     "pct_inscrits": 0.33
-    },
-    {
      "nom": "PONCHEL",
      "prenom": "Rémy",
      "nuance": "NC",
@@ -8770,6 +9706,14 @@
     {
      "nom": "BEILLEAU",
      "prenom": "Adrien",
+     "nuance": "NC",
+     "voix": 225,
+     "pct_exprimes": 0.87,
+     "pct_inscrits": 0.33
+    },
+    {
+     "nom": "LEGRAND-HAMON",
+     "prenom": "Céline",
      "nuance": "NC",
      "voix": 225,
      "pct_exprimes": 0.87,
@@ -8800,14 +9744,6 @@
      "pct_inscrits": 0.33
     },
     {
-     "nom": "LAFAY",
-     "prenom": "Edwige",
-     "nuance": "NC",
-     "voix": 223,
-     "pct_exprimes": 0.86,
-     "pct_inscrits": 0.33
-    },
-    {
      "nom": "AMENDOLA",
      "prenom": "Christelle",
      "nuance": "NC",
@@ -8816,16 +9752,24 @@
      "pct_inscrits": 0.33
     },
     {
-     "nom": "SCHILLINGER",
-     "prenom": "Martine",
+     "nom": "MONTAGNIER",
+     "prenom": "Eric",
      "nuance": "NC",
      "voix": 223,
      "pct_exprimes": 0.86,
      "pct_inscrits": 0.33
     },
     {
-     "nom": "MONTAGNIER",
-     "prenom": "Eric",
+     "nom": "LAFAY",
+     "prenom": "Edwige",
+     "nuance": "NC",
+     "voix": 223,
+     "pct_exprimes": 0.86,
+     "pct_inscrits": 0.33
+    },
+    {
+     "nom": "SCHILLINGER",
+     "prenom": "Martine",
      "nuance": "NC",
      "voix": 223,
      "pct_exprimes": 0.86,
@@ -8848,16 +9792,16 @@
      "pct_inscrits": 0.33
     },
     {
-     "nom": "ROUSSEAU",
-     "prenom": "Milene",
+     "nom": "CASSIA",
+     "prenom": "Marion",
      "nuance": "NC",
      "voix": 221,
      "pct_exprimes": 0.85,
      "pct_inscrits": 0.33
     },
     {
-     "nom": "CASSIA",
-     "prenom": "Marion",
+     "nom": "ROUSSEAU",
+     "prenom": "Milene",
      "nuance": "NC",
      "voix": 221,
      "pct_exprimes": 0.85,
@@ -8880,14 +9824,6 @@
      "pct_inscrits": 0.3
     },
     {
-     "nom": "CHARPILLAT",
-     "prenom": "Bernard",
-     "nuance": "NC",
-     "voix": 202,
-     "pct_exprimes": 0.78,
-     "pct_inscrits": 0.3
-    },
-    {
      "nom": "ALSENE",
      "prenom": "Olivier",
      "nuance": "NC",
@@ -8898,6 +9834,14 @@
     {
      "nom": "GAGNÉ",
      "prenom": "Galina",
+     "nuance": "NC",
+     "voix": 202,
+     "pct_exprimes": 0.78,
+     "pct_inscrits": 0.3
+    },
+    {
+     "nom": "CHARPILLAT",
+     "prenom": "Bernard",
      "nuance": "NC",
      "voix": 202,
      "pct_exprimes": 0.78,
@@ -8928,16 +9872,16 @@
      "pct_inscrits": 0.3
     },
     {
-     "nom": "BASSETT",
-     "prenom": "Jacqueline",
+     "nom": "VELOSO",
+     "prenom": "Patricia",
      "nuance": "NC",
      "voix": 201,
      "pct_exprimes": 0.78,
      "pct_inscrits": 0.3
     },
     {
-     "nom": "VELOSO",
-     "prenom": "Patricia",
+     "nom": "ROBERT",
+     "prenom": "Michel",
      "nuance": "NC",
      "voix": 201,
      "pct_exprimes": 0.78,
@@ -8952,8 +9896,8 @@
      "pct_inscrits": 0.3
     },
     {
-     "nom": "ROBERT",
-     "prenom": "Michel",
+     "nom": "BASSETT",
+     "prenom": "Jacqueline",
      "nuance": "NC",
      "voix": 201,
      "pct_exprimes": 0.78,
@@ -9016,8 +9960,8 @@
      "pct_inscrits": 0.29
     },
     {
-     "nom": "THIVET",
-     "prenom": "Christophe",
+     "nom": "FALCONI",
+     "prenom": "Ana Maria",
      "nuance": "NC",
      "voix": 197,
      "pct_exprimes": 0.76,
@@ -9032,8 +9976,8 @@
      "pct_inscrits": 0.29
     },
     {
-     "nom": "FALCONI",
-     "prenom": "Ana Maria",
+     "nom": "THIVET",
+     "prenom": "Christophe",
      "nuance": "NC",
      "voix": 197,
      "pct_exprimes": 0.76,
@@ -9064,16 +10008,16 @@
      "pct_inscrits": 0.29
     },
     {
-     "nom": "PALLUET",
-     "prenom": "Philippe",
+     "nom": "LABARTHE",
+     "prenom": "Valerie",
      "nuance": "NC",
      "voix": 192,
      "pct_exprimes": 0.74,
      "pct_inscrits": 0.28
     },
     {
-     "nom": "LABARTHE",
-     "prenom": "Valerie",
+     "nom": "PALLUET",
+     "prenom": "Philippe",
      "nuance": "NC",
      "voix": 192,
      "pct_exprimes": 0.74,
@@ -9096,16 +10040,16 @@
      "pct_inscrits": 0.28
     },
     {
-     "nom": "BOUDER",
-     "prenom": "Pierre-Yves",
+     "nom": "FALLET",
+     "prenom": "Béatrice",
      "nuance": "NC",
      "voix": 185,
      "pct_exprimes": 0.72,
      "pct_inscrits": 0.27
     },
     {
-     "nom": "FALLET",
-     "prenom": "Béatrice",
+     "nom": "BOUDER",
+     "prenom": "Pierre-Yves",
      "nuance": "NC",
      "voix": 185,
      "pct_exprimes": 0.72,
@@ -9120,14 +10064,6 @@
      "pct_inscrits": 0.27
     },
     {
-     "nom": "HENRY",
-     "prenom": "Frédéric",
-     "nuance": "NC",
-     "voix": 176,
-     "pct_exprimes": 0.68,
-     "pct_inscrits": 0.26
-    },
-    {
      "nom": "COSSARD",
      "prenom": "Thierry",
      "nuance": "NC",
@@ -9138,6 +10074,14 @@
     {
      "nom": "DANIEL",
      "prenom": "Philippe",
+     "nuance": "NC",
+     "voix": 176,
+     "pct_exprimes": 0.68,
+     "pct_inscrits": 0.26
+    },
+    {
+     "nom": "HENRY",
+     "prenom": "Frédéric",
      "nuance": "NC",
      "voix": 176,
      "pct_exprimes": 0.68,
@@ -9168,6 +10112,14 @@
      "pct_inscrits": 0.26
     },
     {
+     "nom": "BAREYT",
+     "prenom": "Vivien",
+     "nuance": "NC",
+     "voix": 174,
+     "pct_exprimes": 0.67,
+     "pct_inscrits": 0.26
+    },
+    {
      "nom": "RIFFIER",
      "prenom": "Gilles",
      "nuance": "NC",
@@ -9184,10 +10136,10 @@
      "pct_inscrits": 0.26
     },
     {
-     "nom": "BAREYT",
-     "prenom": "Vivien",
+     "nom": "OCCELLI",
+     "prenom": "Isabelle",
      "nuance": "NC",
-     "voix": 174,
+     "voix": 173,
      "pct_exprimes": 0.67,
      "pct_inscrits": 0.26
     },
@@ -9200,24 +10152,16 @@
      "pct_inscrits": 0.26
     },
     {
-     "nom": "OCCELLI",
-     "prenom": "Isabelle",
-     "nuance": "NC",
-     "voix": 173,
-     "pct_exprimes": 0.67,
-     "pct_inscrits": 0.26
-    },
-    {
-     "nom": "BASSE",
-     "prenom": "Jocelyne",
+     "nom": "BORGNE",
+     "prenom": "Catherine",
      "nuance": "NC",
      "voix": 170,
      "pct_exprimes": 0.66,
      "pct_inscrits": 0.25
     },
     {
-     "nom": "BORGNE",
-     "prenom": "Catherine",
+     "nom": "BASSE",
+     "prenom": "Jocelyne",
      "nuance": "NC",
      "voix": 170,
      "pct_exprimes": 0.66,
@@ -9318,12 +10262,36 @@
      "pct_inscrits": 1.41
     },
     {
+     "nom": "CANCOUET",
+     "prenom": "Patrick",
+     "nuance": "LDVD",
+     "voix": 737,
+     "pct_exprimes": 3.72,
+     "pct_inscrits": 1.33
+    },
+    {
+     "nom": "JEFFROY",
+     "prenom": "François",
+     "nuance": "LDIV",
+     "voix": 730,
+     "pct_exprimes": 3.69,
+     "pct_inscrits": 1.32
+    },
+    {
      "nom": "PRIOLON",
      "prenom": "Philippe",
      "nuance": "LREM",
      "voix": 716,
      "pct_exprimes": 3.61,
      "pct_inscrits": 1.29
+    },
+    {
+     "nom": "BOUTIER",
+     "prenom": "Joël",
+     "nuance": "LDVD",
+     "voix": 660,
+     "pct_exprimes": 3.33,
+     "pct_inscrits": 1.19
     },
     {
      "nom": "BERTHY",
@@ -9502,16 +10470,16 @@
      "pct_inscrits": 0.43
     },
     {
-     "nom": "DUFOUR",
-     "prenom": "Bruno",
+     "nom": "AMAROUCHE",
+     "prenom": "Léna",
      "nuance": "NC",
      "voix": 241,
      "pct_exprimes": 1.22,
      "pct_inscrits": 0.43
     },
     {
-     "nom": "AMAROUCHE",
-     "prenom": "Léna",
+     "nom": "DUFOUR",
+     "prenom": "Bruno",
      "nuance": "NC",
      "voix": 241,
      "pct_exprimes": 1.22,
@@ -9598,6 +10566,14 @@
      "pct_inscrits": 0.39
     },
     {
+     "nom": "DE JESUS GRACA",
+     "prenom": "Stephanie",
+     "nuance": "NC",
+     "voix": 214,
+     "pct_exprimes": 1.08,
+     "pct_inscrits": 0.39
+    },
+    {
      "nom": "DESACHY",
      "prenom": "Robert",
      "nuance": "NC",
@@ -9606,16 +10582,16 @@
      "pct_inscrits": 0.39
     },
     {
-     "nom": "CHAMPIGNY",
-     "prenom": "Franck",
+     "nom": "GAGNET",
+     "prenom": "Robert",
      "nuance": "NC",
      "voix": 213,
      "pct_exprimes": 1.08,
      "pct_inscrits": 0.38
     },
     {
-     "nom": "GAGNET",
-     "prenom": "Robert",
+     "nom": "CHAMPIGNY",
+     "prenom": "Franck",
      "nuance": "NC",
      "voix": 213,
      "pct_exprimes": 1.08,
@@ -9630,8 +10606,24 @@
      "pct_inscrits": 0.38
     },
     {
+     "nom": "BARBAT",
+     "prenom": "Catherine",
+     "nuance": "NC",
+     "voix": 209,
+     "pct_exprimes": 1.06,
+     "pct_inscrits": 0.38
+    },
+    {
      "nom": "DEZOBRY",
      "prenom": "Hervé",
+     "nuance": "NC",
+     "voix": 206,
+     "pct_exprimes": 1.04,
+     "pct_inscrits": 0.37
+    },
+    {
+     "nom": "CHAUVOT",
+     "prenom": "Daniel",
      "nuance": "NC",
      "voix": 206,
      "pct_exprimes": 1.04,
@@ -9662,6 +10654,14 @@
      "pct_inscrits": 0.36
     },
     {
+     "nom": "FOURNIER",
+     "prenom": "Marie Françoise",
+     "nuance": "NC",
+     "voix": 202,
+     "pct_exprimes": 1.02,
+     "pct_inscrits": 0.36
+    },
+    {
      "nom": "LANGLOIS",
      "prenom": "Tony",
      "nuance": "NC",
@@ -9678,16 +10678,24 @@
      "pct_inscrits": 0.36
     },
     {
-     "nom": "RAVOUX",
-     "prenom": "Diana",
+     "nom": "JUCHORS",
+     "prenom": "Serge",
+     "nuance": "NC",
+     "voix": 200,
+     "pct_exprimes": 1.01,
+     "pct_inscrits": 0.36
+    },
+    {
+     "nom": "LE GAL",
+     "prenom": "Alexandre",
      "nuance": "NC",
      "voix": 196,
      "pct_exprimes": 0.99,
      "pct_inscrits": 0.35
     },
     {
-     "nom": "LE GAL",
-     "prenom": "Alexandre",
+     "nom": "RAVOUX",
+     "prenom": "Diana",
      "nuance": "NC",
      "voix": 196,
      "pct_exprimes": 0.99,
@@ -9734,6 +10742,14 @@
      "pct_inscrits": 0.34
     },
     {
+     "nom": "DOMAN",
+     "prenom": "Valérie",
+     "nuance": "NC",
+     "voix": 187,
+     "pct_exprimes": 0.94,
+     "pct_inscrits": 0.34
+    },
+    {
      "nom": "GIRARD",
      "prenom": "Béatrice",
      "nuance": "NC",
@@ -9742,10 +10758,10 @@
      "pct_inscrits": 0.34
     },
     {
-     "nom": "DOMAN",
-     "prenom": "Valérie",
+     "nom": "GROISET-FORESTIER",
+     "prenom": "Ornella",
      "nuance": "NC",
-     "voix": 187,
+     "voix": 186,
      "pct_exprimes": 0.94,
      "pct_inscrits": 0.34
     },
@@ -9790,14 +10806,6 @@
      "pct_inscrits": 0.09
     },
     {
-     "nom": "NYS",
-     "prenom": "Nicolas",
-     "nuance": "NC",
-     "voix": 48,
-     "pct_exprimes": 0.24,
-     "pct_inscrits": 0.09
-    },
-    {
      "nom": "TOURNIQUET",
      "prenom": "Sébastien",
      "nuance": "NC",
@@ -9806,16 +10814,24 @@
      "pct_inscrits": 0.09
     },
     {
-     "nom": "RODRIGUEZ",
-     "prenom": "Laetitia",
+     "nom": "NYS",
+     "prenom": "Nicolas",
+     "nuance": "NC",
+     "voix": 48,
+     "pct_exprimes": 0.24,
+     "pct_inscrits": 0.09
+    },
+    {
+     "nom": "NYS",
+     "prenom": "Aurélie",
      "nuance": "NC",
      "voix": 45,
      "pct_exprimes": 0.23,
      "pct_inscrits": 0.08
     },
     {
-     "nom": "NYS",
-     "prenom": "Aurélie",
+     "nom": "RODRIGUEZ",
+     "prenom": "Laetitia",
      "nuance": "NC",
      "voix": 45,
      "pct_exprimes": 0.23,
@@ -9838,16 +10854,16 @@
      "pct_inscrits": 0.08
     },
     {
-     "nom": "PRUVOT",
-     "prenom": "Anne Lise",
+     "nom": "CARNEL",
+     "prenom": "Mederic",
      "nuance": "NC",
      "voix": 39,
      "pct_exprimes": 0.2,
      "pct_inscrits": 0.07
     },
     {
-     "nom": "CARNEL",
-     "prenom": "Mederic",
+     "nom": "PRUVOT",
+     "prenom": "Anne Lise",
      "nuance": "NC",
      "voix": 39,
      "pct_exprimes": 0.2,
@@ -9902,16 +10918,16 @@
      "pct_inscrits": 0.04
     },
     {
-     "nom": "GORECKI",
-     "prenom": "Jérôme",
+     "nom": "DE SOUSA",
+     "prenom": "Fernando",
      "nuance": "NC",
      "voix": 19,
      "pct_exprimes": 0.1,
      "pct_inscrits": 0.03
     },
     {
-     "nom": "DE SOUSA",
-     "prenom": "Fernando",
+     "nom": "GORECKI",
+     "prenom": "Jérôme",
      "nuance": "NC",
      "voix": 19,
      "pct_exprimes": 0.1,
@@ -10111,9 +11127,9 @@
      "nom": "NOCERA",
      "prenom": "Luigi",
      "nuance": "LDIV",
-     "voix": 417,
-     "pct_exprimes": 1.24,
-     "pct_inscrits": 0.45
+     "voix": 467,
+     "pct_exprimes": 1.39,
+     "pct_inscrits": 0.5
     },
     {
      "nom": "VIDECOQ",
@@ -10156,16 +11172,16 @@
      "pct_inscrits": 0.17
     },
     {
-     "nom": "VINCENT",
-     "prenom": "Thierry",
+     "nom": "ROUAULT",
+     "prenom": "Jean-Baptiste",
      "nuance": "NC",
      "voix": 154,
      "pct_exprimes": 0.46,
      "pct_inscrits": 0.17
     },
     {
-     "nom": "ROUAULT",
-     "prenom": "Jean-Baptiste",
+     "nom": "VINCENT",
+     "prenom": "Thierry",
      "nuance": "NC",
      "voix": 154,
      "pct_exprimes": 0.46,
@@ -10180,16 +11196,16 @@
      "pct_inscrits": 0.16
     },
     {
-     "nom": "OGER",
-     "prenom": "Isabelle",
+     "nom": "BOQUET",
+     "prenom": "Malvina",
      "nuance": "NC",
      "voix": 153,
      "pct_exprimes": 0.46,
      "pct_inscrits": 0.16
     },
     {
-     "nom": "BOQUET",
-     "prenom": "Malvina",
+     "nom": "OGER",
+     "prenom": "Isabelle",
      "nuance": "NC",
      "voix": 153,
      "pct_exprimes": 0.46,
@@ -10260,16 +11276,16 @@
      "pct_inscrits": 0.11
     },
     {
-     "nom": "ROBINOT",
-     "prenom": "Olivier",
+     "nom": "KASSE",
+     "prenom": "Aline",
      "nuance": "NC",
      "voix": 99,
      "pct_exprimes": 0.29,
      "pct_inscrits": 0.11
     },
     {
-     "nom": "KASSE",
-     "prenom": "Aline",
+     "nom": "ROBINOT",
+     "prenom": "Olivier",
      "nuance": "NC",
      "voix": 99,
      "pct_exprimes": 0.29,
@@ -10354,6 +11370,14 @@
      "pct_inscrits": 3.1
     },
     {
+     "nom": "HAMIDA",
+     "prenom": "Abdelaziz",
+     "nuance": "LDIV",
+     "voix": 2048,
+     "pct_exprimes": 7.18,
+     "pct_inscrits": 2.92
+    },
+    {
      "nom": "SABOURET",
      "prenom": "Cédric",
      "nuance": "LDVG",
@@ -10368,6 +11392,22 @@
      "voix": 1673,
      "pct_exprimes": 5.86,
      "pct_inscrits": 2.39
+    },
+    {
+     "nom": "HERMANVILLE",
+     "prenom": "Elisabeth",
+     "nuance": "LLR",
+     "voix": 1533,
+     "pct_exprimes": 5.37,
+     "pct_inscrits": 2.19
+    },
+    {
+     "nom": "LOUIS",
+     "prenom": "Alain",
+     "nuance": "LDVC",
+     "voix": 1462,
+     "pct_exprimes": 5.12,
+     "pct_inscrits": 2.09
     },
     {
      "nom": "SPECQ",
@@ -10450,6 +11490,14 @@
      "pct_inscrits": 0.85
     },
     {
+     "nom": "BAGAYOKO",
+     "prenom": "Yssa",
+     "nuance": "LDVG",
+     "voix": 558,
+     "pct_exprimes": 1.96,
+     "pct_inscrits": 0.8
+    },
+    {
      "nom": "THOMAS",
      "prenom": "Michel",
      "nuance": "LNC",
@@ -10522,6 +11570,14 @@
      "pct_inscrits": 0.61
     },
     {
+     "nom": "DANET",
+     "prenom": "Véronique",
+     "nuance": "LDVG",
+     "voix": 362,
+     "pct_exprimes": 1.27,
+     "pct_inscrits": 0.52
+    },
+    {
      "nom": "PY",
      "prenom": "Roland",
      "nuance": "LNC",
@@ -10536,14 +11592,6 @@
      "voix": 335,
      "pct_exprimes": 1.17,
      "pct_inscrits": 0.48
-    },
-    {
-     "nom": "HERMANVILLE",
-     "prenom": "Elisabeth",
-     "nuance": "LLR",
-     "voix": 299,
-     "pct_exprimes": 1.05,
-     "pct_inscrits": 0.43
     },
     {
      "nom": "RENAULT",
@@ -10570,14 +11618,6 @@
      "pct_inscrits": 0.41
     },
     {
-     "nom": "LOUIS",
-     "prenom": "Alain",
-     "nuance": "LDVC",
-     "voix": 283,
-     "pct_exprimes": 0.99,
-     "pct_inscrits": 0.4
-    },
-    {
      "nom": "BOLOKO",
      "prenom": "Brandy",
      "nuance": "LDIV",
@@ -10592,14 +11632,6 @@
      "voix": 270,
      "pct_exprimes": 0.95,
      "pct_inscrits": 0.39
-    },
-    {
-     "nom": "HAMIDA",
-     "prenom": "Abdelaziz",
-     "nuance": "LDIV",
-     "voix": 220,
-     "pct_exprimes": 0.77,
-     "pct_inscrits": 0.31
     },
     {
      "nom": "KUDLA",
@@ -10618,14 +11650,6 @@
      "pct_inscrits": 0.3
     },
     {
-     "nom": "COULON",
-     "prenom": "Monique",
-     "nuance": "NC",
-     "voix": 187,
-     "pct_exprimes": 0.66,
-     "pct_inscrits": 0.27
-    },
-    {
      "nom": "SAMINADA",
      "prenom": "Baradi",
      "nuance": "NC",
@@ -10634,11 +11658,11 @@
      "pct_inscrits": 0.27
     },
     {
-     "nom": "SCHMITT",
-     "prenom": "Florent",
+     "nom": "COULON",
+     "prenom": "Monique",
      "nuance": "NC",
-     "voix": 186,
-     "pct_exprimes": 0.65,
+     "voix": 187,
+     "pct_exprimes": 0.66,
      "pct_inscrits": 0.27
     },
     {
@@ -10658,16 +11682,16 @@
      "pct_inscrits": 0.27
     },
     {
-     "nom": "TOMKIEWICZ",
-     "prenom": "Vincent",
+     "nom": "SCHMITT",
+     "prenom": "Florent",
      "nuance": "NC",
-     "voix": 185,
+     "voix": 186,
      "pct_exprimes": 0.65,
-     "pct_inscrits": 0.26
+     "pct_inscrits": 0.27
     },
     {
-     "nom": "COULON",
-     "prenom": "Pierre",
+     "nom": "MORVAN",
+     "prenom": "Cédric",
      "nuance": "NC",
      "voix": 185,
      "pct_exprimes": 0.65,
@@ -10682,8 +11706,16 @@
      "pct_inscrits": 0.26
     },
     {
-     "nom": "MORVAN",
-     "prenom": "Cédric",
+     "nom": "TOMKIEWICZ",
+     "prenom": "Vincent",
+     "nuance": "NC",
+     "voix": 185,
+     "pct_exprimes": 0.65,
+     "pct_inscrits": 0.26
+    },
+    {
+     "nom": "COULON",
+     "prenom": "Pierre",
      "nuance": "NC",
      "voix": 185,
      "pct_exprimes": 0.65,
@@ -10762,16 +11794,16 @@
      "pct_inscrits": 0.2
     },
     {
-     "nom": "FORESTIER",
-     "prenom": "Lucille",
+     "nom": "THERY",
+     "prenom": "Julie",
      "nuance": "NC",
      "voix": 128,
      "pct_exprimes": 0.45,
      "pct_inscrits": 0.18
     },
     {
-     "nom": "THERY",
-     "prenom": "Julie",
+     "nom": "FORESTIER",
+     "prenom": "Lucille",
      "nuance": "NC",
      "voix": 128,
      "pct_exprimes": 0.45,
@@ -10842,16 +11874,16 @@
      "pct_inscrits": 0.17
     },
     {
-     "nom": "DE WILDE",
-     "prenom": "Pierre",
+     "nom": "POLLET",
+     "prenom": "Dorianne",
      "nuance": "NC",
      "voix": 120,
      "pct_exprimes": 0.42,
      "pct_inscrits": 0.17
     },
     {
-     "nom": "POLLET",
-     "prenom": "Dorianne",
+     "nom": "DE WILDE",
+     "prenom": "Pierre",
      "nuance": "NC",
      "voix": 120,
      "pct_exprimes": 0.42,
@@ -10866,16 +11898,16 @@
      "pct_inscrits": 0.17
     },
     {
-     "nom": "VIGNAUD",
-     "prenom": "Luc",
+     "nom": "DANG",
+     "prenom": "Danielle",
      "nuance": "NC",
      "voix": 118,
      "pct_exprimes": 0.41,
      "pct_inscrits": 0.17
     },
     {
-     "nom": "DANG",
-     "prenom": "Danielle",
+     "nom": "VIGNAUD",
+     "prenom": "Luc",
      "nuance": "NC",
      "voix": 118,
      "pct_exprimes": 0.41,
@@ -10906,16 +11938,16 @@
      "pct_inscrits": 0.16
     },
     {
-     "nom": "LEGRAND",
-     "prenom": "Nicette",
+     "nom": "BACLET",
+     "prenom": "Gilles",
      "nuance": "NC",
      "voix": 114,
      "pct_exprimes": 0.4,
      "pct_inscrits": 0.16
     },
     {
-     "nom": "BACLET",
-     "prenom": "Gilles",
+     "nom": "LEGRAND",
+     "prenom": "Nicette",
      "nuance": "NC",
      "voix": 114,
      "pct_exprimes": 0.4,
@@ -11026,16 +12058,16 @@
      "pct_inscrits": 0.13
     },
     {
-     "nom": "HEDIN",
-     "prenom": "Noël",
+     "nom": "COURTOIS",
+     "prenom": "Patrick",
      "nuance": "NC",
      "voix": 87,
      "pct_exprimes": 0.3,
      "pct_inscrits": 0.12
     },
     {
-     "nom": "COURTOIS",
-     "prenom": "Patrick",
+     "nom": "HEDIN",
+     "prenom": "Noël",
      "nuance": "NC",
      "voix": 87,
      "pct_exprimes": 0.3,
@@ -11050,16 +12082,16 @@
      "pct_inscrits": 0.12
     },
     {
-     "nom": "LIMOUSSIERE",
-     "prenom": "Sylvain",
+     "nom": "CHRETIEN",
+     "prenom": "Anthony",
      "nuance": "NC",
      "voix": 86,
      "pct_exprimes": 0.3,
      "pct_inscrits": 0.12
     },
     {
-     "nom": "CHRETIEN",
-     "prenom": "Anthony",
+     "nom": "LIMOUSSIERE",
+     "prenom": "Sylvain",
      "nuance": "NC",
      "voix": 86,
      "pct_exprimes": 0.3,
@@ -11130,14 +12162,6 @@
      "pct_inscrits": 0.09
     },
     {
-     "nom": "LEDOUX",
-     "prenom": "Eric",
-     "nuance": "NC",
-     "voix": 66,
-     "pct_exprimes": 0.23,
-     "pct_inscrits": 0.09
-    },
-    {
      "nom": "MAILHAC",
      "prenom": "Marie",
      "nuance": "NC",
@@ -11146,24 +12170,16 @@
      "pct_inscrits": 0.09
     },
     {
-     "nom": "LARMOYER",
-     "prenom": "Annick",
+     "nom": "LEDOUX",
+     "prenom": "Eric",
      "nuance": "NC",
-     "voix": 65,
+     "voix": 66,
      "pct_exprimes": 0.23,
      "pct_inscrits": 0.09
     },
     {
      "nom": "MAUGAN",
      "prenom": "Gilbert",
-     "nuance": "NC",
-     "voix": 65,
-     "pct_exprimes": 0.23,
-     "pct_inscrits": 0.09
-    },
-    {
-     "nom": "BLAIMONT",
-     "prenom": "Jean-Pierre",
      "nuance": "NC",
      "voix": 65,
      "pct_exprimes": 0.23,
@@ -11178,18 +12194,26 @@
      "pct_inscrits": 0.09
     },
     {
+     "nom": "LARMOYER",
+     "prenom": "Annick",
+     "nuance": "NC",
+     "voix": 65,
+     "pct_exprimes": 0.23,
+     "pct_inscrits": 0.09
+    },
+    {
+     "nom": "BLAIMONT",
+     "prenom": "Jean-Pierre",
+     "nuance": "NC",
+     "voix": 65,
+     "pct_exprimes": 0.23,
+     "pct_inscrits": 0.09
+    },
+    {
      "nom": "RENARD",
      "prenom": "Marc",
      "nuance": "NC",
      "voix": 64,
-     "pct_exprimes": 0.22,
-     "pct_inscrits": 0.09
-    },
-    {
-     "nom": "BOURGEOIS",
-     "prenom": "Xavier",
-     "nuance": "NC",
-     "voix": 63,
      "pct_exprimes": 0.22,
      "pct_inscrits": 0.09
     },
@@ -11202,10 +12226,10 @@
      "pct_inscrits": 0.09
     },
     {
-     "nom": "CALAS",
-     "prenom": "Cécile",
+     "nom": "BOURGEOIS",
+     "prenom": "Xavier",
      "nuance": "NC",
-     "voix": 62,
+     "voix": 63,
      "pct_exprimes": 0.22,
      "pct_inscrits": 0.09
     },
@@ -11218,28 +12242,20 @@
      "pct_inscrits": 0.09
     },
     {
+     "nom": "CALAS",
+     "prenom": "Cécile",
+     "nuance": "NC",
+     "voix": 62,
+     "pct_exprimes": 0.22,
+     "pct_inscrits": 0.09
+    },
+    {
      "nom": "FEUERSTEIN",
      "prenom": "Christine",
      "nuance": "NC",
      "voix": 60,
      "pct_exprimes": 0.21,
      "pct_inscrits": 0.09
-    },
-    {
-     "nom": "ROCHER",
-     "prenom": "Nicolas",
-     "nuance": "NC",
-     "voix": 58,
-     "pct_exprimes": 0.2,
-     "pct_inscrits": 0.08
-    },
-    {
-     "nom": "VOISIN",
-     "prenom": "Elke",
-     "nuance": "NC",
-     "voix": 58,
-     "pct_exprimes": 0.2,
-     "pct_inscrits": 0.08
     },
     {
      "nom": "FAUVIN",
@@ -11258,10 +12274,18 @@
      "pct_inscrits": 0.08
     },
     {
-     "nom": "GATINAUD",
-     "prenom": "Delphine",
+     "nom": "ROCHER",
+     "prenom": "Nicolas",
      "nuance": "NC",
-     "voix": 57,
+     "voix": 58,
+     "pct_exprimes": 0.2,
+     "pct_inscrits": 0.08
+    },
+    {
+     "nom": "VOISIN",
+     "prenom": "Elke",
+     "nuance": "NC",
+     "voix": 58,
      "pct_exprimes": 0.2,
      "pct_inscrits": 0.08
     },
@@ -11274,16 +12298,24 @@
      "pct_inscrits": 0.08
     },
     {
-     "nom": "DULOT",
-     "prenom": "Karine",
+     "nom": "GATINAUD",
+     "prenom": "Delphine",
      "nuance": "NC",
-     "voix": 56,
+     "voix": 57,
      "pct_exprimes": 0.2,
      "pct_inscrits": 0.08
     },
     {
      "nom": "BRENETOUX",
      "prenom": "Veronique",
+     "nuance": "NC",
+     "voix": 56,
+     "pct_exprimes": 0.2,
+     "pct_inscrits": 0.08
+    },
+    {
+     "nom": "DULOT",
+     "prenom": "Karine",
      "nuance": "NC",
      "voix": 56,
      "pct_exprimes": 0.2,
@@ -11322,16 +12354,16 @@
      "pct_inscrits": 0.07
     },
     {
-     "nom": "JAMET",
-     "prenom": "Patrick",
+     "nom": "FERNANDES",
+     "prenom": "Armenio",
      "nuance": "NC",
      "voix": 51,
      "pct_exprimes": 0.18,
      "pct_inscrits": 0.07
     },
     {
-     "nom": "FERNANDES",
-     "prenom": "Armenio",
+     "nom": "JAMET",
+     "prenom": "Patrick",
      "nuance": "NC",
      "voix": 51,
      "pct_exprimes": 0.18,
@@ -11378,14 +12410,6 @@
      "pct_inscrits": 0.07
     },
     {
-     "nom": "CLEMENT",
-     "prenom": "Martial",
-     "nuance": "NC",
-     "voix": 47,
-     "pct_exprimes": 0.16,
-     "pct_inscrits": 0.07
-    },
-    {
      "nom": "ABDOUL",
      "prenom": "Mouhammad",
      "nuance": "NC",
@@ -11394,8 +12418,8 @@
      "pct_inscrits": 0.07
     },
     {
-     "nom": "EL ABIDI",
-     "prenom": "Silvia",
+     "nom": "CLEMENT",
+     "prenom": "Martial",
      "nuance": "NC",
      "voix": 47,
      "pct_exprimes": 0.16,
@@ -11404,6 +12428,14 @@
     {
      "nom": "DIALLO",
      "prenom": "Kadiatou",
+     "nuance": "NC",
+     "voix": 47,
+     "pct_exprimes": 0.16,
+     "pct_inscrits": 0.07
+    },
+    {
+     "nom": "EL ABIDI",
+     "prenom": "Silvia",
      "nuance": "NC",
      "voix": 47,
      "pct_exprimes": 0.16,
@@ -11426,6 +12458,14 @@
      "pct_inscrits": 0.07
     },
     {
+     "nom": "DIARRA",
+     "prenom": "Cyril",
+     "nuance": "NC",
+     "voix": 47,
+     "pct_exprimes": 0.16,
+     "pct_inscrits": 0.07
+    },
+    {
      "nom": "BACON",
      "prenom": "Marie-France",
      "nuance": "NC",
@@ -11434,8 +12474,8 @@
      "pct_inscrits": 0.07
     },
     {
-     "nom": "DIARRA",
-     "prenom": "Cyril",
+     "nom": "KIBWAKA",
+     "prenom": "Isabelle",
      "nuance": "NC",
      "voix": 47,
      "pct_exprimes": 0.16,
@@ -11452,14 +12492,6 @@
     {
      "nom": "MONMIREL",
      "prenom": "Eric",
-     "nuance": "NC",
-     "voix": 47,
-     "pct_exprimes": 0.16,
-     "pct_inscrits": 0.07
-    },
-    {
-     "nom": "KIBWAKA",
-     "prenom": "Isabelle",
      "nuance": "NC",
      "voix": 47,
      "pct_exprimes": 0.16,
@@ -11485,14 +12517,6 @@
      "nom": "DOUY",
      "prenom": "Daniel",
      "nuance": "NC",
-     "voix": 46,
-     "pct_exprimes": 0.16,
-     "pct_inscrits": 0.07
-    },
-    {
-     "nom": "DANET",
-     "prenom": "Véronique",
-     "nuance": "LDVG",
      "voix": 46,
      "pct_exprimes": 0.16,
      "pct_inscrits": 0.07
@@ -11530,14 +12554,6 @@
      "pct_inscrits": 0.06
     },
     {
-     "nom": "VIVIER",
-     "prenom": "Bruno",
-     "nuance": "NC",
-     "voix": 44,
-     "pct_exprimes": 0.15,
-     "pct_inscrits": 0.06
-    },
-    {
      "nom": "BOULANGER",
      "prenom": "Freddy",
      "nuance": "NC",
@@ -11547,6 +12563,14 @@
     },
     {
      "nom": "REGAERT",
+     "prenom": "Bruno",
+     "nuance": "NC",
+     "voix": 44,
+     "pct_exprimes": 0.15,
+     "pct_inscrits": 0.06
+    },
+    {
+     "nom": "VIVIER",
      "prenom": "Bruno",
      "nuance": "NC",
      "voix": 44,
@@ -11594,14 +12618,6 @@
      "pct_inscrits": 0.06
     },
     {
-     "nom": "OUDET",
-     "prenom": "Nicole",
-     "nuance": "NC",
-     "voix": 38,
-     "pct_exprimes": 0.13,
-     "pct_inscrits": 0.05
-    },
-    {
      "nom": "GAILLARD",
      "prenom": "Karine",
      "nuance": "NC",
@@ -11610,16 +12626,24 @@
      "pct_inscrits": 0.05
     },
     {
-     "nom": "DURIEZ",
-     "prenom": "Stéphanie",
+     "nom": "OUDET",
+     "prenom": "Nicole",
      "nuance": "NC",
-     "voix": 37,
+     "voix": 38,
      "pct_exprimes": 0.13,
      "pct_inscrits": 0.05
     },
     {
      "nom": "BREDON",
      "prenom": "Françoise",
+     "nuance": "NC",
+     "voix": 37,
+     "pct_exprimes": 0.13,
+     "pct_inscrits": 0.05
+    },
+    {
+     "nom": "DURIEZ",
+     "prenom": "Stéphanie",
      "nuance": "NC",
      "voix": 37,
      "pct_exprimes": 0.13,
@@ -11698,6 +12722,14 @@
      "pct_inscrits": 0.05
     },
     {
+     "nom": "RINCHEVAL",
+     "prenom": "Jean-Baptiste",
+     "nuance": "NC",
+     "voix": 34,
+     "pct_exprimes": 0.12,
+     "pct_inscrits": 0.05
+    },
+    {
      "nom": "ALMAJDOUL",
      "prenom": "Jamila",
      "nuance": "NC",
@@ -11714,16 +12746,8 @@
      "pct_inscrits": 0.05
     },
     {
-     "nom": "RINCHEVAL",
-     "prenom": "Jean-Baptiste",
-     "nuance": "NC",
-     "voix": 34,
-     "pct_exprimes": 0.12,
-     "pct_inscrits": 0.05
-    },
-    {
-     "nom": "SEGUIER",
-     "prenom": "Nicolas",
+     "nom": "RENAUD",
+     "prenom": "Charlotte",
      "nuance": "NC",
      "voix": 33,
      "pct_exprimes": 0.12,
@@ -11738,24 +12762,16 @@
      "pct_inscrits": 0.05
     },
     {
+     "nom": "DERMER",
+     "prenom": "Jacques",
+     "nuance": "NC",
+     "voix": 33,
+     "pct_exprimes": 0.12,
+     "pct_inscrits": 0.05
+    },
+    {
      "nom": "LAVIER",
      "prenom": "Vincent",
-     "nuance": "NC",
-     "voix": 33,
-     "pct_exprimes": 0.12,
-     "pct_inscrits": 0.05
-    },
-    {
-     "nom": "RENAUD",
-     "prenom": "Charlotte",
-     "nuance": "NC",
-     "voix": 33,
-     "pct_exprimes": 0.12,
-     "pct_inscrits": 0.05
-    },
-    {
-     "nom": "RENAUD",
-     "prenom": "Jacques",
      "nuance": "NC",
      "voix": 33,
      "pct_exprimes": 0.12,
@@ -11770,8 +12786,16 @@
      "pct_inscrits": 0.05
     },
     {
-     "nom": "DERMER",
+     "nom": "RENAUD",
      "prenom": "Jacques",
+     "nuance": "NC",
+     "voix": 33,
+     "pct_exprimes": 0.12,
+     "pct_inscrits": 0.05
+    },
+    {
+     "nom": "SEGUIER",
+     "prenom": "Nicolas",
      "nuance": "NC",
      "voix": 33,
      "pct_exprimes": 0.12,
@@ -11842,22 +12866,6 @@
      "pct_inscrits": 0.04
     },
     {
-     "nom": "DROUX",
-     "prenom": "Jean-Marc",
-     "nuance": "NC",
-     "voix": 30,
-     "pct_exprimes": 0.11,
-     "pct_inscrits": 0.04
-    },
-    {
-     "nom": "CARBONNAUX",
-     "prenom": "Thomas",
-     "nuance": "NC",
-     "voix": 30,
-     "pct_exprimes": 0.11,
-     "pct_inscrits": 0.04
-    },
-    {
      "nom": "DUMONT",
      "prenom": "Gisèle",
      "nuance": "NC",
@@ -11866,8 +12874,24 @@
      "pct_inscrits": 0.04
     },
     {
+     "nom": "DROUX",
+     "prenom": "Jean-Marc",
+     "nuance": "NC",
+     "voix": 30,
+     "pct_exprimes": 0.11,
+     "pct_inscrits": 0.04
+    },
+    {
      "nom": "VERGNOLLE",
      "prenom": "Eric",
+     "nuance": "NC",
+     "voix": 30,
+     "pct_exprimes": 0.11,
+     "pct_inscrits": 0.04
+    },
+    {
+     "nom": "CARBONNAUX",
+     "prenom": "Thomas",
      "nuance": "NC",
      "voix": 30,
      "pct_exprimes": 0.11,
@@ -11890,24 +12914,16 @@
      "pct_inscrits": 0.04
     },
     {
-     "nom": "BAGAYOKO",
-     "prenom": "Yssa",
-     "nuance": "LDVG",
-     "voix": 28,
-     "pct_exprimes": 0.1,
-     "pct_inscrits": 0.04
-    },
-    {
-     "nom": "GAGNEPAIN MOYA",
-     "prenom": "Jacqueline",
+     "nom": "CAZIEUX",
+     "prenom": "Jean-Marie",
      "nuance": "NC",
      "voix": 27,
      "pct_exprimes": 0.09,
      "pct_inscrits": 0.04
     },
     {
-     "nom": "CAZIEUX",
-     "prenom": "Jean-Marie",
+     "nom": "GAGNEPAIN MOYA",
+     "prenom": "Jacqueline",
      "nuance": "NC",
      "voix": 27,
      "pct_exprimes": 0.09,
@@ -12051,9 +13067,9 @@
      "nom": "PUEYO",
      "prenom": "Alexandre",
      "nuance": "LUD",
-     "voix": 1129,
-     "pct_exprimes": 4.82,
-     "pct_inscrits": 1.51
+     "voix": 1170,
+     "pct_exprimes": 5.0,
+     "pct_inscrits": 1.56
     },
     {
      "nom": "ESCOBAR",
@@ -12083,17 +13099,17 @@
      "nom": "FERRAN-ROCCHI",
      "prenom": "Gwenola",
      "nuance": "LDVG",
-     "voix": 670,
-     "pct_exprimes": 2.86,
-     "pct_inscrits": 0.89
+     "voix": 681,
+     "pct_exprimes": 2.91,
+     "pct_inscrits": 0.91
     },
     {
      "nom": "SAITOULI",
      "prenom": "Sanaa",
      "nuance": "LDVG",
-     "voix": 515,
-     "pct_exprimes": 2.2,
-     "pct_inscrits": 0.69
+     "voix": 579,
+     "pct_exprimes": 2.47,
+     "pct_inscrits": 0.77
     },
     {
      "nom": "MOKONO",
@@ -12128,16 +13144,8 @@
      "pct_inscrits": 0.48
     },
     {
-     "nom": "ALBERTOSI",
-     "prenom": "Jean-Michel",
-     "nuance": "NC",
-     "voix": 236,
-     "pct_exprimes": 1.01,
-     "pct_inscrits": 0.31
-    },
-    {
-     "nom": "ANTONINI",
-     "prenom": "Laure-Anne",
+     "nom": "BEILIN",
+     "prenom": "Marta",
      "nuance": "NC",
      "voix": 236,
      "pct_exprimes": 1.01,
@@ -12152,16 +13160,24 @@
      "pct_inscrits": 0.31
     },
     {
-     "nom": "BEILIN",
-     "prenom": "Marta",
+     "nom": "ANTONINI",
+     "prenom": "Laure-Anne",
      "nuance": "NC",
      "voix": 236,
      "pct_exprimes": 1.01,
      "pct_inscrits": 0.31
     },
     {
-     "nom": "BERNAY",
-     "prenom": "Jean-Claude",
+     "nom": "ALBERTOSI",
+     "prenom": "Jean-Michel",
+     "nuance": "NC",
+     "voix": 236,
+     "pct_exprimes": 1.01,
+     "pct_inscrits": 0.31
+    },
+    {
+     "nom": "MICHEL",
+     "prenom": "Philippe",
      "nuance": "NC",
      "voix": 235,
      "pct_exprimes": 1.0,
@@ -12176,8 +13192,8 @@
      "pct_inscrits": 0.31
     },
     {
-     "nom": "MICHEL",
-     "prenom": "Philippe",
+     "nom": "BERNAY",
+     "prenom": "Jean-Claude",
      "nuance": "NC",
      "voix": 235,
      "pct_exprimes": 1.0,
@@ -12208,16 +13224,16 @@
      "pct_inscrits": 0.31
     },
     {
-     "nom": "ATSE",
-     "prenom": "Guy",
+     "nom": "DAINE",
+     "prenom": "Didier",
      "nuance": "NC",
      "voix": 232,
      "pct_exprimes": 0.99,
      "pct_inscrits": 0.31
     },
     {
-     "nom": "DAINE",
-     "prenom": "Didier",
+     "nom": "ATSE",
+     "prenom": "Guy",
      "nuance": "NC",
      "voix": 232,
      "pct_exprimes": 0.99,
@@ -12264,14 +13280,6 @@
      "pct_inscrits": 0.17
     },
     {
-     "nom": "SCHLUMBERGER",
-     "prenom": "Marc",
-     "nuance": "NC",
-     "voix": 123,
-     "pct_exprimes": 0.53,
-     "pct_inscrits": 0.16
-    },
-    {
      "nom": "LEDOUX",
      "prenom": "Graziella",
      "nuance": "NC",
@@ -12280,11 +13288,11 @@
      "pct_inscrits": 0.16
     },
     {
-     "nom": "HELVIG",
-     "prenom": "Fabienne",
+     "nom": "SCHLUMBERGER",
+     "prenom": "Marc",
      "nuance": "NC",
-     "voix": 122,
-     "pct_exprimes": 0.52,
+     "voix": 123,
+     "pct_exprimes": 0.53,
      "pct_inscrits": 0.16
     },
     {
@@ -12304,8 +13312,16 @@
      "pct_inscrits": 0.16
     },
     {
-     "nom": "MOLINA",
-     "prenom": "Virginie",
+     "nom": "HELVIG",
+     "prenom": "Fabienne",
+     "nuance": "NC",
+     "voix": 122,
+     "pct_exprimes": 0.52,
+     "pct_inscrits": 0.16
+    },
+    {
+     "nom": "METRO",
+     "prenom": "Dany",
      "nuance": "NC",
      "voix": 121,
      "pct_exprimes": 0.52,
@@ -12320,8 +13336,8 @@
      "pct_inscrits": 0.16
     },
     {
-     "nom": "METRO",
-     "prenom": "Dany",
+     "nom": "MOLINA",
+     "prenom": "Virginie",
      "nuance": "NC",
      "voix": 121,
      "pct_exprimes": 0.52,
@@ -12379,9 +13395,9 @@
      "nom": "LEFEBVRE DES NOETTES",
      "prenom": "François",
      "nuance": "LEXG",
-     "voix": 101,
-     "pct_exprimes": 0.43,
-     "pct_inscrits": 0.13
+     "voix": 105,
+     "pct_exprimes": 0.45,
+     "pct_inscrits": 0.14
     },
     {
      "nom": "FLAUX",
@@ -12473,9 +13489,9 @@
      "nom": "SCHWEITZER",
      "prenom": "Marc",
      "nuance": "LDVG",
-     "voix": 1167,
-     "pct_exprimes": 4.6,
-     "pct_inscrits": 1.57
+     "voix": 1221,
+     "pct_exprimes": 4.81,
+     "pct_inscrits": 1.64
     },
     {
      "nom": "BERNARD",

@@ -1,0 +1,639 @@
+{
+ "election": "Municipales 2026",
+ "tour": 1,
+ "date": "2026-03-15",
+ "status": "reel",
+ "note": "Agrégation réelle par canton, calculée à partir des résultats réels par bureau de vote de ce scrutin et du référentiel bureau↔canton réel (Départementales 2021, export officiel DGRC). Aucune donnée de vote n'est inventée : simple somme au niveau bureau de vote, ce qui permet de restituer correctement les cantons partagés entre plusieurs communes (Argenteuil, Cergy).",
+ "cantons": {
+  "16": {
+   "bureaux_de_vote": 55,
+   "inscrits": 34229,
+   "abstentions": 16525,
+   "votants": 17704,
+   "blancs": 460,
+   "nuls": 244,
+   "exprimes": 17000,
+   "nom": "Pontoise",
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "voix": 17000,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 49.67
+    }
+   ],
+   "pct_abstention": 48.28,
+   "pct_participation": 51.72,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   },
+   "nb_communes": 31,
+   "code_canton": "16"
+  },
+  "20": {
+   "bureaux_de_vote": 61,
+   "inscrits": 38139,
+   "abstentions": 18095,
+   "votants": 20044,
+   "blancs": 725,
+   "nuls": 473,
+   "exprimes": 18846,
+   "nom": "Vauréal",
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "voix": 18846,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 49.41
+    }
+   ],
+   "pct_abstention": 47.44,
+   "pct_participation": 52.56,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   },
+   "nb_communes": 39,
+   "code_canton": "20"
+  },
+  "15": {
+   "bureaux_de_vote": 36,
+   "inscrits": 39707,
+   "abstentions": 18052,
+   "votants": 21655,
+   "blancs": 323,
+   "nuls": 229,
+   "exprimes": 21103,
+   "nom": "Montmorency",
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "voix": 21103,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 53.15
+    }
+   ],
+   "pct_abstention": 45.46,
+   "pct_participation": 54.54,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   },
+   "nb_communes": 6,
+   "code_canton": "15"
+  },
+  "02": {
+   "bureaux_de_vote": 29,
+   "inscrits": 31393,
+   "abstentions": 18079,
+   "votants": 13314,
+   "blancs": 188,
+   "nuls": 127,
+   "exprimes": 12999,
+   "nom": "Argenteuil-2",
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "voix": 12999,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 41.41
+    }
+   ],
+   "pct_abstention": 57.59,
+   "pct_participation": 42.41,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVD",
+    "pct_exprimes": 100.0
+   },
+   "nb_communes": 1,
+   "code_canton": "02"
+  },
+  "03": {
+   "bureaux_de_vote": 31,
+   "inscrits": 34256,
+   "abstentions": 20044,
+   "votants": 14212,
+   "blancs": 313,
+   "nuls": 143,
+   "exprimes": 13756,
+   "nom": "Argenteuil-3",
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "voix": 13756,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 40.16
+    }
+   ],
+   "pct_abstention": 58.51,
+   "pct_participation": 41.49,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVD",
+    "pct_exprimes": 100.0
+   },
+   "nb_communes": 2,
+   "code_canton": "03"
+  },
+  "01": {
+   "bureaux_de_vote": 35,
+   "inscrits": 38655,
+   "abstentions": 19114,
+   "votants": 19541,
+   "blancs": 197,
+   "nuls": 113,
+   "exprimes": 19231,
+   "nom": "Argenteuil-1",
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "voix": 19231,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 49.75
+    }
+   ],
+   "pct_abstention": 49.45,
+   "pct_participation": 50.55,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVD",
+    "pct_exprimes": 100.0
+   },
+   "nb_communes": 3,
+   "code_canton": "01"
+  },
+  "11": {
+   "bureaux_de_vote": 24,
+   "inscrits": 24751,
+   "abstentions": 13221,
+   "votants": 11530,
+   "blancs": 161,
+   "nuls": 142,
+   "exprimes": 11227,
+   "nom": "Garges-lès-Gonesse",
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "voix": 11227,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 45.36
+    }
+   ],
+   "pct_abstention": 53.42,
+   "pct_participation": 46.58,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVD",
+    "pct_exprimes": 100.0
+   },
+   "nb_communes": 2,
+   "code_canton": "11"
+  },
+  "14": {
+   "bureaux_de_vote": 46,
+   "inscrits": 41929,
+   "abstentions": 19125,
+   "votants": 22804,
+   "blancs": 488,
+   "nuls": 293,
+   "exprimes": 22023,
+   "nom": "L'Isle-Adam",
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "voix": 22023,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 52.52
+    }
+   ],
+   "pct_abstention": 45.61,
+   "pct_participation": 54.39,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   },
+   "nb_communes": 15,
+   "code_canton": "14"
+  },
+  "09": {
+   "bureaux_de_vote": 46,
+   "inscrits": 41339,
+   "abstentions": 19658,
+   "votants": 21681,
+   "blancs": 733,
+   "nuls": 367,
+   "exprimes": 20581,
+   "nom": "Fosses",
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "voix": 20581,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 49.79
+    }
+   ],
+   "pct_abstention": 47.55,
+   "pct_participation": 52.45,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   },
+   "nb_communes": 24,
+   "code_canton": "09"
+  },
+  "17": {
+   "bureaux_de_vote": 39,
+   "inscrits": 37405,
+   "abstentions": 18338,
+   "votants": 19067,
+   "blancs": 401,
+   "nuls": 192,
+   "exprimes": 18474,
+   "nom": "Saint-Ouen-l'Aumône",
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "voix": 18474,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 49.39
+    }
+   ],
+   "pct_abstention": 49.03,
+   "pct_participation": 50.97,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVD",
+    "pct_exprimes": 100.0
+   },
+   "nb_communes": 12,
+   "code_canton": "17"
+  },
+  "07": {
+   "bureaux_de_vote": 46,
+   "inscrits": 43543,
+   "abstentions": 18551,
+   "votants": 24992,
+   "blancs": 347,
+   "nuls": 184,
+   "exprimes": 24461,
+   "nom": "Domont",
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "voix": 24461,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 56.18
+    }
+   ],
+   "pct_abstention": 42.6,
+   "pct_participation": 57.4,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   },
+   "nb_communes": 11,
+   "code_canton": "07"
+  },
+  "19": {
+   "bureaux_de_vote": 39,
+   "inscrits": 35950,
+   "abstentions": 16660,
+   "votants": 19290,
+   "blancs": 368,
+   "nuls": 211,
+   "exprimes": 18711,
+   "nom": "Taverny",
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "voix": 18711,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 52.05
+    }
+   ],
+   "pct_abstention": 46.34,
+   "pct_participation": 53.66,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVD",
+    "pct_exprimes": 100.0
+   },
+   "nb_communes": 4,
+   "code_canton": "19"
+  },
+  "05": {
+   "bureaux_de_vote": 31,
+   "inscrits": 31665,
+   "abstentions": 15961,
+   "votants": 15704,
+   "blancs": 253,
+   "nuls": 150,
+   "exprimes": 15301,
+   "nom": "Cergy-2",
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "voix": 15301,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 48.32
+    }
+   ],
+   "pct_abstention": 50.41,
+   "pct_participation": 49.59,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   },
+   "nb_communes": 5,
+   "code_canton": "05"
+  },
+  "21": {
+   "bureaux_de_vote": 36,
+   "inscrits": 31928,
+   "abstentions": 16578,
+   "votants": 15350,
+   "blancs": 223,
+   "nuls": 203,
+   "exprimes": 14924,
+   "nom": "Villiers-le-Bel",
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "voix": 14924,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 46.74
+    }
+   ],
+   "pct_abstention": 51.92,
+   "pct_participation": 48.08,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   },
+   "nb_communes": 7,
+   "code_canton": "21"
+  },
+  "04": {
+   "bureaux_de_vote": 37,
+   "inscrits": 33194,
+   "abstentions": 19161,
+   "votants": 14033,
+   "blancs": 341,
+   "nuls": 165,
+   "exprimes": 13527,
+   "nom": "Cergy-1",
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LUG",
+     "voix": 13527,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 40.75
+    }
+   ],
+   "pct_abstention": 57.72,
+   "pct_participation": 42.28,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LUG",
+    "pct_exprimes": 100.0
+   },
+   "nb_communes": 3,
+   "code_canton": "04"
+  },
+  "12": {
+   "bureaux_de_vote": 40,
+   "inscrits": 34158,
+   "abstentions": 17503,
+   "votants": 16655,
+   "blancs": 321,
+   "nuls": 168,
+   "exprimes": 16166,
+   "nom": "Goussainville",
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "voix": 16166,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 47.33
+    }
+   ],
+   "pct_abstention": 51.24,
+   "pct_participation": 48.76,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   },
+   "nb_communes": 9,
+   "code_canton": "12"
+  },
+  "10": {
+   "bureaux_de_vote": 39,
+   "inscrits": 38957,
+   "abstentions": 20085,
+   "votants": 18872,
+   "blancs": 300,
+   "nuls": 153,
+   "exprimes": 18419,
+   "nom": "Franconville",
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "voix": 18419,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 47.28
+    }
+   ],
+   "pct_abstention": 51.56,
+   "pct_participation": 48.44,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVD",
+    "pct_exprimes": 100.0
+   },
+   "nb_communes": 2,
+   "code_canton": "10"
+  },
+  "06": {
+   "bureaux_de_vote": 38,
+   "inscrits": 37946,
+   "abstentions": 18650,
+   "votants": 19296,
+   "blancs": 278,
+   "nuls": 147,
+   "exprimes": 18871,
+   "nom": "Deuil-la-Barre",
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "voix": 18871,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 49.73
+    }
+   ],
+   "pct_abstention": 49.15,
+   "pct_participation": 50.85,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVD",
+    "pct_exprimes": 100.0
+   },
+   "nb_communes": 4,
+   "code_canton": "06"
+  },
+  "08": {
+   "bureaux_de_vote": 34,
+   "inscrits": 35171,
+   "abstentions": 16992,
+   "votants": 18179,
+   "blancs": 285,
+   "nuls": 232,
+   "exprimes": 17662,
+   "nom": "Ermont",
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVG",
+     "voix": 17662,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 50.22
+    }
+   ],
+   "pct_abstention": 48.31,
+   "pct_participation": 51.69,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVG",
+    "pct_exprimes": 100.0
+   },
+   "nb_communes": 2,
+   "code_canton": "08"
+  },
+  "13": {
+   "bureaux_de_vote": 36,
+   "inscrits": 35690,
+   "abstentions": 17270,
+   "votants": 18420,
+   "blancs": 242,
+   "nuls": 141,
+   "exprimes": 18037,
+   "nom": "Herblay-sur-Seine",
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "voix": 18037,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 50.54
+    }
+   ],
+   "pct_abstention": 48.39,
+   "pct_participation": 51.61,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVD",
+    "pct_exprimes": 100.0
+   },
+   "nb_communes": 3,
+   "code_canton": "13"
+  },
+  "18": {
+   "bureaux_de_vote": 30,
+   "inscrits": 28269,
+   "abstentions": 15474,
+   "votants": 12795,
+   "blancs": 138,
+   "nuls": 94,
+   "exprimes": 12563,
+   "nom": "Sarcelles",
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDIV",
+     "voix": 12563,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 44.44
+    }
+   ],
+   "pct_abstention": 54.74,
+   "pct_participation": 45.26,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDIV",
+    "pct_exprimes": 100.0
+   },
+   "nb_communes": 1,
+   "code_canton": "18"
+  }
+ }
+}
