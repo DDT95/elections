@@ -11,6 +11,16 @@
 - [x] Actions d’impression et d’export maintenues en bas du volet.
 - [x] Construction GitHub et dix tests de cohérence des données validés.
 
+## 15 septembre 2026 — correction de la lecture cartographique
+
+- [x] État initial neutre, sans couleur électorale imposée.
+- [x] Aide de prise en main en trois étapes sur la carte.
+- [x] Zoom déplacé à droite ; aide courte placée à gauche sans superposition.
+- [x] Volet de commande resserré et champs de sélection moins hauts.
+- [x] Évolution limitée aux premiers tours présidentiels 2017 et 2022.
+- [x] NFP conservé comme coalition « Union de la gauche », sans ventilation artificielle.
+- [x] Sensibilités limitées au tour sélectionné pour éviter les comparaisons trompeuses.
+
 - Source visual truth: `/var/folders/3h/px_6bwl96w50x8y34bkz_k_80000gn/T/TemporaryItems/NSIRD_screencaptureui_xYSZXd/Capture d’écran 2026-09-15 à 12.28.51.png`
 - Source pixels: 2730 × 1966, browser chrome excluded from the visual comparison.
 - Implementation: `http://127.0.0.1:5173/?review=switches`
