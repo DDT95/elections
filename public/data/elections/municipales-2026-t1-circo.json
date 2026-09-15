@@ -1,0 +1,309 @@
+{
+ "election": "Municipales 2026",
+ "tour": 1,
+ "date": "2026-03-15",
+ "status": "reel",
+ "note": "Agrégation réelle par circonscription, calculée à partir des résultats communaux réels de ce scrutin et du référentiel commune↔circonscription réel (Présidentielle 2022, codes officiels du Ministère de l'Intérieur). Aucune nouvelle donnée de vote n'est inventée : il s'agit d'une simple somme.",
+ "circonscriptions": {
+  "01": {
+   "nb_communes": 82,
+   "bureaux_de_vote": 134,
+   "inscrits": 85724,
+   "abstentions": 39727,
+   "votants": 45997,
+   "blancs": 1270,
+   "nuls": 889,
+   "exprimes": 43838,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "voix": 43838,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 51.14
+    }
+   ],
+   "pct_abstention": 46.34,
+   "pct_participation": 53.66,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   },
+   "nom": "1e circonscription du Val-d'Oise",
+   "code_circonscription": "01"
+  },
+  "06": {
+   "nb_communes": 8,
+   "bureaux_de_vote": 75,
+   "inscrits": 77442,
+   "abstentions": 38301,
+   "votants": 39141,
+   "blancs": 559,
+   "nuls": 362,
+   "exprimes": 38220,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "voix": 38220,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 49.35
+    }
+   ],
+   "pct_abstention": 49.46,
+   "pct_participation": 50.54,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   },
+   "nom": "6e circonscription du Val-d'Oise",
+   "code_circonscription": "06"
+  },
+  "05": {
+   "nb_communes": 2,
+   "bureaux_de_vote": 67,
+   "inscrits": 73508,
+   "abstentions": 42283,
+   "votants": 31225,
+   "blancs": 559,
+   "nuls": 296,
+   "exprimes": 30370,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "voix": 30370,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 41.32
+    }
+   ],
+   "pct_abstention": 57.52,
+   "pct_participation": 42.48,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVD",
+    "pct_exprimes": 100.0
+   },
+   "nom": "5e circonscription du Val-d'Oise",
+   "code_circonscription": "05"
+  },
+  "08": {
+   "nb_communes": 5,
+   "bureaux_de_vote": 73,
+   "inscrits": 69952,
+   "abstentions": 38073,
+   "votants": 31879,
+   "blancs": 408,
+   "nuls": 333,
+   "exprimes": 31138,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "voix": 31138,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 44.51
+    }
+   ],
+   "pct_abstention": 54.43,
+   "pct_participation": 45.57,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVD",
+    "pct_exprimes": 100.0
+   },
+   "nom": "8e circonscription du Val-d'Oise",
+   "code_circonscription": "08"
+  },
+  "02": {
+   "nb_communes": 20,
+   "bureaux_de_vote": 70,
+   "inscrits": 71401,
+   "abstentions": 33956,
+   "votants": 37445,
+   "blancs": 676,
+   "nuls": 381,
+   "exprimes": 36388,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "voix": 36388,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 50.96
+    }
+   ],
+   "pct_abstention": 47.56,
+   "pct_participation": 52.44,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   },
+   "nom": "2e circonscription du Val-d'Oise",
+   "code_circonscription": "02"
+  },
+  "07": {
+   "nb_communes": 12,
+   "bureaux_de_vote": 55,
+   "inscrits": 58028,
+   "abstentions": 25468,
+   "votants": 32560,
+   "blancs": 370,
+   "nuls": 210,
+   "exprimes": 31980,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "voix": 31980,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 55.11
+    }
+   ],
+   "pct_abstention": 43.89,
+   "pct_participation": 56.11,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   },
+   "nom": "7e circonscription du Val-d'Oise",
+   "code_circonscription": "07"
+  },
+  "03": {
+   "nb_communes": 12,
+   "bureaux_de_vote": 107,
+   "inscrits": 99535,
+   "abstentions": 46619,
+   "votants": 52916,
+   "blancs": 810,
+   "nuls": 463,
+   "exprimes": 51643,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "voix": 51643,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 51.88
+    }
+   ],
+   "pct_abstention": 46.84,
+   "pct_participation": 53.16,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVD",
+    "pct_exprimes": 100.0
+   },
+   "nom": "3e circonscription du Val-d'Oise",
+   "code_circonscription": "03"
+  },
+  "09": {
+   "nb_communes": 27,
+   "bureaux_de_vote": 89,
+   "inscrits": 74388,
+   "abstentions": 38060,
+   "votants": 36328,
+   "blancs": 1008,
+   "nuls": 552,
+   "exprimes": 34768,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "voix": 34768,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 46.74
+    }
+   ],
+   "pct_abstention": 51.16,
+   "pct_participation": 48.84,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   },
+   "nom": "9e circonscription du Val-d'Oise",
+   "code_circonscription": "09"
+  },
+  "10": {
+   "nb_communes": 9,
+   "bureaux_de_vote": 83,
+   "inscrits": 78136,
+   "abstentions": 42258,
+   "votants": 35878,
+   "blancs": 947,
+   "nuls": 351,
+   "exprimes": 34580,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "voix": 34580,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 44.26
+    }
+   ],
+   "pct_abstention": 54.08,
+   "pct_participation": 45.92,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   },
+   "nom": "10e circonscription du Val-d'Oise",
+   "code_circonscription": "10"
+  },
+  "04": {
+   "nb_communes": 6,
+   "bureaux_de_vote": 75,
+   "inscrits": 77268,
+   "abstentions": 37201,
+   "votants": 40067,
+   "blancs": 628,
+   "nuls": 404,
+   "exprimes": 39035,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVG",
+     "voix": 39035,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 50.52
+    }
+   ],
+   "pct_abstention": 48.15,
+   "pct_participation": 51.85,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVG",
+    "pct_exprimes": 100.0
+   },
+   "nom": "4e circonscription du Val-d'Oise",
+   "code_circonscription": "04"
+  }
+ }
+}

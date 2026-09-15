@@ -1,8 +1,7476 @@
 {
-  "election": "Législatives 2024",
-  "tour": 2,
-  "date": "2024-07-07",
-  "status": "a_completer",
-  "note": "Structure prête pour l'intégration des résultats réels (data.gouv.fr / Ministère de l'Intérieur). Non chargé dans cette version pour préserver l'intégrité des données déjà vérifiées.",
-  "communes": {}
+ "election": "Législatives 2024",
+ "tour": 2,
+ "date": "2024-07-07",
+ "status": "reel",
+ "source": {
+  "producer": "Ministère de l'Intérieur (DGRC) — export officiel bureau de vote",
+  "dataset": "Résultats définitifs par bureau de vote (fourni par l'utilisateur)",
+  "url": "https://www.data.gouv.fr/"
+ },
+ "note": "703/811 bureaux : seules les circonscriptions ayant nécessité un second tour votent à ce tour (comportement normal, pas une donnée manquante).",
+ "communes": {
+  "95002": {
+   "code_insee": "95002",
+   "nom": "Ableiges",
+   "code_circonscription": null,
+   "bureaux_de_vote": 2,
+   "inscrits": 691,
+   "abstentions": 164,
+   "votants": 527,
+   "blancs": 10,
+   "nuls": 3,
+   "exprimes": 514,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 248,
+     "pct_exprimes": 48.25,
+     "pct_inscrits": 35.89
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 141,
+     "pct_exprimes": 27.43,
+     "pct_inscrits": 20.41
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 125,
+     "pct_exprimes": 24.32,
+     "pct_inscrits": 18.09
+    }
+   ],
+   "pct_abstention": 23.73,
+   "pct_participation": 76.27,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 48.25
+   }
+  },
+  "95008": {
+   "code_insee": "95008",
+   "nom": "Aincourt",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 562,
+   "abstentions": 141,
+   "votants": 421,
+   "blancs": 9,
+   "nuls": 0,
+   "exprimes": 412,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 192,
+     "pct_exprimes": 46.6,
+     "pct_inscrits": 34.16
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 125,
+     "pct_exprimes": 30.34,
+     "pct_inscrits": 22.24
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 95,
+     "pct_exprimes": 23.06,
+     "pct_inscrits": 16.9
+    }
+   ],
+   "pct_abstention": 25.09,
+   "pct_participation": 74.91,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 46.6
+   }
+  },
+  "95011": {
+   "code_insee": "95011",
+   "nom": "Ambleville",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 305,
+   "abstentions": 88,
+   "votants": 217,
+   "blancs": 5,
+   "nuls": 2,
+   "exprimes": 210,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 104,
+     "pct_exprimes": 49.52,
+     "pct_inscrits": 34.1
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 54,
+     "pct_exprimes": 25.71,
+     "pct_inscrits": 17.7
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 52,
+     "pct_exprimes": 24.76,
+     "pct_inscrits": 17.05
+    }
+   ],
+   "pct_abstention": 28.85,
+   "pct_participation": 71.15,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 49.52
+   }
+  },
+  "95012": {
+   "code_insee": "95012",
+   "nom": "Amenucourt",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 141,
+   "abstentions": 37,
+   "votants": 104,
+   "blancs": 1,
+   "nuls": 0,
+   "exprimes": 103,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 61,
+     "pct_exprimes": 59.22,
+     "pct_inscrits": 43.26
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 27,
+     "pct_exprimes": 26.21,
+     "pct_inscrits": 19.15
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 15,
+     "pct_exprimes": 14.56,
+     "pct_inscrits": 10.64
+    }
+   ],
+   "pct_abstention": 26.24,
+   "pct_participation": 73.76,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 59.22
+   }
+  },
+  "95014": {
+   "code_insee": "95014",
+   "nom": "Andilly",
+   "code_circonscription": null,
+   "bureaux_de_vote": 2,
+   "inscrits": 1482,
+   "abstentions": 407,
+   "votants": 1075,
+   "blancs": 15,
+   "nuls": 3,
+   "exprimes": 1057,
+   "candidats": [
+    {
+     "nom": "FOLEST",
+     "prenom": "Estelle",
+     "nuance": "ENS",
+     "voix": 501,
+     "pct_exprimes": 47.4,
+     "pct_inscrits": 33.81
+    },
+    {
+     "nom": "BRUNA",
+     "prenom": "Annika",
+     "nuance": "RN",
+     "voix": 306,
+     "pct_exprimes": 28.95,
+     "pct_inscrits": 20.65
+    },
+    {
+     "nom": "CATHALA",
+     "prenom": "Gabrielle",
+     "nuance": "UG",
+     "voix": 250,
+     "pct_exprimes": 23.65,
+     "pct_inscrits": 16.87
+    }
+   ],
+   "pct_abstention": 27.46,
+   "pct_participation": 72.54,
+   "tete": {
+    "nom": "FOLEST",
+    "prenom": "Estelle",
+    "nuance": "ENS",
+    "pct_exprimes": 47.4
+   }
+  },
+  "95023": {
+   "code_insee": "95023",
+   "nom": "Arronville",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 461,
+   "abstentions": 111,
+   "votants": 350,
+   "blancs": 9,
+   "nuls": 2,
+   "exprimes": 339,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 153,
+     "pct_exprimes": 45.13,
+     "pct_inscrits": 33.19
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 115,
+     "pct_exprimes": 33.92,
+     "pct_inscrits": 24.95
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 71,
+     "pct_exprimes": 20.94,
+     "pct_inscrits": 15.4
+    }
+   ],
+   "pct_abstention": 24.08,
+   "pct_participation": 75.92,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 45.13
+   }
+  },
+  "95024": {
+   "code_insee": "95024",
+   "nom": "Arthies",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 192,
+   "abstentions": 57,
+   "votants": 135,
+   "blancs": 3,
+   "nuls": 0,
+   "exprimes": 132,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 74,
+     "pct_exprimes": 56.06,
+     "pct_inscrits": 38.54
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 31,
+     "pct_exprimes": 23.48,
+     "pct_inscrits": 16.15
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 27,
+     "pct_exprimes": 20.45,
+     "pct_inscrits": 14.06
+    }
+   ],
+   "pct_abstention": 29.69,
+   "pct_participation": 70.31,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 56.06
+   }
+  },
+  "95026": {
+   "code_insee": "95026",
+   "nom": "Asnières-sur-Oise",
+   "code_circonscription": null,
+   "bureaux_de_vote": 3,
+   "inscrits": 2129,
+   "abstentions": 570,
+   "votants": 1559,
+   "blancs": 111,
+   "nuls": 19,
+   "exprimes": 1429,
+   "candidats": [
+    {
+     "nom": "REMY",
+     "prenom": "Nadejda",
+     "nuance": "RN",
+     "voix": 781,
+     "pct_exprimes": 54.65,
+     "pct_inscrits": 36.68
+    },
+    {
+     "nom": "HADIZADEH",
+     "prenom": "Ayda",
+     "nuance": "UG",
+     "voix": 648,
+     "pct_exprimes": 45.35,
+     "pct_inscrits": 30.44
+    }
+   ],
+   "pct_abstention": 26.77,
+   "pct_participation": 73.23,
+   "tete": {
+    "nom": "REMY",
+    "prenom": "Nadejda",
+    "nuance": "RN",
+    "pct_exprimes": 54.65
+   }
+  },
+  "95028": {
+   "code_insee": "95028",
+   "nom": "Attainville",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 1217,
+   "abstentions": 369,
+   "votants": 848,
+   "blancs": 59,
+   "nuls": 11,
+   "exprimes": 778,
+   "candidats": [
+    {
+     "nom": "QUENTIN",
+     "prenom": "David",
+     "nuance": "RN",
+     "voix": 408,
+     "pct_exprimes": 52.44,
+     "pct_inscrits": 33.53
+    },
+    {
+     "nom": "ESKENAZI",
+     "prenom": "Romain",
+     "nuance": "UG",
+     "voix": 370,
+     "pct_exprimes": 47.56,
+     "pct_inscrits": 30.4
+    }
+   ],
+   "pct_abstention": 30.32,
+   "pct_participation": 69.68,
+   "tete": {
+    "nom": "QUENTIN",
+    "prenom": "David",
+    "nuance": "RN",
+    "pct_exprimes": 52.44
+   }
+  },
+  "95039": {
+   "code_insee": "95039",
+   "nom": "Auvers-sur-Oise",
+   "code_circonscription": null,
+   "bureaux_de_vote": 6,
+   "inscrits": 5240,
+   "abstentions": 1431,
+   "votants": 3809,
+   "blancs": 67,
+   "nuls": 18,
+   "exprimes": 3724,
+   "candidats": [
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 1336,
+     "pct_exprimes": 35.88,
+     "pct_inscrits": 25.5
+    },
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 1303,
+     "pct_exprimes": 34.99,
+     "pct_inscrits": 24.87
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 1085,
+     "pct_exprimes": 29.14,
+     "pct_inscrits": 20.71
+    }
+   ],
+   "pct_abstention": 27.31,
+   "pct_participation": 72.69,
+   "tete": {
+    "nom": "JULES-ARTHUR",
+    "prenom": "Maximillien",
+    "nuance": "UG",
+    "pct_exprimes": 35.88
+   }
+  },
+  "95040": {
+   "code_insee": "95040",
+   "nom": "Avernes",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 672,
+   "abstentions": 164,
+   "votants": 508,
+   "blancs": 12,
+   "nuls": 1,
+   "exprimes": 495,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 194,
+     "pct_exprimes": 39.19,
+     "pct_inscrits": 28.87
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 181,
+     "pct_exprimes": 36.57,
+     "pct_inscrits": 26.93
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 120,
+     "pct_exprimes": 24.24,
+     "pct_inscrits": 17.86
+    }
+   ],
+   "pct_abstention": 24.4,
+   "pct_participation": 75.6,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 39.19
+   }
+  },
+  "95042": {
+   "code_insee": "95042",
+   "nom": "Baillet-en-France",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 1546,
+   "abstentions": 503,
+   "votants": 1043,
+   "blancs": 106,
+   "nuls": 19,
+   "exprimes": 918,
+   "candidats": [
+    {
+     "nom": "HADIZADEH",
+     "prenom": "Ayda",
+     "nuance": "UG",
+     "voix": 467,
+     "pct_exprimes": 50.87,
+     "pct_inscrits": 30.21
+    },
+    {
+     "nom": "REMY",
+     "prenom": "Nadejda",
+     "nuance": "RN",
+     "voix": 451,
+     "pct_exprimes": 49.13,
+     "pct_inscrits": 29.17
+    }
+   ],
+   "pct_abstention": 32.54,
+   "pct_participation": 67.46,
+   "tete": {
+    "nom": "HADIZADEH",
+    "prenom": "Ayda",
+    "nuance": "UG",
+    "pct_exprimes": 50.87
+   }
+  },
+  "95046": {
+   "code_insee": "95046",
+   "nom": "Banthelu",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 104,
+   "abstentions": 24,
+   "votants": 80,
+   "blancs": 1,
+   "nuls": 0,
+   "exprimes": 79,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 39,
+     "pct_exprimes": 49.37,
+     "pct_inscrits": 37.5
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 21,
+     "pct_exprimes": 26.58,
+     "pct_inscrits": 20.19
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 19,
+     "pct_exprimes": 24.05,
+     "pct_inscrits": 18.27
+    }
+   ],
+   "pct_abstention": 23.08,
+   "pct_participation": 76.92,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 49.37
+   }
+  },
+  "95051": {
+   "code_insee": "95051",
+   "nom": "Beauchamp",
+   "code_circonscription": null,
+   "bureaux_de_vote": 8,
+   "inscrits": 6270,
+   "abstentions": 2010,
+   "votants": 4260,
+   "blancs": 357,
+   "nuls": 60,
+   "exprimes": 3843,
+   "candidats": [
+    {
+     "nom": "MAUREL",
+     "prenom": "Emmanuel",
+     "nuance": "UG",
+     "voix": 2213,
+     "pct_exprimes": 57.59,
+     "pct_inscrits": 35.3
+    },
+    {
+     "nom": "LELAIDIER",
+     "prenom": "Kimberley",
+     "nuance": "RN",
+     "voix": 1630,
+     "pct_exprimes": 42.41,
+     "pct_inscrits": 26.0
+    }
+   ],
+   "pct_abstention": 32.06,
+   "pct_participation": 67.94,
+   "tete": {
+    "nom": "MAUREL",
+    "prenom": "Emmanuel",
+    "nuance": "UG",
+    "pct_exprimes": 57.59
+   }
+  },
+  "95052": {
+   "code_insee": "95052",
+   "nom": "Beaumont-sur-Oise",
+   "code_circonscription": null,
+   "bureaux_de_vote": 5,
+   "inscrits": 5725,
+   "abstentions": 2142,
+   "votants": 3583,
+   "blancs": 89,
+   "nuls": 19,
+   "exprimes": 3475,
+   "candidats": [
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 1607,
+     "pct_exprimes": 46.24,
+     "pct_inscrits": 28.07
+    },
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 1218,
+     "pct_exprimes": 35.05,
+     "pct_inscrits": 21.28
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 650,
+     "pct_exprimes": 18.71,
+     "pct_inscrits": 11.35
+    }
+   ],
+   "pct_abstention": 37.41,
+   "pct_participation": 62.59,
+   "tete": {
+    "nom": "JULES-ARTHUR",
+    "prenom": "Maximillien",
+    "nuance": "UG",
+    "pct_exprimes": 46.24
+   }
+  },
+  "95054": {
+   "code_insee": "95054",
+   "nom": "Le Bellay-en-Vexin",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 149,
+   "abstentions": 30,
+   "votants": 119,
+   "blancs": 1,
+   "nuls": 4,
+   "exprimes": 114,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 50,
+     "pct_exprimes": 43.86,
+     "pct_inscrits": 33.56
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 39,
+     "pct_exprimes": 34.21,
+     "pct_inscrits": 26.17
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 25,
+     "pct_exprimes": 21.93,
+     "pct_inscrits": 16.78
+    }
+   ],
+   "pct_abstention": 20.13,
+   "pct_participation": 79.87,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 43.86
+   }
+  },
+  "95055": {
+   "code_insee": "95055",
+   "nom": "Bellefontaine",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 263,
+   "abstentions": 73,
+   "votants": 190,
+   "blancs": 23,
+   "nuls": 5,
+   "exprimes": 162,
+   "candidats": [
+    {
+     "nom": "MARION",
+     "prenom": "Agnès",
+     "nuance": "RN",
+     "voix": 100,
+     "pct_exprimes": 61.73,
+     "pct_inscrits": 38.02
+    },
+    {
+     "nom": "LE GALL",
+     "prenom": "Arnaud",
+     "nuance": "UG",
+     "voix": 62,
+     "pct_exprimes": 38.27,
+     "pct_inscrits": 23.57
+    }
+   ],
+   "pct_abstention": 27.76,
+   "pct_participation": 72.24,
+   "tete": {
+    "nom": "MARION",
+    "prenom": "Agnès",
+    "nuance": "RN",
+    "pct_exprimes": 61.73
+   }
+  },
+  "95056": {
+   "code_insee": "95056",
+   "nom": "Belloy-en-France",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 1406,
+   "abstentions": 453,
+   "votants": 953,
+   "blancs": 82,
+   "nuls": 10,
+   "exprimes": 861,
+   "candidats": [
+    {
+     "nom": "REMY",
+     "prenom": "Nadejda",
+     "nuance": "RN",
+     "voix": 521,
+     "pct_exprimes": 60.51,
+     "pct_inscrits": 37.06
+    },
+    {
+     "nom": "HADIZADEH",
+     "prenom": "Ayda",
+     "nuance": "UG",
+     "voix": 340,
+     "pct_exprimes": 39.49,
+     "pct_inscrits": 24.18
+    }
+   ],
+   "pct_abstention": 32.22,
+   "pct_participation": 67.78,
+   "tete": {
+    "nom": "REMY",
+    "prenom": "Nadejda",
+    "nuance": "RN",
+    "pct_exprimes": 60.51
+   }
+  },
+  "95058": {
+   "code_insee": "95058",
+   "nom": "Bernes-sur-Oise",
+   "code_circonscription": null,
+   "bureaux_de_vote": 2,
+   "inscrits": 1714,
+   "abstentions": 567,
+   "votants": 1147,
+   "blancs": 30,
+   "nuls": 8,
+   "exprimes": 1109,
+   "candidats": [
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 449,
+     "pct_exprimes": 40.49,
+     "pct_inscrits": 26.2
+    },
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 444,
+     "pct_exprimes": 40.04,
+     "pct_inscrits": 25.9
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 216,
+     "pct_exprimes": 19.48,
+     "pct_inscrits": 12.6
+    }
+   ],
+   "pct_abstention": 33.08,
+   "pct_participation": 66.92,
+   "tete": {
+    "nom": "JULES-ARTHUR",
+    "prenom": "Maximillien",
+    "nuance": "UG",
+    "pct_exprimes": 40.49
+   }
+  },
+  "95059": {
+   "code_insee": "95059",
+   "nom": "Berville",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 272,
+   "abstentions": 79,
+   "votants": 193,
+   "blancs": 8,
+   "nuls": 2,
+   "exprimes": 183,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 87,
+     "pct_exprimes": 47.54,
+     "pct_inscrits": 31.99
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 52,
+     "pct_exprimes": 28.42,
+     "pct_inscrits": 19.12
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 44,
+     "pct_exprimes": 24.04,
+     "pct_inscrits": 16.18
+    }
+   ],
+   "pct_abstention": 29.04,
+   "pct_participation": 70.96,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 47.54
+   }
+  },
+  "95060": {
+   "code_insee": "95060",
+   "nom": "Bessancourt",
+   "code_circonscription": null,
+   "bureaux_de_vote": 6,
+   "inscrits": 5396,
+   "abstentions": 1812,
+   "votants": 3584,
+   "blancs": 235,
+   "nuls": 53,
+   "exprimes": 3296,
+   "candidats": [
+    {
+     "nom": "MAUREL",
+     "prenom": "Emmanuel",
+     "nuance": "UG",
+     "voix": 1932,
+     "pct_exprimes": 58.62,
+     "pct_inscrits": 35.8
+    },
+    {
+     "nom": "LELAIDIER",
+     "prenom": "Kimberley",
+     "nuance": "RN",
+     "voix": 1364,
+     "pct_exprimes": 41.38,
+     "pct_inscrits": 25.28
+    }
+   ],
+   "pct_abstention": 33.58,
+   "pct_participation": 66.42,
+   "tete": {
+    "nom": "MAUREL",
+    "prenom": "Emmanuel",
+    "nuance": "UG",
+    "pct_exprimes": 58.62
+   }
+  },
+  "95061": {
+   "code_insee": "95061",
+   "nom": "Béthemont-la-Forêt",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 339,
+   "abstentions": 99,
+   "votants": 240,
+   "blancs": 16,
+   "nuls": 3,
+   "exprimes": 221,
+   "candidats": [
+    {
+     "nom": "MAUREL",
+     "prenom": "Emmanuel",
+     "nuance": "UG",
+     "voix": 113,
+     "pct_exprimes": 51.13,
+     "pct_inscrits": 33.33
+    },
+    {
+     "nom": "LELAIDIER",
+     "prenom": "Kimberley",
+     "nuance": "RN",
+     "voix": 108,
+     "pct_exprimes": 48.87,
+     "pct_inscrits": 31.86
+    }
+   ],
+   "pct_abstention": 29.2,
+   "pct_participation": 70.8,
+   "tete": {
+    "nom": "MAUREL",
+    "prenom": "Emmanuel",
+    "nuance": "UG",
+    "pct_exprimes": 51.13
+   }
+  },
+  "95074": {
+   "code_insee": "95074",
+   "nom": "Boisemont",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 628,
+   "abstentions": 196,
+   "votants": 432,
+   "blancs": 55,
+   "nuls": 13,
+   "exprimes": 364,
+   "candidats": [
+    {
+     "nom": "MACÉ",
+     "prenom": "Lisbeth",
+     "nuance": "RN",
+     "voix": 184,
+     "pct_exprimes": 50.55,
+     "pct_inscrits": 29.3
+    },
+    {
+     "nom": "TACHÉ",
+     "prenom": "Aurélien",
+     "nuance": "UG",
+     "voix": 180,
+     "pct_exprimes": 49.45,
+     "pct_inscrits": 28.66
+    }
+   ],
+   "pct_abstention": 31.21,
+   "pct_participation": 68.79,
+   "tete": {
+    "nom": "MACÉ",
+    "prenom": "Lisbeth",
+    "nuance": "RN",
+    "pct_exprimes": 50.55
+   }
+  },
+  "95078": {
+   "code_insee": "95078",
+   "nom": "Boissy-l'Aillerie",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 1375,
+   "abstentions": 412,
+   "votants": 963,
+   "blancs": 98,
+   "nuls": 27,
+   "exprimes": 838,
+   "candidats": [
+    {
+     "nom": "TACHÉ",
+     "prenom": "Aurélien",
+     "nuance": "UG",
+     "voix": 448,
+     "pct_exprimes": 53.46,
+     "pct_inscrits": 32.58
+    },
+    {
+     "nom": "MACÉ",
+     "prenom": "Lisbeth",
+     "nuance": "RN",
+     "voix": 390,
+     "pct_exprimes": 46.54,
+     "pct_inscrits": 28.36
+    }
+   ],
+   "pct_abstention": 29.96,
+   "pct_participation": 70.04,
+   "tete": {
+    "nom": "TACHÉ",
+    "prenom": "Aurélien",
+    "nuance": "UG",
+    "pct_exprimes": 53.46
+   }
+  },
+  "95091": {
+   "code_insee": "95091",
+   "nom": "Bouffémont",
+   "code_circonscription": null,
+   "bureaux_de_vote": 5,
+   "inscrits": 4305,
+   "abstentions": 1369,
+   "votants": 2936,
+   "blancs": 193,
+   "nuls": 37,
+   "exprimes": 2706,
+   "candidats": [
+    {
+     "nom": "ESKENAZI",
+     "prenom": "Romain",
+     "nuance": "UG",
+     "voix": 1799,
+     "pct_exprimes": 66.48,
+     "pct_inscrits": 41.79
+    },
+    {
+     "nom": "QUENTIN",
+     "prenom": "David",
+     "nuance": "RN",
+     "voix": 907,
+     "pct_exprimes": 33.52,
+     "pct_inscrits": 21.07
+    }
+   ],
+   "pct_abstention": 31.8,
+   "pct_participation": 68.2,
+   "tete": {
+    "nom": "ESKENAZI",
+    "prenom": "Romain",
+    "nuance": "UG",
+    "pct_exprimes": 66.48
+   }
+  },
+  "95094": {
+   "code_insee": "95094",
+   "nom": "Bouqueval",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 196,
+   "abstentions": 61,
+   "votants": 135,
+   "blancs": 12,
+   "nuls": 1,
+   "exprimes": 122,
+   "candidats": [
+    {
+     "nom": "MARION",
+     "prenom": "Agnès",
+     "nuance": "RN",
+     "voix": 86,
+     "pct_exprimes": 70.49,
+     "pct_inscrits": 43.88
+    },
+    {
+     "nom": "LE GALL",
+     "prenom": "Arnaud",
+     "nuance": "UG",
+     "voix": 36,
+     "pct_exprimes": 29.51,
+     "pct_inscrits": 18.37
+    }
+   ],
+   "pct_abstention": 31.12,
+   "pct_participation": 68.88,
+   "tete": {
+    "nom": "MARION",
+    "prenom": "Agnès",
+    "nuance": "RN",
+    "pct_exprimes": 70.49
+   }
+  },
+  "95101": {
+   "code_insee": "95101",
+   "nom": "Bray-et-Lû",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 617,
+   "abstentions": 181,
+   "votants": 436,
+   "blancs": 4,
+   "nuls": 1,
+   "exprimes": 431,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 231,
+     "pct_exprimes": 53.6,
+     "pct_inscrits": 37.44
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 124,
+     "pct_exprimes": 28.77,
+     "pct_inscrits": 20.1
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 76,
+     "pct_exprimes": 17.63,
+     "pct_inscrits": 12.32
+    }
+   ],
+   "pct_abstention": 29.34,
+   "pct_participation": 70.66,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 53.6
+   }
+  },
+  "95102": {
+   "code_insee": "95102",
+   "nom": "Bréançon",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 326,
+   "abstentions": 89,
+   "votants": 237,
+   "blancs": 5,
+   "nuls": 1,
+   "exprimes": 231,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 127,
+     "pct_exprimes": 54.98,
+     "pct_inscrits": 38.96
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 67,
+     "pct_exprimes": 29.0,
+     "pct_inscrits": 20.55
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 37,
+     "pct_exprimes": 16.02,
+     "pct_inscrits": 11.35
+    }
+   ],
+   "pct_abstention": 27.3,
+   "pct_participation": 72.7,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 54.98
+   }
+  },
+  "95110": {
+   "code_insee": "95110",
+   "nom": "Brignancourt",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 192,
+   "abstentions": 45,
+   "votants": 147,
+   "blancs": 2,
+   "nuls": 1,
+   "exprimes": 144,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 71,
+     "pct_exprimes": 49.31,
+     "pct_inscrits": 36.98
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 42,
+     "pct_exprimes": 29.17,
+     "pct_inscrits": 21.88
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 31,
+     "pct_exprimes": 21.53,
+     "pct_inscrits": 16.15
+    }
+   ],
+   "pct_abstention": 23.44,
+   "pct_participation": 76.56,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 49.31
+   }
+  },
+  "95116": {
+   "code_insee": "95116",
+   "nom": "Bruyères-sur-Oise",
+   "code_circonscription": null,
+   "bureaux_de_vote": 3,
+   "inscrits": 2938,
+   "abstentions": 1122,
+   "votants": 1816,
+   "blancs": 39,
+   "nuls": 21,
+   "exprimes": 1756,
+   "candidats": [
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 794,
+     "pct_exprimes": 45.22,
+     "pct_inscrits": 27.03
+    },
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 688,
+     "pct_exprimes": 39.18,
+     "pct_inscrits": 23.42
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 274,
+     "pct_exprimes": 15.6,
+     "pct_inscrits": 9.33
+    }
+   ],
+   "pct_abstention": 38.19,
+   "pct_participation": 61.81,
+   "tete": {
+    "nom": "JULES-ARTHUR",
+    "prenom": "Maximillien",
+    "nuance": "UG",
+    "pct_exprimes": 45.22
+   }
+  },
+  "95119": {
+   "code_insee": "95119",
+   "nom": "Buhy",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 221,
+   "abstentions": 58,
+   "votants": 163,
+   "blancs": 2,
+   "nuls": 2,
+   "exprimes": 159,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 86,
+     "pct_exprimes": 54.09,
+     "pct_inscrits": 38.91
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 48,
+     "pct_exprimes": 30.19,
+     "pct_inscrits": 21.72
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 25,
+     "pct_exprimes": 15.72,
+     "pct_inscrits": 11.31
+    }
+   ],
+   "pct_abstention": 26.24,
+   "pct_participation": 73.76,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 54.09
+   }
+  },
+  "95120": {
+   "code_insee": "95120",
+   "nom": "Butry-sur-Oise",
+   "code_circonscription": null,
+   "bureaux_de_vote": 2,
+   "inscrits": 1689,
+   "abstentions": 478,
+   "votants": 1211,
+   "blancs": 39,
+   "nuls": 9,
+   "exprimes": 1163,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 469,
+     "pct_exprimes": 40.33,
+     "pct_inscrits": 27.77
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 387,
+     "pct_exprimes": 33.28,
+     "pct_inscrits": 22.91
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 307,
+     "pct_exprimes": 26.4,
+     "pct_inscrits": 18.18
+    }
+   ],
+   "pct_abstention": 28.3,
+   "pct_participation": 71.7,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 40.33
+   }
+  },
+  "95127": {
+   "code_insee": "95127",
+   "nom": "Cergy",
+   "code_circonscription": null,
+   "bureaux_de_vote": 35,
+   "inscrits": 30555,
+   "abstentions": 11638,
+   "votants": 18917,
+   "blancs": 965,
+   "nuls": 256,
+   "exprimes": 17696,
+   "candidats": [
+    {
+     "nom": "TACHÉ",
+     "prenom": "Aurélien",
+     "nuance": "UG",
+     "voix": 10063,
+     "pct_exprimes": 56.87,
+     "pct_inscrits": 32.93
+    },
+    {
+     "nom": "HADIZADEH",
+     "prenom": "Ayda",
+     "nuance": "UG",
+     "voix": 4083,
+     "pct_exprimes": 23.07,
+     "pct_inscrits": 13.36
+    },
+    {
+     "nom": "MACÉ",
+     "prenom": "Lisbeth",
+     "nuance": "RN",
+     "voix": 2397,
+     "pct_exprimes": 13.55,
+     "pct_inscrits": 7.84
+    },
+    {
+     "nom": "REMY",
+     "prenom": "Nadejda",
+     "nuance": "RN",
+     "voix": 1153,
+     "pct_exprimes": 6.52,
+     "pct_inscrits": 3.77
+    }
+   ],
+   "pct_abstention": 38.09,
+   "pct_participation": 61.91,
+   "tete": {
+    "nom": "TACHÉ",
+    "prenom": "Aurélien",
+    "nuance": "UG",
+    "pct_exprimes": 56.87
+   }
+  },
+  "95134": {
+   "code_insee": "95134",
+   "nom": "Champagne-sur-Oise",
+   "code_circonscription": null,
+   "bureaux_de_vote": 4,
+   "inscrits": 3720,
+   "abstentions": 1247,
+   "votants": 2473,
+   "blancs": 65,
+   "nuls": 13,
+   "exprimes": 2395,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 975,
+     "pct_exprimes": 40.71,
+     "pct_inscrits": 26.21
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 817,
+     "pct_exprimes": 34.11,
+     "pct_inscrits": 21.96
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 603,
+     "pct_exprimes": 25.18,
+     "pct_inscrits": 16.21
+    }
+   ],
+   "pct_abstention": 33.52,
+   "pct_participation": 66.48,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 40.71
+   }
+  },
+  "95139": {
+   "code_insee": "95139",
+   "nom": "La Chapelle-en-Vexin",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 227,
+   "abstentions": 63,
+   "votants": 164,
+   "blancs": 8,
+   "nuls": 1,
+   "exprimes": 155,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 80,
+     "pct_exprimes": 51.61,
+     "pct_inscrits": 35.24
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 48,
+     "pct_exprimes": 30.97,
+     "pct_inscrits": 21.15
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 27,
+     "pct_exprimes": 17.42,
+     "pct_inscrits": 11.89
+    }
+   ],
+   "pct_abstention": 27.75,
+   "pct_participation": 72.25,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 51.61
+   }
+  },
+  "95141": {
+   "code_insee": "95141",
+   "nom": "Charmont",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 27,
+   "abstentions": 8,
+   "votants": 19,
+   "blancs": 0,
+   "nuls": 0,
+   "exprimes": 19,
+   "candidats": [
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 7,
+     "pct_exprimes": 36.84,
+     "pct_inscrits": 25.93
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 7,
+     "pct_exprimes": 36.84,
+     "pct_inscrits": 25.93
+    },
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 5,
+     "pct_exprimes": 26.32,
+     "pct_inscrits": 18.52
+    }
+   ],
+   "pct_abstention": 29.63,
+   "pct_participation": 70.37,
+   "tete": {
+    "nom": "JULES-ARTHUR",
+    "prenom": "Maximillien",
+    "nuance": "UG",
+    "pct_exprimes": 36.84
+   }
+  },
+  "95142": {
+   "code_insee": "95142",
+   "nom": "Chars",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 1184,
+   "abstentions": 312,
+   "votants": 872,
+   "blancs": 36,
+   "nuls": 6,
+   "exprimes": 830,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 389,
+     "pct_exprimes": 46.87,
+     "pct_inscrits": 32.85
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 250,
+     "pct_exprimes": 30.12,
+     "pct_inscrits": 21.11
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 191,
+     "pct_exprimes": 23.01,
+     "pct_inscrits": 16.13
+    }
+   ],
+   "pct_abstention": 26.35,
+   "pct_participation": 73.65,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 46.87
+   }
+  },
+  "95144": {
+   "code_insee": "95144",
+   "nom": "Châtenay-en-France",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 51,
+   "abstentions": 4,
+   "votants": 47,
+   "blancs": 3,
+   "nuls": 0,
+   "exprimes": 44,
+   "candidats": [
+    {
+     "nom": "MARION",
+     "prenom": "Agnès",
+     "nuance": "RN",
+     "voix": 25,
+     "pct_exprimes": 56.82,
+     "pct_inscrits": 49.02
+    },
+    {
+     "nom": "LE GALL",
+     "prenom": "Arnaud",
+     "nuance": "UG",
+     "voix": 19,
+     "pct_exprimes": 43.18,
+     "pct_inscrits": 37.25
+    }
+   ],
+   "pct_abstention": 7.84,
+   "pct_participation": 92.16,
+   "tete": {
+    "nom": "MARION",
+    "prenom": "Agnès",
+    "nuance": "RN",
+    "pct_exprimes": 56.82
+   }
+  },
+  "95149": {
+   "code_insee": "95149",
+   "nom": "Chaumontel",
+   "code_circonscription": null,
+   "bureaux_de_vote": 2,
+   "inscrits": 2631,
+   "abstentions": 871,
+   "votants": 1760,
+   "blancs": 183,
+   "nuls": 36,
+   "exprimes": 1541,
+   "candidats": [
+    {
+     "nom": "MARION",
+     "prenom": "Agnès",
+     "nuance": "RN",
+     "voix": 910,
+     "pct_exprimes": 59.05,
+     "pct_inscrits": 34.59
+    },
+    {
+     "nom": "LE GALL",
+     "prenom": "Arnaud",
+     "nuance": "UG",
+     "voix": 631,
+     "pct_exprimes": 40.95,
+     "pct_inscrits": 23.98
+    }
+   ],
+   "pct_abstention": 33.11,
+   "pct_participation": 66.89,
+   "tete": {
+    "nom": "MARION",
+    "prenom": "Agnès",
+    "nuance": "RN",
+    "pct_exprimes": 59.05
+   }
+  },
+  "95150": {
+   "code_insee": "95150",
+   "nom": "Chaussy",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 475,
+   "abstentions": 115,
+   "votants": 360,
+   "blancs": 11,
+   "nuls": 1,
+   "exprimes": 348,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 137,
+     "pct_exprimes": 39.37,
+     "pct_inscrits": 28.84
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 112,
+     "pct_exprimes": 32.18,
+     "pct_inscrits": 23.58
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 99,
+     "pct_exprimes": 28.45,
+     "pct_inscrits": 20.84
+    }
+   ],
+   "pct_abstention": 24.21,
+   "pct_participation": 75.79,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 39.37
+   }
+  },
+  "95151": {
+   "code_insee": "95151",
+   "nom": "Chauvry",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 220,
+   "abstentions": 64,
+   "votants": 156,
+   "blancs": 11,
+   "nuls": 4,
+   "exprimes": 141,
+   "candidats": [
+    {
+     "nom": "MAUREL",
+     "prenom": "Emmanuel",
+     "nuance": "UG",
+     "voix": 76,
+     "pct_exprimes": 53.9,
+     "pct_inscrits": 34.55
+    },
+    {
+     "nom": "LELAIDIER",
+     "prenom": "Kimberley",
+     "nuance": "RN",
+     "voix": 65,
+     "pct_exprimes": 46.1,
+     "pct_inscrits": 29.55
+    }
+   ],
+   "pct_abstention": 29.09,
+   "pct_participation": 70.91,
+   "tete": {
+    "nom": "MAUREL",
+    "prenom": "Emmanuel",
+    "nuance": "UG",
+    "pct_exprimes": 53.9
+   }
+  },
+  "95154": {
+   "code_insee": "95154",
+   "nom": "Chennevières-lès-Louvres",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 204,
+   "abstentions": 52,
+   "votants": 152,
+   "blancs": 12,
+   "nuls": 0,
+   "exprimes": 140,
+   "candidats": [
+    {
+     "nom": "MARION",
+     "prenom": "Agnès",
+     "nuance": "RN",
+     "voix": 88,
+     "pct_exprimes": 62.86,
+     "pct_inscrits": 43.14
+    },
+    {
+     "nom": "LE GALL",
+     "prenom": "Arnaud",
+     "nuance": "UG",
+     "voix": 52,
+     "pct_exprimes": 37.14,
+     "pct_inscrits": 25.49
+    }
+   ],
+   "pct_abstention": 25.49,
+   "pct_participation": 74.51,
+   "tete": {
+    "nom": "MARION",
+    "prenom": "Agnès",
+    "nuance": "RN",
+    "pct_exprimes": 62.86
+   }
+  },
+  "95157": {
+   "code_insee": "95157",
+   "nom": "Chérence",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 148,
+   "abstentions": 18,
+   "votants": 130,
+   "blancs": 5,
+   "nuls": 0,
+   "exprimes": 125,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 49,
+     "pct_exprimes": 39.2,
+     "pct_inscrits": 33.11
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 45,
+     "pct_exprimes": 36.0,
+     "pct_inscrits": 30.41
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 31,
+     "pct_exprimes": 24.8,
+     "pct_inscrits": 20.95
+    }
+   ],
+   "pct_abstention": 12.16,
+   "pct_participation": 87.84,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 39.2
+   }
+  },
+  "95166": {
+   "code_insee": "95166",
+   "nom": "Cléry-en-Vexin",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 332,
+   "abstentions": 92,
+   "votants": 240,
+   "blancs": 8,
+   "nuls": 1,
+   "exprimes": 231,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 116,
+     "pct_exprimes": 50.22,
+     "pct_inscrits": 34.94
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 65,
+     "pct_exprimes": 28.14,
+     "pct_inscrits": 19.58
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 50,
+     "pct_exprimes": 21.65,
+     "pct_inscrits": 15.06
+    }
+   ],
+   "pct_abstention": 27.71,
+   "pct_participation": 72.29,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 50.22
+   }
+  },
+  "95169": {
+   "code_insee": "95169",
+   "nom": "Commeny",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 474,
+   "abstentions": 123,
+   "votants": 351,
+   "blancs": 5,
+   "nuls": 0,
+   "exprimes": 346,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 153,
+     "pct_exprimes": 44.22,
+     "pct_inscrits": 32.28
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 108,
+     "pct_exprimes": 31.21,
+     "pct_inscrits": 22.78
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 85,
+     "pct_exprimes": 24.57,
+     "pct_inscrits": 17.93
+    }
+   ],
+   "pct_abstention": 25.95,
+   "pct_participation": 74.05,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 44.22
+   }
+  },
+  "95170": {
+   "code_insee": "95170",
+   "nom": "Condécourt",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 382,
+   "abstentions": 79,
+   "votants": 303,
+   "blancs": 9,
+   "nuls": 0,
+   "exprimes": 294,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 144,
+     "pct_exprimes": 48.98,
+     "pct_inscrits": 37.7
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 84,
+     "pct_exprimes": 28.57,
+     "pct_inscrits": 21.99
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 66,
+     "pct_exprimes": 22.45,
+     "pct_inscrits": 17.28
+    }
+   ],
+   "pct_abstention": 20.68,
+   "pct_participation": 79.32,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 48.98
+   }
+  },
+  "95176": {
+   "code_insee": "95176",
+   "nom": "Cormeilles-en-Parisis",
+   "code_circonscription": null,
+   "bureaux_de_vote": 18,
+   "inscrits": 17184,
+   "abstentions": 5600,
+   "votants": 11584,
+   "blancs": 924,
+   "nuls": 195,
+   "exprimes": 10465,
+   "candidats": [
+    {
+     "nom": "MAUREL",
+     "prenom": "Emmanuel",
+     "nuance": "UG",
+     "voix": 6538,
+     "pct_exprimes": 62.47,
+     "pct_inscrits": 38.05
+    },
+    {
+     "nom": "LELAIDIER",
+     "prenom": "Kimberley",
+     "nuance": "RN",
+     "voix": 3927,
+     "pct_exprimes": 37.53,
+     "pct_inscrits": 22.85
+    }
+   ],
+   "pct_abstention": 32.59,
+   "pct_participation": 67.41,
+   "tete": {
+    "nom": "MAUREL",
+    "prenom": "Emmanuel",
+    "nuance": "UG",
+    "pct_exprimes": 62.47
+   }
+  },
+  "95177": {
+   "code_insee": "95177",
+   "nom": "Cormeilles-en-Vexin",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 901,
+   "abstentions": 245,
+   "votants": 656,
+   "blancs": 10,
+   "nuls": 4,
+   "exprimes": 642,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 325,
+     "pct_exprimes": 50.62,
+     "pct_inscrits": 36.07
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 169,
+     "pct_exprimes": 26.32,
+     "pct_inscrits": 18.76
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 148,
+     "pct_exprimes": 23.05,
+     "pct_inscrits": 16.43
+    }
+   ],
+   "pct_abstention": 27.19,
+   "pct_participation": 72.81,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 50.62
+   }
+  },
+  "95181": {
+   "code_insee": "95181",
+   "nom": "Courcelles-sur-Viosne",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 231,
+   "abstentions": 44,
+   "votants": 187,
+   "blancs": 5,
+   "nuls": 1,
+   "exprimes": 181,
+   "candidats": [
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 79,
+     "pct_exprimes": 43.65,
+     "pct_inscrits": 34.2
+    },
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 64,
+     "pct_exprimes": 35.36,
+     "pct_inscrits": 27.71
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 38,
+     "pct_exprimes": 20.99,
+     "pct_inscrits": 16.45
+    }
+   ],
+   "pct_abstention": 19.05,
+   "pct_participation": 80.95,
+   "tete": {
+    "nom": "CHANDLER",
+    "prenom": "Émilie",
+    "nuance": "ENS",
+    "pct_exprimes": 43.65
+   }
+  },
+  "95183": {
+   "code_insee": "95183",
+   "nom": "Courdimanche",
+   "code_circonscription": null,
+   "bureaux_de_vote": 5,
+   "inscrits": 4583,
+   "abstentions": 1563,
+   "votants": 3020,
+   "blancs": 269,
+   "nuls": 52,
+   "exprimes": 2699,
+   "candidats": [
+    {
+     "nom": "TACHÉ",
+     "prenom": "Aurélien",
+     "nuance": "UG",
+     "voix": 1808,
+     "pct_exprimes": 66.99,
+     "pct_inscrits": 39.45
+    },
+    {
+     "nom": "MACÉ",
+     "prenom": "Lisbeth",
+     "nuance": "RN",
+     "voix": 891,
+     "pct_exprimes": 33.01,
+     "pct_inscrits": 19.44
+    }
+   ],
+   "pct_abstention": 34.1,
+   "pct_participation": 65.9,
+   "tete": {
+    "nom": "TACHÉ",
+    "prenom": "Aurélien",
+    "nuance": "UG",
+    "pct_exprimes": 66.99
+   }
+  },
+  "95197": {
+   "code_insee": "95197",
+   "nom": "Deuil-la-Barre",
+   "code_circonscription": null,
+   "bureaux_de_vote": 16,
+   "inscrits": 14708,
+   "abstentions": 5073,
+   "votants": 9635,
+   "blancs": 145,
+   "nuls": 38,
+   "exprimes": 9452,
+   "candidats": [
+    {
+     "nom": "CATHALA",
+     "prenom": "Gabrielle",
+     "nuance": "UG",
+     "voix": 4391,
+     "pct_exprimes": 46.46,
+     "pct_inscrits": 29.85
+    },
+    {
+     "nom": "FOLEST",
+     "prenom": "Estelle",
+     "nuance": "ENS",
+     "voix": 3026,
+     "pct_exprimes": 32.01,
+     "pct_inscrits": 20.57
+    },
+    {
+     "nom": "BRUNA",
+     "prenom": "Annika",
+     "nuance": "RN",
+     "voix": 2035,
+     "pct_exprimes": 21.53,
+     "pct_inscrits": 13.84
+    }
+   ],
+   "pct_abstention": 34.49,
+   "pct_participation": 65.51,
+   "tete": {
+    "nom": "CATHALA",
+    "prenom": "Gabrielle",
+    "nuance": "UG",
+    "pct_exprimes": 46.46
+   }
+  },
+  "95199": {
+   "code_insee": "95199",
+   "nom": "Domont",
+   "code_circonscription": null,
+   "bureaux_de_vote": 10,
+   "inscrits": 10141,
+   "abstentions": 3406,
+   "votants": 6735,
+   "blancs": 484,
+   "nuls": 126,
+   "exprimes": 6125,
+   "candidats": [
+    {
+     "nom": "ESKENAZI",
+     "prenom": "Romain",
+     "nuance": "UG",
+     "voix": 3653,
+     "pct_exprimes": 59.64,
+     "pct_inscrits": 36.02
+    },
+    {
+     "nom": "QUENTIN",
+     "prenom": "David",
+     "nuance": "RN",
+     "voix": 2472,
+     "pct_exprimes": 40.36,
+     "pct_inscrits": 24.38
+    }
+   ],
+   "pct_abstention": 33.59,
+   "pct_participation": 66.41,
+   "tete": {
+    "nom": "ESKENAZI",
+    "prenom": "Romain",
+    "nuance": "UG",
+    "pct_exprimes": 59.64
+   }
+  },
+  "95203": {
+   "code_insee": "95203",
+   "nom": "Eaubonne",
+   "code_circonscription": null,
+   "bureaux_de_vote": 14,
+   "inscrits": 16180,
+   "abstentions": 5450,
+   "votants": 10730,
+   "blancs": 567,
+   "nuls": 213,
+   "exprimes": 9950,
+   "candidats": [
+    {
+     "nom": "MOUTCHOU",
+     "prenom": "Naïma",
+     "nuance": "ENS",
+     "voix": 5577,
+     "pct_exprimes": 56.05,
+     "pct_inscrits": 34.47
+    },
+    {
+     "nom": "LACOUTURE",
+     "prenom": "Karine",
+     "nuance": "UG",
+     "voix": 4373,
+     "pct_exprimes": 43.95,
+     "pct_inscrits": 27.03
+    }
+   ],
+   "pct_abstention": 33.68,
+   "pct_participation": 66.32,
+   "tete": {
+    "nom": "MOUTCHOU",
+    "prenom": "Naïma",
+    "nuance": "ENS",
+    "pct_exprimes": 56.05
+   }
+  },
+  "95205": {
+   "code_insee": "95205",
+   "nom": "Ecouen",
+   "code_circonscription": null,
+   "bureaux_de_vote": 4,
+   "inscrits": 4830,
+   "abstentions": 1759,
+   "votants": 3071,
+   "blancs": 171,
+   "nuls": 31,
+   "exprimes": 2869,
+   "candidats": [
+    {
+     "nom": "ESKENAZI",
+     "prenom": "Romain",
+     "nuance": "UG",
+     "voix": 1794,
+     "pct_exprimes": 62.53,
+     "pct_inscrits": 37.14
+    },
+    {
+     "nom": "QUENTIN",
+     "prenom": "David",
+     "nuance": "RN",
+     "voix": 1075,
+     "pct_exprimes": 37.47,
+     "pct_inscrits": 22.26
+    }
+   ],
+   "pct_abstention": 36.42,
+   "pct_participation": 63.58,
+   "tete": {
+    "nom": "ESKENAZI",
+    "prenom": "Romain",
+    "nuance": "UG",
+    "pct_exprimes": 62.53
+   }
+  },
+  "95210": {
+   "code_insee": "95210",
+   "nom": "Enghien-les-Bains",
+   "code_circonscription": null,
+   "bureaux_de_vote": 9,
+   "inscrits": 7698,
+   "abstentions": 2121,
+   "votants": 5577,
+   "blancs": 80,
+   "nuls": 29,
+   "exprimes": 5468,
+   "candidats": [
+    {
+     "nom": "FOLEST",
+     "prenom": "Estelle",
+     "nuance": "ENS",
+     "voix": 2508,
+     "pct_exprimes": 45.87,
+     "pct_inscrits": 32.58
+    },
+    {
+     "nom": "CATHALA",
+     "prenom": "Gabrielle",
+     "nuance": "UG",
+     "voix": 1748,
+     "pct_exprimes": 31.97,
+     "pct_inscrits": 22.71
+    },
+    {
+     "nom": "BRUNA",
+     "prenom": "Annika",
+     "nuance": "RN",
+     "voix": 1212,
+     "pct_exprimes": 22.17,
+     "pct_inscrits": 15.74
+    }
+   ],
+   "pct_abstention": 27.55,
+   "pct_participation": 72.45,
+   "tete": {
+    "nom": "FOLEST",
+    "prenom": "Estelle",
+    "nuance": "ENS",
+    "pct_exprimes": 45.87
+   }
+  },
+  "95211": {
+   "code_insee": "95211",
+   "nom": "Ennery",
+   "code_circonscription": null,
+   "bureaux_de_vote": 2,
+   "inscrits": 1586,
+   "abstentions": 449,
+   "votants": 1137,
+   "blancs": 26,
+   "nuls": 10,
+   "exprimes": 1101,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 422,
+     "pct_exprimes": 38.33,
+     "pct_inscrits": 26.61
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 411,
+     "pct_exprimes": 37.33,
+     "pct_inscrits": 25.91
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 268,
+     "pct_exprimes": 24.34,
+     "pct_inscrits": 16.9
+    }
+   ],
+   "pct_abstention": 28.31,
+   "pct_participation": 71.69,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 38.33
+   }
+  },
+  "95212": {
+   "code_insee": "95212",
+   "nom": "Epiais-lès-Louvres",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 87,
+   "abstentions": 20,
+   "votants": 67,
+   "blancs": 2,
+   "nuls": 3,
+   "exprimes": 62,
+   "candidats": [
+    {
+     "nom": "MARION",
+     "prenom": "Agnès",
+     "nuance": "RN",
+     "voix": 39,
+     "pct_exprimes": 62.9,
+     "pct_inscrits": 44.83
+    },
+    {
+     "nom": "LE GALL",
+     "prenom": "Arnaud",
+     "nuance": "UG",
+     "voix": 23,
+     "pct_exprimes": 37.1,
+     "pct_inscrits": 26.44
+    }
+   ],
+   "pct_abstention": 22.99,
+   "pct_participation": 77.01,
+   "tete": {
+    "nom": "MARION",
+    "prenom": "Agnès",
+    "nuance": "RN",
+    "pct_exprimes": 62.9
+   }
+  },
+  "95213": {
+   "code_insee": "95213",
+   "nom": "Epiais-Rhus",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 548,
+   "abstentions": 131,
+   "votants": 417,
+   "blancs": 12,
+   "nuls": 1,
+   "exprimes": 404,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 180,
+     "pct_exprimes": 44.55,
+     "pct_inscrits": 32.85
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 124,
+     "pct_exprimes": 30.69,
+     "pct_inscrits": 22.63
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 100,
+     "pct_exprimes": 24.75,
+     "pct_inscrits": 18.25
+    }
+   ],
+   "pct_abstention": 23.91,
+   "pct_participation": 76.09,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 44.55
+   }
+  },
+  "95214": {
+   "code_insee": "95214",
+   "nom": "Epinay-Champlâtreux",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 32,
+   "abstentions": 14,
+   "votants": 18,
+   "blancs": 6,
+   "nuls": 2,
+   "exprimes": 10,
+   "candidats": [
+    {
+     "nom": "MARION",
+     "prenom": "Agnès",
+     "nuance": "RN",
+     "voix": 6,
+     "pct_exprimes": 60.0,
+     "pct_inscrits": 18.75
+    },
+    {
+     "nom": "LE GALL",
+     "prenom": "Arnaud",
+     "nuance": "UG",
+     "voix": 4,
+     "pct_exprimes": 40.0,
+     "pct_inscrits": 12.5
+    }
+   ],
+   "pct_abstention": 43.75,
+   "pct_participation": 56.25,
+   "tete": {
+    "nom": "MARION",
+    "prenom": "Agnès",
+    "nuance": "RN",
+    "pct_exprimes": 60.0
+   }
+  },
+  "95218": {
+   "code_insee": "95218",
+   "nom": "Eragny",
+   "code_circonscription": null,
+   "bureaux_de_vote": 10,
+   "inscrits": 11512,
+   "abstentions": 4265,
+   "votants": 7247,
+   "blancs": 460,
+   "nuls": 83,
+   "exprimes": 6704,
+   "candidats": [
+    {
+     "nom": "HADIZADEH",
+     "prenom": "Ayda",
+     "nuance": "UG",
+     "voix": 4455,
+     "pct_exprimes": 66.45,
+     "pct_inscrits": 38.7
+    },
+    {
+     "nom": "REMY",
+     "prenom": "Nadejda",
+     "nuance": "RN",
+     "voix": 2249,
+     "pct_exprimes": 33.55,
+     "pct_inscrits": 19.54
+    }
+   ],
+   "pct_abstention": 37.05,
+   "pct_participation": 62.95,
+   "tete": {
+    "nom": "HADIZADEH",
+    "prenom": "Ayda",
+    "nuance": "UG",
+    "pct_exprimes": 66.45
+   }
+  },
+  "95219": {
+   "code_insee": "95219",
+   "nom": "Ermont",
+   "code_circonscription": null,
+   "bureaux_de_vote": 20,
+   "inscrits": 18619,
+   "abstentions": 6906,
+   "votants": 11713,
+   "blancs": 546,
+   "nuls": 176,
+   "exprimes": 10991,
+   "candidats": [
+    {
+     "nom": "MOUTCHOU",
+     "prenom": "Naïma",
+     "nuance": "ENS",
+     "voix": 5667,
+     "pct_exprimes": 51.56,
+     "pct_inscrits": 30.44
+    },
+    {
+     "nom": "LACOUTURE",
+     "prenom": "Karine",
+     "nuance": "UG",
+     "voix": 5324,
+     "pct_exprimes": 48.44,
+     "pct_inscrits": 28.59
+    }
+   ],
+   "pct_abstention": 37.09,
+   "pct_participation": 62.91,
+   "tete": {
+    "nom": "MOUTCHOU",
+    "prenom": "Naïma",
+    "nuance": "ENS",
+    "pct_exprimes": 51.56
+   }
+  },
+  "95229": {
+   "code_insee": "95229",
+   "nom": "Ezanville",
+   "code_circonscription": null,
+   "bureaux_de_vote": 6,
+   "inscrits": 5975,
+   "abstentions": 2013,
+   "votants": 3962,
+   "blancs": 234,
+   "nuls": 58,
+   "exprimes": 3670,
+   "candidats": [
+    {
+     "nom": "ESKENAZI",
+     "prenom": "Romain",
+     "nuance": "UG",
+     "voix": 2270,
+     "pct_exprimes": 61.85,
+     "pct_inscrits": 37.99
+    },
+    {
+     "nom": "QUENTIN",
+     "prenom": "David",
+     "nuance": "RN",
+     "voix": 1400,
+     "pct_exprimes": 38.15,
+     "pct_inscrits": 23.43
+    }
+   ],
+   "pct_abstention": 33.69,
+   "pct_participation": 66.31,
+   "tete": {
+    "nom": "ESKENAZI",
+    "prenom": "Romain",
+    "nuance": "UG",
+    "pct_exprimes": 61.85
+   }
+  },
+  "95241": {
+   "code_insee": "95241",
+   "nom": "Fontenay-en-Parisis",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 1217,
+   "abstentions": 361,
+   "votants": 856,
+   "blancs": 70,
+   "nuls": 19,
+   "exprimes": 767,
+   "candidats": [
+    {
+     "nom": "MARION",
+     "prenom": "Agnès",
+     "nuance": "RN",
+     "voix": 405,
+     "pct_exprimes": 52.8,
+     "pct_inscrits": 33.28
+    },
+    {
+     "nom": "LE GALL",
+     "prenom": "Arnaud",
+     "nuance": "UG",
+     "voix": 362,
+     "pct_exprimes": 47.2,
+     "pct_inscrits": 29.75
+    }
+   ],
+   "pct_abstention": 29.66,
+   "pct_participation": 70.34,
+   "tete": {
+    "nom": "MARION",
+    "prenom": "Agnès",
+    "nuance": "RN",
+    "pct_exprimes": 52.8
+   }
+  },
+  "95250": {
+   "code_insee": "95250",
+   "nom": "Fosses",
+   "code_circonscription": null,
+   "bureaux_de_vote": 7,
+   "inscrits": 6493,
+   "abstentions": 2484,
+   "votants": 4009,
+   "blancs": 210,
+   "nuls": 74,
+   "exprimes": 3725,
+   "candidats": [
+    {
+     "nom": "LE GALL",
+     "prenom": "Arnaud",
+     "nuance": "UG",
+     "voix": 2392,
+     "pct_exprimes": 64.21,
+     "pct_inscrits": 36.84
+    },
+    {
+     "nom": "MARION",
+     "prenom": "Agnès",
+     "nuance": "RN",
+     "voix": 1333,
+     "pct_exprimes": 35.79,
+     "pct_inscrits": 20.53
+    }
+   ],
+   "pct_abstention": 38.26,
+   "pct_participation": 61.74,
+   "tete": {
+    "nom": "LE GALL",
+    "prenom": "Arnaud",
+    "nuance": "UG",
+    "pct_exprimes": 64.21
+   }
+  },
+  "95252": {
+   "code_insee": "95252",
+   "nom": "Franconville",
+   "code_circonscription": null,
+   "bureaux_de_vote": 22,
+   "inscrits": 22062,
+   "abstentions": 8990,
+   "votants": 13072,
+   "blancs": 893,
+   "nuls": 254,
+   "exprimes": 11925,
+   "candidats": [
+    {
+     "nom": "MOUTCHOU",
+     "prenom": "Naïma",
+     "nuance": "ENS",
+     "voix": 5987,
+     "pct_exprimes": 50.21,
+     "pct_inscrits": 27.14
+    },
+    {
+     "nom": "LACOUTURE",
+     "prenom": "Karine",
+     "nuance": "UG",
+     "voix": 5938,
+     "pct_exprimes": 49.79,
+     "pct_inscrits": 26.92
+    }
+   ],
+   "pct_abstention": 40.75,
+   "pct_participation": 59.25,
+   "tete": {
+    "nom": "MOUTCHOU",
+    "prenom": "Naïma",
+    "nuance": "ENS",
+    "pct_exprimes": 50.21
+   }
+  },
+  "95253": {
+   "code_insee": "95253",
+   "nom": "Frémainville",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 368,
+   "abstentions": 96,
+   "votants": 272,
+   "blancs": 6,
+   "nuls": 1,
+   "exprimes": 265,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 96,
+     "pct_exprimes": 36.23,
+     "pct_inscrits": 26.09
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 92,
+     "pct_exprimes": 34.72,
+     "pct_inscrits": 25.0
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 77,
+     "pct_exprimes": 29.06,
+     "pct_inscrits": 20.92
+    }
+   ],
+   "pct_abstention": 26.09,
+   "pct_participation": 73.91,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 36.23
+   }
+  },
+  "95254": {
+   "code_insee": "95254",
+   "nom": "Frémécourt",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 429,
+   "abstentions": 111,
+   "votants": 318,
+   "blancs": 6,
+   "nuls": 1,
+   "exprimes": 311,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 156,
+     "pct_exprimes": 50.16,
+     "pct_inscrits": 36.36
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 81,
+     "pct_exprimes": 26.05,
+     "pct_inscrits": 18.88
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 74,
+     "pct_exprimes": 23.79,
+     "pct_inscrits": 17.25
+    }
+   ],
+   "pct_abstention": 25.87,
+   "pct_participation": 74.13,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 50.16
+   }
+  },
+  "95256": {
+   "code_insee": "95256",
+   "nom": "Frépillon",
+   "code_circonscription": null,
+   "bureaux_de_vote": 2,
+   "inscrits": 2148,
+   "abstentions": 575,
+   "votants": 1573,
+   "blancs": 108,
+   "nuls": 23,
+   "exprimes": 1442,
+   "candidats": [
+    {
+     "nom": "MAUREL",
+     "prenom": "Emmanuel",
+     "nuance": "UG",
+     "voix": 738,
+     "pct_exprimes": 51.18,
+     "pct_inscrits": 34.36
+    },
+    {
+     "nom": "LELAIDIER",
+     "prenom": "Kimberley",
+     "nuance": "RN",
+     "voix": 704,
+     "pct_exprimes": 48.82,
+     "pct_inscrits": 32.77
+    }
+   ],
+   "pct_abstention": 26.77,
+   "pct_participation": 73.23,
+   "tete": {
+    "nom": "MAUREL",
+    "prenom": "Emmanuel",
+    "nuance": "UG",
+    "pct_exprimes": 51.18
+   }
+  },
+  "95257": {
+   "code_insee": "95257",
+   "nom": "La Frette-sur-Seine",
+   "code_circonscription": null,
+   "bureaux_de_vote": 3,
+   "inscrits": 3196,
+   "abstentions": 956,
+   "votants": 2240,
+   "blancs": 187,
+   "nuls": 33,
+   "exprimes": 2020,
+   "candidats": [
+    {
+     "nom": "MAUREL",
+     "prenom": "Emmanuel",
+     "nuance": "UG",
+     "voix": 1189,
+     "pct_exprimes": 58.86,
+     "pct_inscrits": 37.2
+    },
+    {
+     "nom": "LELAIDIER",
+     "prenom": "Kimberley",
+     "nuance": "RN",
+     "voix": 831,
+     "pct_exprimes": 41.14,
+     "pct_inscrits": 26.0
+    }
+   ],
+   "pct_abstention": 29.91,
+   "pct_participation": 70.09,
+   "tete": {
+    "nom": "MAUREL",
+    "prenom": "Emmanuel",
+    "nuance": "UG",
+    "pct_exprimes": 58.86
+   }
+  },
+  "95258": {
+   "code_insee": "95258",
+   "nom": "Frouville",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 295,
+   "abstentions": 67,
+   "votants": 228,
+   "blancs": 0,
+   "nuls": 0,
+   "exprimes": 228,
+   "candidats": [
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 94,
+     "pct_exprimes": 41.23,
+     "pct_inscrits": 31.86
+    },
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 71,
+     "pct_exprimes": 31.14,
+     "pct_inscrits": 24.07
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 63,
+     "pct_exprimes": 27.63,
+     "pct_inscrits": 21.36
+    }
+   ],
+   "pct_abstention": 22.71,
+   "pct_participation": 77.29,
+   "tete": {
+    "nom": "CHANDLER",
+    "prenom": "Émilie",
+    "nuance": "ENS",
+    "pct_exprimes": 41.23
+   }
+  },
+  "95270": {
+   "code_insee": "95270",
+   "nom": "Genainville",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 423,
+   "abstentions": 99,
+   "votants": 324,
+   "blancs": 6,
+   "nuls": 5,
+   "exprimes": 313,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 153,
+     "pct_exprimes": 48.88,
+     "pct_inscrits": 36.17
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 87,
+     "pct_exprimes": 27.8,
+     "pct_inscrits": 20.57
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 73,
+     "pct_exprimes": 23.32,
+     "pct_inscrits": 17.26
+    }
+   ],
+   "pct_abstention": 23.4,
+   "pct_participation": 76.6,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 48.88
+   }
+  },
+  "95271": {
+   "code_insee": "95271",
+   "nom": "Génicourt",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 379,
+   "abstentions": 85,
+   "votants": 294,
+   "blancs": 13,
+   "nuls": 0,
+   "exprimes": 281,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 119,
+     "pct_exprimes": 42.35,
+     "pct_inscrits": 31.4
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 101,
+     "pct_exprimes": 35.94,
+     "pct_inscrits": 26.65
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 61,
+     "pct_exprimes": 21.71,
+     "pct_inscrits": 16.09
+    }
+   ],
+   "pct_abstention": 22.43,
+   "pct_participation": 77.57,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 42.35
+   }
+  },
+  "95277": {
+   "code_insee": "95277",
+   "nom": "Gonesse",
+   "code_circonscription": null,
+   "bureaux_de_vote": 16,
+   "inscrits": 14905,
+   "abstentions": 6668,
+   "votants": 8237,
+   "blancs": 347,
+   "nuls": 147,
+   "exprimes": 7743,
+   "candidats": [
+    {
+     "nom": "LE GALL",
+     "prenom": "Arnaud",
+     "nuance": "UG",
+     "voix": 5227,
+     "pct_exprimes": 67.51,
+     "pct_inscrits": 35.07
+    },
+    {
+     "nom": "MARION",
+     "prenom": "Agnès",
+     "nuance": "RN",
+     "voix": 2516,
+     "pct_exprimes": 32.49,
+     "pct_inscrits": 16.88
+    }
+   ],
+   "pct_abstention": 44.74,
+   "pct_participation": 55.26,
+   "tete": {
+    "nom": "LE GALL",
+    "prenom": "Arnaud",
+    "nuance": "UG",
+    "pct_exprimes": 67.51
+   }
+  },
+  "95280": {
+   "code_insee": "95280",
+   "nom": "Goussainville",
+   "code_circonscription": null,
+   "bureaux_de_vote": 22,
+   "inscrits": 16747,
+   "abstentions": 7491,
+   "votants": 9256,
+   "blancs": 266,
+   "nuls": 109,
+   "exprimes": 8881,
+   "candidats": [
+    {
+     "nom": "LE GALL",
+     "prenom": "Arnaud",
+     "nuance": "UG",
+     "voix": 6608,
+     "pct_exprimes": 74.41,
+     "pct_inscrits": 39.46
+    },
+    {
+     "nom": "MARION",
+     "prenom": "Agnès",
+     "nuance": "RN",
+     "voix": 2273,
+     "pct_exprimes": 25.59,
+     "pct_inscrits": 13.57
+    }
+   ],
+   "pct_abstention": 44.73,
+   "pct_participation": 55.27,
+   "tete": {
+    "nom": "LE GALL",
+    "prenom": "Arnaud",
+    "nuance": "UG",
+    "pct_exprimes": 74.41
+   }
+  },
+  "95287": {
+   "code_insee": "95287",
+   "nom": "Grisy-les-Plâtres",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 537,
+   "abstentions": 130,
+   "votants": 407,
+   "blancs": 7,
+   "nuls": 2,
+   "exprimes": 398,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 173,
+     "pct_exprimes": 43.47,
+     "pct_inscrits": 32.22
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 156,
+     "pct_exprimes": 39.2,
+     "pct_inscrits": 29.05
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 69,
+     "pct_exprimes": 17.34,
+     "pct_inscrits": 12.85
+    }
+   ],
+   "pct_abstention": 24.21,
+   "pct_participation": 75.79,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 43.47
+   }
+  },
+  "95288": {
+   "code_insee": "95288",
+   "nom": "Groslay",
+   "code_circonscription": null,
+   "bureaux_de_vote": 5,
+   "inscrits": 5111,
+   "abstentions": 1694,
+   "votants": 3417,
+   "blancs": 210,
+   "nuls": 33,
+   "exprimes": 3174,
+   "candidats": [
+    {
+     "nom": "ESKENAZI",
+     "prenom": "Romain",
+     "nuance": "UG",
+     "voix": 1904,
+     "pct_exprimes": 59.99,
+     "pct_inscrits": 37.25
+    },
+    {
+     "nom": "QUENTIN",
+     "prenom": "David",
+     "nuance": "RN",
+     "voix": 1270,
+     "pct_exprimes": 40.01,
+     "pct_inscrits": 24.85
+    }
+   ],
+   "pct_abstention": 33.14,
+   "pct_participation": 66.86,
+   "tete": {
+    "nom": "ESKENAZI",
+    "prenom": "Romain",
+    "nuance": "UG",
+    "pct_exprimes": 59.99
+   }
+  },
+  "95295": {
+   "code_insee": "95295",
+   "nom": "Guiry-en-Vexin",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 116,
+   "abstentions": 16,
+   "votants": 100,
+   "blancs": 3,
+   "nuls": 1,
+   "exprimes": 96,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 40,
+     "pct_exprimes": 41.67,
+     "pct_inscrits": 34.48
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 32,
+     "pct_exprimes": 33.33,
+     "pct_inscrits": 27.59
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 24,
+     "pct_exprimes": 25.0,
+     "pct_inscrits": 20.69
+    }
+   ],
+   "pct_abstention": 13.79,
+   "pct_participation": 86.21,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 41.67
+   }
+  },
+  "95298": {
+   "code_insee": "95298",
+   "nom": "Haravilliers",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 455,
+   "abstentions": 112,
+   "votants": 343,
+   "blancs": 7,
+   "nuls": 2,
+   "exprimes": 334,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 154,
+     "pct_exprimes": 46.11,
+     "pct_inscrits": 33.85
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 114,
+     "pct_exprimes": 34.13,
+     "pct_inscrits": 25.05
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 66,
+     "pct_exprimes": 19.76,
+     "pct_inscrits": 14.51
+    }
+   ],
+   "pct_abstention": 24.62,
+   "pct_participation": 75.38,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 46.11
+   }
+  },
+  "95301": {
+   "code_insee": "95301",
+   "nom": "Haute-Isle",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 202,
+   "abstentions": 55,
+   "votants": 147,
+   "blancs": 1,
+   "nuls": 0,
+   "exprimes": 146,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 60,
+     "pct_exprimes": 41.1,
+     "pct_inscrits": 29.7
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 49,
+     "pct_exprimes": 33.56,
+     "pct_inscrits": 24.26
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 37,
+     "pct_exprimes": 25.34,
+     "pct_inscrits": 18.32
+    }
+   ],
+   "pct_abstention": 27.23,
+   "pct_participation": 72.77,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 41.1
+   }
+  },
+  "95303": {
+   "code_insee": "95303",
+   "nom": "Le Heaulme",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 160,
+   "abstentions": 32,
+   "votants": 128,
+   "blancs": 1,
+   "nuls": 0,
+   "exprimes": 127,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 59,
+     "pct_exprimes": 46.46,
+     "pct_inscrits": 36.88
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 38,
+     "pct_exprimes": 29.92,
+     "pct_inscrits": 23.75
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 30,
+     "pct_exprimes": 23.62,
+     "pct_inscrits": 18.75
+    }
+   ],
+   "pct_abstention": 20.0,
+   "pct_participation": 80.0,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 46.46
+   }
+  },
+  "95304": {
+   "code_insee": "95304",
+   "nom": "Hédouville",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 230,
+   "abstentions": 49,
+   "votants": 181,
+   "blancs": 6,
+   "nuls": 0,
+   "exprimes": 175,
+   "candidats": [
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 68,
+     "pct_exprimes": 38.86,
+     "pct_inscrits": 29.57
+    },
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 61,
+     "pct_exprimes": 34.86,
+     "pct_inscrits": 26.52
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 46,
+     "pct_exprimes": 26.29,
+     "pct_inscrits": 20.0
+    }
+   ],
+   "pct_abstention": 21.3,
+   "pct_participation": 78.7,
+   "tete": {
+    "nom": "CHANDLER",
+    "prenom": "Émilie",
+    "nuance": "ENS",
+    "pct_exprimes": 38.86
+   }
+  },
+  "95306": {
+   "code_insee": "95306",
+   "nom": "Herblay-sur-Seine",
+   "code_circonscription": null,
+   "bureaux_de_vote": 21,
+   "inscrits": 20236,
+   "abstentions": 6890,
+   "votants": 13346,
+   "blancs": 906,
+   "nuls": 235,
+   "exprimes": 12205,
+   "candidats": [
+    {
+     "nom": "MAUREL",
+     "prenom": "Emmanuel",
+     "nuance": "UG",
+     "voix": 7589,
+     "pct_exprimes": 62.18,
+     "pct_inscrits": 37.5
+    },
+    {
+     "nom": "LELAIDIER",
+     "prenom": "Kimberley",
+     "nuance": "RN",
+     "voix": 4616,
+     "pct_exprimes": 37.82,
+     "pct_inscrits": 22.81
+    }
+   ],
+   "pct_abstention": 34.05,
+   "pct_participation": 65.95,
+   "tete": {
+    "nom": "MAUREL",
+    "prenom": "Emmanuel",
+    "nuance": "UG",
+    "pct_exprimes": 62.18
+   }
+  },
+  "95308": {
+   "code_insee": "95308",
+   "nom": "Hérouville-en-Vexin",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 474,
+   "abstentions": 113,
+   "votants": 361,
+   "blancs": 13,
+   "nuls": 4,
+   "exprimes": 344,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 177,
+     "pct_exprimes": 51.45,
+     "pct_inscrits": 37.34
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 85,
+     "pct_exprimes": 24.71,
+     "pct_inscrits": 17.93
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 82,
+     "pct_exprimes": 23.84,
+     "pct_inscrits": 17.3
+    }
+   ],
+   "pct_abstention": 23.84,
+   "pct_participation": 76.16,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 51.45
+   }
+  },
+  "95309": {
+   "code_insee": "95309",
+   "nom": "Hodent",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 164,
+   "abstentions": 40,
+   "votants": 124,
+   "blancs": 0,
+   "nuls": 0,
+   "exprimes": 124,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 67,
+     "pct_exprimes": 54.03,
+     "pct_inscrits": 40.85
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 36,
+     "pct_exprimes": 29.03,
+     "pct_inscrits": 21.95
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 21,
+     "pct_exprimes": 16.94,
+     "pct_inscrits": 12.8
+    }
+   ],
+   "pct_abstention": 24.39,
+   "pct_participation": 75.61,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 54.03
+   }
+  },
+  "95313": {
+   "code_insee": "95313",
+   "nom": "L'Isle-Adam",
+   "code_circonscription": null,
+   "bureaux_de_vote": 10,
+   "inscrits": 8890,
+   "abstentions": 2594,
+   "votants": 6296,
+   "blancs": 571,
+   "nuls": 124,
+   "exprimes": 5601,
+   "candidats": [
+    {
+     "nom": "HADIZADEH",
+     "prenom": "Ayda",
+     "nuance": "UG",
+     "voix": 2882,
+     "pct_exprimes": 51.46,
+     "pct_inscrits": 32.42
+    },
+    {
+     "nom": "REMY",
+     "prenom": "Nadejda",
+     "nuance": "RN",
+     "voix": 2719,
+     "pct_exprimes": 48.54,
+     "pct_inscrits": 30.58
+    }
+   ],
+   "pct_abstention": 29.18,
+   "pct_participation": 70.82,
+   "tete": {
+    "nom": "HADIZADEH",
+    "prenom": "Ayda",
+    "nuance": "UG",
+    "pct_exprimes": 51.46
+   }
+  },
+  "95316": {
+   "code_insee": "95316",
+   "nom": "Jagny-sous-Bois",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 217,
+   "abstentions": 62,
+   "votants": 155,
+   "blancs": 16,
+   "nuls": 4,
+   "exprimes": 135,
+   "candidats": [
+    {
+     "nom": "MARION",
+     "prenom": "Agnès",
+     "nuance": "RN",
+     "voix": 90,
+     "pct_exprimes": 66.67,
+     "pct_inscrits": 41.47
+    },
+    {
+     "nom": "LE GALL",
+     "prenom": "Arnaud",
+     "nuance": "UG",
+     "voix": 45,
+     "pct_exprimes": 33.33,
+     "pct_inscrits": 20.74
+    }
+   ],
+   "pct_abstention": 28.57,
+   "pct_participation": 71.43,
+   "tete": {
+    "nom": "MARION",
+    "prenom": "Agnès",
+    "nuance": "RN",
+    "pct_exprimes": 66.67
+   }
+  },
+  "95323": {
+   "code_insee": "95323",
+   "nom": "Jouy-le-Moutier",
+   "code_circonscription": null,
+   "bureaux_de_vote": 11,
+   "inscrits": 11440,
+   "abstentions": 3936,
+   "votants": 7504,
+   "blancs": 616,
+   "nuls": 132,
+   "exprimes": 6756,
+   "candidats": [
+    {
+     "nom": "TACHÉ",
+     "prenom": "Aurélien",
+     "nuance": "UG",
+     "voix": 4546,
+     "pct_exprimes": 67.29,
+     "pct_inscrits": 39.74
+    },
+    {
+     "nom": "MACÉ",
+     "prenom": "Lisbeth",
+     "nuance": "RN",
+     "voix": 2210,
+     "pct_exprimes": 32.71,
+     "pct_inscrits": 19.32
+    }
+   ],
+   "pct_abstention": 34.41,
+   "pct_participation": 65.59,
+   "tete": {
+    "nom": "TACHÉ",
+    "prenom": "Aurélien",
+    "nuance": "UG",
+    "pct_exprimes": 67.29
+   }
+  },
+  "95328": {
+   "code_insee": "95328",
+   "nom": "Labbeville",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 401,
+   "abstentions": 99,
+   "votants": 302,
+   "blancs": 10,
+   "nuls": 2,
+   "exprimes": 290,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 120,
+     "pct_exprimes": 41.38,
+     "pct_inscrits": 29.93
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 99,
+     "pct_exprimes": 34.14,
+     "pct_inscrits": 24.69
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 71,
+     "pct_exprimes": 24.48,
+     "pct_inscrits": 17.71
+    }
+   ],
+   "pct_abstention": 24.69,
+   "pct_participation": 75.31,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 41.38
+   }
+  },
+  "95331": {
+   "code_insee": "95331",
+   "nom": "Lassy",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 121,
+   "abstentions": 42,
+   "votants": 79,
+   "blancs": 6,
+   "nuls": 0,
+   "exprimes": 73,
+   "candidats": [
+    {
+     "nom": "MARION",
+     "prenom": "Agnès",
+     "nuance": "RN",
+     "voix": 42,
+     "pct_exprimes": 57.53,
+     "pct_inscrits": 34.71
+    },
+    {
+     "nom": "LE GALL",
+     "prenom": "Arnaud",
+     "nuance": "UG",
+     "voix": 31,
+     "pct_exprimes": 42.47,
+     "pct_inscrits": 25.62
+    }
+   ],
+   "pct_abstention": 34.71,
+   "pct_participation": 65.29,
+   "tete": {
+    "nom": "MARION",
+    "prenom": "Agnès",
+    "nuance": "RN",
+    "pct_exprimes": 57.53
+   }
+  },
+  "95341": {
+   "code_insee": "95341",
+   "nom": "Livilliers",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 292,
+   "abstentions": 70,
+   "votants": 222,
+   "blancs": 7,
+   "nuls": 0,
+   "exprimes": 215,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 99,
+     "pct_exprimes": 46.05,
+     "pct_inscrits": 33.9
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 83,
+     "pct_exprimes": 38.6,
+     "pct_inscrits": 28.42
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 33,
+     "pct_exprimes": 15.35,
+     "pct_inscrits": 11.3
+    }
+   ],
+   "pct_abstention": 23.97,
+   "pct_participation": 76.03,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 46.05
+   }
+  },
+  "95348": {
+   "code_insee": "95348",
+   "nom": "Longuesse",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 416,
+   "abstentions": 93,
+   "votants": 323,
+   "blancs": 9,
+   "nuls": 1,
+   "exprimes": 313,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 118,
+     "pct_exprimes": 37.7,
+     "pct_inscrits": 28.37
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 102,
+     "pct_exprimes": 32.59,
+     "pct_inscrits": 24.52
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 93,
+     "pct_exprimes": 29.71,
+     "pct_inscrits": 22.36
+    }
+   ],
+   "pct_abstention": 22.36,
+   "pct_participation": 77.64,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 37.7
+   }
+  },
+  "95351": {
+   "code_insee": "95351",
+   "nom": "Louvres",
+   "code_circonscription": null,
+   "bureaux_de_vote": 8,
+   "inscrits": 6718,
+   "abstentions": 2736,
+   "votants": 3982,
+   "blancs": 242,
+   "nuls": 75,
+   "exprimes": 3665,
+   "candidats": [
+    {
+     "nom": "LE GALL",
+     "prenom": "Arnaud",
+     "nuance": "UG",
+     "voix": 2237,
+     "pct_exprimes": 61.04,
+     "pct_inscrits": 33.3
+    },
+    {
+     "nom": "MARION",
+     "prenom": "Agnès",
+     "nuance": "RN",
+     "voix": 1428,
+     "pct_exprimes": 38.96,
+     "pct_inscrits": 21.26
+    }
+   ],
+   "pct_abstention": 40.73,
+   "pct_participation": 59.27,
+   "tete": {
+    "nom": "LE GALL",
+    "prenom": "Arnaud",
+    "nuance": "UG",
+    "pct_exprimes": 61.04
+   }
+  },
+  "95352": {
+   "code_insee": "95352",
+   "nom": "Luzarches",
+   "code_circonscription": null,
+   "bureaux_de_vote": 3,
+   "inscrits": 3353,
+   "abstentions": 1055,
+   "votants": 2298,
+   "blancs": 246,
+   "nuls": 38,
+   "exprimes": 2014,
+   "candidats": [
+    {
+     "nom": "MARION",
+     "prenom": "Agnès",
+     "nuance": "RN",
+     "voix": 1045,
+     "pct_exprimes": 51.89,
+     "pct_inscrits": 31.17
+    },
+    {
+     "nom": "LE GALL",
+     "prenom": "Arnaud",
+     "nuance": "UG",
+     "voix": 969,
+     "pct_exprimes": 48.11,
+     "pct_inscrits": 28.9
+    }
+   ],
+   "pct_abstention": 31.46,
+   "pct_participation": 68.54,
+   "tete": {
+    "nom": "MARION",
+    "prenom": "Agnès",
+    "nuance": "RN",
+    "pct_exprimes": 51.89
+   }
+  },
+  "95353": {
+   "code_insee": "95353",
+   "nom": "Maffliers",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 1243,
+   "abstentions": 391,
+   "votants": 852,
+   "blancs": 65,
+   "nuls": 19,
+   "exprimes": 768,
+   "candidats": [
+    {
+     "nom": "REMY",
+     "prenom": "Nadejda",
+     "nuance": "RN",
+     "voix": 403,
+     "pct_exprimes": 52.47,
+     "pct_inscrits": 32.42
+    },
+    {
+     "nom": "HADIZADEH",
+     "prenom": "Ayda",
+     "nuance": "UG",
+     "voix": 365,
+     "pct_exprimes": 47.53,
+     "pct_inscrits": 29.36
+    }
+   ],
+   "pct_abstention": 31.46,
+   "pct_participation": 68.54,
+   "tete": {
+    "nom": "REMY",
+    "prenom": "Nadejda",
+    "nuance": "RN",
+    "pct_exprimes": 52.47
+   }
+  },
+  "95355": {
+   "code_insee": "95355",
+   "nom": "Magny-en-Vexin",
+   "code_circonscription": null,
+   "bureaux_de_vote": 5,
+   "inscrits": 3832,
+   "abstentions": 1280,
+   "votants": 2552,
+   "blancs": 49,
+   "nuls": 16,
+   "exprimes": 2487,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 1145,
+     "pct_exprimes": 46.04,
+     "pct_inscrits": 29.88
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 712,
+     "pct_exprimes": 28.63,
+     "pct_inscrits": 18.58
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 630,
+     "pct_exprimes": 25.33,
+     "pct_inscrits": 16.44
+    }
+   ],
+   "pct_abstention": 33.4,
+   "pct_participation": 66.6,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 46.04
+   }
+  },
+  "95365": {
+   "code_insee": "95365",
+   "nom": "Mareil-en-France",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 464,
+   "abstentions": 141,
+   "votants": 323,
+   "blancs": 22,
+   "nuls": 6,
+   "exprimes": 295,
+   "candidats": [
+    {
+     "nom": "MARION",
+     "prenom": "Agnès",
+     "nuance": "RN",
+     "voix": 175,
+     "pct_exprimes": 59.32,
+     "pct_inscrits": 37.72
+    },
+    {
+     "nom": "LE GALL",
+     "prenom": "Arnaud",
+     "nuance": "UG",
+     "voix": 120,
+     "pct_exprimes": 40.68,
+     "pct_inscrits": 25.86
+    }
+   ],
+   "pct_abstention": 30.39,
+   "pct_participation": 69.61,
+   "tete": {
+    "nom": "MARION",
+    "prenom": "Agnès",
+    "nuance": "RN",
+    "pct_exprimes": 59.32
+   }
+  },
+  "95369": {
+   "code_insee": "95369",
+   "nom": "Margency",
+   "code_circonscription": null,
+   "bureaux_de_vote": 2,
+   "inscrits": 1985,
+   "abstentions": 508,
+   "votants": 1477,
+   "blancs": 32,
+   "nuls": 4,
+   "exprimes": 1441,
+   "candidats": [
+    {
+     "nom": "FOLEST",
+     "prenom": "Estelle",
+     "nuance": "ENS",
+     "voix": 698,
+     "pct_exprimes": 48.44,
+     "pct_inscrits": 35.16
+    },
+    {
+     "nom": "CATHALA",
+     "prenom": "Gabrielle",
+     "nuance": "UG",
+     "voix": 374,
+     "pct_exprimes": 25.95,
+     "pct_inscrits": 18.84
+    },
+    {
+     "nom": "BRUNA",
+     "prenom": "Annika",
+     "nuance": "RN",
+     "voix": 369,
+     "pct_exprimes": 25.61,
+     "pct_inscrits": 18.59
+    }
+   ],
+   "pct_abstention": 25.59,
+   "pct_participation": 74.41,
+   "tete": {
+    "nom": "FOLEST",
+    "prenom": "Estelle",
+    "nuance": "ENS",
+    "pct_exprimes": 48.44
+   }
+  },
+  "95370": {
+   "code_insee": "95370",
+   "nom": "Marines",
+   "code_circonscription": null,
+   "bureaux_de_vote": 3,
+   "inscrits": 2496,
+   "abstentions": 847,
+   "votants": 1649,
+   "blancs": 51,
+   "nuls": 10,
+   "exprimes": 1588,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 692,
+     "pct_exprimes": 43.58,
+     "pct_inscrits": 27.72
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 475,
+     "pct_exprimes": 29.91,
+     "pct_inscrits": 19.03
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 421,
+     "pct_exprimes": 26.51,
+     "pct_inscrits": 16.87
+    }
+   ],
+   "pct_abstention": 33.93,
+   "pct_participation": 66.07,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 43.58
+   }
+  },
+  "95371": {
+   "code_insee": "95371",
+   "nom": "Marly-la-Ville",
+   "code_circonscription": null,
+   "bureaux_de_vote": 4,
+   "inscrits": 4030,
+   "abstentions": 1452,
+   "votants": 2578,
+   "blancs": 174,
+   "nuls": 48,
+   "exprimes": 2356,
+   "candidats": [
+    {
+     "nom": "LE GALL",
+     "prenom": "Arnaud",
+     "nuance": "UG",
+     "voix": 1206,
+     "pct_exprimes": 51.19,
+     "pct_inscrits": 29.93
+    },
+    {
+     "nom": "MARION",
+     "prenom": "Agnès",
+     "nuance": "RN",
+     "voix": 1150,
+     "pct_exprimes": 48.81,
+     "pct_inscrits": 28.54
+    }
+   ],
+   "pct_abstention": 36.03,
+   "pct_participation": 63.97,
+   "tete": {
+    "nom": "LE GALL",
+    "prenom": "Arnaud",
+    "nuance": "UG",
+    "pct_exprimes": 51.19
+   }
+  },
+  "95379": {
+   "code_insee": "95379",
+   "nom": "Maudétour-en-Vexin",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 161,
+   "abstentions": 33,
+   "votants": 128,
+   "blancs": 8,
+   "nuls": 1,
+   "exprimes": 119,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 51,
+     "pct_exprimes": 42.86,
+     "pct_inscrits": 31.68
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 46,
+     "pct_exprimes": 38.66,
+     "pct_inscrits": 28.57
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 22,
+     "pct_exprimes": 18.49,
+     "pct_inscrits": 13.66
+    }
+   ],
+   "pct_abstention": 20.5,
+   "pct_participation": 79.5,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 42.86
+   }
+  },
+  "95387": {
+   "code_insee": "95387",
+   "nom": "Menouville",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 44,
+   "abstentions": 8,
+   "votants": 36,
+   "blancs": 3,
+   "nuls": 0,
+   "exprimes": 33,
+   "candidats": [
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 14,
+     "pct_exprimes": 42.42,
+     "pct_inscrits": 31.82
+    },
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 10,
+     "pct_exprimes": 30.3,
+     "pct_inscrits": 22.73
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 9,
+     "pct_exprimes": 27.27,
+     "pct_inscrits": 20.45
+    }
+   ],
+   "pct_abstention": 18.18,
+   "pct_participation": 81.82,
+   "tete": {
+    "nom": "CHANDLER",
+    "prenom": "Émilie",
+    "nuance": "ENS",
+    "pct_exprimes": 42.42
+   }
+  },
+  "95388": {
+   "code_insee": "95388",
+   "nom": "Menucourt",
+   "code_circonscription": null,
+   "bureaux_de_vote": 4,
+   "inscrits": 3977,
+   "abstentions": 1236,
+   "votants": 2741,
+   "blancs": 299,
+   "nuls": 52,
+   "exprimes": 2390,
+   "candidats": [
+    {
+     "nom": "TACHÉ",
+     "prenom": "Aurélien",
+     "nuance": "UG",
+     "voix": 1300,
+     "pct_exprimes": 54.39,
+     "pct_inscrits": 32.69
+    },
+    {
+     "nom": "MACÉ",
+     "prenom": "Lisbeth",
+     "nuance": "RN",
+     "voix": 1090,
+     "pct_exprimes": 45.61,
+     "pct_inscrits": 27.41
+    }
+   ],
+   "pct_abstention": 31.08,
+   "pct_participation": 68.92,
+   "tete": {
+    "nom": "TACHÉ",
+    "prenom": "Aurélien",
+    "nuance": "UG",
+    "pct_exprimes": 54.39
+   }
+  },
+  "95392": {
+   "code_insee": "95392",
+   "nom": "Mériel",
+   "code_circonscription": null,
+   "bureaux_de_vote": 4,
+   "inscrits": 3743,
+   "abstentions": 1215,
+   "votants": 2528,
+   "blancs": 187,
+   "nuls": 47,
+   "exprimes": 2294,
+   "candidats": [
+    {
+     "nom": "HADIZADEH",
+     "prenom": "Ayda",
+     "nuance": "UG",
+     "voix": 1214,
+     "pct_exprimes": 52.92,
+     "pct_inscrits": 32.43
+    },
+    {
+     "nom": "REMY",
+     "prenom": "Nadejda",
+     "nuance": "RN",
+     "voix": 1080,
+     "pct_exprimes": 47.08,
+     "pct_inscrits": 28.85
+    }
+   ],
+   "pct_abstention": 32.46,
+   "pct_participation": 67.54,
+   "tete": {
+    "nom": "HADIZADEH",
+    "prenom": "Ayda",
+    "nuance": "UG",
+    "pct_exprimes": 52.92
+   }
+  },
+  "95394": {
+   "code_insee": "95394",
+   "nom": "Méry-sur-Oise",
+   "code_circonscription": null,
+   "bureaux_de_vote": 7,
+   "inscrits": 6589,
+   "abstentions": 2291,
+   "votants": 4298,
+   "blancs": 302,
+   "nuls": 69,
+   "exprimes": 3927,
+   "candidats": [
+    {
+     "nom": "HADIZADEH",
+     "prenom": "Ayda",
+     "nuance": "UG",
+     "voix": 2170,
+     "pct_exprimes": 55.26,
+     "pct_inscrits": 32.93
+    },
+    {
+     "nom": "REMY",
+     "prenom": "Nadejda",
+     "nuance": "RN",
+     "voix": 1757,
+     "pct_exprimes": 44.74,
+     "pct_inscrits": 26.67
+    }
+   ],
+   "pct_abstention": 34.77,
+   "pct_participation": 65.23,
+   "tete": {
+    "nom": "HADIZADEH",
+    "prenom": "Ayda",
+    "nuance": "UG",
+    "pct_exprimes": 55.26
+   }
+  },
+  "95395": {
+   "code_insee": "95395",
+   "nom": "Le Mesnil-Aubry",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 630,
+   "abstentions": 183,
+   "votants": 447,
+   "blancs": 24,
+   "nuls": 5,
+   "exprimes": 418,
+   "candidats": [
+    {
+     "nom": "QUENTIN",
+     "prenom": "David",
+     "nuance": "RN",
+     "voix": 262,
+     "pct_exprimes": 62.68,
+     "pct_inscrits": 41.59
+    },
+    {
+     "nom": "ESKENAZI",
+     "prenom": "Romain",
+     "nuance": "UG",
+     "voix": 156,
+     "pct_exprimes": 37.32,
+     "pct_inscrits": 24.76
+    }
+   ],
+   "pct_abstention": 29.05,
+   "pct_participation": 70.95,
+   "tete": {
+    "nom": "QUENTIN",
+    "prenom": "David",
+    "nuance": "RN",
+    "pct_exprimes": 62.68
+   }
+  },
+  "95409": {
+   "code_insee": "95409",
+   "nom": "Moisselles",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 843,
+   "abstentions": 233,
+   "votants": 610,
+   "blancs": 44,
+   "nuls": 11,
+   "exprimes": 555,
+   "candidats": [
+    {
+     "nom": "QUENTIN",
+     "prenom": "David",
+     "nuance": "RN",
+     "voix": 290,
+     "pct_exprimes": 52.25,
+     "pct_inscrits": 34.4
+    },
+    {
+     "nom": "ESKENAZI",
+     "prenom": "Romain",
+     "nuance": "UG",
+     "voix": 265,
+     "pct_exprimes": 47.75,
+     "pct_inscrits": 31.44
+    }
+   ],
+   "pct_abstention": 27.64,
+   "pct_participation": 72.36,
+   "tete": {
+    "nom": "QUENTIN",
+    "prenom": "David",
+    "nuance": "RN",
+    "pct_exprimes": 52.25
+   }
+  },
+  "95422": {
+   "code_insee": "95422",
+   "nom": "Montgeroult",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 300,
+   "abstentions": 78,
+   "votants": 222,
+   "blancs": 4,
+   "nuls": 0,
+   "exprimes": 218,
+   "candidats": [
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 77,
+     "pct_exprimes": 35.32,
+     "pct_inscrits": 25.67
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 76,
+     "pct_exprimes": 34.86,
+     "pct_inscrits": 25.33
+    },
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 65,
+     "pct_exprimes": 29.82,
+     "pct_inscrits": 21.67
+    }
+   ],
+   "pct_abstention": 26.0,
+   "pct_participation": 74.0,
+   "tete": {
+    "nom": "JULES-ARTHUR",
+    "prenom": "Maximillien",
+    "nuance": "UG",
+    "pct_exprimes": 35.32
+   }
+  },
+  "95424": {
+   "code_insee": "95424",
+   "nom": "Montigny-lès-Cormeilles",
+   "code_circonscription": null,
+   "bureaux_de_vote": 13,
+   "inscrits": 12313,
+   "abstentions": 4838,
+   "votants": 7475,
+   "blancs": 356,
+   "nuls": 92,
+   "exprimes": 7027,
+   "candidats": [
+    {
+     "nom": "MAUREL",
+     "prenom": "Emmanuel",
+     "nuance": "UG",
+     "voix": 5115,
+     "pct_exprimes": 72.79,
+     "pct_inscrits": 41.54
+    },
+    {
+     "nom": "LELAIDIER",
+     "prenom": "Kimberley",
+     "nuance": "RN",
+     "voix": 1912,
+     "pct_exprimes": 27.21,
+     "pct_inscrits": 15.53
+    }
+   ],
+   "pct_abstention": 39.29,
+   "pct_participation": 60.71,
+   "tete": {
+    "nom": "MAUREL",
+    "prenom": "Emmanuel",
+    "nuance": "UG",
+    "pct_exprimes": 72.79
+   }
+  },
+  "95426": {
+   "code_insee": "95426",
+   "nom": "Montlignon",
+   "code_circonscription": null,
+   "bureaux_de_vote": 2,
+   "inscrits": 2306,
+   "abstentions": 681,
+   "votants": 1625,
+   "blancs": 123,
+   "nuls": 33,
+   "exprimes": 1469,
+   "candidats": [
+    {
+     "nom": "MOUTCHOU",
+     "prenom": "Naïma",
+     "nuance": "ENS",
+     "voix": 1054,
+     "pct_exprimes": 71.75,
+     "pct_inscrits": 45.71
+    },
+    {
+     "nom": "LACOUTURE",
+     "prenom": "Karine",
+     "nuance": "UG",
+     "voix": 415,
+     "pct_exprimes": 28.25,
+     "pct_inscrits": 18.0
+    }
+   ],
+   "pct_abstention": 29.53,
+   "pct_participation": 70.47,
+   "tete": {
+    "nom": "MOUTCHOU",
+    "prenom": "Naïma",
+    "nuance": "ENS",
+    "pct_exprimes": 71.75
+   }
+  },
+  "95427": {
+   "code_insee": "95427",
+   "nom": "Montmagny",
+   "code_circonscription": null,
+   "bureaux_de_vote": 8,
+   "inscrits": 7849,
+   "abstentions": 2988,
+   "votants": 4861,
+   "blancs": 65,
+   "nuls": 20,
+   "exprimes": 4776,
+   "candidats": [
+    {
+     "nom": "CATHALA",
+     "prenom": "Gabrielle",
+     "nuance": "UG",
+     "voix": 2925,
+     "pct_exprimes": 61.24,
+     "pct_inscrits": 37.27
+    },
+    {
+     "nom": "BRUNA",
+     "prenom": "Annika",
+     "nuance": "RN",
+     "voix": 937,
+     "pct_exprimes": 19.62,
+     "pct_inscrits": 11.94
+    },
+    {
+     "nom": "FOLEST",
+     "prenom": "Estelle",
+     "nuance": "ENS",
+     "voix": 914,
+     "pct_exprimes": 19.14,
+     "pct_inscrits": 11.64
+    }
+   ],
+   "pct_abstention": 38.07,
+   "pct_participation": 61.93,
+   "tete": {
+    "nom": "CATHALA",
+    "prenom": "Gabrielle",
+    "nuance": "UG",
+    "pct_exprimes": 61.24
+   }
+  },
+  "95428": {
+   "code_insee": "95428",
+   "nom": "Montmorency",
+   "code_circonscription": null,
+   "bureaux_de_vote": 11,
+   "inscrits": 13616,
+   "abstentions": 4246,
+   "votants": 9370,
+   "blancs": 726,
+   "nuls": 144,
+   "exprimes": 8500,
+   "candidats": [
+    {
+     "nom": "ESKENAZI",
+     "prenom": "Romain",
+     "nuance": "UG",
+     "voix": 5479,
+     "pct_exprimes": 64.46,
+     "pct_inscrits": 40.24
+    },
+    {
+     "nom": "QUENTIN",
+     "prenom": "David",
+     "nuance": "RN",
+     "voix": 3021,
+     "pct_exprimes": 35.54,
+     "pct_inscrits": 22.19
+    }
+   ],
+   "pct_abstention": 31.18,
+   "pct_participation": 68.82,
+   "tete": {
+    "nom": "ESKENAZI",
+    "prenom": "Romain",
+    "nuance": "UG",
+    "pct_exprimes": 64.46
+   }
+  },
+  "95429": {
+   "code_insee": "95429",
+   "nom": "Montreuil-sur-Epte",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 326,
+   "abstentions": 99,
+   "votants": 227,
+   "blancs": 8,
+   "nuls": 0,
+   "exprimes": 219,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 106,
+     "pct_exprimes": 48.4,
+     "pct_inscrits": 32.52
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 57,
+     "pct_exprimes": 26.03,
+     "pct_inscrits": 17.48
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 56,
+     "pct_exprimes": 25.57,
+     "pct_inscrits": 17.18
+    }
+   ],
+   "pct_abstention": 30.37,
+   "pct_participation": 69.63,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 48.4
+   }
+  },
+  "95430": {
+   "code_insee": "95430",
+   "nom": "Montsoult",
+   "code_circonscription": null,
+   "bureaux_de_vote": 2,
+   "inscrits": 2646,
+   "abstentions": 821,
+   "votants": 1825,
+   "blancs": 126,
+   "nuls": 18,
+   "exprimes": 1681,
+   "candidats": [
+    {
+     "nom": "HADIZADEH",
+     "prenom": "Ayda",
+     "nuance": "UG",
+     "voix": 890,
+     "pct_exprimes": 52.94,
+     "pct_inscrits": 33.64
+    },
+    {
+     "nom": "REMY",
+     "prenom": "Nadejda",
+     "nuance": "RN",
+     "voix": 791,
+     "pct_exprimes": 47.06,
+     "pct_inscrits": 29.89
+    }
+   ],
+   "pct_abstention": 31.03,
+   "pct_participation": 68.97,
+   "tete": {
+    "nom": "HADIZADEH",
+    "prenom": "Ayda",
+    "nuance": "UG",
+    "pct_exprimes": 52.94
+   }
+  },
+  "95436": {
+   "code_insee": "95436",
+   "nom": "Mours",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 1153,
+   "abstentions": 330,
+   "votants": 823,
+   "blancs": 18,
+   "nuls": 4,
+   "exprimes": 801,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 308,
+     "pct_exprimes": 38.45,
+     "pct_inscrits": 26.71
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 249,
+     "pct_exprimes": 31.09,
+     "pct_inscrits": 21.6
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 244,
+     "pct_exprimes": 30.46,
+     "pct_inscrits": 21.16
+    }
+   ],
+   "pct_abstention": 28.62,
+   "pct_participation": 71.38,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 38.45
+   }
+  },
+  "95438": {
+   "code_insee": "95438",
+   "nom": "Moussy",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 99,
+   "abstentions": 23,
+   "votants": 76,
+   "blancs": 7,
+   "nuls": 1,
+   "exprimes": 68,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 34,
+     "pct_exprimes": 50.0,
+     "pct_inscrits": 34.34
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 22,
+     "pct_exprimes": 32.35,
+     "pct_inscrits": 22.22
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 12,
+     "pct_exprimes": 17.65,
+     "pct_inscrits": 12.12
+    }
+   ],
+   "pct_abstention": 23.23,
+   "pct_participation": 76.77,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 50.0
+   }
+  },
+  "95445": {
+   "code_insee": "95445",
+   "nom": "Nerville-la-Forêt",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 469,
+   "abstentions": 136,
+   "votants": 333,
+   "blancs": 33,
+   "nuls": 2,
+   "exprimes": 298,
+   "candidats": [
+    {
+     "nom": "HADIZADEH",
+     "prenom": "Ayda",
+     "nuance": "UG",
+     "voix": 155,
+     "pct_exprimes": 52.01,
+     "pct_inscrits": 33.05
+    },
+    {
+     "nom": "REMY",
+     "prenom": "Nadejda",
+     "nuance": "RN",
+     "voix": 143,
+     "pct_exprimes": 47.99,
+     "pct_inscrits": 30.49
+    }
+   ],
+   "pct_abstention": 29.0,
+   "pct_participation": 71.0,
+   "tete": {
+    "nom": "HADIZADEH",
+    "prenom": "Ayda",
+    "nuance": "UG",
+    "pct_exprimes": 52.01
+   }
+  },
+  "95446": {
+   "code_insee": "95446",
+   "nom": "Nesles-la-Vallée",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 1499,
+   "abstentions": 397,
+   "votants": 1102,
+   "blancs": 29,
+   "nuls": 3,
+   "exprimes": 1070,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 426,
+     "pct_exprimes": 39.81,
+     "pct_inscrits": 28.42
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 367,
+     "pct_exprimes": 34.3,
+     "pct_inscrits": 24.48
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 277,
+     "pct_exprimes": 25.89,
+     "pct_inscrits": 18.48
+    }
+   ],
+   "pct_abstention": 26.48,
+   "pct_participation": 73.52,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 39.81
+   }
+  },
+  "95447": {
+   "code_insee": "95447",
+   "nom": "Neuilly-en-Vexin",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 160,
+   "abstentions": 49,
+   "votants": 111,
+   "blancs": 4,
+   "nuls": 2,
+   "exprimes": 105,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 49,
+     "pct_exprimes": 46.67,
+     "pct_inscrits": 30.62
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 42,
+     "pct_exprimes": 40.0,
+     "pct_inscrits": 26.25
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 14,
+     "pct_exprimes": 13.33,
+     "pct_inscrits": 8.75
+    }
+   ],
+   "pct_abstention": 30.62,
+   "pct_participation": 69.38,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 46.67
+   }
+  },
+  "95450": {
+   "code_insee": "95450",
+   "nom": "Neuville-sur-Oise",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 1223,
+   "abstentions": 307,
+   "votants": 916,
+   "blancs": 79,
+   "nuls": 16,
+   "exprimes": 821,
+   "candidats": [
+    {
+     "nom": "HADIZADEH",
+     "prenom": "Ayda",
+     "nuance": "UG",
+     "voix": 519,
+     "pct_exprimes": 63.22,
+     "pct_inscrits": 42.44
+    },
+    {
+     "nom": "REMY",
+     "prenom": "Nadejda",
+     "nuance": "RN",
+     "voix": 302,
+     "pct_exprimes": 36.78,
+     "pct_inscrits": 24.69
+    }
+   ],
+   "pct_abstention": 25.1,
+   "pct_participation": 74.9,
+   "tete": {
+    "nom": "HADIZADEH",
+    "prenom": "Ayda",
+    "nuance": "UG",
+    "pct_exprimes": 63.22
+   }
+  },
+  "95452": {
+   "code_insee": "95452",
+   "nom": "Nointel",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 615,
+   "abstentions": 128,
+   "votants": 487,
+   "blancs": 17,
+   "nuls": 4,
+   "exprimes": 466,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 180,
+     "pct_exprimes": 38.63,
+     "pct_inscrits": 29.27
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 148,
+     "pct_exprimes": 31.76,
+     "pct_inscrits": 24.07
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 138,
+     "pct_exprimes": 29.61,
+     "pct_inscrits": 22.44
+    }
+   ],
+   "pct_abstention": 20.81,
+   "pct_participation": 79.19,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 38.63
+   }
+  },
+  "95456": {
+   "code_insee": "95456",
+   "nom": "Noisy-sur-Oise",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 417,
+   "abstentions": 117,
+   "votants": 300,
+   "blancs": 17,
+   "nuls": 3,
+   "exprimes": 280,
+   "candidats": [
+    {
+     "nom": "REMY",
+     "prenom": "Nadejda",
+     "nuance": "RN",
+     "voix": 154,
+     "pct_exprimes": 55.0,
+     "pct_inscrits": 36.93
+    },
+    {
+     "nom": "HADIZADEH",
+     "prenom": "Ayda",
+     "nuance": "UG",
+     "voix": 126,
+     "pct_exprimes": 45.0,
+     "pct_inscrits": 30.22
+    }
+   ],
+   "pct_abstention": 28.06,
+   "pct_participation": 71.94,
+   "tete": {
+    "nom": "REMY",
+    "prenom": "Nadejda",
+    "nuance": "RN",
+    "pct_exprimes": 55.0
+   }
+  },
+  "95459": {
+   "code_insee": "95459",
+   "nom": "Nucourt",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 553,
+   "abstentions": 149,
+   "votants": 404,
+   "blancs": 3,
+   "nuls": 2,
+   "exprimes": 399,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 200,
+     "pct_exprimes": 50.13,
+     "pct_inscrits": 36.17
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 137,
+     "pct_exprimes": 34.34,
+     "pct_inscrits": 24.77
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 62,
+     "pct_exprimes": 15.54,
+     "pct_inscrits": 11.21
+    }
+   ],
+   "pct_abstention": 26.94,
+   "pct_participation": 73.06,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 50.13
+   }
+  },
+  "95462": {
+   "code_insee": "95462",
+   "nom": "Omerville",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 270,
+   "abstentions": 67,
+   "votants": 203,
+   "blancs": 6,
+   "nuls": 3,
+   "exprimes": 194,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 100,
+     "pct_exprimes": 51.55,
+     "pct_inscrits": 37.04
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 55,
+     "pct_exprimes": 28.35,
+     "pct_inscrits": 20.37
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 39,
+     "pct_exprimes": 20.1,
+     "pct_inscrits": 14.44
+    }
+   ],
+   "pct_abstention": 24.81,
+   "pct_participation": 75.19,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 51.55
+   }
+  },
+  "95476": {
+   "code_insee": "95476",
+   "nom": "Osny",
+   "code_circonscription": null,
+   "bureaux_de_vote": 13,
+   "inscrits": 10700,
+   "abstentions": 3876,
+   "votants": 6824,
+   "blancs": 677,
+   "nuls": 136,
+   "exprimes": 6011,
+   "candidats": [
+    {
+     "nom": "TACHÉ",
+     "prenom": "Aurélien",
+     "nuance": "UG",
+     "voix": 3488,
+     "pct_exprimes": 58.03,
+     "pct_inscrits": 32.6
+    },
+    {
+     "nom": "MACÉ",
+     "prenom": "Lisbeth",
+     "nuance": "RN",
+     "voix": 2523,
+     "pct_exprimes": 41.97,
+     "pct_inscrits": 23.58
+    }
+   ],
+   "pct_abstention": 36.22,
+   "pct_participation": 63.78,
+   "tete": {
+    "nom": "TACHÉ",
+    "prenom": "Aurélien",
+    "nuance": "UG",
+    "pct_exprimes": 58.03
+   }
+  },
+  "95480": {
+   "code_insee": "95480",
+   "nom": "Parmain",
+   "code_circonscription": null,
+   "bureaux_de_vote": 4,
+   "inscrits": 4325,
+   "abstentions": 1366,
+   "votants": 2959,
+   "blancs": 240,
+   "nuls": 42,
+   "exprimes": 2677,
+   "candidats": [
+    {
+     "nom": "HADIZADEH",
+     "prenom": "Ayda",
+     "nuance": "UG",
+     "voix": 1437,
+     "pct_exprimes": 53.68,
+     "pct_inscrits": 33.23
+    },
+    {
+     "nom": "REMY",
+     "prenom": "Nadejda",
+     "nuance": "RN",
+     "voix": 1240,
+     "pct_exprimes": 46.32,
+     "pct_inscrits": 28.67
+    }
+   ],
+   "pct_abstention": 31.58,
+   "pct_participation": 68.42,
+   "tete": {
+    "nom": "HADIZADEH",
+    "prenom": "Ayda",
+    "nuance": "UG",
+    "pct_exprimes": 53.68
+   }
+  },
+  "95483": {
+   "code_insee": "95483",
+   "nom": "Le Perchay",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 426,
+   "abstentions": 121,
+   "votants": 305,
+   "blancs": 12,
+   "nuls": 1,
+   "exprimes": 292,
+   "candidats": [
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 112,
+     "pct_exprimes": 38.36,
+     "pct_inscrits": 26.29
+    },
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 94,
+     "pct_exprimes": 32.19,
+     "pct_inscrits": 22.07
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 86,
+     "pct_exprimes": 29.45,
+     "pct_inscrits": 20.19
+    }
+   ],
+   "pct_abstention": 28.4,
+   "pct_participation": 71.6,
+   "tete": {
+    "nom": "CHANDLER",
+    "prenom": "Émilie",
+    "nuance": "ENS",
+    "pct_exprimes": 38.36
+   }
+  },
+  "95487": {
+   "code_insee": "95487",
+   "nom": "Persan",
+   "code_circonscription": null,
+   "bureaux_de_vote": 8,
+   "inscrits": 6431,
+   "abstentions": 2466,
+   "votants": 3965,
+   "blancs": 86,
+   "nuls": 32,
+   "exprimes": 3847,
+   "candidats": [
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 2134,
+     "pct_exprimes": 55.47,
+     "pct_inscrits": 33.18
+    },
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 1200,
+     "pct_exprimes": 31.19,
+     "pct_inscrits": 18.66
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 513,
+     "pct_exprimes": 13.34,
+     "pct_inscrits": 7.98
+    }
+   ],
+   "pct_abstention": 38.35,
+   "pct_participation": 61.65,
+   "tete": {
+    "nom": "JULES-ARTHUR",
+    "prenom": "Maximillien",
+    "nuance": "UG",
+    "pct_exprimes": 55.47
+   }
+  },
+  "95488": {
+   "code_insee": "95488",
+   "nom": "Pierrelaye",
+   "code_circonscription": null,
+   "bureaux_de_vote": 7,
+   "inscrits": 5526,
+   "abstentions": 2126,
+   "votants": 3400,
+   "blancs": 185,
+   "nuls": 55,
+   "exprimes": 3160,
+   "candidats": [
+    {
+     "nom": "MAUREL",
+     "prenom": "Emmanuel",
+     "nuance": "UG",
+     "voix": 1894,
+     "pct_exprimes": 59.94,
+     "pct_inscrits": 34.27
+    },
+    {
+     "nom": "LELAIDIER",
+     "prenom": "Kimberley",
+     "nuance": "RN",
+     "voix": 1266,
+     "pct_exprimes": 40.06,
+     "pct_inscrits": 22.91
+    }
+   ],
+   "pct_abstention": 38.47,
+   "pct_participation": 61.53,
+   "tete": {
+    "nom": "MAUREL",
+    "prenom": "Emmanuel",
+    "nuance": "UG",
+    "pct_exprimes": 59.94
+   }
+  },
+  "95489": {
+   "code_insee": "95489",
+   "nom": "Piscop",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 463,
+   "abstentions": 120,
+   "votants": 343,
+   "blancs": 20,
+   "nuls": 1,
+   "exprimes": 322,
+   "candidats": [
+    {
+     "nom": "QUENTIN",
+     "prenom": "David",
+     "nuance": "RN",
+     "voix": 208,
+     "pct_exprimes": 64.6,
+     "pct_inscrits": 44.92
+    },
+    {
+     "nom": "ESKENAZI",
+     "prenom": "Romain",
+     "nuance": "UG",
+     "voix": 114,
+     "pct_exprimes": 35.4,
+     "pct_inscrits": 24.62
+    }
+   ],
+   "pct_abstention": 25.92,
+   "pct_participation": 74.08,
+   "tete": {
+    "nom": "QUENTIN",
+    "prenom": "David",
+    "nuance": "RN",
+    "pct_exprimes": 64.6
+   }
+  },
+  "95491": {
+   "code_insee": "95491",
+   "nom": "Le Plessis-Bouchard",
+   "code_circonscription": null,
+   "bureaux_de_vote": 9,
+   "inscrits": 5851,
+   "abstentions": 1668,
+   "votants": 4183,
+   "blancs": 397,
+   "nuls": 91,
+   "exprimes": 3695,
+   "candidats": [
+    {
+     "nom": "MAUREL",
+     "prenom": "Emmanuel",
+     "nuance": "UG",
+     "voix": 2103,
+     "pct_exprimes": 56.91,
+     "pct_inscrits": 35.94
+    },
+    {
+     "nom": "LELAIDIER",
+     "prenom": "Kimberley",
+     "nuance": "RN",
+     "voix": 1592,
+     "pct_exprimes": 43.09,
+     "pct_inscrits": 27.21
+    }
+   ],
+   "pct_abstention": 28.51,
+   "pct_participation": 71.49,
+   "tete": {
+    "nom": "MAUREL",
+    "prenom": "Emmanuel",
+    "nuance": "UG",
+    "pct_exprimes": 56.91
+   }
+  },
+  "95492": {
+   "code_insee": "95492",
+   "nom": "Le Plessis-Gassot",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 67,
+   "abstentions": 23,
+   "votants": 44,
+   "blancs": 4,
+   "nuls": 1,
+   "exprimes": 39,
+   "candidats": [
+    {
+     "nom": "QUENTIN",
+     "prenom": "David",
+     "nuance": "RN",
+     "voix": 22,
+     "pct_exprimes": 56.41,
+     "pct_inscrits": 32.84
+    },
+    {
+     "nom": "ESKENAZI",
+     "prenom": "Romain",
+     "nuance": "UG",
+     "voix": 17,
+     "pct_exprimes": 43.59,
+     "pct_inscrits": 25.37
+    }
+   ],
+   "pct_abstention": 34.33,
+   "pct_participation": 65.67,
+   "tete": {
+    "nom": "QUENTIN",
+    "prenom": "David",
+    "nuance": "RN",
+    "pct_exprimes": 56.41
+   }
+  },
+  "95493": {
+   "code_insee": "95493",
+   "nom": "Le Plessis-Luzarches",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 98,
+   "abstentions": 13,
+   "votants": 85,
+   "blancs": 15,
+   "nuls": 5,
+   "exprimes": 65,
+   "candidats": [
+    {
+     "nom": "MARION",
+     "prenom": "Agnès",
+     "nuance": "RN",
+     "voix": 40,
+     "pct_exprimes": 61.54,
+     "pct_inscrits": 40.82
+    },
+    {
+     "nom": "LE GALL",
+     "prenom": "Arnaud",
+     "nuance": "UG",
+     "voix": 25,
+     "pct_exprimes": 38.46,
+     "pct_inscrits": 25.51
+    }
+   ],
+   "pct_abstention": 13.27,
+   "pct_participation": 86.73,
+   "tete": {
+    "nom": "MARION",
+    "prenom": "Agnès",
+    "nuance": "RN",
+    "pct_exprimes": 61.54
+   }
+  },
+  "95500": {
+   "code_insee": "95500",
+   "nom": "Pontoise",
+   "code_circonscription": null,
+   "bureaux_de_vote": 22,
+   "inscrits": 17862,
+   "abstentions": 6384,
+   "votants": 11478,
+   "blancs": 220,
+   "nuls": 58,
+   "exprimes": 11200,
+   "candidats": [
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 5805,
+     "pct_exprimes": 51.83,
+     "pct_inscrits": 32.5
+    },
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 2731,
+     "pct_exprimes": 24.38,
+     "pct_inscrits": 15.29
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 2664,
+     "pct_exprimes": 23.79,
+     "pct_inscrits": 14.91
+    }
+   ],
+   "pct_abstention": 35.74,
+   "pct_participation": 64.26,
+   "tete": {
+    "nom": "JULES-ARTHUR",
+    "prenom": "Maximillien",
+    "nuance": "UG",
+    "pct_exprimes": 51.83
+   }
+  },
+  "95504": {
+   "code_insee": "95504",
+   "nom": "Presles",
+   "code_circonscription": null,
+   "bureaux_de_vote": 4,
+   "inscrits": 2801,
+   "abstentions": 835,
+   "votants": 1966,
+   "blancs": 152,
+   "nuls": 43,
+   "exprimes": 1771,
+   "candidats": [
+    {
+     "nom": "HADIZADEH",
+     "prenom": "Ayda",
+     "nuance": "UG",
+     "voix": 935,
+     "pct_exprimes": 52.8,
+     "pct_inscrits": 33.38
+    },
+    {
+     "nom": "REMY",
+     "prenom": "Nadejda",
+     "nuance": "RN",
+     "voix": 836,
+     "pct_exprimes": 47.2,
+     "pct_inscrits": 29.85
+    }
+   ],
+   "pct_abstention": 29.81,
+   "pct_participation": 70.19,
+   "tete": {
+    "nom": "HADIZADEH",
+    "prenom": "Ayda",
+    "nuance": "UG",
+    "pct_exprimes": 52.8
+   }
+  },
+  "95509": {
+   "code_insee": "95509",
+   "nom": "Puiseux-en-France",
+   "code_circonscription": null,
+   "bureaux_de_vote": 3,
+   "inscrits": 2582,
+   "abstentions": 973,
+   "votants": 1609,
+   "blancs": 147,
+   "nuls": 23,
+   "exprimes": 1439,
+   "candidats": [
+    {
+     "nom": "LE GALL",
+     "prenom": "Arnaud",
+     "nuance": "UG",
+     "voix": 768,
+     "pct_exprimes": 53.37,
+     "pct_inscrits": 29.74
+    },
+    {
+     "nom": "MARION",
+     "prenom": "Agnès",
+     "nuance": "RN",
+     "voix": 671,
+     "pct_exprimes": 46.63,
+     "pct_inscrits": 25.99
+    }
+   ],
+   "pct_abstention": 37.68,
+   "pct_participation": 62.32,
+   "tete": {
+    "nom": "LE GALL",
+    "prenom": "Arnaud",
+    "nuance": "UG",
+    "pct_exprimes": 53.37
+   }
+  },
+  "95510": {
+   "code_insee": "95510",
+   "nom": "Puiseux-Pontoise",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 382,
+   "abstentions": 128,
+   "votants": 254,
+   "blancs": 35,
+   "nuls": 1,
+   "exprimes": 218,
+   "candidats": [
+    {
+     "nom": "TACHÉ",
+     "prenom": "Aurélien",
+     "nuance": "UG",
+     "voix": 128,
+     "pct_exprimes": 58.72,
+     "pct_inscrits": 33.51
+    },
+    {
+     "nom": "MACÉ",
+     "prenom": "Lisbeth",
+     "nuance": "RN",
+     "voix": 90,
+     "pct_exprimes": 41.28,
+     "pct_inscrits": 23.56
+    }
+   ],
+   "pct_abstention": 33.51,
+   "pct_participation": 66.49,
+   "tete": {
+    "nom": "TACHÉ",
+    "prenom": "Aurélien",
+    "nuance": "UG",
+    "pct_exprimes": 58.72
+   }
+  },
+  "95523": {
+   "code_insee": "95523",
+   "nom": "La Roche-Guyon",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 299,
+   "abstentions": 72,
+   "votants": 227,
+   "blancs": 6,
+   "nuls": 2,
+   "exprimes": 219,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 79,
+     "pct_exprimes": 36.07,
+     "pct_inscrits": 26.42
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 71,
+     "pct_exprimes": 32.42,
+     "pct_inscrits": 23.75
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 69,
+     "pct_exprimes": 31.51,
+     "pct_inscrits": 23.08
+    }
+   ],
+   "pct_abstention": 24.08,
+   "pct_participation": 75.92,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 36.07
+   }
+  },
+  "95527": {
+   "code_insee": "95527",
+   "nom": "Roissy-en-France",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 1544,
+   "abstentions": 603,
+   "votants": 941,
+   "blancs": 85,
+   "nuls": 27,
+   "exprimes": 829,
+   "candidats": [
+    {
+     "nom": "MARION",
+     "prenom": "Agnès",
+     "nuance": "RN",
+     "voix": 476,
+     "pct_exprimes": 57.42,
+     "pct_inscrits": 30.83
+    },
+    {
+     "nom": "LE GALL",
+     "prenom": "Arnaud",
+     "nuance": "UG",
+     "voix": 353,
+     "pct_exprimes": 42.58,
+     "pct_inscrits": 22.86
+    }
+   ],
+   "pct_abstention": 39.05,
+   "pct_participation": 60.95,
+   "tete": {
+    "nom": "MARION",
+    "prenom": "Agnès",
+    "nuance": "RN",
+    "pct_exprimes": 57.42
+   }
+  },
+  "95529": {
+   "code_insee": "95529",
+   "nom": "Ronquerolles",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 665,
+   "abstentions": 184,
+   "votants": 481,
+   "blancs": 20,
+   "nuls": 2,
+   "exprimes": 459,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 213,
+     "pct_exprimes": 46.41,
+     "pct_inscrits": 32.03
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 145,
+     "pct_exprimes": 31.59,
+     "pct_inscrits": 21.8
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 101,
+     "pct_exprimes": 22.0,
+     "pct_inscrits": 15.19
+    }
+   ],
+   "pct_abstention": 27.67,
+   "pct_participation": 72.33,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 46.41
+   }
+  },
+  "95535": {
+   "code_insee": "95535",
+   "nom": "Sagy",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 930,
+   "abstentions": 274,
+   "votants": 656,
+   "blancs": 21,
+   "nuls": 3,
+   "exprimes": 632,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 283,
+     "pct_exprimes": 44.78,
+     "pct_inscrits": 30.43
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 194,
+     "pct_exprimes": 30.7,
+     "pct_inscrits": 20.86
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 155,
+     "pct_exprimes": 24.53,
+     "pct_inscrits": 16.67
+    }
+   ],
+   "pct_abstention": 29.46,
+   "pct_participation": 70.54,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 44.78
+   }
+  },
+  "95539": {
+   "code_insee": "95539",
+   "nom": "Saint-Brice-sous-Forêt",
+   "code_circonscription": null,
+   "bureaux_de_vote": 9,
+   "inscrits": 9096,
+   "abstentions": 3348,
+   "votants": 5748,
+   "blancs": 322,
+   "nuls": 74,
+   "exprimes": 5352,
+   "candidats": [
+    {
+     "nom": "QUENTIN",
+     "prenom": "David",
+     "nuance": "RN",
+     "voix": 2731,
+     "pct_exprimes": 51.03,
+     "pct_inscrits": 30.02
+    },
+    {
+     "nom": "ESKENAZI",
+     "prenom": "Romain",
+     "nuance": "UG",
+     "voix": 2621,
+     "pct_exprimes": 48.97,
+     "pct_inscrits": 28.81
+    }
+   ],
+   "pct_abstention": 36.81,
+   "pct_participation": 63.19,
+   "tete": {
+    "nom": "QUENTIN",
+    "prenom": "David",
+    "nuance": "RN",
+    "pct_exprimes": 51.03
+   }
+  },
+  "95541": {
+   "code_insee": "95541",
+   "nom": "Saint-Clair-sur-Epte",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 630,
+   "abstentions": 232,
+   "votants": 398,
+   "blancs": 7,
+   "nuls": 3,
+   "exprimes": 388,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 195,
+     "pct_exprimes": 50.26,
+     "pct_inscrits": 30.95
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 98,
+     "pct_exprimes": 25.26,
+     "pct_inscrits": 15.56
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 95,
+     "pct_exprimes": 24.48,
+     "pct_inscrits": 15.08
+    }
+   ],
+   "pct_abstention": 36.83,
+   "pct_participation": 63.17,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 50.26
+   }
+  },
+  "95543": {
+   "code_insee": "95543",
+   "nom": "Saint-Cyr-en-Arthies",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 173,
+   "abstentions": 40,
+   "votants": 133,
+   "blancs": 2,
+   "nuls": 0,
+   "exprimes": 131,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 52,
+     "pct_exprimes": 39.69,
+     "pct_inscrits": 30.06
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 40,
+     "pct_exprimes": 30.53,
+     "pct_inscrits": 23.12
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 39,
+     "pct_exprimes": 29.77,
+     "pct_inscrits": 22.54
+    }
+   ],
+   "pct_abstention": 23.12,
+   "pct_participation": 76.88,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 39.69
+   }
+  },
+  "95554": {
+   "code_insee": "95554",
+   "nom": "Saint-Gervais",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 690,
+   "abstentions": 149,
+   "votants": 541,
+   "blancs": 13,
+   "nuls": 1,
+   "exprimes": 527,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 210,
+     "pct_exprimes": 39.85,
+     "pct_inscrits": 30.43
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 198,
+     "pct_exprimes": 37.57,
+     "pct_inscrits": 28.7
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 119,
+     "pct_exprimes": 22.58,
+     "pct_inscrits": 17.25
+    }
+   ],
+   "pct_abstention": 21.59,
+   "pct_participation": 78.41,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 39.85
+   }
+  },
+  "95555": {
+   "code_insee": "95555",
+   "nom": "Saint-Gratien",
+   "code_circonscription": null,
+   "bureaux_de_vote": 11,
+   "inscrits": 13425,
+   "abstentions": 4951,
+   "votants": 8474,
+   "blancs": 146,
+   "nuls": 42,
+   "exprimes": 8286,
+   "candidats": [
+    {
+     "nom": "CATHALA",
+     "prenom": "Gabrielle",
+     "nuance": "UG",
+     "voix": 3766,
+     "pct_exprimes": 45.45,
+     "pct_inscrits": 28.05
+    },
+    {
+     "nom": "FOLEST",
+     "prenom": "Estelle",
+     "nuance": "ENS",
+     "voix": 2645,
+     "pct_exprimes": 31.92,
+     "pct_inscrits": 19.7
+    },
+    {
+     "nom": "BRUNA",
+     "prenom": "Annika",
+     "nuance": "RN",
+     "voix": 1875,
+     "pct_exprimes": 22.63,
+     "pct_inscrits": 13.97
+    }
+   ],
+   "pct_abstention": 36.88,
+   "pct_participation": 63.12,
+   "tete": {
+    "nom": "CATHALA",
+    "prenom": "Gabrielle",
+    "nuance": "UG",
+    "pct_exprimes": 45.45
+   }
+  },
+  "95563": {
+   "code_insee": "95563",
+   "nom": "Saint-Leu-la-Forêt",
+   "code_circonscription": null,
+   "bureaux_de_vote": 10,
+   "inscrits": 11421,
+   "abstentions": 3839,
+   "votants": 7582,
+   "blancs": 434,
+   "nuls": 129,
+   "exprimes": 7019,
+   "candidats": [
+    {
+     "nom": "MOUTCHOU",
+     "prenom": "Naïma",
+     "nuance": "ENS",
+     "voix": 4152,
+     "pct_exprimes": 59.15,
+     "pct_inscrits": 36.35
+    },
+    {
+     "nom": "LACOUTURE",
+     "prenom": "Karine",
+     "nuance": "UG",
+     "voix": 2867,
+     "pct_exprimes": 40.85,
+     "pct_inscrits": 25.1
+    }
+   ],
+   "pct_abstention": 33.61,
+   "pct_participation": 66.39,
+   "tete": {
+    "nom": "MOUTCHOU",
+    "prenom": "Naïma",
+    "nuance": "ENS",
+    "pct_exprimes": 59.15
+   }
+  },
+  "95566": {
+   "code_insee": "95566",
+   "nom": "Saint-Martin-du-Tertre",
+   "code_circonscription": null,
+   "bureaux_de_vote": 2,
+   "inscrits": 1830,
+   "abstentions": 757,
+   "votants": 1073,
+   "blancs": 79,
+   "nuls": 16,
+   "exprimes": 978,
+   "candidats": [
+    {
+     "nom": "REMY",
+     "prenom": "Nadejda",
+     "nuance": "RN",
+     "voix": 497,
+     "pct_exprimes": 50.82,
+     "pct_inscrits": 27.16
+    },
+    {
+     "nom": "HADIZADEH",
+     "prenom": "Ayda",
+     "nuance": "UG",
+     "voix": 481,
+     "pct_exprimes": 49.18,
+     "pct_inscrits": 26.28
+    }
+   ],
+   "pct_abstention": 41.37,
+   "pct_participation": 58.63,
+   "tete": {
+    "nom": "REMY",
+    "prenom": "Nadejda",
+    "nuance": "RN",
+    "pct_exprimes": 50.82
+   }
+  },
+  "95572": {
+   "code_insee": "95572",
+   "nom": "Saint-Ouen-l'Aumône",
+   "code_circonscription": null,
+   "bureaux_de_vote": 12,
+   "inscrits": 13320,
+   "abstentions": 5209,
+   "votants": 8111,
+   "blancs": 361,
+   "nuls": 125,
+   "exprimes": 7625,
+   "candidats": [
+    {
+     "nom": "HADIZADEH",
+     "prenom": "Ayda",
+     "nuance": "UG",
+     "voix": 5461,
+     "pct_exprimes": 71.62,
+     "pct_inscrits": 41.0
+    },
+    {
+     "nom": "REMY",
+     "prenom": "Nadejda",
+     "nuance": "RN",
+     "voix": 2164,
+     "pct_exprimes": 28.38,
+     "pct_inscrits": 16.25
+    }
+   ],
+   "pct_abstention": 39.11,
+   "pct_participation": 60.89,
+   "tete": {
+    "nom": "HADIZADEH",
+    "prenom": "Ayda",
+    "nuance": "UG",
+    "pct_exprimes": 71.62
+   }
+  },
+  "95574": {
+   "code_insee": "95574",
+   "nom": "Saint-Prix",
+   "code_circonscription": null,
+   "bureaux_de_vote": 7,
+   "inscrits": 5671,
+   "abstentions": 1885,
+   "votants": 3786,
+   "blancs": 217,
+   "nuls": 75,
+   "exprimes": 3494,
+   "candidats": [
+    {
+     "nom": "MOUTCHOU",
+     "prenom": "Naïma",
+     "nuance": "ENS",
+     "voix": 2403,
+     "pct_exprimes": 68.78,
+     "pct_inscrits": 42.37
+    },
+    {
+     "nom": "LACOUTURE",
+     "prenom": "Karine",
+     "nuance": "UG",
+     "voix": 1091,
+     "pct_exprimes": 31.22,
+     "pct_inscrits": 19.24
+    }
+   ],
+   "pct_abstention": 33.24,
+   "pct_participation": 66.76,
+   "tete": {
+    "nom": "MOUTCHOU",
+    "prenom": "Naïma",
+    "nuance": "ENS",
+    "pct_exprimes": 68.78
+   }
+  },
+  "95580": {
+   "code_insee": "95580",
+   "nom": "Saint-Witz",
+   "code_circonscription": null,
+   "bureaux_de_vote": 2,
+   "inscrits": 1915,
+   "abstentions": 547,
+   "votants": 1368,
+   "blancs": 168,
+   "nuls": 24,
+   "exprimes": 1176,
+   "candidats": [
+    {
+     "nom": "MARION",
+     "prenom": "Agnès",
+     "nuance": "RN",
+     "voix": 646,
+     "pct_exprimes": 54.93,
+     "pct_inscrits": 33.73
+    },
+    {
+     "nom": "LE GALL",
+     "prenom": "Arnaud",
+     "nuance": "UG",
+     "voix": 530,
+     "pct_exprimes": 45.07,
+     "pct_inscrits": 27.68
+    }
+   ],
+   "pct_abstention": 28.56,
+   "pct_participation": 71.44,
+   "tete": {
+    "nom": "MARION",
+    "prenom": "Agnès",
+    "nuance": "RN",
+    "pct_exprimes": 54.93
+   }
+  },
+  "95582": {
+   "code_insee": "95582",
+   "nom": "Sannois",
+   "code_circonscription": null,
+   "bureaux_de_vote": 17,
+   "inscrits": 16732,
+   "abstentions": 5748,
+   "votants": 10984,
+   "blancs": 156,
+   "nuls": 46,
+   "exprimes": 10782,
+   "candidats": [
+    {
+     "nom": "CATHALA",
+     "prenom": "Gabrielle",
+     "nuance": "UG",
+     "voix": 4966,
+     "pct_exprimes": 46.06,
+     "pct_inscrits": 29.68
+    },
+    {
+     "nom": "FOLEST",
+     "prenom": "Estelle",
+     "nuance": "ENS",
+     "voix": 3102,
+     "pct_exprimes": 28.77,
+     "pct_inscrits": 18.54
+    },
+    {
+     "nom": "BRUNA",
+     "prenom": "Annika",
+     "nuance": "RN",
+     "voix": 2714,
+     "pct_exprimes": 25.17,
+     "pct_inscrits": 16.22
+    }
+   ],
+   "pct_abstention": 34.35,
+   "pct_participation": 65.65,
+   "tete": {
+    "nom": "CATHALA",
+    "prenom": "Gabrielle",
+    "nuance": "UG",
+    "pct_exprimes": 46.06
+   }
+  },
+  "95584": {
+   "code_insee": "95584",
+   "nom": "Santeuil",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 499,
+   "abstentions": 130,
+   "votants": 369,
+   "blancs": 7,
+   "nuls": 2,
+   "exprimes": 360,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 126,
+     "pct_exprimes": 35.0,
+     "pct_inscrits": 25.25
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 120,
+     "pct_exprimes": 33.33,
+     "pct_inscrits": 24.05
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 114,
+     "pct_exprimes": 31.67,
+     "pct_inscrits": 22.85
+    }
+   ],
+   "pct_abstention": 26.05,
+   "pct_participation": 73.95,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 35.0
+   }
+  },
+  "95585": {
+   "code_insee": "95585",
+   "nom": "Sarcelles",
+   "code_circonscription": null,
+   "bureaux_de_vote": 15,
+   "inscrits": 12284,
+   "abstentions": 5737,
+   "votants": 6547,
+   "blancs": 183,
+   "nuls": 71,
+   "exprimes": 6293,
+   "candidats": [
+    {
+     "nom": "ESKENAZI",
+     "prenom": "Romain",
+     "nuance": "UG",
+     "voix": 4271,
+     "pct_exprimes": 67.87,
+     "pct_inscrits": 34.77
+    },
+    {
+     "nom": "QUENTIN",
+     "prenom": "David",
+     "nuance": "RN",
+     "voix": 2022,
+     "pct_exprimes": 32.13,
+     "pct_inscrits": 16.46
+    }
+   ],
+   "pct_abstention": 46.7,
+   "pct_participation": 53.3,
+   "tete": {
+    "nom": "ESKENAZI",
+    "prenom": "Romain",
+    "nuance": "UG",
+    "pct_exprimes": 67.87
+   }
+  },
+  "95592": {
+   "code_insee": "95592",
+   "nom": "Seraincourt",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 976,
+   "abstentions": 278,
+   "votants": 698,
+   "blancs": 12,
+   "nuls": 10,
+   "exprimes": 676,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 305,
+     "pct_exprimes": 45.12,
+     "pct_inscrits": 31.25
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 189,
+     "pct_exprimes": 27.96,
+     "pct_inscrits": 19.36
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 182,
+     "pct_exprimes": 26.92,
+     "pct_inscrits": 18.65
+    }
+   ],
+   "pct_abstention": 28.48,
+   "pct_participation": 71.52,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 45.12
+   }
+  },
+  "95594": {
+   "code_insee": "95594",
+   "nom": "Seugy",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 772,
+   "abstentions": 229,
+   "votants": 543,
+   "blancs": 46,
+   "nuls": 11,
+   "exprimes": 486,
+   "candidats": [
+    {
+     "nom": "REMY",
+     "prenom": "Nadejda",
+     "nuance": "RN",
+     "voix": 266,
+     "pct_exprimes": 54.73,
+     "pct_inscrits": 34.46
+    },
+    {
+     "nom": "HADIZADEH",
+     "prenom": "Ayda",
+     "nuance": "UG",
+     "voix": 220,
+     "pct_exprimes": 45.27,
+     "pct_inscrits": 28.5
+    }
+   ],
+   "pct_abstention": 29.66,
+   "pct_participation": 70.34,
+   "tete": {
+    "nom": "REMY",
+    "prenom": "Nadejda",
+    "nuance": "RN",
+    "pct_exprimes": 54.73
+   }
+  },
+  "95598": {
+   "code_insee": "95598",
+   "nom": "Soisy-sous-Montmorency",
+   "code_circonscription": null,
+   "bureaux_de_vote": 10,
+   "inscrits": 11900,
+   "abstentions": 4158,
+   "votants": 7742,
+   "blancs": 99,
+   "nuls": 41,
+   "exprimes": 7602,
+   "candidats": [
+    {
+     "nom": "CATHALA",
+     "prenom": "Gabrielle",
+     "nuance": "UG",
+     "voix": 2906,
+     "pct_exprimes": 38.23,
+     "pct_inscrits": 24.42
+    },
+    {
+     "nom": "FOLEST",
+     "prenom": "Estelle",
+     "nuance": "ENS",
+     "voix": 2755,
+     "pct_exprimes": 36.24,
+     "pct_inscrits": 23.15
+    },
+    {
+     "nom": "BRUNA",
+     "prenom": "Annika",
+     "nuance": "RN",
+     "voix": 1941,
+     "pct_exprimes": 25.53,
+     "pct_inscrits": 16.31
+    }
+   ],
+   "pct_abstention": 34.94,
+   "pct_participation": 65.06,
+   "tete": {
+    "nom": "CATHALA",
+    "prenom": "Gabrielle",
+    "nuance": "UG",
+    "pct_exprimes": 38.23
+   }
+  },
+  "95604": {
+   "code_insee": "95604",
+   "nom": "Survilliers",
+   "code_circonscription": null,
+   "bureaux_de_vote": 2,
+   "inscrits": 2443,
+   "abstentions": 880,
+   "votants": 1563,
+   "blancs": 115,
+   "nuls": 40,
+   "exprimes": 1408,
+   "candidats": [
+    {
+     "nom": "MARION",
+     "prenom": "Agnès",
+     "nuance": "RN",
+     "voix": 705,
+     "pct_exprimes": 50.07,
+     "pct_inscrits": 28.86
+    },
+    {
+     "nom": "LE GALL",
+     "prenom": "Arnaud",
+     "nuance": "UG",
+     "voix": 703,
+     "pct_exprimes": 49.93,
+     "pct_inscrits": 28.78
+    }
+   ],
+   "pct_abstention": 36.02,
+   "pct_participation": 63.98,
+   "tete": {
+    "nom": "MARION",
+    "prenom": "Agnès",
+    "nuance": "RN",
+    "pct_exprimes": 50.07
+   }
+  },
+  "95607": {
+   "code_insee": "95607",
+   "nom": "Taverny",
+   "code_circonscription": null,
+   "bureaux_de_vote": 18,
+   "inscrits": 17638,
+   "abstentions": 5794,
+   "votants": 11844,
+   "blancs": 857,
+   "nuls": 153,
+   "exprimes": 10834,
+   "candidats": [
+    {
+     "nom": "MAUREL",
+     "prenom": "Emmanuel",
+     "nuance": "UG",
+     "voix": 6989,
+     "pct_exprimes": 64.51,
+     "pct_inscrits": 39.62
+    },
+    {
+     "nom": "LELAIDIER",
+     "prenom": "Kimberley",
+     "nuance": "RN",
+     "voix": 3845,
+     "pct_exprimes": 35.49,
+     "pct_inscrits": 21.8
+    }
+   ],
+   "pct_abstention": 32.85,
+   "pct_participation": 67.15,
+   "tete": {
+    "nom": "MAUREL",
+    "prenom": "Emmanuel",
+    "nuance": "UG",
+    "pct_exprimes": 64.51
+   }
+  },
+  "95610": {
+   "code_insee": "95610",
+   "nom": "Théméricourt",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 226,
+   "abstentions": 62,
+   "votants": 164,
+   "blancs": 3,
+   "nuls": 2,
+   "exprimes": 159,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 57,
+     "pct_exprimes": 35.85,
+     "pct_inscrits": 25.22
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 54,
+     "pct_exprimes": 33.96,
+     "pct_inscrits": 23.89
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 48,
+     "pct_exprimes": 30.19,
+     "pct_inscrits": 21.24
+    }
+   ],
+   "pct_abstention": 27.43,
+   "pct_participation": 72.57,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 35.85
+   }
+  },
+  "95611": {
+   "code_insee": "95611",
+   "nom": "Theuville",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 21,
+   "abstentions": 7,
+   "votants": 14,
+   "blancs": 0,
+   "nuls": 0,
+   "exprimes": 14,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 11,
+     "pct_exprimes": 78.57,
+     "pct_inscrits": 52.38
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 3,
+     "pct_exprimes": 21.43,
+     "pct_inscrits": 14.29
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 0,
+     "pct_exprimes": 0.0,
+     "pct_inscrits": 0.0
+    }
+   ],
+   "pct_abstention": 33.33,
+   "pct_participation": 66.67,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 78.57
+   }
+  },
+  "95612": {
+   "code_insee": "95612",
+   "nom": "Le Thillay",
+   "code_circonscription": null,
+   "bureaux_de_vote": 3,
+   "inscrits": 2465,
+   "abstentions": 998,
+   "votants": 1467,
+   "blancs": 57,
+   "nuls": 19,
+   "exprimes": 1391,
+   "candidats": [
+    {
+     "nom": "LE GALL",
+     "prenom": "Arnaud",
+     "nuance": "UG",
+     "voix": 741,
+     "pct_exprimes": 53.27,
+     "pct_inscrits": 30.06
+    },
+    {
+     "nom": "MARION",
+     "prenom": "Agnès",
+     "nuance": "RN",
+     "voix": 650,
+     "pct_exprimes": 46.73,
+     "pct_inscrits": 26.37
+    }
+   ],
+   "pct_abstention": 40.49,
+   "pct_participation": 59.51,
+   "tete": {
+    "nom": "LE GALL",
+    "prenom": "Arnaud",
+    "nuance": "UG",
+    "pct_exprimes": 53.27
+   }
+  },
+  "95625": {
+   "code_insee": "95625",
+   "nom": "Us",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 957,
+   "abstentions": 238,
+   "votants": 719,
+   "blancs": 22,
+   "nuls": 4,
+   "exprimes": 693,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 319,
+     "pct_exprimes": 46.03,
+     "pct_inscrits": 33.33
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 211,
+     "pct_exprimes": 30.45,
+     "pct_inscrits": 22.05
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 163,
+     "pct_exprimes": 23.52,
+     "pct_inscrits": 17.03
+    }
+   ],
+   "pct_abstention": 24.87,
+   "pct_participation": 75.13,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 46.03
+   }
+  },
+  "95627": {
+   "code_insee": "95627",
+   "nom": "Vallangoujard",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 465,
+   "abstentions": 96,
+   "votants": 369,
+   "blancs": 2,
+   "nuls": 7,
+   "exprimes": 360,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 163,
+     "pct_exprimes": 45.28,
+     "pct_inscrits": 35.05
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 129,
+     "pct_exprimes": 35.83,
+     "pct_inscrits": 27.74
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 68,
+     "pct_exprimes": 18.89,
+     "pct_inscrits": 14.62
+    }
+   ],
+   "pct_abstention": 20.65,
+   "pct_participation": 79.35,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 45.28
+   }
+  },
+  "95628": {
+   "code_insee": "95628",
+   "nom": "Valmondois",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 1001,
+   "abstentions": 277,
+   "votants": 724,
+   "blancs": 16,
+   "nuls": 5,
+   "exprimes": 703,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 287,
+     "pct_exprimes": 40.83,
+     "pct_inscrits": 28.67
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 246,
+     "pct_exprimes": 34.99,
+     "pct_inscrits": 24.58
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 170,
+     "pct_exprimes": 24.18,
+     "pct_inscrits": 16.98
+    }
+   ],
+   "pct_abstention": 27.67,
+   "pct_participation": 72.33,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 40.83
+   }
+  },
+  "95633": {
+   "code_insee": "95633",
+   "nom": "Vaudherland",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 62,
+   "abstentions": 20,
+   "votants": 42,
+   "blancs": 4,
+   "nuls": 0,
+   "exprimes": 38,
+   "candidats": [
+    {
+     "nom": "MARION",
+     "prenom": "Agnès",
+     "nuance": "RN",
+     "voix": 31,
+     "pct_exprimes": 81.58,
+     "pct_inscrits": 50.0
+    },
+    {
+     "nom": "LE GALL",
+     "prenom": "Arnaud",
+     "nuance": "UG",
+     "voix": 7,
+     "pct_exprimes": 18.42,
+     "pct_inscrits": 11.29
+    }
+   ],
+   "pct_abstention": 32.26,
+   "pct_participation": 67.74,
+   "tete": {
+    "nom": "MARION",
+    "prenom": "Agnès",
+    "nuance": "RN",
+    "pct_exprimes": 81.58
+   }
+  },
+  "95637": {
+   "code_insee": "95637",
+   "nom": "Vauréal",
+   "code_circonscription": null,
+   "bureaux_de_vote": 12,
+   "inscrits": 11874,
+   "abstentions": 4188,
+   "votants": 7686,
+   "blancs": 854,
+   "nuls": 0,
+   "exprimes": 6832,
+   "candidats": [
+    {
+     "nom": "TACHÉ",
+     "prenom": "Aurélien",
+     "nuance": "UG",
+     "voix": 4891,
+     "pct_exprimes": 71.59,
+     "pct_inscrits": 41.19
+    },
+    {
+     "nom": "MACÉ",
+     "prenom": "Lisbeth",
+     "nuance": "RN",
+     "voix": 1941,
+     "pct_exprimes": 28.41,
+     "pct_inscrits": 16.35
+    }
+   ],
+   "pct_abstention": 35.27,
+   "pct_participation": 64.73,
+   "tete": {
+    "nom": "TACHÉ",
+    "prenom": "Aurélien",
+    "nuance": "UG",
+    "pct_exprimes": 71.59
+   }
+  },
+  "95641": {
+   "code_insee": "95641",
+   "nom": "Vémars",
+   "code_circonscription": null,
+   "bureaux_de_vote": 2,
+   "inscrits": 1805,
+   "abstentions": 706,
+   "votants": 1099,
+   "blancs": 89,
+   "nuls": 23,
+   "exprimes": 987,
+   "candidats": [
+    {
+     "nom": "MARION",
+     "prenom": "Agnès",
+     "nuance": "RN",
+     "voix": 497,
+     "pct_exprimes": 50.35,
+     "pct_inscrits": 27.53
+    },
+    {
+     "nom": "LE GALL",
+     "prenom": "Arnaud",
+     "nuance": "UG",
+     "voix": 490,
+     "pct_exprimes": 49.65,
+     "pct_inscrits": 27.15
+    }
+   ],
+   "pct_abstention": 39.11,
+   "pct_participation": 60.89,
+   "tete": {
+    "nom": "MARION",
+    "prenom": "Agnès",
+    "nuance": "RN",
+    "pct_exprimes": 50.35
+   }
+  },
+  "95651": {
+   "code_insee": "95651",
+   "nom": "Vétheuil",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 602,
+   "abstentions": 125,
+   "votants": 477,
+   "blancs": 13,
+   "nuls": 5,
+   "exprimes": 459,
+   "candidats": [
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 195,
+     "pct_exprimes": 42.48,
+     "pct_inscrits": 32.39
+    },
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 145,
+     "pct_exprimes": 31.59,
+     "pct_inscrits": 24.09
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 119,
+     "pct_exprimes": 25.93,
+     "pct_inscrits": 19.77
+    }
+   ],
+   "pct_abstention": 20.76,
+   "pct_participation": 79.24,
+   "tete": {
+    "nom": "JULES-ARTHUR",
+    "prenom": "Maximillien",
+    "nuance": "UG",
+    "pct_exprimes": 42.48
+   }
+  },
+  "95652": {
+   "code_insee": "95652",
+   "nom": "Viarmes",
+   "code_circonscription": null,
+   "bureaux_de_vote": 3,
+   "inscrits": 4064,
+   "abstentions": 1335,
+   "votants": 2729,
+   "blancs": 194,
+   "nuls": 47,
+   "exprimes": 2488,
+   "candidats": [
+    {
+     "nom": "REMY",
+     "prenom": "Nadejda",
+     "nuance": "RN",
+     "voix": 1336,
+     "pct_exprimes": 53.7,
+     "pct_inscrits": 32.87
+    },
+    {
+     "nom": "HADIZADEH",
+     "prenom": "Ayda",
+     "nuance": "UG",
+     "voix": 1152,
+     "pct_exprimes": 46.3,
+     "pct_inscrits": 28.35
+    }
+   ],
+   "pct_abstention": 32.85,
+   "pct_participation": 67.15,
+   "tete": {
+    "nom": "REMY",
+    "prenom": "Nadejda",
+    "nuance": "RN",
+    "pct_exprimes": 53.7
+   }
+  },
+  "95656": {
+   "code_insee": "95656",
+   "nom": "Vienne-en-Arthies",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 328,
+   "abstentions": 85,
+   "votants": 243,
+   "blancs": 2,
+   "nuls": 0,
+   "exprimes": 241,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 95,
+     "pct_exprimes": 39.42,
+     "pct_inscrits": 28.96
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 82,
+     "pct_exprimes": 34.02,
+     "pct_inscrits": 25.0
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 64,
+     "pct_exprimes": 26.56,
+     "pct_inscrits": 19.51
+    }
+   ],
+   "pct_abstention": 25.91,
+   "pct_participation": 74.09,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 39.42
+   }
+  },
+  "95658": {
+   "code_insee": "95658",
+   "nom": "Vigny",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 874,
+   "abstentions": 239,
+   "votants": 635,
+   "blancs": 13,
+   "nuls": 2,
+   "exprimes": 620,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 256,
+     "pct_exprimes": 41.29,
+     "pct_inscrits": 29.29
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 223,
+     "pct_exprimes": 35.97,
+     "pct_inscrits": 25.51
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 141,
+     "pct_exprimes": 22.74,
+     "pct_inscrits": 16.13
+    }
+   ],
+   "pct_abstention": 27.35,
+   "pct_participation": 72.65,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 41.29
+   }
+  },
+  "95660": {
+   "code_insee": "95660",
+   "nom": "Villaines-sous-Bois",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 549,
+   "abstentions": 152,
+   "votants": 397,
+   "blancs": 39,
+   "nuls": 1,
+   "exprimes": 357,
+   "candidats": [
+    {
+     "nom": "REMY",
+     "prenom": "Nadejda",
+     "nuance": "RN",
+     "voix": 216,
+     "pct_exprimes": 60.5,
+     "pct_inscrits": 39.34
+    },
+    {
+     "nom": "HADIZADEH",
+     "prenom": "Ayda",
+     "nuance": "UG",
+     "voix": 141,
+     "pct_exprimes": 39.5,
+     "pct_inscrits": 25.68
+    }
+   ],
+   "pct_abstention": 27.69,
+   "pct_participation": 72.31,
+   "tete": {
+    "nom": "REMY",
+    "prenom": "Nadejda",
+    "nuance": "RN",
+    "pct_exprimes": 60.5
+   }
+  },
+  "95675": {
+   "code_insee": "95675",
+   "nom": "Villeron",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 888,
+   "abstentions": 304,
+   "votants": 584,
+   "blancs": 33,
+   "nuls": 11,
+   "exprimes": 540,
+   "candidats": [
+    {
+     "nom": "MARION",
+     "prenom": "Agnès",
+     "nuance": "RN",
+     "voix": 304,
+     "pct_exprimes": 56.3,
+     "pct_inscrits": 34.23
+    },
+    {
+     "nom": "LE GALL",
+     "prenom": "Arnaud",
+     "nuance": "UG",
+     "voix": 236,
+     "pct_exprimes": 43.7,
+     "pct_inscrits": 26.58
+    }
+   ],
+   "pct_abstention": 34.23,
+   "pct_participation": 65.77,
+   "tete": {
+    "nom": "MARION",
+    "prenom": "Agnès",
+    "nuance": "RN",
+    "pct_exprimes": 56.3
+   }
+  },
+  "95676": {
+   "code_insee": "95676",
+   "nom": "Villers-en-Arthies",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 396,
+   "abstentions": 100,
+   "votants": 296,
+   "blancs": 6,
+   "nuls": 2,
+   "exprimes": 288,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 152,
+     "pct_exprimes": 52.78,
+     "pct_inscrits": 38.38
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 77,
+     "pct_exprimes": 26.74,
+     "pct_inscrits": 19.44
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 59,
+     "pct_exprimes": 20.49,
+     "pct_inscrits": 14.9
+    }
+   ],
+   "pct_abstention": 25.25,
+   "pct_participation": 74.75,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 52.78
+   }
+  },
+  "95678": {
+   "code_insee": "95678",
+   "nom": "Villiers-Adam",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 614,
+   "abstentions": 147,
+   "votants": 467,
+   "blancs": 38,
+   "nuls": 6,
+   "exprimes": 423,
+   "candidats": [
+    {
+     "nom": "REMY",
+     "prenom": "Nadejda",
+     "nuance": "RN",
+     "voix": 222,
+     "pct_exprimes": 52.48,
+     "pct_inscrits": 36.16
+    },
+    {
+     "nom": "HADIZADEH",
+     "prenom": "Ayda",
+     "nuance": "UG",
+     "voix": 201,
+     "pct_exprimes": 47.52,
+     "pct_inscrits": 32.74
+    }
+   ],
+   "pct_abstention": 23.94,
+   "pct_participation": 76.06,
+   "tete": {
+    "nom": "REMY",
+    "prenom": "Nadejda",
+    "nuance": "RN",
+    "pct_exprimes": 52.48
+   }
+  },
+  "95682": {
+   "code_insee": "95682",
+   "nom": "Villiers-le-Sec",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 113,
+   "abstentions": 31,
+   "votants": 82,
+   "blancs": 7,
+   "nuls": 1,
+   "exprimes": 74,
+   "candidats": [
+    {
+     "nom": "LE GALL",
+     "prenom": "Arnaud",
+     "nuance": "UG",
+     "voix": 41,
+     "pct_exprimes": 55.41,
+     "pct_inscrits": 36.28
+    },
+    {
+     "nom": "MARION",
+     "prenom": "Agnès",
+     "nuance": "RN",
+     "voix": 33,
+     "pct_exprimes": 44.59,
+     "pct_inscrits": 29.2
+    }
+   ],
+   "pct_abstention": 27.43,
+   "pct_participation": 72.57,
+   "tete": {
+    "nom": "LE GALL",
+    "prenom": "Arnaud",
+    "nuance": "UG",
+    "pct_exprimes": 55.41
+   }
+  },
+  "95690": {
+   "code_insee": "95690",
+   "nom": "Wy-dit-Joli-Village",
+   "code_circonscription": null,
+   "bureaux_de_vote": 1,
+   "inscrits": 288,
+   "abstentions": 67,
+   "votants": 221,
+   "blancs": 5,
+   "nuls": 2,
+   "exprimes": 214,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 85,
+     "pct_exprimes": 39.72,
+     "pct_inscrits": 29.51
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 82,
+     "pct_exprimes": 38.32,
+     "pct_inscrits": 28.47
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 47,
+     "pct_exprimes": 21.96,
+     "pct_inscrits": 16.32
+    }
+   ],
+   "pct_abstention": 23.26,
+   "pct_participation": 76.74,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 39.72
+   }
+  }
+ }
 }

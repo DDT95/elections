@@ -1,0 +1,383 @@
+{
+ "election": "Législatives 2024",
+ "tour": 2,
+ "date": "2024-07-07",
+ "status": "reel",
+ "note": "Agrégation réelle par circonscription, calculée à partir des résultats communaux réels de ce scrutin et du référentiel commune↔circonscription réel (Présidentielle 2022, codes officiels du Ministère de l'Intérieur). Aucune nouvelle donnée de vote n'est inventée : il s'agit d'une simple somme.",
+ "circonscriptions": {
+  "01": {
+   "nb_communes": 82,
+   "bureaux_de_vote": 134,
+   "inscrits": 84034,
+   "abstentions": 26315,
+   "votants": 57719,
+   "blancs": 1326,
+   "nuls": 340,
+   "exprimes": 56053,
+   "candidats": [
+    {
+     "nom": "SICARD",
+     "prenom": "Anne",
+     "nuance": "RN",
+     "voix": 21025,
+     "pct_exprimes": 37.51,
+     "pct_inscrits": 25.02
+    },
+    {
+     "nom": "JULES-ARTHUR",
+     "prenom": "Maximillien",
+     "nuance": "UG",
+     "voix": 20534,
+     "pct_exprimes": 36.63,
+     "pct_inscrits": 24.44
+    },
+    {
+     "nom": "CHANDLER",
+     "prenom": "Émilie",
+     "nuance": "ENS",
+     "voix": 14494,
+     "pct_exprimes": 25.86,
+     "pct_inscrits": 17.25
+    }
+   ],
+   "pct_abstention": 31.31,
+   "pct_participation": 68.69,
+   "tete": {
+    "nom": "SICARD",
+    "prenom": "Anne",
+    "nuance": "RN",
+    "pct_exprimes": 37.51
+   },
+   "nom": "1e circonscription du Val-d'Oise",
+   "code_circonscription": "01"
+  },
+  "06": {
+   "nb_communes": 8,
+   "bureaux_de_vote": 75,
+   "inscrits": 75779,
+   "abstentions": 25954,
+   "votants": 49825,
+   "blancs": 738,
+   "nuls": 223,
+   "exprimes": 48864,
+   "candidats": [
+    {
+     "nom": "CATHALA",
+     "prenom": "Gabrielle",
+     "nuance": "UG",
+     "voix": 21326,
+     "pct_exprimes": 43.64,
+     "pct_inscrits": 28.14
+    },
+    {
+     "nom": "FOLEST",
+     "prenom": "Estelle",
+     "nuance": "ENS",
+     "voix": 16149,
+     "pct_exprimes": 33.05,
+     "pct_inscrits": 21.31
+    },
+    {
+     "nom": "BRUNA",
+     "prenom": "Annika",
+     "nuance": "RN",
+     "voix": 11389,
+     "pct_exprimes": 23.31,
+     "pct_inscrits": 15.03
+    }
+   ],
+   "pct_abstention": 34.25,
+   "pct_participation": 65.75,
+   "tete": {
+    "nom": "CATHALA",
+    "prenom": "Gabrielle",
+    "nuance": "UG",
+    "pct_exprimes": 43.64
+   },
+   "nom": "6e circonscription du Val-d'Oise",
+   "code_circonscription": "06"
+  },
+  "02": {
+   "nb_communes": 20,
+   "bureaux_de_vote": 70,
+   "inscrits": 70088,
+   "abstentions": 23693,
+   "votants": 46395,
+   "blancs": 3288,
+   "nuls": 720,
+   "exprimes": 42387,
+   "candidats": [
+    {
+     "nom": "HADIZADEH",
+     "prenom": "Ayda",
+     "nuance": "UG",
+     "voix": 24259,
+     "pct_exprimes": 57.23,
+     "pct_inscrits": 34.61
+    },
+    {
+     "nom": "REMY",
+     "prenom": "Nadejda",
+     "nuance": "RN",
+     "voix": 18128,
+     "pct_exprimes": 42.77,
+     "pct_inscrits": 25.86
+    }
+   ],
+   "pct_abstention": 33.8,
+   "pct_participation": 66.2,
+   "tete": {
+    "nom": "HADIZADEH",
+    "prenom": "Ayda",
+    "nuance": "UG",
+    "pct_exprimes": 57.23
+   },
+   "nom": "2e circonscription du Val-d'Oise",
+   "code_circonscription": "02"
+  },
+  "07": {
+   "nb_communes": 12,
+   "bureaux_de_vote": 55,
+   "inscrits": 56294,
+   "abstentions": 18763,
+   "votants": 37531,
+   "blancs": 2491,
+   "nuls": 532,
+   "exprimes": 34508,
+   "candidats": [
+    {
+     "nom": "ESKENAZI",
+     "prenom": "Romain",
+     "nuance": "UG",
+     "voix": 20442,
+     "pct_exprimes": 59.24,
+     "pct_inscrits": 36.31
+    },
+    {
+     "nom": "QUENTIN",
+     "prenom": "David",
+     "nuance": "RN",
+     "voix": 14066,
+     "pct_exprimes": 40.76,
+     "pct_inscrits": 24.99
+    }
+   ],
+   "pct_abstention": 33.33,
+   "pct_participation": 66.67,
+   "tete": {
+    "nom": "ESKENAZI",
+    "prenom": "Romain",
+    "nuance": "UG",
+    "pct_exprimes": 59.24
+   },
+   "nom": "7e circonscription du Val-d'Oise",
+   "code_circonscription": "07"
+  },
+  "03": {
+   "nb_communes": 12,
+   "bureaux_de_vote": 107,
+   "inscrits": 96317,
+   "abstentions": 32432,
+   "votants": 63885,
+   "blancs": 4539,
+   "nuls": 997,
+   "exprimes": 58349,
+   "candidats": [
+    {
+     "nom": "MAUREL",
+     "prenom": "Emmanuel",
+     "nuance": "UG",
+     "voix": 36489,
+     "pct_exprimes": 62.54,
+     "pct_inscrits": 37.88
+    },
+    {
+     "nom": "LELAIDIER",
+     "prenom": "Kimberley",
+     "nuance": "RN",
+     "voix": 21860,
+     "pct_exprimes": 37.46,
+     "pct_inscrits": 22.7
+    }
+   ],
+   "pct_abstention": 33.67,
+   "pct_participation": 66.33,
+   "tete": {
+    "nom": "MAUREL",
+    "prenom": "Emmanuel",
+    "nuance": "UG",
+    "pct_exprimes": 62.54
+   },
+   "nom": "3e circonscription du Val-d'Oise",
+   "code_circonscription": "03"
+  },
+  "09": {
+   "nb_communes": 27,
+   "bureaux_de_vote": 89,
+   "inscrits": 71644,
+   "abstentions": 28662,
+   "votants": 42982,
+   "blancs": 2560,
+   "nuls": 740,
+   "exprimes": 39682,
+   "candidats": [
+    {
+     "nom": "LE GALL",
+     "prenom": "Arnaud",
+     "nuance": "UG",
+     "voix": 23918,
+     "pct_exprimes": 60.27,
+     "pct_inscrits": 33.38
+    },
+    {
+     "nom": "MARION",
+     "prenom": "Agnès",
+     "nuance": "RN",
+     "voix": 15764,
+     "pct_exprimes": 39.73,
+     "pct_inscrits": 22.0
+    }
+   ],
+   "pct_abstention": 40.01,
+   "pct_participation": 59.99,
+   "tete": {
+    "nom": "LE GALL",
+    "prenom": "Arnaud",
+    "nuance": "UG",
+    "pct_exprimes": 60.27
+   },
+   "nom": "9e circonscription du Val-d'Oise",
+   "code_circonscription": "09"
+  },
+  "10": {
+   "nb_communes": 9,
+   "bureaux_de_vote": 83,
+   "inscrits": 75514,
+   "abstentions": 27173,
+   "votants": 48341,
+   "blancs": 3868,
+   "nuls": 669,
+   "exprimes": 43804,
+   "candidats": [
+    {
+     "nom": "TACHÉ",
+     "prenom": "Aurélien",
+     "nuance": "UG",
+     "voix": 26852,
+     "pct_exprimes": 61.3,
+     "pct_inscrits": 35.56
+    },
+    {
+     "nom": "MACÉ",
+     "prenom": "Lisbeth",
+     "nuance": "RN",
+     "voix": 11716,
+     "pct_exprimes": 26.75,
+     "pct_inscrits": 15.52
+    },
+    {
+     "nom": "HADIZADEH",
+     "prenom": "Ayda",
+     "nuance": "UG",
+     "voix": 4083,
+     "pct_exprimes": 9.32,
+     "pct_inscrits": 5.41
+    },
+    {
+     "nom": "REMY",
+     "prenom": "Nadejda",
+     "nuance": "RN",
+     "voix": 1153,
+     "pct_exprimes": 2.63,
+     "pct_inscrits": 1.53
+    }
+   ],
+   "pct_abstention": 35.98,
+   "pct_participation": 64.02,
+   "tete": {
+    "nom": "TACHÉ",
+    "prenom": "Aurélien",
+    "nuance": "UG",
+    "pct_exprimes": 61.3
+   },
+   "nom": "10e circonscription du Val-d'Oise",
+   "code_circonscription": "10"
+  },
+  "04": {
+   "nb_communes": 6,
+   "bureaux_de_vote": 75,
+   "inscrits": 76259,
+   "abstentions": 27751,
+   "votants": 48508,
+   "blancs": 2780,
+   "nuls": 880,
+   "exprimes": 44848,
+   "candidats": [
+    {
+     "nom": "MOUTCHOU",
+     "prenom": "Naïma",
+     "nuance": "ENS",
+     "voix": 24840,
+     "pct_exprimes": 55.39,
+     "pct_inscrits": 32.57
+    },
+    {
+     "nom": "LACOUTURE",
+     "prenom": "Karine",
+     "nuance": "UG",
+     "voix": 20008,
+     "pct_exprimes": 44.61,
+     "pct_inscrits": 26.24
+    }
+   ],
+   "pct_abstention": 36.39,
+   "pct_participation": 63.61,
+   "tete": {
+    "nom": "MOUTCHOU",
+    "prenom": "Naïma",
+    "nuance": "ENS",
+    "pct_exprimes": 55.39
+   },
+   "nom": "4e circonscription du Val-d'Oise",
+   "code_circonscription": "04"
+  },
+  "08": {
+   "nb_communes": 1,
+   "bureaux_de_vote": 15,
+   "inscrits": 12284,
+   "abstentions": 5737,
+   "votants": 6547,
+   "blancs": 183,
+   "nuls": 71,
+   "exprimes": 6293,
+   "candidats": [
+    {
+     "nom": "ESKENAZI",
+     "prenom": "Romain",
+     "nuance": "UG",
+     "voix": 4271,
+     "pct_exprimes": 67.87,
+     "pct_inscrits": 34.77
+    },
+    {
+     "nom": "QUENTIN",
+     "prenom": "David",
+     "nuance": "RN",
+     "voix": 2022,
+     "pct_exprimes": 32.13,
+     "pct_inscrits": 16.46
+    }
+   ],
+   "pct_abstention": 46.7,
+   "pct_participation": 53.3,
+   "tete": {
+    "nom": "ESKENAZI",
+    "prenom": "Romain",
+    "nuance": "UG",
+    "pct_exprimes": 67.87
+   },
+   "nom": "8e circonscription du Val-d'Oise",
+   "code_circonscription": "08"
+  }
+ }
+}

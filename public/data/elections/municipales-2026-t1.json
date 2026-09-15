@@ -1,0 +1,8511 @@
+{
+ "election": "Municipales 2026",
+ "tour": 1,
+ "date": "2026-03-15",
+ "status": "reel",
+ "note": "Résultats réels par bureau de vote des élections municipales 2026 (1er tour, scrutin du 15 mars 2026), export officiel DGRC (Ministère de l'Intérieur) fourni par l'utilisateur. Format large avec listes détectées dynamiquement par bloc de colonnes répétées (jusqu'à 13 listes par bureau selon les communes). Les champs 'Sièges au CM' (conseil municipal) et 'Sièges au CC' (conseil communautaire) sont repris tels que fournis par cette source ; le champ 'Elu' n'est, dans ce fichier au grain bureau de vote, pas renseigné par la source elle-même (probablement calculé uniquement au niveau commune dans les publications officielles), il est donc conservé tel quel (vide) plutôt qu'estimé. Seul un fichier de résultats a été fourni pour ce scrutin — s'il existe un second tour pour certaines communes du Val-d'Oise, ses données ne sont pas encore intégrées ici.",
+ "communes": {
+  "95002": {
+   "bureaux_de_vote": 2,
+   "inscrits": 712,
+   "abstentions": 284,
+   "votants": 428,
+   "blancs": 10,
+   "nuls": 7,
+   "exprimes": 411,
+   "nom": "Ableiges",
+   "code_insee": "95002",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "Bien vivre dans notre commune : Ableiges et la Villeneuve-Saint-Martin\"",
+     "liste_complete": "\"Bien vivre dans notre commune : Ableiges et la Villeneuve-Saint-Martin\"",
+     "voix": 411,
+     "sieges_cm": 15,
+     "sieges_cc": 2,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 57.72
+    }
+   ],
+   "pct_abstention": 39.89,
+   "pct_participation": 60.11,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95008": {
+   "bureaux_de_vote": 1,
+   "inscrits": 552,
+   "abstentions": 175,
+   "votants": 377,
+   "blancs": 6,
+   "nuls": 3,
+   "exprimes": 368,
+   "nom": "Aincourt",
+   "code_insee": "95008",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "NOTRE VILLAGE,NOTRE AVENIR",
+     "liste_complete": "NOTRE  VILLAGE, NOTRE AVENIR",
+     "voix": 218,
+     "sieges_cm": 12,
+     "sieges_cc": null,
+     "pct_exprimes": 59.24,
+     "pct_inscrits": 39.49
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "AINCOURT AVEC VOUS",
+     "liste_complete": "AINCOURT AVEC VOUS",
+     "voix": 150,
+     "sieges_cm": 3,
+     "sieges_cc": null,
+     "pct_exprimes": 40.76,
+     "pct_inscrits": 27.17
+    }
+   ],
+   "pct_abstention": 31.7,
+   "pct_participation": 68.3,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 59.24
+   }
+  },
+  "95011": {
+   "bureaux_de_vote": 1,
+   "inscrits": 289,
+   "abstentions": 134,
+   "votants": 155,
+   "blancs": 9,
+   "nuls": 13,
+   "exprimes": 133,
+   "nom": "Ambleville",
+   "code_insee": "95011",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "ENSEMBLE POUR AMBLEVILLE",
+     "liste_complete": "ENSEMBLE POUR AMBLEVILLE",
+     "voix": 133,
+     "sieges_cm": 11,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 46.02
+    }
+   ],
+   "pct_abstention": 46.37,
+   "pct_participation": 53.63,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95012": {
+   "bureaux_de_vote": 1,
+   "inscrits": 147,
+   "abstentions": 61,
+   "votants": 86,
+   "blancs": 1,
+   "nuls": 2,
+   "exprimes": 83,
+   "nom": "Amenucourt",
+   "code_insee": "95012",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "AMENUCOURT AVENIR",
+     "liste_complete": "AMENUCOURT AVENIR",
+     "voix": 83,
+     "sieges_cm": 11,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 56.46
+    }
+   ],
+   "pct_abstention": 41.5,
+   "pct_participation": 58.5,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95014": {
+   "bureaux_de_vote": 2,
+   "inscrits": 1508,
+   "abstentions": 869,
+   "votants": 639,
+   "blancs": 37,
+   "nuls": 49,
+   "exprimes": 553,
+   "nom": "Andilly",
+   "code_insee": "95014",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "VIVRE ANDILLY",
+     "liste_complete": "VIVRE ANDILLY",
+     "voix": 553,
+     "sieges_cm": 23,
+     "sieges_cc": 1,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 36.67
+    }
+   ],
+   "pct_abstention": 57.63,
+   "pct_participation": 42.37,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95018": {
+   "bureaux_de_vote": 50,
+   "inscrits": 55707,
+   "abstentions": 32032,
+   "votants": 23675,
+   "blancs": 334,
+   "nuls": 213,
+   "exprimes": 23128,
+   "nom": "Argenteuil",
+   "code_insee": "95018",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "ARGENTEUIL TOUJOURS PLUS GRAND",
+     "liste_complete": "ARGENTEUIL TOUJOURS PLUS GRAND",
+     "voix": 8735,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 37.77,
+     "pct_inscrits": 15.68
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LFI",
+     "liste": "Nous, les Argenteuillais.es",
+     "liste_complete": "Nous, les Argenteuillais.es",
+     "voix": 6137,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 26.53,
+     "pct_inscrits": 11.02
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVG",
+     "liste": "DONNONS UN AVENIR À ARGENTEUIL",
+     "liste_complete": "DONNONS UN AVENIR À ARGENTEUIL",
+     "voix": 3006,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 13.0,
+     "pct_inscrits": 5.4
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LUG",
+     "liste": "Argenteuil La Gauche Rassemblée",
+     "liste_complete": "Argenteuil La Gauche Rassemblée",
+     "voix": 2900,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 12.54,
+     "pct_inscrits": 5.21
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "Ensemble, rassemblés pour Argenteuil",
+     "liste_complete": "Ensemble, rassemblés pour Argenteuil",
+     "voix": 1428,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 6.17,
+     "pct_inscrits": 2.56
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "ARGENTEUIL NOTRE VILLE NOTRE AVENIR",
+     "liste_complete": "ARGENTEUIL NOTRE VILLE NOTRE AVENIR",
+     "voix": 532,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 2.3,
+     "pct_inscrits": 0.95
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LEXG",
+     "liste": "Lutte ouvrière - Le camp des travailleurs",
+     "liste_complete": "Lutte ouvrière - Le camp des travailleurs",
+     "voix": 390,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 1.69,
+     "pct_inscrits": 0.7
+    }
+   ],
+   "pct_abstention": 57.5,
+   "pct_participation": 42.5,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVD",
+    "pct_exprimes": 37.77
+   }
+  },
+  "95019": {
+   "bureaux_de_vote": 7,
+   "inscrits": 8036,
+   "abstentions": 4069,
+   "votants": 3967,
+   "blancs": 38,
+   "nuls": 44,
+   "exprimes": 3885,
+   "nom": "Arnouville",
+   "code_insee": "95019",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "RÉUSSIR ARNOUVILLE",
+     "liste_complete": "RÉUSSIR ARNOUVILLE",
+     "voix": 2395,
+     "sieges_cm": 27,
+     "sieges_cc": 3,
+     "pct_exprimes": 61.65,
+     "pct_inscrits": 29.8
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LFI",
+     "liste": "POUR QUE VIVE ARNOUVILLE",
+     "liste_complete": "POUR QUE VIVE ARNOUVILLE",
+     "voix": 784,
+     "sieges_cm": 3,
+     "sieges_cc": 0,
+     "pct_exprimes": 20.18,
+     "pct_inscrits": 9.76
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVG",
+     "liste": "FAIRE ARNOUVILLE ENSEMBLE",
+     "liste_complete": "FAIRE ARNOUVILLE ENSEMBLE",
+     "voix": 706,
+     "sieges_cm": 3,
+     "sieges_cc": 0,
+     "pct_exprimes": 18.17,
+     "pct_inscrits": 8.79
+    }
+   ],
+   "pct_abstention": 50.63,
+   "pct_participation": 49.37,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVD",
+    "pct_exprimes": 61.65
+   }
+  },
+  "95023": {
+   "bureaux_de_vote": 1,
+   "inscrits": 483,
+   "abstentions": 230,
+   "votants": 253,
+   "blancs": 11,
+   "nuls": 16,
+   "exprimes": 226,
+   "nom": "Arronville",
+   "code_insee": "95023",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "ARRONVILLE ESPRIT VILLAGE",
+     "liste_complete": "ARRONVILLE ESPRIT VILLAGE",
+     "voix": 226,
+     "sieges_cm": 15,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 46.79
+    }
+   ],
+   "pct_abstention": 47.62,
+   "pct_participation": 52.38,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95024": {
+   "bureaux_de_vote": 1,
+   "inscrits": 180,
+   "abstentions": 78,
+   "votants": 102,
+   "blancs": 5,
+   "nuls": 14,
+   "exprimes": 83,
+   "nom": "Arthies",
+   "code_insee": "95024",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "ENSEMBLE POUR ARTHIES",
+     "liste_complete": "ENSEMBLE POUR ARTHIES",
+     "voix": 83,
+     "sieges_cm": 11,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 46.11
+    }
+   ],
+   "pct_abstention": 43.33,
+   "pct_participation": 56.67,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95026": {
+   "bureaux_de_vote": 3,
+   "inscrits": 2191,
+   "abstentions": 843,
+   "votants": 1348,
+   "blancs": 18,
+   "nuls": 12,
+   "exprimes": 1318,
+   "nom": "Asnières-sur-Oise",
+   "code_insee": "95026",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "BIEN VIVRE, ENSEMBLE",
+     "liste_complete": "BIEN VIVRE, ENSEMBLE",
+     "voix": 824,
+     "sieges_cm": 19,
+     "sieges_cc": 2,
+     "pct_exprimes": 62.52,
+     "pct_inscrits": 37.61
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "UNIS POUR ASNIÈRES",
+     "liste_complete": "UNIS POUR ASNIÈRES",
+     "voix": 494,
+     "sieges_cm": 4,
+     "sieges_cc": 1,
+     "pct_exprimes": 37.48,
+     "pct_inscrits": 22.55
+    }
+   ],
+   "pct_abstention": 38.48,
+   "pct_participation": 61.52,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 62.52
+   }
+  },
+  "95028": {
+   "bureaux_de_vote": 1,
+   "inscrits": 1259,
+   "abstentions": 458,
+   "votants": 801,
+   "blancs": 12,
+   "nuls": 6,
+   "exprimes": 783,
+   "nom": "Attainville",
+   "code_insee": "95028",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "ATTAINVILLE NOTRE VILLAGE",
+     "liste_complete": "ATTAINVILLE NOTRE VILLAGE",
+     "voix": 518,
+     "sieges_cm": 16,
+     "sieges_cc": 1,
+     "pct_exprimes": 66.16,
+     "pct_inscrits": 41.14
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "ENSEMBLE POUR UN VILLAGE VIVANT ET SOLIDAIRE",
+     "liste_complete": "ENSEMBLE POUR UN VILLAGE VIVANT ET SOLIDAIRE",
+     "voix": 265,
+     "sieges_cm": 3,
+     "sieges_cc": 0,
+     "pct_exprimes": 33.84,
+     "pct_inscrits": 21.05
+    }
+   ],
+   "pct_abstention": 36.38,
+   "pct_participation": 63.62,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 66.16
+   }
+  },
+  "95039": {
+   "bureaux_de_vote": 6,
+   "inscrits": 5435,
+   "abstentions": 1981,
+   "votants": 3454,
+   "blancs": 44,
+   "nuls": 21,
+   "exprimes": 3389,
+   "nom": "Auvers-sur-Oise",
+   "code_insee": "95039",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "Tous Unis pour Auvers",
+     "liste_complete": "Tous Unis pour Auvers",
+     "voix": 2226,
+     "sieges_cm": 25,
+     "sieges_cc": 9,
+     "pct_exprimes": 65.68,
+     "pct_inscrits": 40.96
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDIV",
+     "liste": "UN ELAN POUR AUVERS",
+     "liste_complete": "UN ELAN POUR AUVERS",
+     "voix": 587,
+     "sieges_cm": 2,
+     "sieges_cc": 1,
+     "pct_exprimes": 17.32,
+     "pct_inscrits": 10.8
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVG",
+     "liste": "AUVERS ENSEMBLE ET AUTREMENT",
+     "liste_complete": "AUVERS ENSEMBLE ET AUTREMENT",
+     "voix": 576,
+     "sieges_cm": 2,
+     "sieges_cc": 1,
+     "pct_exprimes": 17.0,
+     "pct_inscrits": 10.6
+    }
+   ],
+   "pct_abstention": 36.45,
+   "pct_participation": 63.55,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVD",
+    "pct_exprimes": 65.68
+   }
+  },
+  "95040": {
+   "bureaux_de_vote": 1,
+   "inscrits": 716,
+   "abstentions": 166,
+   "votants": 550,
+   "blancs": 8,
+   "nuls": 1,
+   "exprimes": 541,
+   "nom": "Avernes",
+   "code_insee": "95040",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "CONSTRUISONS DEMAIN",
+     "liste_complete": "CONSTRUISONS DEMAIN",
+     "voix": 316,
+     "sieges_cm": 15,
+     "sieges_cc": null,
+     "pct_exprimes": 58.41,
+     "pct_inscrits": 44.13
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "BIEN VIVRE ENSEMBLE AVERNES",
+     "liste_complete": "BIEN VIVRE ENSEMBLE AVERNES",
+     "voix": 225,
+     "sieges_cm": 4,
+     "sieges_cc": null,
+     "pct_exprimes": 41.59,
+     "pct_inscrits": 31.42
+    }
+   ],
+   "pct_abstention": 23.18,
+   "pct_participation": 76.82,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 58.41
+   }
+  },
+  "95042": {
+   "bureaux_de_vote": 1,
+   "inscrits": 1536,
+   "abstentions": 629,
+   "votants": 907,
+   "blancs": 18,
+   "nuls": 3,
+   "exprimes": 886,
+   "nom": "Baillet-en-France",
+   "code_insee": "95042",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "BAILLET EN FRANCE : CAP SUR L'AVENIR !",
+     "liste_complete": "BAILLET EN FRANCE : CAP SUR L'AVENIR !",
+     "voix": 603,
+     "sieges_cm": 16,
+     "sieges_cc": 2,
+     "pct_exprimes": 68.06,
+     "pct_inscrits": 39.26
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "BAILLET-EN-FRANCE, C'EST AVEC VOUS !",
+     "liste_complete": "BAILLET-EN-FRANCE, C'EST AVEC VOUS !",
+     "voix": 283,
+     "sieges_cm": 3,
+     "sieges_cc": 0,
+     "pct_exprimes": 31.94,
+     "pct_inscrits": 18.42
+    }
+   ],
+   "pct_abstention": 40.95,
+   "pct_participation": 59.05,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 68.06
+   }
+  },
+  "95046": {
+   "bureaux_de_vote": 1,
+   "inscrits": 114,
+   "abstentions": 49,
+   "votants": 65,
+   "blancs": 10,
+   "nuls": 0,
+   "exprimes": 55,
+   "nom": "Banthelu",
+   "code_insee": "95046",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "BANTHELU AVENIR ET TRADITIONS",
+     "liste_complete": "BANTHELU AVENIR ET TRADITIONS",
+     "voix": 55,
+     "sieges_cm": 11,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 48.25
+    }
+   ],
+   "pct_abstention": 42.98,
+   "pct_participation": 57.02,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95051": {
+   "bureaux_de_vote": 8,
+   "inscrits": 6408,
+   "abstentions": 2973,
+   "votants": 3435,
+   "blancs": 96,
+   "nuls": 56,
+   "exprimes": 3283,
+   "nom": "Beauchamp",
+   "code_insee": "95051",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "Agir Ensemble Pour Beauchamp",
+     "liste_complete": "Agir Ensemble Pour Beauchamp",
+     "voix": 2420,
+     "sieges_cm": 26,
+     "sieges_cc": 3,
+     "pct_exprimes": 73.71,
+     "pct_inscrits": 37.77
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVG",
+     "liste": "BEAUCHAMP AU COEUR",
+     "liste_complete": "BEAUCHAMP AU COEUR",
+     "voix": 863,
+     "sieges_cm": 3,
+     "sieges_cc": 0,
+     "pct_exprimes": 26.29,
+     "pct_inscrits": 13.47
+    }
+   ],
+   "pct_abstention": 46.4,
+   "pct_participation": 53.6,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVD",
+    "pct_exprimes": 73.71
+   }
+  },
+  "95052": {
+   "bureaux_de_vote": 5,
+   "inscrits": 5965,
+   "abstentions": 2858,
+   "votants": 3107,
+   "blancs": 58,
+   "nuls": 43,
+   "exprimes": 3006,
+   "nom": "Beaumont-sur-Oise",
+   "code_insee": "95052",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVG",
+     "liste": "AGIR POUR BEAUMONT,AVEC VOUS",
+     "liste_complete": "AGIR POUR BEAUMONT,AVEC VOUS",
+     "voix": 1500,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 49.9,
+     "pct_inscrits": 25.15
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDIV",
+     "liste": "Beaumont en Commun",
+     "liste_complete": "Beaumont en Commun",
+     "voix": 762,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 25.35,
+     "pct_inscrits": 12.77
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDIV",
+     "liste": "UN NOUVEL ELAN POUR BEAUMONT",
+     "liste_complete": "UN NOUVEL ELAN POUR BEAUMONT",
+     "voix": 387,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 12.87,
+     "pct_inscrits": 6.49
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVG",
+     "liste": "ENSEMBLE CHANGEONS BEAUMONT",
+     "liste_complete": "ENSEMBLE CHANGEONS BEAUMONT",
+     "voix": 357,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 11.88,
+     "pct_inscrits": 5.98
+    }
+   ],
+   "pct_abstention": 47.91,
+   "pct_participation": 52.09,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVG",
+    "pct_exprimes": 49.9
+   }
+  },
+  "95054": {
+   "bureaux_de_vote": 1,
+   "inscrits": 173,
+   "abstentions": 50,
+   "votants": 123,
+   "blancs": 17,
+   "nuls": 1,
+   "exprimes": 105,
+   "nom": "Le Bellay-en-Vexin",
+   "code_insee": "95054",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "AU COEUR DU VILLAGE, POUR TOUS",
+     "liste_complete": "AU COEUR DU VILLAGE, POUR TOUS",
+     "voix": 105,
+     "sieges_cm": 11,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 60.69
+    }
+   ],
+   "pct_abstention": 28.9,
+   "pct_participation": 71.1,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95055": {
+   "bureaux_de_vote": 1,
+   "inscrits": 253,
+   "abstentions": 100,
+   "votants": 153,
+   "blancs": 7,
+   "nuls": 17,
+   "exprimes": 129,
+   "nom": "Bellefontaine",
+   "code_insee": "95055",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "BELLEFONTAINE, PROCHE DE VOUS, POUR VOUS",
+     "liste_complete": "BELLEFONTAINE, PROCHE DE VOUS, POUR VOUS",
+     "voix": 129,
+     "sieges_cm": 11,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 50.99
+    }
+   ],
+   "pct_abstention": 39.53,
+   "pct_participation": 60.47,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95056": {
+   "bureaux_de_vote": 1,
+   "inscrits": 1516,
+   "abstentions": 520,
+   "votants": 996,
+   "blancs": 10,
+   "nuls": 16,
+   "exprimes": 970,
+   "nom": "Belloy-en-France",
+   "code_insee": "95056",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "BIEN VIVRE A BELLOY",
+     "liste_complete": "BIEN VIVRE A BELLOY",
+     "voix": 576,
+     "sieges_cm": 15,
+     "sieges_cc": 2,
+     "pct_exprimes": 59.38,
+     "pct_inscrits": 37.99
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "BELLOY AUTREMENT 2026",
+     "liste_complete": "BELLOY AUTREMENT 2026",
+     "voix": 394,
+     "sieges_cm": 4,
+     "sieges_cc": 0,
+     "pct_exprimes": 40.62,
+     "pct_inscrits": 25.99
+    }
+   ],
+   "pct_abstention": 34.3,
+   "pct_participation": 65.7,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 59.38
+   }
+  },
+  "95058": {
+   "bureaux_de_vote": 2,
+   "inscrits": 1773,
+   "abstentions": 1053,
+   "votants": 720,
+   "blancs": 42,
+   "nuls": 23,
+   "exprimes": 655,
+   "nom": "Bernes-sur-Oise",
+   "code_insee": "95058",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "UNIS POUR BERNES, VILLAGE D'AVENIR",
+     "liste_complete": "UNIS POUR BERNES, VILLAGE D'AVENIR",
+     "voix": 655,
+     "sieges_cm": 23,
+     "sieges_cc": 3,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 36.94
+    }
+   ],
+   "pct_abstention": 59.39,
+   "pct_participation": 40.61,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95059": {
+   "bureaux_de_vote": 1,
+   "inscrits": 266,
+   "abstentions": 139,
+   "votants": 127,
+   "blancs": 1,
+   "nuls": 0,
+   "exprimes": 126,
+   "nom": "Berville",
+   "code_insee": "95059",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "BIEN VIVRE A BERVILLE",
+     "liste_complete": "BIEN VIVRE A BERVILLE",
+     "voix": 126,
+     "sieges_cm": 11,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 47.37
+    }
+   ],
+   "pct_abstention": 52.26,
+   "pct_participation": 47.74,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95060": {
+   "bureaux_de_vote": 6,
+   "inscrits": 5692,
+   "abstentions": 2590,
+   "votants": 3102,
+   "blancs": 62,
+   "nuls": 26,
+   "exprimes": 3014,
+   "nom": "Bessancourt",
+   "code_insee": "95060",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDIV",
+     "liste": "BESSANCOURT À COEUR",
+     "liste_complete": "BESSANCOURT À COEUR",
+     "voix": 1480,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 49.1,
+     "pct_inscrits": 26.0
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVG",
+     "liste": "DYNAMIQUE BESSANCOURT",
+     "liste_complete": "DYNAMIQUE BESSANCOURT",
+     "voix": 1134,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 37.62,
+     "pct_inscrits": 19.92
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVG",
+     "liste": "Agir pour Bessancourt 2026",
+     "liste_complete": "Agir pour Bessancourt 2026",
+     "voix": 400,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 13.27,
+     "pct_inscrits": 7.03
+    }
+   ],
+   "pct_abstention": 45.5,
+   "pct_participation": 54.5,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDIV",
+    "pct_exprimes": 49.1
+   }
+  },
+  "95061": {
+   "bureaux_de_vote": 1,
+   "inscrits": 330,
+   "abstentions": 167,
+   "votants": 163,
+   "blancs": 12,
+   "nuls": 3,
+   "exprimes": 148,
+   "nom": "Béthemont-la-Forêt",
+   "code_insee": "95061",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "ENSEMBLE POUR BETHEMONT LA FORET",
+     "liste_complete": "ENSEMBLE POUR BETHEMONT LA FORET",
+     "voix": 148,
+     "sieges_cm": 11,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 44.85
+    }
+   ],
+   "pct_abstention": 50.61,
+   "pct_participation": 49.39,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95063": {
+   "bureaux_de_vote": 17,
+   "inscrits": 17801,
+   "abstentions": 10251,
+   "votants": 7550,
+   "blancs": 225,
+   "nuls": 83,
+   "exprimes": 7242,
+   "nom": "Bezons",
+   "code_insee": "95063",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LSOC",
+     "liste": "BEZONS VILLE D'AVENIR",
+     "liste_complete": "BEZONS VILLE D'AVENIR",
+     "voix": 3122,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 43.11,
+     "pct_inscrits": 17.54
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LFI",
+     "liste": "Bezons Citoyenne et Insoumise",
+     "liste_complete": "Bezons Citoyenne et Insoumise",
+     "voix": 1226,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 16.93,
+     "pct_inscrits": 6.89
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVG",
+     "liste": "ENSEMBLE POUR L'AVENIR DE BEZONS",
+     "liste_complete": "ENSEMBLE POUR L'AVENIR DE BEZONS",
+     "voix": 1060,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 14.64,
+     "pct_inscrits": 5.95
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDIV",
+     "liste": "UNIS POUR BEZONS",
+     "liste_complete": "UNIS POUR BEZONS",
+     "voix": 835,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 11.53,
+     "pct_inscrits": 4.69
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDIV",
+     "liste": "RASSEMBLEMENT BEZONNAIS",
+     "liste_complete": "RASSEMBLEMENT BEZONNAIS",
+     "voix": 441,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 6.09,
+     "pct_inscrits": 2.48
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDIV",
+     "liste": "Pascal Delmont Un Nouvel Élan Citoyen Pour Bezons",
+     "liste_complete": "Pascal Delmont Un Nouvel Élan Citoyen Pour Bezons",
+     "voix": 366,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 5.05,
+     "pct_inscrits": 2.06
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LEXG",
+     "liste": "Lutte ouvrière - Le camp des travailleurs",
+     "liste_complete": "Lutte ouvrière - Le camp des travailleurs",
+     "voix": 192,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 2.65,
+     "pct_inscrits": 1.08
+    }
+   ],
+   "pct_abstention": 57.59,
+   "pct_participation": 42.41,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LSOC",
+    "pct_exprimes": 43.11
+   }
+  },
+  "95074": {
+   "bureaux_de_vote": 1,
+   "inscrits": 670,
+   "abstentions": 222,
+   "votants": 448,
+   "blancs": 5,
+   "nuls": 4,
+   "exprimes": 439,
+   "nom": "Boisemont",
+   "code_insee": "95074",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "VIVONS BOISEMONT",
+     "liste_complete": "VIVONS BOISEMONT",
+     "voix": 269,
+     "sieges_cm": 12,
+     "sieges_cc": null,
+     "pct_exprimes": 61.28,
+     "pct_inscrits": 40.15
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "AGIR POUR BOISEMONT",
+     "liste_complete": "AGIR POUR BOISEMONT",
+     "voix": 170,
+     "sieges_cm": 3,
+     "sieges_cc": null,
+     "pct_exprimes": 38.72,
+     "pct_inscrits": 25.37
+    }
+   ],
+   "pct_abstention": 33.13,
+   "pct_participation": 66.87,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 61.28
+   }
+  },
+  "95078": {
+   "bureaux_de_vote": 1,
+   "inscrits": 1408,
+   "abstentions": 760,
+   "votants": 648,
+   "blancs": 51,
+   "nuls": 16,
+   "exprimes": 581,
+   "nom": "Boissy-l'Aillerie",
+   "code_insee": "95078",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "AGIR POUR BOISSY-L'AILLERIE",
+     "liste_complete": "AGIR POUR BOISSY-L'AILLERIE",
+     "voix": 581,
+     "sieges_cm": 19,
+     "sieges_cc": 4,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 41.26
+    }
+   ],
+   "pct_abstention": 53.98,
+   "pct_participation": 46.02,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95088": {
+   "bureaux_de_vote": 1,
+   "inscrits": 592,
+   "abstentions": 258,
+   "votants": 334,
+   "blancs": 7,
+   "nuls": 17,
+   "exprimes": 310,
+   "nom": "Bonneuil-en-France",
+   "code_insee": "95088",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "VIVRE ET AGIR ENSEMBLE",
+     "liste_complete": "VIVRE ET AGIR ENSEMBLE",
+     "voix": 310,
+     "sieges_cm": 15,
+     "sieges_cc": 1,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 52.36
+    }
+   ],
+   "pct_abstention": 43.58,
+   "pct_participation": 56.42,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95091": {
+   "bureaux_de_vote": 5,
+   "inscrits": 4354,
+   "abstentions": 2020,
+   "votants": 2334,
+   "blancs": 48,
+   "nuls": 16,
+   "exprimes": 2270,
+   "nom": "Bouffémont",
+   "code_insee": "95091",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDIV",
+     "liste": "BOUFFEMONT AUTREMENT",
+     "liste_complete": "BOUFFEMONT AUTREMENT",
+     "voix": 1152,
+     "sieges_cm": 22,
+     "sieges_cc": 2,
+     "pct_exprimes": 50.75,
+     "pct_inscrits": 26.46
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVG",
+     "liste": "UNION POUR LA DÉMOCRATIE COMMUNALE",
+     "liste_complete": "UNION POUR LA DÉMOCRATIE COMMUNALE",
+     "voix": 594,
+     "sieges_cm": 4,
+     "sieges_cc": 0,
+     "pct_exprimes": 26.17,
+     "pct_inscrits": 13.64
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVG",
+     "liste": "BOUFFEMONT , C'EST VOUS !",
+     "liste_complete": "BOUFFEMONT , C'EST VOUS !",
+     "voix": 524,
+     "sieges_cm": 3,
+     "sieges_cc": 0,
+     "pct_exprimes": 23.08,
+     "pct_inscrits": 12.03
+    }
+   ],
+   "pct_abstention": 46.39,
+   "pct_participation": 53.61,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDIV",
+    "pct_exprimes": 50.75
+   }
+  },
+  "95094": {
+   "bureaux_de_vote": 1,
+   "inscrits": 207,
+   "abstentions": 120,
+   "votants": 87,
+   "blancs": 2,
+   "nuls": 5,
+   "exprimes": 80,
+   "nom": "Bouqueval",
+   "code_insee": "95094",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "BOUQUEVAL AVEC PASSION",
+     "liste_complete": "BOUQUEVAL AVEC PASSION",
+     "voix": 80,
+     "sieges_cm": 11,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 38.65
+    }
+   ],
+   "pct_abstention": 57.97,
+   "pct_participation": 42.03,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95101": {
+   "bureaux_de_vote": 1,
+   "inscrits": 584,
+   "abstentions": 302,
+   "votants": 282,
+   "blancs": 13,
+   "nuls": 15,
+   "exprimes": 254,
+   "nom": "Bray-et-Lû",
+   "code_insee": "95101",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "ENSEMBLE POUR BRAY ET LU",
+     "liste_complete": "ENSEMBLE POUR BRAY ET LU",
+     "voix": 254,
+     "sieges_cm": 15,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 43.49
+    }
+   ],
+   "pct_abstention": 51.71,
+   "pct_participation": 48.29,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95102": {
+   "bureaux_de_vote": 1,
+   "inscrits": 318,
+   "abstentions": 124,
+   "votants": 194,
+   "blancs": 2,
+   "nuls": 7,
+   "exprimes": 185,
+   "nom": "Bréançon",
+   "code_insee": "95102",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "BRÉANÇON 2026",
+     "liste_complete": "BRÉANÇON 2026",
+     "voix": 185,
+     "sieges_cm": 11,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 58.18
+    }
+   ],
+   "pct_abstention": 38.99,
+   "pct_participation": 61.01,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95110": {
+   "bureaux_de_vote": 1,
+   "inscrits": 202,
+   "abstentions": 80,
+   "votants": 122,
+   "blancs": 5,
+   "nuls": 4,
+   "exprimes": 113,
+   "nom": "Brignancourt",
+   "code_insee": "95110",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "BRIGNANCOURT A VENIR",
+     "liste_complete": "BRIGNANCOURT A VENIR",
+     "voix": 113,
+     "sieges_cm": 11,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 55.94
+    }
+   ],
+   "pct_abstention": 39.6,
+   "pct_participation": 60.4,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95116": {
+   "bureaux_de_vote": 3,
+   "inscrits": 3045,
+   "abstentions": 2039,
+   "votants": 1006,
+   "blancs": 86,
+   "nuls": 37,
+   "exprimes": 883,
+   "nom": "Bruyères-sur-Oise",
+   "code_insee": "95116",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVG",
+     "liste": "AVENIR ENSEMBLE",
+     "liste_complete": "AVENIR ENSEMBLE",
+     "voix": 883,
+     "sieges_cm": 27,
+     "sieges_cc": 5,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 29.0
+    }
+   ],
+   "pct_abstention": 66.96,
+   "pct_participation": 33.04,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVG",
+    "pct_exprimes": 100.0
+   }
+  },
+  "95119": {
+   "bureaux_de_vote": 1,
+   "inscrits": 204,
+   "abstentions": 97,
+   "votants": 107,
+   "blancs": 7,
+   "nuls": 6,
+   "exprimes": 94,
+   "nom": "Buhy",
+   "code_insee": "95119",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "LISTE DE DEFENSE DES INTERETS COMMUNAUX",
+     "liste_complete": "LISTE DE DEFENSE DES INTERETS COMMUNAUX",
+     "voix": 94,
+     "sieges_cm": 11,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 46.08
+    }
+   ],
+   "pct_abstention": 47.55,
+   "pct_participation": 52.45,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95120": {
+   "bureaux_de_vote": 2,
+   "inscrits": 1712,
+   "abstentions": 624,
+   "votants": 1088,
+   "blancs": 12,
+   "nuls": 5,
+   "exprimes": 1071,
+   "nom": "Butry-sur-Oise",
+   "code_insee": "95120",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "TOUS POUR BUTRY",
+     "liste_complete": "TOUS POUR BUTRY",
+     "voix": 390,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 36.41,
+     "pct_inscrits": 22.78
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "BUTRY ENSEMBLE AUTREMENT",
+     "liste_complete": "BUTRY ENSEMBLE AUTREMENT",
+     "voix": 353,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 32.96,
+     "pct_inscrits": 20.62
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "BUTRY DEMAIN",
+     "liste_complete": "BUTRY DEMAIN",
+     "voix": 328,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 30.63,
+     "pct_inscrits": 19.16
+    }
+   ],
+   "pct_abstention": 36.45,
+   "pct_participation": 63.55,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 36.41
+   }
+  },
+  "95127": {
+   "bureaux_de_vote": 35,
+   "inscrits": 32193,
+   "abstentions": 18549,
+   "votants": 13644,
+   "blancs": 208,
+   "nuls": 108,
+   "exprimes": 13328,
+   "nom": "Cergy",
+   "code_insee": "95127",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LUG",
+     "liste": "CERGY C'EST NOUS",
+     "liste_complete": "CERGY C'EST NOUS",
+     "voix": 4903,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 36.79,
+     "pct_inscrits": 15.23
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "CERGY UNIE",
+     "liste_complete": "CERGY UNIE",
+     "voix": 4411,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 33.1,
+     "pct_inscrits": 13.7
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LFI",
+     "liste": "CERGY EN COMMUN",
+     "liste_complete": "CERGY EN COMMUN",
+     "voix": 3614,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 27.12,
+     "pct_inscrits": 11.23
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LEXG",
+     "liste": "LUTTE OUVRIERE - LE CAMP DES TRAVAILLEURS",
+     "liste_complete": "LUTTE OUVRIERE - LE CAMP DES TRAVAILLEURS",
+     "voix": 238,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 1.79,
+     "pct_inscrits": 0.74
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LEXG",
+     "liste": "100 % PUBLIC SOUTENUE PAR LE PARTI DES TRAVAILLEURS",
+     "liste_complete": "100 % PUBLIC SOUTENUE PAR LE PARTI DES TRAVAILLEURS",
+     "voix": 162,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 1.22,
+     "pct_inscrits": 0.5
+    }
+   ],
+   "pct_abstention": 57.62,
+   "pct_participation": 42.38,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LUG",
+    "pct_exprimes": 36.79
+   }
+  },
+  "95134": {
+   "bureaux_de_vote": 4,
+   "inscrits": 3781,
+   "abstentions": 1719,
+   "votants": 2062,
+   "blancs": 46,
+   "nuls": 35,
+   "exprimes": 1981,
+   "nom": "Champagne-sur-Oise",
+   "code_insee": "95134",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "FAIRE VIVRE CHAMPAGNE",
+     "liste_complete": "FAIRE VIVRE CHAMPAGNE",
+     "voix": 1467,
+     "sieges_cm": 26,
+     "sieges_cc": 5,
+     "pct_exprimes": 74.05,
+     "pct_inscrits": 38.8
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "CHAMPAGNE, UNIS POUR L'AVENIR",
+     "liste_complete": "CHAMPAGNE, UNIS POUR L'AVENIR",
+     "voix": 514,
+     "sieges_cm": 3,
+     "sieges_cc": 0,
+     "pct_exprimes": 25.95,
+     "pct_inscrits": 13.59
+    }
+   ],
+   "pct_abstention": 45.46,
+   "pct_participation": 54.54,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVD",
+    "pct_exprimes": 74.05
+   }
+  },
+  "95139": {
+   "bureaux_de_vote": 1,
+   "inscrits": 231,
+   "abstentions": 93,
+   "votants": 138,
+   "blancs": 2,
+   "nuls": 4,
+   "exprimes": 132,
+   "nom": "La Chapelle-en-Vexin",
+   "code_insee": "95139",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "Un nouvel élan pour notre village",
+     "liste_complete": "Un nouvel élan pour notre village",
+     "voix": 132,
+     "sieges_cm": 11,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 57.14
+    }
+   ],
+   "pct_abstention": 40.26,
+   "pct_participation": 59.74,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95141": {
+   "bureaux_de_vote": 1,
+   "inscrits": 31,
+   "abstentions": 13,
+   "votants": 18,
+   "blancs": 0,
+   "nuls": 0,
+   "exprimes": 18,
+   "nom": "Charmont",
+   "code_insee": "95141",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "LE VILLAGE DE CHARMONT",
+     "liste_complete": "LE VILLAGE DE CHARMONT",
+     "voix": 18,
+     "sieges_cm": 7,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 58.06
+    }
+   ],
+   "pct_abstention": 41.94,
+   "pct_participation": 58.06,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95142": {
+   "bureaux_de_vote": 1,
+   "inscrits": 1266,
+   "abstentions": 476,
+   "votants": 790,
+   "blancs": 11,
+   "nuls": 6,
+   "exprimes": 773,
+   "nom": "Chars",
+   "code_insee": "95142",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "FAISONS BATTRE LE COEUR DE CHARS",
+     "liste_complete": "FAISONS BATTRE LE COEUR DE CHARS",
+     "voix": 587,
+     "sieges_cm": 17,
+     "sieges_cc": 4,
+     "pct_exprimes": 75.94,
+     "pct_inscrits": 46.37
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "TOUS UNIS POUR CHARS",
+     "liste_complete": "TOUS UNIS POUR CHARS",
+     "voix": 186,
+     "sieges_cm": 2,
+     "sieges_cc": 0,
+     "pct_exprimes": 24.06,
+     "pct_inscrits": 14.69
+    }
+   ],
+   "pct_abstention": 37.6,
+   "pct_participation": 62.4,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 75.94
+   }
+  },
+  "95144": {
+   "bureaux_de_vote": 1,
+   "inscrits": 53,
+   "abstentions": 23,
+   "votants": 30,
+   "blancs": 1,
+   "nuls": 0,
+   "exprimes": 29,
+   "nom": "Châtenay-en-France",
+   "code_insee": "95144",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "DEFENSE DES INTERETS COMMUNAUX",
+     "liste_complete": "DEFENSE DES INTERETS COMMUNAUX",
+     "voix": 29,
+     "sieges_cm": 7,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 54.72
+    }
+   ],
+   "pct_abstention": 43.4,
+   "pct_participation": 56.6,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95149": {
+   "bureaux_de_vote": 2,
+   "inscrits": 2659,
+   "abstentions": 1124,
+   "votants": 1535,
+   "blancs": 36,
+   "nuls": 25,
+   "exprimes": 1474,
+   "nom": "Chaumontel",
+   "code_insee": "95149",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "CONTINUONS ENSEMBLE POUR CHAUMONTEL",
+     "liste_complete": "CONTINUONS ENSEMBLE POUR CHAUMONTEL",
+     "voix": 1110,
+     "sieges_cm": 21,
+     "sieges_cc": 4,
+     "pct_exprimes": 75.31,
+     "pct_inscrits": 41.75
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "CHAUMONTEL UN NOUVEAU SOUFFLE",
+     "liste_complete": "CHAUMONTEL UN NOUVEAU SOUFFLE",
+     "voix": 364,
+     "sieges_cm": 2,
+     "sieges_cc": 0,
+     "pct_exprimes": 24.69,
+     "pct_inscrits": 13.69
+    }
+   ],
+   "pct_abstention": 42.27,
+   "pct_participation": 57.73,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 75.31
+   }
+  },
+  "95150": {
+   "bureaux_de_vote": 1,
+   "inscrits": 475,
+   "abstentions": 235,
+   "votants": 240,
+   "blancs": 13,
+   "nuls": 18,
+   "exprimes": 209,
+   "nom": "Chaussy",
+   "code_insee": "95150",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "UN NOUVEL ELAN POUR CHAUSSY",
+     "liste_complete": "UN NOUVEL ELAN POUR CHAUSSY",
+     "voix": 209,
+     "sieges_cm": 15,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 44.0
+    }
+   ],
+   "pct_abstention": 49.47,
+   "pct_participation": 50.53,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95151": {
+   "bureaux_de_vote": 1,
+   "inscrits": 226,
+   "abstentions": 98,
+   "votants": 128,
+   "blancs": 5,
+   "nuls": 2,
+   "exprimes": 121,
+   "nom": "Chauvry",
+   "code_insee": "95151",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "BIEN VIVRE A CHAUVRY",
+     "liste_complete": "BIEN VIVRE A CHAUVRY",
+     "voix": 121,
+     "sieges_cm": 11,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 53.54
+    }
+   ],
+   "pct_abstention": 43.36,
+   "pct_participation": 56.64,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95154": {
+   "bureaux_de_vote": 1,
+   "inscrits": 202,
+   "abstentions": 102,
+   "votants": 100,
+   "blancs": 3,
+   "nuls": 15,
+   "exprimes": 82,
+   "nom": "Chennevières-lès-Louvres",
+   "code_insee": "95154",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "CHENNEVIÈRES-LÈS-LOUVRES",
+     "liste_complete": "CHENNEVIÈRES-LÈS-LOUVRES",
+     "voix": 82,
+     "sieges_cm": 11,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 40.59
+    }
+   ],
+   "pct_abstention": 50.5,
+   "pct_participation": 49.5,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95157": {
+   "bureaux_de_vote": 1,
+   "inscrits": 154,
+   "abstentions": 51,
+   "votants": 103,
+   "blancs": 4,
+   "nuls": 9,
+   "exprimes": 90,
+   "nom": "Chérence",
+   "code_insee": "95157",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "CONTINUONS D'AGIR POUR CHERENCE",
+     "liste_complete": "CONTINUONS D'AGIR POUR CHERENCE",
+     "voix": 90,
+     "sieges_cm": 11,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 58.44
+    }
+   ],
+   "pct_abstention": 33.12,
+   "pct_participation": 66.88,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95166": {
+   "bureaux_de_vote": 1,
+   "inscrits": 339,
+   "abstentions": 151,
+   "votants": 188,
+   "blancs": 4,
+   "nuls": 5,
+   "exprimes": 179,
+   "nom": "Cléry-en-Vexin",
+   "code_insee": "95166",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "BIEN VIVRE A CLERY EN VEXIN",
+     "liste_complete": "BIEN VIVRE A CLERY EN VEXIN",
+     "voix": 179,
+     "sieges_cm": 11,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 52.8
+    }
+   ],
+   "pct_abstention": 44.54,
+   "pct_participation": 55.46,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95169": {
+   "bureaux_de_vote": 1,
+   "inscrits": 483,
+   "abstentions": 219,
+   "votants": 264,
+   "blancs": 15,
+   "nuls": 4,
+   "exprimes": 245,
+   "nom": "Commeny",
+   "code_insee": "95169",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "Engagés pour Commeny",
+     "liste_complete": "Engagés pour Commeny",
+     "voix": 245,
+     "sieges_cm": 19,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 50.72
+    }
+   ],
+   "pct_abstention": 45.34,
+   "pct_participation": 54.66,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95170": {
+   "bureaux_de_vote": 1,
+   "inscrits": 389,
+   "abstentions": 185,
+   "votants": 204,
+   "blancs": 7,
+   "nuls": 36,
+   "exprimes": 161,
+   "nom": "Condécourt",
+   "code_insee": "95170",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "ENSEMBLE POUR NOTRE COMMUNE",
+     "liste_complete": "ENSEMBLE POUR NOTRE COMMUNE",
+     "voix": 161,
+     "sieges_cm": 15,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 41.39
+    }
+   ],
+   "pct_abstention": 47.56,
+   "pct_participation": 52.44,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95176": {
+   "bureaux_de_vote": 18,
+   "inscrits": 17931,
+   "abstentions": 8518,
+   "votants": 9413,
+   "blancs": 110,
+   "nuls": 69,
+   "exprimes": 9234,
+   "nom": "Cormeilles-en-Parisis",
+   "code_insee": "95176",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "CORMEILLES PASSIONNEMENT",
+     "liste_complete": "CORMEILLES PASSIONNEMENT",
+     "voix": 6899,
+     "sieges_cm": 31,
+     "sieges_cc": 8,
+     "pct_exprimes": 74.71,
+     "pct_inscrits": 38.48
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LUG",
+     "liste": "AGIR POUR L'AVENIR",
+     "liste_complete": "AGIR POUR L'AVENIR",
+     "voix": 1015,
+     "sieges_cm": 2,
+     "sieges_cc": 0,
+     "pct_exprimes": 10.99,
+     "pct_inscrits": 5.66
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDIV",
+     "liste": "Osons Cormeilleur",
+     "liste_complete": "Osons Cormeilleur",
+     "voix": 703,
+     "sieges_cm": 1,
+     "sieges_cc": 0,
+     "pct_exprimes": 7.61,
+     "pct_inscrits": 3.92
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "CORMEILLES -EN-PERSPECTIVE",
+     "liste_complete": "CORMEILLES-EN-PERSPECTIVE",
+     "voix": 617,
+     "sieges_cm": 1,
+     "sieges_cc": 0,
+     "pct_exprimes": 6.68,
+     "pct_inscrits": 3.44
+    }
+   ],
+   "pct_abstention": 47.5,
+   "pct_participation": 52.5,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVD",
+    "pct_exprimes": 74.71
+   }
+  },
+  "95177": {
+   "bureaux_de_vote": 1,
+   "inscrits": 951,
+   "abstentions": 505,
+   "votants": 446,
+   "blancs": 28,
+   "nuls": 17,
+   "exprimes": 401,
+   "nom": "Cormeilles-en-Vexin",
+   "code_insee": "95177",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "CORMEILLES D'ANTAN ET D'AVENIR",
+     "liste_complete": "CORMEILLES D'ANTAN ET D'AVENIR",
+     "voix": 401,
+     "sieges_cm": 15,
+     "sieges_cc": 2,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 42.17
+    }
+   ],
+   "pct_abstention": 53.1,
+   "pct_participation": 46.9,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95181": {
+   "bureaux_de_vote": 1,
+   "inscrits": 231,
+   "abstentions": 97,
+   "votants": 134,
+   "blancs": 11,
+   "nuls": 4,
+   "exprimes": 119,
+   "nom": "Courcelles-sur-Viosne",
+   "code_insee": "95181",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "ENSEMBLE POUR L'AVENIR DE COURCELLES",
+     "liste_complete": "ENSEMBLE POUR L'AVENIR DE COURCELLES",
+     "voix": 119,
+     "sieges_cm": 11,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 51.52
+    }
+   ],
+   "pct_abstention": 41.99,
+   "pct_participation": 58.01,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95183": {
+   "bureaux_de_vote": 5,
+   "inscrits": 4731,
+   "abstentions": 2266,
+   "votants": 2465,
+   "blancs": 33,
+   "nuls": 16,
+   "exprimes": 2416,
+   "nom": "Courdimanche",
+   "code_insee": "95183",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVG",
+     "liste": "COURDIMANCHE NATURELLEMENT VERS L'AVENIR",
+     "liste_complete": "COURDIMANCHE NATURELLEMENT VERS L'AVENIR",
+     "voix": 954,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 39.49,
+     "pct_inscrits": 20.16
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDIV",
+     "liste": "COURDIMANCHE CITOYENNE",
+     "liste_complete": "COURDIMANCHE CITOYENNE",
+     "voix": 876,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 36.26,
+     "pct_inscrits": 18.52
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDIV",
+     "liste": "COURDIMANCHE EN MOUVEMENT",
+     "liste_complete": "COURDIMANCHE EN MOUVEMENT",
+     "voix": 586,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 24.25,
+     "pct_inscrits": 12.39
+    }
+   ],
+   "pct_abstention": 47.9,
+   "pct_participation": 52.1,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVG",
+    "pct_exprimes": 39.49
+   }
+  },
+  "95197": {
+   "bureaux_de_vote": 16,
+   "inscrits": 14911,
+   "abstentions": 7632,
+   "votants": 7279,
+   "blancs": 138,
+   "nuls": 64,
+   "exprimes": 7077,
+   "nom": "Deuil-la-Barre",
+   "code_insee": "95197",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "VIVONS NOTRE VILLE",
+     "liste_complete": "VIVONS NOTRE VILLE",
+     "voix": 4099,
+     "sieges_cm": 28,
+     "sieges_cc": 6,
+     "pct_exprimes": 57.92,
+     "pct_inscrits": 27.49
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVG",
+     "liste": "ENSEMBLE POUR DEUIL-LA-BARRE",
+     "liste_complete": "ENSEMBLE POUR DEUIL-LA-BARRE",
+     "voix": 2978,
+     "sieges_cm": 7,
+     "sieges_cc": 1,
+     "pct_exprimes": 42.08,
+     "pct_inscrits": 19.97
+    }
+   ],
+   "pct_abstention": 51.18,
+   "pct_participation": 48.82,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVD",
+    "pct_exprimes": 57.92
+   }
+  },
+  "95199": {
+   "bureaux_de_vote": 10,
+   "inscrits": 10392,
+   "abstentions": 4756,
+   "votants": 5636,
+   "blancs": 44,
+   "nuls": 40,
+   "exprimes": 5552,
+   "nom": "Domont",
+   "code_insee": "95199",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "DOMONT VILLE DYNAMIQUE, FIÈRE DE SON HISTOIRE",
+     "liste_complete": "DOMONT VILLE DYNAMIQUE, FIÈRE DE SON HISTOIRE",
+     "voix": 2191,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 39.46,
+     "pct_inscrits": 21.08
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVG",
+     "liste": "UN NOUVEL ÉLAN POUR DOMONT",
+     "liste_complete": "UN NOUVEL ÉLAN POUR DOMONT",
+     "voix": 1257,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 22.64,
+     "pct_inscrits": 12.1
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LRN",
+     "liste": "DOMONT AVEC VOUS : DÉFENDRE AUJOURD'HUI, DESSINER DEMAIN",
+     "liste_complete": "DOMONT AVEC VOUS : DÉFENDRE AUJOURD'HUI, DESSINER DEMAIN",
+     "voix": 852,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 15.35,
+     "pct_inscrits": 8.2
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "FAIRE VIVRE DOMONT",
+     "liste_complete": "FAIRE VIVRE DOMONT",
+     "voix": 655,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 11.8,
+     "pct_inscrits": 6.3
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDIV",
+     "liste": "ENGAGÉS POUR DOMONT",
+     "liste_complete": "ENGAGÉS POUR DOMONT",
+     "voix": 597,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 10.75,
+     "pct_inscrits": 5.74
+    }
+   ],
+   "pct_abstention": 45.77,
+   "pct_participation": 54.23,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVD",
+    "pct_exprimes": 39.46
+   }
+  },
+  "95203": {
+   "bureaux_de_vote": 14,
+   "inscrits": 16445,
+   "abstentions": 7562,
+   "votants": 8883,
+   "blancs": 116,
+   "nuls": 60,
+   "exprimes": 8707,
+   "nom": "Eaubonne",
+   "code_insee": "95203",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVG",
+     "liste": "EAUBONNE NOTRE VILLE",
+     "liste_complete": "EAUBONNE NOTRE VILLE",
+     "voix": 3121,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 35.84,
+     "pct_inscrits": 18.98
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LLR",
+     "liste": "Eaubonne une ambition Renouvelée",
+     "liste_complete": "Eaubonne une ambition Renouvelée",
+     "voix": 2558,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 29.38,
+     "pct_inscrits": 15.55
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "Unis pour Eaubonne",
+     "liste_complete": "Unis pour Eaubonne",
+     "voix": 1410,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 16.19,
+     "pct_inscrits": 8.57
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDIV",
+     "liste": "Eaubonne plus près de vous ! Avec Grégory Berthault",
+     "liste_complete": "Eaubonne plus près de vous ! Avec Grégory Berthault",
+     "voix": 851,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 9.77,
+     "pct_inscrits": 5.17
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDIV",
+     "liste": "MIEUX VIVRE A EAUBONNE",
+     "liste_complete": "MIEUX VIVRE A EAUBONNE",
+     "voix": 500,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 5.74,
+     "pct_inscrits": 3.04
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LEXG",
+     "liste": "Lutte Ouvrière - Le Camp des Travailleurs",
+     "liste_complete": "Lutte Ouvrière - Le Camp des Travailleurs",
+     "voix": 267,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 3.07,
+     "pct_inscrits": 1.62
+    }
+   ],
+   "pct_abstention": 45.98,
+   "pct_participation": 54.02,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVG",
+    "pct_exprimes": 35.84
+   }
+  },
+  "95205": {
+   "bureaux_de_vote": 4,
+   "inscrits": 5028,
+   "abstentions": 2314,
+   "votants": 2714,
+   "blancs": 34,
+   "nuls": 17,
+   "exprimes": 2663,
+   "nom": "Ecouen",
+   "code_insee": "95205",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LSOC",
+     "liste": "BIEN VIVRE À ECOUEN",
+     "liste_complete": "BIEN VIVRE À ECOUEN",
+     "voix": 1208,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 45.36,
+     "pct_inscrits": 24.03
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVG",
+     "liste": "RAVIVER ECOUEN",
+     "liste_complete": "RAVIVER ECOUEN",
+     "voix": 990,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 37.18,
+     "pct_inscrits": 19.69
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDIV",
+     "liste": "POUR ECOUEN",
+     "liste_complete": "POUR ECOUEN",
+     "voix": 465,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 17.46,
+     "pct_inscrits": 9.25
+    }
+   ],
+   "pct_abstention": 46.02,
+   "pct_participation": 53.98,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LSOC",
+    "pct_exprimes": 45.36
+   }
+  },
+  "95210": {
+   "bureaux_de_vote": 9,
+   "inscrits": 7753,
+   "abstentions": 3589,
+   "votants": 4164,
+   "blancs": 52,
+   "nuls": 35,
+   "exprimes": 4077,
+   "nom": "Enghien-les-Bains",
+   "code_insee": "95210",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "OBJECTIF ENGHIEN : AUJOURD'HUI ET DEMAIN",
+     "liste_complete": "OBJECTIF ENGHIEN : AUJOURD'HUI ET DEMAIN",
+     "voix": 2775,
+     "sieges_cm": 29,
+     "sieges_cc": 4,
+     "pct_exprimes": 68.06,
+     "pct_inscrits": 35.79
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVG",
+     "liste": "NOUVELLE VAGUE",
+     "liste_complete": "NOUVELLE VAGUE",
+     "voix": 832,
+     "sieges_cm": 3,
+     "sieges_cc": 0,
+     "pct_exprimes": 20.41,
+     "pct_inscrits": 10.73
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "ENGHIEN POUR VOUS",
+     "liste_complete": "ENGHIEN POUR VOUS",
+     "voix": 336,
+     "sieges_cm": 1,
+     "sieges_cc": 0,
+     "pct_exprimes": 8.24,
+     "pct_inscrits": 4.33
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDIV",
+     "liste": "TOUT SIMPLEMENT ENGHIEN",
+     "liste_complete": "TOUT SIMPLEMENT ENGHIEN",
+     "voix": 134,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 3.29,
+     "pct_inscrits": 1.73
+    }
+   ],
+   "pct_abstention": 46.29,
+   "pct_participation": 53.71,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVD",
+    "pct_exprimes": 68.06
+   }
+  },
+  "95211": {
+   "bureaux_de_vote": 2,
+   "inscrits": 1626,
+   "abstentions": 562,
+   "votants": 1064,
+   "blancs": 6,
+   "nuls": 9,
+   "exprimes": 1049,
+   "nom": "Ennery",
+   "code_insee": "95211",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "ENGAGEMENT ET ACTION POUR ENNERY",
+     "liste_complete": "ENGAGEMENT ET ACTION POUR ENNERY",
+     "voix": 668,
+     "sieges_cm": 16,
+     "sieges_cc": 2,
+     "pct_exprimes": 63.68,
+     "pct_inscrits": 41.08
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "ENNERY DEMAIN",
+     "liste_complete": "ENNERY DEMAIN",
+     "voix": 381,
+     "sieges_cm": 3,
+     "sieges_cc": 1,
+     "pct_exprimes": 36.32,
+     "pct_inscrits": 23.43
+    }
+   ],
+   "pct_abstention": 34.56,
+   "pct_participation": 65.44,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 63.68
+   }
+  },
+  "95212": {
+   "bureaux_de_vote": 1,
+   "inscrits": 108,
+   "abstentions": 8,
+   "votants": 100,
+   "blancs": 0,
+   "nuls": 3,
+   "exprimes": 97,
+   "nom": "Epiais-lès-Louvres",
+   "code_insee": "95212",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "NOUVEAU SOUFFLE",
+     "liste_complete": "NOUVEAU SOUFFLE",
+     "voix": 50,
+     "sieges_cm": 9,
+     "sieges_cc": null,
+     "pct_exprimes": 51.55,
+     "pct_inscrits": 46.3
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "UN AVENIR À CONSTRUIRE ENSEMBLE",
+     "liste_complete": "UN AVENIR À CONSTRUIRE ENSEMBLE",
+     "voix": 47,
+     "sieges_cm": 2,
+     "sieges_cc": null,
+     "pct_exprimes": 48.45,
+     "pct_inscrits": 43.52
+    }
+   ],
+   "pct_abstention": 7.41,
+   "pct_participation": 92.59,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 51.55
+   }
+  },
+  "95213": {
+   "bureaux_de_vote": 1,
+   "inscrits": 571,
+   "abstentions": 139,
+   "votants": 432,
+   "blancs": 3,
+   "nuls": 3,
+   "exprimes": 426,
+   "nom": "Epiais-Rhus",
+   "code_insee": "95213",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "ENSEMBLE POUR EPIAIS-RHUS",
+     "liste_complete": "ENSEMBLE POUR EPIAIS-RHUS",
+     "voix": 248,
+     "sieges_cm": 13,
+     "sieges_cc": null,
+     "pct_exprimes": 58.22,
+     "pct_inscrits": 43.43
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "Epiais-Rhus, vivre et décider avec vous",
+     "liste_complete": "Epiais-Rhus, vivre et décider avec vous",
+     "voix": 133,
+     "sieges_cm": 2,
+     "sieges_cc": null,
+     "pct_exprimes": 31.22,
+     "pct_inscrits": 23.29
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "LE BIEN VIVRE A EPIAIS ET RHUS",
+     "liste_complete": "LE BIEN VIVRE A EPIAIS ET RHUS",
+     "voix": 45,
+     "sieges_cm": 0,
+     "sieges_cc": null,
+     "pct_exprimes": 10.56,
+     "pct_inscrits": 7.88
+    }
+   ],
+   "pct_abstention": 24.34,
+   "pct_participation": 75.66,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 58.22
+   }
+  },
+  "95214": {
+   "bureaux_de_vote": 1,
+   "inscrits": 32,
+   "abstentions": 13,
+   "votants": 19,
+   "blancs": 0,
+   "nuls": 0,
+   "exprimes": 19,
+   "nom": "Epinay-Champlâtreux",
+   "code_insee": "95214",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "AGIR ENSEMBLE",
+     "liste_complete": "AGIR ENSEMBLE",
+     "voix": 19,
+     "sieges_cm": 7,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 59.38
+    }
+   ],
+   "pct_abstention": 40.62,
+   "pct_participation": 59.38,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95218": {
+   "bureaux_de_vote": 10,
+   "inscrits": 11677,
+   "abstentions": 6182,
+   "votants": 5495,
+   "blancs": 74,
+   "nuls": 49,
+   "exprimes": 5372,
+   "nom": "Éragny-sur-Oise",
+   "code_insee": "95218",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "POUR ERAGNY, AVEC VOUS, CONTINUONS ENSEMBLE",
+     "liste_complete": "POUR ERAGNY, AVEC VOUS, CONTINUONS ENSEMBLE",
+     "voix": 3898,
+     "sieges_cm": 30,
+     "sieges_cc": 5,
+     "pct_exprimes": 72.56,
+     "pct_inscrits": 33.38
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LUG",
+     "liste": "VIVRE ENSEMBLE A ERAGNY",
+     "liste_complete": "VIVRE ENSEMBLE A ERAGNY",
+     "voix": 1198,
+     "sieges_cm": 3,
+     "sieges_cc": 0,
+     "pct_exprimes": 22.3,
+     "pct_inscrits": 10.26
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LEXG",
+     "liste": "ERAGNY POUR LA DEFENSE ET LE DEVELOPPEMENT DES SERVICES PUBLICS",
+     "liste_complete": "ERAGNY POUR LA DEFENSE ET LE DEVELOPPEMENT DES SERVICES PUBLICS",
+     "voix": 276,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 5.14,
+     "pct_inscrits": 2.36
+    }
+   ],
+   "pct_abstention": 52.94,
+   "pct_participation": 47.06,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVD",
+    "pct_exprimes": 72.56
+   }
+  },
+  "95219": {
+   "bureaux_de_vote": 20,
+   "inscrits": 18726,
+   "abstentions": 9430,
+   "votants": 9296,
+   "blancs": 169,
+   "nuls": 172,
+   "exprimes": 8955,
+   "nom": "Ermont",
+   "code_insee": "95219",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "Renforçons Nos Liens",
+     "liste_complete": "Renforçons Nos Liens",
+     "voix": 3965,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 44.28,
+     "pct_inscrits": 21.17
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LUG",
+     "liste": "ERMONT CITOYEN",
+     "liste_complete": "ERMONT CITOYEN",
+     "voix": 2350,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 26.24,
+     "pct_inscrits": 12.55
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "J'aime Ermont Libérons Les Energies",
+     "liste_complete": "J'aime Ermont Libérons Les Energies",
+     "voix": 1823,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 20.36,
+     "pct_inscrits": 9.74
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVG",
+     "liste": "ERMONT RENOUVEAU 2026",
+     "liste_complete": "ERMONT RENOUVEAU 2026",
+     "voix": 609,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 6.8,
+     "pct_inscrits": 3.25
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LEXG",
+     "liste": "Lutte Ouvrière - Le Camp des Travailleurs",
+     "liste_complete": "Lutte Ouvrière - Le Camp des Travailleurs",
+     "voix": 208,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 2.32,
+     "pct_inscrits": 1.11
+    }
+   ],
+   "pct_abstention": 50.36,
+   "pct_participation": 49.64,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVD",
+    "pct_exprimes": 44.28
+   }
+  },
+  "95229": {
+   "bureaux_de_vote": 6,
+   "inscrits": 6103,
+   "abstentions": 2737,
+   "votants": 3366,
+   "blancs": 49,
+   "nuls": 26,
+   "exprimes": 3291,
+   "nom": "Ezanville",
+   "code_insee": "95229",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "EZANVILLE NOTRE VILLE",
+     "liste_complete": "EZANVILLE NOTRE VILLE",
+     "voix": 2353,
+     "sieges_cm": 25,
+     "sieges_cc": 3,
+     "pct_exprimes": 71.5,
+     "pct_inscrits": 38.55
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVG",
+     "liste": "TOUS UNIS POUR EZANVILLE",
+     "liste_complete": "TOUS UNIS POUR EZANVILLE",
+     "voix": 938,
+     "sieges_cm": 4,
+     "sieges_cc": 0,
+     "pct_exprimes": 28.5,
+     "pct_inscrits": 15.37
+    }
+   ],
+   "pct_abstention": 44.85,
+   "pct_participation": 55.15,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVD",
+    "pct_exprimes": 71.5
+   }
+  },
+  "95241": {
+   "bureaux_de_vote": 1,
+   "inscrits": 1323,
+   "abstentions": 433,
+   "votants": 890,
+   "blancs": 5,
+   "nuls": 4,
+   "exprimes": 881,
+   "nom": "Fontenay-en-Parisis",
+   "code_insee": "95241",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "EXPÉRIENCE ET RENOUVEAU POUR FONTENAY EN PARISIS",
+     "liste_complete": "EXPÉRIENCE ET RENOUVEAU POUR FONTENAY EN PARISIS",
+     "voix": 278,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 31.56,
+     "pct_inscrits": 21.01
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "L'UNION POUR FONTENAY",
+     "liste_complete": "L'UNION POUR FONTENAY",
+     "voix": 267,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 30.31,
+     "pct_inscrits": 20.18
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "ENSEMBLE POUR FONTENAY EN PARISIS",
+     "liste_complete": "ENSEMBLE POUR FONTENAY EN PARISIS",
+     "voix": 170,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 19.3,
+     "pct_inscrits": 12.85
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "FONTENAY NOTRE HISTOIRE NOTRE AVENIR",
+     "liste_complete": "FONTENAY NOTRE HISTOIRE NOTRE AVENIR",
+     "voix": 166,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 18.84,
+     "pct_inscrits": 12.55
+    }
+   ],
+   "pct_abstention": 32.73,
+   "pct_participation": 67.27,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 31.56
+   }
+  },
+  "95250": {
+   "bureaux_de_vote": 7,
+   "inscrits": 6571,
+   "abstentions": 4454,
+   "votants": 2117,
+   "blancs": 238,
+   "nuls": 87,
+   "exprimes": 1792,
+   "nom": "Fosses",
+   "code_insee": "95250",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LUG",
+     "liste": "#JeVotePourFosses",
+     "liste_complete": "#JeVotePourFosses",
+     "voix": 1792,
+     "sieges_cm": 33,
+     "sieges_cc": 2,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 27.27
+    }
+   ],
+   "pct_abstention": 67.78,
+   "pct_participation": 32.22,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LUG",
+    "pct_exprimes": 100.0
+   }
+  },
+  "95252": {
+   "bureaux_de_vote": 22,
+   "inscrits": 22232,
+   "abstentions": 12122,
+   "votants": 10110,
+   "blancs": 197,
+   "nuls": 84,
+   "exprimes": 9829,
+   "nom": "Franconville",
+   "code_insee": "95252",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "J'aime Franconville",
+     "liste_complete": "J'aime Franconville",
+     "voix": 7466,
+     "sieges_cm": 35,
+     "sieges_cc": 10,
+     "pct_exprimes": 75.96,
+     "pct_inscrits": 33.58
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LUG",
+     "liste": "Franconville Ecologique et Solidaire",
+     "liste_complete": "Franconville Ecologique et Solidaire",
+     "voix": 2363,
+     "sieges_cm": 4,
+     "sieges_cc": 1,
+     "pct_exprimes": 24.04,
+     "pct_inscrits": 10.63
+    }
+   ],
+   "pct_abstention": 54.53,
+   "pct_participation": 45.47,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVD",
+    "pct_exprimes": 75.96
+   }
+  },
+  "95253": {
+   "bureaux_de_vote": 1,
+   "inscrits": 375,
+   "abstentions": 193,
+   "votants": 182,
+   "blancs": 16,
+   "nuls": 12,
+   "exprimes": 154,
+   "nom": "Frémainville",
+   "code_insee": "95253",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "ENSEMBLE VERS DEMAIN",
+     "liste_complete": "ENSEMBLE VERS DEMAIN",
+     "voix": 154,
+     "sieges_cm": 15,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 41.07
+    }
+   ],
+   "pct_abstention": 51.47,
+   "pct_participation": 48.53,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95254": {
+   "bureaux_de_vote": 1,
+   "inscrits": 444,
+   "abstentions": 226,
+   "votants": 218,
+   "blancs": 13,
+   "nuls": 6,
+   "exprimes": 199,
+   "nom": "Frémécourt",
+   "code_insee": "95254",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "CONTINUONS ENSEMBLE",
+     "liste_complete": "CONTINUONS ENSEMBLE",
+     "voix": 199,
+     "sieges_cm": 15,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 44.82
+    }
+   ],
+   "pct_abstention": 50.9,
+   "pct_participation": 49.1,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95256": {
+   "bureaux_de_vote": 2,
+   "inscrits": 2290,
+   "abstentions": 873,
+   "votants": 1417,
+   "blancs": 19,
+   "nuls": 8,
+   "exprimes": 1390,
+   "nom": "Frépillon",
+   "code_insee": "95256",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "Agir Pour Frépillon",
+     "liste_complete": "Agir Pour Frépillon",
+     "voix": 954,
+     "sieges_cm": 20,
+     "sieges_cc": 1,
+     "pct_exprimes": 68.63,
+     "pct_inscrits": 41.66
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "Frépillon Ensemble Pour Demain",
+     "liste_complete": "Frépillon Ensemble Pour Demain",
+     "voix": 436,
+     "sieges_cm": 3,
+     "sieges_cc": 0,
+     "pct_exprimes": 31.37,
+     "pct_inscrits": 19.04
+    }
+   ],
+   "pct_abstention": 38.12,
+   "pct_participation": 61.88,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 68.63
+   }
+  },
+  "95257": {
+   "bureaux_de_vote": 3,
+   "inscrits": 3333,
+   "abstentions": 1356,
+   "votants": 1977,
+   "blancs": 40,
+   "nuls": 24,
+   "exprimes": 1913,
+   "nom": "La Frette-sur-Seine",
+   "code_insee": "95257",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "LA FRETTE A COEUR",
+     "liste_complete": "LA FRETTE A COEUR",
+     "voix": 1115,
+     "sieges_cm": 22,
+     "sieges_cc": 2,
+     "pct_exprimes": 58.29,
+     "pct_inscrits": 33.45
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDIV",
+     "liste": "MA FRETTE ENSEMBLE",
+     "liste_complete": "MA FRETTE ENSEMBLE",
+     "voix": 798,
+     "sieges_cm": 5,
+     "sieges_cc": 0,
+     "pct_exprimes": 41.71,
+     "pct_inscrits": 23.94
+    }
+   ],
+   "pct_abstention": 40.68,
+   "pct_participation": 59.32,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVD",
+    "pct_exprimes": 58.29
+   }
+  },
+  "95258": {
+   "bureaux_de_vote": 1,
+   "inscrits": 306,
+   "abstentions": 133,
+   "votants": 173,
+   "blancs": 6,
+   "nuls": 3,
+   "exprimes": 164,
+   "nom": "Frouville",
+   "code_insee": "95258",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "BIEN VIVRE ENSEMBLE A FROUVILLE",
+     "liste_complete": "BIEN VIVRE ENSEMBLE A FROUVILLE",
+     "voix": 164,
+     "sieges_cm": 11,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 53.59
+    }
+   ],
+   "pct_abstention": 43.46,
+   "pct_participation": 56.54,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95268": {
+   "bureaux_de_vote": 20,
+   "inscrits": 19377,
+   "abstentions": 10517,
+   "votants": 8860,
+   "blancs": 137,
+   "nuls": 111,
+   "exprimes": 8612,
+   "nom": "Garges-lès-Gonesse",
+   "code_insee": "95268",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVC",
+     "liste": "FIERS DE GARGES",
+     "liste_complete": "FIERS DE GARGES",
+     "voix": 6091,
+     "sieges_cm": 38,
+     "sieges_cc": 10,
+     "pct_exprimes": 70.73,
+     "pct_inscrits": 31.43
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVG",
+     "liste": "UNION DE LA GAUCHE ET CITOYENNE - GARGES 2026",
+     "liste_complete": "UNION DE LA GAUCHE ET CITOYENNE - GARGES 2026",
+     "voix": 1958,
+     "sieges_cm": 5,
+     "sieges_cc": 1,
+     "pct_exprimes": 22.74,
+     "pct_inscrits": 10.1
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVG",
+     "liste": "UN ESPOIR POUR GARGES - LA GAUCHE RASSEMBLÉE ET SOLIDAIRE",
+     "liste_complete": "UN ESPOIR POUR GARGES - LA GAUCHE RASSEMBLÉE ET SOLIDAIRE",
+     "voix": 285,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 3.31,
+     "pct_inscrits": 1.47
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LECO",
+     "liste": "GARGES AUTREMENT",
+     "liste_complete": "GARGES AUTREMENT",
+     "voix": 278,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 3.23,
+     "pct_inscrits": 1.43
+    }
+   ],
+   "pct_abstention": 54.28,
+   "pct_participation": 45.72,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVC",
+    "pct_exprimes": 70.73
+   }
+  },
+  "95270": {
+   "bureaux_de_vote": 1,
+   "inscrits": 435,
+   "abstentions": 195,
+   "votants": 240,
+   "blancs": 4,
+   "nuls": 13,
+   "exprimes": 223,
+   "nom": "Genainville",
+   "code_insee": "95270",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "REUNIS POUR GENAINVILLE",
+     "liste_complete": "REUNIS POUR GENAINVILLE",
+     "voix": 223,
+     "sieges_cm": 15,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 51.26
+    }
+   ],
+   "pct_abstention": 44.83,
+   "pct_participation": 55.17,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95271": {
+   "bureaux_de_vote": 1,
+   "inscrits": 374,
+   "abstentions": 127,
+   "votants": 247,
+   "blancs": 9,
+   "nuls": 11,
+   "exprimes": 227,
+   "nom": "Génicourt",
+   "code_insee": "95271",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "Continuons pour Génicourt",
+     "liste_complete": "Continuons pour Génicourt",
+     "voix": 227,
+     "sieges_cm": 15,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 60.7
+    }
+   ],
+   "pct_abstention": 33.96,
+   "pct_participation": 66.04,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95277": {
+   "bureaux_de_vote": 16,
+   "inscrits": 15409,
+   "abstentions": 7789,
+   "votants": 7620,
+   "blancs": 108,
+   "nuls": 103,
+   "exprimes": 7409,
+   "nom": "Gonesse",
+   "code_insee": "95277",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LSOC",
+     "liste": "UN NOUVEAU SOUFFLE POUR GONESSE",
+     "liste_complete": "UN NOUVEAU SOUFFLE POUR GONESSE",
+     "voix": 4048,
+     "sieges_cm": 29,
+     "sieges_cc": 7,
+     "pct_exprimes": 54.64,
+     "pct_inscrits": 26.27
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVG",
+     "liste": "ENSEMBLE POUR UN GONESSE PLUS GRAND",
+     "liste_complete": "ENSEMBLE POUR UN GONESSE PLUS GRAND",
+     "voix": 1028,
+     "sieges_cm": 2,
+     "sieges_cc": 0,
+     "pct_exprimes": 13.88,
+     "pct_inscrits": 6.67
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LFI",
+     "liste": "LA FORCE DE TOUT CHANGER A GONESSE",
+     "liste_complete": "LA FORCE DE TOUT CHANGER A GONESSE",
+     "voix": 957,
+     "sieges_cm": 2,
+     "sieges_cc": 0,
+     "pct_exprimes": 12.92,
+     "pct_inscrits": 6.21
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVC",
+     "liste": "AGIR POUR GONESSE",
+     "liste_complete": "AGIR POUR GONESSE",
+     "voix": 790,
+     "sieges_cm": 2,
+     "sieges_cc": 0,
+     "pct_exprimes": 10.66,
+     "pct_inscrits": 5.13
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVG",
+     "liste": "ENSEMBLE POUR GONESSE",
+     "liste_complete": "ENSEMBLE POUR GONESSE",
+     "voix": 366,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 4.94,
+     "pct_inscrits": 2.38
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVG",
+     "liste": "NOUS GONESSIENS",
+     "liste_complete": "NOUS GONESSIENS",
+     "voix": 220,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 2.97,
+     "pct_inscrits": 1.43
+    }
+   ],
+   "pct_abstention": 50.55,
+   "pct_participation": 49.45,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LSOC",
+    "pct_exprimes": 54.64
+   }
+  },
+  "95280": {
+   "bureaux_de_vote": 22,
+   "inscrits": 17624,
+   "abstentions": 9701,
+   "votants": 7923,
+   "blancs": 119,
+   "nuls": 91,
+   "exprimes": 7713,
+   "nom": "Goussainville",
+   "code_insee": "95280",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVG",
+     "liste": "L'AMBITION RETROUVÉE",
+     "liste_complete": "L'AMBITION RETROUVÉE",
+     "voix": 3168,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 41.07,
+     "pct_inscrits": 17.98
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDIV",
+     "liste": "AGIR POUR GOUSSAINVILLE",
+     "liste_complete": "AGIR POUR GOUSSAINVILLE",
+     "voix": 1991,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 25.81,
+     "pct_inscrits": 11.3
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVG",
+     "liste": "LE COURAGE DU CHANGEMENT",
+     "liste_complete": "LE COURAGE DU CHANGEMENT",
+     "voix": 1253,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 16.25,
+     "pct_inscrits": 7.11
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LFI",
+     "liste": "FAIRE MIEUX POUR GOUSSAINVILLE",
+     "liste_complete": "FAIRE MIEUX POUR GOUSSAINVILLE",
+     "voix": 929,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 12.04,
+     "pct_inscrits": 5.27
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDIV",
+     "liste": "UNIS POUR UN MEILLEUR GOUSSAINVILLE",
+     "liste_complete": "UNIS POUR UN MEILLEUR GOUSSAINVILLE",
+     "voix": 165,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 2.14,
+     "pct_inscrits": 0.94
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LVEC",
+     "liste": "RÉVOLUTION POSITIVE",
+     "liste_complete": "RÉVOLUTION POSITIVE",
+     "voix": 113,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 1.47,
+     "pct_inscrits": 0.64
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LEXG",
+     "liste": "LUTTE OUVRIERE - LE CAMP DES TRAVAILLEURS",
+     "liste_complete": "LUTTE OUVRIERE - LE CAMP DES TRAVAILLEURS",
+     "voix": 94,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 1.22,
+     "pct_inscrits": 0.53
+    }
+   ],
+   "pct_abstention": 55.04,
+   "pct_participation": 44.96,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVG",
+    "pct_exprimes": 41.07
+   }
+  },
+  "95287": {
+   "bureaux_de_vote": 1,
+   "inscrits": 544,
+   "abstentions": 236,
+   "votants": 308,
+   "blancs": 13,
+   "nuls": 6,
+   "exprimes": 289,
+   "nom": "Grisy-les-Plâtres",
+   "code_insee": "95287",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "BIEN VIVRE A GRISY",
+     "liste_complete": "BIEN VIVRE A GRISY",
+     "voix": 289,
+     "sieges_cm": 15,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 53.12
+    }
+   ],
+   "pct_abstention": 43.38,
+   "pct_participation": 56.62,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95288": {
+   "bureaux_de_vote": 5,
+   "inscrits": 5313,
+   "abstentions": 1970,
+   "votants": 3343,
+   "blancs": 40,
+   "nuls": 27,
+   "exprimes": 3276,
+   "nom": "Groslay",
+   "code_insee": "95288",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "AGIR ENSEMBLE POUR GROSLAY",
+     "liste_complete": "AGIR ENSEMBLE POUR GROSLAY",
+     "voix": 1402,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 42.8,
+     "pct_inscrits": 26.39
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDIV",
+     "liste": "GROSLAY TERRE D'AVENIR",
+     "liste_complete": "GROSLAY TERRE D'AVENIR",
+     "voix": 1066,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 32.54,
+     "pct_inscrits": 20.06
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "GROSLAY CAP CITOYENS",
+     "liste_complete": "GROSLAY CAP CITOYENS",
+     "voix": 505,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 15.42,
+     "pct_inscrits": 9.5
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDIV",
+     "liste": "NOUVEL HORIZON POUR GROSLAY",
+     "liste_complete": "NOUVEL HORIZON POUR GROSLAY",
+     "voix": 303,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 9.25,
+     "pct_inscrits": 5.7
+    }
+   ],
+   "pct_abstention": 37.08,
+   "pct_participation": 62.92,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVD",
+    "pct_exprimes": 42.8
+   }
+  },
+  "95295": {
+   "bureaux_de_vote": 1,
+   "inscrits": 115,
+   "abstentions": 17,
+   "votants": 98,
+   "blancs": 1,
+   "nuls": 1,
+   "exprimes": 96,
+   "nom": "Guiry-en-Vexin",
+   "code_insee": "95295",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "BON VIVRE ENSEMBLE A GUIRY",
+     "liste_complete": "BON VIVRE ENSEMBLE A GUIRY",
+     "voix": 96,
+     "sieges_cm": 11,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 83.48
+    }
+   ],
+   "pct_abstention": 14.78,
+   "pct_participation": 85.22,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95298": {
+   "bureaux_de_vote": 1,
+   "inscrits": 481,
+   "abstentions": 125,
+   "votants": 356,
+   "blancs": 3,
+   "nuls": 4,
+   "exprimes": 349,
+   "nom": "Haravilliers",
+   "code_insee": "95298",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "Un village uni, un avenir construit",
+     "liste_complete": "Un village uni, un avenir construit",
+     "voix": 240,
+     "sieges_cm": 13,
+     "sieges_cc": null,
+     "pct_exprimes": 68.77,
+     "pct_inscrits": 49.9
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "VIVRE BIEN, ENSEMBLE, A HARAVILLIERS",
+     "liste_complete": "VIVRE BIEN, ENSEMBLE, A HARAVILLIERS",
+     "voix": 109,
+     "sieges_cm": 2,
+     "sieges_cc": null,
+     "pct_exprimes": 31.23,
+     "pct_inscrits": 22.66
+    }
+   ],
+   "pct_abstention": 25.99,
+   "pct_participation": 74.01,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 68.77
+   }
+  },
+  "95301": {
+   "bureaux_de_vote": 1,
+   "inscrits": 221,
+   "abstentions": 56,
+   "votants": 165,
+   "blancs": 6,
+   "nuls": 1,
+   "exprimes": 158,
+   "nom": "Haute-Isle",
+   "code_insee": "95301",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "ENSEMBLE POUR VOUS",
+     "liste_complete": "ENSEMBLE POUR VOUS",
+     "voix": 82,
+     "sieges_cm": 9,
+     "sieges_cc": null,
+     "pct_exprimes": 51.9,
+     "pct_inscrits": 37.1
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "HAUTE-ISLE AVENIR",
+     "liste_complete": "HAUTE-ISLE AVENIR",
+     "voix": 76,
+     "sieges_cm": 2,
+     "sieges_cc": null,
+     "pct_exprimes": 48.1,
+     "pct_inscrits": 34.39
+    }
+   ],
+   "pct_abstention": 25.34,
+   "pct_participation": 74.66,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 51.9
+   }
+  },
+  "95303": {
+   "bureaux_de_vote": 1,
+   "inscrits": 156,
+   "abstentions": 56,
+   "votants": 100,
+   "blancs": 11,
+   "nuls": 5,
+   "exprimes": 84,
+   "nom": "Le Heaulme",
+   "code_insee": "95303",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "AGIR ENSEMBLE POUR LE HEAULME",
+     "liste_complete": "AGIR ENSEMBLE POUR LE HEAULME",
+     "voix": 84,
+     "sieges_cm": 11,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 53.85
+    }
+   ],
+   "pct_abstention": 35.9,
+   "pct_participation": 64.1,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95304": {
+   "bureaux_de_vote": 1,
+   "inscrits": 236,
+   "abstentions": 78,
+   "votants": 158,
+   "blancs": 3,
+   "nuls": 3,
+   "exprimes": 152,
+   "nom": "Hédouville",
+   "code_insee": "95304",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "ENSEMBLE ,PRESERVONS HEDOUVILLE",
+     "liste_complete": "ENSEMBLE ,PRESERVONS HEDOUVILLE",
+     "voix": 152,
+     "sieges_cm": 11,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 64.41
+    }
+   ],
+   "pct_abstention": 33.05,
+   "pct_participation": 66.95,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95306": {
+   "bureaux_de_vote": 21,
+   "inscrits": 20613,
+   "abstentions": 10102,
+   "votants": 10511,
+   "blancs": 119,
+   "nuls": 73,
+   "exprimes": 10319,
+   "nom": "Herblay-sur-Seine",
+   "code_insee": "95306",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "Herblay-Sur-Seine Notre Ville",
+     "liste_complete": "Herblay-Sur-Seine Notre Ville",
+     "voix": 6592,
+     "sieges_cm": 33,
+     "sieges_cc": 8,
+     "pct_exprimes": 63.88,
+     "pct_inscrits": 31.98
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDIV",
+     "liste": "Herblay une autre voie",
+     "liste_complete": "Herblay une autre voie",
+     "voix": 1714,
+     "sieges_cm": 3,
+     "sieges_cc": 1,
+     "pct_exprimes": 16.61,
+     "pct_inscrits": 8.32
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVG",
+     "liste": "HERBLAY DEMAIN",
+     "liste_complete": "HERBLAY DEMAIN",
+     "voix": 1713,
+     "sieges_cm": 3,
+     "sieges_cc": 0,
+     "pct_exprimes": 16.6,
+     "pct_inscrits": 8.31
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LEXG",
+     "liste": "LUTTE OUVRIERE - LE CAMP DES TRAVAILLEURS",
+     "liste_complete": "LUTTE OUVRIERE - LE CAMP DES TRAVAILLEURS",
+     "voix": 300,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 2.91,
+     "pct_inscrits": 1.46
+    }
+   ],
+   "pct_abstention": 49.01,
+   "pct_participation": 50.99,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVD",
+    "pct_exprimes": 63.88
+   }
+  },
+  "95308": {
+   "bureaux_de_vote": 1,
+   "inscrits": 478,
+   "abstentions": 233,
+   "votants": 245,
+   "blancs": 15,
+   "nuls": 5,
+   "exprimes": 225,
+   "nom": "Hérouville-en-Vexin",
+   "code_insee": "95308",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "ENSEMBLE POUR HEROUVILLE EN VEXIN",
+     "liste_complete": "ENSEMBLE POUR HEROUVILLE EN VEXIN",
+     "voix": 225,
+     "sieges_cm": 15,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 47.07
+    }
+   ],
+   "pct_abstention": 48.74,
+   "pct_participation": 51.26,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95309": {
+   "bureaux_de_vote": 1,
+   "inscrits": 165,
+   "abstentions": 81,
+   "votants": 84,
+   "blancs": 0,
+   "nuls": 5,
+   "exprimes": 79,
+   "nom": "Hodent",
+   "code_insee": "95309",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "HODENT, BIEN AUJOURD'HUI, MIEUX DEMAIN",
+     "liste_complete": "HODENT, BIEN AUJOURD'HUI, MIEUX DEMAIN",
+     "voix": 79,
+     "sieges_cm": 11,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 47.88
+    }
+   ],
+   "pct_abstention": 49.09,
+   "pct_participation": 50.91,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95313": {
+   "bureaux_de_vote": 10,
+   "inscrits": 9232,
+   "abstentions": 3844,
+   "votants": 5388,
+   "blancs": 57,
+   "nuls": 44,
+   "exprimes": 5287,
+   "nom": "L'Isle-Adam",
+   "code_insee": "95313",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "UNION POUR L'ISLE-ADAM VILLE PARC",
+     "liste_complete": "UNION POUR L'ISLE-ADAM VILLE PARC",
+     "voix": 4452,
+     "sieges_cm": 31,
+     "sieges_cc": 11,
+     "pct_exprimes": 84.21,
+     "pct_inscrits": 48.22
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDIV",
+     "liste": "DE L'OXYGENE POUR L'ISLE-ADAM",
+     "liste_complete": "DE L'OXYGENE POUR L'ISLE-ADAM",
+     "voix": 835,
+     "sieges_cm": 2,
+     "sieges_cc": 1,
+     "pct_exprimes": 15.79,
+     "pct_inscrits": 9.04
+    }
+   ],
+   "pct_abstention": 41.64,
+   "pct_participation": 58.36,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVD",
+    "pct_exprimes": 84.21
+   }
+  },
+  "95316": {
+   "bureaux_de_vote": 1,
+   "inscrits": 205,
+   "abstentions": 79,
+   "votants": 126,
+   "blancs": 15,
+   "nuls": 21,
+   "exprimes": 90,
+   "nom": "Jagny-sous-Bois",
+   "code_insee": "95316",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "ENSEMBLE POUR JAGNY",
+     "liste_complete": "ENSEMBLE POUR JAGNY",
+     "voix": 90,
+     "sieges_cm": 11,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 43.9
+    }
+   ],
+   "pct_abstention": 38.54,
+   "pct_participation": 61.46,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95323": {
+   "bureaux_de_vote": 11,
+   "inscrits": 11802,
+   "abstentions": 5627,
+   "votants": 6175,
+   "blancs": 150,
+   "nuls": 71,
+   "exprimes": 5954,
+   "nom": "Jouy-le-Moutier",
+   "code_insee": "95323",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDIV",
+     "liste": "JOUY, VILLE DURABLE !",
+     "liste_complete": "JOUY, VILLE DURABLE !",
+     "voix": 4348,
+     "sieges_cm": 30,
+     "sieges_cc": 5,
+     "pct_exprimes": 73.03,
+     "pct_inscrits": 36.84
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDIV",
+     "liste": "JOUY AVANT TOUT",
+     "liste_complete": "JOUY AVANT TOUT",
+     "voix": 1172,
+     "sieges_cm": 3,
+     "sieges_cc": 0,
+     "pct_exprimes": 19.68,
+     "pct_inscrits": 9.93
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LEXG",
+     "liste": "JOUY-LE-MOUTIER POUR LA DEFENSE ET LE DEVELOPPEMENT DES SERVICES PUBLICS SOUTENUE PAR LE P.T",
+     "liste_complete": "JOUY-LE-MOUTIER POUR LA DEFENSE ET LE DEVELOPPEMENT DES SERVICES PUBLICS SOUTENUE PAR LE PARTI DES TRAVAILLEURS",
+     "voix": 240,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 4.03,
+     "pct_inscrits": 2.03
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LEXG",
+     "liste": "Lutte ouvrière - Le camp des travailleurs",
+     "liste_complete": "Lutte ouvrière - Le camp des travailleurs",
+     "voix": 194,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 3.26,
+     "pct_inscrits": 1.64
+    }
+   ],
+   "pct_abstention": 47.68,
+   "pct_participation": 52.32,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDIV",
+    "pct_exprimes": 73.03
+   }
+  },
+  "95328": {
+   "bureaux_de_vote": 1,
+   "inscrits": 397,
+   "abstentions": 174,
+   "votants": 223,
+   "blancs": 12,
+   "nuls": 10,
+   "exprimes": 201,
+   "nom": "Labbeville",
+   "code_insee": "95328",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "Labeville 2032",
+     "liste_complete": "Labbeville 2032",
+     "voix": 201,
+     "sieges_cm": 15,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 50.63
+    }
+   ],
+   "pct_abstention": 43.83,
+   "pct_participation": 56.17,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95331": {
+   "bureaux_de_vote": 1,
+   "inscrits": 140,
+   "abstentions": 22,
+   "votants": 118,
+   "blancs": 0,
+   "nuls": 0,
+   "exprimes": 118,
+   "nom": "Lassy",
+   "code_insee": "95331",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "LISTE D'UNION COMMUNALE POUR LA DÉFENSE DU CARACTÈRE RURAL DE LASSY",
+     "liste_complete": "LISTE D'UNION COMMUNALE POUR LA DÉFENSE DU CARACTÈRE RURAL DE LASSY",
+     "voix": 81,
+     "sieges_cm": 10,
+     "sieges_cc": null,
+     "pct_exprimes": 68.64,
+     "pct_inscrits": 57.86
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "LES AILES CITOYENNES",
+     "liste_complete": "LES AILES CITOYENNES",
+     "voix": 37,
+     "sieges_cm": 1,
+     "sieges_cc": null,
+     "pct_exprimes": 31.36,
+     "pct_inscrits": 26.43
+    }
+   ],
+   "pct_abstention": 15.71,
+   "pct_participation": 84.29,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 68.64
+   }
+  },
+  "95341": {
+   "bureaux_de_vote": 1,
+   "inscrits": 273,
+   "abstentions": 125,
+   "votants": 148,
+   "blancs": 5,
+   "nuls": 2,
+   "exprimes": 141,
+   "nom": "Livilliers",
+   "code_insee": "95341",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "LIVILLIERS : NOTRE VILLAGE",
+     "liste_complete": "LIVILLIERS : NOTRE VILLAGE",
+     "voix": 141,
+     "sieges_cm": 11,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 51.65
+    }
+   ],
+   "pct_abstention": 45.79,
+   "pct_participation": 54.21,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95348": {
+   "bureaux_de_vote": 1,
+   "inscrits": 424,
+   "abstentions": 173,
+   "votants": 251,
+   "blancs": 4,
+   "nuls": 7,
+   "exprimes": 240,
+   "nom": "Longuesse",
+   "code_insee": "95348",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "LONGUESSE DURABLE, UNI ET SOLIDAIRE",
+     "liste_complete": "LONGUESSE DURABLE, UNI ET SOLIDAIRE",
+     "voix": 240,
+     "sieges_cm": 11,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 56.6
+    }
+   ],
+   "pct_abstention": 40.8,
+   "pct_participation": 59.2,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95351": {
+   "bureaux_de_vote": 8,
+   "inscrits": 6953,
+   "abstentions": 3741,
+   "votants": 3212,
+   "blancs": 59,
+   "nuls": 25,
+   "exprimes": 3128,
+   "nom": "Louvres",
+   "code_insee": "95351",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDIV",
+     "liste": "LOUVRES EN MOUVEMENT AVEC VOUS",
+     "liste_complete": "LOUVRES EN MOUVEMENT AVEC VOUS",
+     "voix": 1953,
+     "sieges_cm": 27,
+     "sieges_cc": 2,
+     "pct_exprimes": 62.44,
+     "pct_inscrits": 28.09
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVC",
+     "liste": "AGIR REUSSIR",
+     "liste_complete": "AGIR REUSSIR",
+     "voix": 993,
+     "sieges_cm": 5,
+     "sieges_cc": 1,
+     "pct_exprimes": 31.75,
+     "pct_inscrits": 14.28
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LEXG",
+     "liste": "LUTTE OUVRIERE - LE CAMP DES TRAVAILLEURS",
+     "liste_complete": "LUTTE OUVRIERE - LE CAMP DES TRAVAILLEURS",
+     "voix": 182,
+     "sieges_cm": 1,
+     "sieges_cc": 0,
+     "pct_exprimes": 5.82,
+     "pct_inscrits": 2.62
+    }
+   ],
+   "pct_abstention": 53.8,
+   "pct_participation": 46.2,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDIV",
+    "pct_exprimes": 62.44
+   }
+  },
+  "95352": {
+   "bureaux_de_vote": 3,
+   "inscrits": 3420,
+   "abstentions": 1877,
+   "votants": 1543,
+   "blancs": 182,
+   "nuls": 59,
+   "exprimes": 1302,
+   "nom": "Luzarches",
+   "code_insee": "95352",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "UNIS POUR LUZARCHES",
+     "liste_complete": "UNIS POUR LUZARCHES",
+     "voix": 1302,
+     "sieges_cm": 29,
+     "sieges_cc": 6,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 38.07
+    }
+   ],
+   "pct_abstention": 54.88,
+   "pct_participation": 45.12,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVD",
+    "pct_exprimes": 100.0
+   }
+  },
+  "95353": {
+   "bureaux_de_vote": 1,
+   "inscrits": 1288,
+   "abstentions": 519,
+   "votants": 769,
+   "blancs": 16,
+   "nuls": 4,
+   "exprimes": 749,
+   "nom": "Maffliers",
+   "code_insee": "95353",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "MAFFLIERS PASSIONNEMENT",
+     "liste_complete": "MAFFLIERS PASSIONNEMENT",
+     "voix": 408,
+     "sieges_cm": 15,
+     "sieges_cc": 2,
+     "pct_exprimes": 54.47,
+     "pct_inscrits": 31.68
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "UN ÉLAN POUR MAFFLIERS",
+     "liste_complete": "UN ÉLAN POUR MAFFLIERS",
+     "voix": 341,
+     "sieges_cm": 4,
+     "sieges_cc": 0,
+     "pct_exprimes": 45.53,
+     "pct_inscrits": 26.48
+    }
+   ],
+   "pct_abstention": 40.3,
+   "pct_participation": 59.7,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 54.47
+   }
+  },
+  "95355": {
+   "bureaux_de_vote": 5,
+   "inscrits": 4053,
+   "abstentions": 1623,
+   "votants": 2430,
+   "blancs": 40,
+   "nuls": 28,
+   "exprimes": 2362,
+   "nom": "Magny-en-Vexin",
+   "code_insee": "95355",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "VIVONS MAGNY",
+     "liste_complete": "VIVONS MAGNY",
+     "voix": 1082,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 45.81,
+     "pct_inscrits": 26.7
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "ECRIVONS UN AVENIR POUR MAGNY",
+     "liste_complete": "ECRIVONS UN AVENIR POUR MAGNY",
+     "voix": 919,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 38.91,
+     "pct_inscrits": 22.67
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVG",
+     "liste": "ENSEMBLE, MAGNY AVANCE",
+     "liste_complete": "ENSEMBLE, MAGNY AVANCE",
+     "voix": 361,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 15.28,
+     "pct_inscrits": 8.91
+    }
+   ],
+   "pct_abstention": 40.04,
+   "pct_participation": 59.96,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVD",
+    "pct_exprimes": 45.81
+   }
+  },
+  "95365": {
+   "bureaux_de_vote": 1,
+   "inscrits": 457,
+   "abstentions": 278,
+   "votants": 179,
+   "blancs": 5,
+   "nuls": 3,
+   "exprimes": 171,
+   "nom": "Mareil-en-France",
+   "code_insee": "95365",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "LA FORCE DE NOS VALEURS L'ELAN DE NOS PROJETS",
+     "liste_complete": "LA FORCE DE NOS VALEURS L'ELAN DE NOS PROJETS",
+     "voix": 171,
+     "sieges_cm": 15,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 37.42
+    }
+   ],
+   "pct_abstention": 60.83,
+   "pct_participation": 39.17,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95369": {
+   "bureaux_de_vote": 2,
+   "inscrits": 1999,
+   "abstentions": 988,
+   "votants": 1011,
+   "blancs": 71,
+   "nuls": 15,
+   "exprimes": 925,
+   "nom": "Margency",
+   "code_insee": "95369",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "MARGENCY DEMAIN",
+     "liste_complete": "MARGENCY DEMAIN",
+     "voix": 925,
+     "sieges_cm": 23,
+     "sieges_cc": 1,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 46.27
+    }
+   ],
+   "pct_abstention": 49.42,
+   "pct_participation": 50.58,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95370": {
+   "bureaux_de_vote": 3,
+   "inscrits": 2504,
+   "abstentions": 1093,
+   "votants": 1411,
+   "blancs": 17,
+   "nuls": 9,
+   "exprimes": 1385,
+   "nom": "Marines",
+   "code_insee": "95370",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDIV",
+     "liste": "MARINES 2026",
+     "liste_complete": "MARINES 2026",
+     "voix": 573,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 41.37,
+     "pct_inscrits": 22.88
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVG",
+     "liste": "AGIR ENSEMBLE POUR MARINES",
+     "liste_complete": "AGIR ENSEMBLE POUR MARINES",
+     "voix": 564,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 40.72,
+     "pct_inscrits": 22.52
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDIV",
+     "liste": "PARTI D'iNTERETS MARINOIS",
+     "liste_complete": "PARTI D'INTERETS MARINOIS",
+     "voix": 248,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 17.91,
+     "pct_inscrits": 9.9
+    }
+   ],
+   "pct_abstention": 43.65,
+   "pct_participation": 56.35,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDIV",
+    "pct_exprimes": 41.37
+   }
+  },
+  "95371": {
+   "bureaux_de_vote": 4,
+   "inscrits": 4199,
+   "abstentions": 1839,
+   "votants": 2360,
+   "blancs": 37,
+   "nuls": 15,
+   "exprimes": 2308,
+   "nom": "Marly-la-Ville",
+   "code_insee": "95371",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVG",
+     "liste": "UNIS POUR MARLY-LA-VILLE",
+     "liste_complete": "UNIS POUR MARLY-LA-VILLE",
+     "voix": 1595,
+     "sieges_cm": 25,
+     "sieges_cc": 1,
+     "pct_exprimes": 69.11,
+     "pct_inscrits": 37.99
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDIV",
+     "liste": "MARLY L'AVENIR",
+     "liste_complete": "MARLY L'AVENIR",
+     "voix": 713,
+     "sieges_cm": 4,
+     "sieges_cc": 0,
+     "pct_exprimes": 30.89,
+     "pct_inscrits": 16.98
+    }
+   ],
+   "pct_abstention": 43.8,
+   "pct_participation": 56.2,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVG",
+    "pct_exprimes": 69.11
+   }
+  },
+  "95379": {
+   "bureaux_de_vote": 1,
+   "inscrits": 162,
+   "abstentions": 53,
+   "votants": 109,
+   "blancs": 13,
+   "nuls": 15,
+   "exprimes": 81,
+   "nom": "Maudétour-en-Vexin",
+   "code_insee": "95379",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "BIEN VIVRE A MAUDETOUR",
+     "liste_complete": "BIEN VIVRE A MAUDETOUR",
+     "voix": 81,
+     "sieges_cm": 10,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 50.0
+    }
+   ],
+   "pct_abstention": 32.72,
+   "pct_participation": 67.28,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95387": {
+   "bureaux_de_vote": 1,
+   "inscrits": 46,
+   "abstentions": 11,
+   "votants": 35,
+   "blancs": 2,
+   "nuls": 0,
+   "exprimes": 33,
+   "nom": "Menouville",
+   "code_insee": "95387",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "POUR MENOUVILLE",
+     "liste_complete": "POUR MENOUVILLE",
+     "voix": 33,
+     "sieges_cm": 7,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 71.74
+    }
+   ],
+   "pct_abstention": 23.91,
+   "pct_participation": 76.09,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95388": {
+   "bureaux_de_vote": 4,
+   "inscrits": 4001,
+   "abstentions": 2277,
+   "votants": 1724,
+   "blancs": 166,
+   "nuls": 45,
+   "exprimes": 1513,
+   "nom": "Menucourt",
+   "code_insee": "95388",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVG",
+     "liste": "Menucourt à coeur",
+     "liste_complete": "Menucourt à coeur",
+     "voix": 1513,
+     "sieges_cm": 29,
+     "sieges_cc": 2,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 37.82
+    }
+   ],
+   "pct_abstention": 56.91,
+   "pct_participation": 43.09,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVG",
+    "pct_exprimes": 100.0
+   }
+  },
+  "95392": {
+   "bureaux_de_vote": 4,
+   "inscrits": 3837,
+   "abstentions": 2182,
+   "votants": 1655,
+   "blancs": 130,
+   "nuls": 72,
+   "exprimes": 1453,
+   "nom": "Mériel",
+   "code_insee": "95392",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "MERIEL HORIZON",
+     "liste_complete": "MERIEL HORIZON",
+     "voix": 1453,
+     "sieges_cm": 29,
+     "sieges_cc": 5,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 37.87
+    }
+   ],
+   "pct_abstention": 56.87,
+   "pct_participation": 43.13,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVD",
+    "pct_exprimes": 100.0
+   }
+  },
+  "95394": {
+   "bureaux_de_vote": 7,
+   "inscrits": 6669,
+   "abstentions": 3381,
+   "votants": 3288,
+   "blancs": 43,
+   "nuls": 15,
+   "exprimes": 3230,
+   "nom": "Méry-sur-Oise",
+   "code_insee": "95394",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "Ensemble, réussir Méry !",
+     "liste_complete": "Ensemble, réussir Méry !",
+     "voix": 2297,
+     "sieges_cm": 26,
+     "sieges_cc": 9,
+     "pct_exprimes": 71.11,
+     "pct_inscrits": 34.44
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LUG",
+     "liste": "ENGAGE.E.S POUR MERY",
+     "liste_complete": "ENGAGE.E.S POUR MERY",
+     "voix": 522,
+     "sieges_cm": 2,
+     "sieges_cc": 1,
+     "pct_exprimes": 16.16,
+     "pct_inscrits": 7.83
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LUG",
+     "liste": "FAISONS BATTRE LE COEUR DE MERY",
+     "liste_complete": "FAISONS BATTRE LE COEUR DE MERY",
+     "voix": 411,
+     "sieges_cm": 1,
+     "sieges_cc": 0,
+     "pct_exprimes": 12.72,
+     "pct_inscrits": 6.16
+    }
+   ],
+   "pct_abstention": 50.7,
+   "pct_participation": 49.3,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVD",
+    "pct_exprimes": 71.11
+   }
+  },
+  "95395": {
+   "bureaux_de_vote": 1,
+   "inscrits": 722,
+   "abstentions": 189,
+   "votants": 533,
+   "blancs": 4,
+   "nuls": 3,
+   "exprimes": 526,
+   "nom": "Le Mesnil-Aubry",
+   "code_insee": "95395",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "LE MESNIL-AUBRY, UNE PASSION COMMUNE",
+     "liste_complete": "LE MESNIL-AUBRY, UNE PASSION COMMUNE",
+     "voix": 392,
+     "sieges_cm": 13,
+     "sieges_cc": null,
+     "pct_exprimes": 74.52,
+     "pct_inscrits": 54.29
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "TOUS MESNILOIS",
+     "liste_complete": "TOUS MESNILOIS",
+     "voix": 134,
+     "sieges_cm": 2,
+     "sieges_cc": null,
+     "pct_exprimes": 25.48,
+     "pct_inscrits": 18.56
+    }
+   ],
+   "pct_abstention": 26.18,
+   "pct_participation": 73.82,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 74.52
+   }
+  },
+  "95409": {
+   "bureaux_de_vote": 1,
+   "inscrits": 931,
+   "abstentions": 415,
+   "votants": 516,
+   "blancs": 16,
+   "nuls": 9,
+   "exprimes": 491,
+   "nom": "Moisselles",
+   "code_insee": "95409",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "UNIS POUR MOISSELLES",
+     "liste_complete": "UNIS POUR MOISSELLES",
+     "voix": 491,
+     "sieges_cm": 15,
+     "sieges_cc": 1,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 52.74
+    }
+   ],
+   "pct_abstention": 44.58,
+   "pct_participation": 55.42,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95422": {
+   "bureaux_de_vote": 1,
+   "inscrits": 302,
+   "abstentions": 141,
+   "votants": 161,
+   "blancs": 4,
+   "nuls": 2,
+   "exprimes": 155,
+   "nom": "Montgeroult",
+   "code_insee": "95422",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "MONTGEROULT, PRESERVER NOTRE CADRE, ANTICIPER DEMAIN",
+     "liste_complete": "MONTGEROULT, PRESERVER NOTRE CADRE, ANTICIPER DEMAIN",
+     "voix": 155,
+     "sieges_cm": 11,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 51.32
+    }
+   ],
+   "pct_abstention": 46.69,
+   "pct_participation": 53.31,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95424": {
+   "bureaux_de_vote": 13,
+   "inscrits": 12847,
+   "abstentions": 6411,
+   "votants": 6436,
+   "blancs": 92,
+   "nuls": 48,
+   "exprimes": 6296,
+   "nom": "Montigny-lès-Cormeilles",
+   "code_insee": "95424",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LUG",
+     "liste": "ENSEMBLE POUR MONTIGNY",
+     "liste_complete": "ENSEMBLE POUR MONTIGNY",
+     "voix": 4041,
+     "sieges_cm": 29,
+     "sieges_cc": 6,
+     "pct_exprimes": 64.18,
+     "pct_inscrits": 31.45
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "MONTIGNY POUR TOUS",
+     "liste_complete": "MONTIGNY POUR TOUS",
+     "voix": 2255,
+     "sieges_cm": 6,
+     "sieges_cc": 1,
+     "pct_exprimes": 35.82,
+     "pct_inscrits": 17.55
+    }
+   ],
+   "pct_abstention": 49.9,
+   "pct_participation": 50.1,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LUG",
+    "pct_exprimes": 64.18
+   }
+  },
+  "95426": {
+   "bureaux_de_vote": 2,
+   "inscrits": 2330,
+   "abstentions": 888,
+   "votants": 1442,
+   "blancs": 18,
+   "nuls": 8,
+   "exprimes": 1416,
+   "nom": "Montlignon",
+   "code_insee": "95426",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "AVEC VOUS VIVRE MONTLIGNON",
+     "liste_complete": "AVEC VOUS VIVRE MONTLIGNON",
+     "voix": 825,
+     "sieges_cm": 19,
+     "sieges_cc": 1,
+     "pct_exprimes": 58.26,
+     "pct_inscrits": 35.41
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "MONTLIGNON, NOTRE VILLAGE, NOTRE AVENIR",
+     "liste_complete": "MONTLIGNON, NOTRE VILLAGE, NOTRE AVENIR",
+     "voix": 426,
+     "sieges_cm": 3,
+     "sieges_cc": 0,
+     "pct_exprimes": 30.08,
+     "pct_inscrits": 18.28
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "MONTLIGNON, UN HERITAGE, UNE AMBITION",
+     "liste_complete": "MONTLIGNON, UN HERITAGE, UNE AMBITION",
+     "voix": 165,
+     "sieges_cm": 1,
+     "sieges_cc": 0,
+     "pct_exprimes": 11.65,
+     "pct_inscrits": 7.08
+    }
+   ],
+   "pct_abstention": 38.11,
+   "pct_participation": 61.89,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 58.26
+   }
+  },
+  "95427": {
+   "bureaux_de_vote": 8,
+   "inscrits": 8339,
+   "abstentions": 4547,
+   "votants": 3792,
+   "blancs": 56,
+   "nuls": 31,
+   "exprimes": 3705,
+   "nom": "Montmagny",
+   "code_insee": "95427",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVG",
+     "liste": "MONTMAGNY UN NOUVEAU DEPART",
+     "liste_complete": "MONTMAGNY UN NOUVEAU DEPART",
+     "voix": 1548,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 41.78,
+     "pct_inscrits": 18.56
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "ENSEMBLE AGISSONS POUR MONTMAGNY",
+     "liste_complete": "ENSEMBLE AGISSONS POUR MONTMAGNY",
+     "voix": 1394,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 37.62,
+     "pct_inscrits": 16.72
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "UNIS POUR MONTMAGNY",
+     "liste_complete": "UNIS POUR MONTMAGNY",
+     "voix": 763,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 20.59,
+     "pct_inscrits": 9.15
+    }
+   ],
+   "pct_abstention": 54.53,
+   "pct_participation": 45.47,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVG",
+    "pct_exprimes": 41.78
+   }
+  },
+  "95428": {
+   "bureaux_de_vote": 11,
+   "inscrits": 13981,
+   "abstentions": 5996,
+   "votants": 7985,
+   "blancs": 79,
+   "nuls": 41,
+   "exprimes": 7865,
+   "nom": "Montmorency",
+   "code_insee": "95428",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "DEMAIN MONTMORENCY",
+     "liste_complete": "DEMAIN MONTMORENCY",
+     "voix": 6028,
+     "sieges_cm": 32,
+     "sieges_cc": 7,
+     "pct_exprimes": 76.64,
+     "pct_inscrits": 43.12
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LSOC",
+     "liste": "L'AVENIR ENSEMBLE",
+     "liste_complete": "L'AVENIR ENSEMBLE",
+     "voix": 1247,
+     "sieges_cm": 2,
+     "sieges_cc": 0,
+     "pct_exprimes": 15.86,
+     "pct_inscrits": 8.92
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "NOUVELLE ÈRE MONTMORENCY",
+     "liste_complete": "NOUVELLE ÈRE MONTMORENCY",
+     "voix": 590,
+     "sieges_cm": 1,
+     "sieges_cc": 0,
+     "pct_exprimes": 7.5,
+     "pct_inscrits": 4.22
+    }
+   ],
+   "pct_abstention": 42.89,
+   "pct_participation": 57.11,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVD",
+    "pct_exprimes": 76.64
+   }
+  },
+  "95429": {
+   "bureaux_de_vote": 1,
+   "inscrits": 336,
+   "abstentions": 129,
+   "votants": 207,
+   "blancs": 14,
+   "nuls": 25,
+   "exprimes": 168,
+   "nom": "Montreuil-sur-Epte",
+   "code_insee": "95429",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "ENSEMBLE PARTAGEONS L'AVENIR",
+     "liste_complete": "ENSEMBLE PARTAGEONS L'AVENIR",
+     "voix": 168,
+     "sieges_cm": 11,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 50.0
+    }
+   ],
+   "pct_abstention": 38.39,
+   "pct_participation": 61.61,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95430": {
+   "bureaux_de_vote": 2,
+   "inscrits": 2738,
+   "abstentions": 1150,
+   "votants": 1588,
+   "blancs": 38,
+   "nuls": 12,
+   "exprimes": 1538,
+   "nom": "Montsoult",
+   "code_insee": "95430",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDIV",
+     "liste": "PROGRES ET INTERET COMMUNAL",
+     "liste_complete": "PROGRES ET INTERET COMMUNAL",
+     "voix": 847,
+     "sieges_cm": 22,
+     "sieges_cc": 5,
+     "pct_exprimes": 55.07,
+     "pct_inscrits": 30.93
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDIV",
+     "liste": "MONTSOULT ENSEMBLE",
+     "liste_complete": "MONTSOULT ENSEMBLE",
+     "voix": 399,
+     "sieges_cm": 3,
+     "sieges_cc": 0,
+     "pct_exprimes": 25.94,
+     "pct_inscrits": 14.57
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LEXD",
+     "liste": "EPA - MONTSOULT AVEC BON SENS",
+     "liste_complete": "EPA - MONTSOULT AVEC BON SENS",
+     "voix": 292,
+     "sieges_cm": 2,
+     "sieges_cc": 0,
+     "pct_exprimes": 18.99,
+     "pct_inscrits": 10.66
+    }
+   ],
+   "pct_abstention": 42.0,
+   "pct_participation": 58.0,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDIV",
+    "pct_exprimes": 55.07
+   }
+  },
+  "95436": {
+   "bureaux_de_vote": 1,
+   "inscrits": 1130,
+   "abstentions": 388,
+   "votants": 742,
+   "blancs": 14,
+   "nuls": 1,
+   "exprimes": 727,
+   "nom": "Mours",
+   "code_insee": "95436",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "MOURS, NATURELLEMENT TOURNEE VERS LE FUTUR !",
+     "liste_complete": "MOURS, NATURELLEMENT TOURNEE VERS LE FUTUR !",
+     "voix": 488,
+     "sieges_cm": 16,
+     "sieges_cc": 2,
+     "pct_exprimes": 67.13,
+     "pct_inscrits": 43.19
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "UNIS POUR MOURS",
+     "liste_complete": "UNIS POUR MOURS",
+     "voix": 239,
+     "sieges_cm": 3,
+     "sieges_cc": 0,
+     "pct_exprimes": 32.87,
+     "pct_inscrits": 21.15
+    }
+   ],
+   "pct_abstention": 34.34,
+   "pct_participation": 65.66,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 67.13
+   }
+  },
+  "95438": {
+   "bureaux_de_vote": 1,
+   "inscrits": 95,
+   "abstentions": 34,
+   "votants": 61,
+   "blancs": 8,
+   "nuls": 0,
+   "exprimes": 53,
+   "nom": "Moussy",
+   "code_insee": "95438",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "MOUSSY, NOTRE HISTOIRE, NOTRE AVENIR",
+     "liste_complete": "MOUSSY, NOTRE HISTOIRE, NOTRE AVENIR - AGISSONS ENSEMBLE POUR UNE COMMUNE INDEPENDANTE ET SOLIDAIRE",
+     "voix": 53,
+     "sieges_cm": 11,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 55.79
+    }
+   ],
+   "pct_abstention": 35.79,
+   "pct_participation": 64.21,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95445": {
+   "bureaux_de_vote": 1,
+   "inscrits": 476,
+   "abstentions": 206,
+   "votants": 270,
+   "blancs": 3,
+   "nuls": 7,
+   "exprimes": 260,
+   "nom": "Nerville-la-Forêt",
+   "code_insee": "95445",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "VIVRE ENSEMBLE A NERVILLE",
+     "liste_complete": "VIVRE ENSEMBLE A NERVILLE",
+     "voix": 260,
+     "sieges_cm": 15,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 54.62
+    }
+   ],
+   "pct_abstention": 43.28,
+   "pct_participation": 56.72,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95446": {
+   "bureaux_de_vote": 1,
+   "inscrits": 1470,
+   "abstentions": 534,
+   "votants": 936,
+   "blancs": 25,
+   "nuls": 10,
+   "exprimes": 901,
+   "nom": "Nesles-la-Vallée",
+   "code_insee": "95446",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "NESLES POUR VOUS ET AVEC VOUS",
+     "liste_complete": "NESLES POUR VOUS ET AVEC VOUS",
+     "voix": 648,
+     "sieges_cm": 17,
+     "sieges_cc": 3,
+     "pct_exprimes": 71.92,
+     "pct_inscrits": 44.08
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "NESLES VERVILLE L'AVENIR AUTREMENT",
+     "liste_complete": "NESLES VERVILLE L'AVENIR AUTREMENT",
+     "voix": 253,
+     "sieges_cm": 2,
+     "sieges_cc": 0,
+     "pct_exprimes": 28.08,
+     "pct_inscrits": 17.21
+    }
+   ],
+   "pct_abstention": 36.33,
+   "pct_participation": 63.67,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 71.92
+   }
+  },
+  "95447": {
+   "bureaux_de_vote": 1,
+   "inscrits": 152,
+   "abstentions": 47,
+   "votants": 105,
+   "blancs": 2,
+   "nuls": 5,
+   "exprimes": 98,
+   "nom": "Neuilly-en-Vexin",
+   "code_insee": "95447",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "ENSEMBLE, POURSUIVONS",
+     "liste_complete": "ENSEMBLE, POURSUIVONS",
+     "voix": 98,
+     "sieges_cm": 11,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 64.47
+    }
+   ],
+   "pct_abstention": 30.92,
+   "pct_participation": 69.08,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95450": {
+   "bureaux_de_vote": 1,
+   "inscrits": 1258,
+   "abstentions": 446,
+   "votants": 812,
+   "blancs": 12,
+   "nuls": 10,
+   "exprimes": 790,
+   "nom": "Neuville-sur-Oise",
+   "code_insee": "95450",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "VIVRE A NEUVILLE",
+     "liste_complete": "VIVRE A NEUVILLE",
+     "voix": 428,
+     "sieges_cm": 15,
+     "sieges_cc": 1,
+     "pct_exprimes": 54.18,
+     "pct_inscrits": 34.02
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "L'ESPRIT NEUVILLE",
+     "liste_complete": "L'ESPRIT NEUVILLE",
+     "voix": 362,
+     "sieges_cm": 4,
+     "sieges_cc": 0,
+     "pct_exprimes": 45.82,
+     "pct_inscrits": 28.78
+    }
+   ],
+   "pct_abstention": 35.45,
+   "pct_participation": 64.55,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 54.18
+   }
+  },
+  "95452": {
+   "bureaux_de_vote": 1,
+   "inscrits": 625,
+   "abstentions": 281,
+   "votants": 344,
+   "blancs": 30,
+   "nuls": 19,
+   "exprimes": 295,
+   "nom": "Nointel",
+   "code_insee": "95452",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "NOINTEL ENSEMBLE",
+     "liste_complete": "NOINTEL ENSEMBLE",
+     "voix": 295,
+     "sieges_cm": 15,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 47.2
+    }
+   ],
+   "pct_abstention": 44.96,
+   "pct_participation": 55.04,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95456": {
+   "bureaux_de_vote": 1,
+   "inscrits": 420,
+   "abstentions": 197,
+   "votants": 223,
+   "blancs": 14,
+   "nuls": 9,
+   "exprimes": 200,
+   "nom": "Noisy-sur-Oise",
+   "code_insee": "95456",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "ENSEMBLE POUR NOISY",
+     "liste_complete": "ENSEMBLE POUR NOISY",
+     "voix": 200,
+     "sieges_cm": 15,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 47.62
+    }
+   ],
+   "pct_abstention": 46.9,
+   "pct_participation": 53.1,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95459": {
+   "bureaux_de_vote": 1,
+   "inscrits": 526,
+   "abstentions": 274,
+   "votants": 252,
+   "blancs": 21,
+   "nuls": 24,
+   "exprimes": 207,
+   "nom": "Nucourt",
+   "code_insee": "95459",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "AGISSONS ENSEMBLE POUR NUCOURT",
+     "liste_complete": "AGISSONS ENSEMBLE POUR NUCOURT",
+     "voix": 207,
+     "sieges_cm": 14,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 39.35
+    }
+   ],
+   "pct_abstention": 52.09,
+   "pct_participation": 47.91,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95462": {
+   "bureaux_de_vote": 1,
+   "inscrits": 265,
+   "abstentions": 115,
+   "votants": 150,
+   "blancs": 13,
+   "nuls": 15,
+   "exprimes": 122,
+   "nom": "Omerville",
+   "code_insee": "95462",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "POUR OMERVILLE, UN VILLAGE TRANQUILLE ET DYNAMIQUE",
+     "liste_complete": "POUR OMERVILLE, UN VILLAGE TRANQUILLE ET DYNAMIQUE",
+     "voix": 122,
+     "sieges_cm": 11,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 46.04
+    }
+   ],
+   "pct_abstention": 43.4,
+   "pct_participation": 56.6,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95476": {
+   "bureaux_de_vote": 13,
+   "inscrits": 10945,
+   "abstentions": 6050,
+   "votants": 4895,
+   "blancs": 203,
+   "nuls": 83,
+   "exprimes": 4609,
+   "nom": "Osny",
+   "code_insee": "95476",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDIV",
+     "liste": "OSNY ENSEMBLE VERS LE FUTUR",
+     "liste_complete": "OSNY ENSEMBLE VERS LE FUTUR",
+     "voix": 2545,
+     "sieges_cm": 26,
+     "sieges_cc": 4,
+     "pct_exprimes": 55.22,
+     "pct_inscrits": 23.25
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "OSNY INTENSEMENT",
+     "liste_complete": "OSNY INTENSEMENT",
+     "voix": 2064,
+     "sieges_cm": 7,
+     "sieges_cc": 1,
+     "pct_exprimes": 44.78,
+     "pct_inscrits": 18.86
+    }
+   ],
+   "pct_abstention": 55.28,
+   "pct_participation": 44.72,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDIV",
+    "pct_exprimes": 55.22
+   }
+  },
+  "95480": {
+   "bureaux_de_vote": 4,
+   "inscrits": 4271,
+   "abstentions": 1882,
+   "votants": 2389,
+   "blancs": 44,
+   "nuls": 15,
+   "exprimes": 2330,
+   "nom": "Parmain",
+   "code_insee": "95480",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDIV",
+     "liste": "PARMAIN PAR COEUR",
+     "liste_complete": "PARMAIN PAR COEUR",
+     "voix": 1423,
+     "sieges_cm": 24,
+     "sieges_cc": 5,
+     "pct_exprimes": 61.07,
+     "pct_inscrits": 33.32
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDIV",
+     "liste": "PARMAIN 2026 VOTRE VOIX NOTRE VILLE",
+     "liste_complete": "PARMAIN 2026 VOTRE VOIX NOTRE VILLE",
+     "voix": 907,
+     "sieges_cm": 5,
+     "sieges_cc": 1,
+     "pct_exprimes": 38.93,
+     "pct_inscrits": 21.24
+    }
+   ],
+   "pct_abstention": 44.06,
+   "pct_participation": 55.94,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDIV",
+    "pct_exprimes": 61.07
+   }
+  },
+  "95483": {
+   "bureaux_de_vote": 1,
+   "inscrits": 408,
+   "abstentions": 175,
+   "votants": 233,
+   "blancs": 3,
+   "nuls": 4,
+   "exprimes": 226,
+   "nom": "Le Perchay",
+   "code_insee": "95483",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "ENSEMBLE POUR LE PERCHAY",
+     "liste_complete": "ENSEMBLE POUR LE PERCHAY",
+     "voix": 226,
+     "sieges_cm": 15,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 55.39
+    }
+   ],
+   "pct_abstention": 42.89,
+   "pct_participation": 57.11,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95487": {
+   "bureaux_de_vote": 8,
+   "inscrits": 6648,
+   "abstentions": 3548,
+   "votants": 3100,
+   "blancs": 43,
+   "nuls": 28,
+   "exprimes": 3029,
+   "nom": "Persan",
+   "code_insee": "95487",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "UNIS POUR PERSAN",
+     "liste_complete": "UNIS POUR PERSAN",
+     "voix": 1568,
+     "sieges_cm": 26,
+     "sieges_cc": 12,
+     "pct_exprimes": 51.77,
+     "pct_inscrits": 23.59
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVG",
+     "liste": "UN NOUVEAU SOUFFLE POUR PERSAN",
+     "liste_complete": "UN NOUVEAU SOUFFLE POUR PERSAN",
+     "voix": 1183,
+     "sieges_cm": 6,
+     "sieges_cc": 3,
+     "pct_exprimes": 39.06,
+     "pct_inscrits": 17.79
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "PERSAN L'AVENIR ENSEMBLE",
+     "liste_complete": "PERSAN L'AVENIR ENSEMBLE",
+     "voix": 278,
+     "sieges_cm": 1,
+     "sieges_cc": 0,
+     "pct_exprimes": 9.18,
+     "pct_inscrits": 4.18
+    }
+   ],
+   "pct_abstention": 53.37,
+   "pct_participation": 46.63,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVD",
+    "pct_exprimes": 51.77
+   }
+  },
+  "95488": {
+   "bureaux_de_vote": 7,
+   "inscrits": 5807,
+   "abstentions": 2941,
+   "votants": 2866,
+   "blancs": 48,
+   "nuls": 33,
+   "exprimes": 2785,
+   "nom": "Pierrelaye",
+   "code_insee": "95488",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "UN AVENIR POUR PIERRELAYE",
+     "liste_complete": "UN AVENIR POUR PIERRELAYE",
+     "voix": 1459,
+     "sieges_cm": 25,
+     "sieges_cc": 2,
+     "pct_exprimes": 52.39,
+     "pct_inscrits": 25.12
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVG",
+     "liste": "Avec vous pour Pierrelaye",
+     "liste_complete": "Avec vous pour Pierrelaye",
+     "voix": 1326,
+     "sieges_cm": 8,
+     "sieges_cc": 1,
+     "pct_exprimes": 47.61,
+     "pct_inscrits": 22.83
+    }
+   ],
+   "pct_abstention": 50.65,
+   "pct_participation": 49.35,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVD",
+    "pct_exprimes": 52.39
+   }
+  },
+  "95489": {
+   "bureaux_de_vote": 1,
+   "inscrits": 478,
+   "abstentions": 109,
+   "votants": 369,
+   "blancs": 0,
+   "nuls": 0,
+   "exprimes": 369,
+   "nom": "Piscop",
+   "code_insee": "95489",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "PISCOP, NOTRE VILLAGE, NOTRE AVENIR",
+     "liste_complete": "PISCOP, NOTRE VILLAGE, NOTRE AVENIR",
+     "voix": 257,
+     "sieges_cm": 13,
+     "sieges_cc": null,
+     "pct_exprimes": 69.65,
+     "pct_inscrits": 53.77
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "ENSEMBLE POUR PISCOP",
+     "liste_complete": "ENSEMBLE POUR PISCOP",
+     "voix": 112,
+     "sieges_cm": 2,
+     "sieges_cc": null,
+     "pct_exprimes": 30.35,
+     "pct_inscrits": 23.43
+    }
+   ],
+   "pct_abstention": 22.8,
+   "pct_participation": 77.2,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 69.65
+   }
+  },
+  "95491": {
+   "bureaux_de_vote": 9,
+   "inscrits": 6015,
+   "abstentions": 2434,
+   "votants": 3581,
+   "blancs": 45,
+   "nuls": 25,
+   "exprimes": 3511,
+   "nom": "Le Plessis-Bouchard",
+   "code_insee": "95491",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "ENGAGES POUR LE PLESSIS-BOUCHARD SUR SOLIDAIRE DURABLE",
+     "liste_complete": "ENGAGES POUR LE PLESSIS-BOUCHARD SUR SOLIDAIRE DURABLE",
+     "voix": 1531,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 43.61,
+     "pct_inscrits": 25.45
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "Vision Buccardesienne",
+     "liste_complete": "Vision Buccardesienne",
+     "voix": 1053,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 29.99,
+     "pct_inscrits": 17.51
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVC",
+     "liste": "Au Coeur Du Plessis",
+     "liste_complete": "Au Coeur Du Plessis",
+     "voix": 927,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 26.4,
+     "pct_inscrits": 15.41
+    }
+   ],
+   "pct_abstention": 40.47,
+   "pct_participation": 59.53,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVD",
+    "pct_exprimes": 43.61
+   }
+  },
+  "95492": {
+   "bureaux_de_vote": 1,
+   "inscrits": 84,
+   "abstentions": 3,
+   "votants": 81,
+   "blancs": 0,
+   "nuls": 0,
+   "exprimes": 81,
+   "nom": "Le Plessis-Gassot",
+   "code_insee": "95492",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "ENSEMBLE POUR LE PLESSIS-GASSOT",
+     "liste_complete": "ENSEMBLE POUR LE PLESSIS-GASSOT",
+     "voix": 42,
+     "sieges_cm": 9,
+     "sieges_cc": null,
+     "pct_exprimes": 51.85,
+     "pct_inscrits": 50.0
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "CONSTRUIRE LE BIEN VIVRE ENSEMBLE AUTOUR DE NOS VALEURS",
+     "liste_complete": "CONSTRUIRE LE BIEN VIVRE ENSEMBLE AUTOUR DE NOS VALEURS",
+     "voix": 39,
+     "sieges_cm": 2,
+     "sieges_cc": null,
+     "pct_exprimes": 48.15,
+     "pct_inscrits": 46.43
+    }
+   ],
+   "pct_abstention": 3.57,
+   "pct_participation": 96.43,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 51.85
+   }
+  },
+  "95493": {
+   "bureaux_de_vote": 1,
+   "inscrits": 112,
+   "abstentions": 28,
+   "votants": 84,
+   "blancs": 3,
+   "nuls": 6,
+   "exprimes": 75,
+   "nom": "Le Plessis-Luzarches",
+   "code_insee": "95493",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "ENSEMBLE FAISONS VIVRE NOTRE VILLAGE",
+     "liste_complete": "ENSEMBLE FAISONS VIVRE NOTRE VILLAGE",
+     "voix": 75,
+     "sieges_cm": 11,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 66.96
+    }
+   ],
+   "pct_abstention": 25.0,
+   "pct_participation": 75.0,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95500": {
+   "bureaux_de_vote": 22,
+   "inscrits": 18023,
+   "abstentions": 9935,
+   "votants": 8088,
+   "blancs": 150,
+   "nuls": 49,
+   "exprimes": 7889,
+   "nom": "Pontoise",
+   "code_insee": "95500",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LLR",
+     "liste": "UNION POUR PONTOISE",
+     "liste_complete": "UNION POUR PONTOISE",
+     "voix": 4902,
+     "sieges_cm": 32,
+     "sieges_cc": 9,
+     "pct_exprimes": 62.14,
+     "pct_inscrits": 27.2
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVG",
+     "liste": "LA L!STE",
+     "liste_complete": "LA L!STE",
+     "voix": 1834,
+     "sieges_cm": 4,
+     "sieges_cc": 1,
+     "pct_exprimes": 23.25,
+     "pct_inscrits": 10.18
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVG",
+     "liste": "CITOYENS DE PONTOISE - UNE VILLE JUSTE, HUMAINE ET DURABLE",
+     "liste_complete": "CITOYENS DE PONTOISE - UNE VILLE JUSTE, HUMAINE ET DURABLE",
+     "voix": 1153,
+     "sieges_cm": 3,
+     "sieges_cc": 0,
+     "pct_exprimes": 14.62,
+     "pct_inscrits": 6.4
+    }
+   ],
+   "pct_abstention": 55.12,
+   "pct_participation": 44.88,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LLR",
+    "pct_exprimes": 62.14
+   }
+  },
+  "95504": {
+   "bureaux_de_vote": 4,
+   "inscrits": 2831,
+   "abstentions": 885,
+   "votants": 1946,
+   "blancs": 30,
+   "nuls": 23,
+   "exprimes": 1893,
+   "nom": "Presles",
+   "code_insee": "95504",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "PRESLES 2026",
+     "liste_complete": "PRESLES 2026 UNE HISTOIRE UN AVENIR",
+     "voix": 1000,
+     "sieges_cm": 21,
+     "sieges_cc": 3,
+     "pct_exprimes": 52.83,
+     "pct_inscrits": 35.32
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVC",
+     "liste": "ENSEMBLE POUR PRESLES",
+     "liste_complete": "ENSEMBLE POUR PRESLES",
+     "voix": 558,
+     "sieges_cm": 4,
+     "sieges_cc": 1,
+     "pct_exprimes": 29.48,
+     "pct_inscrits": 19.71
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDIV",
+     "liste": "PRESLES A COEUR DE VILLAGE",
+     "liste_complete": "PRESLES A COEUR DE VILLAGE",
+     "voix": 335,
+     "sieges_cm": 2,
+     "sieges_cc": 0,
+     "pct_exprimes": 17.7,
+     "pct_inscrits": 11.83
+    }
+   ],
+   "pct_abstention": 31.26,
+   "pct_participation": 68.74,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVD",
+    "pct_exprimes": 52.83
+   }
+  },
+  "95509": {
+   "bureaux_de_vote": 3,
+   "inscrits": 2650,
+   "abstentions": 1218,
+   "votants": 1432,
+   "blancs": 22,
+   "nuls": 18,
+   "exprimes": 1392,
+   "nom": "Puiseux-en-France",
+   "code_insee": "95509",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDIV",
+     "liste": "PUISEUX EN FRANCE, C'EST VOUS !",
+     "liste_complete": "PUISEUX EN FRANCE, C'EST VOUS !",
+     "voix": 647,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 46.48,
+     "pct_inscrits": 24.42
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDIV",
+     "liste": "PUISEUX, VOTRE VILLE, NOTRE ENGAGEMENT !",
+     "liste_complete": "PUISEUX, VOTRE VILLE, NOTRE ENGAGEMENT !",
+     "voix": 490,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 35.2,
+     "pct_inscrits": 18.49
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDIV",
+     "liste": "MAINTENANT, LE CHANGEMENT",
+     "liste_complete": "MAINTENANT, LE CHANGEMENT",
+     "voix": 255,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 18.32,
+     "pct_inscrits": 9.62
+    }
+   ],
+   "pct_abstention": 45.96,
+   "pct_participation": 54.04,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDIV",
+    "pct_exprimes": 46.48
+   }
+  },
+  "95510": {
+   "bureaux_de_vote": 1,
+   "inscrits": 381,
+   "abstentions": 236,
+   "votants": 145,
+   "blancs": 4,
+   "nuls": 8,
+   "exprimes": 133,
+   "nom": "Puiseux-Pontoise",
+   "code_insee": "95510",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "VALEURS VILLAGEOISES",
+     "liste_complete": "VALEURS VILLAGEOISES",
+     "voix": 133,
+     "sieges_cm": 15,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 34.91
+    }
+   ],
+   "pct_abstention": 61.94,
+   "pct_participation": 38.06,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95523": {
+   "bureaux_de_vote": 1,
+   "inscrits": 312,
+   "abstentions": 78,
+   "votants": 234,
+   "blancs": 3,
+   "nuls": 3,
+   "exprimes": 228,
+   "nom": "La Roche-Guyon",
+   "code_insee": "95523",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "LA ROCHE-GUYON POUR TOUS",
+     "liste_complete": "LA ROCHE-GUYON POUR TOUS",
+     "voix": 148,
+     "sieges_cm": 9,
+     "sieges_cc": null,
+     "pct_exprimes": 64.91,
+     "pct_inscrits": 47.44
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "UN AVENIR A BATIR ENSEMBLE",
+     "liste_complete": "UN AVENIR A BATIR ENSEMBLE",
+     "voix": 80,
+     "sieges_cm": 2,
+     "sieges_cc": null,
+     "pct_exprimes": 35.09,
+     "pct_inscrits": 25.64
+    }
+   ],
+   "pct_abstention": 25.0,
+   "pct_participation": 75.0,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 64.91
+   }
+  },
+  "95527": {
+   "bureaux_de_vote": 1,
+   "inscrits": 1519,
+   "abstentions": 500,
+   "votants": 1019,
+   "blancs": 16,
+   "nuls": 9,
+   "exprimes": 994,
+   "nom": "Roissy-en-France",
+   "code_insee": "95527",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "ROISSY VILLAGE - ENGAGÉS À VOS CÔTÉS",
+     "liste_complete": "ROISSY VILLAGE - ENGAGÉS À VOS CÔTÉS",
+     "voix": 611,
+     "sieges_cm": 19,
+     "sieges_cc": 1,
+     "pct_exprimes": 61.47,
+     "pct_inscrits": 40.22
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "ROISSY 2026 AGIR ENSEMBLE",
+     "liste_complete": "ROISSY 2026 AGIR ENSEMBLE",
+     "voix": 383,
+     "sieges_cm": 4,
+     "sieges_cc": 0,
+     "pct_exprimes": 38.53,
+     "pct_inscrits": 25.21
+    }
+   ],
+   "pct_abstention": 32.92,
+   "pct_participation": 67.08,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 61.47
+   }
+  },
+  "95529": {
+   "bureaux_de_vote": 1,
+   "inscrits": 682,
+   "abstentions": 300,
+   "votants": 382,
+   "blancs": 8,
+   "nuls": 2,
+   "exprimes": 372,
+   "nom": "Ronquerolles",
+   "code_insee": "95529",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "ENSEMBLE POUR NOTRE VILLAGE",
+     "liste_complete": "ENSEMBLE POUR NOTRE VILLAGE",
+     "voix": 372,
+     "sieges_cm": 15,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 54.55
+    }
+   ],
+   "pct_abstention": 43.99,
+   "pct_participation": 56.01,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95535": {
+   "bureaux_de_vote": 1,
+   "inscrits": 930,
+   "abstentions": 446,
+   "votants": 484,
+   "blancs": 42,
+   "nuls": 39,
+   "exprimes": 403,
+   "nom": "Sagy",
+   "code_insee": "95535",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "UNIS POUR SAGY",
+     "liste_complete": "UNIS POUR SAGY",
+     "voix": 403,
+     "sieges_cm": 15,
+     "sieges_cc": 2,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 43.33
+    }
+   ],
+   "pct_abstention": 47.96,
+   "pct_participation": 52.04,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95539": {
+   "bureaux_de_vote": 9,
+   "inscrits": 9383,
+   "abstentions": 4501,
+   "votants": 4882,
+   "blancs": 44,
+   "nuls": 25,
+   "exprimes": 4813,
+   "nom": "Saint-Brice-sous-Forêt",
+   "code_insee": "95539",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "ENSEMBLE POUR SAINT-BRICE",
+     "liste_complete": "ENSEMBLE POUR SAINT-BRICE",
+     "voix": 2517,
+     "sieges_cm": 26,
+     "sieges_cc": 5,
+     "pct_exprimes": 52.3,
+     "pct_inscrits": 26.83
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVG",
+     "liste": "SAINT-BRICE DEMAIN",
+     "liste_complete": "SAINT-BRICE DEMAIN",
+     "voix": 1042,
+     "sieges_cm": 3,
+     "sieges_cc": 0,
+     "pct_exprimes": 21.65,
+     "pct_inscrits": 11.11
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LRN",
+     "liste": "RASSEMBLEMENT POUR SAINT-BRICE",
+     "liste_complete": "RASSEMBLEMENT POUR SAINT-BRICE",
+     "voix": 909,
+     "sieges_cm": 3,
+     "sieges_cc": 0,
+     "pct_exprimes": 18.89,
+     "pct_inscrits": 9.69
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "UN NOUVEL ÉLAN POUR SAINT-BRICE-SOUS-FORET",
+     "liste_complete": "UN NOUVEL ÉLAN POUR SAINT-BRICE-SOUS-FORET",
+     "voix": 345,
+     "sieges_cm": 1,
+     "sieges_cc": 0,
+     "pct_exprimes": 7.17,
+     "pct_inscrits": 3.68
+    }
+   ],
+   "pct_abstention": 47.97,
+   "pct_participation": 52.03,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVD",
+    "pct_exprimes": 52.3
+   }
+  },
+  "95541": {
+   "bureaux_de_vote": 1,
+   "inscrits": 641,
+   "abstentions": 354,
+   "votants": 287,
+   "blancs": 7,
+   "nuls": 9,
+   "exprimes": 271,
+   "nom": "Saint-Clair-sur-Epte",
+   "code_insee": "95541",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "ENERGIE SAINT-CLAIROISE",
+     "liste_complete": "ENERGIE SAINT-CLAIROISE",
+     "voix": 271,
+     "sieges_cm": 15,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 42.28
+    }
+   ],
+   "pct_abstention": 55.23,
+   "pct_participation": 44.77,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95543": {
+   "bureaux_de_vote": 1,
+   "inscrits": 188,
+   "abstentions": 60,
+   "votants": 128,
+   "blancs": 2,
+   "nuls": 2,
+   "exprimes": 124,
+   "nom": "Saint-Cyr-en-Arthies",
+   "code_insee": "95543",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "AGIR POUR NOTRE VILLAGE",
+     "liste_complete": "AGIR POUR NOTRE VILLAGE",
+     "voix": 124,
+     "sieges_cm": 11,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 65.96
+    }
+   ],
+   "pct_abstention": 31.91,
+   "pct_participation": 68.09,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95554": {
+   "bureaux_de_vote": 1,
+   "inscrits": 687,
+   "abstentions": 334,
+   "votants": 353,
+   "blancs": 39,
+   "nuls": 25,
+   "exprimes": 289,
+   "nom": "Saint-Gervais",
+   "code_insee": "95554",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "SAINT GERVAIS ENSEMBLE POUR DEMAIN",
+     "liste_complete": "SAINT GERVAIS ENSEMBLE POUR DEMAIN",
+     "voix": 289,
+     "sieges_cm": 15,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 42.07
+    }
+   ],
+   "pct_abstention": 48.62,
+   "pct_participation": 51.38,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95555": {
+   "bureaux_de_vote": 11,
+   "inscrits": 13491,
+   "abstentions": 6817,
+   "votants": 6674,
+   "blancs": 63,
+   "nuls": 41,
+   "exprimes": 6570,
+   "nom": "Saint-Gratien",
+   "code_insee": "95555",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "UNION POUR SAINT-GRATIEN (UPSG)",
+     "liste_complete": "UNION POUR SAINT-GRATIEN (UPSG)",
+     "voix": 3894,
+     "sieges_cm": 29,
+     "sieges_cc": 6,
+     "pct_exprimes": 59.27,
+     "pct_inscrits": 28.86
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDIV",
+     "liste": "SAINT-GRATIEN VILLE D'AVENIR",
+     "liste_complete": "SAINT-GRATIEN VILLE D'AVENIR",
+     "voix": 1760,
+     "sieges_cm": 4,
+     "sieges_cc": 1,
+     "pct_exprimes": 26.79,
+     "pct_inscrits": 13.05
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVG",
+     "liste": "SAINT GRATIEN SOLIDAIRE ÉCOLOGIQUE ET CITOYEN",
+     "liste_complete": "SAINT GRATIEN SOLIDAIRE ÉCOLOGIQUE ET CITOYEN",
+     "voix": 916,
+     "sieges_cm": 2,
+     "sieges_cc": 0,
+     "pct_exprimes": 13.94,
+     "pct_inscrits": 6.79
+    }
+   ],
+   "pct_abstention": 50.53,
+   "pct_participation": 49.47,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVD",
+    "pct_exprimes": 59.27
+   }
+  },
+  "95563": {
+   "bureaux_de_vote": 10,
+   "inscrits": 11680,
+   "abstentions": 4855,
+   "votants": 6825,
+   "blancs": 74,
+   "nuls": 49,
+   "exprimes": 6702,
+   "nom": "Saint-Leu-la-Forêt",
+   "code_insee": "95563",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "AGIR ENSEMBLE POUR SAINT LEU",
+     "liste_complete": "AGIR ENSEMBLE POUR SAINT LEU",
+     "voix": 1885,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 28.13,
+     "pct_inscrits": 16.14
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVG",
+     "liste": "SAINT-LEU POUR TOUS",
+     "liste_complete": "SAINT-LEU POUR TOUS",
+     "voix": 1843,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 27.5,
+     "pct_inscrits": 15.78
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "J'AIME SAINT-LEU",
+     "liste_complete": "J'AIME SAINT-LEU",
+     "voix": 1763,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 26.31,
+     "pct_inscrits": 15.09
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDIV",
+     "liste": "JE VOTE ST LEU",
+     "liste_complete": "JE VOTE ST LEU",
+     "voix": 1211,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 18.07,
+     "pct_inscrits": 10.37
+    }
+   ],
+   "pct_abstention": 41.57,
+   "pct_participation": 58.43,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVD",
+    "pct_exprimes": 28.13
+   }
+  },
+  "95566": {
+   "bureaux_de_vote": 2,
+   "inscrits": 1887,
+   "abstentions": 849,
+   "votants": 1038,
+   "blancs": 12,
+   "nuls": 6,
+   "exprimes": 1020,
+   "nom": "Saint-Martin-du-Tertre",
+   "code_insee": "95566",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "PERSPECTIVES POUR SAINT-MARTIN",
+     "liste_complete": "PERSPECTIVES POUR SAINT-MARTIN",
+     "voix": 384,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 37.65,
+     "pct_inscrits": 20.35
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "L'AVENIR C'EST ENSEMBLE",
+     "liste_complete": "L'AVENIR C'EST ENSEMBLE",
+     "voix": 367,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 35.98,
+     "pct_inscrits": 19.45
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "NOUVEAU SOUFFLE POUR SAINT-MARTIN-DU-TERTRE",
+     "liste_complete": "NOUVEAU SOUFFLE POUR SAINT-MARTIN-DU-TERTRE",
+     "voix": 269,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 26.37,
+     "pct_inscrits": 14.26
+    }
+   ],
+   "pct_abstention": 44.99,
+   "pct_participation": 55.01,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 37.65
+   }
+  },
+  "95572": {
+   "bureaux_de_vote": 12,
+   "inscrits": 13505,
+   "abstentions": 7769,
+   "votants": 5736,
+   "blancs": 78,
+   "nuls": 37,
+   "exprimes": 5621,
+   "nom": "Saint-Ouen-l'Aumône",
+   "code_insee": "95572",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVG",
+     "liste": "AGIR AVEC VOUS POUR SAINT-OUEN-L'AUMONE",
+     "liste_complete": "AGIR AVEC VOUS POUR SAINT-OUEN-L'AUMONE",
+     "voix": 3232,
+     "sieges_cm": 28,
+     "sieges_cc": 7,
+     "pct_exprimes": 57.5,
+     "pct_inscrits": 23.93
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "VOTRE VOIX, NOTRE ACTION",
+     "liste_complete": "VOTRE VOIX, NOTRE ACTION",
+     "voix": 1338,
+     "sieges_cm": 4,
+     "sieges_cc": 1,
+     "pct_exprimes": 23.8,
+     "pct_inscrits": 9.91
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LFI",
+     "liste": "SOA GAUCHE CITOYENNE",
+     "liste_complete": "SOA GAUCHE CITOYENNE",
+     "voix": 705,
+     "sieges_cm": 2,
+     "sieges_cc": 0,
+     "pct_exprimes": 12.54,
+     "pct_inscrits": 5.22
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDIV",
+     "liste": "NOTRE CAUSE COMMUNE",
+     "liste_complete": "NOTRE CAUSE COMMUNE",
+     "voix": 346,
+     "sieges_cm": 1,
+     "sieges_cc": 0,
+     "pct_exprimes": 6.16,
+     "pct_inscrits": 2.56
+    }
+   ],
+   "pct_abstention": 57.53,
+   "pct_participation": 42.47,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVG",
+    "pct_exprimes": 57.5
+   }
+  },
+  "95574": {
+   "bureaux_de_vote": 7,
+   "inscrits": 5855,
+   "abstentions": 2344,
+   "votants": 3511,
+   "blancs": 54,
+   "nuls": 31,
+   "exprimes": 3426,
+   "nom": "Saint-Prix",
+   "code_insee": "95574",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "UNIS POUR SAINT-PRIX",
+     "liste_complete": "UNIS POUR SAINT-PRIX",
+     "voix": 2352,
+     "sieges_cm": 25,
+     "sieges_cc": 3,
+     "pct_exprimes": 68.65,
+     "pct_inscrits": 40.17
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "ENSEMBLE POUR SAINT-PRIX",
+     "liste_complete": "ENSEMBLE POUR SAINT-PRIX",
+     "voix": 1074,
+     "sieges_cm": 4,
+     "sieges_cc": 0,
+     "pct_exprimes": 31.35,
+     "pct_inscrits": 18.34
+    }
+   ],
+   "pct_abstention": 40.03,
+   "pct_participation": 59.97,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVD",
+    "pct_exprimes": 68.65
+   }
+  },
+  "95580": {
+   "bureaux_de_vote": 2,
+   "inscrits": 2067,
+   "abstentions": 1131,
+   "votants": 936,
+   "blancs": 84,
+   "nuls": 11,
+   "exprimes": 841,
+   "nom": "Saint-Witz",
+   "code_insee": "95580",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "AVEC VOUS, POUR SAINT-WITZ",
+     "liste_complete": "AVEC VOUS, POUR SAINT-WITZ",
+     "voix": 841,
+     "sieges_cm": 23,
+     "sieges_cc": 1,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 40.69
+    }
+   ],
+   "pct_abstention": 54.72,
+   "pct_participation": 45.28,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95582": {
+   "bureaux_de_vote": 17,
+   "inscrits": 17305,
+   "abstentions": 8137,
+   "votants": 9168,
+   "blancs": 76,
+   "nuls": 46,
+   "exprimes": 9046,
+   "nom": "Sannois",
+   "code_insee": "95582",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "UNIS POUR SANNOIS",
+     "liste_complete": "UNIS POUR SANNOIS",
+     "voix": 2498,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 27.61,
+     "pct_inscrits": 14.44
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "L'AVENIR EN CONFIANCE",
+     "liste_complete": "L'AVENIR EN CONFIANCE",
+     "voix": 2269,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 25.08,
+     "pct_inscrits": 13.11
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDIV",
+     "liste": "Sannois à Vivre",
+     "liste_complete": "Sannois à Vivre",
+     "voix": 1744,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 19.28,
+     "pct_inscrits": 10.08
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LUG",
+     "liste": "RASSEMBLER SANNOIS, ECOLOGIQUE ET SOLIDAIRE",
+     "liste_complete": "RASSEMBLER SANNOIS, ECOLOGIQUE ET SOLIDAIRE",
+     "voix": 1432,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 15.83,
+     "pct_inscrits": 8.28
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LFI",
+     "liste": "SANNOIS POPULAIRE ET INSOUMISE",
+     "liste_complete": "SANNOIS POPULAIRE ET INSOUMISE",
+     "voix": 1103,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 12.19,
+     "pct_inscrits": 6.37
+    }
+   ],
+   "pct_abstention": 47.02,
+   "pct_participation": 52.98,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVD",
+    "pct_exprimes": 27.61
+   }
+  },
+  "95584": {
+   "bureaux_de_vote": 1,
+   "inscrits": 494,
+   "abstentions": 255,
+   "votants": 239,
+   "blancs": 25,
+   "nuls": 21,
+   "exprimes": 193,
+   "nom": "Santeuil",
+   "code_insee": "95584",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "CONTINUONS D'AGIR POUR SANTEUIL",
+     "liste_complete": "CONTINUONS D'AGIR POUR SANTEUIL",
+     "voix": 193,
+     "sieges_cm": 15,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 39.07
+    }
+   ],
+   "pct_abstention": 51.62,
+   "pct_participation": 48.38,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95585": {
+   "bureaux_de_vote": 30,
+   "inscrits": 28269,
+   "abstentions": 15474,
+   "votants": 12795,
+   "blancs": 138,
+   "nuls": 94,
+   "exprimes": 12563,
+   "nom": "Sarcelles",
+   "code_insee": "95585",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDIV",
+     "liste": "SARCELLES UNIE POUR RÉUSSIR",
+     "liste_complete": "SARCELLES UNIE POUR RÉUSSIR",
+     "voix": 5617,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 44.71,
+     "pct_inscrits": 19.87
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDIV",
+     "liste": "SARCELLES POUR TOUS",
+     "liste_complete": "SARCELLES POUR TOUS",
+     "voix": 3465,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 27.58,
+     "pct_inscrits": 12.26
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LSOC",
+     "liste": "UNE AMBITION POUR SARCELLES",
+     "liste_complete": "UNE AMBITION POUR SARCELLES",
+     "voix": 3191,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 25.4,
+     "pct_inscrits": 11.29
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVG",
+     "liste": "POUR UN SARCELLES POPULAIRE",
+     "liste_complete": "POUR UN SARCELLES POPULAIRE",
+     "voix": 290,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 2.31,
+     "pct_inscrits": 1.03
+    }
+   ],
+   "pct_abstention": 54.74,
+   "pct_participation": 45.26,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDIV",
+    "pct_exprimes": 44.71
+   }
+  },
+  "95592": {
+   "bureaux_de_vote": 1,
+   "inscrits": 964,
+   "abstentions": 484,
+   "votants": 480,
+   "blancs": 28,
+   "nuls": 24,
+   "exprimes": 428,
+   "nom": "Seraincourt",
+   "code_insee": "95592",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "UNIS POUR DEMAIN",
+     "liste_complete": "UNIS POUR DEMAIN",
+     "voix": 428,
+     "sieges_cm": 15,
+     "sieges_cc": 2,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 44.4
+    }
+   ],
+   "pct_abstention": 50.21,
+   "pct_participation": 49.79,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95594": {
+   "bureaux_de_vote": 1,
+   "inscrits": 795,
+   "abstentions": 322,
+   "votants": 473,
+   "blancs": 14,
+   "nuls": 4,
+   "exprimes": 455,
+   "nom": "Seugy",
+   "code_insee": "95594",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "UNIS POUR NOTRE VILLAGE",
+     "liste_complete": "UNIS POUR NOTRE VILLAGE",
+     "voix": 294,
+     "sieges_cm": 13,
+     "sieges_cc": 1,
+     "pct_exprimes": 64.62,
+     "pct_inscrits": 36.98
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "VIVRE A SEUGY",
+     "liste_complete": "VIVRE A SEUGY",
+     "voix": 161,
+     "sieges_cm": 2,
+     "sieges_cc": 0,
+     "pct_exprimes": 35.38,
+     "pct_inscrits": 20.25
+    }
+   ],
+   "pct_abstention": 40.5,
+   "pct_participation": 59.5,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 64.62
+   }
+  },
+  "95598": {
+   "bureaux_de_vote": 10,
+   "inscrits": 12136,
+   "abstentions": 5722,
+   "votants": 6414,
+   "blancs": 66,
+   "nuls": 81,
+   "exprimes": 6267,
+   "nom": "Soisy-sous-Montmorency",
+   "code_insee": "95598",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "SOISY AVENIR",
+     "liste_complete": "SOISY AVENIR",
+     "voix": 2140,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 34.15,
+     "pct_inscrits": 17.63
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "DEMAIN SOISY",
+     "liste_complete": "DEMAIN SOISY",
+     "voix": 1705,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 27.21,
+     "pct_inscrits": 14.05
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDIV",
+     "liste": "SOISY ENSEMBLE",
+     "liste_complete": "SOISY ENSEMBLE",
+     "voix": 964,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 15.38,
+     "pct_inscrits": 7.94
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVC",
+     "liste": "VIVRE SOISY",
+     "liste_complete": "VIVRE SOISY",
+     "voix": 963,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 15.37,
+     "pct_inscrits": 7.94
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDIV",
+     "liste": "EN AVANT SOISY",
+     "liste_complete": "EN AVANT SOISY",
+     "voix": 495,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 7.9,
+     "pct_inscrits": 4.08
+    }
+   ],
+   "pct_abstention": 47.15,
+   "pct_participation": 52.85,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVD",
+    "pct_exprimes": 34.15
+   }
+  },
+  "95604": {
+   "bureaux_de_vote": 2,
+   "inscrits": 2565,
+   "abstentions": 1004,
+   "votants": 1561,
+   "blancs": 26,
+   "nuls": 7,
+   "exprimes": 1528,
+   "nom": "Survilliers",
+   "code_insee": "95604",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDIV",
+     "liste": "UN VILLAGE, UNE ÉQUIPE",
+     "liste_complete": "UN VILLAGE, UNE ÉQUIPE",
+     "voix": 919,
+     "sieges_cm": 22,
+     "sieges_cc": 1,
+     "pct_exprimes": 60.14,
+     "pct_inscrits": 35.83
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "SURVILLIERS AUTHENTIQUE",
+     "liste_complete": "SURVILLIERS AUTHENTIQUE",
+     "voix": 609,
+     "sieges_cm": 5,
+     "sieges_cc": 0,
+     "pct_exprimes": 39.86,
+     "pct_inscrits": 23.74
+    }
+   ],
+   "pct_abstention": 39.14,
+   "pct_participation": 60.86,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDIV",
+    "pct_exprimes": 60.14
+   }
+  },
+  "95607": {
+   "bureaux_de_vote": 18,
+   "inscrits": 18043,
+   "abstentions": 8156,
+   "votants": 9887,
+   "blancs": 162,
+   "nuls": 96,
+   "exprimes": 9629,
+   "nom": "Taverny",
+   "code_insee": "95607",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "EN AVANT TAVERNY",
+     "liste_complete": "EN AVANT TAVERNY",
+     "voix": 6228,
+     "sieges_cm": 29,
+     "sieges_cc": 7,
+     "pct_exprimes": 64.68,
+     "pct_inscrits": 34.52
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LUG",
+     "liste": "TAVERNY DEMAIN AVEC THOMAS COTTINET",
+     "liste_complete": "TAVERNY DEMAIN AVEC THOMAS COTTINET",
+     "voix": 3401,
+     "sieges_cm": 6,
+     "sieges_cc": 1,
+     "pct_exprimes": 35.32,
+     "pct_inscrits": 18.85
+    }
+   ],
+   "pct_abstention": 45.2,
+   "pct_participation": 54.8,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVD",
+    "pct_exprimes": 64.68
+   }
+  },
+  "95610": {
+   "bureaux_de_vote": 1,
+   "inscrits": 232,
+   "abstentions": 111,
+   "votants": 121,
+   "blancs": 16,
+   "nuls": 7,
+   "exprimes": 98,
+   "nom": "Théméricourt",
+   "code_insee": "95610",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "ENSEMBLE POUR THEMERICOURT",
+     "liste_complete": "ENSEMBLE POUR THEMERICOURT",
+     "voix": 98,
+     "sieges_cm": 11,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 42.24
+    }
+   ],
+   "pct_abstention": 47.84,
+   "pct_participation": 52.16,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95611": {
+   "bureaux_de_vote": 1,
+   "inscrits": 24,
+   "abstentions": 4,
+   "votants": 20,
+   "blancs": 0,
+   "nuls": 0,
+   "exprimes": 20,
+   "nom": "Theuville",
+   "code_insee": "95611",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "THEUVILLE 2026",
+     "liste_complete": "THEUVILLE 2026",
+     "voix": 20,
+     "sieges_cm": 7,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 83.33
+    }
+   ],
+   "pct_abstention": 16.67,
+   "pct_participation": 83.33,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95612": {
+   "bureaux_de_vote": 3,
+   "inscrits": 2533,
+   "abstentions": 1237,
+   "votants": 1296,
+   "blancs": 20,
+   "nuls": 15,
+   "exprimes": 1261,
+   "nom": "Le Thillay",
+   "code_insee": "95612",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "ENGAGE POUR L'AVENIR DE LE THILLAY",
+     "liste_complete": "ENGAGE POUR L'AVENIR DE LE THILLAY",
+     "voix": 503,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 39.89,
+     "pct_inscrits": 19.86
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVC",
+     "liste": "ENSEMBLE AIMONS LE THILLAY",
+     "liste_complete": "ENSEMBLE AIMONS LE THILLAY",
+     "voix": 487,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 38.62,
+     "pct_inscrits": 19.23
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDIV",
+     "liste": "PARLER VRAI, AGIR JUSTE POUR LE THILLAY",
+     "liste_complete": "PARLER VRAI, AGIR JUSTE POUR LE THILLAY",
+     "voix": 271,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 21.49,
+     "pct_inscrits": 10.7
+    }
+   ],
+   "pct_abstention": 48.84,
+   "pct_participation": 51.16,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVD",
+    "pct_exprimes": 39.89
+   }
+  },
+  "95625": {
+   "bureaux_de_vote": 1,
+   "inscrits": 952,
+   "abstentions": 248,
+   "votants": 704,
+   "blancs": 6,
+   "nuls": 3,
+   "exprimes": 695,
+   "nom": "Us",
+   "code_insee": "95625",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "DE L'ENERGIE D'UNE EQUIPE NAIT L'AVENIR D'UN VILLAGE",
+     "liste_complete": "DE L'ENERGIE D'UNE EQUIPE NAIT L'AVENIR D'UN VILLAGE",
+     "voix": 513,
+     "sieges_cm": 13,
+     "sieges_cc": 2,
+     "pct_exprimes": 73.81,
+     "pct_inscrits": 53.89
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "US EN MOUVEMENT",
+     "liste_complete": "US EN MOUVEMENT",
+     "voix": 182,
+     "sieges_cm": 2,
+     "sieges_cc": 0,
+     "pct_exprimes": 26.19,
+     "pct_inscrits": 19.12
+    }
+   ],
+   "pct_abstention": 26.05,
+   "pct_participation": 73.95,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 73.81
+   }
+  },
+  "95627": {
+   "bureaux_de_vote": 1,
+   "inscrits": 489,
+   "abstentions": 110,
+   "votants": 379,
+   "blancs": 1,
+   "nuls": 0,
+   "exprimes": 378,
+   "nom": "Vallangoujard",
+   "code_insee": "95627",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "VALLANGOUJARD, L'AVENIR SE CONSTRUIT ENSEMBLE",
+     "liste_complete": "VALLANGOUJARD, L'AVENIR SE CONSTRUIT ENSEMBLE",
+     "voix": 163,
+     "sieges_cm": 0,
+     "sieges_cc": null,
+     "pct_exprimes": 43.12,
+     "pct_inscrits": 33.33
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "VALLANGOUJARD UN VILLAGE QUI NOUS RASSEMBLE",
+     "liste_complete": "VALLANGOUJARD UN VILLAGE QUI NOUS RASSEMBLE",
+     "voix": 125,
+     "sieges_cm": 0,
+     "sieges_cc": null,
+     "pct_exprimes": 33.07,
+     "pct_inscrits": 25.56
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "UN NOUVEL ELAN POUR VALLANGOUJARD",
+     "liste_complete": "UN NOUVEL ELAN POUR VALLANGOUJARD",
+     "voix": 90,
+     "sieges_cm": 0,
+     "sieges_cc": null,
+     "pct_exprimes": 23.81,
+     "pct_inscrits": 18.4
+    }
+   ],
+   "pct_abstention": 22.49,
+   "pct_participation": 77.51,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 43.12
+   }
+  },
+  "95628": {
+   "bureaux_de_vote": 1,
+   "inscrits": 1070,
+   "abstentions": 376,
+   "votants": 694,
+   "blancs": 14,
+   "nuls": 3,
+   "exprimes": 677,
+   "nom": "Valmondois",
+   "code_insee": "95628",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "ENSEMBLE POUR VALMONDOIS",
+     "liste_complete": "ENSEMBLE POUR VALMONDOIS",
+     "voix": 374,
+     "sieges_cm": 12,
+     "sieges_cc": 2,
+     "pct_exprimes": 55.24,
+     "pct_inscrits": 34.95
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "VALMONDOIS C'EST VOUS",
+     "liste_complete": "VALMONDOIS C'EST VOUS",
+     "voix": 303,
+     "sieges_cm": 3,
+     "sieges_cc": 0,
+     "pct_exprimes": 44.76,
+     "pct_inscrits": 28.32
+    }
+   ],
+   "pct_abstention": 35.14,
+   "pct_participation": 64.86,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 55.24
+   }
+  },
+  "95633": {
+   "bureaux_de_vote": 1,
+   "inscrits": 65,
+   "abstentions": 18,
+   "votants": 47,
+   "blancs": 0,
+   "nuls": 0,
+   "exprimes": 47,
+   "nom": "Vaudherland",
+   "code_insee": "95633",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "VIVRE ENSEMBLE A VAUDHERLAND",
+     "liste_complete": "VIVRE ENSEMBLE A VAUDHERLAND",
+     "voix": 47,
+     "sieges_cm": 11,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 72.31
+    }
+   ],
+   "pct_abstention": 27.69,
+   "pct_participation": 72.31,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95637": {
+   "bureaux_de_vote": 12,
+   "inscrits": 12005,
+   "abstentions": 6271,
+   "votants": 5734,
+   "blancs": 127,
+   "nuls": 0,
+   "exprimes": 5607,
+   "nom": "Vauréal",
+   "code_insee": "95637",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVG",
+     "liste": "VAUREAL, UN AVENIR POUR TOUS",
+     "liste_complete": "VAUREAL, UN AVENIR POUR TOUS",
+     "voix": 3724,
+     "sieges_cm": 28,
+     "sieges_cc": 5,
+     "pct_exprimes": 66.42,
+     "pct_inscrits": 31.02
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDIV",
+     "liste": "PACTE POUR VAUREAL",
+     "liste_complete": "PACTE POUR VAUREAL",
+     "voix": 1017,
+     "sieges_cm": 3,
+     "sieges_cc": 0,
+     "pct_exprimes": 18.14,
+     "pct_inscrits": 8.47
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "VAUREAL AUTREMENT",
+     "liste_complete": "VAUREAL AUTREMENT",
+     "voix": 866,
+     "sieges_cm": 2,
+     "sieges_cc": 0,
+     "pct_exprimes": 15.44,
+     "pct_inscrits": 7.21
+    }
+   ],
+   "pct_abstention": 52.24,
+   "pct_participation": 47.76,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVG",
+    "pct_exprimes": 66.42
+   }
+  },
+  "95641": {
+   "bureaux_de_vote": 2,
+   "inscrits": 1943,
+   "abstentions": 818,
+   "votants": 1125,
+   "blancs": 12,
+   "nuls": 6,
+   "exprimes": 1107,
+   "nom": "Vémars",
+   "code_insee": "95641",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "AGIR POUR VÉMARS",
+     "liste_complete": "AGIR POUR VÉMARS",
+     "voix": 484,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 43.72,
+     "pct_inscrits": 24.91
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "VEMARS ENSEMBLE POUR L'AVENIR",
+     "liste_complete": "VEMARS ENSEMBLE POUR L'AVENIR",
+     "voix": 312,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 28.18,
+     "pct_inscrits": 16.06
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "VEMARS, UN SOUFFLE NOUVEAU",
+     "liste_complete": "VEMARS, UN SOUFFLE NOUVEAU",
+     "voix": 311,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 28.09,
+     "pct_inscrits": 16.01
+    }
+   ],
+   "pct_abstention": 42.1,
+   "pct_participation": 57.9,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 43.72
+   }
+  },
+  "95651": {
+   "bureaux_de_vote": 1,
+   "inscrits": 610,
+   "abstentions": 300,
+   "votants": 310,
+   "blancs": 29,
+   "nuls": 30,
+   "exprimes": 251,
+   "nom": "Vétheuil",
+   "code_insee": "95651",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "NATURELLEMENT VETHEUIL",
+     "liste_complete": "NATURELLEMENT VETHEUIL",
+     "voix": 251,
+     "sieges_cm": 15,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 41.15
+    }
+   ],
+   "pct_abstention": 49.18,
+   "pct_participation": 50.82,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95652": {
+   "bureaux_de_vote": 3,
+   "inscrits": 4075,
+   "abstentions": 1786,
+   "votants": 2289,
+   "blancs": 58,
+   "nuls": 22,
+   "exprimes": 2209,
+   "nom": "Viarmes",
+   "code_insee": "95652",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "VIARMES, NOTRE VILLE, NOTRE AVENIR",
+     "liste_complete": "VIARMES, NOTRE VILLE, NOTRE AVENIR",
+     "voix": 1338,
+     "sieges_cm": 24,
+     "sieges_cc": 5,
+     "pct_exprimes": 60.57,
+     "pct_inscrits": 32.83
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVD",
+     "liste": "ENSEMBLE POUR VIARMES",
+     "liste_complete": "ENSEMBLE POUR VIARMES",
+     "voix": 871,
+     "sieges_cm": 5,
+     "sieges_cc": 1,
+     "pct_exprimes": 39.43,
+     "pct_inscrits": 21.37
+    }
+   ],
+   "pct_abstention": 43.83,
+   "pct_participation": 56.17,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LDVD",
+    "pct_exprimes": 60.57
+   }
+  },
+  "95656": {
+   "bureaux_de_vote": 1,
+   "inscrits": 306,
+   "abstentions": 51,
+   "votants": 255,
+   "blancs": 1,
+   "nuls": 1,
+   "exprimes": 253,
+   "nom": "Vienne-en-Arthies",
+   "code_insee": "95656",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "VIENNE EN ARTHIES DES RACINES , UN AVENIR",
+     "liste_complete": "VIENNE EN ARTHIES DES RACINES , UN AVENIR",
+     "voix": 151,
+     "sieges_cm": 9,
+     "sieges_cc": null,
+     "pct_exprimes": 59.68,
+     "pct_inscrits": 49.35
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "VIENNE EN RELIEFS",
+     "liste_complete": "VIENNE EN RELIEFS",
+     "voix": 102,
+     "sieges_cm": 2,
+     "sieges_cc": null,
+     "pct_exprimes": 40.32,
+     "pct_inscrits": 33.33
+    }
+   ],
+   "pct_abstention": 16.67,
+   "pct_participation": 83.33,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 59.68
+   }
+  },
+  "95658": {
+   "bureaux_de_vote": 1,
+   "inscrits": 872,
+   "abstentions": 436,
+   "votants": 436,
+   "blancs": 24,
+   "nuls": 10,
+   "exprimes": 402,
+   "nom": "Vigny",
+   "code_insee": "95658",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "ENSEMBLE POUR VIGNY",
+     "liste_complete": "ENSEMBLE POUR VIGNY",
+     "voix": 402,
+     "sieges_cm": 15,
+     "sieges_cc": 2,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 46.1
+    }
+   ],
+   "pct_abstention": 50.0,
+   "pct_participation": 50.0,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95660": {
+   "bureaux_de_vote": 1,
+   "inscrits": 578,
+   "abstentions": 261,
+   "votants": 317,
+   "blancs": 6,
+   "nuls": 19,
+   "exprimes": 292,
+   "nom": "Villaines-sous-Bois",
+   "code_insee": "95660",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "VILLAINES 2026, UN VILLAGE VIVANT !",
+     "liste_complete": "VILLAINES 2026, UN VILLAGE VIVANT !",
+     "voix": 292,
+     "sieges_cm": 15,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 50.52
+    }
+   ],
+   "pct_abstention": 45.16,
+   "pct_participation": 54.84,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95675": {
+   "bureaux_de_vote": 1,
+   "inscrits": 990,
+   "abstentions": 352,
+   "votants": 638,
+   "blancs": 4,
+   "nuls": 3,
+   "exprimes": 631,
+   "nom": "Villeron",
+   "code_insee": "95675",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "UNIS ET ENGAGES POUR VILLERON",
+     "liste_complete": "UNIS ET ENGAGES POUR VILLERON",
+     "voix": 428,
+     "sieges_cm": 16,
+     "sieges_cc": 1,
+     "pct_exprimes": 67.83,
+     "pct_inscrits": 43.23
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "VILLERON : AGIR ENSEMBLE",
+     "liste_complete": "VILLERON : AGIR ENSEMBLE",
+     "voix": 203,
+     "sieges_cm": 3,
+     "sieges_cc": 0,
+     "pct_exprimes": 32.17,
+     "pct_inscrits": 20.51
+    }
+   ],
+   "pct_abstention": 35.56,
+   "pct_participation": 64.44,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 67.83
+   }
+  },
+  "95676": {
+   "bureaux_de_vote": 1,
+   "inscrits": 407,
+   "abstentions": 89,
+   "votants": 318,
+   "blancs": 4,
+   "nuls": 3,
+   "exprimes": 311,
+   "nom": "Villers-en-Arthies",
+   "code_insee": "95676",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "ENSEMBLE POUR VILLERS : PRESERVONS, INNOVONS, PROTEGEONS",
+     "liste_complete": "ENSEMBLE POUR VILLERS : PRESERVONS, INNOVONS, PROTEGEONS",
+     "voix": 168,
+     "sieges_cm": 9,
+     "sieges_cc": null,
+     "pct_exprimes": 54.02,
+     "pct_inscrits": 41.28
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "VILLERS UN NOUVEL ELAN",
+     "liste_complete": "VILLERS UN NOUVEL ELAN",
+     "voix": 143,
+     "sieges_cm": 2,
+     "sieges_cc": null,
+     "pct_exprimes": 45.98,
+     "pct_inscrits": 35.14
+    }
+   ],
+   "pct_abstention": 21.87,
+   "pct_participation": 78.13,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 54.02
+   }
+  },
+  "95678": {
+   "bureaux_de_vote": 1,
+   "inscrits": 621,
+   "abstentions": 103,
+   "votants": 518,
+   "blancs": 1,
+   "nuls": 2,
+   "exprimes": 515,
+   "nom": "Villiers-Adam",
+   "code_insee": "95678",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "VILLIERS-ADAM, LE COEUR A L'OUVRAGE",
+     "liste_complete": "VILLIERS-ADAM, LE COEUR A L'OUVRAGE",
+     "voix": 276,
+     "sieges_cm": 12,
+     "sieges_cc": null,
+     "pct_exprimes": 53.59,
+     "pct_inscrits": 44.44
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "UN ESPRIT VILLAGE, UN AVENIR COMMUN",
+     "liste_complete": "UN ESPRIT VILLAGE, UN AVENIR COMMUN",
+     "voix": 147,
+     "sieges_cm": 2,
+     "sieges_cc": null,
+     "pct_exprimes": 28.54,
+     "pct_inscrits": 23.67
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "AGIR ENSEMBLE POUR VILLIERS-ADAM",
+     "liste_complete": "AGIR ENSEMBLE POUR VILLIERS-ADAM",
+     "voix": 92,
+     "sieges_cm": 1,
+     "sieges_cc": null,
+     "pct_exprimes": 17.86,
+     "pct_inscrits": 14.81
+    }
+   ],
+   "pct_abstention": 16.59,
+   "pct_participation": 83.41,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 53.59
+   }
+  },
+  "95680": {
+   "bureaux_de_vote": 15,
+   "inscrits": 13678,
+   "abstentions": 7755,
+   "votants": 5923,
+   "blancs": 88,
+   "nuls": 67,
+   "exprimes": 5768,
+   "nom": "Villiers-le-Bel",
+   "code_insee": "95680",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LSOC",
+     "liste": "AVEC VOUS, POUR VOUS",
+     "liste_complete": "AVEC VOUS, POUR VOUS",
+     "voix": 2525,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 43.78,
+     "pct_inscrits": 18.46
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LFI",
+     "liste": "VIILIERS LE BEL EN AVANT",
+     "liste_complete": "VIILIERS LE BEL EN AVANT",
+     "voix": 1912,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 33.15,
+     "pct_inscrits": 13.98
+    },
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": "LDVG",
+     "liste": "TOUS ENSEMBLE",
+     "liste_complete": "TOUS ENSEMBLE",
+     "voix": 1331,
+     "sieges_cm": 0,
+     "sieges_cc": 0,
+     "pct_exprimes": 23.08,
+     "pct_inscrits": 9.73
+    }
+   ],
+   "pct_abstention": 56.7,
+   "pct_participation": 43.3,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": "LSOC",
+    "pct_exprimes": 43.78
+   }
+  },
+  "95682": {
+   "bureaux_de_vote": 1,
+   "inscrits": 129,
+   "abstentions": 51,
+   "votants": 78,
+   "blancs": 4,
+   "nuls": 4,
+   "exprimes": 70,
+   "nom": "Villiers-le-Sec",
+   "code_insee": "95682",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "POUR LE BIEN ÊTRE DES HABITANTS",
+     "liste_complete": "POUR LE BIEN ÊTRE DES HABITANTS",
+     "voix": 70,
+     "sieges_cm": 11,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 54.26
+    }
+   ],
+   "pct_abstention": 39.53,
+   "pct_participation": 60.47,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  },
+  "95690": {
+   "bureaux_de_vote": 1,
+   "inscrits": 297,
+   "abstentions": 113,
+   "votants": 184,
+   "blancs": 4,
+   "nuls": 11,
+   "exprimes": 169,
+   "nom": "Wy-dit-Joli-Village",
+   "code_insee": "95690",
+   "code_circonscription": null,
+   "candidats": [
+    {
+     "nom": null,
+     "prenom": null,
+     "nuance": null,
+     "liste": "wy 2026",
+     "liste_complete": "wy 2026",
+     "voix": 169,
+     "sieges_cm": 11,
+     "sieges_cc": null,
+     "pct_exprimes": 100.0,
+     "pct_inscrits": 56.9
+    }
+   ],
+   "pct_abstention": 38.05,
+   "pct_participation": 61.95,
+   "tete": {
+    "nom": null,
+    "prenom": null,
+    "nuance": null,
+    "pct_exprimes": 100.0
+   }
+  }
+ }
+}
