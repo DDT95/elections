@@ -1,0 +1,106 @@
+{
+ "source": {
+  "jeu": "Législatives 2024, 1er et 2nd tours, Val-d'Oise — Ministère de l'Intérieur (DGRC), déjà chargé dans ce dépôt",
+  "fichiers": [
+   "legislatives-2024-t1-circo.json",
+   "legislatives-2024-t2-circo.json"
+  ],
+  "perimetre": "Val-d'Oise uniquement (8 circonscriptions) ; aucune donnée nationale agrégée ici.",
+  "methode": "Report mesuré = (voix T2 - voix T1) / (exprimés T1 - voix gauche T1 - voix RN T1), sur les seuls duels stricts (2 candidats au 2nd tour). Agrégation pondérée par la taille du réservoir de voix « autres » de chaque circonscription, pas une moyenne simple de pourcentages."
+ },
+ "duels": [
+  {
+   "circonscription": "02",
+   "nom": "02ᵉ circonscription",
+   "gauche_t1": 17221,
+   "gauche_t2": 28342,
+   "rn_t1": 15544,
+   "rn_t2": 19281,
+   "autres_t1": 18688,
+   "report_gauche": 0.5951,
+   "report_rn": 0.2,
+   "nb_candidats_t2": 2
+  },
+  {
+   "circonscription": "07",
+   "nom": "07ᵉ circonscription",
+   "gauche_t1": 16797,
+   "gauche_t2": 24713,
+   "rn_t1": 12065,
+   "rn_t2": 16088,
+   "autres_t1": 15409,
+   "report_gauche": 0.5137,
+   "report_rn": 0.2611,
+   "nb_candidats_t2": 2
+  },
+  {
+   "circonscription": "03",
+   "nom": "03ᵉ circonscription",
+   "gauche_t1": 22742,
+   "gauche_t2": 36489,
+   "rn_t1": 17608,
+   "rn_t2": 21860,
+   "autres_t1": 23477,
+   "report_gauche": 0.5856,
+   "report_rn": 0.1811,
+   "nb_candidats_t2": 2
+  },
+  {
+   "circonscription": "09",
+   "nom": "09ᵉ circonscription",
+   "gauche_t1": 17157,
+   "gauche_t2": 23918,
+   "rn_t1": 12872,
+   "rn_t2": 15764,
+   "autres_t1": 12097,
+   "report_gauche": 0.5589,
+   "report_rn": 0.2391,
+   "nb_candidats_t2": 2
+  },
+  {
+   "circonscription": "10",
+   "nom": "10ᵉ circonscription",
+   "gauche_t1": 18306,
+   "gauche_t2": 26852,
+   "rn_t1": 9667,
+   "rn_t2": 11716,
+   "autres_t1": 14469,
+   "report_gauche": 0.5906,
+   "report_rn": 0.1416,
+   "nb_candidats_t2": 2
+  }
+ ],
+ "triangulaires": [
+  {
+   "circonscription": "01",
+   "nom": "01ᵉ circonscription",
+   "gauche_t1": 17230,
+   "gauche_t2": 20534,
+   "rn_t1": 18823,
+   "rn_t2": 21025,
+   "autres_t1": 19888,
+   "report_gauche": 0.1661,
+   "report_rn": 0.1107,
+   "nb_candidats_t2": 3
+  },
+  {
+   "circonscription": "06",
+   "nom": "06ᵉ circonscription",
+   "gauche_t1": 18603,
+   "gauche_t2": 21326,
+   "rn_t1": 10911,
+   "rn_t2": 11389,
+   "autres_t1": 19921,
+   "report_gauche": 0.1367,
+   "report_rn": 0.024,
+   "nb_candidats_t2": 3
+  }
+ ],
+ "aggregate": {
+  "nb_duels": 5,
+  "total_autres_t1": 84140,
+  "report_gauche": 0.5716,
+  "report_rn": 0.2015,
+  "report_residuel": 0.2269
+ }
+}
