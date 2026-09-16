@@ -899,12 +899,12 @@ function Legend({ metric, scoreCandidat, current, bounds }: { metric: MetricId; 
   );
 }
 
-function Section({ title, state, children }: { title: string; state: string; children: React.ReactNode }) {
+function Section({ title, state, children }: { title: string; state?: string; children: React.ReactNode }) {
   return (
     <section className="elec-section">
       <div className="elec-section-title">
         <h3>{title}</h3>
-        <span className="elec-state">{state}</span>
+        {state && <span className="elec-state">{state}</span>}
       </div>
       {children}
     </section>
@@ -1120,7 +1120,7 @@ function DepartmentAnalysis({ snapshots, currentKey, socio, communeData, dataset
         moyennes/tendances par sensibilité politique (ci-dessous), jamais un faux classement
         de candidats agrégés. */}
     <CommuneSynthesis snapshots={snapshots} currentKey={currentKey} mode="families"/><CommuneSynthesis snapshots={snapshots} currentKey={currentKey} mode="sensitivities"/>
-    <Section title="Scénarios de participation" state="Européennes 2024">
+    <Section title="Scénarios de participation">
       <p className="elec-synthesis-intro">Chaque scénario modifie la mobilisation territoriale puis mesure l’effet sur les grandes sensibilités : les barres montrent, comme pour la sensibilité moyenne du territoire ci-dessus, le score simulé de chaque sensibilité ; l’écart entre parenthèses indique la variation par rapport à la moyenne européennes 2024 (vert = progression, rouge = recul). Sous chaque carte : le détail par parti de la gauche et de l’extrême droite, puis le duel LFI · RN · Centre en donut.</p>
       <ScenarioTrendChart scenarios={scenarios} />
       <div className="scenario-cards">{scenarios.map(sc=>
