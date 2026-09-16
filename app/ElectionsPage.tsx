@@ -719,7 +719,9 @@ export default function ElectionsPage() {
               <strong>Comment lire la carte</strong>
               <span><b>1</b>Choisissez une élection et un tour dans le menu à gauche.</span>
               <span><b>2</b>La carte se colore alors par tendance politique.</span>
-              <span><b>3</b>Cliquez sur une commune pour ouvrir sa synthèse complète.</span>
+              <em className="elec-map-onboarding-then">Puis, selon ce que vous cherchez :</em>
+              <span className="elec-map-onboarding-choice"><b>→</b>Une commune précise : cliquez dessus sur la carte pour ouvrir sa synthèse complète.</span>
+              <span className="elec-map-onboarding-choice"><b>→</b>Une vue d’ensemble du département : ouvrez « Analyse départementale » en haut du menu à gauche.</span>
             </div>
           )}
           {hoveredUnit && <div className="elec-hover-card compact" aria-live="polite"><strong>{hoveredUnit.name}</strong>{hoveredUnit.result ? <>{metric !== "none" && <span>{metricInfo(hoveredUnit.result).label}</span>}<small>Participation {hoveredUnit.result.pct_participation.toFixed(1)} % · cliquez pour la synthèse complète</small></> : <span>Résultat indisponible</span>}</div>}
