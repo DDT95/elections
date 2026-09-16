@@ -1303,13 +1303,13 @@ function ScenarioSecondRound({ duel }: { duel: { gauche: number; rn: number; rep
         <svg viewBox="0 0 100 100" className="second-round-donut" role="img" aria-label={`${leaderIsGauche?"Union de la gauche":"RN"} en tête avec ${(leaderIsGauche?duel.gauche:duel.rn).toFixed(1)} %`}>
           <circle cx="50" cy="50" r={r} fill="none" stroke="#ffffff33" strokeWidth="14"/>
           <circle cx="50" cy="50" r={r} fill="none" stroke="#e4287c" strokeWidth="14" strokeDasharray={`${gaucheLen} ${C-gaucheLen}`} transform="rotate(-90 50 50)"/>
-          <circle cx="50" cy="50" r={r} fill="none" stroke="#4a5b8c" strokeWidth="14" strokeDasharray={`${C-gaucheLen} ${gaucheLen}`} strokeDashoffset={-gaucheLen} transform="rotate(-90 50 50)"/>
+          <circle cx="50" cy="50" r={r} fill="none" stroke="#3654c4" strokeWidth="14" strokeDasharray={`${C-gaucheLen} ${gaucheLen}`} strokeDashoffset={-gaucheLen} transform="rotate(-90 50 50)"/>
           <text x="50" y="46" textAnchor="middle" className="second-round-value">{(leaderIsGauche?duel.gauche:duel.rn).toFixed(1)} %</text>
           <text x="50" y="61" textAnchor="middle" className="second-round-leader">{leaderIsGauche?"UNION GAUCHE":"RN"}</text>
         </svg>
         <div className="second-round-legend">
           <div><i style={{background:"#e4287c"}}/><span>Union gauche (LFI)</span><b>{duel.gauche.toFixed(1)} %</b></div>
-          <div><i style={{background:"#4a5b8c"}}/><span>Rassemblement national</span><b>{duel.rn.toFixed(1)} %</b></div>
+          <div><i style={{background:"#3654c4"}}/><span>Rassemblement national</span><b>{duel.rn.toFixed(1)} %</b></div>
         </div>
       </div>
       <p className="scenario-second-round-note">Report mesuré sur les {duel.nbDuels} duels RN/union de la gauche des législatives 2024 ({duel.reportGauche.toFixed(1)} % vers la gauche, {duel.reportRn.toFixed(1)} % vers le RN) appliqué au réservoir Centre + Droite de ce scénario.</p>
