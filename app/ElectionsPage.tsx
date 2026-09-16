@@ -1105,12 +1105,12 @@ function buildDepartmentScenarios(communeData: Record<string, UnitResult>, datas
     return {sensitivity,family};
   };
   const raw=[
-    {label:"Participation habituelle",explanation:"Chaque commune retrouve sa participation moyenne observée aux présidentielles 2017 et 2022 et aux européennes 2024.",data:simulate((code,u)=>{const values=refs.map(k=>datasets[k]?.communes[code]?.pct_participation).filter((v):v is number=>Number.isFinite(v)),target=values.length?values.reduce((a,b)=>a+b,0)/values.length:avg;return u.pct_participation?target/u.pct_participation:1})},
-    {label:"Participation haute",explanation:"Chaque commune retrouve son niveau de participation de la présidentielle 2017, le plus élevé de la série.",data:simulate((code,u)=>{const target=datasets["pres-2017-t1"]?.communes[code]?.pct_participation??u.pct_participation;return u.pct_participation?target/u.pct_participation:1})},
-    {label:"Participation basse (abstention record)",explanation:"Chaque commune retombe à son niveau de participation le plus bas observé dans la série (présidentielles 2017/2022, européennes 2024, municipales 2020 — abstention record de la période Covid).",data:simulate((code,u)=>{const values=lowRefs.map(k=>datasets[k]?.communes[code]?.pct_participation).filter((v):v is number=>Number.isFinite(v)),target=values.length?Math.min(...values):u.pct_participation;return u.pct_participation?target/u.pct_participation:1})},
-    {label:"Territoires jeunes davantage mobilisés",explanation:`Le poids des communes comptant au moins ${youthThreshold.toFixed(1)} % de 15–24 ans augmente de 10 % — la France insoumise est en tête chez les 18-24 ans dans les enquêtes nationales récentes (29 % contre 27 % au RN, Elabe/La Tribune Dimanche juin 2025), et le RN y a nettement progressé depuis 2019 (15 % puis 25 % aux européennes 2024).`,data:simulate(code=>socioByCommune[code]?.jeunes>=youthThreshold?1.1:1)},
-    {label:"Vote utile à gauche (consolidation autour de LFI)",explanation:"Hypothèse, pas une mesure : la moitié des électeurs Parti socialiste/Verts/PCF se reportent sur La France insoumise, seule force de gauche en position de qualifier un candidat pour un second tour — sur le modèle de 2022, où le vote utile avait fait chuter les scores PS et Verts au profit de Mélenchon. S'appuie sur un vrai constat national : 8 sympathisants de gauche sur 10 veulent l'union (Cluster17), 73 % des sympathisants NFP soutiennent une candidature unique (Harris Interactive/Regards).",data:applyGaucheUtile(reel,.5)},
-    {label:"Vote utile au centre (barrage, report des voix LR)",explanation:"Les électeurs Les Républicains (Droite) se reportent comme au 2nd tour de la présidentielle 2022 : 53 % vers le Centre, 18 % vers le RN, le reste s'abstient (Ipsos-Sopra Steria pour France Télévisions/Radio France/Public Sénat, sociologie des électorats de Valérie Pécresse au 2nd tour). Donnée nationale mesurée, pas un chiffre du Val-d'Oise.",data:applyCentreUtile(reel)}
+    {label:"Participation habituelle",kind:"turnout" as const,explanation:"Chaque commune retrouve sa participation moyenne observée aux présidentielles 2017 et 2022 et aux européennes 2024.",data:simulate((code,u)=>{const values=refs.map(k=>datasets[k]?.communes[code]?.pct_participation).filter((v):v is number=>Number.isFinite(v)),target=values.length?values.reduce((a,b)=>a+b,0)/values.length:avg;return u.pct_participation?target/u.pct_participation:1})},
+    {label:"Participation haute",kind:"turnout" as const,explanation:"Chaque commune retrouve son niveau de participation de la présidentielle 2017, le plus élevé de la série.",data:simulate((code,u)=>{const target=datasets["pres-2017-t1"]?.communes[code]?.pct_participation??u.pct_participation;return u.pct_participation?target/u.pct_participation:1})},
+    {label:"Participation basse (abstention record)",kind:"turnout" as const,explanation:"Chaque commune retombe à son niveau de participation le plus bas observé dans la série (présidentielles 2017/2022, européennes 2024, municipales 2020 — abstention record de la période Covid).",data:simulate((code,u)=>{const values=lowRefs.map(k=>datasets[k]?.communes[code]?.pct_participation).filter((v):v is number=>Number.isFinite(v)),target=values.length?Math.min(...values):u.pct_participation;return u.pct_participation?target/u.pct_participation:1})},
+    {label:"Territoires jeunes davantage mobilisés",kind:"turnout" as const,explanation:`Le poids des communes comptant au moins ${youthThreshold.toFixed(1)} % de 15–24 ans augmente de 10 % — la France insoumise est en tête chez les 18-24 ans dans les enquêtes nationales récentes (29 % contre 27 % au RN, Elabe/La Tribune Dimanche juin 2025), et le RN y a nettement progressé depuis 2019 (15 % puis 25 % aux européennes 2024).`,data:simulate(code=>socioByCommune[code]?.jeunes>=youthThreshold?1.1:1)},
+    {label:"Vote utile à gauche (consolidation autour de LFI)",kind:"transfer" as const,explanation:"Hypothèse, pas une mesure : la moitié des électeurs Parti socialiste/Verts/PCF se reportent sur La France insoumise, seule force de gauche en position de qualifier un candidat pour un second tour — sur le modèle de 2022, où le vote utile avait fait chuter les scores PS et Verts au profit de Mélenchon. S'appuie sur un vrai constat national : 8 sympathisants de gauche sur 10 veulent l'union (Cluster17), 73 % des sympathisants NFP soutiennent une candidature unique (Harris Interactive/Regards).",data:applyGaucheUtile(reel,.5)},
+    {label:"Vote utile au centre (barrage, report des voix LR)",kind:"transfer" as const,explanation:"Les électeurs Les Républicains (Droite) se reportent comme au 2nd tour de la présidentielle 2022 : 53 % vers le Centre, 18 % vers le RN, le reste s'abstient (Ipsos-Sopra Steria pour France Télévisions/Radio France/Public Sénat, sociologie des électorats de Valérie Pécresse au 2nd tour). Donnée nationale mesurée, pas un chiffre du Val-d'Oise.",data:applyCentreUtile(reel)}
   ];
   const leftDetailFor=(fam:Record<string,number>)=>[
     {id:"lfi",label:"La France insoumise",value:fam.lfi??0,delta:(fam.lfi??0)-(baselineFamily.lfi??0),color:"#ce0500"},
@@ -1151,7 +1151,7 @@ function buildDepartmentScenarios(communeData: Record<string, UnitResult>, datas
     }
     const duel=effects.flatMap(e=>e.detail?.length?e.detail:[e]);
     const secondRound=computeSecondRound(sc.data.sensitivity,sc.data.family);
-    return{label:sc.label,explanation:sc.explanation,effects,conclusion,duel,secondRound};
+    return{label:sc.label,kind:sc.kind,explanation:sc.explanation,effects,conclusion,duel,secondRound};
   });
   const secondRoundDuel=computeSecondRound(baseline,baselineFamily);
   return {scenarios,secondRoundDuel,baselineBreakdown};
@@ -1292,41 +1292,52 @@ function MiniDuelDonut({ duel, size, highlight }: { duel: { id: string; label: s
 }
 
 const TREND_ORDER = ["left","center","right","far_right"];
-function ScenarioTrendChart({ scenarios }: { scenarios: { label: string; effects?: { id: string; label: string; value: number; delta: number; color: string }[]; duel?: { id: string; label: string; value: number; delta: number; color: string }[] }[] }) {
+function ScenarioTrendChart({ scenarios }: { scenarios: { label: string; kind?: string; effects?: { id: string; label: string; value: number; delta: number; color: string }[]; duel?: { id: string; label: string; value: number; delta: number; color: string }[] }[] }) {
   const withEffects = scenarios.filter((sc): sc is typeof sc & { effects: NonNullable<typeof sc["effects"]> } => (sc.effects?.length ?? 0) > 0);
   if (withEffects.length < 2) return null;
-  // Le donut de chaque scénario met en avant Gauche et RN — les deux pôles du second tour simulé
-  // — plutôt que « la sensibilité la plus affectée » : depuis l'intégration de la référence
-  // multi-scrutins, le Centre a un écart structurel (-7/-8 pt, dû au vote de liste des européennes
-  // vs le vote candidat des législatives/présidentielle) qui domine toujours ce calcul, quel que
-  // soit le scénario — un artefact de méthode, pas un vrai signal par scénario.
-  const movers = withEffects.map(sc=>{
-    const gauche = sc.effects.find(e=>e.id==="left");
-    const rn = sc.duel?.find(d=>d.id==="rn");
-    const pair = [gauche, rn].filter((x):x is NonNullable<typeof x>=>Boolean(x));
-    const top = pair.slice().sort((a,b)=>Math.abs(b.delta)-Math.abs(a.delta))[0];
-    return { sc, top, maxAbsDelta: top ? Math.abs(top.delta) : 0 };
+  // Le donut de chaque scénario met en avant, parmi les 4 grandes familles (gauche, centre, droite,
+  // extrême droite), celle qui s'écarte le plus de la médiane observée dans les scénarios de
+  // participation (kind "turnout") — pas de la référence multi-scrutins, ni de la moyenne des 6
+  // scénarios. Comparer à la référence multi-scrutins favorise toujours la même famille (le plus gros
+  // écart structurel de méthode, ex. le Centre ou le RN) ; comparer à la moyenne des 6 scénarios est
+  // faussé par les deux scénarios de vote utile, dont les reports de voix massifs sur une seule
+  // famille tirent la moyenne et font gagner la même famille sur tous les scénarios de participation.
+  // La médiane des scénarios de participation seuls reste un repère stable et non pollué par ces
+  // reports, pour tous les scénarios — turnout et vote utile confondus.
+  const turnoutScenarios = withEffects.filter(sc=>sc.kind==="turnout");
+  const refScenarios = turnoutScenarios.length ? turnoutScenarios : withEffects;
+  const medianByPole: Record<string, number> = {};
+  TREND_ORDER.forEach(id=>{
+    const vals = refScenarios.map(sc=>sc.effects.find(e=>e.id===id)?.value).filter((v): v is number => v !== undefined).sort((a,b)=>a-b);
+    const mid = Math.floor(vals.length/2);
+    medianByPole[id] = vals.length ? (vals.length%2 ? vals[mid] : (vals[mid-1]+vals[mid])/2) : 0;
   });
-  const mostAffectedLabel = movers.slice().sort((a,b)=>b.maxAbsDelta-a.maxAbsDelta)[0]?.sc.label;
+  const movers = withEffects.map(sc=>{
+    const candidates = TREND_ORDER.map(id=>{
+      const item = sc.effects.find(e=>e.id===id);
+      return item ? { id: item.id, label: item.label, color: item.color, delta: item.value - medianByPole[item.id] } : null;
+    }).filter((x): x is NonNullable<typeof x> => Boolean(x));
+    const top = candidates.slice().sort((a,b)=>Math.abs(b.delta)-Math.abs(a.delta))[0];
+    return { sc, top };
+  });
   return (
     <div className="scenario-trend">
       <span className="scenario-trend-title">Rapport de force au 1<sup>er</sup> tour, scénario par scénario</span>
       <div className="scenario-trend-grid">
         {movers.map(({sc,top},i)=>{
-          const isMostAffected = sc.label===mostAffectedLabel;
           const items = TREND_ORDER.map(id=>sc.effects.find(d=>d.id===id)).filter((x):x is NonNullable<typeof x>=>Boolean(x));
           return (
-            <div key={sc.label} className={`scenario-trend-card${isMostAffected?" is-overall-leader":""}`}>
+            <div key={sc.label} className="scenario-trend-card">
               <div className="scenario-trend-card-head"><span className="scenario-duel-strip-num">{i+1}</span><span>{sc.label}</span></div>
               <div className="scenario-trend-card-body">
-                <MiniDuelDonut duel={sc.effects} size={isMostAffected?76:64} highlight={top}/>
+                <MiniDuelDonut duel={sc.effects} size={70} highlight={top}/>
                 <ul className="mini-duel-legend">{items.map(x=><li key={x.id}><i style={{background:x.color}}/><span>{x.id==="far_right"?"Extrême droite":x.label}</span><b>{x.value.toFixed(1)} %</b></li>)}</ul>
               </div>
             </div>
           );
         })}
       </div>
-      <p className="scenario-trend-note">Le chiffre au centre de chaque donut indique l’écart, par rapport à la référence multi-scrutins (voir « Méthode » ci-dessus), du pôle — Gauche ou RN, les deux pôles du second tour simulé — qui bouge le plus dans ce scénario ; sa couleur reprend celle du pôle concerné dans l’anneau. Le Centre n’est pas mis en avant ici : son écart structurel (vote de liste vs vote candidat) est le même quel que soit le scénario, ce n’est pas un signal propre au scénario. La carte « {mostAffectedLabel} » est celle où Gauche ou RN s’écarte le plus. Détail des 4 grandes familles à droite — mêmes valeurs que « Sensibilités simulées » sur chaque carte.</p>
+      <p className="scenario-trend-note">Le chiffre au centre de chaque donut indique l’écart de la famille politique — gauche, centre, droite ou extrême droite — qui s’écarte le plus, dans ce scénario, de sa médiane observée dans les scénarios de participation (n° 1 à 4) ; sa couleur reprend celle de la famille dans l’anneau. La famille mise en avant varie donc d’une carte à l’autre. Détail des 4 grandes familles à droite — mêmes valeurs que « Sensibilités simulées » sur chaque carte.</p>
     </div>
   );
 }
