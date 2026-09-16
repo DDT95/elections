@@ -1103,9 +1103,9 @@ function buildDepartmentScenarios(communeData: Record<string, UnitResult>, datas
     if (Math.abs(main.delta) < .05) {
       conclusion = "Le rapport de forces entre sensibilités resterait quasiment inchangé par rapport aux européennes 2024 : ce scénario ne déplace pas assez de voix pour rebattre les grands équilibres.";
     } else if (gain.delta > .05 && loss.delta < -.05 && gain.id !== loss.id) {
-      conclusion = `${gain.label} en tirerait le plus grand bénéfice (${gain.delta>=0?"+":""}${gain.delta.toFixed(1)} point), tandis que ${loss.label} reculerait le plus (${loss.delta.toFixed(1)} point). Une simulation à participation modifiée, pas une prévision électorale.`;
+      conclusion = `${gain.label} en tirerait le plus grand bénéfice (${gain.delta>=0?"+":""}${gain.delta.toFixed(1)} point), tandis que ${loss.label} reculerait le plus (${loss.delta.toFixed(1)} point).`;
     } else {
-      conclusion = `${main.label} est la sensibilité la plus affectée par ce scénario (${main.delta>=0?"+":""}${main.delta.toFixed(1)} point), sans bouleverser le reste du rapport de forces. Une simulation à participation modifiée, pas une prévision électorale.`;
+      conclusion = `${main.label} est la sensibilité la plus affectée par ce scénario (${main.delta>=0?"+":""}${main.delta.toFixed(1)} point), sans bouleverser le reste du rapport de forces.`;
     }
     const duel=effects.flatMap(e=>e.detail?.length?e.detail:[e]);
     const secondRound=computeSecondRound(sc.data.sensitivity,sc.data.family);
