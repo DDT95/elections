@@ -1202,7 +1202,7 @@ function DepartmentAnalysis({ snapshots, currentKey, socio, communeData, dataset
   </>;
 }
 
-const SHORT_POLE_LABEL: Record<string,string> = { extreme_left: "Ext. gauche", lfi: "LFI", socdem: "Soc-dém.", pcf: "PCF", center: "Centre", right: "Droite", rn: "RN", reconquest: "Reconquête" };
+const SHORT_POLE_LABEL: Record<string,string> = { extreme_left: "Ext. gauche", left: "Gauche", lfi: "LFI", socdem: "Soc-dém.", pcf: "PCF", center: "Centre", right: "Droite", far_right: "Ext. droite", rn: "RN", reconquest: "Reconquête" };
 function ScenarioDuel({ duel }: { duel: { id: string; label: string; value: number; delta: number; color: string }[] }) {
   const total = duel.reduce((sum,d)=>sum+d.value,0) || 1;
   const r = 40, C = 2*Math.PI*r;
@@ -1240,29 +1240,29 @@ function MiniDuelDonut({ duel, size }: { duel: { id: string; label: string; valu
   );
 }
 
-function ScenarioTrendChart({ scenarios }: { scenarios: { label: string; duel?: { id: string; label: string; value: number; color: string }[] }[] }) {
-  const withDuel = scenarios.filter((sc): sc is typeof sc & { duel: NonNullable<typeof sc["duel"]> } => (sc.duel?.length ?? 0) > 0);
-  if (withDuel.length < 2) return null;
-  const ids = Array.from(new Set(withDuel.flatMap(sc=>sc.duel.map(d=>d.id))));
+function ScenarioTrendChart({ scenarios }: { scenarios: { label: string; effects?: { id: string; label: string; value: number; color: string }[] }[] }) {
+  const withEffects = scenarios.filter((sc): sc is typeof sc & { effects: NonNullable<typeof sc["effects"]> } => (sc.effects?.length ?? 0) > 0);
+  if (withEffects.length < 2) return null;
+  const ids = Array.from(new Set(withEffects.flatMap(sc=>sc.effects.map(d=>d.id))));
   const overallLeader = ids.map(id=>{
-    const total = withDuel.reduce((sum,sc)=>sum+(sc.duel.find(d=>d.id===id)?.value ?? 0),0);
+    const total = withEffects.reduce((sum,sc)=>sum+(sc.effects.find(d=>d.id===id)?.value ?? 0),0);
     return { id, total };
   }).sort((a,b)=>b.total-a.total)[0]?.id;
   return (
     <div className="scenario-trend">
       <span className="scenario-trend-title">Rapport de force au 1<sup>er</sup> tour, scénario par scénario</span>
       <div className="scenario-duel-strip">
-        {withDuel.map((sc,i)=>{
-          const isLeaderScenario = sc.duel.slice().sort((a,b)=>b.value-a.value)[0]?.id===overallLeader;
+        {withEffects.map((sc,i)=>{
+          const isLeaderScenario = sc.effects.slice().sort((a,b)=>b.value-a.value)[0]?.id===overallLeader;
           return (
             <div key={sc.label} className={`scenario-duel-strip-item${isLeaderScenario?" is-overall-leader":""}`}>
-              <MiniDuelDonut duel={sc.duel} size={isLeaderScenario?86:72}/>
+              <MiniDuelDonut duel={sc.effects} size={isLeaderScenario?86:72}/>
               <span className="scenario-duel-strip-num">{i+1}</span>
             </div>
           );
         })}
       </div>
-      <p className="scenario-trend-note">Scores du 1<sup>er</sup> tour (européennes 2024, sans report de voix) selon chaque scénario de participation. {withDuel.map((sc,i)=>`${i+1}. ${sc.label}`).join(" · ")}</p>
+      <p className="scenario-trend-note">Grandes sensibilités du 1<sup>er</sup> tour (européennes 2024, sans report de voix) selon chaque scénario de participation — mêmes valeurs que « Sensibilités simulées » sur chaque carte. {withEffects.map((sc,i)=>`${i+1}. ${sc.label}`).join(" · ")}</p>
     </div>
   );
 }
