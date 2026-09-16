@@ -1076,14 +1076,41 @@ function buildDepartmentScenarios(communeData: Record<string, UnitResult>, datas
   const lowRefs=["pres-2017-t1","pres-2022-t1","europeennes-2024","municipales-2020-t1"];
   const percentile75=(values:number[])=>{const sorted=values.slice().sort((a,b)=>a-b);return sorted[Math.floor(sorted.length*.75)]??100};
   const youthThreshold=percentile75(Object.values(socioByCommune).map(x=>x.jeunes));
-  const seniorsThreshold=percentile75(Object.values(socioByCommune).map(x=>x.seniors));
+  // Scénarios de report de voix (vote utile), appliqués aux scores réels des européennes 2024
+  // (pas de changement de participation ici, contrairement aux scénarios ci-dessus).
+  const reel=simulate(()=>1);
+  // Vote utile à gauche : la moitié des électeurs PS/Verts/PCF se reportent sur LFI (seule
+  // sensibilité concernée, "Gauche" ne change pas globalement).
+  const applyGaucheUtile=(data:{sensitivity:Record<string,number>;family:Record<string,number>},rate:number)=>{
+    const sensitivity={...data.sensitivity},family={...data.family};
+    const smallGauche=(family.social_left??0)+(family.ecologist??0)+(family.pcf??0);
+    const amount=smallGauche*rate;
+    (["social_left","ecologist","pcf"] as const).forEach(f=>{const v=family[f]??0;family[f]=v-(smallGauche?v/smallGauche*amount:0)});
+    family.lfi=(family.lfi??0)+amount;
+    return {sensitivity,family};
+  };
+  // Vote utile au centre (report LR, barrage) : le réservoir Droite (LR + divers droite) se
+  // reporte 53 % Centre / 18 % RN (taux mesurés, Ipsos-Sopra Steria, Pécresse 2nd tour 2022), le
+  // reste (29 %) s'abstient — donc retiré de "Droite" sans être redistribué ailleurs.
+  const applyCentreUtile=(data:{sensitivity:Record<string,number>;family:Record<string,number>})=>{
+    const sensitivity={...data.sensitivity},family={...data.family};
+    const droiteTotal=(family.lr??0)+(family.other_right??0);
+    const toCentre=droiteTotal*.53,toRn=droiteTotal*.18;
+    family.lr=0;family.other_right=0;
+    family.presidential=(family.presidential??0)+toCentre;
+    family.rn=(family.rn??0)+toRn;
+    sensitivity.right=(sensitivity.right??0)-droiteTotal;
+    sensitivity.center=(sensitivity.center??0)+toCentre;
+    sensitivity.far_right=(sensitivity.far_right??0)+toRn;
+    return {sensitivity,family};
+  };
   const raw=[
     {label:"Participation habituelle",explanation:"Chaque commune retrouve sa participation moyenne observée aux présidentielles 2017 et 2022 et aux européennes 2024.",data:simulate((code,u)=>{const values=refs.map(k=>datasets[k]?.communes[code]?.pct_participation).filter((v):v is number=>Number.isFinite(v)),target=values.length?values.reduce((a,b)=>a+b,0)/values.length:avg;return u.pct_participation?target/u.pct_participation:1})},
     {label:"Participation haute",explanation:"Chaque commune retrouve son niveau de participation de la présidentielle 2017, le plus élevé de la série.",data:simulate((code,u)=>{const target=datasets["pres-2017-t1"]?.communes[code]?.pct_participation??u.pct_participation;return u.pct_participation?target/u.pct_participation:1})},
     {label:"Participation basse (abstention record)",explanation:"Chaque commune retombe à son niveau de participation le plus bas observé dans la série (présidentielles 2017/2022, européennes 2024, municipales 2020 — abstention record de la période Covid).",data:simulate((code,u)=>{const values=lowRefs.map(k=>datasets[k]?.communes[code]?.pct_participation).filter((v):v is number=>Number.isFinite(v)),target=values.length?Math.min(...values):u.pct_participation;return u.pct_participation?target/u.pct_participation:1})},
-    {label:"Territoires jeunes davantage mobilisés",explanation:`Le poids des communes comptant au moins ${youthThreshold.toFixed(1)} % de 15–24 ans augmente de 10 %.`,data:simulate(code=>socioByCommune[code]?.jeunes>=youthThreshold?1.1:1)},
-    {label:"Seniors davantage mobilisés",explanation:`Le poids des communes comptant au moins ${seniorsThreshold.toFixed(1)} % de 65 ans et plus augmente de 10 % — les seniors votent historiquement bien plus que la moyenne.`,data:simulate(code=>socioByCommune[code]?.seniors>=seniorsThreshold?1.1:1)},
-    {label:"Rattrapage de l’abstention",explanation:`Les communes sous la moyenne départementale remontent à ${avg.toFixed(1)} % de participation.`,data:simulate((_code,u)=>u.pct_participation&&u.pct_participation<avg?avg/u.pct_participation:1)}
+    {label:"Territoires jeunes davantage mobilisés",explanation:`Le poids des communes comptant au moins ${youthThreshold.toFixed(1)} % de 15–24 ans augmente de 10 % — la France insoumise est en tête chez les 18-24 ans dans les enquêtes nationales récentes (29 % contre 27 % au RN, Elabe/La Tribune Dimanche juin 2025), et le RN y a nettement progressé depuis 2019 (15 % puis 25 % aux européennes 2024).`,data:simulate(code=>socioByCommune[code]?.jeunes>=youthThreshold?1.1:1)},
+    {label:"Vote utile à gauche (consolidation autour de LFI)",explanation:"Hypothèse, pas une mesure : la moitié des électeurs Parti socialiste/Verts/PCF se reportent sur La France insoumise, seule force de gauche en position de qualifier un candidat pour un second tour — sur le modèle de 2022, où le vote utile avait fait chuter les scores PS et Verts au profit de Mélenchon. S'appuie sur un vrai constat national : 8 sympathisants de gauche sur 10 veulent l'union (Cluster17), 73 % des sympathisants NFP soutiennent une candidature unique (Harris Interactive/Regards).",data:applyGaucheUtile(reel,.5)},
+    {label:"Vote utile au centre (barrage, report des voix LR)",explanation:"Les électeurs Les Républicains (Droite) se reportent comme au 2nd tour de la présidentielle 2022 : 53 % vers le Centre, 18 % vers le RN, le reste s'abstient (Ipsos-Sopra Steria pour France Télévisions/Radio France/Public Sénat, sociologie des électorats de Valérie Pécresse au 2nd tour). Donnée nationale mesurée, pas un chiffre du Val-d'Oise.",data:applyCentreUtile(reel)}
   ];
   const leftDetailFor=(fam:Record<string,number>)=>[
     {id:"lfi",label:"La France insoumise",value:fam.lfi??0,delta:(fam.lfi??0)-(baselineFamily.lfi??0),color:"#ce0500"},
