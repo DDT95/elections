@@ -1166,40 +1166,42 @@ function ScenarioDuel({ duel }: { duel: { id: string; label: string; value: numb
   );
 }
 
+function MiniDuelDonut({ duel, size }: { duel: { id: string; label: string; value: number; color: string }[]; size: number }) {
+  const total = duel.reduce((sum,d)=>sum+d.value,0) || 1;
+  const r = 40, C = 2*Math.PI*r;
+  let offset = 0;
+  const leader = duel.slice().sort((a,b)=>b.value-a.value)[0];
+  return (
+    <svg viewBox="0 0 100 100" width={size} height={size} className="mini-duel-donut" role="img" aria-label={`${SHORT_POLE_LABEL[leader.id] ?? leader.label} en tête avec ${leader.value.toFixed(1)} %`}>
+      <circle cx="50" cy="50" r={r} fill="none" stroke="#e3e8ee" strokeWidth="15"/>
+      {duel.map(d=>{const len=C*d.value/total,seg=<circle key={d.id} cx="50" cy="50" r={r} fill="none" stroke={d.color} strokeWidth="15" strokeDasharray={`${len} ${C-len}`} strokeDashoffset={-offset} transform="rotate(-90 50 50)"/>;offset+=len;return seg})}
+      <text x="50" y="46" textAnchor="middle" className="mini-duel-value">{leader.value.toFixed(0)} %</text>
+      <text x="50" y="61" textAnchor="middle" className="mini-duel-leader">{SHORT_POLE_LABEL[leader.id] ?? leader.label}</text>
+    </svg>
+  );
+}
+
 function ScenarioTrendChart({ scenarios }: { scenarios: { label: string; duel?: { id: string; label: string; value: number; color: string }[] }[] }) {
   const withDuel = scenarios.filter((sc): sc is typeof sc & { duel: NonNullable<typeof sc["duel"]> } => (sc.duel?.length ?? 0) === 3);
   if (withDuel.length < 2) return null;
-  const width = 600, height = 190, padL = 8, padR = 92, padT = 14, padB = 24;
-  const maxVal = Math.max(...withDuel.flatMap(sc=>sc.duel.map(d=>d.value)), 10);
-  const x = (i:number) => padL + (i*(width-padL-padR))/Math.max(1,withDuel.length-1);
-  const y = (v:number) => height-padB-(v/maxVal)*(height-padT-padB);
-  const poles = ["lfi","rn","center"].map(id=>{
-    const first = withDuel[0].duel.find(d=>d.id===id);
-    const last = withDuel[withDuel.length-1].duel.find(d=>d.id===id);
-    return first && last ? { id, color: first.color, value: last.value, y: y(last.value) } : null;
-  }).filter((p): p is NonNullable<typeof p> => p !== null).sort((a,b)=>a.y-b.y);
-  poles.forEach((p,i)=>{ if (i>0 && p.y - poles[i-1].y < 12) p.y = poles[i-1].y + 12; });
-  const leaderId = poles.slice().sort((a,b)=>b.value-a.value)[0]?.id;
+  const overallLeader = ["lfi","rn","center"].map(id=>{
+    const total = withDuel.reduce((sum,sc)=>sum+(sc.duel.find(d=>d.id===id)?.value ?? 0),0);
+    return { id, total };
+  }).sort((a,b)=>b.total-a.total)[0]?.id;
   return (
     <div className="scenario-trend">
       <span className="scenario-trend-title">Le duel, scénario par scénario</span>
-      <svg viewBox={`0 0 ${width} ${height}`} className="scenario-trend-chart" role="img" aria-label="Évolution de LFI, RN et Centre selon les scénarios simulés">
-        <line x1={padL} y1={height-padB} x2={width-padR} y2={height-padB} className="scenario-trend-axis"/>
-        {["lfi","rn","center"].map(id=>{
-          const first = withDuel[0].duel.find(d=>d.id===id); if(!first) return null;
-          const points = withDuel.map((sc,i)=>`${x(i)},${y(sc.duel.find(d=>d.id===id)?.value ?? 0)}`).join(" ");
-          const pole = poles.find(p=>p.id===id);
-          const isLeader = id===leaderId;
+      <div className="scenario-duel-strip">
+        {withDuel.map((sc,i)=>{
+          const isLeaderScenario = sc.duel.slice().sort((a,b)=>b.value-a.value)[0]?.id===overallLeader;
           return (
-            <g key={id}>
-              <polyline points={points} fill="none" stroke={first.color} strokeWidth={isLeader?"4.5":"2"} strokeLinejoin="round" strokeLinecap="round" opacity={isLeader?1:0.75}/>
-              {withDuel.map((sc,i)=><circle key={i} cx={x(i)} cy={y(sc.duel.find(d=>d.id===id)?.value ?? 0)} r={isLeader?"6.5":"3.5"} fill={first.color} stroke={isLeader?"#fff":"none"} strokeWidth={isLeader?"1.5":"0"}/>)}
-              {pole && <text x={x(withDuel.length-1)+8} y={pole.y+3} className={`scenario-trend-label${isLeader?" is-leader":""}`} fill={first.color}>{isLeader?"★ ":""}{SHORT_POLE_LABEL[id]} {pole.value.toFixed(0)} %</text>}
-            </g>
+            <div key={sc.label} className={`scenario-duel-strip-item${isLeaderScenario?" is-overall-leader":""}`}>
+              <MiniDuelDonut duel={sc.duel} size={isLeaderScenario?86:72}/>
+              <span className="scenario-duel-strip-num">{i+1}</span>
+            </div>
           );
         })}
-        {withDuel.map((_sc,i)=><text key={i} x={x(i)} y={height-6} textAnchor="middle" className="scenario-trend-tick">{i+1}</text>)}
-      </svg>
+      </div>
       <p className="scenario-trend-note">{withDuel.map((sc,i)=>`${i+1}. ${sc.label}`).join(" · ")}</p>
     </div>
   );
