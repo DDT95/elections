@@ -1089,19 +1089,26 @@ function buildDepartmentScenarios(communeData: Record<string, UnitResult>, datas
     family.lfi=(family.lfi??0)+amount;
     return {sensitivity,family};
   };
-  // Vote utile au centre (report LR, barrage) : le réservoir Droite (LR + divers droite) se
-  // reporte 53 % Centre / 18 % RN (taux mesurés, Ipsos-Sopra Steria, Pécresse 2nd tour 2022), le
-  // reste (29 %) s'abstient — donc retiré de "Droite" sans être redistribué ailleurs.
-  const applyCentreUtile=(data:{sensitivity:Record<string,number>;family:Record<string,number>})=>{
+  // Union d'une partie de la droite avec le RN (et poursuite du repli Reconquête vers le RN) :
+  // reflète l'actualité 2024-2026 — alliance Ciotti/RN depuis juin 2024 (62 candidats LR investis
+  // sans opposition du RN aux législatives 2024), ralliements LR-RN aux municipales 2026 (70 % des
+  // sympathisants de droite favorables à des alliances LR/RN au 2nd tour, CSA/CNEWS mars 2026).
+  // 36 % des sympathisants LR se disent prêts à voter pour une liste soutenue par le RN (même
+  // sondage) : taux mesuré, appliqué au réservoir Droite (LR + divers droite). Le vote Reconquête
+  // continue de son côté de se reporter sur le RN : 43 % de l'électorat Zemmour 2022 avait déjà
+  // voté RN aux européennes 2024 (Ipsos) ; Zemmour plafonne désormais à 2-8 % dans les sondages
+  // 2026 (contre 7 % en 2022), le RN captant la majorité de son électorat potentiel — même taux
+  // appliqué par hypothèse à la poursuite de cette tendance, pas une seconde mesure.
+  const applyDroiteRnUnion=(data:{sensitivity:Record<string,number>;family:Record<string,number>})=>{
     const sensitivity={...data.sensitivity},family={...data.family};
     const droiteTotal=(family.lr??0)+(family.other_right??0);
-    const toCentre=droiteTotal*.53,toRn=droiteTotal*.18;
-    family.lr=0;family.other_right=0;
-    family.presidential=(family.presidential??0)+toCentre;
-    family.rn=(family.rn??0)+toRn;
-    sensitivity.right=(sensitivity.right??0)-droiteTotal;
-    sensitivity.center=(sensitivity.center??0)+toCentre;
-    sensitivity.far_right=(sensitivity.far_right??0)+toRn;
+    const toRnFromDroite=droiteTotal*.36;
+    (["lr","other_right"] as const).forEach(f=>{const v=family[f]??0;family[f]=v-(droiteTotal?v/droiteTotal*toRnFromDroite:0)});
+    const toRnFromReconquest=(family.reconquest??0)*.43;
+    family.reconquest=(family.reconquest??0)-toRnFromReconquest;
+    family.rn=(family.rn??0)+toRnFromDroite+toRnFromReconquest;
+    sensitivity.right=(sensitivity.right??0)-toRnFromDroite;
+    sensitivity.far_right=(sensitivity.far_right??0)+toRnFromDroite;
     return {sensitivity,family};
   };
   const raw=[
@@ -1110,7 +1117,7 @@ function buildDepartmentScenarios(communeData: Record<string, UnitResult>, datas
     {label:"Participation basse (abstention record)",kind:"turnout" as const,explanation:"Chaque commune retombe à son niveau de participation le plus bas observé dans la série (présidentielles 2017/2022, européennes 2024, municipales 2020 — abstention record de la période Covid).",data:simulate((code,u)=>{const values=lowRefs.map(k=>datasets[k]?.communes[code]?.pct_participation).filter((v):v is number=>Number.isFinite(v)),target=values.length?Math.min(...values):u.pct_participation;return u.pct_participation?target/u.pct_participation:1})},
     {label:"Territoires jeunes davantage mobilisés",kind:"turnout" as const,explanation:`Le poids des communes comptant au moins ${youthThreshold.toFixed(1)} % de 15–24 ans augmente de 10 % — la France insoumise est en tête chez les 18-24 ans dans les enquêtes nationales récentes (29 % contre 27 % au RN, Elabe/La Tribune Dimanche juin 2025), et le RN y a nettement progressé depuis 2019 (15 % puis 25 % aux européennes 2024).`,data:simulate(code=>socioByCommune[code]?.jeunes>=youthThreshold?1.1:1)},
     {label:"Vote utile à gauche (consolidation autour de LFI)",kind:"transfer" as const,explanation:"Hypothèse, pas une mesure : la moitié des électeurs Parti socialiste/Verts/PCF se reportent sur La France insoumise, seule force de gauche en position de qualifier un candidat pour un second tour — sur le modèle de 2022, où le vote utile avait fait chuter les scores PS et Verts au profit de Mélenchon. S'appuie sur un vrai constat national : 8 sympathisants de gauche sur 10 veulent l'union (Cluster17), 73 % des sympathisants NFP soutiennent une candidature unique (Harris Interactive/Regards).",data:applyGaucheUtile(reel,.5)},
-    {label:"Vote utile au centre (barrage, report des voix LR)",kind:"transfer" as const,explanation:"Les électeurs Les Républicains (Droite) se reportent comme au 2nd tour de la présidentielle 2022 : 53 % vers le Centre, 18 % vers le RN, le reste s'abstient (Ipsos-Sopra Steria pour France Télévisions/Radio France/Public Sénat, sociologie des électorats de Valérie Pécresse au 2nd tour). Donnée nationale mesurée, pas un chiffre du Val-d'Oise.",data:applyCentreUtile(reel)}
+    {label:"Union d'une partie de la droite avec le RN",kind:"transfer" as const,explanation:"Reflète l'actualité 2024-2026, pas une fusion déjà actée à l'échelle nationale : 36 % des sympathisants LR se disent prêts à voter pour une liste soutenue par le RN (CSA/CNEWS, mars 2026, dans le contexte de l'alliance Ciotti-RN depuis juin 2024 et des ralliements LR-RN aux municipales 2026). En parallèle, le vote Reconquête continue de se reporter sur le RN : 43 % de l'électorat Zemmour 2022 avait déjà voté RN aux européennes 2024 (Ipsos), et Zemmour plafonne désormais à 2-8 % dans les sondages 2026 (contre 7 % en 2022) — même taux appliqué par hypothèse à la poursuite de cette tendance.",data:applyDroiteRnUnion(reel)}
   ];
   const leftDetailFor=(fam:Record<string,number>)=>[
     {id:"lfi",label:"La France insoumise",value:fam.lfi??0,delta:(fam.lfi??0)-(baselineFamily.lfi??0),color:"#ce0500"},
@@ -1308,7 +1315,11 @@ function ScenarioTrendChart({ scenarios, real }: { scenarios: { label: string; k
       const item = sc.effects.find(e=>e.id===id);
       return item ? { id: item.id, label: item.label, color: item.color, delta: item.value - (real[item.id] ?? item.value) } : null;
     }).filter((x): x is NonNullable<typeof x> => Boolean(x));
-    const top = candidates.slice().sort((a,b)=>Math.abs(b.delta)-Math.abs(a.delta))[0];
+    const ranked = candidates.slice().sort((a,b)=>Math.abs(b.delta)-Math.abs(a.delta));
+    // Un écart quasi nul (ex. « Vote utile à gauche », qui ne redistribue qu'en interne à la
+    // gauche) n'apporte rien à afficher : on montre alors l'extrême droite, le pôle le plus suivi
+    // dans cet atlas, plutôt qu'un « +0,0 » vide de sens.
+    const top = (ranked[0] && Math.abs(ranked[0].delta) < .05) ? (candidates.find(c=>c.id==="far_right") ?? ranked[0]) : ranked[0];
     return { sc, top };
   });
   return (
