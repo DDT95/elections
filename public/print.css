@@ -52,8 +52,10 @@ h2{break-after:avoid}
 .mini-duel-value{fill:#171f2e;font-size:11px;font-weight:800}
 .mini-duel-value.up{fill:#18753c}
 .mini-duel-value.down{fill:#e1000f}
+.mini-duel-value-pair{font-size:6.5px;font-weight:800;text-transform:uppercase}
 .mini-duel-leader{fill:#5c6a7d;font-size:7px;font-weight:800;text-transform:uppercase}
 .scenario-trend-card.is-overall-leader .mini-duel-value{font-size:12.5px}
+.scenario-trend-card.is-overall-leader .mini-duel-value-pair{font-size:7.5px}
 .scenario-trend-card.is-overall-leader .mini-duel-leader{font-size:8px;font-weight:900}
 .mini-duel-legend{flex:1;display:grid;gap:4px;margin:0;padding:0;list-style:none;min-width:0}
 .mini-duel-legend li{display:flex;align-items:center;gap:5px;font-size:7px}
