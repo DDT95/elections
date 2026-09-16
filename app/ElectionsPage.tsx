@@ -1169,7 +1169,7 @@ function ScenarioDuel({ duel }: { duel: { id: string; label: string; value: numb
 function ScenarioTrendChart({ scenarios }: { scenarios: { label: string; duel?: { id: string; label: string; value: number; color: string }[] }[] }) {
   const withDuel = scenarios.filter((sc): sc is typeof sc & { duel: NonNullable<typeof sc["duel"]> } => (sc.duel?.length ?? 0) === 3);
   if (withDuel.length < 2) return null;
-  const width = 600, height = 190, padL = 8, padR = 80, padT = 14, padB = 24;
+  const width = 600, height = 190, padL = 8, padR = 92, padT = 14, padB = 24;
   const maxVal = Math.max(...withDuel.flatMap(sc=>sc.duel.map(d=>d.value)), 10);
   const x = (i:number) => padL + (i*(width-padL-padR))/Math.max(1,withDuel.length-1);
   const y = (v:number) => height-padB-(v/maxVal)*(height-padT-padB);
@@ -1179,6 +1179,7 @@ function ScenarioTrendChart({ scenarios }: { scenarios: { label: string; duel?: 
     return first && last ? { id, color: first.color, value: last.value, y: y(last.value) } : null;
   }).filter((p): p is NonNullable<typeof p> => p !== null).sort((a,b)=>a.y-b.y);
   poles.forEach((p,i)=>{ if (i>0 && p.y - poles[i-1].y < 12) p.y = poles[i-1].y + 12; });
+  const leaderId = poles.slice().sort((a,b)=>b.value-a.value)[0]?.id;
   return (
     <div className="scenario-trend">
       <span className="scenario-trend-title">Le duel, scénario par scénario</span>
@@ -1188,11 +1189,12 @@ function ScenarioTrendChart({ scenarios }: { scenarios: { label: string; duel?: 
           const first = withDuel[0].duel.find(d=>d.id===id); if(!first) return null;
           const points = withDuel.map((sc,i)=>`${x(i)},${y(sc.duel.find(d=>d.id===id)?.value ?? 0)}`).join(" ");
           const pole = poles.find(p=>p.id===id);
+          const isLeader = id===leaderId;
           return (
             <g key={id}>
-              <polyline points={points} fill="none" stroke={first.color} strokeWidth="2.5" strokeLinejoin="round" strokeLinecap="round"/>
-              {withDuel.map((sc,i)=><circle key={i} cx={x(i)} cy={y(sc.duel.find(d=>d.id===id)?.value ?? 0)} r="4" fill={first.color}/>)}
-              {pole && <text x={x(withDuel.length-1)+8} y={pole.y+3} className="scenario-trend-label" fill={first.color}>{SHORT_POLE_LABEL[id]} {pole.value.toFixed(0)} %</text>}
+              <polyline points={points} fill="none" stroke={first.color} strokeWidth={isLeader?"4.5":"2"} strokeLinejoin="round" strokeLinecap="round" opacity={isLeader?1:0.75}/>
+              {withDuel.map((sc,i)=><circle key={i} cx={x(i)} cy={y(sc.duel.find(d=>d.id===id)?.value ?? 0)} r={isLeader?"6.5":"3.5"} fill={first.color} stroke={isLeader?"#fff":"none"} strokeWidth={isLeader?"1.5":"0"}/>)}
+              {pole && <text x={x(withDuel.length-1)+8} y={pole.y+3} className={`scenario-trend-label${isLeader?" is-leader":""}`} fill={first.color}>{isLeader?"★ ":""}{SHORT_POLE_LABEL[id]} {pole.value.toFixed(0)} %</text>}
             </g>
           );
         })}
