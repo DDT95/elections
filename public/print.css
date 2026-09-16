@@ -73,4 +73,14 @@ h2{break-after:avoid}
 .scenario-second-round-title{display:block;margin-bottom:7px;color:#3c4a5c;font-size:7.5px;font-weight:800;text-transform:uppercase;letter-spacing:.03em}
 .second-round-duel.compact{gap:12px;margin:0;padding:13px 14px}
 .scenario-second-round-note{margin:6px 0 0;color:#657286;font-size:8.5px;line-height:1.5}
+.pres-ref-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:11px}
+.pres-ref-card{break-inside:avoid;padding:12px 13px;border-radius:9px;background:#f7f9fb;border:1px solid #e5e9ee}
+.pres-ref-card>strong{display:block;margin-bottom:8px;color:#070047;font-size:10px}
+.pres-ref-bars{display:grid;gap:7px}
+.pres-ref-bars>div{display:grid;gap:3px}
+.pres-ref-bars>div>span{display:flex;justify-content:space-between;gap:8px;color:#3c4a5c;font-size:8px;font-weight:600}
+.pres-ref-bars>div>span>b{color:#070047}
+.pres-ref-bars>div>i{display:block;height:7px;border-radius:6px;background:#e5eaee;overflow:hidden}
+.pres-ref-bars>div>i>em{display:block;height:100%;border-radius:inherit}
+.pres-ref-delta{margin:7px 0 0;color:#536174;font-size:8px}
 .elected-list{display:grid;grid-template-columns:1fr 1fr;gap:6px}.elected-row{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 10px;border-left:4px solid var(--accent);border-radius:7px;background:#f3f6f8;break-inside:avoid}.elected-row>span{display:flex;flex-direction:column;min-width:0}.elected-row>span>b{color:#070047;font-size:10px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.elected-row>span>small{margin-top:2px;color:#657286;font-size:8px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.elected-row>em{flex:none;padding:2px 6px;border-radius:20px;background:var(--accent);color:#fff;font-size:7px;font-weight:700;font-style:normal}@media print{.elected-row{break-inside:avoid}}

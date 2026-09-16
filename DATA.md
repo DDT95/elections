@@ -85,6 +85,15 @@ Sur l'« Analyse départementale », le bloc « Second tour simulé : RN face à
 - **Périmètre** : Val-d'Oise uniquement. Aucune comparaison nationale : demanderait de moissonner les résultats candidat par candidat des 577 circonscriptions françaises (non fait, aucune source déjà chargée dans ce dépôt ne le couvre) — signalé explicitement dans l'interface plutôt que de citer un chiffre non sourcé dans ce dépôt.
 - **Sortie** : `public/data/elections/report-voix-legislatives-2024.json` (source, méthode, détail par circonscription, agrégat). Relancer `python3 scripts/build_report_voix_legislatives.py` (aucun accès réseau requis, les fichiers sources sont déjà dans le dépôt) pour régénérer.
 
+### Repère présidentielle 2022 (Mélenchon, Le Pen)
+
+Sur l'« Analyse départementale », après le second tour simulé, un bloc « Repère : présidentielle 2022 » affiche les scores réels de Jean-Luc Mélenchon et Marine Le Pen au 1er tour de la présidentielle 2022 (`pres-2022-t1`, déjà chargé dans ce dépôt), à côté des scores LFI et RN des européennes 2024 utilisés comme scrutin de référence par le second tour simulé et les scénarios de participation.
+
+- **Pourquoi séparément** : les dynamiques d'un scrutin présidentiel (participation nettement plus élevée, vote personnalisé sur un candidat plutôt que sur une liste) diffèrent de celles des européennes. Les deux chiffres ne sont donc pas fondus dans une moyenne ni intégrés à la simulation du second tour — affichés côte à côte avec leur écart, à titre de repère de lecture.
+- **Calcul** : agrégation département (`aggregateDepartment`) des résultats communaux `pres-2022-t1`, candidat identifié par correspondance de nom (« MÉLENCHON »/« MELENCHON », « LE PEN »). Comparé à `baselineFamily.lfi`/`baselineFamily.rn` (résultat réel européennes 2024, déjà calculé pour la simulation).
+- **Constat (14 septembre 2026)** : Mélenchon 2022 (33,2 %) nettement au-dessus de LFI 2024 (22,9 %, +10,2 pt) — effet de personnalisation présidentielle. Le Pen 2022 (17,2 %) nettement en dessous du RN 2024 (25,5 %, -8,3 pt) — la concurrence Zemmour en 2022 avait divisé le vote d'extrême droite, absorbée depuis par le RN aux européennes.
+- **Portée** : département uniquement, pour l'instant (mêmes données déjà chargées au niveau commune si besoin d'étendre).
+
 ## Reproductibilité
 
 `python scripts/rebuild_data.py --sources /chemin/du/cache` (dépendances dans `scripts/requirements.txt`) récupère les nouvelles sources manquantes et régénère les agrégations, contours, masque, contexte et rapport de couverture. Les fichiers BV déjà fournis et les élus municipaux conservés constituent les entrées historiques. Les fichiers nationaux téléchargés restent dans un cache ignoré par Git.

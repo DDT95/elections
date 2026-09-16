@@ -614,7 +614,7 @@ export default function ElectionsPage() {
   function printDepartment(){
     const latest=departmentSnapshots.at(-1);const unit=latest?.result;if(!unit)return;
     const token=crypto.randomUUID();
-    const {scenarios,secondRoundDuel}=buildDepartmentScenarios(allElectionData["europeennes-2024"]?.communes??{},allElectionData,socioData,reportVoix);
+    const {scenarios,secondRoundDuel,presRef}=buildDepartmentScenarios(allElectionData["europeennes-2024"]?.communes??{},allElectionData,socioData,reportVoix);
     // Mêmes élus que la fiche web (Section "Députés élus"/"Sénateurs"/"Conseil départemental" de
     // DepartmentAnalysis) : sérialisés ici en tableaux simples pour print.js, qui n'a pas accès
     // aux composants React ni aux fichiers de résultats bruts.
@@ -622,7 +622,7 @@ export default function ElectionsPage() {
     const councillorsData=cantonData["departementales-2021-t2-canton"]?.cantons as Record<string,UnitResult>|undefined;
     const councillorsList=councillorsData?Object.values(councillorsData).filter(c=>c.tete).map(c=>({nom:c.tete!.nom??"—",prenom:null,nuance:c.tete!.nuance,subtitle:c.nom})):[];
     const senatorsList=SENATORS.map(s=>({nom:s.nom,prenom:s.prenom,nuance:s.nuance}));
-    localStorage.setItem(`elections-print-${token}`,JSON.stringify({unit,election:`${latest.election} · ${latest.tour}`,scale:"Département",snapshots:departmentSnapshots,currentKey:latest.key,socio:departmentSocio,eco:ecoData.departement,populationHistory:[],scenarios,secondRoundDuel,deputies:deputiesList,senators:senatorsList,councillors:councillorsList,date:new Date().toISOString()}));
+    localStorage.setItem(`elections-print-${token}`,JSON.stringify({unit,election:`${latest.election} · ${latest.tour}`,scale:"Département",snapshots:departmentSnapshots,currentKey:latest.key,socio:departmentSocio,eco:ecoData.departement,populationHistory:[],scenarios,secondRoundDuel,presRef,deputies:deputiesList,senators:senatorsList,councillors:councillorsList,date:new Date().toISOString()}));
     window.open(`${basePath}/print.html#${token}`,"_blank","noopener");
   }
 
@@ -1054,7 +1054,7 @@ function electionAccent(key: string) {
 
 function buildDepartmentScenarios(communeData: Record<string, UnitResult>, datasets: Record<string,ElectionCommuneFile>, socioByCommune: Record<string, SocioProfile>, reportVoix: ReportVoix | null) {
   const sensitivities=[{id:"extreme_left",label:"Extrême gauche",color:"#7a0c0c"},{id:"left",label:"Gauche",color:"#e4287c"},{id:"center",label:"Centre",color:"#e8b62f"},{id:"right",label:"Droite",color:"#2878c8"},{id:"far_right",label:"Extrême droite",color:"#14213d"}];
-  const euro=datasets["europeennes-2024"]?aggregateDepartment(datasets["europeennes-2024"]):null;if(!euro)return {scenarios:[],secondRoundDuel:null};
+  const euro=datasets["europeennes-2024"]?aggregateDepartment(datasets["europeennes-2024"]):null;if(!euro)return {scenarios:[],secondRoundDuel:null,presRef:null};
   const baseline=politicalScores(euro,"sensitivity"),baselineFamily=politicalScores(euro,"family"),avg=euro.pct_participation;
   const simulate=(factorFor:(code:string,u:UnitResult)=>number)=>{const votes:Record<string,number>={},famVotes:Record<string,number>={};let total=0;Object.entries(communeData).forEach(([code,u])=>{const factor=factorFor(code,u);total+=u.exprimes*factor;u.candidats.forEach(c=>{const group=politicalGroup(c.nuance,`${c.prenom??""} ${c.nom??""}`);votes[group.sensitivity]=(votes[group.sensitivity]??0)+c.voix*factor;famVotes[group.family]=(famVotes[group.family]??0)+c.voix*factor})});const pct=(v:number)=>total?v*100/total:0;return{sensitivity:Object.fromEntries(sensitivities.map(x=>[x.id,pct(votes[x.id]??0)])),family:Object.fromEntries(Object.entries(famVotes).map(([k,v])=>[k,pct(v)]))}};
   const refs=["pres-2017-t1","pres-2022-t1","europeennes-2024"];
@@ -1112,7 +1112,20 @@ function buildDepartmentScenarios(communeData: Record<string, UnitResult>, datas
     return{label:sc.label,explanation:sc.explanation,effects,conclusion,duel,secondRound};
   });
   const secondRoundDuel=computeSecondRound(baseline,baselineFamily);
-  return {scenarios,secondRoundDuel};
+  // Repère présidentielle 2022 : les dynamiques d'un scrutin présidentiel (participation
+  // nettement plus élevée, vote personnalisé sur un candidat) diffèrent de celles des européennes
+  // (liste, participation plus faible) prises comme référence pour les scénarios et le second tour
+  // simulé ci-dessus. On affiche donc les scores réels de Mélenchon et Le Pen au 1er tour de la
+  // présidentielle 2022 comme repère à part, sans les fondre dans la simulation.
+  const pres2022=datasets["pres-2022-t1"]?aggregateDepartment(datasets["pres-2022-t1"]):null;
+  const findCandidate=(matcher:(name:string)=>boolean)=>pres2022?.candidats.find(c=>matcher(`${c.prenom??""} ${c.nom??""}`.toUpperCase()))?.pct_exprimes??null;
+  const presRef={
+    melenchon:findCandidate(n=>n.includes("MÉLENCHON")||n.includes("MELENCHON")),
+    lepen:findCandidate(n=>n.includes("LE PEN")),
+    lfiEuro2024:baselineFamily.lfi??null,
+    rnEuro2024:baselineFamily.rn??null,
+  };
+  return {scenarios,secondRoundDuel,presRef};
 }
 
 // Sénateurs du Val-d'Oise élus en septembre 2023 (série renouvelée, mandat jusqu'en 2029) —
@@ -1150,7 +1163,7 @@ function ElectedList({ items }: { items: { nom: string; prenom?: string | null; 
 function DepartmentAnalysis({ snapshots, currentKey, socio, communeData, datasets, socioByCommune, deputies, councillors, ecoDepartement, reportVoix }: { snapshots: ElectionSnapshot[]; currentKey:string; socio: SocioProfile | null; communeData: Record<string, UnitResult>; datasets: Record<string,ElectionCommuneFile>; socioByCommune: Record<string, SocioProfile>; deputies: Record<string, UnitResult> | null; councillors: Record<string, UnitResult> | null; ecoDepartement: EcoContext | null; reportVoix: ReportVoix | null }) {
   const current=snapshots.at(-1);if(!current)return <p className="elec-empty">Chargement de l’analyse départementale…</p>;
   const avg=snapshots.length?snapshots.reduce((sum,x)=>sum+x.result.pct_participation,0)/snapshots.length:0;
-  const {scenarios,secondRoundDuel}=buildDepartmentScenarios(communeData,datasets,socioByCommune,reportVoix);
+  const {scenarios,secondRoundDuel,presRef}=buildDepartmentScenarios(communeData,datasets,socioByCommune,reportVoix);
   return <>
     {socio&&<Section title="Profil sociodémographique" state="INSEE RP 2022"><div className="socio-profile"><div className="socio-pop"><span>Population</span><strong>{Math.round(socio.population).toLocaleString("fr-FR")}</strong><small>habitants</small></div><div className="socio-bars">{[{label:"15 à 24 ans",value:socio.jeunes,color:"#00a7b5"},{label:"65 ans ou plus",value:socio.seniors,color:"#a558a0"},{label:"Diplôme supérieur",value:socio.diplomesSup,color:"#18753c"}].map(item=><div key={item.label}><span><b>{item.label}</b><strong>{item.value.toFixed(1)} %</strong></span><i><em style={{width:`${item.value}%`,background:item.color}}/></i></div>)}</div></div></Section>}
     <EcoContextSection eco={ecoDepartement} state="Insee 2023 · département"/>
@@ -1178,6 +1191,7 @@ function DepartmentAnalysis({ snapshots, currentKey, socio, communeData, dataset
         de candidats agrégés. */}
     <CommuneSynthesis snapshots={snapshots} currentKey={currentKey} mode="families"/><CommuneSynthesis snapshots={snapshots} currentKey={currentKey} mode="sensitivities"/>
     {secondRoundDuel && <SecondRoundDuelSection duel={secondRoundDuel}/>}
+    {presRef && <PresidentielleRefSection presRef={presRef}/>}
     <Section title="Scénarios de participation">
       <p className="elec-synthesis-intro">Chaque scénario modifie la mobilisation territoriale puis mesure l’effet sur les grandes sensibilités au 1<sup>er</sup> tour, avant de simuler le 2<sup>nd</sup> : les barres montrent le score simulé de chaque sensibilité (toutes les composantes — gauche, centre, droite, extrêmes) ; l’écart entre parenthèses compare ce score simulé au <strong>score réel des européennes 2024</strong>, le scrutin de référence de ce simulateur (vert = progression, rouge = recul par rapport à ce score réel). Sous chaque carte : le détail par parti de la gauche et de l’extrême droite, le rapport de force complet du 1<sup>er</sup> tour en donut (toutes les familles politiques), puis <strong>le second tour simulé sous ce même scénario</strong> — RN face à l’union de la gauche, avec le report de voix mesuré sur les législatives 2024.</p>
       <ScenarioTrendChart scenarios={scenarios} />
@@ -1291,6 +1305,34 @@ function SecondRoundDuelSection({ duel }: { duel: { gauche: number; rn: number; 
         </div>
       </div>
       <p className="elec-context-note"><strong>Méthode :</strong> report mesuré = (voix 2<sup>nd</sup> tour − voix 1<sup>er</sup> tour) / (électeurs du 1<sup>er</sup> tour n’ayant voté ni gauche ni RN), sur les {duel.nbDuels} circonscriptions du Val-d’Oise où l’union de la gauche a affronté le RN en duel strict au 2<sup>nd</sup> tour des législatives 2024 : <strong>{duel.reportGauche.toFixed(1)} %</strong> de ce réservoir Centre/Droite s’est reporté vers l’union de la gauche, <strong>{duel.reportRn.toFixed(1)} %</strong> vers le RN, le reste s’étant abstenu. Appliqué ici au réservoir Centre + Droite des européennes 2024. Comparaison nationale non disponible pour l’instant (nécessiterait les résultats candidat par candidat des 577 circonscriptions françaises, non chargés dans cet atlas).</p>
+    </Section>
+  );
+}
+
+function PresidentielleRefSection({ presRef }: { presRef: { melenchon: number | null; lepen: number | null; lfiEuro2024: number | null; rnEuro2024: number | null } }) {
+  const rows = [
+    { key: "melenchon", label: "Jean-Luc Mélenchon", refLabel: "LFI (européennes 2024)", value: presRef.melenchon, refValue: presRef.lfiEuro2024, color: "#ce0500" },
+    { key: "lepen", label: "Marine Le Pen", refLabel: "RN (européennes 2024)", value: presRef.lepen, refValue: presRef.rnEuro2024, color: "#14213d" },
+  ].filter(r => r.value != null);
+  if (!rows.length) return null;
+  return (
+    <Section title="Repère : présidentielle 2022" state="Résultats réels">
+      <p className="elec-synthesis-intro">Les dynamiques d’une présidentielle (participation nettement plus élevée, vote personnalisé sur un candidat) diffèrent de celles d’une élection de liste comme les européennes. Les scores réels de Jean-Luc Mélenchon et Marine Le Pen au 1<sup>er</sup> tour de la présidentielle 2022 sont donnés ici comme repère — ils ne sont pas intégrés au second tour simulé ni aux scénarios ci-dessous, qui se basent sur les européennes 2024.</p>
+      <div className="pres-ref-grid">
+        {rows.map(r => {
+          const delta = r.refValue != null ? r.value! - r.refValue : null;
+          return (
+            <div key={r.key} className="pres-ref-card">
+              <strong>{r.label}</strong>
+              <div className="pres-ref-bars">
+                <div><span><span>Présidentielle 2022, 1<sup>er</sup> tour</span><b>{r.value!.toFixed(1)} %</b></span><i><em style={{ width: `${Math.min(100, r.value! / 40 * 100)}%`, background: r.color }} /></i></div>
+                <div><span><span>{r.refLabel}</span><b>{r.refValue != null ? `${r.refValue.toFixed(1)} %` : "Non disponible"}</b></span><i><em style={{ width: `${r.refValue != null ? Math.min(100, r.refValue / 40 * 100) : 0}%`, background: r.color, opacity: .55 }} /></i></div>
+              </div>
+              {delta != null && <p className="pres-ref-delta">{delta >= 0 ? "+" : ""}{delta.toFixed(1)} point{Math.abs(delta) >= 2 ? "s" : ""} par rapport aux européennes 2024.</p>}
+            </div>
+          );
+        })}
+      </div>
     </Section>
   );
 }
