@@ -43,18 +43,15 @@ h2{break-after:avoid}
 .scenario-trend-title{display:block;margin-bottom:9px;color:#8a5a12;font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.04em}
 .scenario-trend-note{margin:9px 0 0;color:#8a7048;font-size:8.5px;line-height:1.5}
 .scenario-trend-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.scenario-trend-card{break-inside:avoid;padding:9px 11px;border-radius:8px;background:#fffdf9;border:1px solid #f0d9b5cc;opacity:.85}
-.scenario-trend-card.is-overall-leader{opacity:1;background:#fff}
-.scenario-trend-card-head{display:flex;align-items:center;gap:6px;margin-bottom:8px;color:#5c4322;font-size:7.5px;font-weight:700}
+.scenario-trend-card{break-inside:avoid;padding:10px 12px;border-radius:8px;background:#fff;border:1px solid #f0d9b5cc}
+.scenario-trend-card-head{display:flex;align-items:center;gap:6px;margin-bottom:8px;color:#5c4322;font-size:8px;font-weight:700}
 .scenario-trend-card-body{display:flex;align-items:center;gap:10px}
 .scenario-duel-strip-num{width:14px;height:14px;flex:none;display:grid;place-items:center;border-radius:50%;background:#fff;border:1px solid #f0d9b5;color:#8a5a12;font-size:7px;font-weight:800}
 .mini-duel-donut{flex:none}
-.mini-duel-value{fill:#171f2e;font-size:11px;font-weight:800}
-.mini-duel-leader{fill:#5c6a7d;font-size:7px;font-weight:800;text-transform:uppercase}
-.scenario-trend-card.is-overall-leader .mini-duel-value{font-size:12.5px}
-.scenario-trend-card.is-overall-leader .mini-duel-leader{font-size:8px;font-weight:900}
+.mini-duel-value{fill:#171f2e;font-size:12.5px;font-weight:800}
+.mini-duel-leader{fill:#5c6a7d;font-size:8px;font-weight:900;text-transform:uppercase}
 .mini-duel-legend{flex:1;display:grid;gap:4px;margin:0;padding:0;list-style:none;min-width:0}
-.mini-duel-legend li{display:flex;align-items:center;gap:5px;font-size:7px}
+.mini-duel-legend li{display:flex;align-items:center;gap:5px;font-size:7.5px}
 .mini-duel-legend i{width:7px;height:7px;border-radius:2px;flex:none}
 .mini-duel-legend span{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#3c4a5c;font-weight:600}
 .mini-duel-legend b{color:#171f2e}
