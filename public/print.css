@@ -55,7 +55,7 @@ h2{break-after:avoid}
 .second-round-duel{break-inside:avoid;display:flex;align-items:center;gap:16px;margin:10px 0;padding:13px 16px;border-radius:12px;background:linear-gradient(155deg,#070047,#20204f)}
 .second-round-donut{width:88px;height:88px;flex:none}
 .second-round-value{fill:#fff;font-size:13px;font-weight:800}
-.second-round-leader{fill:#a9b0e0;font-size:8px;font-weight:800}
+.second-round-leader{fill:#e8eaff;font-size:8px;font-weight:800}
 .second-round-legend{flex:1;display:grid;gap:7px}
 .second-round-legend div{display:flex;align-items:center;gap:6px}
 .second-round-legend i{width:8px;height:8px;border-radius:2px;flex:none}
