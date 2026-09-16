@@ -130,7 +130,7 @@ body{font-family:"Marianne",Arial,sans-serif}
 .scenario-cards .scenario-detail-title{display:flex;align-items:center;gap:6px;margin-bottom:10px;color:#3c4a5c;font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.04em}
 .scenario-cards .scenario-detail-title i{width:8px;height:8px;border-radius:2px;flex:none}
 .scenario-cards .up{color:#18753c}.scenario-cards .down{color:#e1000f}
-.scenario-cards>article>footer{margin-top:18px;padding:13px 19px;border-top:1px solid #e5e9ee;background:#f7f9fa;color:#334255;font-size:10px;font-weight:500;line-height:1.5}
+.scenario-cards>article>footer{margin-top:18px;padding:13px 19px;border-top:1px solid #e5e9ee;background:#f7f9fa;color:#334255;font-size:11px;font-weight:500;line-height:1.5}
 .scenario-duel{margin:18px 19px 0;padding:18px 19px 15px;border-radius:12px;background:linear-gradient(155deg,#fff8ec,#fef1e6);border:1px solid #f0d9b5;box-shadow:inset 0 0 0 1px #ffffffa0}
 .scenario-duel-title{display:block;margin-bottom:12px;color:#8a5a12;font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.05em}
 .scenario-duel-body{display:flex;align-items:center;gap:18px}
@@ -144,10 +144,10 @@ body{font-family:"Marianne",Arial,sans-serif}
 .scenario-duel-legend b{color:#070047}
 .scenario-duel-legend b{font-size:14px}
 .scenario-duel-legend em{font-style:normal;font-weight:700;font-size:9px}
-.scenario-duel-note{margin:12px 0 0;color:#8a7048;font-size:8px;line-height:1.4}
+.scenario-duel-note{margin:12px 0 0;color:#8a7048;font-size:10px;line-height:1.5}
 .scenario-trend{margin-bottom:16px;padding:18px 19px 15px;border-radius:12px;background:linear-gradient(155deg,#fff8ec,#fef1e6);border:1px solid #f0d9b5;box-shadow:inset 0 0 0 1px #ffffffa0}
 .scenario-trend-title{display:block;margin-bottom:12px;color:#8a5a12;font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.05em}
-.scenario-trend-note{margin:12px 0 0;color:#8a7048;font-size:8px;line-height:1.4}
+.scenario-trend-note{margin:12px 0 0;color:#8a7048;font-size:10px;line-height:1.5}
 .scenario-duel-strip{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:center;gap:14px 18px}
 .scenario-duel-strip-item{display:flex;flex-direction:column;align-items:center;gap:6px;opacity:.82;transition:opacity .15s ease}
 .scenario-duel-strip-item.is-overall-leader{opacity:1}
@@ -170,7 +170,7 @@ body{font-family:"Marianne",Arial,sans-serif}
 .scenario-second-round{margin:16px 19px 0}
 .scenario-second-round-title{display:block;margin-bottom:9px;color:#3c4a5c;font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.04em}
 .second-round-duel.compact{gap:18px;margin:0;padding:16px 19px}
-.scenario-second-round-note{margin:8px 0 0;color:#657286;font-size:8px;line-height:1.5}
+.scenario-second-round-note{margin:8px 0 0;color:#657286;font-size:10px;line-height:1.5}
 
 /* Bloc "Élection et tour" : même carte à bordure que la liste des échelles (.elec-scale-menu)
    juste au-dessus, au lieu d'un simple titre suivi de deux <select> flottants sans cadre. */
