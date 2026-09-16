@@ -146,12 +146,16 @@ body{font-family:"Marianne",Arial,sans-serif}
 .scenario-duel-note{margin:12px 0 0;color:#8a7048;font-size:8px;line-height:1.4}
 .scenario-trend{margin-bottom:16px;padding:18px 19px 15px;border-radius:12px;background:linear-gradient(155deg,#fff8ec,#fef1e6);border:1px solid #f0d9b5;box-shadow:inset 0 0 0 1px #ffffffa0}
 .scenario-trend-title{display:block;margin-bottom:12px;color:#8a5a12;font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.05em}
-.scenario-trend-chart{width:100%;height:auto;display:block}
-.scenario-trend-axis{stroke:#e4d2ab;stroke-width:1}
-.scenario-trend-label{font-size:10px;font-weight:700;dominant-baseline:middle}
-.scenario-trend-label.is-leader{font-size:13px;font-weight:900}
-.scenario-trend-tick{fill:#a3895c;font-size:9px}
 .scenario-trend-note{margin:12px 0 0;color:#8a7048;font-size:8px;line-height:1.4}
+.scenario-duel-strip{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:center;gap:14px 18px}
+.scenario-duel-strip-item{display:flex;flex-direction:column;align-items:center;gap:6px;opacity:.82;transition:opacity .15s ease}
+.scenario-duel-strip-item.is-overall-leader{opacity:1}
+.scenario-duel-strip-num{width:18px;height:18px;display:grid;place-items:center;border-radius:50%;background:#fff;border:1px solid #f0d9b5;color:#8a5a12;font-size:9px;font-weight:800}
+.mini-duel-donut{flex:none}
+.mini-duel-value{fill:#171f2e;font-size:15px;font-weight:800;font-family:Marianne,Arial,sans-serif}
+.mini-duel-leader{fill:#5c6a7d;font-size:6.5px;font-weight:700;text-transform:uppercase;letter-spacing:.02em}
+.scenario-duel-strip-item.is-overall-leader .mini-duel-value{font-size:17px}
+.scenario-duel-strip-item.is-overall-leader .mini-duel-leader{font-size:7.5px;font-weight:900}
 
 /* Bloc "Élection et tour" : même carte à bordure que la liste des échelles (.elec-scale-menu)
    juste au-dessus, au lieu d'un simple titre suivi de deux <select> flottants sans cadre. */
