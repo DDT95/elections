@@ -17,6 +17,7 @@ type SocioProfile = { population: number; jeunes: number; seniors: number; diplo
 type EcoStat = { value: number | null; year?: number; source?: string; quality_flag?: string };
 type EcoCsp = { note?: string; annee?: number; quality_flag?: string; repartition?: { label: string; value: number; pct: number }[] };
 type EcoContext = { niveau_vie_median: EcoStat | null; taux_pauvrete: EcoStat | null; csp: EcoCsp | null };
+type ReportVoix = { aggregate: { nb_duels: number; report_gauche: number; report_rn: number; report_residuel: number }; duels: unknown[]; triangulaires: unknown[] };
 type ElectionSnapshot = { key: string; election: string; tour: string; date: string; result: UnitResult };
 type DisplayMetric = MetricId | "none";
 
@@ -120,6 +121,7 @@ export default function ElectionsPage() {
   const [populationData, setPopulationData] = useState<Record<string, { annee: number; population: number }[]>>({});
   const [socioData, setSocioData] = useState<Record<string, SocioProfile>>({});
   const [ecoData, setEcoData] = useState<{ departement: EcoContext | null; communes: Record<string, EcoContext> }>({ departement: null, communes: {} });
+  const [reportVoix, setReportVoix] = useState<ReportVoix | null>(null);
   const [allElectionData, setAllElectionData] = useState<Record<string, ElectionCommuneFile>>({});
 
   const [selectedCode, setSelectedCode] = useState<string | null>(null);
@@ -149,8 +151,9 @@ export default function ElectionsPage() {
       fetchJson<any>("/data/insee/context-95.json").catch(() => null),
       fetchJson<any>("/data/insee/population-historique-95.json").catch(() => null),
       fetchJson<any>("/data/insee/contexte-socio-eco.json").catch(() => null),
+      fetchJson<any>("/data/elections/report-voix-legislatives-2024.json").catch(() => null),
     ])
-      .then(([communes, circo, bv, canton, epci, epciLinks, mask, insee, population, eco]) => {
+      .then(([communes, circo, bv, canton, epci, epciLinks, mask, insee, population, eco, reportVoix]) => {
         setCommunesGeo(communes);
         setCircoGeo(circo);
         setBvGeo(bv);
@@ -161,6 +164,7 @@ export default function ElectionsPage() {
         setSocioData(aggregateSocio(insee));
         setPopulationData(population?.communes || {});
         setEcoData(eco ? { departement: eco.departement ?? null, communes: eco.communes ?? {} } : { departement: null, communes: {} });
+        setReportVoix(reportVoix ?? null);
       })
       .finally(() => setLoading(false));
   }, []);
@@ -610,7 +614,7 @@ export default function ElectionsPage() {
   function printDepartment(){
     const latest=departmentSnapshots.at(-1);const unit=latest?.result;if(!unit)return;
     const token=crypto.randomUUID();
-    const scenarios=buildDepartmentScenarios(allElectionData["europeennes-2024"]?.communes??{},allElectionData,socioData);
+    const {scenarios,secondRoundDuel}=buildDepartmentScenarios(allElectionData["europeennes-2024"]?.communes??{},allElectionData,socioData,reportVoix);
     // Mêmes élus que la fiche web (Section "Députés élus"/"Sénateurs"/"Conseil départemental" de
     // DepartmentAnalysis) : sérialisés ici en tableaux simples pour print.js, qui n'a pas accès
     // aux composants React ni aux fichiers de résultats bruts.
@@ -618,7 +622,7 @@ export default function ElectionsPage() {
     const councillorsData=cantonData["departementales-2021-t2-canton"]?.cantons as Record<string,UnitResult>|undefined;
     const councillorsList=councillorsData?Object.values(councillorsData).filter(c=>c.tete).map(c=>({nom:c.tete!.nom??"—",prenom:null,nuance:c.tete!.nuance,subtitle:c.nom})):[];
     const senatorsList=SENATORS.map(s=>({nom:s.nom,prenom:s.prenom,nuance:s.nuance}));
-    localStorage.setItem(`elections-print-${token}`,JSON.stringify({unit,election:`${latest.election} · ${latest.tour}`,scale:"Département",snapshots:departmentSnapshots,currentKey:latest.key,socio:departmentSocio,eco:ecoData.departement,populationHistory:[],scenarios,deputies:deputiesList,senators:senatorsList,councillors:councillorsList,date:new Date().toISOString()}));
+    localStorage.setItem(`elections-print-${token}`,JSON.stringify({unit,election:`${latest.election} · ${latest.tour}`,scale:"Département",snapshots:departmentSnapshots,currentKey:latest.key,socio:departmentSocio,eco:ecoData.departement,populationHistory:[],scenarios,secondRoundDuel,deputies:deputiesList,senators:senatorsList,councillors:councillorsList,date:new Date().toISOString()}));
     window.open(`${basePath}/print.html#${token}`,"_blank","noopener");
   }
 
@@ -824,7 +828,7 @@ export default function ElectionsPage() {
 
       <dialog ref={departmentDialog} className="elec-dept-dialog">
         <header><div><small>ANALYSE DÉPARTEMENTALE</small><h2>Val-d’Oise</h2><p>Résultats agrégés des 184 communes</p></div><div className="dept-dialog-actions"><button className="dept-pdf" onClick={printDepartment}>Ouvrir la fiche PDF</button><button className="dept-dialog-close" onClick={() => departmentDialog.current?.close()} aria-label="Fermer">×</button></div></header>
-        <div className="dept-dialog-body"><DepartmentAnalysis snapshots={departmentSnapshots} currentKey={dataKey} socio={departmentSocio} communeData={allElectionData["europeennes-2024"]?.communes ?? {}} datasets={allElectionData} socioByCommune={socioData} deputies={deputies} councillors={cantonData["departementales-2021-t2-canton"]?.cantons ?? null} ecoDepartement={ecoData.departement} /></div>
+        <div className="dept-dialog-body"><DepartmentAnalysis snapshots={departmentSnapshots} currentKey={dataKey} socio={departmentSocio} communeData={allElectionData["europeennes-2024"]?.communes ?? {}} datasets={allElectionData} socioByCommune={socioData} deputies={deputies} councillors={cantonData["departementales-2021-t2-canton"]?.cantons ?? null} ecoDepartement={ecoData.departement} reportVoix={reportVoix} /></div>
       </dialog>
 
       <dialog ref={sourceDialog} className="elec-source-dialog">
@@ -1046,9 +1050,9 @@ function electionAccent(key: string) {
   return "#ce614a";
 }
 
-function buildDepartmentScenarios(communeData: Record<string, UnitResult>, datasets: Record<string,ElectionCommuneFile>, socioByCommune: Record<string, SocioProfile>) {
+function buildDepartmentScenarios(communeData: Record<string, UnitResult>, datasets: Record<string,ElectionCommuneFile>, socioByCommune: Record<string, SocioProfile>, reportVoix: ReportVoix | null) {
   const sensitivities=[{id:"extreme_left",label:"Extrême gauche",color:"#7a0c0c"},{id:"left",label:"Gauche",color:"#e4287c"},{id:"center",label:"Centre",color:"#e8b62f"},{id:"right",label:"Droite",color:"#2878c8"},{id:"far_right",label:"Extrême droite",color:"#14213d"}];
-  const euro=datasets["europeennes-2024"]?aggregateDepartment(datasets["europeennes-2024"]):null;if(!euro)return [];
+  const euro=datasets["europeennes-2024"]?aggregateDepartment(datasets["europeennes-2024"]):null;if(!euro)return {scenarios:[],secondRoundDuel:null};
   const baseline=politicalScores(euro,"sensitivity"),baselineFamily=politicalScores(euro,"family"),avg=euro.pct_participation;
   const simulate=(factorFor:(code:string,u:UnitResult)=>number)=>{const votes:Record<string,number>={},famVotes:Record<string,number>={};let total=0;Object.entries(communeData).forEach(([code,u])=>{const factor=factorFor(code,u);total+=u.exprimes*factor;u.candidats.forEach(c=>{const group=politicalGroup(c.nuance,`${c.prenom??""} ${c.nom??""}`);votes[group.sensitivity]=(votes[group.sensitivity]??0)+c.voix*factor;famVotes[group.family]=(famVotes[group.family]??0)+c.voix*factor})});const pct=(v:number)=>total?v*100/total:0;return{sensitivity:Object.fromEntries(sensitivities.map(x=>[x.id,pct(votes[x.id]??0)])),family:Object.fromEntries(Object.entries(famVotes).map(([k,v])=>[k,pct(v)]))}};
   const refs=["pres-2017-t1","pres-2022-t1","europeennes-2024"];
@@ -1073,7 +1077,7 @@ function buildDepartmentScenarios(communeData: Record<string, UnitResult>, datas
     {id:"rn",label:"Rassemblement national",value:fam.rn??0,delta:(fam.rn??0)-(baselineFamily.rn??0),color:"#14213d"},
     {id:"reconquest",label:"Reconquête",value:fam.reconquest??0,delta:(fam.reconquest??0)-(baselineFamily.reconquest??0),color:"#4b2e83"},
   ].sort((a,b)=>b.value-a.value);
-  return raw.map(sc=>{
+  const scenarios=raw.map(sc=>{
     const effects=sensitivities.map(x=>({...x,value:sc.data.sensitivity[x.id]??0,delta:(sc.data.sensitivity[x.id]??0)-(baseline[x.id]??0),detail:x.id==="left"?leftDetailFor(sc.data.family):x.id==="far_right"?farRightDetailFor(sc.data.family):undefined}));
     const ordered=effects.slice().sort((a,b)=>Math.abs(b.delta)-Math.abs(a.delta));
     const main=ordered[0];
@@ -1093,6 +1097,20 @@ function buildDepartmentScenarios(communeData: Record<string, UnitResult>, datas
     const duel=[lfi,rn,center].filter((x):x is NonNullable<typeof x>=>Boolean(x));
     return{label:sc.label,explanation:sc.explanation,effects,conclusion,duel};
   });
+  // Simulation d'un second tour RN face à l'union de la gauche, à partir des scores
+  // Européennes 2024 (un seul tour, aucun report de voix réel) additionnés du report de
+  // voix mesuré sur les vrais duels UG/RN des législatives 2024 dans le Val-d'Oise (voir
+  // scripts/build_report_voix_legislatives.py) : le réservoir « Centre + Droite » du 1er
+  // tour se répartit selon ce taux réel plutôt que de rester figé sur son score Européennes.
+  const agg=reportVoix?.aggregate;
+  let secondRoundDuel=null as null | { gauche:number; rn:number; reportGauche:number; reportRn:number; nbDuels:number };
+  if (agg && agg.report_gauche!=null && agg.report_rn!=null) {
+    const gaucheBase=baseline.left??0, rnBase=baselineFamily.rn??0, autres=(baseline.center??0)+(baseline.right??0);
+    const gaucheT2=gaucheBase+agg.report_gauche*autres, rnT2=rnBase+agg.report_rn*autres;
+    const total=gaucheT2+rnT2;
+    secondRoundDuel = total ? { gauche: gaucheT2*100/total, rn: rnT2*100/total, reportGauche: agg.report_gauche*100, reportRn: agg.report_rn*100, nbDuels: agg.nb_duels } : null;
+  }
+  return {scenarios,secondRoundDuel};
 }
 
 // Sénateurs du Val-d'Oise élus en septembre 2023 (série renouvelée, mandat jusqu'en 2029) —
@@ -1127,10 +1145,10 @@ function ElectedList({ items }: { items: { nom: string; prenom?: string | null; 
   );
 }
 
-function DepartmentAnalysis({ snapshots, currentKey, socio, communeData, datasets, socioByCommune, deputies, councillors, ecoDepartement }: { snapshots: ElectionSnapshot[]; currentKey:string; socio: SocioProfile | null; communeData: Record<string, UnitResult>; datasets: Record<string,ElectionCommuneFile>; socioByCommune: Record<string, SocioProfile>; deputies: Record<string, UnitResult> | null; councillors: Record<string, UnitResult> | null; ecoDepartement: EcoContext | null }) {
+function DepartmentAnalysis({ snapshots, currentKey, socio, communeData, datasets, socioByCommune, deputies, councillors, ecoDepartement, reportVoix }: { snapshots: ElectionSnapshot[]; currentKey:string; socio: SocioProfile | null; communeData: Record<string, UnitResult>; datasets: Record<string,ElectionCommuneFile>; socioByCommune: Record<string, SocioProfile>; deputies: Record<string, UnitResult> | null; councillors: Record<string, UnitResult> | null; ecoDepartement: EcoContext | null; reportVoix: ReportVoix | null }) {
   const current=snapshots.at(-1);if(!current)return <p className="elec-empty">Chargement de l’analyse départementale…</p>;
   const avg=snapshots.length?snapshots.reduce((sum,x)=>sum+x.result.pct_participation,0)/snapshots.length:0;
-  const scenarios=buildDepartmentScenarios(communeData,datasets,socioByCommune);
+  const {scenarios,secondRoundDuel}=buildDepartmentScenarios(communeData,datasets,socioByCommune,reportVoix);
   return <>
     {socio&&<Section title="Profil sociodémographique" state="INSEE RP 2022"><div className="socio-profile"><div className="socio-pop"><span>Population</span><strong>{Math.round(socio.population).toLocaleString("fr-FR")}</strong><small>habitants</small></div><div className="socio-bars">{[{label:"15 à 24 ans",value:socio.jeunes,color:"#00a7b5"},{label:"65 ans ou plus",value:socio.seniors,color:"#a558a0"},{label:"Diplôme supérieur",value:socio.diplomesSup,color:"#18753c"}].map(item=><div key={item.label}><span><b>{item.label}</b><strong>{item.value.toFixed(1)} %</strong></span><i><em style={{width:`${item.value}%`,background:item.color}}/></i></div>)}</div></div></Section>}
     <EcoContextSection eco={ecoDepartement} state="Insee 2023 · département"/>
@@ -1157,8 +1175,9 @@ function DepartmentAnalysis({ snapshots, currentKey, socio, communeData, dataset
         moyennes/tendances par sensibilité politique (ci-dessous), jamais un faux classement
         de candidats agrégés. */}
     <CommuneSynthesis snapshots={snapshots} currentKey={currentKey} mode="families"/><CommuneSynthesis snapshots={snapshots} currentKey={currentKey} mode="sensitivities"/>
+    {secondRoundDuel && <SecondRoundDuelSection duel={secondRoundDuel}/>}
     <Section title="Scénarios de participation">
-      <p className="elec-synthesis-intro">Chaque scénario modifie la mobilisation territoriale puis mesure l’effet sur les grandes sensibilités : les barres montrent, comme pour la sensibilité moyenne du territoire ci-dessus, le score simulé de chaque sensibilité ; l’écart entre parenthèses indique la variation par rapport à la moyenne européennes 2024 (vert = progression, rouge = recul). Sous chaque carte : le détail par parti de la gauche et de l’extrême droite, puis le duel LFI · RN · Centre en donut.</p>
+      <p className="elec-synthesis-intro">Chaque scénario modifie la mobilisation territoriale puis mesure l’effet sur les grandes sensibilités : les barres montrent, comme pour la sensibilité moyenne du territoire ci-dessus, le score simulé de chaque sensibilité au 1<sup>er</sup> tour (Européennes 2024, aucun report de voix) ; l’écart entre parenthèses indique la variation par rapport à la moyenne européennes 2024 (vert = progression, rouge = recul). Sous chaque carte : le détail par parti de la gauche et de l’extrême droite, puis le rapport de force LFI · RN · Centre du 1<sup>er</sup> tour en donut (à ne pas confondre avec la simulation de second tour ci-dessus).</p>
       <ScenarioTrendChart scenarios={scenarios} />
       <div className="scenario-cards">{scenarios.map(sc=>
         <article key={sc.label}>
@@ -1188,7 +1207,7 @@ function ScenarioDuel({ duel }: { duel: { id: string; label: string; value: numb
   const leader = duel.slice().sort((a,b)=>b.value-a.value)[0];
   return (
     <div className="scenario-duel">
-      <span className="scenario-duel-title">★ Duel LFI · RN · Centre</span>
+      <span className="scenario-duel-title">★ Rapport de force LFI · RN · Centre — 1<sup>er</sup> tour</span>
       <div className="scenario-duel-body">
         <svg viewBox="0 0 100 100" className="scenario-duel-donut" role="img" aria-label={`${leader.label} en tête avec ${leader.value.toFixed(1)} %`}>
           <circle cx="50" cy="50" r={r} fill="none" stroke="#e3e8ee" strokeWidth="15"/>
@@ -1198,7 +1217,7 @@ function ScenarioDuel({ duel }: { duel: { id: string; label: string; value: numb
         </svg>
         <ul className="scenario-duel-legend">{duel.map(d=><li key={d.id}><i style={{background:d.color}}/><span>{d.label}</span><b>{d.value.toFixed(1)} %</b><em className={d.delta>=0?"up":"down"}>({d.delta>=0?"+":""}{d.delta.toFixed(1)} pt)</em></li>)}</ul>
       </div>
-      <p className="scenario-duel-note">Part relative entre ces trois pôles seulement (hors autres familles) — écarts calculés par rapport à la moyenne européennes 2024.</p>
+      <p className="scenario-duel-note">Scores du 1<sup>er</sup> (et seul) tour des européennes 2024 : ce scrutin n’a pas de second tour, donc pas de report de voix ici. Part relative entre ces trois pôles seulement (hors autres familles) — écarts calculés par rapport à la moyenne européennes 2024. Pour un vrai second tour simulé, voir « RN face à l’union de la gauche » plus haut.</p>
     </div>
   );
 }
@@ -1227,7 +1246,7 @@ function ScenarioTrendChart({ scenarios }: { scenarios: { label: string; duel?: 
   }).sort((a,b)=>b.total-a.total)[0]?.id;
   return (
     <div className="scenario-trend">
-      <span className="scenario-trend-title">Le duel, scénario par scénario</span>
+      <span className="scenario-trend-title">Rapport de force au 1<sup>er</sup> tour, scénario par scénario</span>
       <div className="scenario-duel-strip">
         {withDuel.map((sc,i)=>{
           const isLeaderScenario = sc.duel.slice().sort((a,b)=>b.value-a.value)[0]?.id===overallLeader;
@@ -1239,8 +1258,33 @@ function ScenarioTrendChart({ scenarios }: { scenarios: { label: string; duel?: 
           );
         })}
       </div>
-      <p className="scenario-trend-note">{withDuel.map((sc,i)=>`${i+1}. ${sc.label}`).join(" · ")}</p>
+      <p className="scenario-trend-note">Scores du 1<sup>er</sup> tour (européennes 2024, sans report de voix) selon chaque scénario de participation. {withDuel.map((sc,i)=>`${i+1}. ${sc.label}`).join(" · ")}</p>
     </div>
+  );
+}
+
+function SecondRoundDuelSection({ duel }: { duel: { gauche: number; rn: number; reportGauche: number; reportRn: number; nbDuels: number } }) {
+  const leaderIsGauche = duel.gauche >= duel.rn;
+  const r = 46, C = 2*Math.PI*r;
+  const gaucheLen = C*duel.gauche/100;
+  return (
+    <Section title="Second tour simulé : RN face à l’union de la gauche" state="Report mesuré 2024">
+      <p className="elec-synthesis-intro">Simulation d’un duel de second tour à l’échelle du département : les scores du 1<sup>er</sup> tour (européennes 2024) sont mis à jour avec le <strong>report de voix réellement observé</strong> lors des {duel.nbDuels} duels RN/union de la gauche des législatives 2024 dans le Val-d’Oise (voir « Report de voix » ci-dessous). Ce n’est ni une moyenne ni une prévision : c’est un report mesuré appliqué à un autre scrutin, donc une hypothèse à prendre comme telle.</p>
+      <div className="second-round-duel">
+        <svg viewBox="0 0 110 110" className="second-round-donut" role="img" aria-label={`${leaderIsGauche?"Union de la gauche":"RN"} en tête avec ${(leaderIsGauche?duel.gauche:duel.rn).toFixed(1)} %`}>
+          <circle cx="55" cy="55" r={r} fill="none" stroke="#e3e8ee" strokeWidth="16"/>
+          <circle cx="55" cy="55" r={r} fill="none" stroke="#e4287c" strokeWidth="16" strokeDasharray={`${gaucheLen} ${C-gaucheLen}`} transform="rotate(-90 55 55)"/>
+          <circle cx="55" cy="55" r={r} fill="none" stroke="#14213d" strokeWidth="16" strokeDasharray={`${C-gaucheLen} ${gaucheLen}`} strokeDashoffset={-gaucheLen} transform="rotate(-90 55 55)"/>
+          <text x="55" y="51" textAnchor="middle" className="second-round-value">{(leaderIsGauche?duel.gauche:duel.rn).toFixed(1)} %</text>
+          <text x="55" y="67" textAnchor="middle" className="second-round-leader">{leaderIsGauche?"UNION GAUCHE":"RN"}</text>
+        </svg>
+        <div className="second-round-legend">
+          <div><i style={{background:"#e4287c"}}/><span>Union de la gauche</span><b>{duel.gauche.toFixed(1)} %</b></div>
+          <div><i style={{background:"#14213d"}}/><span>Rassemblement national</span><b>{duel.rn.toFixed(1)} %</b></div>
+        </div>
+      </div>
+      <p className="elec-context-note"><strong>Méthode :</strong> report mesuré = (voix 2<sup>nd</sup> tour − voix 1<sup>er</sup> tour) / (électeurs du 1<sup>er</sup> tour n’ayant voté ni gauche ni RN), sur les {duel.nbDuels} circonscriptions du Val-d’Oise où l’union de la gauche a affronté le RN en duel strict au 2<sup>nd</sup> tour des législatives 2024 : <strong>{duel.reportGauche.toFixed(1)} %</strong> de ce réservoir Centre/Droite s’est reporté vers l’union de la gauche, <strong>{duel.reportRn.toFixed(1)} %</strong> vers le RN, le reste s’étant abstenu. Appliqué ici au réservoir Centre + Droite des européennes 2024. Comparaison nationale non disponible pour l’instant (nécessiterait les résultats candidat par candidat des 577 circonscriptions françaises, non chargés dans cet atlas).</p>
+    </Section>
   );
 }
 
