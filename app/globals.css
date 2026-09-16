@@ -156,6 +156,8 @@ body{font-family:"Marianne",Arial,sans-serif}
 .scenario-duel-strip-num{width:18px;height:18px;flex:none;display:grid;place-items:center;border-radius:50%;background:#fff;border:1px solid #f0d9b5;color:#8a5a12;font-size:9px;font-weight:800}
 .mini-duel-donut{flex:none}
 .mini-duel-value{fill:#171f2e;font-size:15px;font-weight:800;font-family:Marianne,Arial,sans-serif}
+.mini-duel-value.up{fill:#18753c}
+.mini-duel-value.down{fill:#e1000f}
 .mini-duel-leader{fill:#5c6a7d;font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.02em}
 .scenario-trend-card.is-overall-leader .mini-duel-value{font-size:17px}
 .scenario-trend-card.is-overall-leader .mini-duel-leader{font-size:10px;font-weight:900}
