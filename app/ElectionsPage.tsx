@@ -1241,47 +1241,63 @@ function ScenarioDuel({ duel }: { duel: { id: string; label: string; value: numb
   );
 }
 
-function MiniDuelDonut({ duel, size, highlight }: { duel: { id: string; label: string; value: number; color: string }[]; size: number; highlight?: { id: string; label: string; delta: number } }) {
+function MiniDuelDonut({ duel, size, highlight }: { duel: { id: string; label: string; value: number; color: string }[]; size: number; highlight?: { id: string; label: string; delta: number }[] }) {
   const total = duel.reduce((sum,d)=>sum+d.value,0) || 1;
   const r = 40, C = 2*Math.PI*r;
   let offset = 0;
   const leader = duel.slice().sort((a,b)=>b.value-a.value)[0];
-  const label = SHORT_POLE_LABEL[highlight?.id ?? leader.id] ?? (highlight?.label ?? leader.label);
+  const ariaLabel = highlight
+    ? highlight.map(h=>`${SHORT_POLE_LABEL[h.id]??h.label} ${h.delta>=0?"+":""}${h.delta.toFixed(1)} pt`).join(", ")
+    : `${SHORT_POLE_LABEL[leader.id]??leader.label} en tête avec ${leader.value.toFixed(1)} %`;
   return (
-    <svg viewBox="0 0 100 100" width={size} height={size} className="mini-duel-donut" role="img" aria-label={highlight ? `${label} ${highlight.delta>=0?"progresse":"recule"} le plus dans ce scénario, ${highlight.delta>=0?"+":""}${highlight.delta.toFixed(1)} pt` : `${label} en tête avec ${leader.value.toFixed(1)} %`}>
+    <svg viewBox="0 0 100 100" width={size} height={size} className="mini-duel-donut" role="img" aria-label={ariaLabel}>
       <circle cx="50" cy="50" r={r} fill="none" stroke="#e3e8ee" strokeWidth="15"/>
       {duel.map(d=>{const len=C*d.value/total,seg=<circle key={d.id} cx="50" cy="50" r={r} fill="none" stroke={d.color} strokeWidth="15" strokeDasharray={`${len} ${C-len}`} strokeDashoffset={-offset} transform="rotate(-90 50 50)"/>;offset+=len;return seg})}
-      <text x="50" y="46" textAnchor="middle" className={`mini-duel-value${highlight?(highlight.delta>=0?" up":" down"):""}`}>{highlight ? `${highlight.delta>=0?"+":""}${highlight.delta.toFixed(1)} pt` : `${leader.value.toFixed(0)} %`}</text>
-      <text x="50" y="61" textAnchor="middle" className="mini-duel-leader">{label}</text>
+      {highlight ? highlight.map((h,i)=>
+        <text key={h.id} x="50" y={i===0?"44":"59"} textAnchor="middle" className={`mini-duel-value mini-duel-value-pair${h.delta>=0?" up":" down"}`}>{SHORT_POLE_LABEL[h.id]??h.label} {h.delta>=0?"+":""}{h.delta.toFixed(1)}</text>
+      ) : <>
+        <text x="50" y="46" textAnchor="middle" className="mini-duel-value">{leader.value.toFixed(0)} %</text>
+        <text x="50" y="61" textAnchor="middle" className="mini-duel-leader">{SHORT_POLE_LABEL[leader.id]??leader.label}</text>
+      </>}
     </svg>
   );
 }
 
 const TREND_ORDER = ["left","center","right","far_right"];
-function ScenarioTrendChart({ scenarios }: { scenarios: { label: string; effects?: { id: string; label: string; value: number; delta: number; color: string }[] }[] }) {
+function ScenarioTrendChart({ scenarios }: { scenarios: { label: string; effects?: { id: string; label: string; value: number; delta: number; color: string }[]; duel?: { id: string; label: string; value: number; delta: number; color: string }[] }[] }) {
   const withEffects = scenarios.filter((sc): sc is typeof sc & { effects: NonNullable<typeof sc["effects"]> } => (sc.effects?.length ?? 0) > 0);
   if (withEffects.length < 2) return null;
-  const movers = withEffects.map(sc=>({ sc, mover: sc.effects.slice().sort((a,b)=>Math.abs(b.delta)-Math.abs(a.delta))[0] }));
-  const mostAffectedLabel = movers.slice().sort((a,b)=>Math.abs(b.mover.delta)-Math.abs(a.mover.delta))[0]?.sc.label;
+  // Le donut de chaque scénario met en avant Gauche et RN — les deux pôles du second tour simulé
+  // — plutôt que « la sensibilité la plus affectée » : depuis l'intégration de la référence
+  // multi-scrutins, le Centre a un écart structurel (-7/-8 pt, dû au vote de liste des européennes
+  // vs le vote candidat des législatives/présidentielle) qui domine toujours ce calcul, quel que
+  // soit le scénario — un artefact de méthode, pas un vrai signal par scénario.
+  const movers = withEffects.map(sc=>{
+    const gauche = sc.effects.find(e=>e.id==="left");
+    const rn = sc.duel?.find(d=>d.id==="rn");
+    const pair = [gauche, rn].filter((x):x is NonNullable<typeof x>=>Boolean(x));
+    return { sc, pair, maxAbsDelta: Math.max(...pair.map(p=>Math.abs(p.delta)), 0) };
+  });
+  const mostAffectedLabel = movers.slice().sort((a,b)=>b.maxAbsDelta-a.maxAbsDelta)[0]?.sc.label;
   return (
     <div className="scenario-trend">
       <span className="scenario-trend-title">Rapport de force au 1<sup>er</sup> tour, scénario par scénario</span>
       <div className="scenario-trend-grid">
-        {movers.map(({sc,mover},i)=>{
+        {movers.map(({sc,pair},i)=>{
           const isMostAffected = sc.label===mostAffectedLabel;
           const items = TREND_ORDER.map(id=>sc.effects.find(d=>d.id===id)).filter((x):x is NonNullable<typeof x>=>Boolean(x));
           return (
             <div key={sc.label} className={`scenario-trend-card${isMostAffected?" is-overall-leader":""}`}>
               <div className="scenario-trend-card-head"><span className="scenario-duel-strip-num">{i+1}</span><span>{sc.label}</span></div>
               <div className="scenario-trend-card-body">
-                <MiniDuelDonut duel={sc.effects} size={isMostAffected?76:64} highlight={mover}/>
+                <MiniDuelDonut duel={sc.effects} size={isMostAffected?76:64} highlight={pair.length?pair:undefined}/>
                 <ul className="mini-duel-legend">{items.map(x=><li key={x.id}><i style={{background:x.color}}/><span>{x.id==="far_right"?"Extrême droite":x.label}</span><b>{x.value.toFixed(1)} %</b></li>)}</ul>
               </div>
             </div>
           );
         })}
       </div>
-      <p className="scenario-trend-note">Le chiffre au centre de chaque donut indique la sensibilité la plus affectée par ce scénario (écart par rapport à la référence multi-scrutins, voir « Méthode » ci-dessus) ; la carte « {mostAffectedLabel} » est celle où l’écart est le plus marqué. Détail des 4 grandes familles à droite — mêmes valeurs que « Sensibilités simulées » sur chaque carte.</p>
+      <p className="scenario-trend-note">Le chiffre au centre de chaque donut indique l’écart de Gauche et de RN par rapport à la référence multi-scrutins (voir « Méthode » ci-dessus) — les deux pôles du second tour simulé. Le Centre n’est pas mis en avant ici : son écart structurel (vote de liste vs vote candidat) est le même quel que soit le scénario, ce n’est pas un signal propre au scénario. La carte « {mostAffectedLabel} » est celle où Gauche ou RN s’écarte le plus. Détail des 4 grandes familles à droite — mêmes valeurs que « Sensibilités simulées » sur chaque carte.</p>
     </div>
   );
 }
