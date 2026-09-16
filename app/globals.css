@@ -148,15 +148,22 @@ body{font-family:"Marianne",Arial,sans-serif}
 .scenario-trend{margin-bottom:16px;padding:18px 19px 15px;border-radius:12px;background:linear-gradient(155deg,#fff8ec,#fef1e6);border:1px solid #f0d9b5;box-shadow:inset 0 0 0 1px #ffffffa0}
 .scenario-trend-title{display:block;margin-bottom:12px;color:#8a5a12;font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.05em}
 .scenario-trend-note{margin:12px 0 0;color:#8a7048;font-size:10px;line-height:1.5}
-.scenario-duel-strip{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:center;gap:14px 18px}
-.scenario-duel-strip-item{display:flex;flex-direction:column;align-items:center;gap:6px;opacity:.82;transition:opacity .15s ease}
-.scenario-duel-strip-item.is-overall-leader{opacity:1}
-.scenario-duel-strip-num{width:18px;height:18px;display:grid;place-items:center;border-radius:50%;background:#fff;border:1px solid #f0d9b5;color:#8a5a12;font-size:9px;font-weight:800}
+.scenario-trend-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
+.scenario-trend-card{padding:12px 14px;border-radius:10px;background:#fffdf9;border:1px solid #f0d9b5cc;opacity:.85;transition:opacity .15s ease}
+.scenario-trend-card.is-overall-leader{opacity:1;background:#fff;box-shadow:0 2px 10px #8a5a1214}
+.scenario-trend-card-head{display:flex;align-items:center;gap:8px;margin-bottom:10px;color:#5c4322;font-size:10px;font-weight:700}
+.scenario-trend-card-body{display:flex;align-items:center;gap:14px}
+.scenario-duel-strip-num{width:18px;height:18px;flex:none;display:grid;place-items:center;border-radius:50%;background:#fff;border:1px solid #f0d9b5;color:#8a5a12;font-size:9px;font-weight:800}
 .mini-duel-donut{flex:none}
 .mini-duel-value{fill:#171f2e;font-size:15px;font-weight:800;font-family:Marianne,Arial,sans-serif}
 .mini-duel-leader{fill:#5c6a7d;font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.02em}
-.scenario-duel-strip-item.is-overall-leader .mini-duel-value{font-size:17px}
-.scenario-duel-strip-item.is-overall-leader .mini-duel-leader{font-size:10px;font-weight:900}
+.scenario-trend-card.is-overall-leader .mini-duel-value{font-size:17px}
+.scenario-trend-card.is-overall-leader .mini-duel-leader{font-size:10px;font-weight:900}
+.mini-duel-legend{flex:1;display:grid;gap:5px;margin:0;padding:0;list-style:none;min-width:0}
+.mini-duel-legend li{display:flex;align-items:center;gap:6px;font-size:9.5px}
+.mini-duel-legend i{width:9px;height:9px;border-radius:2px;flex:none}
+.mini-duel-legend span{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#3c4a5c;font-weight:600}
+.mini-duel-legend b{color:#171f2e}
 .second-round-duel{display:flex;align-items:center;gap:22px;margin:14px 0;padding:16px 20px;border-radius:14px;background:linear-gradient(155deg,#070047,#20204f);box-shadow:0 8px 24px #07004733}
 .second-round-donut{width:108px;height:108px;flex:none}
 .second-round-value{fill:#fff;font-size:15px;font-weight:800;font-family:Marianne,Arial,sans-serif}

@@ -1240,6 +1240,7 @@ function MiniDuelDonut({ duel, size }: { duel: { id: string; label: string; valu
   );
 }
 
+const TREND_ORDER = ["left","center","right","far_right"];
 function ScenarioTrendChart({ scenarios }: { scenarios: { label: string; effects?: { id: string; label: string; value: number; color: string }[] }[] }) {
   const withEffects = scenarios.filter((sc): sc is typeof sc & { effects: NonNullable<typeof sc["effects"]> } => (sc.effects?.length ?? 0) > 0);
   if (withEffects.length < 2) return null;
@@ -1251,18 +1252,22 @@ function ScenarioTrendChart({ scenarios }: { scenarios: { label: string; effects
   return (
     <div className="scenario-trend">
       <span className="scenario-trend-title">Rapport de force au 1<sup>er</sup> tour, scénario par scénario</span>
-      <div className="scenario-duel-strip">
+      <div className="scenario-trend-grid">
         {withEffects.map((sc,i)=>{
           const isLeaderScenario = sc.effects.slice().sort((a,b)=>b.value-a.value)[0]?.id===overallLeader;
+          const items = TREND_ORDER.map(id=>sc.effects.find(d=>d.id===id)).filter((x):x is NonNullable<typeof x>=>Boolean(x));
           return (
-            <div key={sc.label} className={`scenario-duel-strip-item${isLeaderScenario?" is-overall-leader":""}`}>
-              <MiniDuelDonut duel={sc.effects} size={isLeaderScenario?86:72}/>
-              <span className="scenario-duel-strip-num">{i+1}</span>
+            <div key={sc.label} className={`scenario-trend-card${isLeaderScenario?" is-overall-leader":""}`}>
+              <div className="scenario-trend-card-head"><span className="scenario-duel-strip-num">{i+1}</span><span>{sc.label}</span></div>
+              <div className="scenario-trend-card-body">
+                <MiniDuelDonut duel={sc.effects} size={isLeaderScenario?76:64}/>
+                <ul className="mini-duel-legend">{items.map(x=><li key={x.id}><i style={{background:x.color}}/><span>{x.id==="far_right"?"Extrême droite":x.label}</span><b>{x.value.toFixed(1)} %</b></li>)}</ul>
+              </div>
             </div>
           );
         })}
       </div>
-      <p className="scenario-trend-note">Grandes sensibilités du 1<sup>er</sup> tour (européennes 2024, sans report de voix) selon chaque scénario de participation — mêmes valeurs que « Sensibilités simulées » sur chaque carte. {withEffects.map((sc,i)=>`${i+1}. ${sc.label}`).join(" · ")}</p>
+      <p className="scenario-trend-note">Grandes sensibilités du 1<sup>er</sup> tour (européennes 2024, sans report de voix) selon chaque scénario de participation — mêmes valeurs que « Sensibilités simulées » sur chaque carte.</p>
     </div>
   );
 }
