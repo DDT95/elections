@@ -614,7 +614,7 @@ export default function ElectionsPage() {
   function printDepartment(){
     const latest=departmentSnapshots.at(-1);const unit=latest?.result;if(!unit)return;
     const token=crypto.randomUUID();
-    const {scenarios,secondRoundDuel,baselineBreakdown}=buildDepartmentScenarios(allElectionData["europeennes-2024"]?.communes??{},allElectionData,socioData,reportVoix);
+    const {scenarios,secondRoundDuel,baselineBreakdown,observed}=buildDepartmentScenarios(allElectionData["europeennes-2024"]?.communes??{},allElectionData,socioData,reportVoix);
     // Mêmes élus que la fiche web (Section "Députés élus"/"Sénateurs"/"Conseil départemental" de
     // DepartmentAnalysis) : sérialisés ici en tableaux simples pour print.js, qui n'a pas accès
     // aux composants React ni aux fichiers de résultats bruts.
@@ -622,7 +622,7 @@ export default function ElectionsPage() {
     const councillorsData=cantonData["departementales-2021-t2-canton"]?.cantons as Record<string,UnitResult>|undefined;
     const councillorsList=councillorsData?Object.values(councillorsData).filter(c=>c.tete).map(c=>({nom:c.tete!.nom??"—",prenom:null,nuance:c.tete!.nuance,subtitle:c.nom})):[];
     const senatorsList=SENATORS.map(s=>({nom:s.nom,prenom:s.prenom,nuance:s.nuance}));
-    localStorage.setItem(`elections-print-${token}`,JSON.stringify({unit,election:`${latest.election} · ${latest.tour}`,scale:"Département",snapshots:departmentSnapshots,currentKey:latest.key,socio:departmentSocio,eco:ecoData.departement,populationHistory:[],scenarios,secondRoundDuel,baselineBreakdown,deputies:deputiesList,senators:senatorsList,councillors:councillorsList,date:new Date().toISOString()}));
+    localStorage.setItem(`elections-print-${token}`,JSON.stringify({unit,election:`${latest.election} · ${latest.tour}`,scale:"Département",snapshots:departmentSnapshots,currentKey:latest.key,socio:departmentSocio,eco:ecoData.departement,populationHistory:[],scenarios,secondRoundDuel,baselineBreakdown,observed,deputies:deputiesList,senators:senatorsList,councillors:councillorsList,date:new Date().toISOString()}));
     window.open(`${basePath}/print.html#${token}`,"_blank","noopener");
   }
 
@@ -1154,7 +1154,7 @@ function buildDepartmentScenarios(communeData: Record<string, UnitResult>, datas
     return{label:sc.label,kind:sc.kind,explanation:sc.explanation,effects,conclusion,duel,secondRound};
   });
   const secondRoundDuel=computeSecondRound(baseline,baselineFamily);
-  return {scenarios,secondRoundDuel,baselineBreakdown};
+  return {scenarios,secondRoundDuel,baselineBreakdown,observed:reel.sensitivity};
 }
 
 // Sénateurs du Val-d'Oise élus en septembre 2023 (série renouvelée, mandat jusqu'en 2029) —
@@ -1192,7 +1192,7 @@ function ElectedList({ items }: { items: { nom: string; prenom?: string | null; 
 function DepartmentAnalysis({ snapshots, currentKey, socio, communeData, datasets, socioByCommune, deputies, councillors, ecoDepartement, reportVoix }: { snapshots: ElectionSnapshot[]; currentKey:string; socio: SocioProfile | null; communeData: Record<string, UnitResult>; datasets: Record<string,ElectionCommuneFile>; socioByCommune: Record<string, SocioProfile>; deputies: Record<string, UnitResult> | null; councillors: Record<string, UnitResult> | null; ecoDepartement: EcoContext | null; reportVoix: ReportVoix | null }) {
   const current=snapshots.at(-1);if(!current)return <p className="elec-empty">Chargement de l’analyse départementale…</p>;
   const avg=snapshots.length?snapshots.reduce((sum,x)=>sum+x.result.pct_participation,0)/snapshots.length:0;
-  const {scenarios,secondRoundDuel,baselineBreakdown}=buildDepartmentScenarios(communeData,datasets,socioByCommune,reportVoix);
+  const {scenarios,secondRoundDuel,baselineBreakdown,observed}=buildDepartmentScenarios(communeData,datasets,socioByCommune,reportVoix);
   return <>
     {socio&&<Section title="Profil sociodémographique" state="INSEE RP 2022"><div className="socio-profile"><div className="socio-pop"><span>Population</span><strong>{Math.round(socio.population).toLocaleString("fr-FR")}</strong><small>habitants</small></div><div className="socio-bars">{[{label:"15 à 24 ans",value:socio.jeunes,color:"#00a7b5"},{label:"65 ans ou plus",value:socio.seniors,color:"#a558a0"},{label:"Diplôme supérieur",value:socio.diplomesSup,color:"#18753c"}].map(item=><div key={item.label}><span><b>{item.label}</b><strong>{item.value.toFixed(1)} %</strong></span><i><em style={{width:`${item.value}%`,background:item.color}}/></i></div>)}</div></div></Section>}
     <EcoContextSection eco={ecoDepartement} state="Insee 2023 · département"/>
@@ -1223,7 +1223,7 @@ function DepartmentAnalysis({ snapshots, currentKey, socio, communeData, dataset
     {baselineBreakdown && <BaselineRefSection breakdown={baselineBreakdown}/>}
     <Section title="Scénarios de participation">
       <p className="elec-synthesis-intro">Chaque scénario modifie la mobilisation territoriale puis mesure l’effet sur les grandes sensibilités au 1<sup>er</sup> tour, avant de simuler le 2<sup>nd</sup> : les barres montrent le score simulé de chaque sensibilité (toutes les composantes — gauche, centre, droite, extrêmes) ; l’écart entre parenthèses compare ce score simulé à la <strong>référence multi-scrutins</strong> (détaillée dans « Méthode » ci-dessus, vert = progression, rouge = recul par rapport à cette référence). Sous chaque carte : le détail par parti de la gauche et de l’extrême droite, le rapport de force complet du 1<sup>er</sup> tour en donut (toutes les familles politiques), puis <strong>le second tour simulé sous ce même scénario</strong> — RN face à l’union de la gauche, avec le report de voix mesuré sur les législatives 2024.</p>
-      <ScenarioTrendChart scenarios={scenarios} />
+      <ScenarioTrendChart scenarios={scenarios} real={observed} />
       <div className="scenario-cards">{scenarios.map(sc=>
         <article key={sc.label}>
           <header><strong>{sc.label}</strong><p>{sc.explanation}</p></header>
@@ -1292,30 +1292,21 @@ function MiniDuelDonut({ duel, size, highlight }: { duel: { id: string; label: s
 }
 
 const TREND_ORDER = ["left","center","right","far_right"];
-function ScenarioTrendChart({ scenarios }: { scenarios: { label: string; kind?: string; effects?: { id: string; label: string; value: number; delta: number; color: string }[]; duel?: { id: string; label: string; value: number; delta: number; color: string }[] }[] }) {
+function ScenarioTrendChart({ scenarios, real }: { scenarios: { label: string; kind?: string; effects?: { id: string; label: string; value: number; delta: number; color: string }[]; duel?: { id: string; label: string; value: number; delta: number; color: string }[] }[]; real?: Record<string, number> }) {
   const withEffects = scenarios.filter((sc): sc is typeof sc & { effects: NonNullable<typeof sc["effects"]> } => (sc.effects?.length ?? 0) > 0);
-  if (withEffects.length < 2) return null;
+  if (withEffects.length < 2 || !real) return null;
   // Le donut de chaque scénario met en avant, parmi les 4 grandes familles (gauche, centre, droite,
-  // extrême droite), celle qui s'écarte le plus de la médiane observée dans les scénarios de
-  // participation (kind "turnout") — pas de la référence multi-scrutins, ni de la moyenne des 6
-  // scénarios. Comparer à la référence multi-scrutins favorise toujours la même famille (le plus gros
-  // écart structurel de méthode, ex. le Centre ou le RN) ; comparer à la moyenne des 6 scénarios est
-  // faussé par les deux scénarios de vote utile, dont les reports de voix massifs sur une seule
-  // famille tirent la moyenne et font gagner la même famille sur tous les scénarios de participation.
-  // La médiane des scénarios de participation seuls reste un repère stable et non pollué par ces
-  // reports, pour tous les scénarios — turnout et vote utile confondus.
-  const turnoutScenarios = withEffects.filter(sc=>sc.kind==="turnout");
-  const refScenarios = turnoutScenarios.length ? turnoutScenarios : withEffects;
-  const medianByPole: Record<string, number> = {};
-  TREND_ORDER.forEach(id=>{
-    const vals = refScenarios.map(sc=>sc.effects.find(e=>e.id===id)?.value).filter((v): v is number => v !== undefined).sort((a,b)=>a-b);
-    const mid = Math.floor(vals.length/2);
-    medianByPole[id] = vals.length ? (vals.length%2 ? vals[mid] : (vals[mid-1]+vals[mid])/2) : 0;
-  });
+  // extrême droite), celle qui s'écarte le plus des résultats RÉELS des européennes 2024 (avant toute
+  // pondération de participation ou report de voix). Comparer à la référence multi-scrutins ou à une
+  // moyenne/médiane entre scénarios favorise toujours la même famille (le plus gros écart structurel
+  // de méthode) ou en pollue certains avec l'effet d'un autre scénario (ex. « Vote utile à gauche » ne
+  // change jamais le total Gauche — seule sa composition interne LFI/PS bouge — mais ressortait à tort
+  // en négatif quand on le comparait à une base déjà repondérée). Comparer aux vrais résultats 2024
+  // isole l'effet propre à chaque scénario, sans base commune trafiquée.
   const movers = withEffects.map(sc=>{
     const candidates = TREND_ORDER.map(id=>{
       const item = sc.effects.find(e=>e.id===id);
-      return item ? { id: item.id, label: item.label, color: item.color, delta: item.value - medianByPole[item.id] } : null;
+      return item ? { id: item.id, label: item.label, color: item.color, delta: item.value - (real[item.id] ?? item.value) } : null;
     }).filter((x): x is NonNullable<typeof x> => Boolean(x));
     const top = candidates.slice().sort((a,b)=>Math.abs(b.delta)-Math.abs(a.delta))[0];
     return { sc, top };
@@ -1337,7 +1328,7 @@ function ScenarioTrendChart({ scenarios }: { scenarios: { label: string; kind?: 
           );
         })}
       </div>
-      <p className="scenario-trend-note">Le chiffre au centre de chaque donut indique l’écart de la famille politique — gauche, centre, droite ou extrême droite — qui s’écarte le plus, dans ce scénario, de sa médiane observée dans les scénarios de participation (n° 1 à 4) ; sa couleur reprend celle de la famille dans l’anneau. La famille mise en avant varie donc d’une carte à l’autre. Détail des 4 grandes familles à droite — mêmes valeurs que « Sensibilités simulées » sur chaque carte.</p>
+      <p className="scenario-trend-note">Le chiffre au centre de chaque donut indique l’écart de la famille politique — gauche, centre, droite ou extrême droite — qui s’écarte le plus, dans ce scénario, des résultats réels des européennes 2024 (avant toute pondération de participation ou report de voix) ; sa couleur reprend celle de la famille dans l’anneau. La famille mise en avant varie donc d’une carte à l’autre. Détail des 4 grandes familles à droite — mêmes valeurs que « Sensibilités simulées » sur chaque carte.</p>
     </div>
   );
 }
