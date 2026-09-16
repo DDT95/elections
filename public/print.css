@@ -50,6 +50,8 @@ h2{break-after:avoid}
 .scenario-duel-strip-num{width:14px;height:14px;flex:none;display:grid;place-items:center;border-radius:50%;background:#fff;border:1px solid #f0d9b5;color:#8a5a12;font-size:7px;font-weight:800}
 .mini-duel-donut{flex:none}
 .mini-duel-value{fill:#171f2e;font-size:11px;font-weight:800}
+.mini-duel-value.up{fill:#18753c}
+.mini-duel-value.down{fill:#e1000f}
 .mini-duel-leader{fill:#5c6a7d;font-size:7px;font-weight:800;text-transform:uppercase}
 .scenario-trend-card.is-overall-leader .mini-duel-value{font-size:12.5px}
 .scenario-trend-card.is-overall-leader .mini-duel-leader{font-size:8px;font-weight:900}
