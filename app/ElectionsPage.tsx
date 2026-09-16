@@ -14,6 +14,9 @@ const ATLAS_URL = "https://ddt95.github.io/atlas-territorial-95/";
 
 type SourceEntry = { id: string; label: string; producer: string; url: string; frequency: string };
 type SocioProfile = { population: number; jeunes: number; seniors: number; diplomesSup: number };
+type EcoStat = { value: number | null; year?: number; source?: string; quality_flag?: string };
+type EcoCsp = { note?: string; annee?: number; quality_flag?: string; repartition?: { label: string; value: number; pct: number }[] };
+type EcoContext = { niveau_vie_median: EcoStat | null; taux_pauvrete: EcoStat | null; csp: EcoCsp | null };
 type ElectionSnapshot = { key: string; election: string; tour: string; date: string; result: UnitResult };
 type DisplayMetric = MetricId | "none";
 
@@ -116,6 +119,7 @@ export default function ElectionsPage() {
   const [bvData, setBvData] = useState<Record<string, any>>({});
   const [populationData, setPopulationData] = useState<Record<string, { annee: number; population: number }[]>>({});
   const [socioData, setSocioData] = useState<Record<string, SocioProfile>>({});
+  const [ecoData, setEcoData] = useState<{ departement: EcoContext | null; communes: Record<string, EcoContext> }>({ departement: null, communes: {} });
   const [allElectionData, setAllElectionData] = useState<Record<string, ElectionCommuneFile>>({});
 
   const [selectedCode, setSelectedCode] = useState<string | null>(null);
@@ -144,8 +148,9 @@ export default function ElectionsPage() {
       fetchJson<any>("/data/geo/masque-95.geojson").catch(() => null),
       fetchJson<any>("/data/insee/context-95.json").catch(() => null),
       fetchJson<any>("/data/insee/population-historique-95.json").catch(() => null),
+      fetchJson<any>("/data/insee/contexte-socio-eco.json").catch(() => null),
     ])
-      .then(([communes, circo, bv, canton, epci, epciLinks, mask, insee, population]) => {
+      .then(([communes, circo, bv, canton, epci, epciLinks, mask, insee, population, eco]) => {
         setCommunesGeo(communes);
         setCircoGeo(circo);
         setBvGeo(bv);
@@ -155,6 +160,7 @@ export default function ElectionsPage() {
         setMaskGeo(mask);
         setSocioData(aggregateSocio(insee));
         setPopulationData(population?.communes || {});
+        setEcoData(eco ? { departement: eco.departement ?? null, communes: eco.communes ?? {} } : { departement: null, communes: {} });
       })
       .finally(() => setLoading(false));
   }, []);
@@ -594,6 +600,7 @@ export default function ElectionsPage() {
         snapshots: scaleSnapshots,
         currentKey: latest?.key ?? dataKey,
         socio: selectedSocio,
+        eco: selectedCode ? ecoData.communes[selectedCode] ?? null : null,
         populationHistory: selectedCode ? populationData[selectedCode] ?? [] : [],
         date: new Date().toISOString(),
       }),
@@ -611,7 +618,7 @@ export default function ElectionsPage() {
     const councillorsData=cantonData["departementales-2021-t2-canton"]?.cantons as Record<string,UnitResult>|undefined;
     const councillorsList=councillorsData?Object.values(councillorsData).filter(c=>c.tete).map(c=>({nom:c.tete!.nom??"—",prenom:null,nuance:c.tete!.nuance,subtitle:c.nom})):[];
     const senatorsList=SENATORS.map(s=>({nom:s.nom,prenom:s.prenom,nuance:s.nuance}));
-    localStorage.setItem(`elections-print-${token}`,JSON.stringify({unit,election:`${latest.election} · ${latest.tour}`,scale:"Département",snapshots:departmentSnapshots,currentKey:latest.key,socio:departmentSocio,populationHistory:[],scenarios,deputies:deputiesList,senators:senatorsList,councillors:councillorsList,date:new Date().toISOString()}));
+    localStorage.setItem(`elections-print-${token}`,JSON.stringify({unit,election:`${latest.election} · ${latest.tour}`,scale:"Département",snapshots:departmentSnapshots,currentKey:latest.key,socio:departmentSocio,eco:ecoData.departement,populationHistory:[],scenarios,deputies:deputiesList,senators:senatorsList,councillors:councillorsList,date:new Date().toISOString()}));
     window.open(`${basePath}/print.html#${token}`,"_blank","noopener");
   }
 
@@ -777,6 +784,7 @@ export default function ElectionsPage() {
                     <p className="elec-context-note"><strong>Source :</strong> INSEE, recensement de la population 2022.</p>
                   </Section>
                 )}
+                {scale === "commune" && selectedCode && <EcoContextSection eco={ecoData.communes[selectedCode]} state="Insee 2023"/>}
                 <Section title="Participation" state={`Moyenne sur ${scaleSnapshots.length} tours`}>
                   <div className="participation-gauge"><span style={{width:`${averageCommuneParticipation}%`}}/><b>{averageCommuneParticipation.toFixed(1)} %</b></div>
                   <div className="participation-analysis">
@@ -816,7 +824,7 @@ export default function ElectionsPage() {
 
       <dialog ref={departmentDialog} className="elec-dept-dialog">
         <header><div><small>ANALYSE DÉPARTEMENTALE</small><h2>Val-d’Oise</h2><p>Résultats agrégés des 184 communes</p></div><div className="dept-dialog-actions"><button className="dept-pdf" onClick={printDepartment}>Ouvrir la fiche PDF</button><button className="dept-dialog-close" onClick={() => departmentDialog.current?.close()} aria-label="Fermer">×</button></div></header>
-        <div className="dept-dialog-body"><DepartmentAnalysis snapshots={departmentSnapshots} currentKey={dataKey} socio={departmentSocio} communeData={allElectionData["europeennes-2024"]?.communes ?? {}} datasets={allElectionData} socioByCommune={socioData} deputies={deputies} councillors={cantonData["departementales-2021-t2-canton"]?.cantons ?? null} /></div>
+        <div className="dept-dialog-body"><DepartmentAnalysis snapshots={departmentSnapshots} currentKey={dataKey} socio={departmentSocio} communeData={allElectionData["europeennes-2024"]?.communes ?? {}} datasets={allElectionData} socioByCommune={socioData} deputies={deputies} councillors={cantonData["departementales-2021-t2-canton"]?.cantons ?? null} ecoDepartement={ecoData.departement} /></div>
       </dialog>
 
       <dialog ref={sourceDialog} className="elec-source-dialog">
@@ -908,6 +916,34 @@ function Section({ title, state, children }: { title: string; state: string; chi
       </div>
       {children}
     </section>
+  );
+}
+
+const CSP_COLORS = ["#0a4c8c", "#1f7a8c", "#2a9d8f", "#6c757d", "#e07a3f", "#8a9a5b", "#9b8fb5", "#b0b8c1"];
+function EcoContextSection({ eco, state }: { eco: EcoContext | null | undefined; state: string }) {
+  if (!eco) return null;
+  const nvm = eco.niveau_vie_median, pauvrete = eco.taux_pauvrete, csp = eco.csp?.repartition;
+  return (
+    <Section title="Contexte socio-économique" state={state}>
+      <div className="eco-stats">
+        <div>
+          <span>Niveau de vie médian</span>
+          {nvm?.value != null ? <><strong>{Math.round(nvm.value).toLocaleString("fr-FR")} €</strong><small>par unité de consommation, par an</small></> : <strong className="eco-na">Non disponible</strong>}
+        </div>
+        <div>
+          <span>Taux de pauvreté</span>
+          {pauvrete?.value != null ? <><strong>{pauvrete.value.toFixed(1)} %</strong><small>seuil à 60 % du niveau de vie médian national</small></> : <strong className="eco-na">Non disponible</strong>}
+        </div>
+      </div>
+      {(nvm?.quality_flag === "secret" || pauvrete?.quality_flag === "secret") && <p className="eco-secret-note">Secret statistique Insee (commune de moins de 50 ménages fiscaux) : non affiché plutôt qu’estimé.</p>}
+      {csp?.length ? (
+        <>
+          <span className="scenario-block-title">Catégories socioprofessionnelles</span>
+          <div className="average-sensitivity">{csp.slice().sort((a,b)=>b.pct-a.pct).map((item,i)=><article key={item.label}><span><strong>{item.label}</strong><b>{item.pct.toFixed(1)} %</b></span><i><em style={{width:`${Math.min(100,item.pct/35*100)}%`,background:CSP_COLORS[csp.indexOf(item)]??CSP_COLORS[i%CSP_COLORS.length]}}/></i></article>)}</div>
+          <p className="elec-context-note">{eco.csp?.note} Source : Insee (RP 2023), via l’observatoire <a href="https://ddt95.github.io/VO-Insee/" target="_blank" rel="noreferrer">VO-Insee</a>.</p>
+        </>
+      ) : null}
+    </Section>
   );
 }
 
@@ -1091,12 +1127,13 @@ function ElectedList({ items }: { items: { nom: string; prenom?: string | null; 
   );
 }
 
-function DepartmentAnalysis({ snapshots, currentKey, socio, communeData, datasets, socioByCommune, deputies, councillors }: { snapshots: ElectionSnapshot[]; currentKey:string; socio: SocioProfile | null; communeData: Record<string, UnitResult>; datasets: Record<string,ElectionCommuneFile>; socioByCommune: Record<string, SocioProfile>; deputies: Record<string, UnitResult> | null; councillors: Record<string, UnitResult> | null }) {
+function DepartmentAnalysis({ snapshots, currentKey, socio, communeData, datasets, socioByCommune, deputies, councillors, ecoDepartement }: { snapshots: ElectionSnapshot[]; currentKey:string; socio: SocioProfile | null; communeData: Record<string, UnitResult>; datasets: Record<string,ElectionCommuneFile>; socioByCommune: Record<string, SocioProfile>; deputies: Record<string, UnitResult> | null; councillors: Record<string, UnitResult> | null; ecoDepartement: EcoContext | null }) {
   const current=snapshots.at(-1);if(!current)return <p className="elec-empty">Chargement de l’analyse départementale…</p>;
   const avg=snapshots.length?snapshots.reduce((sum,x)=>sum+x.result.pct_participation,0)/snapshots.length:0;
   const scenarios=buildDepartmentScenarios(communeData,datasets,socioByCommune);
   return <>
     {socio&&<Section title="Profil sociodémographique" state="INSEE RP 2022"><div className="socio-profile"><div className="socio-pop"><span>Population</span><strong>{Math.round(socio.population).toLocaleString("fr-FR")}</strong><small>habitants</small></div><div className="socio-bars">{[{label:"15 à 24 ans",value:socio.jeunes,color:"#00a7b5"},{label:"65 ans ou plus",value:socio.seniors,color:"#a558a0"},{label:"Diplôme supérieur",value:socio.diplomesSup,color:"#18753c"}].map(item=><div key={item.label}><span><b>{item.label}</b><strong>{item.value.toFixed(1)} %</strong></span><i><em style={{width:`${item.value}%`,background:item.color}}/></i></div>)}</div></div></Section>}
+    <EcoContextSection eco={ecoDepartement} state="Insee 2023 · département"/>
     <Section title="Participation" state={`Moyenne sur ${snapshots.length} tours`}><div className="participation-gauge"><span style={{width:`${avg}%`}}/><b>{avg.toFixed(1)} %</b></div><div className="participation-analysis"><div><span>Participation moyenne</span><strong>{avg.toFixed(1)} %</strong><small>sur {snapshots.length} tours disponibles</small></div><div><span>Abstention moyenne</span><strong>{(100-avg).toFixed(1)} %</strong><small>sur la même période</small></div><div><span>Participation au dernier scrutin</span><strong>{current.result.pct_participation.toFixed(1)} %</strong><small>{current.election} · {current.tour}</small></div><div><span>Abstention au dernier scrutin</span><strong>{current.result.pct_abstention.toFixed(1)} %</strong></div></div></Section>
     <Section title="Députés élus" state={deputies ? `${Object.keys(deputies).length} circonscriptions` : "Indisponible"}>
       <p className="elec-synthesis-intro">Élu·e·s aux législatives 2024, par circonscription (2nd tour, ou 1er tour pour les 2 circonscriptions décidées dès celui-ci).</p>

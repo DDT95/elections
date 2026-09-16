@@ -66,6 +66,15 @@ Les effectifs sont additionnés avant division ; les valeurs absentes restent ab
 
 Population historique : série INSEE PMUN fournie lors de la construction, 2006–2023, 183 communes. Cette série est indépendante du scrutin sélectionné et de l’estimation par bureau. Son export original n’est pas dans le dépôt ; sa géographie de diffusion doit être vérifiée avant toute analyse supplémentaire des fusions.
 
+### Contexte socio-économique (niveau de vie, pauvreté, CSP)
+
+Ajouté à la fiche territoriale (commune et département, web et PDF) sous « Contexte socio-économique » : niveau de vie médian, taux de pauvreté et répartition par catégorie socioprofessionnelle (population de 15 ans ou plus, actifs et inactifs confondus).
+
+- **Source** : [DDT95/VO-Insee](https://github.com/DDT95/VO-Insee) ([site](https://ddt95.github.io/VO-Insee/)), qui calcule déjà ces indicateurs à partir de la **Base du dossier complet Insee** (RP2023, Filosofi 2023) — observations directes, pas une interpolation. `scripts/build_contexte_socio_eco.py` télécharge `data/processed/commune_profiles.json` et `departement_profile.json` depuis ce dépôt et en extrait uniquement `niveau_vie_median`, `taux_pauvrete` et `categorie_socioprofessionnelle` vers `public/data/insee/contexte-socio-eco.json` — aucun recalcul, aucune donnée inventée.
+- **Secret statistique** : Filosofi masque les communes de moins de 50 ménages fiscaux. Ces communes (6 dans le Val-d’Oise au moment de l’extraction) affichent `quality_flag: "secret"` et une valeur `null` pour le niveau de vie médian et le taux de pauvreté ; l’interface affiche alors « Non disponible », jamais un zéro ou une estimation.
+- **Taux de chômage** : demandé mais **non affiché**. VO-Insee prévoit un indicateur `chomage_rp` (RP2023, champ 15-64 ans) d’après son code source, mais ce champ n’était présent dans aucun profil (commune, département) au moment de cette extraction (14 septembre 2026) — probablement pas encore régénéré côté VO-Insee. À réintégrer via une nouvelle exécution de `build_contexte_socio_eco.py` dès que ce champ apparaît dans les fichiers sources, sans qu’aucune valeur ne soit estimée dans l’intervalle.
+- **Mise à jour** : relancer `python3 scripts/build_contexte_socio_eco.py` (nécessite un accès réseau à raw.githubusercontent.com) régénère `public/data/insee/contexte-socio-eco.json` depuis la dernière version commitée de VO-Insee.
+
 ## Reproductibilité
 
 `python scripts/rebuild_data.py --sources /chemin/du/cache` (dépendances dans `scripts/requirements.txt`) récupère les nouvelles sources manquantes et régénère les agrégations, contours, masque, contexte et rapport de couverture. Les fichiers BV déjà fournis et les élus municipaux conservés constituent les entrées historiques. Les fichiers nationaux téléchargés restent dans un cache ignoré par Git.
