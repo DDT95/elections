@@ -167,6 +167,15 @@ body{font-family:"Marianne",Arial,sans-serif}
 .second-round-legend span{flex:1;color:#dfe3f7;font-size:11px;font-weight:600}
 .second-round-legend b{color:#fff;font-size:16px}
 @media(max-width:470px){.second-round-duel{flex-direction:column;text-align:center}}
+.scenario-second-round{margin:16px 19px 0}
+.scenario-second-round-title{display:block;margin-bottom:9px;color:#3c4a5c;font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.04em}
+.second-round-duel.compact{gap:14px;margin:0;padding:12px 16px}
+.second-round-duel.compact .second-round-donut{width:82px;height:82px}
+.second-round-duel.compact .second-round-value{font-size:13px}
+.second-round-duel.compact .second-round-legend{gap:7px}
+.second-round-duel.compact .second-round-legend span{font-size:9.5px}
+.second-round-duel.compact .second-round-legend b{font-size:13px}
+.scenario-second-round-note{margin:8px 0 0;color:#657286;font-size:8px;line-height:1.5}
 
 /* Bloc "Élection et tour" : même carte à bordure que la liste des échelles (.elec-scale-menu)
    juste au-dessus, au lieu d'un simple titre suivi de deux <select> flottants sans cadre. */
