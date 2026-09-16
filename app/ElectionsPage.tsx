@@ -1077,6 +1077,20 @@ function buildDepartmentScenarios(communeData: Record<string, UnitResult>, datas
     {id:"rn",label:"Rassemblement national",value:fam.rn??0,delta:(fam.rn??0)-(baselineFamily.rn??0),color:"#14213d"},
     {id:"reconquest",label:"Reconquête",value:fam.reconquest??0,delta:(fam.reconquest??0)-(baselineFamily.reconquest??0),color:"#4b2e83"},
   ].sort((a,b)=>b.value-a.value);
+  // Report de voix mesuré sur les duels RN/union de la gauche des législatives 2024 dans le
+  // Val-d'Oise (scripts/build_report_voix_legislatives.py), appliqué au réservoir Centre+Droite
+  // du 1er tour — d'un scrutin de référence (Européennes 2024) ou d'un scénario de participation
+  // modifiée — pour simuler un second tour RN face à l'union de la gauche (portée par LFI, son
+  // premier parti). Factorisé pour être utilisé à la fois pour le repère département et pour
+  // chaque scénario avec ses propres scores 1er tour.
+  const agg=reportVoix?.aggregate;
+  const computeSecondRound=(sensitivity:Record<string,number>,family:Record<string,number>)=>{
+    if (!agg || agg.report_gauche==null || agg.report_rn==null) return null;
+    const gaucheBase=sensitivity.left??0, rnBase=family.rn??0, autres=(sensitivity.center??0)+(sensitivity.right??0);
+    const gaucheT2=gaucheBase+agg.report_gauche*autres, rnT2=rnBase+agg.report_rn*autres;
+    const total=gaucheT2+rnT2;
+    return total ? { gauche: gaucheT2*100/total, rn: rnT2*100/total, reportGauche: agg.report_gauche*100, reportRn: agg.report_rn*100, nbDuels: agg.nb_duels } : null;
+  };
   const scenarios=raw.map(sc=>{
     const effects=sensitivities.map(x=>({...x,value:sc.data.sensitivity[x.id]??0,delta:(sc.data.sensitivity[x.id]??0)-(baseline[x.id]??0),detail:x.id==="left"?leftDetailFor(sc.data.family):x.id==="far_right"?farRightDetailFor(sc.data.family):undefined}));
     const ordered=effects.slice().sort((a,b)=>Math.abs(b.delta)-Math.abs(a.delta));
@@ -1095,21 +1109,10 @@ function buildDepartmentScenarios(communeData: Record<string, UnitResult>, datas
     const rn=effects.find(e=>e.id==="far_right")?.detail?.find(d=>d.id==="rn");
     const center=effects.find(e=>e.id==="center");
     const duel=[lfi,rn,center].filter((x):x is NonNullable<typeof x>=>Boolean(x));
-    return{label:sc.label,explanation:sc.explanation,effects,conclusion,duel};
+    const secondRound=computeSecondRound(sc.data.sensitivity,sc.data.family);
+    return{label:sc.label,explanation:sc.explanation,effects,conclusion,duel,secondRound};
   });
-  // Simulation d'un second tour RN face à l'union de la gauche, à partir des scores
-  // Européennes 2024 (un seul tour, aucun report de voix réel) additionnés du report de
-  // voix mesuré sur les vrais duels UG/RN des législatives 2024 dans le Val-d'Oise (voir
-  // scripts/build_report_voix_legislatives.py) : le réservoir « Centre + Droite » du 1er
-  // tour se répartit selon ce taux réel plutôt que de rester figé sur son score Européennes.
-  const agg=reportVoix?.aggregate;
-  let secondRoundDuel=null as null | { gauche:number; rn:number; reportGauche:number; reportRn:number; nbDuels:number };
-  if (agg && agg.report_gauche!=null && agg.report_rn!=null) {
-    const gaucheBase=baseline.left??0, rnBase=baselineFamily.rn??0, autres=(baseline.center??0)+(baseline.right??0);
-    const gaucheT2=gaucheBase+agg.report_gauche*autres, rnT2=rnBase+agg.report_rn*autres;
-    const total=gaucheT2+rnT2;
-    secondRoundDuel = total ? { gauche: gaucheT2*100/total, rn: rnT2*100/total, reportGauche: agg.report_gauche*100, reportRn: agg.report_rn*100, nbDuels: agg.nb_duels } : null;
-  }
+  const secondRoundDuel=computeSecondRound(baseline,baselineFamily);
   return {scenarios,secondRoundDuel};
 }
 
@@ -1177,7 +1180,7 @@ function DepartmentAnalysis({ snapshots, currentKey, socio, communeData, dataset
     <CommuneSynthesis snapshots={snapshots} currentKey={currentKey} mode="families"/><CommuneSynthesis snapshots={snapshots} currentKey={currentKey} mode="sensitivities"/>
     {secondRoundDuel && <SecondRoundDuelSection duel={secondRoundDuel}/>}
     <Section title="Scénarios de participation">
-      <p className="elec-synthesis-intro">Chaque scénario modifie la mobilisation territoriale puis mesure l’effet sur les grandes sensibilités : les barres montrent, comme pour la sensibilité moyenne du territoire ci-dessus, le score simulé de chaque sensibilité au 1<sup>er</sup> tour (Européennes 2024, aucun report de voix) ; l’écart entre parenthèses indique la variation par rapport à la moyenne européennes 2024 (vert = progression, rouge = recul). Sous chaque carte : le détail par parti de la gauche et de l’extrême droite, puis le rapport de force LFI · RN · Centre du 1<sup>er</sup> tour en donut (à ne pas confondre avec la simulation de second tour ci-dessus).</p>
+      <p className="elec-synthesis-intro">Chaque scénario modifie la mobilisation territoriale puis mesure l’effet sur les grandes sensibilités au 1<sup>er</sup> tour, avant de simuler le 2<sup>nd</sup> : les barres montrent, comme pour la sensibilité moyenne du territoire ci-dessus, le score simulé de chaque sensibilité au 1<sup>er</sup> tour (Européennes 2024, toutes les composantes — gauche, centre, droite, extrêmes) ; l’écart entre parenthèses indique la variation par rapport à la moyenne européennes 2024 (vert = progression, rouge = recul). Sous chaque carte : le détail par parti de la gauche et de l’extrême droite, le rapport de force LFI · RN · Centre du 1<sup>er</sup> tour en donut, puis <strong>le second tour simulé sous ce même scénario</strong> — RN face à l’union de la gauche, avec le report de voix mesuré sur les législatives 2024.</p>
       <ScenarioTrendChart scenarios={scenarios} />
       <div className="scenario-cards">{scenarios.map(sc=>
         <article key={sc.label}>
@@ -1192,6 +1195,7 @@ function DepartmentAnalysis({ snapshots, currentKey, socio, communeData, dataset
             </div>
           )}
           {sc.duel?.length===3 && <ScenarioDuel duel={sc.duel}/>}
+          {sc.secondRound && <ScenarioSecondRound duel={sc.secondRound}/>}
           <footer>{sc.conclusion}</footer>
         </article>
       )}</div>
@@ -1279,12 +1283,37 @@ function SecondRoundDuelSection({ duel }: { duel: { gauche: number; rn: number; 
           <text x="55" y="67" textAnchor="middle" className="second-round-leader">{leaderIsGauche?"UNION GAUCHE":"RN"}</text>
         </svg>
         <div className="second-round-legend">
-          <div><i style={{background:"#e4287c"}}/><span>Union de la gauche</span><b>{duel.gauche.toFixed(1)} %</b></div>
+          <div><i style={{background:"#e4287c"}}/><span>Union de la gauche (LFI en tête)</span><b>{duel.gauche.toFixed(1)} %</b></div>
           <div><i style={{background:"#14213d"}}/><span>Rassemblement national</span><b>{duel.rn.toFixed(1)} %</b></div>
         </div>
       </div>
       <p className="elec-context-note"><strong>Méthode :</strong> report mesuré = (voix 2<sup>nd</sup> tour − voix 1<sup>er</sup> tour) / (électeurs du 1<sup>er</sup> tour n’ayant voté ni gauche ni RN), sur les {duel.nbDuels} circonscriptions du Val-d’Oise où l’union de la gauche a affronté le RN en duel strict au 2<sup>nd</sup> tour des législatives 2024 : <strong>{duel.reportGauche.toFixed(1)} %</strong> de ce réservoir Centre/Droite s’est reporté vers l’union de la gauche, <strong>{duel.reportRn.toFixed(1)} %</strong> vers le RN, le reste s’étant abstenu. Appliqué ici au réservoir Centre + Droite des européennes 2024. Comparaison nationale non disponible pour l’instant (nécessiterait les résultats candidat par candidat des 577 circonscriptions françaises, non chargés dans cet atlas).</p>
     </Section>
+  );
+}
+
+function ScenarioSecondRound({ duel }: { duel: { gauche: number; rn: number; reportGauche: number; reportRn: number; nbDuels: number } }) {
+  const leaderIsGauche = duel.gauche >= duel.rn;
+  const r = 40, C = 2*Math.PI*r;
+  const gaucheLen = C*duel.gauche/100;
+  return (
+    <div className="scenario-second-round">
+      <span className="scenario-second-round-title">⟶ Second tour simulé sous ce scénario</span>
+      <div className="second-round-duel compact">
+        <svg viewBox="0 0 100 100" className="second-round-donut" role="img" aria-label={`${leaderIsGauche?"Union de la gauche":"RN"} en tête avec ${(leaderIsGauche?duel.gauche:duel.rn).toFixed(1)} %`}>
+          <circle cx="50" cy="50" r={r} fill="none" stroke="#ffffff33" strokeWidth="14"/>
+          <circle cx="50" cy="50" r={r} fill="none" stroke="#e4287c" strokeWidth="14" strokeDasharray={`${gaucheLen} ${C-gaucheLen}`} transform="rotate(-90 50 50)"/>
+          <circle cx="50" cy="50" r={r} fill="none" stroke="#7d86c9" strokeWidth="14" strokeDasharray={`${C-gaucheLen} ${gaucheLen}`} strokeDashoffset={-gaucheLen} transform="rotate(-90 50 50)"/>
+          <text x="50" y="46" textAnchor="middle" className="second-round-value">{(leaderIsGauche?duel.gauche:duel.rn).toFixed(1)} %</text>
+          <text x="50" y="61" textAnchor="middle" className="second-round-leader">{leaderIsGauche?"UNION GAUCHE":"RN"}</text>
+        </svg>
+        <div className="second-round-legend">
+          <div><i style={{background:"#e4287c"}}/><span>Union gauche (LFI)</span><b>{duel.gauche.toFixed(1)} %</b></div>
+          <div><i style={{background:"#7d86c9"}}/><span>Rassemblement national</span><b>{duel.rn.toFixed(1)} %</b></div>
+        </div>
+      </div>
+      <p className="scenario-second-round-note">Report mesuré sur les {duel.nbDuels} duels RN/union de la gauche des législatives 2024 ({duel.reportGauche.toFixed(1)} % vers la gauche, {duel.reportRn.toFixed(1)} % vers le RN) appliqué au réservoir Centre + Droite de ce scénario.</p>
+    </div>
   );
 }
 
