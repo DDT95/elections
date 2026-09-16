@@ -1185,12 +1185,12 @@ function DepartmentAnalysis({ snapshots, currentKey, socio, communeData, dataset
         <article key={sc.label}>
           <header><strong>{sc.label}</strong><p>{sc.explanation}</p></header>
           <span className="scenario-block-title">Sensibilités simulées</span>
-          <div className="average-sensitivity">{sc.effects.slice().sort((a,b)=>b.value-a.value).map(effect=><article key={effect.id}><span><strong>{effect.label}</strong><b>{effect.value.toFixed(1)} % <em className={effect.delta>=0?"up":"down"}>({effect.delta>=0?"+":""}{effect.delta.toFixed(1)} pt)</em></b></span><i><em style={{width:`${Math.min(100,effect.value/60*100)}%`,background:effect.color}}/></i></article>)}</div>
+          <div className="average-sensitivity">{sc.effects.slice().sort((a,b)=>b.value-a.value).map(effect=><article key={effect.id}><span><strong>{effect.label}</strong><b>{effect.value.toFixed(1)} % <em className={effect.delta>=0?"up":"down"}>({effect.delta>=0?"+":""}{effect.delta.toFixed(1)} pt vs 2024)</em></b></span><i><em style={{width:`${Math.min(100,effect.value/60*100)}%`,background:effect.color}}/></i></article>)}</div>
           <div className="average-scale"><span>0 %</span><span>30 %</span><span>60 %</span></div>
           {sc.effects.filter(effect=>effect.detail?.length).map(effect=>
             <div key={effect.id} className="scenario-detail">
               <span className="scenario-detail-title"><i style={{background:effect.color}}/>Détail « {effect.label} »</span>
-              <div className="average-sensitivity compact">{effect.detail!.map(d=><article key={d.id}><span><strong>{d.label}</strong><b>{d.value.toFixed(1)} % <em className={d.delta>=0?"up":"down"}>({d.delta>=0?"+":""}{d.delta.toFixed(1)} pt)</em></b></span><i><em style={{width:`${Math.min(100,d.value/60*100)}%`,background:d.color}}/></i></article>)}</div>
+              <div className="average-sensitivity compact">{effect.detail!.map(d=><article key={d.id}><span><strong>{d.label}</strong><b>{d.value.toFixed(1)} % <em className={d.delta>=0?"up":"down"}>({d.delta>=0?"+":""}{d.delta.toFixed(1)} pt vs 2024)</em></b></span><i><em style={{width:`${Math.min(100,d.value/60*100)}%`,background:d.color}}/></i></article>)}</div>
             </div>
           )}
           {(sc.duel?.length ?? 0) > 0 && <ScenarioDuel duel={sc.duel}/>}
@@ -1218,7 +1218,7 @@ function ScenarioDuel({ duel }: { duel: { id: string; label: string; value: numb
           <text x="50" y="47" textAnchor="middle" className="scenario-duel-value">{leader.value.toFixed(1)} %</text>
           <text x="50" y="61" textAnchor="middle" className="scenario-duel-leader">{SHORT_POLE_LABEL[leader.id] ?? leader.label}</text>
         </svg>
-        <ul className="scenario-duel-legend">{duel.map(d=><li key={d.id}><i style={{background:d.color}}/><span>{d.label}</span><b>{d.value.toFixed(1)} %</b><em className={d.delta>=0?"up":"down"}>({d.delta>=0?"+":""}{d.delta.toFixed(1)} pt)</em></li>)}</ul>
+        <ul className="scenario-duel-legend">{duel.map(d=><li key={d.id}><i style={{background:d.color}}/><span>{d.label}</span><b>{d.value.toFixed(1)} %</b><em className={d.delta>=0?"up":"down"}>({d.delta>=0?"+":""}{d.delta.toFixed(1)} pt vs 2024)</em></li>)}</ul>
       </div>
       <p className="scenario-duel-note">Scores du 1<sup>er</sup> (et seul) tour des européennes 2024 : ce scrutin n’a pas de second tour, donc pas de report de voix ici. Répartition de l’intégralité des voix simulées entre les huit familles politiques (extrême gauche, LFI, social-démocratie, PCF, centre, droite, RN, Reconquête) — écarts calculés par rapport au score réel des européennes 2024 (même référence que les barres ci-dessus). Pour un vrai second tour simulé, voir « RN face à l’union de la gauche ».</p>
     </div>
