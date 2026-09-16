@@ -144,13 +144,14 @@ body{font-family:"Marianne",Arial,sans-serif}
 .scenario-duel-legend b{color:#070047}
 .scenario-duel-legend em{font-style:normal;font-weight:700;font-size:9px}
 .scenario-duel-note{margin:12px 0 0;color:#8a7048;font-size:8px;line-height:1.4}
-.scenario-trend{margin-bottom:16px;padding:16px 19px;border-radius:14px;background:#f6f8fb;border:1px solid #e2e8ef}
-.scenario-trend-title{display:block;margin-bottom:8px;color:#070047;font-size:11px;font-weight:800}
+.scenario-trend{margin-bottom:16px;padding:18px 19px 15px;border-radius:12px;background:linear-gradient(155deg,#fff8ec,#fef1e6);border:1px solid #f0d9b5;box-shadow:inset 0 0 0 1px #ffffffa0}
+.scenario-trend-title{display:block;margin-bottom:12px;color:#8a5a12;font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.05em}
 .scenario-trend-chart{width:100%;height:auto;display:block}
-.scenario-trend-axis{stroke:#d5dce4;stroke-width:1}
+.scenario-trend-axis{stroke:#e4d2ab;stroke-width:1}
 .scenario-trend-label{font-size:10px;font-weight:700;dominant-baseline:middle}
-.scenario-trend-tick{fill:#8592a3;font-size:9px}
-.scenario-trend-note{margin:8px 0 0;color:#657286;font-size:8px;line-height:1.5}
+.scenario-trend-label.is-leader{font-size:13px;font-weight:900}
+.scenario-trend-tick{fill:#a3895c;font-size:9px}
+.scenario-trend-note{margin:12px 0 0;color:#8a7048;font-size:8px;line-height:1.4}
 
 /* Bloc "Élection et tour" : même carte à bordure que la liste des échelles (.elec-scale-menu)
    juste au-dessus, au lieu d'un simple titre suivi de deux <select> flottants sans cadre. */
