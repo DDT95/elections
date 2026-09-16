@@ -1105,10 +1105,7 @@ function buildDepartmentScenarios(communeData: Record<string, UnitResult>, datas
     } else {
       conclusion = `${main.label} est la sensibilité la plus affectée par ce scénario (${main.delta>=0?"+":""}${main.delta.toFixed(1)} point), sans bouleverser le reste du rapport de forces. Une simulation à participation modifiée, pas une prévision électorale.`;
     }
-    const lfi=effects.find(e=>e.id==="left")?.detail?.find(d=>d.id==="lfi");
-    const rn=effects.find(e=>e.id==="far_right")?.detail?.find(d=>d.id==="rn");
-    const center=effects.find(e=>e.id==="center");
-    const duel=[lfi,rn,center].filter((x):x is NonNullable<typeof x>=>Boolean(x));
+    const duel=effects.flatMap(e=>e.detail?.length?e.detail:[e]);
     const secondRound=computeSecondRound(sc.data.sensitivity,sc.data.family);
     return{label:sc.label,explanation:sc.explanation,effects,conclusion,duel,secondRound};
   });
@@ -1180,7 +1177,7 @@ function DepartmentAnalysis({ snapshots, currentKey, socio, communeData, dataset
     <CommuneSynthesis snapshots={snapshots} currentKey={currentKey} mode="families"/><CommuneSynthesis snapshots={snapshots} currentKey={currentKey} mode="sensitivities"/>
     {secondRoundDuel && <SecondRoundDuelSection duel={secondRoundDuel}/>}
     <Section title="Scénarios de participation">
-      <p className="elec-synthesis-intro">Chaque scénario modifie la mobilisation territoriale puis mesure l’effet sur les grandes sensibilités au 1<sup>er</sup> tour, avant de simuler le 2<sup>nd</sup> : les barres montrent, comme pour la sensibilité moyenne du territoire ci-dessus, le score simulé de chaque sensibilité au 1<sup>er</sup> tour (Européennes 2024, toutes les composantes — gauche, centre, droite, extrêmes) ; l’écart entre parenthèses indique la variation par rapport à la moyenne européennes 2024 (vert = progression, rouge = recul). Sous chaque carte : le détail par parti de la gauche et de l’extrême droite, le rapport de force LFI · RN · Centre du 1<sup>er</sup> tour en donut, puis <strong>le second tour simulé sous ce même scénario</strong> — RN face à l’union de la gauche, avec le report de voix mesuré sur les législatives 2024.</p>
+      <p className="elec-synthesis-intro">Chaque scénario modifie la mobilisation territoriale puis mesure l’effet sur les grandes sensibilités au 1<sup>er</sup> tour, avant de simuler le 2<sup>nd</sup> : les barres montrent, comme pour la sensibilité moyenne du territoire ci-dessus, le score simulé de chaque sensibilité au 1<sup>er</sup> tour (Européennes 2024, toutes les composantes — gauche, centre, droite, extrêmes) ; l’écart entre parenthèses indique la variation par rapport à la moyenne européennes 2024 (vert = progression, rouge = recul). Sous chaque carte : le détail par parti de la gauche et de l’extrême droite, le rapport de force complet du 1<sup>er</sup> tour en donut (toutes les familles politiques), puis <strong>le second tour simulé sous ce même scénario</strong> — RN face à l’union de la gauche, avec le report de voix mesuré sur les législatives 2024.</p>
       <ScenarioTrendChart scenarios={scenarios} />
       <div className="scenario-cards">{scenarios.map(sc=>
         <article key={sc.label}>
@@ -1194,7 +1191,7 @@ function DepartmentAnalysis({ snapshots, currentKey, socio, communeData, dataset
               <div className="average-sensitivity compact">{effect.detail!.map(d=><article key={d.id}><span><strong>{d.label}</strong><b>{d.value.toFixed(1)} % <em className={d.delta>=0?"up":"down"}>({d.delta>=0?"+":""}{d.delta.toFixed(1)} pt)</em></b></span><i><em style={{width:`${Math.min(100,d.value/60*100)}%`,background:d.color}}/></i></article>)}</div>
             </div>
           )}
-          {sc.duel?.length===3 && <ScenarioDuel duel={sc.duel}/>}
+          {(sc.duel?.length ?? 0) > 0 && <ScenarioDuel duel={sc.duel}/>}
           {sc.secondRound && <ScenarioSecondRound duel={sc.secondRound}/>}
           <footer>{sc.conclusion}</footer>
         </article>
@@ -1203,7 +1200,7 @@ function DepartmentAnalysis({ snapshots, currentKey, socio, communeData, dataset
   </>;
 }
 
-const SHORT_POLE_LABEL: Record<string,string> = { lfi: "LFI", rn: "RN", center: "Centre" };
+const SHORT_POLE_LABEL: Record<string,string> = { extreme_left: "Ext. gauche", lfi: "LFI", socdem: "Soc-dém.", pcf: "PCF", center: "Centre", right: "Droite", rn: "RN", reconquest: "Reconquête" };
 function ScenarioDuel({ duel }: { duel: { id: string; label: string; value: number; delta: number; color: string }[] }) {
   const total = duel.reduce((sum,d)=>sum+d.value,0) || 1;
   const r = 40, C = 2*Math.PI*r;
@@ -1211,7 +1208,7 @@ function ScenarioDuel({ duel }: { duel: { id: string; label: string; value: numb
   const leader = duel.slice().sort((a,b)=>b.value-a.value)[0];
   return (
     <div className="scenario-duel">
-      <span className="scenario-duel-title">★ Rapport de force LFI · RN · Centre — 1<sup>er</sup> tour</span>
+      <span className="scenario-duel-title">★ Rapport de force — 1<sup>er</sup> tour, toutes les composantes</span>
       <div className="scenario-duel-body">
         <svg viewBox="0 0 100 100" className="scenario-duel-donut" role="img" aria-label={`${leader.label} en tête avec ${leader.value.toFixed(1)} %`}>
           <circle cx="50" cy="50" r={r} fill="none" stroke="#e3e8ee" strokeWidth="15"/>
@@ -1221,7 +1218,7 @@ function ScenarioDuel({ duel }: { duel: { id: string; label: string; value: numb
         </svg>
         <ul className="scenario-duel-legend">{duel.map(d=><li key={d.id}><i style={{background:d.color}}/><span>{d.label}</span><b>{d.value.toFixed(1)} %</b><em className={d.delta>=0?"up":"down"}>({d.delta>=0?"+":""}{d.delta.toFixed(1)} pt)</em></li>)}</ul>
       </div>
-      <p className="scenario-duel-note">Scores du 1<sup>er</sup> (et seul) tour des européennes 2024 : ce scrutin n’a pas de second tour, donc pas de report de voix ici. Part relative entre ces trois pôles seulement (hors autres familles) — écarts calculés par rapport à la moyenne européennes 2024. Pour un vrai second tour simulé, voir « RN face à l’union de la gauche » plus haut.</p>
+      <p className="scenario-duel-note">Scores du 1<sup>er</sup> (et seul) tour des européennes 2024 : ce scrutin n’a pas de second tour, donc pas de report de voix ici. Répartition de l’intégralité des voix simulées entre les huit familles politiques (extrême gauche, LFI, social-démocratie, PCF, centre, droite, RN, Reconquête) — écarts calculés par rapport à la moyenne européennes 2024. Pour un vrai second tour simulé, voir « RN face à l’union de la gauche » plus haut.</p>
     </div>
   );
 }
@@ -1242,9 +1239,10 @@ function MiniDuelDonut({ duel, size }: { duel: { id: string; label: string; valu
 }
 
 function ScenarioTrendChart({ scenarios }: { scenarios: { label: string; duel?: { id: string; label: string; value: number; color: string }[] }[] }) {
-  const withDuel = scenarios.filter((sc): sc is typeof sc & { duel: NonNullable<typeof sc["duel"]> } => (sc.duel?.length ?? 0) === 3);
+  const withDuel = scenarios.filter((sc): sc is typeof sc & { duel: NonNullable<typeof sc["duel"]> } => (sc.duel?.length ?? 0) > 0);
   if (withDuel.length < 2) return null;
-  const overallLeader = ["lfi","rn","center"].map(id=>{
+  const ids = Array.from(new Set(withDuel.flatMap(sc=>sc.duel.map(d=>d.id))));
+  const overallLeader = ids.map(id=>{
     const total = withDuel.reduce((sum,sc)=>sum+(sc.duel.find(d=>d.id===id)?.value ?? 0),0);
     return { id, total };
   }).sort((a,b)=>b.total-a.total)[0]?.id;
