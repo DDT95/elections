@@ -1357,7 +1357,7 @@ function SecondRoundDuelSection({ duel }: { duel: { gauche: number; rn: number; 
           <circle cx="55" cy="55" r={r} fill="none" stroke="#e4287c" strokeWidth="16" strokeDasharray={`${gaucheLen} ${C-gaucheLen}`} transform="rotate(-90 55 55)"/>
           <circle cx="55" cy="55" r={r} fill="none" stroke="#14213d" strokeWidth="16" strokeDasharray={`${C-gaucheLen} ${gaucheLen}`} strokeDashoffset={-gaucheLen} transform="rotate(-90 55 55)"/>
           <text x="55" y="51" textAnchor="middle" className="second-round-value">{(leaderIsGauche?duel.gauche:duel.rn).toFixed(1)} %</text>
-          <text x="55" y="67" textAnchor="middle" className="second-round-leader">{leaderIsGauche?"UNION GAUCHE":"RN"}</text>
+          <text x="55" y="67" textAnchor="middle" className="second-round-leader">{leaderIsGauche?"GAUCHE":"RN"}</text>
         </svg>
         <div className="second-round-legend">
           <div><i style={{background:"#e4287c"}}/><span>Union de la gauche (LFI en tête)</span><b>{duel.gauche.toFixed(1)} %</b></div>
@@ -1403,7 +1403,7 @@ function ScenarioSecondRound({ duel }: { duel: { gauche: number; rn: number; rep
           <circle cx="50" cy="50" r={r} fill="none" stroke="#e4287c" strokeWidth="14" strokeDasharray={`${gaucheLen} ${C-gaucheLen}`} transform="rotate(-90 50 50)"/>
           <circle cx="50" cy="50" r={r} fill="none" stroke="#14213d" strokeWidth="14" strokeDasharray={`${C-gaucheLen} ${gaucheLen}`} strokeDashoffset={-gaucheLen} transform="rotate(-90 50 50)"/>
           <text x="50" y="46" textAnchor="middle" className="second-round-value">{(leaderIsGauche?duel.gauche:duel.rn).toFixed(1)} %</text>
-          <text x="50" y="61" textAnchor="middle" className="second-round-leader">{leaderIsGauche?"UNION GAUCHE":"RN"}</text>
+          <text x="50" y="61" textAnchor="middle" className="second-round-leader">{leaderIsGauche?"GAUCHE":"RN"}</text>
         </svg>
         <div className="second-round-legend">
           <div><i style={{background:"#e4287c"}}/><span>Union gauche (LFI)</span><b>{duel.gauche.toFixed(1)} %</b></div>

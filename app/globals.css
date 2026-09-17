@@ -164,7 +164,7 @@ body{font-family:"Marianne",Arial,sans-serif}
 .second-round-duel{display:flex;align-items:center;gap:22px;margin:14px 0;padding:16px 20px;border-radius:14px;background:#fff;border:2px solid #14213d;box-shadow:0 2px 10px #14213d14}
 .second-round-donut{width:108px;height:108px;flex:none}
 .second-round-value{fill:#14213d;font-size:15px;font-weight:800;font-family:Marianne,Arial,sans-serif}
-.second-round-leader{fill:#5c6a7d;font-size:9px;font-weight:800;letter-spacing:.04em}
+.second-round-leader{fill:#5c6a7d;font-size:9px;font-weight:800;letter-spacing:.02em}
 .second-round-legend{flex:1;display:grid;gap:10px}
 .second-round-legend div{display:flex;align-items:center;gap:8px}
 .second-round-legend i{width:10px;height:10px;border-radius:3px;flex:none}
